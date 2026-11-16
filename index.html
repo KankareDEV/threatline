@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Threatline</title>
+<meta name="description" content="A daily ranked digest of exploited vulnerabilities and security news from public sources.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one black column. Colour is reserved for risk, so the only
+   things on the page that are red, orange or green are risk levels. */
+:root{
+  color-scheme:dark;
+  --bg:#000; --surface:#0c0c0d; --raise:#161618; --line:#26262a;
+  --text:#f2f2f0; --muted:#8e8e93;
+  --red:#ff3b30; --orange:#ff9500; --green:#30d158;
+  --vuln:#3987e5; --news:#c653b9; --mark:var(--vuln); /* chart colours: blue = vulnerability data, magenta = news data. Red, orange and green stay reserved for risk. */
+  --display:"Archivo","IBM Plex Sans",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:960px;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.55 var(--body);
+  -webkit-font-smoothing:antialiased}
+a{color:var(--text);text-underline-offset:3px;text-decoration-color:var(--muted)}
+a:hover{text-decoration-color:var(--text)}
+:focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.red{--lv:var(--red)} .orange{--lv:var(--orange)} .green{--lv:var(--green)}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px 16px;flex-wrap:wrap;
+  padding:20px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font:800 19px/1 var(--display);
+  font-stretch:85%;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.lights{display:flex;gap:5px}
+.lights i{width:10px;height:10px;border-radius:50%}
+.lights i:nth-child(1){background:var(--red)}
+.lights i:nth-child(2){background:var(--orange)}
+.lights i:nth-child(3){background:var(--green)}
+.updated{color:var(--muted);font-size:14px;text-align:right}
+
+/* summary */
+.top{padding:36px 0 8px;display:flex;flex-direction:column;gap:14px}
+.top h1{font:800 clamp(30px,5.6vw,52px)/1.04 var(--display);font-stretch:85%;
+  letter-spacing:-.01em;margin:0;text-wrap:balance}
+.top p{margin:0;color:var(--muted);font-size:17px;max-width:65ch}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.tile{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--lv);
+  border-radius:8px;padding:16px 16px 14px;text-align:left;color:var(--text);cursor:pointer;
+  font:inherit;display:flex;flex-direction:column;gap:6px}
+.tile:hover{background:var(--raise)}
+.tile b{font:800 44px/1 var(--display);font-stretch:85%;color:var(--lv);
+  font-variant-numeric:tabular-nums}
+.tile span{font:600 15px/1.2 var(--body)}
+.tile small{color:var(--muted);font-size:13.5px;line-height:1.35}
+.note{color:var(--muted);font-size:14px}
+
+/* controls */
+.controls{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-top:26px}
+.controls .wrap{display:flex;gap:10px;align-items:center;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;
+  padding:7px 14px;font:500 14px/1 var(--body);cursor:pointer}
+.chip:hover{color:var(--text);border-color:#4a4a50}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.search{margin-left:auto;flex:1 1 200px;max-width:300px;background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;color:var(--text);padding:8px 12px;
+  font:400 15px/1.2 var(--body)}
+.search::placeholder{color:var(--muted)}
+
+/* list */
+#list{display:flex;flex-direction:column;gap:40px;padding-top:36px}
+.level{display:flex;flex-direction:column;gap:12px}
+.level header{display:flex;flex-direction:column;gap:4px}
+.level h2{font:800 22px/1.1 var(--display);font-stretch:85%;letter-spacing:.03em;
+  text-transform:uppercase;margin:0;display:flex;align-items:center;gap:10px;color:var(--lv)}
+.level h2::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--lv)}
+.level h2 span{font:400 14px/1 var(--body);color:var(--muted);text-transform:none;letter-spacing:0;white-space:nowrap}
+.level header p{margin:0;color:var(--muted);font-size:15px}
+.rows{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.row{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lv);border-radius:6px}
+.row summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px 1fr 16px;
+  gap:14px;align-items:start;padding:14px 14px 14px 16px;border-radius:6px}
+.row summary::-webkit-details-marker{display:none}
+.row summary:hover{background:var(--raise)}
+.score{font:800 26px/1 var(--display);font-stretch:85%;color:var(--lv);padding-top:1px;
+  font-variant-numeric:tabular-nums}
+.score small{display:block;font:400 11px/1.3 var(--body);color:var(--muted);margin-top:4px}
+.title{font:600 16.5px/1.35 var(--body);margin:0 0 5px;overflow-wrap:anywhere}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.meta .cve{font-family:var(--mono);color:var(--text);font-size:13.5px}
+.flag{border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:12.5px;color:var(--text)}
+.caret{color:var(--muted);transition:transform .15s;padding-top:3px}
+details[open] .caret{transform:rotate(90deg)}
+.more{padding:0 16px 18px 82px;max-width:78ch;display:flex;flex-direction:column;gap:8px}
+.more p{margin:0}
+.more h3{font:600 13px/1.3 var(--body);color:var(--muted);margin:8px 0 0;
+  text-transform:uppercase;letter-spacing:.06em}
+.why{list-style:none;margin:0;padding:0;font-size:14.5px}
+.why li{display:flex;justify-content:space-between;gap:16px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.why li b{font-variant-numeric:tabular-nums;font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px}
+.empty{padding:26px 16px;color:var(--muted);border:1px dashed var(--line);border-radius:8px}
+
+/* views */
+.nav{display:flex;gap:4px;margin-right:auto;margin-left:8px}
+.nav a{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font:500 14px/1 var(--body);
+  color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--text);border-color:#4a4a50}
+.nav a[aria-current="page"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+body:not([data-view="brief"]) .brief-only{display:none !important}
+body:not([data-view="cti"]) #ctiView{display:none}
+body:not([data-view="about"]) #aboutView{display:none}
+body[data-view="about"] footer.about{display:none}
+
+/* CTI view */
+.cti{display:flex;flex-direction:column;gap:10px;padding-top:36px}
+.cti > header{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.cti h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0;text-wrap:balance}
+.cti > header p{margin:0;color:var(--muted);font-size:17px;max-width:65ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;
+  display:flex;flex-direction:column;gap:6px}
+.stat b{font:800 34px/1 var(--display);font-stretch:85%;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:14px;line-height:1.35}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;
+  display:flex;flex-direction:column;gap:12px;min-width:0}
+.panel h2{font:800 15px/1.2 var(--display);font-stretch:85%;letter-spacing:.05em;text-transform:uppercase;margin:0}
+.panel .sub{color:var(--muted);font-size:14px;margin:0;max-width:70ch}
+.bars{display:flex;flex-direction:column;gap:9px;list-style:none;margin:0;padding:0}
+.bar{display:grid;grid-template-columns:minmax(0,40%) 1fr 30px;gap:10px;align-items:center;font-size:14.5px}
+.bar .lab{overflow-wrap:anywhere;line-height:1.3}
+.bar .lab small{display:block;color:var(--muted);font-size:12.5px}
+.bar .fill{display:block;height:10px;border-radius:0 4px 4px 0;background:var(--mark);min-width:3px}
+.bar:hover .fill{background:var(--text)}
+.bar .val{text-align:right;font-variant-numeric:tabular-nums}
+.cols{display:flex;align-items:flex-end;gap:2px;height:120px;border-bottom:1px solid var(--line)}
+.cols i{flex:1 1 0;align-self:stretch;display:flex;align-items:flex-end}
+.cols i u{display:block;width:100%;background:var(--mark);border-radius:3px 3px 0 0}
+.cols i:hover u{background:var(--text)}
+.axis{display:flex;justify-content:space-between;color:var(--muted);font-size:12.5px}
+.scroll{overflow-x:auto}
+.dl{width:100%;border-collapse:collapse;font-size:14.5px}
+.dl th{text-align:left;color:var(--muted);font-weight:500;font-size:13px;padding:0 10px 6px 0;white-space:nowrap}
+.dl td{padding:7px 10px 7px 0;border-top:1px dashed var(--line);vertical-align:top}
+.dl .cve{font-family:var(--mono);font-size:13.5px;white-space:nowrap}
+.dl .num{white-space:nowrap;font-variant-numeric:tabular-nums}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lv,var(--line));margin-right:7px}
+.none{color:var(--muted);font-size:14.5px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{border:1px solid var(--line);background:var(--raise);color:var(--text);border-radius:8px;
+  padding:9px 14px;font:500 14px/1.2 var(--body);cursor:pointer;text-decoration:none}
+.btn:hover{border-color:#4a4a50}
+.tip{position:fixed;z-index:20;pointer-events:none;display:none;background:var(--text);color:var(--bg);
+  font-size:13px;line-height:1.3;padding:5px 9px;border-radius:5px;max-width:260px}
+
+/* CTI colour and motion */
+.k-vuln{--mark:var(--vuln)} .k-news{--mark:var(--news)}
+.key{display:flex;flex-wrap:wrap;gap:6px 20px;color:var(--muted);font-size:14px}
+.key span{display:flex;align-items:center;gap:8px}
+.key i{width:12px;height:12px;border-radius:3px;background:var(--mark)}
+.stat{border-top:3px solid var(--mark);transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.stat:hover,.panel:hover{background:#101013}
+.stat:hover{transform:translateY(-2px)}
+.panel{transition:border-color .18s ease,background .18s ease}
+.panel:hover{border-color:#3a3a40}
+.panel h2{display:flex;align-items:center;gap:9px}
+.panel h2::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--mark);flex:none}
+.panel.plain h2::before{background:var(--muted)}
+.bar .fill{background:linear-gradient(90deg,color-mix(in srgb,var(--mark) 55%,#000),var(--mark));
+  transform-origin:left center;animation:growX .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+.bar:hover .fill{background:var(--mark);filter:brightness(1.25)}
+.cols i u{background:linear-gradient(180deg,var(--mark),color-mix(in srgb,var(--mark) 55%,#000));
+  transform-origin:center bottom;animation:growY .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*18ms)}
+.cols i:hover u{background:var(--mark);filter:brightness(1.25)}
+.cti > *{animation:rise .45s ease both}
+.cti > *:nth-child(2){animation-delay:.04s} .cti > *:nth-child(3){animation-delay:.08s}
+.cti > *:nth-child(4){animation-delay:.12s} .cti > *:nth-child(5){animation-delay:.16s}
+.cti > *:nth-child(n+6){animation-delay:.2s}
+.dl tr{transition:background .15s ease} .dl tr:hover td{background:var(--raise)}
+.btn{transition:border-color .15s ease,transform .15s ease} .btn:active{transform:scale(.97)}
+.row,.tile,.chip,.nav a{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .15s ease}
+.tile:hover{transform:translateY(-2px)}
+.rows .row{animation:rise .35s ease both}
+.live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--vuln);margin-right:8px;
+  animation:pulse 2.2s ease-out infinite}
+@keyframes growX{from{transform:scaleX(0)}}
+@keyframes growY{from{transform:scaleY(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--vuln) 70%,transparent)}
+  100%{box-shadow:0 0 0 9px transparent}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+
+/* expandable bar rows */
+.bars > li{display:flex;flex-direction:column;gap:8px}
+button.bar{background:none;border:0;color:inherit;font:inherit;font-size:14.5px;text-align:left;padding:3px 0;margin:0;
+  width:100%;cursor:pointer;grid-template-columns:minmax(0,40%) 1fr 30px 12px;border-radius:4px}
+button.bar .car{color:var(--muted);transition:transform .15s ease;text-align:center}
+button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
+.stories{list-style:none;margin:0 0 6px;padding:4px 0 4px 14px;border-left:2px solid var(--mark);
+  display:flex;flex-direction:column;gap:12px;font-size:14.5px}
+.stories[hidden]{display:none}
+.stories li{display:flex;flex-direction:column;gap:3px;animation:rise .25s ease both}
+.st-title{line-height:1.35;overflow-wrap:anywhere}
+.st-src{display:flex;flex-wrap:wrap;gap:2px 14px;color:var(--muted);font-size:13px}
+.st-src a{color:var(--muted)} .st-src a:hover{color:var(--text)}
+
+/* tables that stack into cards on phones */
+@media (max-width:640px){
+  .stack tr:first-child{display:none}
+  .stack tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:11px 0;border-top:1px dashed var(--line)}
+  .stack td{border:0;padding:0}
+  .stack td:last-child{flex-basis:100%;color:#c9c9ce}
+  .stack tr:hover td{background:none}
+}
+
+/* About page */
+.page{display:flex;flex-direction:column;gap:34px;padding-top:36px;padding-bottom:70px}
+.page > *{animation:rise .45s ease both}
+.page h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0 0 12px;text-wrap:balance}
+.page .lead{font-size:18px;color:var(--text);max-width:62ch;margin:0}
+.page section{display:flex;flex-direction:column;gap:12px;max-width:760px}
+.page h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.05em;text-transform:uppercase;margin:0;
+  padding-top:22px;border-top:1px solid var(--line)}
+.page p,.page li{color:#c9c9ce;margin:0;max-width:68ch}
+.page ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.page .dl td:first-child{color:var(--text);font-weight:500;white-space:nowrap;padding-right:18px}
+.page .dl td{color:#c9c9ce}
+.page .dl .num{text-align:right;color:var(--text)}
+.page ul:has(.swatch){list-style:none;padding-left:0}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--lv);margin-right:8px}
+
+/* footer */
+.about{margin-top:64px;border-top:1px solid var(--line);padding:34px 20px 60px;color:var(--muted);font-size:15px}
+.about h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--text);margin:0 0 10px}
+.about .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.about .col{display:flex;flex-direction:column;gap:22px}
+.about p{margin:0}
+.about ul{margin:0;padding-left:18px}
+.about li{margin-bottom:6px}
+.src{display:flex;flex-wrap:wrap;gap:6px 16px}
+.src span{display:flex;align-items:center;gap:7px}
+.src span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.src span.down::before{background:var(--red)}
+
+@media (max-width:640px){
+  .top{padding-top:26px}
+  .tiles{gap:6px}
+  .tile{padding:12px 10px}
+  .tile b{font-size:34px}
+  .tile small{display:none}
+  .row summary{grid-template-columns:40px 1fr 14px;gap:10px;padding-left:12px}
+  .score{font-size:22px}
+  .more{padding-left:14px}
+  .about .cols{grid-template-columns:1fr}
+  .search{max-width:none;margin-left:0}
+  .updated{font-size:13px}
+  .stats,.grid2{grid-template-columns:1fr 1fr}
+  .grid2{grid-template-columns:1fr}
+  .nav{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){.caret{transition:none}}
+</style>
+</head>
+<body data-view="brief">
+<div class="wrap">
+  <header class="mast">
+    <div class="brand"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>Threatline</div>
+    <nav class="nav" aria-label="Views">
+      <a href="#brief" id="navBrief" aria-current="page">Brief</a>
+      <a href="#cti" id="navCti">CTI</a>
+      <a href="#about" id="navAbout">About</a>
+    </nav>
+    <div class="updated" id="updated">Loading</div>
+  </header>
+
+  <section class="top brief-only">
+    <h1 id="headline">Today's threats, ranked</h1>
+    <p id="lede">Exploited vulnerabilities and security news from public sources, scored by fixed rules and sorted into red, orange and green.</p>
+    <div class="tiles" id="tiles"></div>
+    <div class="note" id="note"></div>
+  </section>
+</div>
+
+<div class="controls brief-only">
+  <div class="wrap">
+    <div class="chips" id="chips">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Everything</button>
+      <button class="chip" type="button" data-f="vuln" aria-pressed="false">Vulnerabilities</button>
+      <button class="chip" type="button" data-f="news" aria-pressed="false">News</button>
+      <button class="chip" type="button" data-f="ransomware" aria-pressed="false">Ransomware</button>
+    </div>
+    <input class="search" id="q" type="search" placeholder="Search CVE, vendor or keyword" aria-label="Search">
+  </div>
+</div>
+
+<main class="wrap brief-only" id="list"></main>
+
+<section class="wrap cti" id="ctiView" aria-label="CTI view">
+  <header>
+    <h1>CTI workbench</h1>
+    <p>Everything the collector gathered in the last run, counted and grouped: what is being exploited, who is affected, what the news is about and what to patch first.</p>
+  </header>
+  <div class="key" aria-label="Colour key"><span class="k-vuln"><i></i>Vulnerability data (CISA, EPSS)</span><span class="k-news"><i></i>News data (feeds)</span></div>
+  <div class="stats" id="cStats"></div>
+  <section class="panel k-vuln">
+    <h2>New exploited vulnerabilities per day</h2>
+    <p class="sub" id="cTimeSub"></p>
+    <div class="cols" id="cTime"></div>
+    <div class="axis" id="cTimeAxis"></div>
+  </section>
+  <div class="grid2">
+    <section class="panel k-vuln">
+      <h2>Severity (CVSS)</h2>
+      <p class="sub">How bad each flaw is if exploited, on the 0 to 10 CVSS scale.</p>
+      <ul class="bars" id="cSeverity"></ul>
+    </section>
+    <section class="panel k-vuln">
+      <h2>Exploitation likelihood (EPSS)</h2>
+      <p class="sub">Predicted chance of exploitation in the next 30 days.</p>
+      <ul class="bars" id="cEpss"></ul>
+    </section>
+  </div>
+  <div class="grid2">
+    <section class="panel k-vuln">
+      <h2>Most affected vendors</h2>
+      <p class="sub">Entries added to CISA's exploited list in the window, by vendor.</p>
+      <ul class="bars" id="cVendors"></ul>
+    </section>
+    <section class="panel k-vuln">
+      <h2>Weakness types</h2>
+      <p class="sub">The CWE classes behind those entries. One entry can have several.</p>
+      <ul class="bars" id="cCwes"></ul>
+    </section>
+  </div>
+  <section class="panel k-vuln">
+    <h2>Patch deadlines coming up</h2>
+    <p class="sub">CISA's due dates for US federal agencies. A reasonable default if you have no deadline of your own.</p>
+    <div class="scroll"><table class="dl stack" id="cDue"></table></div>
+  </section>
+  <div class="grid2">
+    <section class="panel k-news">
+      <h2>What the news is about</h2>
+      <p class="sub" id="cSigSub"></p>
+      <ul class="bars" id="cSignals"></ul>
+    </section>
+    <section class="panel k-news">
+      <h2>Actors and malware named</h2>
+      <p class="sub">Watchlist names found in news text. Tap a row to see the stories and their sources.</p>
+      <ul class="bars" id="cActors"></ul>
+    </section>
+  </div>
+  <section class="panel k-news">
+    <h2>All stories by source</h2>
+    <p class="sub">Every story collected in this run. Tap a source to read its headlines and open the originals.</p>
+    <ul class="bars" id="cSources"></ul>
+  </section>
+  <section class="panel k-news">
+    <h2>CVEs in the news</h2>
+    <p class="sub">CVE IDs mentioned in collected stories, and whether CISA lists them as exploited.</p>
+    <div class="scroll"><table class="dl" id="cNewsCves"></table></div>
+  </section>
+  <section class="panel plain">
+    <h2>Take the data with you</h2>
+    <p class="sub">Paste the CVE list into a scanner or ticket, or the CSV into a spreadsheet.</p>
+    <div class="btns">
+      <button class="btn" type="button" id="copyCves">Copy CVE list</button>
+      <button class="btn" type="button" id="copyCsv">Copy vulnerabilities as CSV</button>
+      <a class="btn" href="data.json" target="_blank" rel="noopener">Open raw data (JSON)</a>
+    </div>
+    <p class="sub" id="copyMsg" aria-live="polite"></p>
+  </section>
+</section>
+<section class="wrap page" id="aboutView" aria-label="About">
+  <header>
+    <h1>About Threatline</h1>
+    <p class="lead">Threatline is a free, automated digest of the vulnerabilities attackers are exploiting right now and the security news around them. It sorts everything into red, orange and green, so an analyst can see in a minute what needs attention first.</p>
+  </header>
+
+  <section>
+    <h2>Who runs it</h2>
+    <p>Threatline is built and maintained by Markus Kankare. More of his work is at <a href="https://markuskankare.com" target="_blank" rel="noopener">markuskankare.com</a> and on <a href="https://github.com/KankareDEV" target="_blank" rel="noopener">GitHub</a>. If you spot a mistake or a broken source, please report it there.</p>
+  </section>
+
+  <section>
+    <h2>Where the data comes from</h2>
+    <div class="scroll"><table class="dl">
+      <tr><td><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA KEV catalogue</a></td><td>Which vulnerabilities are confirmed exploited, the required action, the due date, ransomware use and the weakness type.</td></tr>
+      <tr><td><a href="https://www.first.org/epss/" target="_blank" rel="noopener">FIRST EPSS</a></td><td>The predicted chance that a vulnerability is exploited in the next 30 days.</td></tr>
+      <tr><td><a href="https://www.cve.org" target="_blank" rel="noopener">CVE Program records</a></td><td>CVSS severity, taken from the vendor's score or, if there is none, from CISA's.</td></tr>
+      <tr><td>News feeds</td><td><a href="https://www.bleepingcomputer.com" target="_blank" rel="noopener">BleepingComputer</a>, <a href="https://therecord.media" target="_blank" rel="noopener">The Record</a>, <a href="https://thehackernews.com" target="_blank" rel="noopener">The Hacker News</a> and <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">CISA advisories</a>. Only the headline, date and link are kept.</td></tr>
+    </table></div>
+    <p>Threatline is not affiliated with or endorsed by any of these organisations. Headlines belong to their publishers.</p>
+  </section>
+
+  <section>
+    <h2>How the colours are decided</h2>
+    <p>Every item gets a score from 0 to 100 from fixed rules. No AI ranks anything, and each item shows the rules that produced its score.</p>
+    <div class="scroll"><table class="dl">
+      <tr><th>Exploited vulnerabilities</th><th class="num">Points</th></tr>
+      <tr><td>Confirmed exploited (in CISA KEV)</td><td class="num">50</td></tr>
+      <tr><td>EPSS probability</td><td class="num">0 to 25</td></tr>
+      <tr><td>Used in ransomware campaigns</td><td class="num">15</td></tr>
+      <tr><td>CVSS 9.0 or more / 7.0 to 8.9</td><td class="num">10 / 5</td></tr>
+      <tr><td>Added in the last 7 / 14 days</td><td class="num">10 / 5</td></tr>
+      <tr><td>In the news this week</td><td class="num">5</td></tr>
+    </table></div>
+    <div class="scroll"><table class="dl">
+      <tr><th>News stories</th><th class="num">Points</th></tr>
+      <tr><td>Reported by a tracked source</td><td class="num">20</td></tr>
+      <tr><td>Headline signals: zero-day, exploited, ransomware, supply chain, breach, critical flaw</td><td class="num">up to 40</td></tr>
+      <tr><td>Mentions a CVE on the exploited list</td><td class="num">20</td></tr>
+      <tr><td>Covered by more than one source</td><td class="num">up to 20</td></tr>
+    </table></div>
+    <ul>
+      <li><span class="swatch red"></span>Red, act now: vulnerabilities scoring 70 or more, news scoring 60 or more.</li>
+      <li><span class="swatch orange"></span>Orange, check this week: all other exploited vulnerabilities, news scoring 40 to 59.</li>
+      <li><span class="swatch green"></span>Green, good to know: news scoring under 40. An exploited vulnerability is never green.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How often it updates</h2>
+    <p>The sources are checked every 2 hours. An open page re-reads the data every 10 minutes, and the time of the data is shown at the top right.</p>
+  </section>
+
+  <section>
+    <h2>Limits you should know</h2>
+    <ul>
+      <li>It ranks general risk. It knows nothing about your systems, so a red item may not affect you and a green one might.</li>
+      <li>News is scored by keywords in the headline, which will sometimes misjudge a story.</li>
+      <li>Very new vulnerabilities often have no CVSS or EPSS score yet. They are scored without it.</li>
+      <li>Threat actor names come from a fixed watchlist, so an actor that is not on it will not appear.</li>
+      <li>The site is provided as is. Confirm against the original source before you act on anything here.</li>
+    </ul>
+  </section>
+</section>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<footer class="wrap about">
+  <div class="cols">
+    <div class="col">
+      <div>
+        <h2>How the colours are decided</h2>
+        <ul>
+          <li>Every item gets a score from 0 to 100 from fixed rules. No AI guesses the rank.</li>
+          <li>Vulnerabilities start at 50 for confirmed exploitation, then gain points for EPSS probability, CVSS severity, ransomware use and recency. 70 or more is red, the rest orange.</li>
+          <li>News starts at 20 and gains points for headline signals, links to exploited CVEs and coverage by several sources. 60 or more is red, 40 or more orange, the rest green.</li>
+          <li>Open any item to see which rules gave it its score. The full method is on the <a href="#about">About page</a>.</li>
+          <li>The collector checks the sources every 2 hours. This page re-reads the data every 10 minutes, so you can leave it open.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <h2>What this is not</h2>
+        <p>This ranks general risk. It knows nothing about your systems, so a red item may not affect you and a green one might. Check each against your own assets before acting. Headlines belong to their publishers; follow the links for the full story.</p>
+      </div>
+      <div>
+        <h2>Sources checked in the last run</h2>
+        <div class="src" id="src"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const LEVELS = [
+  ["red","Red","Act now","Exploited now, with signs of wide or damaging use. Check today."],
+  ["orange","Orange","Check this week","Confirmed exploitation or notable news with fewer aggravating signs."],
+  ["green","Green","Good to know","Background reading. No action expected."]
+];
+const el = (tag, cls, text) => { const n = document.createElement(tag);
+  if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+const fmtDate = s => new Date(s + (s.length === 10 ? "T00:00:00Z" : ""))
+  .toLocaleDateString("en-GB", {day:"numeric", month:"short", timeZone:"UTC"});
+const safeUrl = u => /^https?:\/\//i.test(u) ? u : "#";
+let DATA = null, filter = "all", query = "";
+
+function matches(it){
+  if (filter === "vuln" && it.type !== "vuln") return false;
+  if (filter === "news" && it.type !== "news") return false;
+  if (filter === "ransomware" && !it.ransomware) return false;
+  if (!query) return true;
+  const hay = [it.title, it.cve, it.vendor, it.product, it.summary,
+    (it.sources||[]).join(" "), (it.cves||[]).join(" ")].join(" ").toLowerCase();
+  return query.split(/\s+/).every(w => hay.includes(w));
+}
+
+function row(it){
+  const li = el("li","row"), d = el("details"), s = el("summary");
+  const sc = el("div","score", String(it.score)); sc.append(el("small",null,"of 100"));
+  const body = el("div");
+  body.append(el("h3","title", it.title));
+  const meta = el("div","meta");
+  if (it.type === "vuln"){
+    meta.append(el("span","cve", it.cve));
+    meta.append(el("span",null, it.vendor === it.product ? it.vendor : [it.vendor, it.product].filter(Boolean).join(" ")));
+    meta.append(el("span",null, "Added " + fmtDate(it.date)));
+    if (it.cvss) meta.append(el("span","flag","CVSS " + it.cvss.score.toFixed(1)));
+    if (it.epss != null) meta.append(el("span","flag","EPSS " + Math.round(it.epss*100) + "%"));
+  } else {
+    meta.append(el("span",null, it.sources.join(", ")));
+    meta.append(el("span",null, fmtDate(it.date)));
+    (it.cves||[]).slice(0,2).forEach(c => meta.append(el("span","cve", c)));
+  }
+  if (it.ransomware) meta.append(el("span","flag","Ransomware"));
+  body.append(meta);
+  s.append(sc, body, el("span","caret","›"));
+  const more = el("div","more");
+  if (it.summary) more.append(el("p",null, it.summary));
+  if (it.cvss){ more.append(el("h3",null,"Severity"));
+    more.append(el("p",null,"CVSS " + it.cvss.version + " base score " + it.cvss.score.toFixed(1) + " (" + it.cvss.severity.toLowerCase() +
+      "), scored by " + (it.cvss.by === "CNA" ? "the vendor" : "CISA") + ". " + it.cvss.vector)); }
+  if (it.action){ more.append(el("h3",null,"Recommended action"));
+    more.append(el("p",null, it.action + (it.due ? " CISA deadline for US agencies: " + fmtDate(it.due) + "." : ""))); }
+  more.append(el("h3",null,"Why it has this colour"));
+  const why = el("ul","why");
+  it.reasons.forEach(r => { const x = el("li"); x.append(el("span",null,r.label), el("b",null,"+"+r.points)); why.append(x); });
+  more.append(why);
+  more.append(el("h3",null, it.type === "news" ? "Read the story" : "References"));
+  const links = el("div","links");
+  it.links.forEach(l => { const a = el("a",null,l.label); a.href = safeUrl(l.url); a.target = "_blank"; a.rel = "noopener noreferrer"; links.append(a); });
+  more.append(links);
+  d.append(s, more); li.append(d); return li;
+}
+
+function render(){
+  const list = document.getElementById("list"); list.textContent = "";
+  const shown = DATA.items.filter(matches);
+  if (!shown.length){
+    list.append(el("div","empty", DATA.items.length
+      ? "Nothing matches that filter. Clear the search or choose Everything."
+      : "No items yet. Run fetch.py to collect today's data."));
+    return;
+  }
+  LEVELS.forEach(([key,name,tag,desc]) => {
+    const items = shown.filter(i => i.level === key);
+    if (!items.length) return;
+    const sec = el("section","level " + key); sec.id = key;
+    const head = el("header");
+    const h = el("h2",null,name + ": " + tag.toLowerCase());
+    h.append(el("span",null, items.length + (items.length === 1 ? " item" : " items")));
+    head.append(h, el("p",null,desc));
+    const ul = el("ul","rows"); items.forEach(i => ul.append(row(i)));
+    sec.append(head, ul); list.append(sec);
+  });
+}
+
+function summary(){
+  const d = new Date(DATA.generated), c = DATA.counts;
+  document.getElementById("headline").textContent =
+    d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"long", timeZone:"UTC"});
+  const up = document.getElementById("updated"); up.textContent = "Data from " +
+    d.toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"UTC"}) + " UTC";
+  const live = el("span","live"); live.title = "Re-checks for new data every 10 minutes"; up.prepend(live);
+  const top = DATA.items[0];
+  document.getElementById("lede").textContent = top
+    ? (c.red ? c.red + (c.red === 1 ? " item needs" : " items need") + " attention first. " : "Nothing red today. ")
+      + "Top of the list: " + top.title + "."
+    : "No items collected yet.";
+  const tiles = document.getElementById("tiles"); tiles.textContent = "";
+  LEVELS.forEach(([key,name,tag,desc]) => {
+    const b = el("button","tile " + key); b.type = "button";
+    b.append(el("b",null,String(c[key] || 0)), el("span",null,name + ": " + tag.toLowerCase()), el("small",null,desc));
+    b.onclick = () => { const t = document.getElementById(key); if (t) t.scrollIntoView({behavior:"smooth"}); };
+    tiles.append(b);
+  });
+  document.getElementById("note").textContent =
+    "Covers vulnerabilities added to CISA's exploited list in the last " + DATA.kev_window_days +
+    " days, plus news from the last " + DATA.news_window_days + " days.";
+  const src = document.getElementById("src"); src.textContent = "";
+  DATA.sources.forEach(s => src.append(el("span", s.ok ? "" : "down", s.name + (s.ok ? "" : " (unreachable)"))));
+}
+
+document.getElementById("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  filter = b.dataset.f;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === b));
+  render();
+});
+document.getElementById("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); render(); });
+
+/* ---------- CTI view ---------- */
+const byId = id => document.getElementById(id);
+function bars(id, rows, emptyText){
+  const ul = byId(id); ul.textContent = "";
+  if (!rows.length){ ul.append(el("li","none",emptyText)); return; }
+  const max = Math.max(1, ...rows.map(r => r.n));
+  rows.forEach((r, k) => {
+    const li = el("li"), open = r.stories && r.stories.length;
+    const row = el(open ? "button" : "div", "bar"); row.style.setProperty("--i", k);
+    if (!open) row.dataset.tip = r.tip || (r.label + ": " + r.n);
+    const lab = el("span","lab", r.label); if (r.small) lab.append(el("small",null,r.small));
+    const track = el("span"), fill = el("span","fill"); fill.style.width = (r.n / max * 100) + "%"; if (!r.n) fill.style.display = "none"; track.append(fill);
+    row.append(lab, track, el("span","val", String(r.n)));
+    li.append(row);
+    if (open){
+      row.type = "button"; row.setAttribute("aria-expanded","false"); row.append(el("span","car","›"));
+      const box = el("ul","stories"); box.hidden = true;
+      r.stories.forEach(st => {
+        const x = el("li"), t = el("span","st-title"), src = el("span","st-src");
+        t.append(el("span","dot " + st.level), document.createTextNode(st.title));
+        src.append(el("span",null,fmtDate(st.date)));
+        st.links.forEach(l => { const a = el("a",null,l.label); a.href = safeUrl(l.url); a.target = "_blank"; a.rel = "noopener noreferrer"; src.append(a); });
+        x.append(t, src); box.append(x);
+      });
+      row.addEventListener("click", () => { box.hidden = !box.hidden; row.setAttribute("aria-expanded", String(!box.hidden)); });
+      li.append(box);
+    }
+    ul.append(li);
+  });
+}
+function table(id, head, rows, emptyText){
+  const t = byId(id); t.textContent = "";
+  if (!rows.length){ const tr = el("tr"), td = el("td","none",emptyText); tr.append(td); t.append(tr); return; }
+  const hr = el("tr"); head.forEach(h => hr.append(el("th",null,h))); t.append(hr);
+  rows.forEach(cells => { const tr = el("tr"); cells.forEach(c => {
+    const td = el("td", c.cls || null); if (c.node) td.append(c.node); else td.textContent = c.text; tr.append(td); }); t.append(tr); });
+}
+function daysLeft(due){
+  const n = new Date(), today = Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate());
+  return Math.round((Date.parse(due + "T00:00:00Z") - today) / 864e5);
+}
+function renderCti(){
+  const a = DATA.analytics; if (!a) return;
+  const t = a.totals, win = DATA.kev_window_days, nwin = DATA.news_window_days;
+  const stats = byId("cStats"); stats.textContent = "";
+  [[t.kev_window, "exploited vulnerabilities added in " + win + " days"],
+   [t.ransomware, "of them used in ransomware campaigns"],
+   [t.epss_known ? t.epss_high : "n/a", t.epss_known ? "with EPSS of 50% or more" : "EPSS scores were not available in this run"],
+   [t.news, "news stories in the last " + nwin + " days"]]
+    .forEach(([n, label], k) => { const d = el("div","stat " + (k === 3 ? "k-news" : "k-vuln")), b = el("b",null,String(n));
+      if (typeof n === "number") b.dataset.count = n;
+      d.append(b, el("span",null,label)); stats.append(d); });
+  countUp();
+
+  const tl = a.timeline, peak = tl.reduce((m, d) => d.n > m.n ? d : m, tl[0]);
+  const cols = byId("cTime"); cols.textContent = "";
+  tl.forEach((d, k) => { const c = el("i"), u = el("u"); c.style.setProperty("--i", k); u.style.height = peak.n ? (d.n / peak.n * 100) + "%" : "0";
+    c.dataset.tip = fmtDate(d.date) + ": " + d.n + (d.n === 1 ? " entry" : " entries"); c.append(u); cols.append(c); });
+  byId("cTimeSub").textContent = peak.n
+    ? "Entries added to CISA's exploited list each day. Busiest day: " + fmtDate(peak.date) + " with " + peak.n + "."
+    : "No entries were added in this window.";
+  const ax = byId("cTimeAxis"); ax.textContent = "";
+  ax.append(el("span",null,fmtDate(tl[0].date)), el("span",null,fmtDate(tl[Math.floor(tl.length/2)].date)), el("span",null,fmtDate(tl[tl.length-1].date)));
+
+  bars("cSeverity", (a.severity || []).map(x => ({label: x.name, n: x.n})), "No severity data in this run.");
+  bars("cEpss", (a.epss_bands || []).map(x => ({label: x.name, n: x.n})), "No EPSS data in this run.");
+  bars("cVendors", a.vendors.map(v => ({label: v.name, n: v.n})), "No vulnerabilities in this run.");
+  bars("cCwes", a.cwes.map(c => ({label: c.name || c.id, small: c.name ? c.id : "", n: c.n, tip: c.id + (c.name ? " " + c.name : "") + ": " + c.n})),
+       "CISA listed no weakness types for these entries.");
+
+  table("cDue", ["Due", "Time left", "CVE", "Vulnerability"], a.deadlines.map(d => {
+    const n = daysLeft(d.due), left = el("span");
+    const dot = el("span","dot " + (n <= 3 ? "red" : n <= 7 ? "orange" : ""));
+    left.append(dot, document.createTextNode(n <= 0 ? "Due today" : n === 1 ? "1 day" : n + " days"));
+    return [{text: fmtDate(d.due), cls: "num"}, {node: left, cls: "num"}, {text: d.cve, cls: "cve"}, {text: d.title}];
+  }), "No open deadlines for entries in this window.");
+
+  const noNews = "No news was collected in this run.";
+  byId("cSigSub").textContent = "Stories from the last " + nwin + " days, by what the headline signals. Tap a row to see the stories and their sources.";
+  const news = DATA.items.filter(i => i.type === "news");
+  bars("cSignals", a.signals.map(x => ({label: x.name, n: x.n, stories: news.filter(n => (n.signals || []).includes(x.name))})),
+       t.news ? "No headline signals matched." : noNews);
+  bars("cActors", a.actors.map(x => ({label: x.name, n: x.n, stories: news.filter(n => (n.actors || []).includes(x.name))})),
+       t.news ? "No watchlist names appeared in the news." : noNews);
+  bars("cSources", (a.by_source || []).map(x => ({label: x.name, n: x.n, stories: news.filter(n => n.sources.includes(x.name))})), noNews);
+  table("cNewsCves", ["CVE", "Stories", "CISA exploited list"], a.news_cves.map(c => {
+    const link = el("a",null,c.cve); link.href = "https://nvd.nist.gov/vuln/detail/" + encodeURIComponent(c.cve);
+    link.target = "_blank"; link.rel = "noopener noreferrer";
+    return [{node: link, cls: "cve"}, {text: String(c.n), cls: "num"}, {text: c.kev ? "Listed" : "Not listed"}];
+  }), t.news ? "No CVE IDs were mentioned in the news." : noNews);
+}
+
+function copyText(text, what){
+  const msg = byId("copyMsg");
+  const ok = () => { msg.textContent = "Copied " + what + "."; };
+  const fail = () => { msg.textContent = "Your browser blocked copying. Use the raw data link instead."; };
+  try { navigator.clipboard.writeText(text).then(ok, fail); } catch (e) { fail(); }
+}
+byId("copyCves").addEventListener("click", () => {
+  const v = DATA.items.filter(i => i.type === "vuln").map(i => i.cve);
+  copyText(v.join("\n"), v.length + " CVE IDs");
+});
+byId("copyCsv").addEventListener("click", () => {
+  const q = x => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
+  const v = DATA.items.filter(i => i.type === "vuln");
+  const rows = [["cve","vendor","product","level","score","cvss","epss","ransomware","date_added","due","cwes","title"].join(",")]
+    .concat(v.map(i => [i.cve, i.vendor, i.product, i.level, i.score, i.cvss ? i.cvss.score : "", i.epss == null ? "" : i.epss, i.ransomware ? "yes" : "no",
+      i.date, i.due, (i.cwes || []).join(" "), i.title].map(q).join(",")));
+  copyText(rows.join("\n"), v.length + " rows of CSV");
+});
+
+/* numbers count up when the CTI view opens */
+function countUp(){
+  if (document.body.dataset.view !== "cti" || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll("#cStats b[data-count]").forEach(b => {
+    const end = +b.dataset.count, t0 = performance.now(), dur = 700;
+    const step = t => { const p = Math.min(1, (t - t0) / dur);
+      b.textContent = String(Math.round(end * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  });
+}
+
+/* hover tooltip for chart marks */
+const tip = byId("tip");
+document.addEventListener("mousemove", e => {
+  const m = e.target.closest ? e.target.closest("[data-tip]") : null;
+  if (!m){ tip.style.display = "none"; return; }
+  tip.textContent = m.dataset.tip; tip.style.display = "block";
+  const w = tip.offsetWidth, x = Math.min(e.clientX + 12, window.innerWidth - w - 8);
+  tip.style.left = Math.max(8, x) + "px"; tip.style.top = (e.clientY + 16) + "px";
+});
+
+/* views: #brief and #cti */
+function route(){
+  const v = location.hash === "#cti" ? "cti" : location.hash === "#about" ? "about" : "brief";
+  document.body.dataset.view = v;
+  [["brief","navBrief"],["cti","navCti"],["about","navAbout"]].forEach(([name, id]) => {
+    if (name === v) byId(id).setAttribute("aria-current","page"); else byId(id).removeAttribute("aria-current"); });
+  if (v === "cti" && DATA) countUp();
+  window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route); route();
+
+/* load now, then look for new data every 10 minutes */
+function load(first){
+  fetch("data.json", {cache:"no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { if (DATA && DATA.generated === d.generated) return; DATA = d; summary(); render(); renderCti(); })
+    .catch(() => {
+      if (!first) return;
+      byId("updated").textContent = "No data";
+      byId("list").append(el("div","empty",
+        "Could not load data.json. Run “python fetch.py” in this folder, then open the site through a web server (for example “python -m http.server”), not as a local file."));
+    });
+}
+load(true);
+setInterval(() => load(false), 10 * 60 * 1000);
+</script>
+</body>
+</html>
