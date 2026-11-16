@@ -115,8 +115,10 @@ details[open] .caret{transform:rotate(90deg)}
   color:var(--muted);text-decoration:none}
 .nav a:hover{color:var(--text);border-color:#4a4a50}
 .nav a[aria-current="page"]{background:var(--text);color:var(--bg);border-color:var(--text)}
-body[data-view="cti"] .brief-only{display:none !important}
-body[data-view="brief"] #ctiView{display:none}
+body:not([data-view="brief"]) .brief-only{display:none !important}
+body:not([data-view="cti"]) #ctiView{display:none}
+body:not([data-view="about"]) #aboutView{display:none}
+body[data-view="about"] footer.about{display:none}
 
 /* CTI view */
 .cti{display:flex;flex-direction:column;gap:10px;padding-top:36px}
@@ -197,6 +199,22 @@ body[data-view="brief"] #ctiView{display:none}
   100%{box-shadow:0 0 0 9px transparent}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
 
+/* About page */
+.page{display:flex;flex-direction:column;gap:34px;padding-top:36px;padding-bottom:70px}
+.page > *{animation:rise .45s ease both}
+.page h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0 0 12px;text-wrap:balance}
+.page .lead{font-size:18px;color:var(--text);max-width:62ch;margin:0}
+.page section{display:flex;flex-direction:column;gap:12px;max-width:760px}
+.page h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.05em;text-transform:uppercase;margin:0;
+  padding-top:22px;border-top:1px solid var(--line)}
+.page p,.page li{color:#c9c9ce;margin:0;max-width:68ch}
+.page ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.page .dl td:first-child{color:var(--text);font-weight:500;white-space:nowrap;padding-right:18px}
+.page .dl td{color:#c9c9ce}
+.page .dl .num{text-align:right;color:var(--text)}
+.page ul:has(.swatch){list-style:none;padding-left:0}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--lv);margin-right:8px}
+
 /* footer */
 .about{margin-top:64px;border-top:1px solid var(--line);padding:34px 20px 60px;color:var(--muted);font-size:15px}
 .about h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.04em;text-transform:uppercase;
@@ -237,6 +255,7 @@ body[data-view="brief"] #ctiView{display:none}
     <nav class="nav" aria-label="Views">
       <a href="#brief" id="navBrief" aria-current="page">Brief</a>
       <a href="#cti" id="navCti">CTI</a>
+      <a href="#about" id="navAbout">About</a>
     </nav>
     <div class="updated" id="updated">Loading</div>
   </header>
@@ -276,6 +295,18 @@ body[data-view="brief"] #ctiView{display:none}
     <div class="cols" id="cTime"></div>
     <div class="axis" id="cTimeAxis"></div>
   </section>
+  <div class="grid2">
+    <section class="panel k-vuln">
+      <h2>Severity (CVSS)</h2>
+      <p class="sub">How bad each flaw is if exploited, on the 0 to 10 CVSS scale.</p>
+      <ul class="bars" id="cSeverity"></ul>
+    </section>
+    <section class="panel k-vuln">
+      <h2>Exploitation likelihood (EPSS)</h2>
+      <p class="sub">Predicted chance of exploitation in the next 30 days.</p>
+      <ul class="bars" id="cEpss"></ul>
+    </section>
+  </div>
   <div class="grid2">
     <section class="panel k-vuln">
       <h2>Most affected vendors</h2>
@@ -321,6 +352,70 @@ body[data-view="brief"] #ctiView{display:none}
     <p class="sub" id="copyMsg" aria-live="polite"></p>
   </section>
 </section>
+<section class="wrap page" id="aboutView" aria-label="About">
+  <header>
+    <h1>About Threatline</h1>
+    <p class="lead">Threatline is a free, automated digest of the vulnerabilities attackers are exploiting right now and the security news around them. It sorts everything into red, orange and green, so an analyst can see in a minute what needs attention first.</p>
+  </header>
+
+  <section>
+    <h2>Who runs it</h2>
+    <p>Threatline is built and maintained by Markus Kankare. More of his work is at <a href="https://markuskankare.com" target="_blank" rel="noopener">markuskankare.com</a> and on <a href="https://github.com/KankareDEV" target="_blank" rel="noopener">GitHub</a>. If you spot a mistake or a broken source, please report it there.</p>
+  </section>
+
+  <section>
+    <h2>Where the data comes from</h2>
+    <div class="scroll"><table class="dl">
+      <tr><td><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA KEV catalogue</a></td><td>Which vulnerabilities are confirmed exploited, the required action, the due date, ransomware use and the weakness type.</td></tr>
+      <tr><td><a href="https://www.first.org/epss/" target="_blank" rel="noopener">FIRST EPSS</a></td><td>The predicted chance that a vulnerability is exploited in the next 30 days.</td></tr>
+      <tr><td><a href="https://www.cve.org" target="_blank" rel="noopener">CVE Program records</a></td><td>CVSS severity, taken from the vendor's score or, if there is none, from CISA's.</td></tr>
+      <tr><td>News feeds</td><td><a href="https://www.bleepingcomputer.com" target="_blank" rel="noopener">BleepingComputer</a>, <a href="https://therecord.media" target="_blank" rel="noopener">The Record</a>, <a href="https://thehackernews.com" target="_blank" rel="noopener">The Hacker News</a> and <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">CISA advisories</a>. Only the headline, date and link are kept.</td></tr>
+    </table></div>
+    <p>Threatline is not affiliated with or endorsed by any of these organisations. Headlines belong to their publishers.</p>
+  </section>
+
+  <section>
+    <h2>How the colours are decided</h2>
+    <p>Every item gets a score from 0 to 100 from fixed rules. No AI ranks anything, and each item shows the rules that produced its score.</p>
+    <div class="scroll"><table class="dl">
+      <tr><th>Exploited vulnerabilities</th><th class="num">Points</th></tr>
+      <tr><td>Confirmed exploited (in CISA KEV)</td><td class="num">50</td></tr>
+      <tr><td>EPSS probability</td><td class="num">0 to 25</td></tr>
+      <tr><td>Used in ransomware campaigns</td><td class="num">15</td></tr>
+      <tr><td>CVSS 9.0 or more / 7.0 to 8.9</td><td class="num">10 / 5</td></tr>
+      <tr><td>Added in the last 7 / 14 days</td><td class="num">10 / 5</td></tr>
+      <tr><td>In the news this week</td><td class="num">5</td></tr>
+    </table></div>
+    <div class="scroll"><table class="dl">
+      <tr><th>News stories</th><th class="num">Points</th></tr>
+      <tr><td>Reported by a tracked source</td><td class="num">20</td></tr>
+      <tr><td>Headline signals: zero-day, exploited, ransomware, supply chain, breach, critical flaw</td><td class="num">up to 40</td></tr>
+      <tr><td>Mentions a CVE on the exploited list</td><td class="num">20</td></tr>
+      <tr><td>Covered by more than one source</td><td class="num">up to 20</td></tr>
+    </table></div>
+    <ul>
+      <li><span class="swatch red"></span>Red, act now: vulnerabilities scoring 70 or more, news scoring 60 or more.</li>
+      <li><span class="swatch orange"></span>Orange, check this week: all other exploited vulnerabilities, news scoring 40 to 59.</li>
+      <li><span class="swatch green"></span>Green, good to know: news scoring under 40. An exploited vulnerability is never green.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How often it updates</h2>
+    <p>The sources are checked every 2 hours. An open page re-reads the data every 10 minutes, and the time of the data is shown at the top right.</p>
+  </section>
+
+  <section>
+    <h2>Limits you should know</h2>
+    <ul>
+      <li>It ranks general risk. It knows nothing about your systems, so a red item may not affect you and a green one might.</li>
+      <li>News is scored by keywords in the headline, which will sometimes misjudge a story.</li>
+      <li>Very new vulnerabilities often have no CVSS or EPSS score yet. They are scored without it.</li>
+      <li>Threat actor names come from a fixed watchlist, so an actor that is not on it will not appear.</li>
+      <li>The site is provided as is. Confirm against the original source before you act on anything here.</li>
+    </ul>
+  </section>
+</section>
 <div class="tip" id="tip" role="tooltip"></div>
 
 <footer class="wrap about">
@@ -330,9 +425,9 @@ body[data-view="brief"] #ctiView{display:none}
         <h2>How the colours are decided</h2>
         <ul>
           <li>Every item gets a score from 0 to 100 from fixed rules. No AI guesses the rank.</li>
-          <li>Vulnerabilities start at 50 for confirmed exploitation, then gain points for EPSS probability, ransomware use and recency. 70 or more is red, the rest orange.</li>
+          <li>Vulnerabilities start at 50 for confirmed exploitation, then gain points for EPSS probability, CVSS severity, ransomware use and recency. 70 or more is red, the rest orange.</li>
           <li>News starts at 20 and gains points for headline signals, links to exploited CVEs and coverage by several sources. 60 or more is red, 40 or more orange, the rest green.</li>
-          <li>Open any item to see which rules gave it its score.</li>
+          <li>Open any item to see which rules gave it its score. The full method is on the <a href="#about">About page</a>.</li>
           <li>The collector checks the sources every 2 hours. This page re-reads the data every 10 minutes, so you can leave it open.</li>
         </ul>
       </div>
@@ -383,6 +478,7 @@ function row(it){
     meta.append(el("span","cve", it.cve));
     meta.append(el("span",null, it.vendor === it.product ? it.vendor : [it.vendor, it.product].filter(Boolean).join(" ")));
     meta.append(el("span",null, "Added " + fmtDate(it.date)));
+    if (it.cvss) meta.append(el("span","flag","CVSS " + it.cvss.score.toFixed(1)));
     if (it.epss != null) meta.append(el("span","flag","EPSS " + Math.round(it.epss*100) + "%"));
   } else {
     meta.append(el("span",null, it.sources.join(", ")));
@@ -394,6 +490,9 @@ function row(it){
   s.append(sc, body, el("span","caret","›"));
   const more = el("div","more");
   if (it.summary) more.append(el("p",null, it.summary));
+  if (it.cvss){ more.append(el("h3",null,"Severity"));
+    more.append(el("p",null,"CVSS " + it.cvss.version + " base score " + it.cvss.score.toFixed(1) + " (" + it.cvss.severity.toLowerCase() +
+      "), scored by " + (it.cvss.by === "CNA" ? "the vendor" : "CISA") + ". " + it.cvss.vector)); }
   if (it.action){ more.append(el("h3",null,"Recommended action"));
     more.append(el("p",null, it.action + (it.due ? " CISA deadline for US agencies: " + fmtDate(it.due) + "." : ""))); }
   more.append(el("h3",null,"Why it has this colour"));
@@ -468,11 +567,11 @@ const byId = id => document.getElementById(id);
 function bars(id, rows, emptyText){
   const ul = byId(id); ul.textContent = "";
   if (!rows.length){ const p = el("li","none",emptyText); ul.append(p); return; }
-  const max = Math.max(...rows.map(r => r.n));
+  const max = Math.max(1, ...rows.map(r => r.n));
   rows.forEach(r => {
     const li = el("li","bar"); li.dataset.tip = r.tip || (r.label + ": " + r.n); li.style.setProperty("--i", ul.children.length);
     const lab = el("span","lab", r.label); if (r.small) lab.append(el("small",null,r.small));
-    const track = el("span"), fill = el("span","fill"); fill.style.width = (r.n / max * 100) + "%"; track.append(fill);
+    const track = el("span"), fill = el("span","fill"); fill.style.width = (r.n / max * 100) + "%"; if (!r.n) fill.style.display = "none"; track.append(fill);
     li.append(lab, track, el("span","val", String(r.n))); ul.append(li);
   });
 }
@@ -510,6 +609,8 @@ function renderCti(){
   const ax = byId("cTimeAxis"); ax.textContent = "";
   ax.append(el("span",null,fmtDate(tl[0].date)), el("span",null,fmtDate(tl[Math.floor(tl.length/2)].date)), el("span",null,fmtDate(tl[tl.length-1].date)));
 
+  bars("cSeverity", (a.severity || []).map(x => ({label: x.name, n: x.n})), "No severity data in this run.");
+  bars("cEpss", (a.epss_bands || []).map(x => ({label: x.name, n: x.n})), "No EPSS data in this run.");
   bars("cVendors", a.vendors.map(v => ({label: v.name, n: v.n})), "No vulnerabilities in this run.");
   bars("cCwes", a.cwes.map(c => ({label: c.name || c.id, small: c.name ? c.id : "", n: c.n, tip: c.id + (c.name ? " " + c.name : "") + ": " + c.n})),
        "CISA listed no weakness types for these entries.");
@@ -546,8 +647,8 @@ byId("copyCves").addEventListener("click", () => {
 byId("copyCsv").addEventListener("click", () => {
   const q = x => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
   const v = DATA.items.filter(i => i.type === "vuln");
-  const rows = [["cve","vendor","product","level","score","epss","ransomware","date_added","due","cwes","title"].join(",")]
-    .concat(v.map(i => [i.cve, i.vendor, i.product, i.level, i.score, i.epss == null ? "" : i.epss, i.ransomware ? "yes" : "no",
+  const rows = [["cve","vendor","product","level","score","cvss","epss","ransomware","date_added","due","cwes","title"].join(",")]
+    .concat(v.map(i => [i.cve, i.vendor, i.product, i.level, i.score, i.cvss ? i.cvss.score : "", i.epss == null ? "" : i.epss, i.ransomware ? "yes" : "no",
       i.date, i.due, (i.cwes || []).join(" "), i.title].map(q).join(",")));
   copyText(rows.join("\n"), v.length + " rows of CSV");
 });
@@ -575,12 +676,12 @@ document.addEventListener("mousemove", e => {
 
 /* views: #brief and #cti */
 function route(){
-  const v = location.hash === "#cti" ? "cti" : "brief";
+  const v = location.hash === "#cti" ? "cti" : location.hash === "#about" ? "about" : "brief";
   document.body.dataset.view = v;
-  byId("navBrief").toggleAttribute("aria-current", v === "brief");
-  byId("navCti").toggleAttribute("aria-current", v === "cti");
-  if (v === "brief") byId("navBrief").setAttribute("aria-current","page"); else byId("navCti").setAttribute("aria-current","page");
+  [["brief","navBrief"],["cti","navCti"],["about","navAbout"]].forEach(([name, id]) => {
+    if (name === v) byId(id).setAttribute("aria-current","page"); else byId(id).removeAttribute("aria-current"); });
   if (v === "cti" && DATA) countUp();
+  window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route); route();
 
