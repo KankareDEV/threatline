@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T23:06:19Z",
+ "generated": "2026-11-16T23:15:55Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
@@ -3164,8 +3164,31 @@
   }
  ],
  "brief": {
-  "key": "2026-11-16|CVE-2026-109618,CVE-2026-109619,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
-  "text": "Attention should go first to the two PHP vulnerabilities, CVE-2026-109618 (memory corruption) and CVE-2026-109619 (stale internal request-state), which share the top score of 85. Next are the Google Brotli unchecked return value flaw (CVE-2026-111497, score 81) and the Collabora Online CODE server OS command injection (CVE-2026-110447, score 78). The Barracuda ESG authentication bypass (CVE-2026-116606, score 73) also ranks high enough to follow closely.",
+  "key": "v2|2026-11-16|CVE-2026-109618,CVE-2026-109619,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
+  "headline": "All ten listed items are confirmed exploited; PHP leads the urgent list.",
+  "points": [
+   {
+    "title": "PHP memory corruption vulnerability",
+    "why": "Confirmed exploited in the wild and in CISA's KEV catalog; exploitation within 30 days is near-certain.",
+    "ref": "CVE-2026-109618",
+    "find": "CVE-2026-109618",
+    "level": "red"
+   },
+   {
+    "title": "Google Brotli unchecked return value flaw",
+    "why": "Confirmed exploited per CISA KEV; exploitation within 30 days is highly likely.",
+    "ref": "CVE-2026-111497",
+    "find": "CVE-2026-111497",
+    "level": "red"
+   },
+   {
+    "title": "Collabora Online CODE OS command injection",
+    "why": "Confirmed exploited per CISA KEV; OS command injection with exploitation likely within 30 days.",
+    "ref": "CVE-2026-110447",
+    "find": "CVE-2026-110447",
+    "level": "red"
+   }
+  ],
   "model": "claude-haiku-5-5"
  }
 }
