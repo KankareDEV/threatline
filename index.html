@@ -17,7 +17,7 @@
   --bg:#000; --surface:#0c0c0d; --raise:#161618; --line:#26262a;
   --text:#f2f2f0; --muted:#8e8e93;
   --red:#ff3b30; --orange:#ff9500; --green:#30d158;
-  --mark:#c4c4cc; /* chart marks stay neutral so risk colour keeps its meaning */
+  --vuln:#3987e5; --news:#c653b9; --mark:var(--vuln); /* chart colours: blue = vulnerability data, magenta = news data. Red, orange and green stay reserved for risk. */
   --display:"Archivo","IBM Plex Sans",system-ui,sans-serif;
   --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -160,6 +160,43 @@ body[data-view="brief"] #ctiView{display:none}
 .tip{position:fixed;z-index:20;pointer-events:none;display:none;background:var(--text);color:var(--bg);
   font-size:13px;line-height:1.3;padding:5px 9px;border-radius:5px;max-width:260px}
 
+/* CTI colour and motion */
+.k-vuln{--mark:var(--vuln)} .k-news{--mark:var(--news)}
+.key{display:flex;flex-wrap:wrap;gap:6px 20px;color:var(--muted);font-size:14px}
+.key span{display:flex;align-items:center;gap:8px}
+.key i{width:12px;height:12px;border-radius:3px;background:var(--mark)}
+.stat{border-top:3px solid var(--mark);transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.stat:hover,.panel:hover{background:#101013}
+.stat:hover{transform:translateY(-2px)}
+.panel{transition:border-color .18s ease,background .18s ease}
+.panel:hover{border-color:#3a3a40}
+.panel h2{display:flex;align-items:center;gap:9px}
+.panel h2::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--mark);flex:none}
+.panel.plain h2::before{background:var(--muted)}
+.bar .fill{background:linear-gradient(90deg,color-mix(in srgb,var(--mark) 55%,#000),var(--mark));
+  transform-origin:left center;animation:growX .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+.bar:hover .fill{background:var(--mark);filter:brightness(1.25)}
+.cols i u{background:linear-gradient(180deg,var(--mark),color-mix(in srgb,var(--mark) 55%,#000));
+  transform-origin:center bottom;animation:growY .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*18ms)}
+.cols i:hover u{background:var(--mark);filter:brightness(1.25)}
+.cti > *{animation:rise .45s ease both}
+.cti > *:nth-child(2){animation-delay:.04s} .cti > *:nth-child(3){animation-delay:.08s}
+.cti > *:nth-child(4){animation-delay:.12s} .cti > *:nth-child(5){animation-delay:.16s}
+.cti > *:nth-child(n+6){animation-delay:.2s}
+.dl tr{transition:background .15s ease} .dl tr:hover td{background:var(--raise)}
+.btn{transition:border-color .15s ease,transform .15s ease} .btn:active{transform:scale(.97)}
+.row,.tile,.chip,.nav a{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .15s ease}
+.tile:hover{transform:translateY(-2px)}
+.rows .row{animation:rise .35s ease both}
+.live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--vuln);margin-right:8px;
+  animation:pulse 2.2s ease-out infinite}
+@keyframes growX{from{transform:scaleX(0)}}
+@keyframes growY{from{transform:scaleY(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--vuln) 70%,transparent)}
+  100%{box-shadow:0 0 0 9px transparent}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+
 /* footer */
 .about{margin-top:64px;border-top:1px solid var(--line);padding:34px 20px 60px;color:var(--muted);font-size:15px}
 .about h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.04em;text-transform:uppercase;
@@ -231,48 +268,49 @@ body[data-view="brief"] #ctiView{display:none}
     <h1>CTI workbench</h1>
     <p>Everything the collector gathered in the last run, counted and grouped: what is being exploited, who is affected, what the news is about and what to patch first.</p>
   </header>
+  <div class="key" aria-label="Colour key"><span class="k-vuln"><i></i>Vulnerability data (CISA, EPSS)</span><span class="k-news"><i></i>News data (feeds)</span></div>
   <div class="stats" id="cStats"></div>
-  <section class="panel">
+  <section class="panel k-vuln">
     <h2>New exploited vulnerabilities per day</h2>
     <p class="sub" id="cTimeSub"></p>
     <div class="cols" id="cTime"></div>
     <div class="axis" id="cTimeAxis"></div>
   </section>
   <div class="grid2">
-    <section class="panel">
+    <section class="panel k-vuln">
       <h2>Most affected vendors</h2>
       <p class="sub">Entries added to CISA's exploited list in the window, by vendor.</p>
       <ul class="bars" id="cVendors"></ul>
     </section>
-    <section class="panel">
+    <section class="panel k-vuln">
       <h2>Weakness types</h2>
       <p class="sub">The CWE classes behind those entries. One entry can have several.</p>
       <ul class="bars" id="cCwes"></ul>
     </section>
   </div>
-  <section class="panel">
+  <section class="panel k-vuln">
     <h2>Patch deadlines coming up</h2>
     <p class="sub">CISA's due dates for US federal agencies. A reasonable default if you have no deadline of your own.</p>
     <div class="scroll"><table class="dl" id="cDue"></table></div>
   </section>
   <div class="grid2">
-    <section class="panel">
+    <section class="panel k-news">
       <h2>What the news is about</h2>
       <p class="sub" id="cSigSub"></p>
       <ul class="bars" id="cSignals"></ul>
     </section>
-    <section class="panel">
+    <section class="panel k-news">
       <h2>Actors and malware named</h2>
       <p class="sub">Watchlist names found in news text. Hover a row for the headlines.</p>
       <ul class="bars" id="cActors"></ul>
     </section>
   </div>
-  <section class="panel">
+  <section class="panel k-news">
     <h2>CVEs in the news</h2>
     <p class="sub">CVE IDs mentioned in collected stories, and whether CISA lists them as exploited.</p>
     <div class="scroll"><table class="dl" id="cNewsCves"></table></div>
   </section>
-  <section class="panel">
+  <section class="panel plain">
     <h2>Take the data with you</h2>
     <p class="sub">Paste the CVE list into a scanner or ticket, or the CSV into a spreadsheet.</p>
     <div class="btns">
@@ -395,8 +433,9 @@ function summary(){
   const d = new Date(DATA.generated), c = DATA.counts;
   document.getElementById("headline").textContent =
     d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"long", timeZone:"UTC"});
-  document.getElementById("updated").textContent = "Data from " +
+  const up = document.getElementById("updated"); up.textContent = "Data from " +
     d.toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"UTC"}) + " UTC";
+  const live = el("span","live"); live.title = "Re-checks for new data every 10 minutes"; up.prepend(live);
   const top = DATA.items[0];
   document.getElementById("lede").textContent = top
     ? (c.red ? c.red + (c.red === 1 ? " item needs" : " items need") + " attention first. " : "Nothing red today. ")
@@ -431,7 +470,7 @@ function bars(id, rows, emptyText){
   if (!rows.length){ const p = el("li","none",emptyText); ul.append(p); return; }
   const max = Math.max(...rows.map(r => r.n));
   rows.forEach(r => {
-    const li = el("li","bar"); li.dataset.tip = r.tip || (r.label + ": " + r.n);
+    const li = el("li","bar"); li.dataset.tip = r.tip || (r.label + ": " + r.n); li.style.setProperty("--i", ul.children.length);
     const lab = el("span","lab", r.label); if (r.small) lab.append(el("small",null,r.small));
     const track = el("span"), fill = el("span","fill"); fill.style.width = (r.n / max * 100) + "%"; track.append(fill);
     li.append(lab, track, el("span","val", String(r.n))); ul.append(li);
@@ -456,11 +495,14 @@ function renderCti(){
    [t.ransomware, "of them used in ransomware campaigns"],
    [t.epss_known ? t.epss_high : "n/a", t.epss_known ? "with EPSS of 50% or more" : "EPSS scores were not available in this run"],
    [t.news, "news stories in the last " + nwin + " days"]]
-    .forEach(([n, label]) => { const d = el("div","stat"); d.append(el("b",null,String(n)), el("span",null,label)); stats.append(d); });
+    .forEach(([n, label], k) => { const d = el("div","stat " + (k === 3 ? "k-news" : "k-vuln")), b = el("b",null,String(n));
+      if (typeof n === "number") b.dataset.count = n;
+      d.append(b, el("span",null,label)); stats.append(d); });
+  countUp();
 
   const tl = a.timeline, peak = tl.reduce((m, d) => d.n > m.n ? d : m, tl[0]);
   const cols = byId("cTime"); cols.textContent = "";
-  tl.forEach(d => { const c = el("i"), u = el("u"); u.style.height = peak.n ? (d.n / peak.n * 100) + "%" : "0";
+  tl.forEach((d, k) => { const c = el("i"), u = el("u"); c.style.setProperty("--i", k); u.style.height = peak.n ? (d.n / peak.n * 100) + "%" : "0";
     c.dataset.tip = fmtDate(d.date) + ": " + d.n + (d.n === 1 ? " entry" : " entries"); c.append(u); cols.append(c); });
   byId("cTimeSub").textContent = peak.n
     ? "Entries added to CISA's exploited list each day. Busiest day: " + fmtDate(peak.date) + " with " + peak.n + "."
@@ -510,6 +552,17 @@ byId("copyCsv").addEventListener("click", () => {
   copyText(rows.join("\n"), v.length + " rows of CSV");
 });
 
+/* numbers count up when the CTI view opens */
+function countUp(){
+  if (document.body.dataset.view !== "cti" || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll("#cStats b[data-count]").forEach(b => {
+    const end = +b.dataset.count, t0 = performance.now(), dur = 700;
+    const step = t => { const p = Math.min(1, (t - t0) / dur);
+      b.textContent = String(Math.round(end * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  });
+}
+
 /* hover tooltip for chart marks */
 const tip = byId("tip");
 document.addEventListener("mousemove", e => {
@@ -527,6 +580,7 @@ function route(){
   byId("navBrief").toggleAttribute("aria-current", v === "brief");
   byId("navCti").toggleAttribute("aria-current", v === "cti");
   if (v === "brief") byId("navBrief").setAttribute("aria-current","page"); else byId("navCti").setAttribute("aria-current","page");
+  if (v === "cti" && DATA) countUp();
 }
 window.addEventListener("hashchange", route); route();
 
