@@ -102,10 +102,13 @@ CWE_NAMES = {
     "CWE-427": "Uncontrolled search path", "CWE-434": "Unrestricted file upload",
     "CWE-476": "NULL pointer dereference", "CWE-502": "Unsafe deserialization",
     "CWE-522": "Weakly protected credentials", "CWE-611": "XML external entity",
-    "CWE-732": "Incorrect permission assignment", "CWE-787": "Out-of-bounds write",
+    "CWE-732": "Incorrect permission assignment", "CWE-755": "Improper handling of exceptional conditions",
+    "CWE-824": "Access of uninitialized pointer", "CWE-787": "Out-of-bounds write",
     "CWE-798": "Hard-coded credentials", "CWE-843": "Type confusion",
     "CWE-862": "Missing authorization", "CWE-863": "Incorrect authorization",
     "CWE-918": "Server-side request forgery",
+    "CWE-1325": "Improperly controlled sequential memory allocation",
+    "CWE-1419": "Incorrect initialization of resource",
 }
 
 CVE_RE = re.compile(r"CVE-\d{4}-\d{4,7}", re.I)
