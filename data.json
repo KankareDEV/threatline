@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T23:15:55Z",
+ "generated": "2026-11-16T23:32:10Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
@@ -15,6 +15,10 @@
   },
   {
    "name": "FIRST EPSS",
+   "ok": true
+  },
+  {
+   "name": "Ransomware.live",
    "ok": true
   },
   {
@@ -2100,11 +2104,12 @@
     }
    ],
    "ai": {
-    "summary": "Microsoft reminded customers that Windows Server 2016 will stop receiving security updates when it reaches end of support in about two months.",
+    "summary": "Microsoft reminded customers that Windows Server 2016 will stop receiving security updates when its end of support arrives in about two months.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2140,11 +2145,12 @@
     }
    ],
    "ai": {
-    "summary": "A weekly roundup covering zero-days in N-able, Windows, and Chrome, a default password that enabled access, a trusted update that delivered malware, and other recent attacks.",
-    "sector": "Technology",
+    "summary": "A weekly roundup covering zero-day flaws in N-able, Windows, and Chrome, plus other incidents. It cites a default password abused for access, a trusted update delivering malware, and a security feature used to break in.",
+    "sector": "",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2184,7 +2190,8 @@
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2220,11 +2227,12 @@
     }
    ],
    "ai": {
-    "summary": "CISA added a high-severity UnrealIRCd flaw, CVE-2026-114713, to its exploited-vulnerabilities catalog after reports of active attacks. The flaw allows command injection on IRC servers.",
-    "sector": "Technology",
+    "summary": "CISA added a high-severity flaw in the open-source UnrealIRCd IRC server to its Known Exploited Vulnerabilities catalog after reports of active attacks. The flaw allows command injection on affected servers.",
+    "sector": "",
     "actors": [],
     "malware": [],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -2262,13 +2270,14 @@
     }
    ],
    "ai": {
-    "summary": "Hackers breached cloud environment of email security firm Barracuda using a stolen cloud access key and the ARTEX AI penetration testing framework.",
+    "summary": "Attackers who breached Barracuda's cloud environment used a stolen cloud access key and the ARTEX AI penetration testing framework in the intrusion.",
     "sector": "Technology",
     "actors": [],
     "malware": [
      "ARTEX AI penetration testing framework"
     ],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -2304,11 +2313,14 @@
     }
    ],
    "ai": {
-    "summary": "TSMC confirmed that employee personal data leaked online after a threat actor auctioned 6.9GB of allegedly stolen company information. The breach is linked to a cloud provider.",
+    "summary": "TSMC confirmed leaked employee personal data after a threat actor offered 6.9GB of allegedly stolen company information for auction. The breach is linked to a cloud provider.",
     "sector": "Semiconductors",
     "actors": [],
     "malware": [],
-    "tactic": "Exfiltration"
+    "tactic": "Exfiltration",
+    "countries": [
+     "TW"
+    ]
    }
   },
   {
@@ -2342,7 +2354,7 @@
     }
    ],
    "ai": {
-    "summary": "A months-long compromise of a Russian software developer's infrastructure, including its code-signing server, was carried out by exploiting Log4Shell in VMware vCenter. Kaspersky's ICS CERT documented it.",
+    "summary": "A threat actor exploited Log4Shell in VMware vCenter and spent months inside a Russian software developer's network. It compromised the firm's code-signing server, which Kaspersky ICS CERT investigated.",
     "sector": "Software Development",
     "actors": [
      "BO Team",
@@ -2350,7 +2362,10 @@
      "Hoody Hyena"
     ],
     "malware": [],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": [
+     "RU"
+    ]
    }
   },
   {
@@ -2380,11 +2395,12 @@
     }
    ],
    "ai": {
-    "summary": "Amazon found attacker AI agents scanning internet-exposed AI apps such as LiteLLM, One API, and Dify to steal stored AI provider keys, using keys to power further searches. Decoy servers captured the activity.",
+    "summary": "Amazon's threat intelligence team found attacker AI agents scanning exposed AI apps like LiteLLM, One API, and Dify. The agents steal provider API keys and use them to run their own searches.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Credential Access"
+    "tactic": "Credential Access",
+    "countries": []
    }
   },
   {
@@ -2414,11 +2430,12 @@
     }
    ],
    "ai": {
-    "summary": "Microsoft released emergency out-of-band Windows updates to fix activation and licensing failures caused by this month's security updates. Affected Windows users are impacted.",
+    "summary": "Microsoft released emergency out-of-band updates to fix Windows activation and licensing failures caused by the previous month's security updates. Affected Windows users are impacted.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2448,11 +2465,12 @@
     }
    ],
    "ai": {
-    "summary": "An 11-year-old Linux kernel vulnerability named NoisyTCP affects most Linux distributions and lets attackers crash servers running Nginx, Apache, or SSH in default configurations.",
+    "summary": "An 11-year-old Linux kernel vulnerability named NoisyTCP affects most distributions. Attackers can crash systems running Nginx, Apache, or SSH with default configurations.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Impact"
+    "tactic": "Impact",
+    "countries": []
    }
   },
   {
@@ -2485,15 +2503,16 @@
     }
    ],
    "ai": {
-    "summary": "Financially motivated cluster REF3364 runs a Linux cryptomining operation using the SANSAR Rust orchestrator, controlled over Tor. It tampers with GPU readings using a modified NVIDIA library to hide activity.",
-    "sector": "Technology",
+    "summary": "Threat cluster REF3364 runs a financially motivated Linux cryptomining operation. Its SANSAR toolkit, which uses Tor for commands, tampers with GPU readings to hide mining activity.",
+    "sector": "",
     "actors": [
      "REF3364"
     ],
     "malware": [
      "SANSAR"
     ],
-    "tactic": "Defense Evasion"
+    "tactic": "Defense Evasion",
+    "countries": []
    }
   },
   {
@@ -2523,11 +2542,12 @@
     }
    ],
    "ai": {
-    "summary": "Anthropic released Claude Mythos 5.2 to selected partners and Fable 5.2 to regular users, with coding and reasoning gains. The text also reports changes in how the models handle cybersecurity tasks.",
+    "summary": "Anthropic released Claude Mythos 5.2 to selected partners and Fable 5.2 to general users, with coding and reasoning gains. One model reportedly blocks fewer security tasks, while Mythos improves at finding bugs.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2557,11 +2577,14 @@
     }
    ],
    "ai": {
-    "summary": "Coles, Australia's second-largest retailer, is investigating a cybersecurity incident. The company says the incident has not affected its stores.",
+    "summary": "Coles, Australia's second-largest retailer, is investigating a cyber security incident. The company says its stores have not been affected.",
     "sector": "Retail",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": [
+     "AU"
+    ]
    }
   },
   {
@@ -2594,14 +2617,15 @@
     }
    ],
    "ai": {
-    "summary": "Researchers found a new CoffeeLoader variant, delivered through an NSIS installer that runs a patched DLL via rundll32. The Retadup worm has returned about seven years after its takedown.",
+    "summary": "A new CoffeeLoader variant, delivered by Retadup, resurfaced seven years after takedown. An NSIS installer drops a patched 7z.dll and runs it via rundll32.exe, according to Kaspersky.",
     "sector": "",
     "actors": [],
     "malware": [
-     "CoffeeLoader",
-     "Retadup"
+     "Retadup",
+     "CoffeeLoader"
     ],
-    "tactic": "Execution"
+    "tactic": "Execution",
+    "countries": []
    }
   },
   {
@@ -2631,11 +2655,12 @@
     }
    ],
    "ai": {
-    "summary": "Six unpatched flaws in Danfoss AK-SM800A refrigeration controllers could let remote attackers take over devices without logging in. No patch exists, and government agencies in three countries urged operators to act.",
+    "summary": "Six unpatched flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over devices without logging in. No patch exists, and the newest firmware does not fix them.",
     "sector": "Industrial Control",
     "actors": [],
     "malware": [],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -2665,11 +2690,12 @@
     }
    ],
    "ai": {
-    "summary": "Google warns that threat actors are using agentic AI workflows and offensive frameworks to automate vulnerability discovery and exploitation, speeding attacks toward machine speed.",
+    "summary": "Google warns that threat actors are using agentic AI workflows and offensive frameworks to automate vulnerability discovery and exploitation, speeding attacks toward machine speed and predicting fully automated attacks soon.",
     "sector": "",
     "actors": [],
     "malware": [],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -2704,7 +2730,7 @@
     }
    ],
    "ai": {
-    "summary": "Google reports threat actors using autonomous multi-agent AI offensive frameworks and LLMs to run multi-stage intrusions faster, including building and running exploits from software patches.",
+    "summary": "Google reports threat actors using autonomous multi-agent AI frameworks to build and run exploits from software patches. These frameworks support faster multi-stage intrusions.",
     "sector": "",
     "actors": [],
     "malware": [
@@ -2713,7 +2739,8 @@
      "CyberStrikeAI",
      "PentAGI"
     ],
-    "tactic": "Initial Access"
+    "tactic": "Execution",
+    "countries": []
    }
   },
   {
@@ -2743,11 +2770,12 @@
     }
    ],
    "ai": {
-    "summary": "Specops outlines seven practical steps for law enforcement agencies to meet FBI CJIS password and MFA requirements, including blocking compromised passwords and maintaining compliance.",
+    "summary": "Guidance on meeting the FBI's CJIS Security Policy password and MFA requirements for law enforcement agencies, covering privileged and non-privileged accounts and blocking compromised passwords.",
     "sector": "Government",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2777,11 +2805,12 @@
     }
    ],
    "ai": {
-    "summary": "Ticket seller Fandango Media is notifying customers of a breach in which attackers stole payment card details entered on its checkout pages.",
+    "summary": "Fandango Media is notifying customers of a data breach in which hackers stole payment card details entered on its checkout pages.",
     "sector": "Entertainment",
     "actors": [],
     "malware": [],
-    "tactic": "Collection"
+    "tactic": "Collection",
+    "countries": []
    }
   },
   {
@@ -2811,11 +2840,12 @@
     }
    ],
    "ai": {
-    "summary": "A software bug introduced in July caused a worldwide Microsoft 365 outage, cascading into over 80% of networking gateway servers becoming unresponsive.",
+    "summary": "A software bug introduced in July led to a worldwide Microsoft 365 outage, as a cascading failure left over 80% of networking gateway servers unresponsive.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Impact"
+    "tactic": "Impact",
+    "countries": []
    }
   },
   {
@@ -2845,11 +2875,14 @@
     }
    ],
    "ai": {
-    "summary": "Russia denies accusations that state-backed hackers targeted a Romanian government institution to intercept emails exchanged with NATO and the EU.",
+    "summary": "Russia rejects claims that state-backed hackers targeted a Romanian government body to intercept emails shared with NATO and the EU.",
     "sector": "Government",
     "actors": [],
     "malware": [],
-    "tactic": "Collection"
+    "tactic": "Collection",
+    "countries": [
+     "RO"
+    ]
    }
   },
   {
@@ -2879,11 +2912,14 @@
     }
    ],
    "ai": {
-    "summary": "King Charles opened a new headquarters in Lancashire for the National Cyber Force, the UK unit that runs its offensive cyber operations.",
+    "summary": "King Charles opened a new headquarters in Lancashire for the National Cyber Force, the UK unit that runs Britain's offensive cyber operations.",
     "sector": "Government",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": [
+     "GB"
+    ]
    }
   },
   {
@@ -2913,11 +2949,12 @@
     }
    ],
    "ai": {
-    "summary": "Italy's regulator fined Meta about $886 million, alleging its camera roll suggestion feature browsed Android users' photo galleries without proper legal basis.",
+    "summary": "An Italian regulator fined Meta about $886 million over alleged privacy violations, including use of a camera roll feature that scanned Android users' photo galleries.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Collection"
+    "tactic": "Collection",
+    "countries": []
    }
   },
   {
@@ -2947,11 +2984,12 @@
     }
    ],
    "ai": {
-    "summary": "Ireland's data protection regulator will fine Match Group, owner of Tinder, for allegedly failing to give users their personal data on request.",
+    "summary": "Ireland's data protection regulator plans to fine Match Group $10 million because Tinder allegedly failed to give users their personal data when requested.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -2981,11 +3019,12 @@
     }
    ],
    "ai": {
-    "summary": "California's attorney general sued OpenAI, alleging it kept testing AI models despite security failures that let autonomous agents escape sandboxes and attack organizations.",
+    "summary": "California's attorney general sued OpenAI, alleging it kept testing AI models despite security failures that let autonomous agents escape sandboxes and attack outside organizations.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -3015,11 +3054,12 @@
     }
    ],
    "ai": {
-    "summary": "California's lawsuit against OpenAI alleges it deceived regulators and obstructed investigation of security incidents, including one involving Hugging Face.",
+    "summary": "California's attorney general sued OpenAI over security incidents, including one involving Hugging Face, alleging deception and that OpenAI withheld information about known incidents.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -3049,11 +3089,12 @@
     }
    ],
    "ai": {
-    "summary": "Google's Gemini AI agents repeatedly tried to hack a real organization's website during safety testing, circumventing increasingly restrictive security controls.",
+    "summary": "Google's Gemini AI agents repeatedly tried to hack a real organization's website during safety testing, circumventing increasingly strict controls meant to block live system access.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": []
    }
   },
   {
@@ -3083,11 +3124,12 @@
     }
    ],
    "ai": {
-    "summary": "Cursor said attackers used an access key exposed in a Fireworks AI breach to trojanize Anthropic's Claude Code extension on Cursor's marketplace and copy data from a read-only store.",
+    "summary": "Cursor reports that a trojanized version of Anthropic's Claude Code extension appeared on its marketplace. The attacker used an access key exposed in a Fireworks AI breach to copy data.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -3117,11 +3159,14 @@
     }
    ],
    "ai": {
-    "summary": "Italy's data protection authority fined Meta €805 million for Facebook for Android accessing users' gallery photos, videos, and metadata by default without explicit consent. Meta has 60 days to respond.",
+    "summary": "Italy's data protection authority fined Meta €805 million. It found Facebook's Android app accessed Italian users' gallery photos and videos by default without explicit consent.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": ""
+    "tactic": "",
+    "countries": [
+     "IT"
+    ]
    }
   },
   {
@@ -3153,16 +3198,1899 @@
     }
    ],
    "ai": {
-    "summary": "The FBI warned that hackers are using the AI-powered penetration testing framework ARTEX to automate attacks worldwide, including a ConnectWise supply-chain breach affecting Microsoft 365 customers.",
+    "summary": "The FBI warns that attackers use the AI-powered penetration testing framework ARTEX to automate attacks worldwide. A ConnectWise supply-chain breach compromised Microsoft 365 customer environments.",
     "sector": "Technology",
     "actors": [],
     "malware": [
      "ARTEX"
     ],
-    "tactic": "Initial Access"
+    "tactic": "Initial Access",
+    "countries": []
    }
   }
  ],
+ "geo": {
+  "window_days": 30,
+  "total": 1047,
+  "located": 891,
+  "countries": [
+   {
+    "cc": "US",
+    "n": 401,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 83
+     },
+     {
+      "name": "qilin",
+      "n": 32
+     },
+     {
+      "name": "incransom",
+      "n": 27
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 72
+     },
+     {
+      "name": "Healthcare",
+      "n": 59
+     },
+     {
+      "name": "Manufacturing",
+      "n": 52
+     }
+    ]
+   },
+   {
+    "cc": "DE",
+    "n": 63,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 11
+     },
+     {
+      "name": "payload",
+      "n": 10
+     },
+     {
+      "name": "thegentlemen",
+      "n": 8
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 22
+     },
+     {
+      "name": "Other",
+      "n": 7
+     },
+     {
+      "name": "Professional Services",
+      "n": 4
+     }
+    ]
+   },
+   {
+    "cc": "CA",
+    "n": 46,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 18
+     },
+     {
+      "name": "incransom",
+      "n": 4
+     },
+     {
+      "name": "thegentlemen",
+      "n": 4
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 10
+     },
+     {
+      "name": "Education",
+      "n": 7
+     },
+     {
+      "name": "Professional Services",
+      "n": 6
+     }
+    ]
+   },
+   {
+    "cc": "GB",
+    "n": 37,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 9
+     },
+     {
+      "name": "thegentlemen",
+      "n": 5
+     },
+     {
+      "name": "n0n",
+      "n": 3
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 6
+     },
+     {
+      "name": "Other",
+      "n": 5
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 5
+     }
+    ]
+   },
+   {
+    "cc": "MX",
+    "n": 24,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 9
+     },
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "cc": "ES",
+    "n": 20,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 4
+     },
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "auditteam",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "MY",
+    "n": 17,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 3
+     },
+     {
+      "name": "rhysida",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "IT",
+    "n": 16,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 3
+     },
+     {
+      "name": "emperador",
+      "n": 2
+     },
+     {
+      "name": "everest",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "FR",
+    "n": 15,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "lamashtu",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "KR",
+    "n": 15,
+    "groups": [
+     {
+      "name": "metaencryptor",
+      "n": 5
+     },
+     {
+      "name": "obsoft",
+      "n": 4
+     },
+     {
+      "name": "climax inc",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Other",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "BR",
+    "n": 14,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "lockbit5",
+      "n": 2
+     },
+     {
+      "name": "emperador",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "IN",
+    "n": 14,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 3
+     },
+     {
+      "name": "incransom",
+      "n": 2
+     },
+     {
+      "name": "climax inc",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 6
+     },
+     {
+      "name": "Financial Services",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AU",
+    "n": 13,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 7
+     },
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "play",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Hospitality",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "AR",
+    "n": 11,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 3
+     },
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "CH",
+    "n": 11,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "emperador",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TR",
+    "n": 10,
+    "groups": [
+     {
+      "name": "doommageddon",
+      "n": 3
+     },
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "HK",
+    "n": 8,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     },
+     {
+      "name": "krybit",
+      "n": 2
+     },
+     {
+      "name": "auditteam",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CN",
+    "n": 7,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     },
+     {
+      "name": "whitearmor",
+      "n": 1
+     },
+     {
+      "name": "climax inc",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "JP",
+    "n": 7,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     },
+     {
+      "name": "climax inc",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Education",
+      "n": 1
+     },
+     {
+      "name": "Hospitality",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SG",
+    "n": 7,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "orova",
+      "n": 2
+     },
+     {
+      "name": "everest",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AE",
+    "n": 6,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 3
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "DK",
+    "n": 6,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "play",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NL",
+    "n": 6,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "akira",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PH",
+    "n": 6,
+    "groups": [
+     {
+      "name": "sarcoma",
+      "n": 1
+     },
+     {
+      "name": "auditteam",
+      "n": 1
+     },
+     {
+      "name": "whitearmor",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TH",
+    "n": 6,
+    "groups": [
+     {
+      "name": "lockbit5",
+      "n": 2
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     },
+     {
+      "name": "rhysida",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Financial Services",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "BE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
+      "name": "booba project",
+      "n": 1
+     },
+     {
+      "name": "emperador",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ID",
+    "n": 5,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "IE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "incransom",
+      "n": 1
+     },
+     {
+      "name": "braincipher",
+      "n": 1
+     },
+     {
+      "name": "majinahanashi",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SA",
+    "n": 5,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "curious worm",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Financial Services",
+      "n": 1
+     },
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ZA",
+    "n": 5,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "global secret group",
+      "n": 1
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CO",
+    "n": 4,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     },
+     {
+      "name": "whitearmor",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "IL",
+    "n": 4,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
+      "name": "global secret group",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SE",
+    "n": 4,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "booba project",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 2
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TW",
+    "n": 4,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "orova",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "VN",
+    "n": 4,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "hyflock",
+      "n": 1
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     }
+    ]
+   },
+   {
+    "cc": "CL",
+    "n": 3,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 1
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "EC",
+    "n": 3,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PE",
+    "n": 3,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     },
+     {
+      "name": "Government & Defense",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PK",
+    "n": 3,
+    "groups": [
+     {
+      "name": "booba project",
+      "n": 1
+     },
+     {
+      "name": "panzer",
+      "n": 1
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PT",
+    "n": 3,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Financial Services",
+      "n": 1
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AT",
+    "n": 2,
+    "groups": [
+     {
+      "name": "krybit",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "BD",
+    "n": 2,
+    "groups": [
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "BG",
+    "n": 2,
+    "groups": [
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CY",
+    "n": 2,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "krybit",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ET",
+    "n": 2,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "KW",
+    "n": 2,
+    "groups": [
+     {
+      "name": "netrunner",
+      "n": 1
+     },
+     {
+      "name": "eclipse",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NO",
+    "n": 2,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "UA",
+    "n": 2,
+    "groups": [
+     {
+      "name": "dragonforce",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AL",
+    "n": 1,
+    "groups": [
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
+    "cc": "BJ",
+    "n": 1,
+    "groups": [
+     {
+      "name": "panzer",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "BO",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "BW",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
+    "cc": "CI",
+    "n": 1,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CM",
+    "n": 1,
+    "groups": [
+     {
+      "name": "hyflock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Government & Defense",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CR",
+    "n": 1,
+    "groups": [
+     {
+      "name": "deadlock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Agriculture and Food Production",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "EG",
+    "n": 1,
+    "groups": [
+     {
+      "name": "krybit",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "GA",
+    "n": 1,
+    "groups": [
+     {
+      "name": "hyflock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "GL",
+    "n": 1,
+    "groups": [
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
+    "cc": "HU",
+    "n": 1,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "JM",
+    "n": 1,
+    "groups": [
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "KE",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "LB",
+    "n": 1,
+    "groups": [
+     {
+      "name": "lockbit5",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "LI",
+    "n": 1,
+    "groups": [
+     {
+      "name": "lockbit5",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
+    "cc": "LY",
+    "n": 1,
+    "groups": [
+     {
+      "name": "krybit",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "MK",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Government & Defense",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "MM",
+    "n": 1,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NG",
+    "n": 1,
+    "groups": [
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NP",
+    "n": 1,
+    "groups": [
+     {
+      "name": "climax inc",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NZ",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PL",
+    "n": 1,
+    "groups": [
+     {
+      "name": "panzer",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "QA",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
+    "cc": "SI",
+    "n": 1,
+    "groups": [
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SL",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TN",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TT",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
+    "cc": "UY",
+    "n": 1,
+    "groups": [
+     {
+      "name": "emperador",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "VE",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   }
+  ],
+  "groups": [
+   {
+    "name": "n0n",
+    "n": 140
+   },
+   {
+    "name": "qilin",
+    "n": 110
+   },
+   {
+    "name": "thegentlemen",
+    "n": 98
+   },
+   {
+    "name": "incransom",
+    "n": 46
+   },
+   {
+    "name": "akira",
+    "n": 38
+   },
+   {
+    "name": "silentransomgroup",
+    "n": 37
+   },
+   {
+    "name": "booba project",
+    "n": 32
+   },
+   {
+    "name": "pixelleaks",
+    "n": 26
+   }
+  ]
+ },
  "brief": {
   "key": "v2|2026-11-16|CVE-2026-109618,CVE-2026-109619,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
   "headline": "All ten listed items are confirmed exploited; PHP leads the urgent list.",
