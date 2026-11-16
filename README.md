@@ -67,6 +67,7 @@ Vulnerabilities (from CISA KEV, last 30 days):
 | --- | --- |
 | Confirmed exploited (in KEV) | 50 |
 | EPSS probability x 25 | 0 to 25 |
+| CVSS 9.0+ / 7.0 to 8.9 | 10 / 5 |
 | Used in ransomware campaigns | 15 |
 | Added in the last 7 / 14 days | 10 / 5 |
 | In the news this week | 5 |
@@ -89,4 +90,5 @@ of `fetch.py`.
 - Headline keyword matching is crude and will sometimes misjudge a story.
 - Only headlines, dates and links are stored from news feeds. Check each
   feed's terms of use before adding it, and keep linking to the original.
-- CVSS is not used yet. The NVD API could add it.
+- CVSS comes from the public CVE record (vendor score first, then CISA's).
+  Very new CVEs may have no score yet.
