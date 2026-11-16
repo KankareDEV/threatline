@@ -12,6 +12,7 @@ Standard library only.
 Sources (all public):
   - CISA Known Exploited Vulnerabilities catalogue (JSON)
   - FIRST EPSS API (exploitation probability per CVE)
+  - CVE Program records, including CISA Vulnrichment (CVSS severity)
   - RSS/Atom feeds listed in FEEDS
 
 Only headlines, links and dates are stored from news feeds. Article text is
@@ -39,6 +40,7 @@ KEV_URLS = [
     "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
 ]
 EPSS_URL = "https://api.first.org/data/v1/epss?cve={cves}"
+CVE_URL = "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/{year}/{bucket}/{cve}.json"
 
 # Add or remove feeds here. A feed that fails is skipped and reported on the site.
 FEEDS = [
@@ -168,6 +170,49 @@ def load_epss(cves, status):
     return scores
 
 
+# ------------------------------------------------------------------- CVSS --
+def severity_for(score):
+    return ("CRITICAL" if score >= 9 else "HIGH" if score >= 7 else
+            "MEDIUM" if score >= 4 else "LOW" if score > 0 else "NONE")
+
+
+def parse_cvss(record):
+    """Newest CVSS version available; the vendor's (CNA) score before CISA's."""
+    c = record.get("containers", {})
+    blocks = [("CNA", c.get("cna", {}))] + [("CISA", a) for a in c.get("adp", [])]
+    for key in ("cvssV4_0", "cvssV3_1", "cvssV3_0", "cvssV2_0"):
+        for by, block in blocks:
+            for m in block.get("metrics") or []:
+                v = m.get(key)
+                if v and isinstance(v.get("baseScore"), (int, float)):
+                    score = float(v["baseScore"])
+                    return {"score": score, "version": str(v.get("version", key[5:].replace("_", "."))),
+                            "severity": (v.get("baseSeverity") or severity_for(score)).upper(),
+                            "vector": v.get("vectorString", ""), "by": by}
+    return None
+
+
+def load_cvss(cves, status, known):
+    """CVSS per CVE. Scores already in the last data.json are reused, not fetched again."""
+    out, ok, tried = {}, 0, 0
+    for cve in cves:
+        if known.get(cve):
+            out[cve] = known[cve]
+            continue
+        _, year, num = cve.split("-")
+        tried += 1
+        try:
+            raw = http_get(CVE_URL.format(year=year, bucket=(num[:-3] or "0") + "xxx", cve=cve), tries=1)
+            ok += 1
+            found = parse_cvss(json.loads(raw))
+            if found:
+                out[cve] = found
+        except Exception as e:  # noqa: BLE001
+            print(f"CVSS lookup failed: {e}", file=sys.stderr)
+    status.append({"name": "CVE Program (CVSS)", "ok": ok > 0 or tried == 0})
+    return out
+
+
 # ------------------------------------------------------------------ feeds --
 def parse_date(s):
     if not s:
@@ -253,7 +298,7 @@ def merge_duplicates(items):
 
 
 # ---------------------------------------------------------------- scoring --
-def score_vuln(v, epss, news_by_cve):
+def score_vuln(v, epss, news_by_cve, cvss):
     cve = v["cveID"].upper()
     added = datetime.fromisoformat(v["dateAdded"]).replace(tzinfo=timezone.utc)
     age = (NOW - added).days
@@ -263,6 +308,11 @@ def score_vuln(v, epss, news_by_cve):
     if e:
         reasons.append({"label": f"EPSS {e[0] * 100:.0f}% chance of exploitation in 30 days",
                         "points": round(e[0] * 25)})
+    c = cvss.get(cve)
+    if c and c["score"] >= 9:
+        reasons.append({"label": f'CVSS {c["score"]:.1f} critical severity', "points": 10})
+    elif c and c["score"] >= 7:
+        reasons.append({"label": f'CVSS {c["score"]:.1f} high severity', "points": 5})
     if ransomware:
         reasons.append({"label": "Used in ransomware campaigns", "points": 15})
     if age <= 7:
@@ -283,7 +333,7 @@ def score_vuln(v, epss, news_by_cve):
         "cve": cve, "vendor": v.get("vendorProject", ""), "product": v.get("product", ""),
         "date": v["dateAdded"], "summary": v.get("shortDescription", ""),
         "action": v.get("requiredAction", ""), "due": v.get("dueDate", ""),
-        "epss": e[0] if e else None, "ransomware": ransomware, "links": links,
+        "epss": e[0] if e else None, "cvss": c, "ransomware": ransomware, "links": links,
         "cwes": [c for c in v.get("cwes", []) if c.startswith("CWE-")],
         "score": score, "level": level_for("vuln", score), "reasons": reasons,
     }
@@ -349,6 +399,8 @@ def build_analytics(items, kev_all):
     sig = Counter(s for n in news for s in n["signals"])
     cve_count = Counter(c for n in news for c in n["cves"])
     epss_known = [v["epss"] for v in vulns if v["epss"] is not None]
+    sev = Counter(v["cvss"]["severity"] if v["cvss"] else "NONE" for v in vulns)
+    bands = [("90% or more", .9, 1.01), ("50 to 89%", .5, .9), ("10 to 49%", .1, .5), ("Under 10%", 0, .1)]
     return {
         "totals": {
             "kev_window": len(vulns),
@@ -358,6 +410,13 @@ def build_analytics(items, kev_all):
             "news": len(news),
         },
         "timeline": timeline,
+        "severity": [{"name": label, "n": sev[key]} for label, key in
+                     (("Critical (9.0 to 10)", "CRITICAL"), ("High (7.0 to 8.9)", "HIGH"),
+                      ("Medium (4.0 to 6.9)", "MEDIUM"), ("Low (under 4.0)", "LOW"),
+                      ("Not scored yet", "NONE"))],
+        "epss_bands": [{"name": label, "n": sum(1 for e in epss_known if lo <= e < hi)}
+                       for label, lo, hi in bands]
+                      + [{"name": "No score yet", "n": len(vulns) - len(epss_known)}],
         "vendors": [{"name": k, "n": n} for k, n in
                     Counter(v["vendor"] for v in vulns if v["vendor"]).most_common(8)],
         "cwes": [{"id": k, "name": CWE_NAMES.get(k, ""), "n": n} for k, n in
@@ -388,6 +447,12 @@ def main():
         recent = sorted(kev, key=lambda v: v["dateAdded"], reverse=True)[:10]
 
     epss = load_epss([v["cveID"] for v in recent], status)
+    try:  # CVSS already collected in the previous run
+        known = {i["cve"]: i.get("cvss") for i in
+                 json.loads(OUT.read_text(encoding="utf-8"))["items"] if i["type"] == "vuln"}
+    except (OSError, ValueError, KeyError):
+        known = {}
+    cvss = load_cvss([v["cveID"].upper() for v in recent], status, known)
     groups = merge_duplicates(load_news(status))
 
     news_by_cve = {}
@@ -396,7 +461,7 @@ def main():
             for c in it["_cves"]:
                 news_by_cve.setdefault(c, []).append(it)
 
-    items = [score_vuln(v, epss, news_by_cve) for v in recent]
+    items = [score_vuln(v, epss, news_by_cve, cvss) for v in recent]
     items += [score_news(g, kev_all) for g in groups]
     items.sort(key=lambda x: x["date"], reverse=True)
     items.sort(key=lambda x: x["score"], reverse=True)
