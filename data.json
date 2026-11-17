@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T00:24:06Z",
+ "generated": "2026-11-17T00:56:09Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
@@ -3201,38 +3201,38 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1053,
-  "located": 896,
+  "total": 100,
+  "located": 84,
   "countries": [
    {
     "cc": "US",
-    "n": 403,
+    "n": 39,
     "groups": [
      {
       "name": "n0n",
-      "n": 83
+      "n": 7
      },
      {
       "name": "qilin",
-      "n": 33
+      "n": 7
      },
      {
-      "name": "incransom",
-      "n": 27
+      "name": "pixelleaks",
+      "n": 6
      }
     ],
     "sectors": [
      {
-      "name": "Professional Services",
-      "n": 72
+      "name": "Manufacturing",
+      "n": 9
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 7
      },
      {
       "name": "Healthcare",
-      "n": 59
-     },
-     {
-      "name": "Manufacturing",
-      "n": 52
+      "n": 5
      }
     ],
     "recent": [
@@ -3269,34 +3269,94 @@
     ]
    },
    {
-    "cc": "DE",
-    "n": 63,
+    "cc": "CA",
+    "n": 8,
     "groups": [
      {
+      "name": "n0n",
+      "n": 6
+     },
+     {
+      "name": "shadowbyt3$",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-16",
+      "g": "n0n",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "n0n",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "n0n",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "n0n",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "n0n",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "n0n",
+      "s": "Financial Services"
+     }
+    ]
+   },
+   {
+    "cc": "DE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "curious worm",
+      "n": 1
+     },
+     {
+      "name": "vortex",
+      "n": 1
+     },
+     {
       "name": "qilin",
-      "n": 11
-     },
-     {
-      "name": "payload",
-      "n": 10
-     },
-     {
-      "name": "thegentlemen",
-      "n": 8
+      "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 23
+      "n": 2
      },
      {
-      "name": "Other",
-      "n": 7
+      "name": "Healthcare",
+      "n": 1
      },
      {
-      "name": "Professional Services",
-      "n": 4
+      "name": "Energy & Utilities",
+      "n": 1
      }
     ],
     "recent": [
@@ -3324,107 +3384,38 @@
       "d": "2026-11-13",
       "g": "panzer",
       "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "CA",
-    "n": 46,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 18
-     },
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "incransom",
-      "n": 4
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Financial Services",
-      "n": 10
-     },
-     {
-      "name": "Education",
-      "n": 7
-     },
-     {
-      "name": "Professional Services",
-      "n": 6
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Financial Services"
      }
     ]
    },
    {
     "cc": "GB",
-    "n": 38,
+    "n": 4,
     "groups": [
      {
-      "name": "qilin",
-      "n": 9
+      "name": "shiba",
+      "n": 1
      },
      {
-      "name": "thegentlemen",
-      "n": 5
+      "name": "rhysida",
+      "n": 1
      },
      {
-      "name": "n0n",
-      "n": 3
+      "name": "vortex",
+      "n": 1
      }
     ],
     "sectors": [
      {
+      "name": "Financial Services",
+      "n": 2
+     },
+     {
       "name": "Professional Services",
-      "n": 6
+      "n": 1
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 5
-     },
-     {
-      "name": "Other",
-      "n": 5
+      "n": 1
      }
     ],
     "recent": [
@@ -3447,559 +3438,33 @@
       "d": "2026-11-14",
       "g": "scarlettgroup",
       "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "curious worm",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "play",
-      "s": "Other"
-     }
-    ]
-   },
-   {
-    "cc": "MX",
-    "n": 24,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 9
-     },
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 5
-     },
-     {
-      "name": "Healthcare",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "booba project",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-08",
-      "g": "deadlock",
-      "s": ""
-     },
-     {
-      "d": "2026-11-08",
-      "g": "incransom",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "ES",
-    "n": 20,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "qilin",
-      "n": 4
-     },
-     {
-      "name": "black x",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Financial Services",
-      "n": 2
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-14",
-      "g": "barracuda",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": ""
-     },
-     {
-      "d": "2026-11-11",
-      "g": "panzer",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "black x",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "black x",
-      "s": "Hospitality"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "safepay",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "MY",
-    "n": 17,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "orova",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Government & Defense",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "incransom",
-      "s": "Government & Defense"
-     },
-     {
-      "d": "2026-11-14",
-      "g": "lockbit5",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-14",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-13",
-      "g": "emperador",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-12",
-      "g": "panzer",
-      "s": "Government & Defense"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     }
-    ]
-   },
-   {
-    "cc": "IT",
-    "n": 15,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "emperador",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-06",
-      "g": "shiba",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "pixelleaks",
-      "s": ""
-     },
-     {
-      "d": "2026-10-30",
-      "g": "emperador",
-      "s": "Professional Services"
-     }
-    ]
-   },
-   {
-    "cc": "KR",
-    "n": 15,
-    "groups": [
-     {
-      "name": "metaencryptor",
-      "n": 5
-     },
-     {
-      "name": "obsoft",
-      "n": 4
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "metaencryptor",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "n0n",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "metaencryptor",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "metaencryptor",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "metaencryptor",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "metaencryptor",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "AU",
-    "n": 14,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 8
-     },
-     {
-      "name": "thegentlemen",
-      "n": 3
-     },
-     {
-      "name": "play",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Hospitality",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "qilin",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-13",
-      "g": "play",
-      "s": "Government & Defense"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "hyflock",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "qilin",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-11-05",
-      "g": "qilin",
-      "s": "Education"
-     }
-    ]
-   },
-   {
-    "cc": "BR",
-    "n": 14,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "lockbit5",
-      "n": 2
-     },
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-12",
-      "g": "vexy ransomware",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "climax inc",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-08",
-      "g": "lockbit5",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "rhysida",
-      "s": "Government & Defense"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": "Healthcare"
-     }
-    ]
-   },
-   {
-    "cc": "FR",
-    "n": 14,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 3
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "lamashtu",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-06",
-      "g": "akira",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "majinahanashi",
-      "s": "Manufacturing"
      }
     ]
    },
    {
     "cc": "IN",
-    "n": 14,
+    "n": 4,
     "groups": [
      {
       "name": "pixelleaks",
       "n": 3
      },
      {
-      "name": "incransom",
-      "n": 2
-     },
-     {
-      "name": "climax inc",
-      "n": 2
+      "name": "ransomhouse",
+      "n": 1
      }
     ],
     "sectors": [
      {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
       "name": "Manufacturing",
-      "n": 6
+      "n": 1
      },
      {
       "name": "Financial Services",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
       "n": 1
      }
     ],
@@ -4023,29 +3488,15 @@
       "d": "2026-11-15",
       "g": "ransomhouse",
       "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-12",
-      "g": "incransom",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "orova",
-      "s": "Manufacturing"
      }
     ]
    },
    {
-    "cc": "AR",
-    "n": 11,
+    "cc": "AU",
+    "n": 3,
     "groups": [
      {
       "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "thegentlemen",
       "n": 2
      },
      {
@@ -4055,268 +3506,61 @@
     ],
     "sectors": [
      {
-      "name": "Other",
-      "n": 3
-     },
-     {
       "name": "Technology",
-      "n": 2
+      "n": 1
      },
      {
-      "name": "Healthcare",
-      "n": 2
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Government & Defense",
+      "n": 1
      }
     ],
     "recent": [
      {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "play",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "safepay",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "nightspire",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-30",
-      "g": "thegentlemen",
+      "d": "2026-11-16",
+      "g": "qilin",
       "s": "Technology"
      },
      {
-      "d": "2026-10-25",
-      "g": "whitearmor",
+      "d": "2026-11-16",
+      "g": "qilin",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-13",
+      "g": "play",
       "s": "Government & Defense"
      }
     ]
    },
    {
-    "cc": "CH",
-    "n": 11,
+    "cc": "MY",
+    "n": 3,
     "groups": [
      {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "pixelleaks",
+      "name": "incransom",
       "n": 1
      },
      {
-      "name": "rhysida",
+      "name": "lockbit5",
       "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-15",
-      "g": "pixelleaks",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "rhysida",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "medusalocker",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "akira",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-02",
-      "g": "thegentlemen",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-02",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "TR",
-    "n": 10,
-    "groups": [
-     {
-      "name": "doommageddon",
-      "n": 3
      },
      {
       "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "thegentlemen",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-13",
-      "g": "doommageddon",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "doommageddon",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-02",
-      "g": "hyflock",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-01",
-      "g": "barracuda",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "HK",
-    "n": 8,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 2
-     },
-     {
-      "name": "krybit",
-      "n": 2
-     },
-     {
-      "name": "thegentlemen",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Financial Services",
-      "n": 2
-     },
-     {
-      "name": "Technology",
+      "name": "Government & Defense",
       "n": 1
      },
      {
       "name": "Healthcare",
       "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-15",
-      "g": "pixelleaks",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-15",
-      "g": "pixelleaks",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "krybit",
-      "s": "Hospitality"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "krybit",
-      "s": "Financial Services"
-     }
-    ]
-   },
-   {
-    "cc": "AE",
-    "n": 7,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 3
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "dark project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Transportation",
-      "n": 2
      },
      {
       "name": "Manufacturing",
@@ -4326,64 +3570,37 @@
     "recent": [
      {
       "d": "2026-11-16",
-      "g": "qilin",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "dark project",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-10-29",
       "g": "incransom",
-      "s": "Retail & E-Commerce"
+      "s": "Government & Defense"
      },
      {
-      "d": "2026-10-27",
-      "g": "n0n",
-      "s": "Professional Services"
+      "d": "2026-11-14",
+      "g": "lockbit5",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-14",
+      "g": "qilin",
+      "s": "Manufacturing"
      }
     ]
    },
    {
     "cc": "CN",
-    "n": 7,
+    "n": 2,
     "groups": [
      {
       "name": "pixelleaks",
       "n": 2
-     },
-     {
-      "name": "auditteam",
-      "n": 1
-     },
-     {
-      "name": "aoqin",
-      "n": 1
      }
     ],
     "sectors": [
-     {
-      "name": "Technology",
-      "n": 5
-     },
      {
       "name": "Healthcare",
       "n": 1
      },
      {
-      "name": "Manufacturing",
+      "name": "Technology",
       "n": 1
      }
     ],
@@ -4397,57 +3614,240 @@
       "d": "2026-11-15",
       "g": "pixelleaks",
       "s": "Technology"
+     }
+    ]
+   },
+   {
+    "cc": "HK",
+    "n": 2,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
      },
      {
-      "d": "2026-11-05",
-      "g": "auditteam",
+      "name": "Healthcare",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-15",
+      "g": "pixelleaks",
       "s": "Technology"
      },
      {
-      "d": "2026-11-04",
-      "g": "aoqin",
+      "d": "2026-11-15",
+      "g": "pixelleaks",
+      "s": "Healthcare"
+     }
+    ]
+   },
+   {
+    "cc": "ID",
+    "n": 2,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-15",
+      "g": "pixelleaks",
       "s": "Technology"
      },
      {
-      "d": "2026-10-24",
-      "g": "whitearmor",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-21",
-      "g": "climax inc",
+      "d": "2026-11-14",
+      "g": "incransom",
       "s": "Manufacturing"
      }
     ]
    },
    {
-    "cc": "JP",
-    "n": 7,
+    "cc": "PH",
+    "n": 2,
     "groups": [
      {
       "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "metaencryptor",
       "n": 1
      },
      {
-      "name": "byod",
+      "name": "pixelleaks",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-16",
+      "g": "qilin",
+      "s": "Other"
+     },
+     {
+      "d": "2026-11-15",
+      "g": "pixelleaks",
+      "s": "Technology"
+     }
+    ]
+   },
+   {
+    "cc": "AE",
+    "n": 1,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-16",
+      "g": "qilin",
+      "s": "Transportation"
+     }
+    ]
+   },
+   {
+    "cc": "CH",
+    "n": 1,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-15",
+      "g": "pixelleaks",
+      "s": "Healthcare"
+     }
+    ]
+   },
+   {
+    "cc": "ES",
+    "n": 1,
+    "groups": [
+     {
+      "name": "barracuda",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-14",
+      "g": "barracuda",
+      "s": "Financial Services"
+     }
+    ]
+   },
+   {
+    "cc": "IE",
+    "n": 1,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-16",
+      "g": "qilin",
+      "s": "Retail & E-Commerce"
+     }
+    ]
+   },
+   {
+    "cc": "IT",
+    "n": 1,
+    "groups": [
+     {
+      "name": "qilin",
       "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Education",
       "n": 1
-     },
+     }
+    ],
+    "recent": [
      {
-      "name": "Hospitality",
+      "d": "2026-11-16",
+      "g": "qilin",
+      "s": "Manufacturing"
+     }
+    ]
+   },
+   {
+    "cc": "JP",
+    "n": 1,
+    "groups": [
+     {
+      "name": "metaencryptor",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
       "n": 1
      }
     ],
@@ -4456,776 +3856,39 @@
       "d": "2026-11-16",
       "g": "metaencryptor",
       "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-10",
-      "g": "byod",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "thegentlemen",
-      "s": ""
-     },
-     {
-      "d": "2026-11-01",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-29",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-27",
-      "g": "safepay",
-      "s": "Education"
      }
     ]
    },
    {
-    "cc": "PH",
-    "n": 7,
+    "cc": "KW",
+    "n": 1,
     "groups": [
      {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "sarcoma",
+      "name": "netrunner",
       "n": 1
      }
     ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ],
+    "sectors": [],
     "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "qilin",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-15",
-      "g": "pixelleaks",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "sarcoma",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-30",
-      "g": "whitearmor",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-10-30",
-      "g": "qilin",
-      "s": "Transportation"
-     }
-    ]
-   },
-   {
-    "cc": "SG",
-    "n": 7,
-    "groups": [
-     {
-      "name": "orova",
-      "n": 2
-     },
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "eclipse",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     },
-     {
-      "name": "Hospitality",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-08",
-      "g": "eclipse",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-02",
-      "g": "orova",
-      "s": "Hospitality"
-     },
-     {
-      "d": "2026-11-02",
-      "g": "orova",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "DK",
-    "n": 6,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "whitearmor",
-      "n": 1
-     },
-     {
-      "name": "majinahanashi",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "whitearmor",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-11-05",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-05",
-      "g": "majinahanashi",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-10-27",
-      "g": "play",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Education"
-     }
-    ]
-   },
-   {
-    "cc": "TH",
-    "n": 6,
-    "groups": [
-     {
-      "name": "lockbit5",
-      "n": 2
-     },
-     {
-      "name": "safepay",
-      "n": 1
-     },
-     {
-      "name": "rhysida",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-12",
-      "g": "safepay",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "rhysida",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "krybit",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-08",
-      "g": "deadlock",
-      "s": ""
-     },
-     {
-      "d": "2026-11-08",
-      "g": "lockbit5",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-10-28",
-      "g": "lockbit5",
-      "s": "Financial Services"
-     }
-    ]
-   },
-   {
-    "cc": "BE",
-    "n": 5,
-    "groups": [
-     {
-      "name": "safepay",
-      "n": 2
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Agriculture and Food Production",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-08",
-      "g": "incransom",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "safepay",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-10-27",
-      "g": "booba project",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-27",
-      "g": "safepay",
-      "s": ""
-     },
-     {
-      "d": "2026-10-25",
-      "g": "emperador",
-      "s": "Agriculture and Food Production"
-     }
-    ]
-   },
-   {
-    "cc": "ID",
-    "n": 5,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-15",
-      "g": "pixelleaks",
-      "s": "Technology"
-     },
      {
       "d": "2026-11-14",
-      "g": "incransom",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-05",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-01",
-      "g": "lockbit5",
+      "g": "netrunner",
       "s": ""
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "IE",
-    "n": 5,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "curious worm",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "qilin",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "curious worm",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-23",
-      "g": "incransom",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-10-21",
-      "g": "braincipher",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-10-21",
-      "g": "majinahanashi",
-      "s": "Professional Services"
-     }
-    ]
-   },
-   {
-    "cc": "NL",
-    "n": 5,
-    "groups": [
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": ""
-     },
-     {
-      "d": "2026-10-24",
-      "g": "qilin",
-      "s": ""
-     },
-     {
-      "d": "2026-10-23",
-      "g": "akira",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "SA",
-    "n": 5,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "curious worm",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Financial Services",
-      "n": 1
-     },
-     {
-      "name": "Education",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "curious worm",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Financial Services"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Education"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "n0n",
-      "s": "Energy & Utilities"
-     }
-    ]
-   },
-   {
-    "cc": "ZA",
-    "n": 5,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "global secret group",
-      "n": 1
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "global secret group",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "medusalocker",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Retail & E-Commerce"
-     }
-    ]
-   },
-   {
-    "cc": "CO",
-    "n": 4,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "aoqin",
-      "n": 1
-     },
-     {
-      "name": "whitearmor",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "aoqin",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-08",
-      "g": "whitearmor",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": ""
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "IL",
-    "n": 4,
-    "groups": [
-     {
-      "name": "safepay",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "global secret group",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Education",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-07",
-      "g": "safepay",
-      "s": ""
-     },
-     {
-      "d": "2026-11-06",
-      "g": "qilin",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "safepay",
-      "s": ""
-     },
-     {
-      "d": "2026-10-28",
-      "g": "global secret group",
-      "s": "Education"
      }
     ]
    },
    {
     "cc": "PE",
-    "n": 4,
+    "n": 1,
     "groups": [
      {
       "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "safepay",
       "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Government & Defense",
-      "n": 1
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ],
@@ -5234,48 +3897,21 @@
       "d": "2026-11-16",
       "g": "qilin",
       "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Government & Defense"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "safepay",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-18",
-      "g": "qilin",
-      "s": "Retail & E-Commerce"
      }
     ]
    },
    {
     "cc": "PT",
-    "n": 4,
+    "n": 1,
     "groups": [
      {
       "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "n0n",
       "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
       "n": 1
      }
     ],
@@ -5283,150 +3919,23 @@
      {
       "d": "2026-11-16",
       "g": "qilin",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-21",
-      "g": "n0n",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-19",
-      "g": "qilin",
-      "s": "Financial Services"
-     }
-    ]
-   },
-   {
-    "cc": "SE",
-    "n": 4,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 3
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 2
-     },
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Energy & Utilities"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "booba project",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Other"
-     }
-    ]
-   },
-   {
-    "cc": "TW",
-    "n": 4,
-    "groups": [
-     {
-      "name": "safepay",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "orova",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Agriculture and Food Production",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-31",
-      "g": "safepay",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "safepay",
-      "s": "Agriculture and Food Production"
-     },
-     {
-      "d": "2026-10-30",
-      "g": "qilin",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-23",
-      "g": "orova",
       "s": "Technology"
      }
     ]
    },
    {
     "cc": "VN",
-    "n": 4,
+    "n": 1,
     "groups": [
      {
       "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
       "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Technology",
-      "n": 3
+      "n": 1
      }
     ],
     "recent": [
@@ -5434,1338 +3943,19 @@
       "d": "2026-11-15",
       "g": "pixelleaks",
       "s": "Technology"
-     },
-     {
-      "d": "2026-11-05",
-      "g": "vexy ransomware",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-27",
-      "g": "thegentlemen",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-21",
-      "g": "hyflock",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "CL",
-    "n": 3,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "aoqin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-04",
-      "g": "aoqin",
-      "s": "Energy & Utilities"
-     },
-     {
-      "d": "2026-11-02",
-      "g": "qilin",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-23",
-      "g": "qilin",
-      "s": "Transportation"
-     }
-    ]
-   },
-   {
-    "cc": "EC",
-    "n": 3,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "safepay",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-31",
-      "g": "safepay",
-      "s": "Other"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": ""
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Healthcare"
-     }
-    ]
-   },
-   {
-    "cc": "PK",
-    "n": 3,
-    "groups": [
-     {
-      "name": "aoqin",
-      "n": 1
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     },
-     {
-      "name": "panzer",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-12",
-      "g": "aoqin",
-      "s": "Transportation"
-     },
-     {
-      "d": "2026-10-27",
-      "g": "booba project",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-23",
-      "g": "panzer",
-      "s": "Healthcare"
-     }
-    ]
-   },
-   {
-    "cc": "AT",
-    "n": 2,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "krybit",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-01",
-      "g": "qilin",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-10-29",
-      "g": "krybit",
-      "s": "Transportation"
-     }
-    ]
-   },
-   {
-    "cc": "BD",
-    "n": 2,
-    "groups": [
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-31",
-      "g": "vexy ransomware",
-      "s": ""
-     },
-     {
-      "d": "2026-10-23",
-      "g": "qilin",
-      "s": "Healthcare"
-     }
-    ]
-   },
-   {
-    "cc": "BG",
-    "n": 2,
-    "groups": [
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-31",
-      "g": "vexy ransomware",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-22",
-      "g": "n0n",
-      "s": "Energy & Utilities"
-     }
-    ]
-   },
-   {
-    "cc": "CY",
-    "n": 2,
-    "groups": [
-     {
-      "name": "krybit",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-12",
-      "g": "krybit",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Other"
-     }
-    ]
-   },
-   {
-    "cc": "ET",
-    "n": 2,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "n0n",
-      "s": ""
-     },
-     {
-      "d": "2026-10-20",
-      "g": "n0n",
-      "s": "Other"
-     }
-    ]
-   },
-   {
-    "cc": "KW",
-    "n": 2,
-    "groups": [
-     {
-      "name": "netrunner",
-      "n": 1
-     },
-     {
-      "name": "eclipse",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-14",
-      "g": "netrunner",
-      "s": ""
-     },
-     {
-      "d": "2026-11-09",
-      "g": "eclipse",
-      "s": "Retail & E-Commerce"
-     }
-    ]
-   },
-   {
-    "cc": "NO",
-    "n": 2,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": ""
-     },
-     {
-      "d": "2026-10-23",
-      "g": "thegentlemen",
-      "s": "Technology"
-     }
-    ]
-   },
-   {
-    "cc": "UA",
-    "n": 2,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "dragonforce",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-02",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-24",
-      "g": "dragonforce",
-      "s": "Technology"
-     }
-    ]
-   },
-   {
-    "cc": "AL",
-    "n": 1,
-    "groups": [
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-11-06",
-      "g": "incransom",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "BJ",
-    "n": 1,
-    "groups": [
-     {
-      "name": "panzer",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-25",
-      "g": "panzer",
-      "s": "Professional Services"
-     }
-    ]
-   },
-   {
-    "cc": "BO",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Financial Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Financial Services"
-     }
-    ]
-   },
-   {
-    "cc": "BW",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-11-13",
-      "g": "n0n",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "CI",
-    "n": 1,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-30",
-      "g": "qilin",
-      "s": "Technology"
-     }
-    ]
-   },
-   {
-    "cc": "CM",
-    "n": 1,
-    "groups": [
-     {
-      "name": "hyflock",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Government & Defense",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "hyflock",
-      "s": "Government & Defense"
-     }
-    ]
-   },
-   {
-    "cc": "CR",
-    "n": 1,
-    "groups": [
-     {
-      "name": "deadlock",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Agriculture and Food Production",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-08",
-      "g": "deadlock",
-      "s": "Agriculture and Food Production"
-     }
-    ]
-   },
-   {
-    "cc": "EG",
-    "n": 1,
-    "groups": [
-     {
-      "name": "krybit",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-24",
-      "g": "krybit",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "GA",
-    "n": 1,
-    "groups": [
-     {
-      "name": "hyflock",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-21",
-      "g": "hyflock",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "GL",
-    "n": 1,
-    "groups": [
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-11-12",
-      "g": "vexy ransomware",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "HU",
-    "n": 1,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-01",
-      "g": "qilin",
-      "s": "Transportation"
-     }
-    ]
-   },
-   {
-    "cc": "JM",
-    "n": 1,
-    "groups": [
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Financial Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-21",
-      "g": "incransom",
-      "s": "Financial Services"
-     }
-    ]
-   },
-   {
-    "cc": "KE",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Professional Services"
-     }
-    ]
-   },
-   {
-    "cc": "LB",
-    "n": 1,
-    "groups": [
-     {
-      "name": "lockbit5",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-23",
-      "g": "lockbit5",
-      "s": "Professional Services"
-     }
-    ]
-   },
-   {
-    "cc": "LI",
-    "n": 1,
-    "groups": [
-     {
-      "name": "lockbit5",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-10-23",
-      "g": "lockbit5",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "LY",
-    "n": 1,
-    "groups": [
-     {
-      "name": "krybit",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "krybit",
-      "s": "Other"
-     }
-    ]
-   },
-   {
-    "cc": "MK",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Government & Defense",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Government & Defense"
-     }
-    ]
-   },
-   {
-    "cc": "MM",
-    "n": 1,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-25",
-      "g": "qilin",
-      "s": "Technology"
-     }
-    ]
-   },
-   {
-    "cc": "NG",
-    "n": 1,
-    "groups": [
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-12",
-      "g": "vexy ransomware",
-      "s": "Energy & Utilities"
-     }
-    ]
-   },
-   {
-    "cc": "NP",
-    "n": 1,
-    "groups": [
-     {
-      "name": "climax inc",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-10",
-      "g": "climax inc",
-      "s": "Energy & Utilities"
-     }
-    ]
-   },
-   {
-    "cc": "NZ",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-02",
-      "g": "thegentlemen",
-      "s": "Retail & E-Commerce"
-     }
-    ]
-   },
-   {
-    "cc": "PL",
-    "n": 1,
-    "groups": [
-     {
-      "name": "panzer",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "panzer",
-      "s": "Other"
-     }
-    ]
-   },
-   {
-    "cc": "QA",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "n0n",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "SI",
-    "n": 1,
-    "groups": [
-     {
-      "name": "aoqin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-04",
-      "g": "aoqin",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "SL",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-28",
-      "g": "thegentlemen",
-      "s": "Healthcare"
-     }
-    ]
-   },
-   {
-    "cc": "TN",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-20",
-      "g": "n0n",
-      "s": "Manufacturing"
-     }
-    ]
-   },
-   {
-    "cc": "TT",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-10-20",
-      "g": "n0n",
-      "s": ""
-     }
-    ]
-   },
-   {
-    "cc": "UY",
-    "n": 1,
-    "groups": [
-     {
-      "name": "emperador",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-10-31",
-      "g": "emperador",
-      "s": "Retail & E-Commerce"
-     }
-    ]
-   },
-   {
-    "cc": "VE",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [],
-    "recent": [
-     {
-      "d": "2026-11-02",
-      "g": "thegentlemen",
-      "s": ""
      }
     ]
    }
   ],
   "groups": [
    {
-    "name": "n0n",
-    "n": 140,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 31
-     },
-     {
-      "name": "Healthcare",
-      "n": 21
-     },
-     {
-      "name": "Financial Services",
-      "n": 16
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 83
-     },
-     {
-      "cc": "CA",
-      "n": 18
-     },
-     {
-      "cc": "GB",
-      "n": 3
-     },
-     {
-      "cc": "AE",
-      "n": 3
-     },
-     {
-      "cc": "ET",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "name": "qilin",
-    "n": 114,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 20
-     },
-     {
-      "name": "Professional Services",
-      "n": 15
-     },
-     {
-      "name": "Other",
-      "n": 12
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 33
-     },
-     {
-      "cc": "DE",
-      "n": 11
-     },
-     {
-      "cc": "MX",
-      "n": 9
-     },
-     {
-      "cc": "GB",
-      "n": 9
-     },
-     {
-      "cc": "AU",
-      "n": 8
-     }
-    ],
-    "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
-    "origin": ""
-   },
-   {
-    "name": "thegentlemen",
-    "n": 97,
-    "last": "2026-11-11",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 17
-     },
-     {
-      "name": "Manufacturing",
-      "n": 17
-     },
-     {
-      "name": "Other",
-      "n": 10
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 24
-     },
-     {
-      "cc": "DE",
-      "n": 8
-     },
-     {
-      "cc": "GB",
-      "n": 5
-     },
-     {
-      "cc": "MX",
-      "n": 4
-     },
-     {
-      "cc": "BR",
-      "n": 4
-     }
-    ],
-    "about": "The Gentlemen is a ransomware-as-a-service group that emerged in July–August 2025. It claimed over 320 victims in 17+ countries and offers affiliates a 90% revenue share. Its Go-based locker targets Windows, Linux, NAS, and BSD systems. A compromised C2 server in 2026 revealed over 1,570 linked victims.",
-    "origin": ""
-   },
-   {
-    "name": "incransom",
-    "n": 46,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 13
-     },
-     {
-      "name": "Other",
-      "n": 6
-     },
-     {
-      "name": "Financial Services",
-      "n": 5
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 27
-     },
-     {
-      "cc": "CA",
-      "n": 4
-     },
-     {
-      "cc": "IN",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "ID",
-      "n": 1
-     }
-    ],
-    "about": "INC Ransom is a prolific ransomware-as-a-service operation active since July 2023. It targets healthcare, government, education, and manufacturing in North America and Europe, with no sector excluded. It posted over 200 victims in 2025 alone.",
-    "origin": ""
-   },
-   {
-    "name": "akira",
-    "n": 38,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 12
-     },
-     {
-      "name": "Professional Services",
-      "n": 5
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 4
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 10
-     },
-     {
-      "cc": "CA",
-      "n": 2
-     },
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "FR",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ],
-    "about": "Akira reportedly emerged in March 2023 and has been speculated to have ties to the former Conti group. Its affiliates reportedly also work with Snatch and BlackByte. The first version was written in C++ and later versions in Rust. Initial access has involved brute-force attacks on Cisco VPNs and exploitation of two CVEs.",
-    "origin": ""
-   },
-   {
-    "name": "silentransomgroup",
-    "n": 37,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 16
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 13
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ],
-    "about": "Silent Ransom Group is described in the notes as a former Conti team. It is also tracked as Chatty Spider and UNC3753. The notes provide no further details about its activity.",
-    "origin": ""
-   },
-   {
-    "name": "booba project",
-    "n": 32,
-    "last": "2026-11-10",
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 13
-     },
-     {
-      "name": "Government & Defense",
-      "n": 7
-     },
-     {
-      "name": "Education",
-      "n": 6
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 23
-     },
-     {
-      "cc": "CA",
-      "n": 3
-     },
-     {
-      "cc": "MX",
-      "n": 1
-     },
-     {
-      "cc": "FR",
-      "n": 1
-     },
-     {
-      "cc": "SE",
-      "n": 1
-     }
-    ]
-   },
-   {
     "name": "pixelleaks",
-    "n": 26,
+    "n": 23,
     "last": "2026-11-15",
     "sectors": [
      {
       "name": "Technology",
-      "n": 7
+      "n": 6
      },
      {
       "name": "Healthcare",
@@ -6800,517 +3990,93 @@
     ]
    },
    {
-    "name": "whitearmor",
-    "n": 22,
-    "last": "2026-11-08",
+    "name": "qilin",
+    "n": 17,
+    "last": "2026-11-16",
     "sectors": [
      {
-      "name": "Technology",
-      "n": 6
+      "name": "Manufacturing",
+      "n": 8
      },
      {
       "name": "Transportation",
-      "n": 5
+      "n": 2
      },
      {
-      "name": "Other",
-      "n": 4
+      "name": "Professional Services",
+      "n": 2
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 6
+      "n": 7
      },
      {
-      "cc": "CO",
-      "n": 1
+      "cc": "AU",
+      "n": 2
      },
      {
-      "cc": "DK",
-      "n": 1
-     },
-     {
-      "cc": "GB",
+      "cc": "AE",
       "n": 1
      },
      {
       "cc": "PH",
       "n": 1
+     },
+     {
+      "cc": "PE",
+      "n": 1
      }
-    ]
+    ],
+    "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
+    "origin": ""
    },
    {
-    "name": "braincipher",
-    "n": 20,
-    "last": "2026-11-06",
+    "name": "n0n",
+    "n": 13,
+    "last": "2026-11-16",
     "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 5
-     },
-     {
-      "name": "Professional Services",
-      "n": 5
-     },
      {
       "name": "Financial Services",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 10
-     },
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "CA",
-      "n": 2
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "IE",
-      "n": 1
-     }
-    ],
-    "about": "Brain Cipher emerged in July 2024 and has Windows and Linux variants. It reportedly uses a leaked LockBit Black build and is suspected of exploiting CVE-2023-28252. Demands are reported in Monero, with amounts from about $150,000 to $1 million. The notes contain a garbled amount figure.",
-    "origin": ""
-   },
-   {
-    "name": "emperador",
-    "n": 19,
-    "last": "2026-11-13",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "IT",
-      "n": 2
-     },
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "name": "medusalocker",
-    "n": 19,
-    "last": "2026-11-11",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "IN",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ],
-    "about": "The notes describe Medusa as a .NET 2.0 DDoS bot with an HTTP-based C&C, whose predecessor used IRC. They do not describe ransomware activity, so this entry may not match the MedusaLocker ransomware group and should be checked.",
-    "origin": ""
-   },
-   {
-    "name": "safepay",
-    "n": 19,
-    "last": "2026-11-12",
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Education",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 3
-     },
-     {
-      "cc": "IL",
-      "n": 2
-     },
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "BE",
-      "n": 2
-     },
-     {
-      "cc": "TW",
-      "n": 2
-     }
-    ],
-    "about": "SafePay emerged in September 2024 and grew rapidly. It says it runs all operations in-house and rejects the RaaS model. It claimed over 300 victims by mid-2025. An early attack on UK telematics firm Microlise reportedly stole 1.2 TB of data.",
-    "origin": ""
-   },
-   {
-    "name": "rhysida",
-    "n": 18,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Financial Services",
-      "n": 4
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 3
-     },
-     {
-      "cc": "MY",
-      "n": 2
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "TH",
-      "n": 1
-     },
-     {
-      "cc": "BR",
-      "n": 1
-     }
-    ],
-    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
-    "origin": ""
-   },
-   {
-    "name": "play",
-    "n": 17,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 11
-     },
-     {
-      "cc": "AU",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "AR",
-      "n": 1
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     }
-    ],
-    "about": "Play ransomware, also called PlayCrypt, was first observed in June 2022 and uses double extortion. It has targeted many organizations in Latin America. Its initial access methods include phishing, exposed services, and valid account compromise. In 2023, Symantec reported its custom .NET data-enumeration and exfiltration tools.",
-    "origin": ""
-   },
-   {
-    "name": "climax inc",
-    "n": 16,
-    "last": "2026-11-10",
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 3
-     },
-     {
-      "cc": "IN",
-      "n": 2
-     },
-     {
-      "cc": "KR",
-      "n": 2
-     },
-     {
-      "cc": "NP",
-      "n": 1
-     },
-     {
-      "cc": "BR",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "name": "everest",
-    "n": 15,
-    "last": "2026-11-14",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 4
-     },
-     {
-      "name": "Other",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "IT",
-      "n": 2
-     },
-     {
-      "cc": "SG",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "US",
-      "n": 1
-     }
-    ],
-    "about": "Everest collects and analyzes information about its victims, focusing on customer privacy, financial data, databases, and credit card information. It leaks stolen data on the darknet. It threatens to leak data and keep victims' files if they do not make contact.",
-    "origin": ""
-   },
-   {
-    "name": "lockbit5",
-    "n": 15,
-    "last": "2026-11-14",
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Hospitality",
-      "n": 1
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "BR",
-      "n": 2
-     },
-     {
-      "cc": "TH",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "IN",
-      "n": 1
-     }
-    ],
-    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
-    "origin": ""
-   },
-   {
-    "name": "payload",
-    "n": 15,
-    "last": "2026-11-07",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 10
-     },
-     {
-      "cc": "FR",
-      "n": 1
-     }
-    ],
-    "about": "Emerged in early 2026 using Babuk-derived source code to attack Windows and ESXi systems with cross-platform double extortion. Targets healthcare, energy, real estate, and agriculture. Claimed 12 victims across seven countries within hours of launching its leak site.",
-    "origin": ""
-   },
-   {
-    "name": "curious worm",
-    "n": 14,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Healthcare",
       "n": 6
      },
      {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 5
-     },
-     {
-      "cc": "DE",
-      "n": 1
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     },
-     {
-      "cc": "IE",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "name": "krybit",
-    "n": 14,
-    "last": "2026-11-12",
-    "sectors": [
-     {
-      "name": "Technology",
+      "name": "Healthcare",
       "n": 4
      },
      {
       "name": "Professional Services",
       "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 7
+     },
+     {
+      "cc": "CA",
+      "n": 6
+     }
+    ]
+   },
+   {
+    "name": "shadowbyt3$",
+    "n": 5,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Energy & Utilities",
+      "n": 1
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 2
+      "n": 1
+     },
+     {
+      "name": "Education",
+      "n": 1
      }
     ],
     "countries": [
@@ -7319,37 +4085,79 @@
       "n": 2
      },
      {
-      "cc": "HK",
+      "cc": "CA",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "name": "curious worm",
+    "n": 4,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Technology",
       "n": 2
      },
      {
-      "cc": "CY",
-      "n": 1
-     },
-     {
-      "cc": "TH",
-      "n": 1
-     },
-     {
-      "cc": "LY",
+      "name": "Healthcare",
       "n": 1
      }
     ],
-    "about": "Emerging ransomware-as-a-service group that launched in late March 2026. Offers affiliates an 80/20 revenue split and encrypts Windows, Linux, ESXi, and NAS devices. Became known for a public feud with rival 0APT, with each side breaching and leaking the other's operator data.",
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "incransom",
+    "n": 4,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Government & Defense",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "ID",
+      "n": 1
+     }
+    ],
+    "about": "INC Ransom is a prolific ransomware-as-a-service operation active since July 2023. It targets healthcare, government, education, and manufacturing in North America and Europe, with no sector excluded. It posted over 200 victims in 2025 alone.",
     "origin": ""
    },
    {
     "name": "metaencryptor",
-    "n": 14,
+    "n": 4,
     "last": "2026-11-16",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 6
+      "n": 2
      },
      {
       "name": "Technology",
-      "n": 5
+      "n": 1
      },
      {
       "name": "Retail & E-Commerce",
@@ -7359,11 +4167,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 8
-     },
-     {
-      "cc": "KR",
-      "n": 5
+      "n": 3
      },
      {
       "cc": "JP",
@@ -7374,79 +4178,44 @@
     "origin": ""
    },
    {
-    "name": "genesis",
-    "n": 12,
-    "last": "2026-11-06",
+    "name": "play",
+    "n": 3,
+    "last": "2026-11-16",
     "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 4
-     },
      {
       "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Technology",
       "n": 1
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 11
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     }
-    ],
-    "about": "Emerging ransomware group first observed in late 2025. Targets small to mid-sized US organizations in healthcare, retail, financial services, legal, and manufacturing. Relies on double extortion, with a strong focus on data theft and public leaks.",
-    "origin": ""
-   },
-   {
-    "name": "interlock",
-    "n": 12,
-    "last": "2026-11-13",
-    "sectors": [
-     {
-      "name": "Education",
-      "n": 5
-     },
-     {
-      "name": "Healthcare",
-      "n": 3
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 2
+      "n": 1
+     },
+     {
+      "name": "Government & Defense",
+      "n": 1
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 10
+      "n": 2
      },
      {
-      "cc": "CA",
-      "n": 2
+      "cc": "AU",
+      "n": 1
      }
     ],
-    "about": "Ransomware group first observed in September 2024 that targets critical infrastructure, including healthcare, government, education, and technology in North America and Europe. Uses double extortion and has claimed 57+ victims, including a major US dialysis provider whose breach exposed over two million patient records.",
+    "about": "Play ransomware, also called PlayCrypt, was first observed in June 2022 and uses double extortion. It has targeted many organizations in Latin America. Its initial access methods include phishing, exposed services, and valid account compromise. In 2023, Symantec reported its custom .NET data-enumeration and exfiltration tools.",
     "origin": ""
    },
    {
     "name": "aoqin",
-    "n": 11,
+    "n": 2,
     "last": "2026-11-16",
     "sectors": [
      {
-      "name": "Technology",
-      "n": 4
-     },
-     {
       "name": "Retail & E-Commerce",
-      "n": 2
+      "n": 1
      },
      {
       "name": "Hospitality",
@@ -7456,22 +4225,301 @@
     "countries": [
      {
       "cc": "US",
-      "n": 5
-     },
+      "n": 2
+     }
+    ]
+   },
+   {
+    "name": "endzone",
+    "n": 2,
+    "last": "2026-11-14",
+    "sectors": [
      {
-      "cc": "PK",
+      "name": "Technology",
       "n": 1
      },
      {
-      "cc": "CO",
+      "name": "Financial Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "everest",
+    "n": 2,
+    "last": "2026-11-14",
+    "sectors": [
+     {
+      "name": "Manufacturing",
       "n": 1
      },
      {
-      "cc": "BR",
+      "name": "Other",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 1
+     }
+    ],
+    "about": "Everest collects and analyzes information about its victims, focusing on customer privacy, financial data, databases, and credit card information. It leaks stolen data on the darknet. It threatens to leak data and keep victims' files if they do not make contact.",
+    "origin": ""
+   },
+   {
+    "name": "global secret group",
+    "n": 2,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Agriculture and Food Production",
       "n": 1
      },
      {
-      "cc": "SI",
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "name": "netrunner",
+    "n": 2,
+    "last": "2026-11-14",
+    "sectors": [],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 1
+     },
+     {
+      "cc": "KW",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "panzer",
+    "n": 2,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "rhysida",
+    "n": 2,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ],
+    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
+    "origin": ""
+   },
+   {
+    "name": "vortex",
+    "n": 2,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     },
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "akira",
+    "n": 1,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ],
+    "countries": [],
+    "about": "Akira reportedly emerged in March 2023 and has been speculated to have ties to the former Conti group. Its affiliates reportedly also work with Snatch and BlackByte. The first version was written in C++ and later versions in Rust. Initial access has involved brute-force attacks on Cisco VPNs and exploitation of two CVEs.",
+    "origin": ""
+   },
+   {
+    "name": "barracuda",
+    "n": 1,
+    "last": "2026-11-14",
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "ES",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "bravox",
+    "n": 1,
+    "last": "2026-11-13",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "daixin",
+    "n": 1,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "interlock",
+    "n": 1,
+    "last": "2026-11-13",
+    "sectors": [],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 1
+     }
+    ],
+    "about": "Ransomware group first observed in September 2024 that targets critical infrastructure, including healthcare, government, education, and technology in North America and Europe. Uses double extortion and has claimed 57+ victims, including a major US dialysis provider whose breach exposed over two million patient records.",
+    "origin": ""
+   },
+   {
+    "name": "lockbit5",
+    "n": 1,
+    "last": "2026-11-14",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "MY",
+      "n": 1
+     }
+    ],
+    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
+    "origin": ""
+   },
+   {
+    "name": "ransomhouse",
+    "n": 1,
+    "last": "2026-11-15",
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "IN",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "scarlettgroup",
+    "n": 1,
+    "last": "2026-11-14",
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "shiba",
+    "n": 1,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "GB",
       "n": 1
      }
     ]
@@ -7554,111 +4602,111 @@
   "days": [
    {
     "date": "2026-10-18",
-    "n": 14
+    "n": 0
    },
    {
     "date": "2026-10-19",
-    "n": 27
+    "n": 0
    },
    {
     "date": "2026-10-20",
-    "n": 27
+    "n": 0
    },
    {
     "date": "2026-10-21",
-    "n": 55
+    "n": 0
    },
    {
     "date": "2026-10-22",
-    "n": 27
+    "n": 0
    },
    {
     "date": "2026-10-23",
-    "n": 44
+    "n": 0
    },
    {
     "date": "2026-10-24",
-    "n": 16
+    "n": 0
    },
    {
     "date": "2026-10-25",
-    "n": 17
+    "n": 0
    },
    {
     "date": "2026-10-26",
-    "n": 72
+    "n": 0
    },
    {
     "date": "2026-10-27",
-    "n": 45
+    "n": 0
    },
    {
     "date": "2026-10-28",
-    "n": 35
+    "n": 0
    },
    {
     "date": "2026-10-29",
-    "n": 33
+    "n": 0
    },
    {
     "date": "2026-10-30",
-    "n": 44
+    "n": 0
    },
    {
     "date": "2026-10-31",
-    "n": 29
+    "n": 0
    },
    {
     "date": "2026-11-01",
-    "n": 18
+    "n": 0
    },
    {
     "date": "2026-11-02",
-    "n": 48
+    "n": 0
    },
    {
     "date": "2026-11-03",
-    "n": 37
+    "n": 0
    },
    {
     "date": "2026-11-04",
-    "n": 67
+    "n": 0
    },
    {
     "date": "2026-11-05",
-    "n": 22
+    "n": 0
    },
    {
     "date": "2026-11-06",
-    "n": 22
+    "n": 0
    },
    {
     "date": "2026-11-07",
-    "n": 39
+    "n": 0
    },
    {
     "date": "2026-11-08",
-    "n": 19
+    "n": 0
    },
    {
     "date": "2026-11-09",
-    "n": 94
+    "n": 0
    },
    {
     "date": "2026-11-10",
-    "n": 38
+    "n": 0
    },
    {
     "date": "2026-11-11",
-    "n": 44
+    "n": 0
    },
    {
     "date": "2026-11-12",
-    "n": 13
+    "n": 0
    },
    {
     "date": "2026-11-13",
-    "n": 19
+    "n": 12
    },
    {
     "date": "2026-11-14",
