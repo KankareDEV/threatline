@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-17T14:58:52Z",
+ "generated": "2026-11-17T17:34:21Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
  "counts": {
   "red": 7,
   "orange": 29,
-  "green": 33
+  "green": 42
  },
  "sources": [
   {
@@ -52,7 +52,7 @@
    "ransomware": 0,
    "epss_high": 5,
    "epss_known": 33,
-   "news": 36
+   "news": 45
   },
   "timeline": [
    {
@@ -230,11 +230,11 @@
     "n": 4
    },
    {
-    "name": "PHP Group",
+    "name": "Google",
     "n": 2
    },
    {
-    "name": "Google",
+    "name": "PHP Group",
     "n": 2
    },
    {
@@ -335,7 +335,7 @@
   "signals": [
    {
     "name": "Zero-day",
-    "n": 3
+    "n": 2
    },
    {
     "name": "Ransomware",
@@ -428,6 +428,16 @@
     ]
    },
    {
+    "name": "EvilTokens",
+    "n": 1,
+    "links": [
+     {
+      "label": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
+      "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/"
+     }
+    ]
+   },
+   {
     "name": "GitDoor",
     "n": 1,
     "links": [
@@ -456,19 +466,70 @@
       "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
      }
     ]
-   },
-   {
-    "name": "PentAGI",
-    "n": 1,
-    "links": [
-     {
-      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
    }
   ],
-  "news_cves": [],
+  "news_cves": [
+   {
+    "cve": "CVE-2026-111497",
+    "n": 1,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-112136",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-112137",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-85114",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-85115",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-109830",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-58114",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-59082",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-106175",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-117659",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-120157",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-120255",
+    "n": 1,
+    "kev": false
+   }
+  ],
   "by_source": [
    {
     "name": "The Hacker News",
@@ -479,12 +540,71 @@
     "n": 15
    },
    {
+    "name": "CISA advisories",
+    "n": 9
+   },
+   {
     "name": "The Record",
     "n": 5
    }
   ]
  },
  "items": [
+  {
+   "id": "CVE-2026-111497",
+   "type": "vuln",
+   "title": "Google Brotli Unchecked Return Value Vulnerability",
+   "cve": "CVE-2026-111497",
+   "vendor": "Google",
+   "product": "Brotli",
+   "date": "2026-10-27",
+   "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-10",
+   "epss": 0.82641,
+   "cvss": {
+    "score": 9.2,
+    "version": "4.0",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-04"
+    }
+   ],
+   "cwes": [
+    "CWE-252",
+    "CWE-787"
+   ],
+   "score": 86,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 83% chance of exploitation in 30 days",
+     "points": 21
+    },
+    {
+     "label": "CVSS 9.2 critical severity",
+     "points": 10
+    },
+    {
+     "label": "In the news this week",
+     "points": 5
+    }
+   ]
+  },
   {
    "id": "CVE-2026-109618",
    "type": "vuln",
@@ -578,53 +698,6 @@
     {
      "label": "EPSS 100% chance of exploitation in 30 days",
      "points": 25
-    },
-    {
-     "label": "CVSS 9.2 critical severity",
-     "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-111497",
-   "type": "vuln",
-   "title": "Google Brotli Unchecked Return Value Vulnerability",
-   "cve": "CVE-2026-111497",
-   "vendor": "Google",
-   "product": "Brotli",
-   "date": "2026-10-27",
-   "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-10",
-   "epss": 0.82641,
-   "cvss": {
-    "score": 9.2,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
-    }
-   ],
-   "cwes": [
-    "CWE-252",
-    "CWE-787"
-   ],
-   "score": 81,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 83% chance of exploitation in 30 days",
-     "points": 21
     },
     {
      "label": "CVSS 9.2 critical severity",
@@ -2048,24 +2121,24 @@
    ]
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/",
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-04",
    "type": "news",
-   "title": "Microsoft: Windows Server 2016 reaches end of support in 60 days",
-   "date": "2026-11-16",
+   "title": "Siemens Industrial Software Products",
+   "date": "2026-11-17",
    "sources": [
-    "BleepingComputer"
+    "CISA advisories"
    ],
-   "cves": [],
+   "cves": [
+    "CVE-2026-111497"
+   ],
    "ransomware": false,
    "links": [
     {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/"
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-04"
     }
    ],
-   "signals": [
-    "Zero-day"
-   ],
+   "signals": [],
    "actors": [],
    "score": 40,
    "level": "orange",
@@ -2075,16 +2148,16 @@
      "points": 20
     },
     {
-     "label": "Zero-day in the headline",
+     "label": "Mentions exploited CVE-2026-111497",
      "points": 20
     }
    ],
    "ai": {
-    "summary": "Microsoft reminded customers that Windows Server 2016 will stop receiving security updates when its end of support arrives in about two months.",
+    "summary": "Siemens assessed its software products for impact from a critical Brotli decoder flaw in Node.js, tracked as CVE-2026-111497, which could allow remote code execution via memory corruption.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "",
+    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -2596,6 +2669,310 @@
    }
   },
   {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-05",
+   "type": "news",
+   "title": "Siemens Mendix Studio Pro",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-112136",
+    "CVE-2026-112137"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-05"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Multiple vulnerabilities in the MCP Server of Siemens Mendix Studio Pro could let a network-adjacent attacker access data, run tools, or compromise systems. Siemens released fixed versions.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-02",
+   "type": "news",
+   "title": "Siemens .NET Client Library for SIMATIC S7 Webserver API",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-85114",
+    "CVE-2026-85115"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-02"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Multiple vulnerabilities in Siemens' .NET client library for the SIMATIC S7 Webserver API could expose sensitive information or allow files to be written outside the download directory. A fixed version is available.",
+    "sector": "Industrial Automation",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
+   "type": "news",
+   "title": "Siemens meta-iot2050",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-109830"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A command injection flaw in the firmware update tool of Siemens meta-iot2050 lets an attacker who can manipulate a configuration file run arbitrary commands as root. Fixes are being prepared, with mitigations advised.",
+    "sector": "Industrial Automation",
+    "actors": [],
+    "malware": [],
+    "tactic": "Execution",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09",
+   "type": "news",
+   "title": "Siemens SIMATIC WinCC",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-58114",
+    "CVE-2026-59082"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An authentication bypass in multiple Siemens SIMATIC products lets an on-path attacker take over a legitimate user's session and run code with that user's privileges. Fixes are pending for some products.",
+    "sector": "Industrial Automation",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07",
+   "type": "news",
+   "title": "Siemens RUGGEDCOM APE1808",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-106175"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Siemens' RUGGEDCOM APE1808 is affected by a double free flaw inherited from a FortiOS vulnerability disclosed by Fortinet. Siemens advises updating the related Fortinet firewall software.",
+    "sector": "Critical Manufacturing",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01",
+   "type": "news",
+   "title": "Dorsett Controls InfoScan",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-117659",
+    "CVE-2026-120157",
+    "CVE-2026-120255",
+    "CVE-2026-120260",
+    "CVE-2026-120271",
+    "CVE-2026-120298"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Five vulnerabilities in Dorsett Controls InfoScan could let attackers obtain system information, access application data, recover stored credentials, or intercept and manipulate network traffic.",
+    "sector": "Building Management",
+    "actors": [],
+    "malware": [],
+    "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
+   "type": "news",
+   "title": "Siemens ROS#",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-109097"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Siemens ROS# before 2.3.1 has a code injection flaw where a crafted message definition file could inject arbitrary code into the generated program. A fixed version is available.",
+    "sector": "Critical Manufacturing",
+    "actors": [],
+    "malware": [],
+    "tactic": "Execution",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
+   "type": "news",
+   "title": "Siemens Simcenter Femap",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-64629"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An out-of-bounds read in Siemens Simcenter Femap, triggered by opening X_T files, could let an attacker crash the application or execute arbitrary code. A fixed version is available.",
+    "sector": "Engineering Software",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html",
    "type": "news",
    "title": "Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission",
@@ -2702,6 +3079,158 @@
     "malware": [],
     "tactic": "Exfiltration",
     "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/",
+   "type": "news",
+   "title": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "EvilTokens",
+    "Kali365",
+    "Knight Office"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Huntress researchers describe three phishing kits that capture and replay Microsoft 365 session tokens, and how defenders can detect and contain them. Microsoft 365 users are the target.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [
+     "EvilTokens",
+     "Knight Office",
+     "Kali365"
+    ],
+    "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/hardware/flipper-devices-launches-399-flipper-one-linux-based-multi-tool/",
+   "type": "news",
+   "title": "Flipper Devices launches $399 ‘Flipper One’ Linux-based multi-tool",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/hardware/flipper-devices-launches-399-flipper-one-linux-based-multi-tool/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Flipper Devices, maker of the Flipper Zero pentesting device, launched a crowdfunding campaign for Flipper One, a $399 portable Linux computer and networking multi-tool. No security incident is described.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/nsa-net-disruptions",
+   "type": "news",
+   "title": "NSA Net, agency’s classified internal network, faces unspecified disruptions",
+   "date": "2026-11-17",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/nsa-net-disruptions"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The NSA staggered staff arrivals at its Fort Meade, Maryland headquarters while technicians work to restore NSA Net, its classified internal network, after unspecified disruptions.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/california-fines-hertz-state-data-privacy-law",
+   "type": "news",
+   "title": "California fines Hertz $1.5 million for breaking state data privacy law",
+   "date": "2026-11-17",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/california-fines-hertz-state-data-privacy-law"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Hertz agreed to pay a $1.5 million fine to California's privacy regulator, the CPPA, and to change its business practices after breaching state data privacy law.",
+    "sector": "Car rental",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": [
+     "US"
+    ]
    }
   },
   {
@@ -2824,43 +3353,6 @@
     ],
     "tactic": "Defense Evasion",
     "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/australian-retail-giant-coles-investigates-cybersecurity-incident/",
-   "type": "news",
-   "title": "Australian retail giant Coles investigates cybersecurity incident",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/australian-retail-giant-coles-investigates-cybersecurity-incident/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Coles, Australia's second-largest retailer, is investigating a cyber security incident. The company says its stores have not been affected.",
-    "sector": "Retail",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": [
-     "AU"
-    ]
    }
   },
   {
@@ -3125,76 +3617,6 @@
    }
   },
   {
-   "id": "https://therecord.media/italian-regulator-fines-meta-886-million-privacy",
-   "type": "news",
-   "title": "Italian regulator fines Meta $886 million for violating data privacy law",
-   "date": "2026-11-16",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/italian-regulator-fines-meta-886-million-privacy"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "An Italian regulator fined Meta about $886 million over alleged privacy violations, including use of a camera roll feature that scanned Android users' photo galleries.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Collection",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/ireland-tinder-privacy-fine",
-   "type": "news",
-   "title": "Match fined $10 million for alleged Tinder privacy violations",
-   "date": "2026-11-16",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/ireland-tinder-privacy-fine"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Ireland's data protection regulator plans to fine Match Group $10 million because Tinder allegedly failed to give users their personal data when requested.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/",
    "type": "news",
    "title": "California sues OpenAI over AI agents escaping sandboxes, hacking firms",
@@ -3409,17 +3831,13 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1072,
-  "located": 913,
+  "total": 936,
+  "located": 782,
   "countries": [
    {
     "cc": "US",
-    "n": 412,
+    "n": 333,
     "groups": [
-     {
-      "name": "n0n",
-      "n": 80
-     },
      {
       "name": "qilin",
       "n": 35
@@ -3427,26 +3845,30 @@
      {
       "name": "incransom",
       "n": 28
+     },
+     {
+      "name": "booba project",
+      "n": 24
      }
     ],
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 71
+      "n": 62
      },
      {
       "name": "Healthcare",
-      "n": 66
+      "n": 52
      },
      {
       "name": "Manufacturing",
-      "n": 51
+      "n": 46
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 64,
+    "n": 63,
     "groups": [
      {
       "name": "qilin",
@@ -3472,45 +3894,13 @@
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 5
-     }
-    ]
-   },
-   {
-    "cc": "CA",
-    "n": 46,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 18
-     },
-     {
-      "name": "thegentlemen",
       "n": 4
-     },
-     {
-      "name": "incransom",
-      "n": 4
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Financial Services",
-      "n": 10
-     },
-     {
-      "name": "Education",
-      "n": 7
-     },
-     {
-      "name": "Professional Services",
-      "n": 6
      }
     ]
    },
    {
     "cc": "GB",
-    "n": 38,
+    "n": 35,
     "groups": [
      {
       "name": "qilin",
@@ -3521,8 +3911,8 @@
       "n": 5
      },
      {
-      "name": "n0n",
-      "n": 3
+      "name": "shiba",
+      "n": 2
      }
     ],
     "sectors": [
@@ -3531,11 +3921,43 @@
       "n": 6
      },
      {
-      "name": "Retail & E-Commerce",
+      "name": "Other",
       "n": 5
      },
      {
-      "name": "Other",
+      "name": "Manufacturing",
+      "n": 4
+     }
+    ]
+   },
+   {
+    "cc": "CA",
+    "n": 28,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "incransom",
+      "n": 4
+     },
+     {
+      "name": "booba project",
+      "n": 3
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 7
+     },
+     {
+      "name": "Technology",
+      "n": 5
+     },
+     {
+      "name": "Healthcare",
       "n": 5
      }
     ]
@@ -3574,7 +3996,7 @@
    },
    {
     "cc": "ES",
-    "n": 20,
+    "n": 19,
     "groups": [
      {
       "name": "thegentlemen",
@@ -3600,38 +4022,6 @@
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "IT",
-    "n": 16,
-    "groups": [
-     {
-      "name": "aurora",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
       "n": 2
      }
     ]
@@ -3664,70 +4054,6 @@
      },
      {
       "name": "Financial Services",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "KR",
-    "n": 15,
-    "groups": [
-     {
-      "name": "metaencryptor",
-      "n": 5
-     },
-     {
-      "name": "obsoft",
-      "n": 4
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "MY",
-    "n": 15,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "orova",
-      "n": 2
-     },
-     {
-      "name": "rhysida",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Government & Defense",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
       "n": 2
      }
     ]
@@ -3797,26 +4123,122 @@
     ]
    },
    {
-    "cc": "FR",
+    "cc": "IT",
     "n": 14,
+    "groups": [
+     {
+      "name": "aurora",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "emperador",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "MY",
+    "n": 14,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "orova",
+      "n": 2
+     },
+     {
+      "name": "rhysida",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Government & Defense",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "KR",
+    "n": 13,
+    "groups": [
+     {
+      "name": "metaencryptor",
+      "n": 5
+     },
+     {
+      "name": "obsoft",
+      "n": 4
+     },
+     {
+      "name": "climax inc",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Other",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "FR",
+    "n": 12,
     "groups": [
      {
       "name": "thegentlemen",
       "n": 3
      },
      {
-      "name": "n0n",
+      "name": "lamashtu",
       "n": 2
      },
      {
-      "name": "lamashtu",
-      "n": 2
+      "name": "qilin",
+      "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Retail & E-Commerce",
-      "n": 5
+      "n": 4
      },
      {
       "name": "Manufacturing",
@@ -3830,7 +4252,7 @@
    },
    {
     "cc": "AR",
-    "n": 11,
+    "n": 10,
     "groups": [
      {
       "name": "qilin",
@@ -3855,14 +4277,14 @@
       "n": 2
      },
      {
-      "name": "Healthcare",
-      "n": 2
+      "name": "Transportation",
+      "n": 1
      }
     ]
    },
    {
     "cc": "CH",
-    "n": 11,
+    "n": 10,
     "groups": [
      {
       "name": "thegentlemen",
@@ -3925,38 +4347,6 @@
     ]
    },
    {
-    "cc": "HK",
-    "n": 8,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 2
-     },
-     {
-      "name": "krybit",
-      "n": 2
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Financial Services",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "PH",
     "n": 8,
     "groups": [
@@ -3989,38 +4379,6 @@
     ]
    },
    {
-    "cc": "AE",
-    "n": 7,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 3
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "dark project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "CN",
     "n": 7,
     "groups": [
@@ -4048,6 +4406,38 @@
      },
      {
       "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "HK",
+    "n": 7,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     },
+     {
+      "name": "krybit",
+      "n": 2
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
       "n": 1
      }
     ]
@@ -4112,102 +4502,6 @@
      },
      {
       "name": "Hospitality",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "DK",
-    "n": 6,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "whitearmor",
-      "n": 1
-     },
-     {
-      "name": "majinahanashi",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "ID",
-    "n": 6,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "SA",
-    "n": 6,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "aoqin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Financial Services",
       "n": 1
      }
     ]
@@ -4309,38 +4603,6 @@
     ]
    },
    {
-    "cc": "NL",
-    "n": 5,
-    "groups": [
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "TW",
     "n": 5,
     "groups": [
@@ -4373,33 +4635,33 @@
     ]
    },
    {
-    "cc": "ZA",
-    "n": 5,
+    "cc": "AE",
+    "n": 4,
     "groups": [
      {
-      "name": "thegentlemen",
+      "name": "qilin",
       "n": 2
      },
      {
-      "name": "global secret group",
+      "name": "dark project",
       "n": 1
      },
      {
-      "name": "n0n",
+      "name": "incransom",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Retail & E-Commerce",
+      "name": "Transportation",
       "n": 2
      },
      {
-      "name": "Technology",
+      "name": "Manufacturing",
       "n": 1
      },
      {
-      "name": "Professional Services",
+      "name": "Retail & E-Commerce",
       "n": 1
      }
     ]
@@ -4437,6 +4699,66 @@
     ]
    },
    {
+    "cc": "DK",
+    "n": 4,
+    "groups": [
+     {
+      "name": "whitearmor",
+      "n": 1
+     },
+     {
+      "name": "majinahanashi",
+      "n": 1
+     },
+     {
+      "name": "play",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     },
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ID",
+    "n": 4,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     },
+     {
+      "name": "lockbit5",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "IL",
     "n": 4,
     "groups": [
@@ -4460,6 +4782,34 @@
      },
      {
       "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NL",
+    "n": 4,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "akira",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
       "n": 1
      }
     ]
@@ -4497,29 +4847,33 @@
     ]
    },
    {
-    "cc": "PT",
+    "cc": "SA",
     "n": 4,
     "groups": [
      {
-      "name": "qilin",
-      "n": 3
+      "name": "thegentlemen",
+      "n": 2
      },
      {
-      "name": "n0n",
+      "name": "aoqin",
+      "n": 1
+     },
+     {
+      "name": "curious worm",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Technology",
-      "n": 1
+      "name": "Healthcare",
+      "n": 2
      },
      {
       "name": "Other",
       "n": 1
      },
      {
-      "name": "Manufacturing",
+      "name": "Financial Services",
       "n": 1
      }
     ]
@@ -4573,6 +4927,38 @@
      {
       "name": "Technology",
       "n": 3
+     }
+    ]
+   },
+   {
+    "cc": "ZA",
+    "n": 4,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "global secret group",
+      "n": 1
+     },
+     {
+      "name": "medusalocker",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
      }
     ]
    },
@@ -4681,6 +5067,30 @@
     ]
    },
    {
+    "cc": "PT",
+    "n": 3,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 3
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "AT",
     "n": 2,
     "groups": [
@@ -4725,30 +5135,6 @@
     ]
    },
    {
-    "cc": "BG",
-    "n": 2,
-    "groups": [
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "CY",
     "n": 2,
     "groups": [
@@ -4766,22 +5152,6 @@
       "name": "Technology",
       "n": 1
      },
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "ET",
-    "n": 2,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
      {
       "name": "Other",
       "n": 1
@@ -4840,6 +5210,22 @@
     "sectors": []
    },
    {
+    "cc": "BG",
+    "n": 1,
+    "groups": [
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "BJ",
     "n": 1,
     "groups": [
@@ -4870,17 +5256,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "cc": "BW",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": []
    },
    {
     "cc": "CI",
@@ -5177,17 +5552,6 @@
     ]
    },
    {
-    "cc": "QA",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": []
-   },
-   {
     "cc": "SI",
     "n": 1,
     "groups": [
@@ -5220,33 +5584,6 @@
     ]
    },
    {
-    "cc": "TN",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "TT",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": []
-   },
-   {
     "cc": "UY",
     "n": 1,
     "groups": [
@@ -5275,47 +5612,6 @@
    }
   ],
   "groups": [
-   {
-    "name": "n0n",
-    "n": 137,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 30
-     },
-     {
-      "name": "Healthcare",
-      "n": 21
-     },
-     {
-      "name": "Financial Services",
-      "n": 16
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 80
-     },
-     {
-      "cc": "CA",
-      "n": 18
-     },
-     {
-      "cc": "GB",
-      "n": 3
-     },
-     {
-      "cc": "AE",
-      "n": 3
-     },
-     {
-      "cc": "ET",
-      "n": 2
-     }
-    ]
-   },
    {
     "name": "qilin",
     "n": 116,
@@ -5513,12 +5809,12 @@
    },
    {
     "name": "booba project",
-    "n": 32,
-    "last": "2026-11-10",
+    "n": 33,
+    "last": "2026-11-17",
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 13
+      "n": 14
      },
      {
       "name": "Government & Defense",
@@ -5532,7 +5828,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 23
+      "n": 24
      },
      {
       "cc": "CA",
@@ -6283,9 +6579,46 @@
     ],
     "about": "Aurora is a ransomware family built on Go-based malware, distributed by several criminal teams starting in mid-2022. The same name is also sold on underground forums as an infostealer and botnet.",
     "origin": ""
+   },
+   {
+    "name": "genesis",
+    "n": 12,
+    "last": "2026-11-06",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 11
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     }
+    ],
+    "about": "Genesis is an emerging ransomware group first observed in late 2025. It targets small and mid-sized US organizations in healthcare, retail, financial services, legal, and manufacturing. It uses double-extortion tactics, emphasizing data theft and public leaking of stolen data.",
+    "origin": ""
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "booba project",
+    "s": "Healthcare"
+   },
    {
     "d": "2026-11-17",
     "cc": "",
@@ -6475,82 +6808,76 @@
    {
     "d": "2026-11-16",
     "cc": "US",
-    "g": "n0n",
-    "s": "Healthcare"
+    "g": "metaencryptor",
+    "s": "Technology"
    },
    {
     "d": "2026-11-16",
     "cc": "US",
-    "g": "n0n",
-    "s": "Healthcare"
+    "g": "metaencryptor",
+    "s": "Retail & E-Commerce"
    },
    {
     "d": "2026-11-16",
     "cc": "US",
-    "g": "n0n",
-    "s": "Healthcare"
+    "g": "metaencryptor",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "JP",
+    "g": "metaencryptor",
+    "s": "Manufacturing"
    },
    {
     "d": "2026-11-16",
     "cc": "US",
-    "g": "n0n",
-    "s": "Healthcare"
+    "g": "shadowbyt3$",
+    "s": "Energy & Utilities"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "shadowbyt3$",
+    "s": "Retail & E-Commerce"
    },
    {
     "d": "2026-11-16",
     "cc": "CA",
-    "g": "n0n",
-    "s": "Financial Services"
+    "g": "shadowbyt3$",
+    "s": "Education"
    },
    {
     "d": "2026-11-16",
     "cc": "CA",
-    "g": "n0n",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "CA",
-    "g": "n0n",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "CA",
-    "g": "n0n",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "CA",
-    "g": "n0n",
-    "s": "Professional Services"
+    "g": "shadowbyt3$",
+    "s": "Manufacturing"
    }
   ],
   "days": [
    {
     "date": "2026-10-18",
-    "n": 5
+    "n": 3
    },
    {
     "date": "2026-10-19",
-    "n": 27
+    "n": 23
    },
    {
     "date": "2026-10-20",
-    "n": 27
+    "n": 23
    },
    {
     "date": "2026-10-21",
-    "n": 55
+    "n": 50
    },
    {
     "date": "2026-10-22",
-    "n": 27
+    "n": 21
    },
    {
     "date": "2026-10-23",
-    "n": 44
+    "n": 43
    },
    {
     "date": "2026-10-24",
@@ -6566,11 +6893,11 @@
    },
    {
     "date": "2026-10-27",
-    "n": 45
+    "n": 44
    },
    {
     "date": "2026-10-28",
-    "n": 35
+    "n": 34
    },
    {
     "date": "2026-10-29",
@@ -6590,19 +6917,19 @@
    },
    {
     "date": "2026-11-02",
-    "n": 48
+    "n": 43
    },
    {
     "date": "2026-11-03",
-    "n": 37
+    "n": 27
    },
    {
     "date": "2026-11-04",
-    "n": 67
+    "n": 62
    },
    {
     "date": "2026-11-05",
-    "n": 22
+    "n": 17
    },
    {
     "date": "2026-11-06",
@@ -6610,7 +6937,7 @@
    },
    {
     "date": "2026-11-07",
-    "n": 39
+    "n": 29
    },
    {
     "date": "2026-11-08",
@@ -6618,7 +6945,7 @@
    },
    {
     "date": "2026-11-09",
-    "n": 96
+    "n": 34
    },
    {
     "date": "2026-11-10",
@@ -6626,7 +6953,7 @@
    },
    {
     "date": "2026-11-11",
-    "n": 44
+    "n": 42
    },
    {
     "date": "2026-11-12",
@@ -6634,7 +6961,7 @@
    },
    {
     "date": "2026-11-13",
-    "n": 19
+    "n": 18
    },
    {
     "date": "2026-11-14",
@@ -6646,36 +6973,36 @@
    },
    {
     "date": "2026-11-16",
-    "n": 58
+    "n": 45
    },
    {
     "date": "2026-11-17",
-    "n": 13
+    "n": 14
    }
   ]
  },
  "brief": {
-  "key": "v3|2026-11-17|CVE-2026-109618,CVE-2026-109619,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
+  "key": "v3|2026-11-17|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
   "points": [
    {
-    "title": "PHP memory corruption and state flaws",
-    "why": "Two PHP flaws are confirmed exploited in CISA KEV, and exploitation within 30 days is near-certain.",
+    "title": "PHP memory corruption flaw in PHP",
+    "why": "Confirmed exploited and CISA KEV-listed; exploitation is considered near-certain within 30 days.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
     "title": "Google Brotli unchecked return value flaw",
-    "why": "Critical flaw confirmed exploited in CISA KEV, with high exploitation likelihood in 30 days.",
+    "why": "Confirmed exploited, high exploitation likelihood, and in this week's news.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
    },
    {
-    "title": "Collabora Online CODE command injection",
-    "why": "Critical flaw confirmed exploited in CISA KEV; exploitation likely within 30 days.",
-    "ref": "CVE-2026-110447",
-    "find": "CVE-2026-110447",
+    "title": "GitLab integer overflow flaw",
+    "why": "Confirmed exploited, critical severity, and likely to be exploited within 30 days.",
+    "ref": "CVE-2026-97229",
+    "find": "CVE-2026-97229",
     "level": "red"
    }
   ],
