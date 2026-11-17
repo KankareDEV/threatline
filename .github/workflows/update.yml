@@ -32,12 +32,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: Fetch latest data
-        run: python fetch.py
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ABUSECH_AUTH_KEY: ${{ secrets.ABUSECH_AUTH_KEY }}
-
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
