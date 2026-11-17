@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-16T23:57:38Z",
+ "generated": "2026-11-17T00:24:06Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
  "counts": {
-  "red": 12,
-  "orange": 25,
+  "red": 8,
+  "orange": 29,
   "green": 26
  },
  "sources": [
@@ -55,10 +55,6 @@
    "news": 30
   },
   "timeline": [
-   {
-    "date": "2026-10-17",
-    "n": 0
-   },
    {
     "date": "2026-10-18",
     "n": 0
@@ -178,6 +174,10 @@
    {
     "date": "2026-11-16",
     "n": 0
+   },
+   {
+    "date": "2026-11-17",
+    "n": 0
    }
   ],
   "severity": [
@@ -290,27 +290,17 @@
     "n": 2
    },
    {
-    "id": "CWE-287",
-    "name": "Improper authentication",
+    "id": "CWE-862",
+    "name": "Missing authorization",
     "n": 2
    },
    {
-    "id": "CWE-862",
-    "name": "Missing authorization",
+    "id": "CWE-287",
+    "name": "Improper authentication",
     "n": 2
    }
   ],
   "deadlines": [
-   {
-    "cve": "CVE-2026-114713",
-    "title": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
-    "due": "2026-11-16"
-   },
-   {
-    "cve": "CVE-2026-123039",
-    "title": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
-    "due": "2026-11-16"
-   },
    {
     "cve": "CVE-2024-27834",
     "title": "Apple Multiple Products Improper Authentication Vulnerability",
@@ -837,58 +827,6 @@
    ]
   },
   {
-   "id": "CVE-2026-116779",
-   "type": "vuln",
-   "title": "SignalWire FreeSwitch Code Injection Vulnerability",
-   "cve": "CVE-2026-116779",
-   "vendor": "SignalWire",
-   "product": "FreeSwitch",
-   "date": "2026-11-09",
-   "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.02473,
-   "cvss": {
-    "score": 9.8,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
-    }
-   ],
-   "cwes": [
-    "CWE-77",
-    "CWE-78",
-    "CWE-749"
-   ],
-   "score": 71,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 1
-    },
-    {
-     "label": "CVSS 9.8 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    }
-   ]
-  },
-  {
    "id": "CVE-2026-114713",
    "type": "vuln",
    "title": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
@@ -943,158 +881,6 @@
     {
      "label": "In the news this week",
      "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-102895",
-   "type": "vuln",
-   "title": "GPUStack Improper Authentication Vulnerability",
-   "cve": "CVE-2026-102895",
-   "vendor": "GPUStack",
-   "product": "GPUStack",
-   "date": "2026-11-09",
-   "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.00517,
-   "cvss": {
-    "score": 9.8,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895"
-    }
-   ],
-   "cwes": [
-    "CWE-287",
-    "CWE-290",
-    "CWE-346"
-   ],
-   "score": 70,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 9.8 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-123158",
-   "type": "vuln",
-   "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
-   "cve": "CVE-2026-123158",
-   "vendor": "OpenBSD",
-   "product": "OpenSSH",
-   "date": "2026-11-09",
-   "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.189,
-   "cvss": {
-    "score": 8.1,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
-    }
-   ],
-   "cwes": [
-    "CWE-394"
-   ],
-   "score": 70,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 19% chance of exploitation in 30 days",
-     "points": 5
-    },
-    {
-     "label": "CVSS 8.1 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-123218",
-   "type": "vuln",
-   "title": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
-   "cve": "CVE-2026-123218",
-   "vendor": "IBM",
-   "product": "Aspera Faspex",
-   "date": "2026-11-09",
-   "summary": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.00535,
-   "cvss": {
-    "score": 9.8,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123218"
-    }
-   ],
-   "cwes": [
-    "CWE-863"
-   ],
-   "score": 70,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 9.8 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
     }
    ]
   },
@@ -1200,6 +986,58 @@
    ]
   },
   {
+   "id": "CVE-2026-116779",
+   "type": "vuln",
+   "title": "SignalWire FreeSwitch Code Injection Vulnerability",
+   "cve": "CVE-2026-116779",
+   "vendor": "SignalWire",
+   "product": "FreeSwitch",
+   "date": "2026-11-09",
+   "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-12",
+   "epss": 0.02473,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
+    }
+   ],
+   "cwes": [
+    "CWE-77",
+    "CWE-78",
+    "CWE-749"
+   ],
+   "score": 66,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 2% chance of exploitation in 30 days",
+     "points": 1
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
    "id": "CVE-2026-20320",
    "type": "vuln",
    "title": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
@@ -1296,6 +1134,158 @@
     {
      "label": "Added in the last 7 days",
      "points": 10
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-102895",
+   "type": "vuln",
+   "title": "GPUStack Improper Authentication Vulnerability",
+   "cve": "CVE-2026-102895",
+   "vendor": "GPUStack",
+   "product": "GPUStack",
+   "date": "2026-11-09",
+   "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-12",
+   "epss": 0.00517,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895"
+    }
+   ],
+   "cwes": [
+    "CWE-287",
+    "CWE-290",
+    "CWE-346"
+   ],
+   "score": 65,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-123158",
+   "type": "vuln",
+   "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+   "cve": "CVE-2026-123158",
+   "vendor": "OpenBSD",
+   "product": "OpenSSH",
+   "date": "2026-11-09",
+   "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-12",
+   "epss": 0.189,
+   "cvss": {
+    "score": 8.1,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
+    }
+   ],
+   "cwes": [
+    "CWE-394"
+   ],
+   "score": 65,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 19% chance of exploitation in 30 days",
+     "points": 5
+    },
+    {
+     "label": "CVSS 8.1 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-123218",
+   "type": "vuln",
+   "title": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+   "cve": "CVE-2026-123218",
+   "vendor": "IBM",
+   "product": "Aspera Faspex",
+   "date": "2026-11-09",
+   "summary": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-12",
+   "epss": 0.00535,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123218"
+    }
+   ],
+   "cwes": [
+    "CWE-863"
+   ],
+   "score": 65,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
@@ -3211,12 +3201,12 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1055,
-  "located": 899,
+  "total": 1053,
+  "located": 896,
   "countries": [
    {
     "cc": "US",
-    "n": 402,
+    "n": 403,
     "groups": [
      {
       "name": "n0n",
@@ -3249,6 +3239,11 @@
      {
       "d": "2026-11-16",
       "g": "global secret group",
+      "s": "Agriculture and Food Production"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "global secret group",
       "s": "Manufacturing"
      },
      {
@@ -3270,21 +3265,16 @@
       "d": "2026-11-16",
       "g": "n0n",
       "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-16",
-      "g": "n0n",
-      "s": "Healthcare"
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 64,
+    "n": 63,
     "groups": [
      {
       "name": "qilin",
-      "n": 12
+      "n": 11
      },
      {
       "name": "payload",
@@ -3664,11 +3654,11 @@
    },
    {
     "cc": "IT",
-    "n": 16,
+    "n": 15,
     "groups": [
      {
       "name": "qilin",
-      "n": 3
+      "n": 2
      },
      {
       "name": "n0n",
@@ -3682,7 +3672,7 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 5
+      "n": 4
      },
      {
       "name": "Healthcare",
@@ -3723,70 +3713,6 @@
       "d": "2026-10-30",
       "g": "emperador",
       "s": "Professional Services"
-     }
-    ]
-   },
-   {
-    "cc": "FR",
-    "n": 15,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "lamashtu",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-11",
-      "g": "thegentlemen",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-07",
-      "g": "qilin",
-      "s": "Professional Services"
-     },
-     {
-      "d": "2026-11-06",
-      "g": "akira",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-04",
-      "g": "majinahanashi",
-      "s": "Manufacturing"
      }
     ]
    },
@@ -3979,6 +3905,70 @@
       "d": "2026-11-07",
       "g": "qilin",
       "s": "Healthcare"
+     }
+    ]
+   },
+   {
+    "cc": "FR",
+    "n": 14,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "lamashtu",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-11",
+      "g": "thegentlemen",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-07",
+      "g": "qilin",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-06",
+      "g": "akira",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-04",
+      "g": "majinahanashi",
+      "s": "Manufacturing"
      }
     ]
    },
@@ -4687,70 +4677,6 @@
     ]
    },
    {
-    "cc": "NL",
-    "n": 6,
-    "groups": [
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-10-31",
-      "g": "auditteam",
-      "s": ""
-     },
-     {
-      "d": "2026-10-24",
-      "g": "qilin",
-      "s": ""
-     },
-     {
-      "d": "2026-10-23",
-      "g": "akira",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-10-18",
-      "g": "qilin",
-      "s": "Transportation"
-     }
-    ]
-   },
-   {
     "cc": "TH",
     "n": 6,
     "groups": [
@@ -4988,6 +4914,65 @@
       "d": "2026-10-21",
       "g": "majinahanashi",
       "s": "Professional Services"
+     }
+    ]
+   },
+   {
+    "cc": "NL",
+    "n": 5,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-10-31",
+      "g": "auditteam",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-31",
+      "g": "auditteam",
+      "s": ""
+     },
+     {
+      "d": "2026-10-24",
+      "g": "qilin",
+      "s": ""
+     },
+     {
+      "d": "2026-10-23",
+      "g": "akira",
+      "s": "Manufacturing"
      }
     ]
    },
@@ -6539,12 +6524,12 @@
    },
    {
     "name": "qilin",
-    "n": 117,
+    "n": 114,
     "last": "2026-11-16",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 21
+      "n": 20
      },
      {
       "name": "Professional Services",
@@ -6562,7 +6547,7 @@
      },
      {
       "cc": "DE",
-      "n": 12
+      "n": 11
      },
      {
       "cc": "MX",
@@ -6577,11 +6562,12 @@
       "n": 8
      }
     ],
-    "about": "Qilin ransomware was first observed in July 2022. It is written in Go and offers multiple encryption modes that operators can configure. Qilin uses double extortion, demanding payment both for a decryptor and to keep stolen data from being published."
+    "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
+    "origin": ""
    },
    {
     "name": "thegentlemen",
-    "n": 98,
+    "n": 97,
     "last": "2026-11-11",
     "sectors": [
      {
@@ -6619,7 +6605,8 @@
       "n": 4
      }
     ],
-    "about": "The Gentlemen is a ransomware-as-a-service group that emerged in July–August 2025 and quickly claimed over 320 victims in 17+ countries. It offers affiliates a 90% revenue share and uses a Go-based locker against Windows, Linux, NAS, and BSD systems. A 2026 leak of a compromised C2 server linked it to over 1,570 victims."
+    "about": "The Gentlemen is a ransomware-as-a-service group that emerged in July–August 2025. It claimed over 320 victims in 17+ countries and offers affiliates a 90% revenue share. Its Go-based locker targets Windows, Linux, NAS, and BSD systems. A compromised C2 server in 2026 revealed over 1,570 linked victims.",
+    "origin": ""
    },
    {
     "name": "incransom",
@@ -6661,7 +6648,8 @@
       "n": 1
      }
     ],
-    "about": "INC Ransom is a prolific ransomware-as-a-service operation active since July 2023. It targets healthcare, government, education, and manufacturing in North America and Europe, with no sector excluded. It posted over 200 victims in 2025 alone."
+    "about": "INC Ransom is a prolific ransomware-as-a-service operation active since July 2023. It targets healthcare, government, education, and manufacturing in North America and Europe, with no sector excluded. It posted over 200 victims in 2025 alone.",
+    "origin": ""
    },
    {
     "name": "akira",
@@ -6703,7 +6691,8 @@
       "n": 1
      }
     ],
-    "about": "Akira emerged in March 2023 and has been linked, speculatively, to the former Conti group and to affiliates of Snatch and BlackByte. Early versions were written in C++ and later ones in Rust. Its main initial access methods are brute-forcing Cisco VPNs without multi-factor authentication and exploiting certain CVEs."
+    "about": "Akira reportedly emerged in March 2023 and has been speculated to have ties to the former Conti group. Its affiliates reportedly also work with Snatch and BlackByte. The first version was written in C++ and later versions in Rust. Initial access has involved brute-force attacks on Cisco VPNs and exploitation of two CVEs.",
+    "origin": ""
    },
    {
     "name": "silentransomgroup",
@@ -6725,7 +6714,8 @@
       "n": 1
      }
     ],
-    "about": "Silent Ransom Group is believed to consist of former members of the Conti group. It is also tracked under the names Chatty Spider and UNC3753. The available notes provide few further details about its operations or targets."
+    "about": "Silent Ransom Group is described in the notes as a former Conti team. It is also tracked as Chatty Spider and UNC3753. The notes provide no further details about its activity.",
+    "origin": ""
    },
    {
     "name": "booba project",
@@ -6890,10 +6880,616 @@
       "n": 1
      }
     ],
-    "about": "Brain Cipher emerged in July 2024 and has Windows and Linux variants. It reportedly used a leaked LockBit Black build and is suspected of exploiting CVE-2023-28252. Reported ransom demands range from about $150,000 to roughly $1 million, payable in Monero, and it moved its negotiation portal in 2025."
+    "about": "Brain Cipher emerged in July 2024 and has Windows and Linux variants. It reportedly uses a leaked LockBit Black build and is suspected of exploiting CVE-2023-28252. Demands are reported in Monero, with amounts from about $150,000 to $1 million. The notes contain a garbled amount figure.",
+    "origin": ""
+   },
+   {
+    "name": "emperador",
+    "n": 19,
+    "last": "2026-11-13",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "IT",
+      "n": 2
+     },
+     {
+      "cc": "DE",
+      "n": 2
+     },
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "CH",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "medusalocker",
+    "n": 19,
+    "last": "2026-11-11",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "IN",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     },
+     {
+      "cc": "CH",
+      "n": 1
+     }
+    ],
+    "about": "The notes describe Medusa as a .NET 2.0 DDoS bot with an HTTP-based C&C, whose predecessor used IRC. They do not describe ransomware activity, so this entry may not match the MedusaLocker ransomware group and should be checked.",
+    "origin": ""
+   },
+   {
+    "name": "safepay",
+    "n": 19,
+    "last": "2026-11-12",
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Education",
+      "n": 3
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "IL",
+      "n": 2
+     },
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "BE",
+      "n": 2
+     },
+     {
+      "cc": "TW",
+      "n": 2
+     }
+    ],
+    "about": "SafePay emerged in September 2024 and grew rapidly. It says it runs all operations in-house and rejects the RaaS model. It claimed over 300 victims by mid-2025. An early attack on UK telematics firm Microlise reportedly stole 1.2 TB of data.",
+    "origin": ""
+   },
+   {
+    "name": "rhysida",
+    "n": 18,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Financial Services",
+      "n": 4
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 3
+     },
+     {
+      "cc": "MY",
+      "n": 2
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "TH",
+      "n": 1
+     },
+     {
+      "cc": "BR",
+      "n": 1
+     }
+    ],
+    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
+    "origin": ""
+   },
+   {
+    "name": "play",
+    "n": 17,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 11
+     },
+     {
+      "cc": "AU",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "AR",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     }
+    ],
+    "about": "Play ransomware, also called PlayCrypt, was first observed in June 2022 and uses double extortion. It has targeted many organizations in Latin America. Its initial access methods include phishing, exposed services, and valid account compromise. In 2023, Symantec reported its custom .NET data-enumeration and exfiltration tools.",
+    "origin": ""
+   },
+   {
+    "name": "climax inc",
+    "n": 16,
+    "last": "2026-11-10",
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Other",
+      "n": 3
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 3
+     },
+     {
+      "cc": "IN",
+      "n": 2
+     },
+     {
+      "cc": "KR",
+      "n": 2
+     },
+     {
+      "cc": "NP",
+      "n": 1
+     },
+     {
+      "cc": "BR",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "everest",
+    "n": 15,
+    "last": "2026-11-14",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 4
+     },
+     {
+      "name": "Other",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 2
+     },
+     {
+      "cc": "IT",
+      "n": 2
+     },
+     {
+      "cc": "SG",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "US",
+      "n": 1
+     }
+    ],
+    "about": "Everest collects and analyzes information about its victims, focusing on customer privacy, financial data, databases, and credit card information. It leaks stolen data on the darknet. It threatens to leak data and keep victims' files if they do not make contact.",
+    "origin": ""
+   },
+   {
+    "name": "lockbit5",
+    "n": 15,
+    "last": "2026-11-14",
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Hospitality",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "BR",
+      "n": 2
+     },
+     {
+      "cc": "TH",
+      "n": 2
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "IN",
+      "n": 1
+     }
+    ],
+    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
+    "origin": ""
+   },
+   {
+    "name": "payload",
+    "n": 15,
+    "last": "2026-11-07",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 10
+     },
+     {
+      "cc": "FR",
+      "n": 1
+     }
+    ],
+    "about": "Emerged in early 2026 using Babuk-derived source code to attack Windows and ESXi systems with cross-platform double extortion. Targets healthcare, energy, real estate, and agriculture. Claimed 12 victims across seven countries within hours of launching its leak site.",
+    "origin": ""
+   },
+   {
+    "name": "curious worm",
+    "n": 14,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 6
+     },
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 5
+     },
+     {
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     },
+     {
+      "cc": "IE",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "krybit",
+    "n": 14,
+    "last": "2026-11-12",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "HK",
+      "n": 2
+     },
+     {
+      "cc": "CY",
+      "n": 1
+     },
+     {
+      "cc": "TH",
+      "n": 1
+     },
+     {
+      "cc": "LY",
+      "n": 1
+     }
+    ],
+    "about": "Emerging ransomware-as-a-service group that launched in late March 2026. Offers affiliates an 80/20 revenue split and encrypts Windows, Linux, ESXi, and NAS devices. Became known for a public feud with rival 0APT, with each side breaching and leaking the other's operator data.",
+    "origin": ""
+   },
+   {
+    "name": "metaencryptor",
+    "n": 14,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 6
+     },
+     {
+      "name": "Technology",
+      "n": 5
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 8
+     },
+     {
+      "cc": "KR",
+      "n": 5
+     },
+     {
+      "cc": "JP",
+      "n": 1
+     }
+    ],
+    "about": "Ransomware group first observed in mid-2023. Targets medium-to-large enterprises in legal, technology, logistics, manufacturing, and finance, mainly in the UK, Europe, and Southeast Asia. Uses AES-256 and RSA-2048 encryption with double extortion.",
+    "origin": ""
+   },
+   {
+    "name": "genesis",
+    "n": 12,
+    "last": "2026-11-06",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 11
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     }
+    ],
+    "about": "Emerging ransomware group first observed in late 2025. Targets small to mid-sized US organizations in healthcare, retail, financial services, legal, and manufacturing. Relies on double extortion, with a strong focus on data theft and public leaks.",
+    "origin": ""
+   },
+   {
+    "name": "interlock",
+    "n": 12,
+    "last": "2026-11-13",
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 5
+     },
+     {
+      "name": "Healthcare",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 10
+     },
+     {
+      "cc": "CA",
+      "n": 2
+     }
+    ],
+    "about": "Ransomware group first observed in September 2024 that targets critical infrastructure, including healthcare, government, education, and technology in North America and Europe. Uses double extortion and has claimed 57+ victims, including a major US dialysis provider whose breach exposed over two million patient records.",
+    "origin": ""
+   },
+   {
+    "name": "aoqin",
+    "n": 11,
+    "last": "2026-11-16",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Hospitality",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 5
+     },
+     {
+      "cc": "PK",
+      "n": 1
+     },
+     {
+      "cc": "CO",
+      "n": 1
+     },
+     {
+      "cc": "BR",
+      "n": 1
+     },
+     {
+      "cc": "SI",
+      "n": 1
+     }
+    ]
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "global secret group",
+    "s": "Agriculture and Food Production"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "",
+    "g": "curious worm",
+    "s": "Technology"
+   },
    {
     "d": "2026-11-16",
     "cc": "GB",
@@ -6953,28 +7549,12 @@
     "cc": "US",
     "g": "n0n",
     "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "n0n",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "n0n",
-    "s": "Healthcare"
    }
   ],
   "days": [
    {
-    "date": "2026-10-17",
-    "n": 0
-   },
-   {
     "date": "2026-10-18",
-    "n": 18
+    "n": 14
    },
    {
     "date": "2026-10-19",
@@ -7090,31 +7670,34 @@
    },
    {
     "date": "2026-11-16",
-    "n": 46
+    "n": 48
+   },
+   {
+    "date": "2026-11-17",
+    "n": 0
    }
   ]
  },
  "brief": {
-  "key": "v2|2026-11-16|CVE-2026-109618,CVE-2026-109619,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
-  "headline": "All ten listed items are confirmed exploited; PHP leads the urgent list.",
+  "key": "v3|2026-11-17|CVE-2026-109618,CVE-2026-109619,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
   "points": [
    {
-    "title": "PHP memory corruption vulnerability",
-    "why": "Confirmed exploited in the wild and in CISA's KEV catalog; exploitation within 30 days is near-certain.",
+    "title": "PHP memory corruption and state flaws",
+    "why": "Two PHP flaws are confirmed exploited in CISA KEV, and exploitation within 30 days is near-certain.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
     "title": "Google Brotli unchecked return value flaw",
-    "why": "Confirmed exploited per CISA KEV; exploitation within 30 days is highly likely.",
+    "why": "Critical flaw confirmed exploited in CISA KEV, with high exploitation likelihood in 30 days.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
    },
    {
-    "title": "Collabora Online CODE OS command injection",
-    "why": "Confirmed exploited per CISA KEV; OS command injection with exploitation likely within 30 days.",
+    "title": "Collabora Online CODE command injection",
+    "why": "Critical flaw confirmed exploited in CISA KEV; exploitation likely within 30 days.",
     "ref": "CVE-2026-110447",
     "find": "CVE-2026-110447",
     "level": "red"
