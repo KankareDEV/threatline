@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T14:35:36Z",
+ "generated": "2026-11-17T14:58:52Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
@@ -3409,8 +3409,8 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1070,
-  "located": 912,
+  "total": 1072,
+  "located": 913,
   "countries": [
    {
     "cc": "US",
@@ -4990,6 +4990,22 @@
     ]
    },
    {
+    "cc": "IR",
+    "n": 1,
+    "groups": [
+     {
+      "name": "black x",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "JM",
     "n": 1,
     "groups": [
@@ -6272,6 +6288,12 @@
   "recent": [
    {
     "d": "2026-11-17",
+    "cc": "",
+    "g": "everstake",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-17",
     "cc": "MX",
     "g": "pixelleaks",
     "s": ""
@@ -6503,12 +6525,6 @@
     "cc": "CA",
     "g": "n0n",
     "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "n0n",
-    "s": "Retail & E-Commerce"
    }
   ],
   "days": [
@@ -6626,7 +6642,7 @@
    },
    {
     "date": "2026-11-15",
-    "n": 30
+    "n": 31
    },
    {
     "date": "2026-11-16",
@@ -6634,7 +6650,7 @@
    },
    {
     "date": "2026-11-17",
-    "n": 12
+    "n": 13
    }
   ]
  },
