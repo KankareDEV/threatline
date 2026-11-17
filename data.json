@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-17T07:46:03Z",
+ "generated": "2026-11-17T14:27:49Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1781,
  "counts": {
-  "red": 8,
+  "red": 7,
   "orange": 29,
-  "green": 28
+  "green": 33
  },
  "sources": [
   {
@@ -52,7 +52,7 @@
    "ransomware": 0,
    "epss_high": 5,
    "epss_known": 33,
-   "news": 32
+   "news": 36
   },
   "timeline": [
    {
@@ -343,7 +343,7 @@
    },
    {
     "name": "Data breach",
-    "n": 2
+    "n": 3
    }
   ],
   "actors": [
@@ -364,6 +364,16 @@
      {
       "label": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
       "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/"
+     }
+    ]
+   },
+   {
+    "name": "Artion Kurtaj",
+    "n": 1,
+    "links": [
+     {
+      "label": "Autistic teen hacker pleads guilty to leak of Grand Theft Auto VI footage",
+      "url": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak"
      }
     ]
    },
@@ -418,6 +428,26 @@
     ]
    },
    {
+    "name": "GitDoor",
+    "n": 1,
+    "links": [
+     {
+      "label": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
+     }
+    ]
+   },
+   {
+    "name": "GraphDoor",
+    "n": 1,
+    "links": [
+     {
+      "label": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
+     }
+    ]
+   },
+   {
     "name": "Hoody Hyena",
     "n": 1,
     "links": [
@@ -436,53 +466,17 @@
       "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
      }
     ]
-   },
-   {
-    "name": "REF3364",
-    "n": 1,
-    "links": [
-     {
-      "label": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
-      "url": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html"
-     }
-    ]
-   },
-   {
-    "name": "Retadup",
-    "n": 1,
-    "links": [
-     {
-      "label": "Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware",
-      "url": "https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html"
-     }
-    ]
-   },
-   {
-    "name": "SANSAR",
-    "n": 1,
-    "links": [
-     {
-      "label": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
-      "url": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html"
-     }
-    ]
    }
   ],
-  "news_cves": [
-   {
-    "cve": "CVE-2026-114713",
-    "n": 1,
-    "kev": true
-   }
-  ],
+  "news_cves": [],
   "by_source": [
+   {
+    "name": "The Hacker News",
+    "n": 16
+   },
    {
     "name": "BleepingComputer",
     "n": 15
-   },
-   {
-    "name": "The Hacker News",
-    "n": 12
    },
    {
     "name": "The Record",
@@ -827,64 +821,6 @@
    ]
   },
   {
-   "id": "CVE-2026-114713",
-   "type": "vuln",
-   "title": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
-   "cve": "CVE-2026-114713",
-   "vendor": "UnrealIRCd",
-   "product": "UnrealIRCd",
-   "date": "2026-11-13",
-   "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-16",
-   "epss": 0.00508,
-   "cvss": {
-    "score": 8.6,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713"
-    },
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
-    }
-   ],
-   "cwes": [
-    "CWE-140"
-   ],
-   "score": 70,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 8.6 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
-    }
-   ]
-  },
-  {
    "id": "CVE-2026-111560",
    "type": "vuln",
    "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
@@ -1034,6 +970,56 @@
     {
      "label": "Added in the last 14 days",
      "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-114713",
+   "type": "vuln",
+   "title": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+   "cve": "CVE-2026-114713",
+   "vendor": "UnrealIRCd",
+   "product": "UnrealIRCd",
+   "date": "2026-11-13",
+   "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-16",
+   "epss": 0.00508,
+   "cvss": {
+    "score": 8.6,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713"
+    }
+   ],
+   "cwes": [
+    "CWE-140"
+   ],
+   "score": 65,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 8.6 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
     }
    ]
   },
@@ -2185,47 +2171,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
-   "type": "news",
-   "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
-   "date": "2026-11-14",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-114713"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Mentions exploited CVE-2026-114713",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA added a high-severity flaw in the open-source UnrealIRCd IRC server to its Known Exploited Vulnerabilities catalog after reports of active attacks. The flaw allows command injection on affected servers.",
-    "sector": "",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/",
    "type": "news",
    "title": "Ransomware affiliate suspect extradited to US, faces 27 years in prison",
@@ -2306,6 +2251,47 @@
     "actors": [],
     "malware": [],
     "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+   "type": "news",
+   "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October.",
+    "sector": "Transportation",
+    "actors": [],
+    "malware": [],
+    "tactic": "Exfiltration",
     "countries": []
    }
   },
@@ -2429,6 +2415,296 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+   "type": "news",
+   "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An attacker exploited a flaw in Optimizely Web Experimentation to inject malicious code into scripts that customer sites load. Visitors to at least 178 organisations, including CNN, BBC and Zoom, were exposed.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
+   "type": "news",
+   "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A US judge acquitted two brothers accused of stealing $25 million in cryptocurrency in about 12 seconds by exploiting an Ethereum blockchain bug.",
+    "sector": "Finance",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html",
+   "type": "news",
+   "title": "Apple Tightens macOS App Permissions to Limit Data Access Amid AI Agent Security Risks",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Apple previewed macOS 27.3 beta 2 controls giving Mac users finer-grained control over app access to data, including for AI agent apps. The changes cover Device Control, Data Access and Full Disk Access.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+   "type": "news",
+   "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Microsoft is testing a feature that lets enterprise administrators remotely lock lost or stolen Windows devices without erasing their data.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
+   "type": "news",
+   "title": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "GitDoor",
+    "GraphDoor"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Operation ShadowCloud, reported by Kaspersky, targets government sectors in Asia and Africa using previously undocumented backdoors that abuse SharePoint and GitHub for command-and-control.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [
+     "GitDoor",
+     "GraphDoor"
+    ],
+    "tactic": "Command and Control",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html",
+   "type": "news",
+   "title": "Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A now-patched Apple audio service flaw let iPhone and iPad apps record audio even after users denied microphone permission. No exploitation in attacks has been reported.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Collection",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+   "type": "news",
+   "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers have bypassed GitHub Actions SHA pinning. In March 2026, hijackers of the Trivy security scanner planted malicious code disguised as GitHub's official checkout tool.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak",
+   "type": "news",
+   "title": "Autistic teen hacker pleads guilty to leak of Grand Theft Auto VI footage",
+   "date": "2026-11-17",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "Artion Kurtaj"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Artion Kurtaj, now 21, pleaded guilty to a 2022 spree of hacking and leaks, including leaked Grand Theft Auto VI footage.",
+    "sector": "Gaming",
+    "actors": [
+     "Artion Kurtaj"
+    ],
+    "malware": [],
+    "tactic": "Exfiltration",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
    "type": "news",
    "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
@@ -2509,76 +2785,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-new-windows-emergency-updates-fix-activation-licensing-failures/",
-   "type": "news",
-   "title": "Microsoft pushes Windows emergency updates to fix activation failures",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-new-windows-emergency-updates-fix-activation-licensing-failures/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Microsoft released emergency out-of-band updates to fix Windows activation and licensing failures caused by the previous month's security updates. Affected Windows users are impacted.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/",
-   "type": "news",
-   "title": "New NoisyTCP vulnerability lets attackers crash Linux servers",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "An 11-year-old Linux kernel vulnerability named NoisyTCP affects most distributions. Attackers can crash systems running Nginx, Apache, or SSH with default configurations.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html",
    "type": "news",
    "title": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
@@ -2617,41 +2823,6 @@
      "SANSAR"
     ],
     "tactic": "Defense Evasion",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-claude-fable-52-blocks-fewer-security-tasks-while-mythos-gets-better-at-finding-bugs/",
-   "type": "news",
-   "title": "Anthropic’s Claude Fable 5.2 blocks fewer security tasks, while Mythos gets better at finding bugs",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-claude-fable-52-blocks-fewer-security-tasks-while-mythos-gets-better-at-finding-bugs/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Anthropic released Claude Mythos 5.2 to selected partners and Fable 5.2 to general users, with coding and reasoning gains. One model reportedly blocks fewer security tasks, while Mythos improves at finding bugs.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
     "countries": []
    }
   },
@@ -2954,43 +3125,6 @@
    }
   },
   {
-   "id": "https://therecord.media/uk-national-cyber-force-headquarters-opens",
-   "type": "news",
-   "title": "King Charles opens new HQ for National Cyber Force, UK’s offensive hacking unit",
-   "date": "2026-11-16",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/uk-national-cyber-force-headquarters-opens"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "King Charles opened a new headquarters in Lancashire for the National Cyber Force, the UK unit that runs Britain's offensive cyber operations.",
-    "sector": "Government",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": [
-     "GB"
-    ]
-   }
-  },
-  {
    "id": "https://therecord.media/italian-regulator-fines-meta-886-million-privacy",
    "type": "news",
    "title": "Italian regulator fines Meta $886 million for violating data privacy law",
@@ -3275,16 +3409,16 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1068,
-  "located": 910,
+  "total": 1070,
+  "located": 912,
   "countries": [
    {
     "cc": "US",
-    "n": 410,
+    "n": 412,
     "groups": [
      {
       "name": "n0n",
-      "n": 81
+      "n": 80
      },
      {
       "name": "qilin",
@@ -3298,22 +3432,47 @@
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 72
+      "n": 71
      },
      {
       "name": "Healthcare",
-      "n": 65
+      "n": 66
      },
      {
       "name": "Manufacturing",
-      "n": 52
+      "n": 51
      }
     ],
     "recent": [
      {
       "d": "2026-11-17",
+      "g": "inception",
+      "s": "Agriculture and Food Production"
+     },
+     {
+      "d": "2026-11-17",
+      "g": "inception",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-17",
+      "g": "inception",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-17",
+      "g": "inception",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-11-17",
       "g": "vortex",
       "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-17",
+      "g": "vortex",
+      "s": "Financial Services"
      },
      {
       "d": "2026-11-17",
@@ -3338,6 +3497,11 @@
      {
       "d": "2026-11-16",
       "g": "curious worm",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "vortex",
       "s": "Healthcare"
      }
     ]
@@ -3403,6 +3567,36 @@
       "d": "2026-11-13",
       "g": "panzer",
       "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-11",
+      "g": "thegentlemen",
+      "s": ""
+     },
+     {
+      "d": "2026-11-10",
+      "g": "bravox",
+      "s": "Other"
+     },
+     {
+      "d": "2026-11-08",
+      "g": "barracuda",
+      "s": "Other"
+     },
+     {
+      "d": "2026-11-07",
+      "g": "payload",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-07",
+      "g": "payload",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-07",
+      "g": "anubis",
+      "s": "Manufacturing"
      }
     ]
    },
@@ -3467,12 +3661,42 @@
       "d": "2026-11-16",
       "g": "n0n",
       "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "shadowbyt3$",
+      "s": "Education"
+     },
+     {
+      "d": "2026-11-16",
+      "g": "shadowbyt3$",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-13",
+      "g": "dark project",
+      "s": ""
+     },
+     {
+      "d": "2026-11-12",
+      "g": "qilin",
+      "s": "Education"
+     },
+     {
+      "d": "2026-11-11",
+      "g": "curious worm",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-11",
+      "g": "thegentlemen",
+      "s": "Technology"
      }
     ]
    },
    {
     "cc": "GB",
-    "n": 39,
+    "n": 38,
     "groups": [
      {
       "name": "qilin",
@@ -3503,11 +3727,6 @@
     ],
     "recent": [
      {
-      "d": "2026-11-17",
-      "g": "vortex",
-      "s": "Financial Services"
-     },
-     {
       "d": "2026-11-16",
       "g": "shiba",
       "s": "Financial Services"
@@ -3531,12 +3750,47 @@
       "d": "2026-11-11",
       "g": "curious worm",
       "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-10",
+      "g": "play",
+      "s": "Other"
+     },
+     {
+      "d": "2026-11-10",
+      "g": "silentransomgroup",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": ""
+     },
+     {
+      "d": "2026-11-07",
+      "g": "qilin",
+      "s": ""
+     },
+     {
+      "d": "2026-11-07",
+      "g": "qilin",
+      "s": "Education"
      }
     ]
    },
    {
     "cc": "MX",
-    "n": 24,
+    "n": 25,
     "groups": [
      {
       "name": "qilin",
@@ -3547,7 +3801,7 @@
       "n": 4
      },
      {
-      "name": "booba project",
+      "name": "pixelleaks",
       "n": 1
      }
     ],
@@ -3566,6 +3820,11 @@
      }
     ],
     "recent": [
+     {
+      "d": "2026-11-17",
+      "g": "pixelleaks",
+      "s": ""
+     },
      {
       "d": "2026-11-11",
       "g": "thegentlemen",
@@ -3595,6 +3854,31 @@
       "d": "2026-11-07",
       "g": "qilin",
       "s": ""
+     },
+     {
+      "d": "2026-11-06",
+      "g": "eclipse",
+      "s": "Transportation"
+     },
+     {
+      "d": "2026-10-31",
+      "g": "safepay",
+      "s": "Education"
+     },
+     {
+      "d": "2026-10-30",
+      "g": "rhysida",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-30",
+      "g": "qilin",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-30",
+      "g": "qilin",
+      "s": "Healthcare"
      }
     ]
    },
@@ -3659,70 +3943,130 @@
       "d": "2026-11-04",
       "g": "safepay",
       "s": ""
+     },
+     {
+      "d": "2026-11-03",
+      "g": "incransom",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "thegentlemen",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-28",
+      "g": "qilin",
+      "s": "Education"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Other"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "qilin",
+      "s": "Technology"
      }
     ]
    },
    {
-    "cc": "MY",
-    "n": 17,
+    "cc": "IT",
+    "n": 16,
     "groups": [
      {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "n0n",
+      "name": "aurora",
       "n": 2
      },
      {
-      "name": "orova",
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "n0n",
       "n": 2
      }
     ],
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Government & Defense",
-      "n": 2
+      "n": 5
      },
      {
       "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
       "n": 2
      }
     ],
     "recent": [
      {
+      "d": "2026-11-17",
+      "g": "aurora",
+      "s": "Manufacturing"
+     },
+     {
       "d": "2026-11-16",
-      "g": "incransom",
-      "s": "Government & Defense"
-     },
-     {
-      "d": "2026-11-14",
-      "g": "lockbit5",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-14",
       "g": "qilin",
       "s": "Manufacturing"
      },
      {
-      "d": "2026-11-13",
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-06",
+      "g": "shiba",
+      "s": "Other"
+     },
+     {
+      "d": "2026-11-03",
+      "g": "n0n",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-03",
+      "g": "pixelleaks",
+      "s": ""
+     },
+     {
+      "d": "2026-10-30",
       "g": "emperador",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-10-29",
+      "g": "emperador",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-10-28",
+      "g": "panzer",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-10-27",
+      "g": "everest",
       "s": "Manufacturing"
      },
      {
-      "d": "2026-11-12",
-      "g": "panzer",
-      "s": "Government & Defense"
+      "d": "2026-10-27",
+      "g": "everest",
+      "s": "Manufacturing"
      },
      {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": ""
      }
     ]
    },
@@ -3787,70 +4131,36 @@
       "d": "2026-11-10",
       "g": "climax inc",
       "s": "Healthcare"
-     }
-    ]
-   },
-   {
-    "cc": "IT",
-    "n": 15,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
      },
      {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "emperador",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-16",
-      "g": "qilin",
+      "d": "2026-11-10",
+      "g": "orova",
       "s": "Manufacturing"
      },
      {
-      "d": "2026-11-09",
-      "g": "n0n",
-      "s": "Healthcare"
+      "d": "2026-11-08",
+      "g": "lockbit5",
+      "s": "Hospitality"
      },
      {
-      "d": "2026-11-06",
-      "g": "shiba",
-      "s": "Other"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "n0n",
-      "s": "Healthcare"
-     },
-     {
-      "d": "2026-11-03",
-      "g": "pixelleaks",
-      "s": ""
+      "d": "2026-11-04",
+      "g": "medusalocker",
+      "s": "Manufacturing"
      },
      {
       "d": "2026-10-30",
-      "g": "emperador",
-      "s": "Professional Services"
+      "g": "scarlettgroup",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-10-29",
+      "g": "incransom",
+      "s": "Other"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Energy & Utilities"
      }
     ]
    },
@@ -3915,6 +4225,130 @@
       "d": "2026-11-07",
       "g": "metaencryptor",
       "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-03",
+      "g": "akira",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "obsoft",
+      "s": ""
+     },
+     {
+      "d": "2026-11-02",
+      "g": "incransom",
+      "s": "Other"
+     },
+     {
+      "d": "2026-10-28",
+      "g": "obsoft",
+      "s": ""
+     },
+     {
+      "d": "2026-10-23",
+      "g": "obsoft",
+      "s": ""
+     },
+     {
+      "d": "2026-10-21",
+      "g": "climax inc",
+      "s": ""
+     }
+    ]
+   },
+   {
+    "cc": "MY",
+    "n": 15,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "orova",
+      "n": 2
+     },
+     {
+      "name": "rhysida",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Government & Defense",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-16",
+      "g": "incransom",
+      "s": "Government & Defense"
+     },
+     {
+      "d": "2026-11-14",
+      "g": "lockbit5",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-14",
+      "g": "qilin",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-13",
+      "g": "emperador",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-12",
+      "g": "panzer",
+      "s": "Government & Defense"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "orova",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "qilin",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-30",
+      "g": "rhysida",
+      "s": "Education"
+     },
+     {
+      "d": "2026-10-28",
+      "g": "n0n",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "rhysida",
+      "s": "Energy & Utilities"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "crypto24",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-10-25",
+      "g": "scarlettgroup",
+      "s": "Hospitality"
      }
     ]
    },
@@ -3979,6 +4413,36 @@
       "d": "2026-11-05",
       "g": "qilin",
       "s": "Education"
+     },
+     {
+      "d": "2026-11-04",
+      "g": "safepay",
+      "s": "Other"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Hospitality"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "qilin",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-10-23",
+      "g": "qilin",
+      "s": "Professional Services"
      }
     ]
    },
@@ -4043,6 +4507,36 @@
       "d": "2026-11-07",
       "g": "qilin",
       "s": "Healthcare"
+     },
+     {
+      "d": "2026-11-05",
+      "g": "aoqin",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-11-04",
+      "g": "medusalocker",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-04",
+      "g": "lockbit5",
+      "s": "Other"
+     },
+     {
+      "d": "2026-11-03",
+      "g": "destello",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "thegentlemen",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "thegentlemen",
+      "s": "Technology"
      }
     ]
    },
@@ -4107,6 +4601,36 @@
       "d": "2026-11-04",
       "g": "majinahanashi",
       "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-03",
+      "g": "booba project",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-02",
+      "g": "thegentlemen",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-30",
+      "g": "thegentlemen",
+      "s": "Government & Defense"
+     },
+     {
+      "d": "2026-10-28",
+      "g": "payload",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "emperador",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-10-24",
+      "g": "lamashtu",
+      "s": "Retail & E-Commerce"
      }
     ]
    },
@@ -4171,6 +4695,31 @@
       "d": "2026-10-25",
       "g": "whitearmor",
       "s": "Government & Defense"
+     },
+     {
+      "d": "2026-10-23",
+      "g": "qilin",
+      "s": "Professional Services"
+     },
+     {
+      "d": "2026-10-23",
+      "g": "qilin",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-21",
+      "g": "braincipher",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-10-21",
+      "g": "n0n",
+      "s": "Healthcare"
+     },
+     {
+      "d": "2026-10-19",
+      "g": "qilin",
+      "s": "Other"
      }
     ]
    },
@@ -4235,6 +4784,31 @@
       "d": "2026-11-02",
       "g": "thegentlemen",
       "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-31",
+      "g": "emperador",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-25",
+      "g": "qilin",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-10-23",
+      "g": "aurora",
+      "s": "Other"
+     },
+     {
+      "d": "2026-10-20",
+      "g": "n0n",
+      "s": "Energy & Utilities"
+     },
+     {
+      "d": "2026-10-18",
+      "g": "cloak",
+      "s": ""
      }
     ]
    },
@@ -4299,6 +4873,26 @@
       "d": "2026-10-26",
       "g": "thegentlemen",
       "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-26",
+      "g": "doommageddon",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-10-23",
+      "g": "qilin",
+      "s": "Agriculture and Food Production"
+     },
+     {
+      "d": "2026-10-22",
+      "g": "lockbit5",
+      "s": "Retail & E-Commerce"
      }
     ]
    },
@@ -4362,6 +4956,16 @@
      {
       "d": "2026-11-09",
       "g": "krybit",
+      "s": "Financial Services"
+     },
+     {
+      "d": "2026-10-31",
+      "g": "auditteam",
+      "s": ""
+     },
+     {
+      "d": "2026-10-29",
+      "g": "incransom",
       "s": "Financial Services"
      }
     ]
@@ -4427,6 +5031,16 @@
       "d": "2026-10-30",
       "g": "whitearmor",
       "s": "Transportation"
+     },
+     {
+      "d": "2026-10-30",
+      "g": "qilin",
+      "s": "Transportation"
+     },
+     {
+      "d": "2026-10-27",
+      "g": "crypto24",
+      "s": "Technology"
      }
     ]
    },
@@ -4491,6 +5105,11 @@
       "d": "2026-10-27",
       "g": "n0n",
       "s": "Professional Services"
+     },
+     {
+      "d": "2026-10-19",
+      "g": "qilin",
+      "s": "Transportation"
      }
     ]
    },
@@ -4555,6 +5174,11 @@
       "d": "2026-10-21",
       "g": "climax inc",
       "s": "Manufacturing"
+     },
+     {
+      "d": "2026-10-19",
+      "g": "fulcrumsec",
+      "s": "Technology"
      }
     ]
    },
@@ -4619,6 +5243,11 @@
       "d": "2026-10-27",
       "g": "safepay",
       "s": "Education"
+     },
+     {
+      "d": "2026-10-21",
+      "g": "climax inc",
+      "s": "Hospitality"
      }
     ]
    },
@@ -4683,6 +5312,11 @@
       "d": "2026-10-31",
       "g": "auditteam",
       "s": ""
+     },
+     {
+      "d": "2026-10-27",
+      "g": "everest",
+      "s": "Energy & Utilities"
      }
     ]
    },
@@ -4747,6 +5381,70 @@
       "d": "2026-10-26",
       "g": "thegentlemen",
       "s": "Education"
+     }
+    ]
+   },
+   {
+    "cc": "ID",
+    "n": 6,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ],
+    "recent": [
+     {
+      "d": "2026-11-15",
+      "g": "pixelleaks",
+      "s": "Technology"
+     },
+     {
+      "d": "2026-11-14",
+      "g": "incransom",
+      "s": "Manufacturing"
+     },
+     {
+      "d": "2026-11-09",
+      "g": "n0n",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-05",
+      "g": "n0n",
+      "s": "Retail & E-Commerce"
+     },
+     {
+      "d": "2026-11-01",
+      "g": "lockbit5",
+      "s": ""
+     },
+     {
+      "d": "2026-10-26",
+      "g": "thegentlemen",
+      "s": "Manufacturing"
      }
     ]
    },
@@ -4934,65 +5632,6 @@
       "d": "2026-10-25",
       "g": "emperador",
       "s": "Agriculture and Food Production"
-     }
-    ]
-   },
-   {
-    "cc": "ID",
-    "n": 5,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ],
-    "recent": [
-     {
-      "d": "2026-11-15",
-      "g": "pixelleaks",
-      "s": "Technology"
-     },
-     {
-      "d": "2026-11-14",
-      "g": "incransom",
-      "s": "Manufacturing"
-     },
-     {
-      "d": "2026-11-05",
-      "g": "n0n",
-      "s": "Retail & E-Commerce"
-     },
-     {
-      "d": "2026-11-01",
-      "g": "lockbit5",
-      "s": ""
-     },
-     {
-      "d": "2026-10-26",
-      "g": "thegentlemen",
-      "s": "Manufacturing"
      }
     ]
    },
@@ -6576,12 +7215,12 @@
   "groups": [
    {
     "name": "n0n",
-    "n": 138,
+    "n": 137,
     "last": "2026-11-16",
     "sectors": [
      {
       "name": "Retail & E-Commerce",
-      "n": 31
+      "n": 30
      },
      {
       "name": "Healthcare",
@@ -6595,7 +7234,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 81
+      "n": 80
      },
      {
       "cc": "CA",
@@ -6617,7 +7256,7 @@
    },
    {
     "name": "qilin",
-    "n": 117,
+    "n": 116,
     "last": "2026-11-16",
     "sectors": [
      {
@@ -6853,8 +7492,8 @@
    },
    {
     "name": "pixelleaks",
-    "n": 26,
-    "last": "2026-11-15",
+    "n": 27,
+    "last": "2026-11-17",
     "sectors": [
      {
       "name": "Technology",
@@ -6887,7 +7526,7 @@
       "n": 2
      },
      {
-      "cc": "ID",
+      "cc": "MX",
       "n": 1
      }
     ]
@@ -7292,14 +7931,14 @@
     "countries": [
      {
       "cc": "US",
-      "n": 13
-     },
-     {
-      "cc": "GB",
-      "n": 2
+      "n": 14
      },
      {
       "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "GB",
       "n": 1
      }
     ]
@@ -7541,38 +8180,80 @@
     ]
    },
    {
-    "name": "genesis",
+    "name": "aurora",
     "n": 12,
-    "last": "2026-11-06",
+    "last": "2026-11-17",
     "sectors": [
      {
-      "name": "Professional Services",
-      "n": 4
+      "name": "Manufacturing",
+      "n": 7
      },
      {
-      "name": "Manufacturing",
+      "name": "Other",
       "n": 3
      },
      {
-      "name": "Technology",
+      "name": "Professional Services",
       "n": 1
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 11
+      "n": 3
      },
      {
-      "cc": "CA",
+      "cc": "IT",
+      "n": 2
+     },
+     {
+      "cc": "GB",
+      "n": 2
+     },
+     {
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "CH",
       "n": 1
      }
     ],
-    "about": "Genesis is an emerging ransomware group first observed in late 2025. It targets small to mid-sized US organizations in healthcare, retail, financial services, legal, and manufacturing. It uses double extortion with a strong focus on data exfiltration and public leaking.",
+    "about": "Aurora is a ransomware family built on Go-based malware, distributed by several criminal teams starting in mid-2022. The same name is also sold on underground forums as an infostealer and botnet.",
     "origin": ""
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-17",
+    "cc": "MX",
+    "g": "pixelleaks",
+    "s": ""
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "inception",
+    "s": "Agriculture and Food Production"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "inception",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "inception",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "inception",
+    "s": "Technology"
+   },
    {
     "d": "2026-11-17",
     "cc": "US",
@@ -7581,7 +8262,7 @@
    },
    {
     "d": "2026-11-17",
-    "cc": "GB",
+    "cc": "US",
     "g": "vortex",
     "s": "Financial Services"
    },
@@ -7608,6 +8289,12 @@
     "cc": "US",
     "g": "vortex",
     "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "IT",
+    "g": "aurora",
+    "s": "Manufacturing"
    },
    {
     "d": "2026-11-16",
@@ -7644,12 +8331,144 @@
     "cc": "",
     "g": "chaos",
     "s": "Technology"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "vortex",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "global secret group",
+    "s": "Agriculture and Food Production"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "",
+    "g": "curious worm",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "GB",
+    "g": "shiba",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "global secret group",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "",
+    "g": "silentransomgroup",
+    "s": ""
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "DE",
+    "g": "curious worm",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "GB",
+    "g": "rhysida",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "play",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "",
+    "g": "panzer",
+    "s": ""
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "daixin",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "",
+    "g": "rhysida",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "n0n",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "n0n",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "n0n",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "n0n",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "CA",
+    "g": "n0n",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "CA",
+    "g": "n0n",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "CA",
+    "g": "n0n",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "CA",
+    "g": "n0n",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "CA",
+    "g": "n0n",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "US",
+    "g": "n0n",
+    "s": "Retail & E-Commerce"
    }
   ],
   "days": [
    {
     "date": "2026-10-18",
-    "n": 9
+    "n": 5
    },
    {
     "date": "2026-10-19",
@@ -7769,7 +8588,7 @@
    },
    {
     "date": "2026-11-17",
-    "n": 6
+    "n": 12
    }
   ]
  },
