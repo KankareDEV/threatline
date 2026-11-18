@@ -14,6 +14,7 @@ Sources (all public):
   - FIRST EPSS API (exploitation probability per CVE)
   - CVE Program records, including CISA Vulnrichment (CVSS severity)
   - RSS/Atom feeds listed in FEEDS
+  - X (posts from the security accounts in X_ACCOUNTS; needs X_BEARER_TOKEN)
   - Ransomware.live (victims claimed on leak sites; only counts per country are kept)
 
 Only headlines, links and dates are stored from news feeds. Article text is
@@ -26,6 +27,7 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter
@@ -65,6 +67,27 @@ AI_TACTICS = ["Reconnaissance", "Resource Development", "Initial Access", "Execu
               "Persistence", "Privilege Escalation", "Defense Evasion", "Credential Access",
               "Discovery", "Lateral Movement", "Collection", "Command and Control",
               "Exfiltration", "Impact"]
+
+# Posts from security accounts on X. This part only runs when the
+# X_BEARER_TOKEN environment variable is set (a GitHub Actions secret).
+# X charges for every post it returns, so reads are capped per day.
+X_TOKEN = os.environ.get("X_BEARER_TOKEN", "").strip()
+X_API = "https://api.x.com/2/"
+X_MAX_READS_PER_DAY = 100   # about $0.50 a day at $0.005 per post; lower it to spend less
+X_PER_ACCOUNT = 5           # newest posts asked for per account per run (X's minimum is 5)
+X_KEEP_HOURS = 72           # how long a post stays on the site
+X_PROFILE_DAYS = 7          # how often names and profile pictures are refreshed
+X_ACCOUNTS = [
+    ("TheHackersNews", "News"), ("BleepinComputer", "News"), ("TheRecord_Media", "News"),
+    ("SecurityWeek", "News"),
+    ("Unit42_Intel", "CTI"), ("ESETresearch", "CTI"), ("CiscoTalos", "CTI"),
+    ("GoogleCloudSec", "CTI"), ("MsftSecIntel", "CTI"), ("vxunderground", "CTI"),
+    ("ProjectZeroBugs", "Vulnerabilities"), ("thezdi", "Vulnerabilities"),
+    ("watchtowrcyber", "Vulnerabilities"), ("sans_isc", "Vulnerabilities"),
+    ("CISAgov", "Official"), ("enisa_eu", "Official"), ("CERT_EU", "Official"),
+    ("Shadowserver", "Official"),
+    ("GossiTheDog", "Researchers"), ("MalwareTechBlog", "Researchers"),
+]
 
 KEV_WINDOW_DAYS = 30   # show vulnerabilities added to KEV in this window
 NEWS_WINDOW_DAYS = 3   # show news published in this window
@@ -238,6 +261,125 @@ def load_cvss(cves, status, known):
             print(f"CVSS lookup failed: {e}", file=sys.stderr)
     status.append({"name": "CVE Program (CVSS)", "ok": ok > 0 or tried == 0})
     return out
+
+
+# --------------------------------------------------------------------- X --
+def x_call(path, params):
+    """One X API request. Returns (HTTP status, parsed JSON or None)."""
+    url = X_API + path + "?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={"Authorization": "Bearer " + X_TOKEN, "User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status, json.loads(r.read())
+    except urllib.error.HTTPError as e:   # 401 bad token, 402 no credit, 429 too many requests
+        return e.code, None
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        return 0, None
+
+
+def x_post(raw, user, category, kev_all):
+    """Keeps only what the site needs from one post, and tags it.
+
+    The text is stored unchanged (X's rules forbid editing it); only HTML
+    escapes such as &amp; are turned back into normal characters.
+    Long posts carry their full text in 'note_tweet'.
+    """
+    note = raw.get("note_tweet") or {}
+    text = html.unescape(note.get("text") or raw.get("text") or "")
+    ent = note.get("entities") or raw.get("entities") or {}
+    cves = sorted({c.upper() for c in CVE_RE.findall(text)})
+    signals = [label for label, _, pats in SIGNALS if any(re.search(p, text, re.I) for p in pats)]
+    return {
+        "id": raw["id"], "uid": user["id"], "cat": category,
+        "at": raw.get("created_at", ""), "text": text,
+        "urls": [{"u": u.get("url", ""), "d": u.get("display_url", "")} for u in ent.get("urls", []) if u.get("url")],
+        "mentions": sorted({m.get("username", "") for m in ent.get("mentions", []) if m.get("username")}),
+        "tags": sorted({h.get("tag", "") for h in ent.get("hashtags", []) if h.get("tag")}),
+        "edited": len(raw.get("edit_history_tweet_ids") or []) > 1,
+        "cves": cves[:6], "kev": [c for c in cves if c in kev_all][:6], "signals": signals,
+    }
+
+
+def load_x(previous, status, kev_all):
+    """Newest posts from X_ACCOUNTS, merged with the ones from earlier runs.
+
+    Money is spent per post returned, so:
+      - each account is asked only for posts newer than the last one we saw
+        (since_id), and posts already shown are kept from the last data.json
+      - at most X_MAX_READS_PER_DAY posts are read per day (UTC)
+      - names and pictures are looked up once a week, not every run
+    """
+    old = previous.get("x") or {}
+    if not X_TOKEN:
+        return old or None
+    today = NOW.date().isoformat()
+    budget = old.get("budget") if (old.get("budget") or {}).get("day") == today else {"day": today, "used": 0}
+    users, since, ok = dict(old.get("users") or {}), dict(old.get("since") or {}), True
+
+    # 1. Profiles: one request for all accounts, refreshed weekly.
+    handles = [h for h, _ in X_ACCOUNTS]
+    stale = (not users or any(h.lower() not in users for h in handles)
+             or (old.get("profiles_at") or "") < (NOW - timedelta(days=X_PROFILE_DAYS)).isoformat())
+    profiles_at = old.get("profiles_at") or ""
+    if stale:
+        code, res = x_call("users/by", {"usernames": ",".join(handles),
+                                        "user.fields": "name,username,profile_image_url,verified"})
+        if code == 200 and res:
+            for u in res.get("data") or []:
+                users[u["username"].lower()] = {
+                    "id": u["id"], "name": cut_text(u.get("name"), 60), "username": u["username"],
+                    # "_normal" pictures are 48 px; "_bigger" is 73 px and looks sharp on phones
+                    "img": (u.get("profile_image_url") or "").replace("_normal.", "_bigger."),
+                    "verified": bool(u.get("verified"))}
+            profiles_at = NOW.isoformat()
+        else:
+            ok = False
+            print(f"X profiles failed: HTTP {code}", file=sys.stderr)
+
+    # 2. Posts: accounts that waited longest go first, so a tight budget is shared fairly.
+    fetched_at = dict(old.get("fetched_at") or {})
+    order = sorted(X_ACCOUNTS, key=lambda a: fetched_at.get(a[0].lower(), ""))
+    new_posts = []
+    for handle, category in order:
+        user = users.get(handle.lower())
+        if not user:
+            continue
+        if X_MAX_READS_PER_DAY - budget["used"] < X_PER_ACCOUNT:
+            break   # today's budget is spent; the next run tomorrow continues
+        params = {"max_results": X_PER_ACCOUNT, "exclude": "retweets,replies",
+                  "tweet.fields": "created_at,entities,note_tweet,edit_history_tweet_ids"}
+        if since.get(user["id"]):
+            params["since_id"] = since[user["id"]]
+        else:   # first time: only the last two days
+            params["start_time"] = (NOW - timedelta(hours=48)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        code, res = x_call(f"users/{user['id']}/tweets", params)
+        if code != 200 or res is None:
+            ok = False
+            print(f"X posts failed for @{handle}: HTTP {code}", file=sys.stderr)
+            if code in (401, 402, 403):
+                break   # bad token or no credit: every other account would fail the same way
+            continue
+        rows = res.get("data") or []
+        budget["used"] += len(rows)
+        fetched_at[handle.lower()] = NOW.isoformat()
+        if rows:
+            since[user["id"]] = max((r["id"] for r in rows), key=int)
+            new_posts += [x_post(r, user, category, kev_all) for r in rows]
+
+    # 3. Merge with earlier posts, drop old ones, newest first.
+    cutoff = (NOW - timedelta(hours=X_KEEP_HOURS)).strftime("%Y-%m-%dT%H:%M:%S")
+    posts = {p["id"]: p for p in old.get("posts") or []}
+    for p in new_posts:
+        posts[p["id"]] = p
+    keep = sorted((p for p in posts.values() if p["at"][:19] >= cutoff), key=lambda p: p["at"], reverse=True)[:200]
+    status.append({"name": "X (security accounts)", "ok": ok})
+    return {"users": users, "profiles_at": profiles_at, "since": since, "fetched_at": fetched_at,
+            "budget": budget, "accounts": [{"username": h, "cat": c} for h, c in X_ACCOUNTS],
+            "keep_hours": X_KEEP_HOURS, "posts": keep}
+
+
+def cut_text(v, n):
+    return clean(str(v or ""))[:n]
 
 
 # ------------------------------------------------------------- ransomware --
@@ -751,6 +893,7 @@ def main():
         geo = previous.get("geo")
     cvss = load_cvss([v["cveID"].upper() for v in recent], status, known)
     groups = merge_duplicates(load_news(status))
+    xfeed = load_x(previous, status, kev_all)
 
     # Which stories mention which CVE, so a vulnerability can link to its coverage.
     news_by_cve = {}
@@ -780,8 +923,11 @@ def main():
     }
     if geo:
         data["geo"] = geo
+    if xfeed:
+        data["x"] = xfeed
     if AI_KEY:
-        brief = ai_brief(items, previous, status[-1]["ok"])
+        ai_ok = next((s["ok"] for s in status if s["name"].startswith("Claude")), False)
+        brief = ai_brief(items, previous, ai_ok)
         if brief:
             data["brief"] = brief
     # Leave the file alone when nothing changed, so the site is not redeployed for nothing.
