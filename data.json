@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T07:29:32Z",
+ "generated": "2026-11-18T07:35:44Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1782,
@@ -39,6 +39,10 @@
   },
   {
    "name": "CISA advisories",
+   "ok": true
+  },
+  {
+   "name": "X (security accounts)",
    "ok": true
   },
   {
@@ -7352,6 +7356,1368 @@
    {
     "date": "2026-11-18",
     "n": 5
+   }
+  ]
+ },
+ "x": {
+  "users": {
+   "thehackersnews": {
+    "id": "209811713",
+    "name": "The Hacker News",
+    "username": "TheHackersNews",
+    "img": "https://pbs.twimg.com/profile_images/1597647879811657728/FLgHrLHy_bigger.jpg",
+    "verified": true
+   },
+   "bleepincomputer": {
+    "id": "50026664",
+    "name": "BleepingComputer",
+    "username": "BleepinComputer",
+    "img": "https://pbs.twimg.com/profile_images/1699832227062792192/hqaQ8bMZ_bigger.jpg",
+    "verified": false
+   },
+   "therecord_media": {
+    "id": "1290332482374598658",
+    "name": "The Record From Recorded Future News",
+    "username": "TheRecord_Media",
+    "img": "https://pbs.twimg.com/profile_images/1294266034623586305/qkhbAIfM_bigger.jpg",
+    "verified": false
+   },
+   "securityweek": {
+    "id": "41258937",
+    "name": "SecurityWeek",
+    "username": "SecurityWeek",
+    "img": "https://pbs.twimg.com/profile_images/1466073453572890643/gaGjrZRw_bigger.jpg",
+    "verified": false
+   },
+   "unit42_intel": {
+    "id": "4487645412",
+    "name": "Unit 42",
+    "username": "Unit42_Intel",
+    "img": "https://pbs.twimg.com/profile_images/1387148759319121927/zsVZMEXg_bigger.jpg",
+    "verified": false
+   },
+   "esetresearch": {
+    "id": "54316357",
+    "name": "ESET Research",
+    "username": "ESETresearch",
+    "img": "https://pbs.twimg.com/profile_images/1244546916106612736/svU0TBgH_bigger.png",
+    "verified": false
+   },
+   "ciscotalos": {
+    "id": "2734704211",
+    "name": "ciscotalos",
+    "username": "ciscotalos",
+    "img": "https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png",
+    "verified": false
+   },
+   "googlecloudsec": {
+    "id": "935278274845974528",
+    "name": "Google Cloud Security",
+    "username": "GoogleCloudSec",
+    "img": "https://pbs.twimg.com/profile_images/2047032786914095105/k8_vLv_F_bigger.jpg",
+    "verified": false
+   },
+   "msftsecintel": {
+    "id": "217462908",
+    "name": "Microsoft Threat Intelligence",
+    "username": "MsftSecIntel",
+    "img": "https://pbs.twimg.com/profile_images/1268200269277351936/a2naHzbe_bigger.png",
+    "verified": true
+   },
+   "vxunderground": {
+    "id": "1158139840866791424",
+    "name": "vx-underground",
+    "username": "vxunderground",
+    "img": "https://pbs.twimg.com/profile_images/1903282052297891840/sMABW3W-_bigger.jpg",
+    "verified": false
+   },
+   "projectzerobugs": {
+    "id": "702994808181170176",
+    "name": "Project Zero Bugs",
+    "username": "ProjectZeroBugs",
+    "img": "https://pbs.twimg.com/profile_images/703020678585253888/R24x4I_H_bigger.jpg",
+    "verified": false
+   },
+   "thezdi": {
+    "id": "86973588",
+    "name": "TrendAI Zero Day Initiative",
+    "username": "thezdi",
+    "img": "https://pbs.twimg.com/profile_images/1887625485443633152/KNVsZKK5_bigger.jpg",
+    "verified": false
+   },
+   "watchtowrcyber": {
+    "id": "1324374317484793856",
+    "name": "watchTowr",
+    "username": "watchtowrcyber",
+    "img": "https://pbs.twimg.com/profile_images/1943602243380576256/ka4fHHmU_bigger.jpg",
+    "verified": true
+   },
+   "sans_isc": {
+    "id": "6821102",
+    "name": "SANS.edu Internet Storm Center",
+    "username": "sans_isc",
+    "img": "https://pbs.twimg.com/profile_images/30071042/twitter_isc_bigger.jpg",
+    "verified": false
+   },
+   "cisagov": {
+    "id": "964227358218649600",
+    "name": "Cybersecurity and Infrastructure Security Agency",
+    "username": "CISAgov",
+    "img": "https://pbs.twimg.com/profile_images/1545140176766353408/G4iTa8Bb_bigger.jpg",
+    "verified": true
+   },
+   "enisa_eu": {
+    "id": "806850055",
+    "name": "ENISA",
+    "username": "enisa_eu",
+    "img": "https://pbs.twimg.com/profile_images/1901970420737175552/wo1VViNd_bigger.jpg",
+    "verified": true
+   },
+   "cert_eu": {
+    "id": "3328958829",
+    "name": "CERT-EU",
+    "username": "cert_eu",
+    "img": "https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png",
+    "verified": false
+   },
+   "shadowserver": {
+    "id": "24683268",
+    "name": "The Shadowserver Foundation",
+    "username": "Shadowserver",
+    "img": "https://pbs.twimg.com/profile_images/1121143307269050370/7PQLtOQg_bigger.png",
+    "verified": false
+   },
+   "gossithedog": {
+    "id": "1839381803645456384",
+    "name": "Kevin Beaumont",
+    "username": "GossiTheDog",
+    "img": "https://pbs.twimg.com/profile_images/1839383549776171008/iPId4C2h_bigger.jpg",
+    "verified": false
+   },
+   "malwaretechblog": {
+    "id": "1540951016",
+    "name": "Marcus Hutchins",
+    "username": "MalwareTechBlog",
+    "img": "https://pbs.twimg.com/profile_images/2119989823671017472/KThGL431_bigger.jpg",
+    "verified": false
+   }
+  },
+  "profiles_at": "2026-11-18T07:35:44.387870+00:00",
+  "since": {
+   "209811713": "2122951690903281694",
+   "50026664": "2122828312313524522",
+   "1290332482374598658": "2122427309802111413",
+   "41258937": "2122901861984580087",
+   "4487645412": "2122801967579759028",
+   "54316357": "2122644271899549868",
+   "935278274845974528": "2122464740869849329",
+   "217462908": "2122770379915805067",
+   "1158139840866791424": "2122935772470788166",
+   "702994808181170176": "2122719155556368768",
+   "1324374317484793856": "2122809210324795763",
+   "6821102": "2122872608295457197",
+   "964227358218649600": "2122804731563118841"
+  },
+  "fetched_at": {
+   "thehackersnews": "2026-11-18T07:35:44.387870+00:00",
+   "bleepincomputer": "2026-11-18T07:35:44.387870+00:00",
+   "therecord_media": "2026-11-18T07:35:44.387870+00:00",
+   "securityweek": "2026-11-18T07:35:44.387870+00:00",
+   "unit42_intel": "2026-11-18T07:35:44.387870+00:00",
+   "esetresearch": "2026-11-18T07:35:44.387870+00:00",
+   "ciscotalos": "2026-11-18T07:35:44.387870+00:00",
+   "googlecloudsec": "2026-11-18T07:35:44.387870+00:00",
+   "msftsecintel": "2026-11-18T07:35:44.387870+00:00",
+   "vxunderground": "2026-11-18T07:35:44.387870+00:00",
+   "projectzerobugs": "2026-11-18T07:35:44.387870+00:00",
+   "thezdi": "2026-11-18T07:35:44.387870+00:00",
+   "watchtowrcyber": "2026-11-18T07:35:44.387870+00:00",
+   "sans_isc": "2026-11-18T07:35:44.387870+00:00",
+   "cisagov": "2026-11-18T07:35:44.387870+00:00"
+  },
+  "budget": {
+   "day": "2026-11-18",
+   "used": 49
+  },
+  "accounts": [
+   {
+    "username": "TheHackersNews",
+    "cat": "News"
+   },
+   {
+    "username": "BleepinComputer",
+    "cat": "News"
+   },
+   {
+    "username": "TheRecord_Media",
+    "cat": "News"
+   },
+   {
+    "username": "SecurityWeek",
+    "cat": "News"
+   },
+   {
+    "username": "Unit42_Intel",
+    "cat": "CTI"
+   },
+   {
+    "username": "ESETresearch",
+    "cat": "CTI"
+   },
+   {
+    "username": "CiscoTalos",
+    "cat": "CTI"
+   },
+   {
+    "username": "GoogleCloudSec",
+    "cat": "CTI"
+   },
+   {
+    "username": "MsftSecIntel",
+    "cat": "CTI"
+   },
+   {
+    "username": "vxunderground",
+    "cat": "CTI"
+   },
+   {
+    "username": "ProjectZeroBugs",
+    "cat": "Vulnerabilities"
+   },
+   {
+    "username": "thezdi",
+    "cat": "Vulnerabilities"
+   },
+   {
+    "username": "watchtowrcyber",
+    "cat": "Vulnerabilities"
+   },
+   {
+    "username": "sans_isc",
+    "cat": "Vulnerabilities"
+   },
+   {
+    "username": "CISAgov",
+    "cat": "Official"
+   },
+   {
+    "username": "enisa_eu",
+    "cat": "Official"
+   },
+   {
+    "username": "CERT_EU",
+    "cat": "Official"
+   },
+   {
+    "username": "Shadowserver",
+    "cat": "Official"
+   },
+   {
+    "username": "GossiTheDog",
+    "cat": "Researchers"
+   },
+   {
+    "username": "MalwareTechBlog",
+    "cat": "Researchers"
+   }
+  ],
+  "keep_hours": 72,
+  "posts": [
+   {
+    "id": "2122951690903281694",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T07:15:00.000Z",
+    "text": "🚨 Your biggest cybersecurity risk in 2027 may already be in your vulnerability backlog.\n\nAnnual pentests, unverified fixes, and CVSS-driven priorities are widening the gaps.\n\n@PlexTrac founder Dan DeCloss explains what security teams need to change before 2027.\n\nRead → https://t.co/fRptjZM6KY",
+    "urls": [
+     {
+      "u": "https://t.co/fRptjZM6KY",
+      "d": "thehackernews.com/expert-insight…"
+     }
+    ],
+    "mentions": [
+     "PlexTrac"
+    ],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122944680317067366",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T06:47:08.000Z",
+    "text": "‼️ ALERT - Microsoft's AI Agent Framework package has been hijacked on PyPI.\n\nAttackers pushed two malicious versions (1.26.1 and 1.26.2) that steal cloud credentials and tokens—silently, on EVERY Python startup.\n\nCheck NOW ↓ https://t.co/Asljd1PtjN",
+    "urls": [
+     {
+      "u": "https://t.co/Asljd1PtjN",
+      "d": "thehackernews.com/2026/11/attack…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122935772470788166",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T06:11:45.000Z",
+    "text": "I wish I wasn't such a reclusive nerd.\n\nI can bonk goop, but making the videos is time consuming because have to read and stuff. I wish I knew someone who could:\n\n1. Read\n\nI could literally do all the other work",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122933060845043754",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T06:00:58.000Z",
+    "text": "🛑 Russian hackers turned ONE Google Workspace breach into a SECOND U.S. organization compromise.\n\nCOLD RELIC stole employee data, hijacked identities, abused MFA, and weaponized trusted contacts to phish its next victim.\n\nGoogle revealed how → https://t.co/1IDQAVgH5s",
+    "urls": [
+     {
+      "u": "https://t.co/1IDQAVgH5s",
+      "d": "thehackernews.com/2026/11/russia…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2122924477369757810",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T05:26:52.000Z",
+    "text": "Hot take: \n\nOn one hand, I understand from my many years of being involved with internet stuff, outages and oopsies happen all the time.\n\nOn the other hand, I don't trust the government \n\nPic unrelated https://t.co/JDq8HpWPmE https://t.co/RAsUcKnjkA",
+    "urls": [
+     {
+      "u": "https://t.co/JDq8HpWPmE",
+      "d": "pic.x.com/JDq8HpWPmE"
+     },
+     {
+      "u": "https://t.co/RAsUcKnjkA",
+      "d": "x.com/sherrod_im/sta…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122911469193077063",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T04:35:10.000Z",
+    "text": "⚡ PATCH ALERT: #Java4Shell fixes are available, but gaps remain.\n\nOracle, Amazon Corretto and Azul have shipped patches. Red Hat fixes were still pending at publication.\n\nCan't patch yet? The JVM flag -XX:-UseBASE64Intrinsics disables the vulnerable path.\n\nRead - https://t.co/zTByQmNOtp",
+    "urls": [
+     {
+      "u": "https://t.co/zTByQmNOtp",
+      "d": "thehackernews.com/2026/11/java4s…"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "Java4Shell"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122910896616083665",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T04:32:54.000Z",
+    "text": "Here's what makes Java4Shell dangerous...\n\nA malformed Base64 input can trigger a 62–63 byte out-of-bounds write in Java's AVX-512 decoder.\n\nResearchers say they chained this into memory read/write primitives and eventually RCE.\n\nNo universal exploit exists. Each target needs specific conditions.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122901861984580087",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T03:57:00.000Z",
+    "text": "Market Research Giant Ipsos Investigating Breach of Internal System https://t.co/qyadUFdiZK",
+    "urls": [
+     {
+      "u": "https://t.co/qyadUFdiZK",
+      "d": "securityweek.com/market-researc…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2122901358978216391",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T03:55:00.000Z",
+    "text": "Corma Receives $125 Million to Train Foundation Models for Defensive Cybersecurity https://t.co/WYnnFoLetf",
+    "urls": [
+     {
+      "u": "https://t.co/WYnnFoLetf",
+      "d": "securityweek.com/corma-receives…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122891292975710441",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T03:15:00.000Z",
+    "text": "Fandango Warns Ticket Buyers of Payment Card Data Exposure https://t.co/xQFZe6C4mE",
+    "urls": [
+     {
+      "u": "https://t.co/xQFZe6C4mE",
+      "d": "securityweek.com/fandango-warns…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122879722371604625",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T02:29:01.000Z",
+    "text": "Classified Communications Network at the National Security Agency Goes Down - https://t.co/BsoZKaMeNC",
+    "urls": [
+     {
+      "u": "https://t.co/BsoZKaMeNC",
+      "d": "securityweek.com/classified-com…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122879212826587212",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T02:27:00.000Z",
+    "text": "MSP ScreenConnect Servers Targeted in Month-Long Campaign https://t.co/2lncLpDXT0",
+    "urls": [
+     {
+      "u": "https://t.co/2lncLpDXT0",
+      "d": "securityweek.com/msp-screenconn…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122872608295457197",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-18T02:00:45.000Z",
+    "text": "Phishing Collects MX Records; Java4Shell OpenJDK RCE (CVE-2026-114938); Optimizely Magecart Compromise (Nov 18 2026)\n https://t.co/uqEtzYZdjA https://t.co/sUCpvm07aj",
+    "urls": [
+     {
+      "u": "https://t.co/uqEtzYZdjA",
+      "d": "isc.sans.edu/podcastdetail/…"
+     },
+     {
+      "u": "https://t.co/sUCpvm07aj",
+      "d": "pic.x.com/sUCpvm07aj"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-114938"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122869576212066797",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T01:48:42.000Z",
+    "text": "Calif has been dropping heater after heater. These nerds are a menace and need to be contained (renew their CrunchyRoll subscription) so they stop dropping exploits https://t.co/KianBWosb2",
+    "urls": [
+     {
+      "u": "https://t.co/KianBWosb2",
+      "d": "x.com/calif_io/statu…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122828312313524522",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-17T23:04:44.000Z",
+    "text": "Critical Java4Shell flaw allows RCE attacks on major Java applications\nhttps://t.co/jAbMX7Jfoi\n\nhttps://t.co/jAbMX7Jfoi",
+    "urls": [
+     {
+      "u": "https://t.co/jAbMX7Jfoi",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/jAbMX7Jfoi",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122809210324795763",
+    "uid": "1324374317484793856",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-17T21:48:50.000Z",
+    "text": "See the watchTowr Platform in action: https://t.co/fIlxCibP0g",
+    "urls": [
+     {
+      "u": "https://t.co/fIlxCibP0g",
+      "d": "watchtowr.com/demo/"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122809209238528378",
+    "uid": "1324374317484793856",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-17T21:48:50.000Z",
+    "text": "watchTowr continues to track \"Java4Shell\" (CVE-2026-114938) now that public writeups and advisories have been released.\n\nSpecific CPU, JDK, and Base64 pre-reqs are required. It's likely application-specific exploits will be developed, rather than indiscriminate exploitation. https://t.co/UsECpFxjcj",
+    "urls": [
+     {
+      "u": "https://t.co/UsECpFxjcj",
+      "d": "pic.x.com/UsECpFxjcj"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-114938"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122804731563118841",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-17T21:31:02.000Z",
+    "text": "This week, we swore-in a new cohort of team members. We’re excited to see the impact this group will make as we work to strengthen cyber resilience & protect our nation’s most critical systems. New positions are still being added to USAJobs; apply today: https://t.co/RqocVyUHmA https://t.co/tFELbcNkxd",
+    "urls": [
+     {
+      "u": "https://t.co/RqocVyUHmA",
+      "d": "usajobs.gov/Search/Results…"
+     },
+     {
+      "u": "https://t.co/tFELbcNkxd",
+      "d": "pic.x.com/tFELbcNkxd"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122803859982610699",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-17T21:27:34.000Z",
+    "text": "Cloud keys leaked in Docker Hub images are stolen within seconds\nhttps://t.co/Ep1CsEWJpk\n\nhttps://t.co/Ep1CsEWJpk",
+    "urls": [
+     {
+      "u": "https://t.co/Ep1CsEWJpk",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/Ep1CsEWJpk",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122801967579759028",
+    "uid": "4487645412",
+    "cat": "CTI",
+    "at": "2026-11-17T21:20:03.000Z",
+    "text": "The OPTIMJACK supply chain attack hit nearly 180 websites, showing how dynamic web assembly can put visitors at risk for crypto wallet swapping, card skimming and exploit kits. Learn why segmentation is your strongest defense against this threat: https://t.co/WiPpizHM8u https://t.co/x4yi7QxLnn",
+    "urls": [
+     {
+      "u": "https://t.co/WiPpizHM8u",
+      "d": "bit.ly/4kXpMoz"
+     },
+     {
+      "u": "https://t.co/x4yi7QxLnn",
+      "d": "pic.x.com/x4yi7QxLnn"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Supply chain"
+    ]
+   },
+   {
+    "id": "2122794814152290810",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-17T20:51:37.000Z",
+    "text": "Japan takes Fugaku supercomputer offlline after cyberattack\nhttps://t.co/nMzd3SZ1uh\n\nhttps://t.co/nMzd3SZ1uh",
+    "urls": [
+     {
+      "u": "https://t.co/nMzd3SZ1uh",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/nMzd3SZ1uh",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122785617499070892",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-17T20:15:05.000Z",
+    "text": "We continue to create trusted space for the #CriticalInfrastructure community to share insights, discuss challenges, & work together to fortify our nation’s Industrial Control Systems (ICS) & Operational Technology (OT) against complex threats 👉 https://t.co/KhxjMcCg78 https://t.co/DeAKinIk06",
+    "urls": [
+     {
+      "u": "https://t.co/KhxjMcCg78",
+      "d": "cisa.gov/fortify"
+     },
+     {
+      "u": "https://t.co/DeAKinIk06",
+      "d": "pic.x.com/DeAKinIk06"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "CriticalInfrastructure"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122782184071188868",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-17T20:01:26.000Z",
+    "text": "⚠️ Phishing kits now come with admin dashboards, AI features, and support, making it easier for attackers to steal and replay Microsoft 365 session tokens.\n\n🔍 @HuntressLabs investigates three of these kits.\n\n➡️ https://t.co/VPGqOHCecs\n#cybersecurity #sponsored",
+    "urls": [
+     {
+      "u": "https://t.co/VPGqOHCecs",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [
+     "HuntressLabs"
+    ],
+    "tags": [
+     "cybersecurity",
+     "sponsored"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122778054577541288",
+    "uid": "4487645412",
+    "cat": "CTI",
+    "at": "2026-11-17T19:45:02.000Z",
+    "text": "We observed threat actors using the Cairn framework with AI models to run autonomous operations against nineteen defense, semiconductor and civil society targets. We found that the breaches exploited familiar identity and patching gaps: https://t.co/hjjDidOfxb https://t.co/nXtuOQxyCO",
+    "urls": [
+     {
+      "u": "https://t.co/hjjDidOfxb",
+      "d": "bit.ly/4C3ntGY"
+     },
+     {
+      "u": "https://t.co/nXtuOQxyCO",
+      "d": "pic.x.com/nXtuOQxyCO"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2122773766409425186",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-17T19:27:59.000Z",
+    "text": "Okay, here is the anime-lore update for non-schizo-nerds on AI cybersecurity stuff\n\nBasically AI kind of sucked for awhile, but now we've got pretty good with AI stuff. As a comparison, look at AI generated videos from 2 years ago and compare it to now. It's big brain.\n\nDisclaimer: this isn't doomer posting, read fully if you care, or skip and look at the picture of the cat\n\nSome frameworks, such as the infamous ARTEX, utilizes AI which has been trained on like, 40 years of cybersecurity material. Imagine a human being who could think faster, remember more, and troubleshoot faster, and had all cybersecurity knowledge encapsulated into their little mushy brain\n\nNow imagine this person could work in conjunction with other like minded super schizo nerds and communicate with electricity, instead of words, making communication instantaneous with no way miscommunications.\n\nThese super schizo nerds don't need coffee breaks, or smoke breaks, or have meetings, or food, or sleep, friends or family. They can work infinitely with zero breaks.\n\nWhen you take someone who is educated on offensive cybersecurity (\"hacking\") and give them something like ARTEX, you've essentially made a regular nerd into a super powered super schizo nerd. Likewise, if you give it to a complete noob, even this dorky noob is suddenly exponentially less nooby.\n\nHowever, just because attackers have ARTEX, and can work faster, stronger, stinkier, doesn't mean defenders are cooked. Attackers can make mistakes, same as AI-powered attackers. But there is one problem I keep seeing now...\n\nHistorically defenders have had issues with budgets, fatigue, burn-out, or apathy from the company, customers, or employees. Suddenly defenders have to face supercharged schizo nerds using AI while the organization they are designated in protecting is understaffed, limited budget, doesn't follow properly security protocols (apathy). It makes defense astronomically more difficult.\n\nDefense has always been hard, but when you're defending an organization and you've got 99 dork attackers, and 1 big brain attackers, it can be challenging. Now you've got 75 big brains (supercharged with AI and anime), and 25 dorks, their job is way, way, way more difficult and stressful.\n\nThe problem isn't organizations cannot defend with super mega fuck off AI charged attackers, it's that defenders are constantly chained to budget, executives, or employees. This means companies have to do this thing called \"caring\" about cybersecurity. This means they have to pay people appropriately, actually do updates, force employees (as much as they can) to care, and follow proper security protocols. If companies do not adapt, they're cooked.\n\nThis might be easier for large companies, but for small to medium sized businesses and governments (they're not known for their speed...) are in an extraordinarily difficult position. They either have to find the money in the budget, and care, or face the serious possibility to being obliterated by a stinky nerd super charged with AI. Unfortunately, cybersecurity is expensive. For small to medium sized businesses this places them in a really tough spot.\n\nAnyway, that's my goofy layman talk on AI stuff.\n\npic unrelated (maybe, idk)",
+    "urls": [
+     {
+      "u": "https://t.co/A1z9m1sjO9",
+      "d": "pic.x.com/A1z9m1sjO9"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122772883495636996",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-17T19:24:29.000Z",
+    "text": "Apple reports outages affecting iCloud Mail, AppleCare and more\nhttps://t.co/dVpMAs8UEt\n\nhttps://t.co/dVpMAs8UEt",
+    "urls": [
+     {
+      "u": "https://t.co/dVpMAs8UEt",
+      "d": "bleepingcomputer.com/news/apple/app…"
+     },
+     {
+      "u": "https://t.co/dVpMAs8UEt",
+      "d": "bleepingcomputer.com/news/apple/app…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122770379915805067",
+    "uid": "217462908",
+    "cat": "CTI",
+    "at": "2026-11-17T19:14:32.000Z",
+    "text": "Microsoft FORGE Lab researchers worked with @github and the maintainers of six open-source projects to test whether AI-assisted vulnerability discovery can deliver verified, fixable reports instead of raw findings. https://t.co/4TnBvleVbv \n\nCodename MDASH, using Microsoft's MAI Cyber model, flagged thousands of possible issues. After triage and manual review, maintainers received 99 private reports, each with a proof of concept and a suggested fix.\n\nThe pipeline had three stages:\n-MDASH scanned each project and proposed fixes.\n-An AI triage agent from GitHub Security Lab removed duplicates, checked validity, and prioritized high-impact bugs. \n-Seven FORGE Lab researchers then validated remaining findings by hand, spending about two days per project.\n\nThe projects were AutoGPT, Caddy, Express, FastMCP, ImageMagick, and Netty. Reports went through GitHub private vulnerability reporting, and maintainers decided what to fix and when. The first fixes shipped about a week after the initial scan. \n\nThe research also shows the limits. Manual validation doesn't scale yet, and filtering wasn't perfect: at least one valid report duplicated an issue maintainers already knew about. Each lesson is an opportunity. GitHub and Microsoft will keep working together to help secure open source.\n\nRead the full write-up for the methodology, maintainer feedback, and what's still needed to make AI-assisted vulnerability research work for open source.",
+    "urls": [
+     {
+      "u": "https://t.co/4TnBvleVbv",
+      "d": "msft.it/6010xEdcp"
+     }
+    ],
+    "mentions": [
+     "github"
+    ],
+    "tags": [],
+    "edited": true,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122766819224146039",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-17T19:00:23.000Z",
+    "text": "Past competitions showed the skill. PC8 brings the next journey.  Registration opens December 1 for President’s Cup 8 - Sands of Time: America’s 250 Years of Technology. https://t.co/F54qQ5XgTb #PresCup https://t.co/aXjXHGC9C4",
+    "urls": [
+     {
+      "u": "https://t.co/F54qQ5XgTb",
+      "d": "cisa.gov/prescup"
+     },
+     {
+      "u": "https://t.co/aXjXHGC9C4",
+      "d": "pic.x.com/aXjXHGC9C4"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "PresCup"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122719155556368768",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-17T15:50:59.000Z",
+    "text": "Samsung Media Extractors: Stack buffer overflow in modify_nal_header3 https://t.co/22nMer51lm",
+    "urls": [
+     {
+      "u": "https://t.co/22nMer51lm",
+      "d": "project-zero.issues.chromium.org/issues/5401376…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122712624886370388",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-17T15:25:02.000Z",
+    "text": "It’s #CISRMonth! 🏗️ Secure communications are the backbone of community resilience. Take the 2026 SAFECOM PACE Readiness Survey to ensure your organization is ready when normal comms fail. Learn more: https://t.co/ZK9KXc1Ttb #ResilienceMonth https://t.co/BcLGDXARtD",
+    "urls": [
+     {
+      "u": "https://t.co/ZK9KXc1Ttb",
+      "d": "CISA.gov/PACE"
+     },
+     {
+      "u": "https://t.co/BcLGDXARtD",
+      "d": "pic.x.com/BcLGDXARtD"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "CISRMonth",
+     "ResilienceMonth"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122708091741286672",
+    "uid": "217462908",
+    "cat": "CTI",
+    "at": "2026-11-17T15:07:01.000Z",
+    "text": "Microsoft research shows how device code phishing, which persuades users to approve a legitimate sign-in rather than stealing a password, can extend to AI coding agents, using GitHub Copilot CLI as an example. https://t.co/7f9wVY7Omw \n\nIn a controlled proof-of-concept simulation, one approved device code led to four possible outcomes: remote steering of an active session, misleading entries in agent memory, exposure of synced session history, and access to private repositories. None of which were observed in the wild.\n\nAny device-flow client can be targeted this way, and a legitimate verification page does not mean the request is safe. Microsoft Defender detections and disruption help connect phishing attempts to GitHub authorization activity. Read the blog for the full findings and mitigation guidance.",
+    "urls": [
+     {
+      "u": "https://t.co/7f9wVY7Omw",
+      "d": "msft.it/6012xEPT6"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122646441189675302",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-17T11:02:03.000Z",
+    "text": "A phishing page interested in MX records https://t.co/3HXCZ8l8ld https://t.co/G0GttOugxZ",
+    "urls": [
+     {
+      "u": "https://t.co/3HXCZ8l8ld",
+      "d": "isc.sans.edu/diary/33526"
+     },
+     {
+      "u": "https://t.co/G0GttOugxZ",
+      "d": "pic.x.com/G0GttOugxZ"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122644271899549868",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-17T10:53:25.000Z",
+    "text": "More on #Lazarus, #ScarCruft, #DeceptiveDevelopment, and other tracked APT groups in the full #ESETresearch APT Activity Report (Apr–Sep 2026): https://t.co/eptAf5DQhr  4/4",
+    "urls": [
+     {
+      "u": "https://t.co/eptAf5DQhr",
+      "d": "web-assets.esetstatic.com/wls/en/papers/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "DeceptiveDevelopment",
+     "ESETresearch",
+     "Lazarus",
+     "ScarCruft"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122644270968402267",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-17T10:53:25.000Z",
+    "text": "#DeceptiveDevelopment moved from fake job-interview lures into software supply-chain compromises, while #ScarCruft expanded its tooling, including a new worm targeting port infrastructure in an African country with ties to 🇰🇵 North Korea. 3/4",
+    "urls": [],
+    "mentions": [],
+    "tags": [
+     "DeceptiveDevelopment",
+     "ScarCruft"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Supply chain"
+    ]
+   },
+   {
+    "id": "2122644269634638209",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-17T10:53:25.000Z",
+    "text": "Around June 2026, #Lazarus relaunched #OperationDreamJob against European defense & UAV supply chains; for instance, with fake job lures delivering a trojanized SumatraPDF opening a BAE Systems-themed decoy PDF. 2/4 https://t.co/yyhyhbofcX",
+    "urls": [
+     {
+      "u": "https://t.co/yyhyhbofcX",
+      "d": "pic.x.com/yyhyhbofcX"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "Lazarus",
+     "OperationDreamJob"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Supply chain"
+    ]
+   },
+   {
+    "id": "2122644268758011952",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-17T10:53:25.000Z",
+    "text": "#ESETresearch APT Activity Report (Apr–Sep 2026): 🇰🇵 NorthKorea-aligned APTs remained focused on cryptocurrency theft and espionage, while their interest in Ukraine grew more prominent, likely reflecting Pyongyang’s military support for Russia. 1/4",
+    "urls": [],
+    "mentions": [],
+    "tags": [
+     "ESETresearch"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122636443721830689",
+    "uid": "1324374317484793856",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-17T10:22:19.000Z",
+    "text": "watchTowr Intel is aware of public reports of an unauthenticated RCE in Java, CVE-2026-114938, affecting OpenJDK 17.0.6 and later. Details are still unconfirmed. Review your Java environments now and monitor for vendor announcements.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-114938"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122587913875595718",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-17T07:09:29.000Z",
+    "text": "Gosh dang it, dude\n\nA few weeks ago that nerd @cyb3rops predicted everyone would be yapping about ARTEX soon.\n\nFast forward, it's all I see now.\n\nHow did he know? https://t.co/nzRIV0LcKG",
+    "urls": [
+     {
+      "u": "https://t.co/nzRIV0LcKG",
+      "d": "x.com/blackorbird/st…"
+     }
+    ],
+    "mentions": [
+     "cyb3rops"
+    ],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122511473213837552",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-17T02:05:44.000Z",
+    "text": "SANS Stormcast Tuesday, November 17th, 2026: LiteLLM/Starlette RCE Scans (CVE-2026-42271, CVE-2026-48710); Danfoss AK-SM800A RCEs; cyrus-sasl SRP Bypass (CVE-2026-129483); NoisyTCP (CVE-2026-99288)\n https://t.co/q8gPMtfa95 https://t.co/p5QVZ6bXmF",
+    "urls": [
+     {
+      "u": "https://t.co/q8gPMtfa95",
+      "d": "isc.sans.edu/podcastdetail/…"
+     },
+     {
+      "u": "https://t.co/p5QVZ6bXmF",
+      "d": "pic.x.com/p5QVZ6bXmF"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-129483",
+     "CVE-2026-42271",
+     "CVE-2026-48710",
+     "CVE-2026-99288"
+    ],
+    "kev": [
+     "CVE-2026-42271",
+     "CVE-2026-48710"
+    ],
+    "signals": []
+   },
+   {
+    "id": "2122485856363507892",
+    "uid": "217462908",
+    "cat": "CTI",
+    "at": "2026-11-17T00:23:56.000Z",
+    "text": "Microsoft Threat Intelligence has published a detailed analysis of this phishing campaign. Read the blog for IOCs, Microsoft Defender XDR hunting queries, and mitigation guidance: https://t.co/tRgvPnZmby",
+    "urls": [
+     {
+      "u": "https://t.co/tRgvPnZmby",
+      "d": "msft.it/6017xDI4W"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122484150770807014",
+    "uid": "217462908",
+    "cat": "CTI",
+    "at": "2026-11-17T00:17:10.000Z",
+    "text": "Microsoft Threat Intelligence has published a detailed analysis of the phishing campaign exploiting the November 12 Microsoft 365 service disruption, an example of threat actors exploiting notable global incidents in social engineering lures. https://t.co/AnGgiciktm\n\nThe campaign uses emails disguised as legitimate Microsoft 365 service-health notifications to target organizations across multiple industry sectors worldwide. Microsoft Defender blocks malicious domains used in this campaign, and Microsoft Defender for Office 365 blocks and quarantines phishing emails.\n\nWe assess that this activity was likely credential phishing, but available evidence does not confirm credential capture, malware delivery, or post-compromise activity. If credentials were entered, organizations should consider the risk of account compromise, mailbox access, business email compromise, internal phishing, and access to cloud collaboration data.\n\nRead the blog for IOCs, Microsoft Defender XDR hunting queries, and mitigation guidance.",
+    "urls": [
+     {
+      "u": "https://t.co/AnGgiciktm",
+      "d": "msft.it/6011xDIad"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122478357774307524",
+    "uid": "4487645412",
+    "cat": "CTI",
+    "at": "2026-11-16T23:54:08.000Z",
+    "text": "A downloaded ZIP archive disguised as a report uses DLL side-loading to decode and run a malicious Python script for #PureLogs / #PureRAT. Details at https://t.co/asDQbpBRpH https://t.co/1pZw87RdpJ",
+    "urls": [
+     {
+      "u": "https://t.co/asDQbpBRpH",
+      "d": "bit.ly/4ABknrR"
+     },
+     {
+      "u": "https://t.co/1pZw87RdpJ",
+      "d": "pic.x.com/1pZw87RdpJ"
+     },
+     {
+      "u": "https://t.co/1pZw87RdpJ",
+      "d": "pic.x.com/1pZw87RdpJ"
+     },
+     {
+      "u": "https://t.co/1pZw87RdpJ",
+      "d": "pic.x.com/1pZw87RdpJ"
+     },
+     {
+      "u": "https://t.co/1pZw87RdpJ",
+      "d": "pic.x.com/1pZw87RdpJ"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "PureLogs",
+     "PureRAT"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122470601021329657",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-16T23:23:19.000Z",
+    "text": "Missed out on the action? Dive into the recap: https://t.co/HqzgvgUoCo https://t.co/buCabSaWcy",
+    "urls": [
+     {
+      "u": "https://t.co/HqzgvgUoCo",
+      "d": "cisa.gov"
+     },
+     {
+      "u": "https://t.co/buCabSaWcy",
+      "d": "pic.x.com/buCabSaWcy"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122464740869849329",
+    "uid": "935278274845974528",
+    "cat": "CTI",
+    "at": "2026-11-16T23:00:02.000Z",
+    "text": "Threat hunts shouldn't start from a blank search bar every Monday morning.💡\n\nFor #GoogleTIMondays, schedule multi-step Flows in Google Threat Intelligence to automate saved searches, Agentic prompts, and inbox digests.\n\nSwipe ➡️ & share what you'd automate first! 👇 https://t.co/102Ou2zDsy",
+    "urls": [
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     },
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     },
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     },
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     },
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     },
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     },
+     {
+      "u": "https://t.co/102Ou2zDsy",
+      "d": "pic.x.com/102Ou2zDsy"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "GoogleTIMondays"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122427309802111413",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-16T20:31:18.000Z",
+    "text": "Ireland’s data protection regulator will fine the Match Group €11 million ($10 million) as a result of the dating app Tinder allegedly failing to provide users with their personal data held by the company upon request https://t.co/ArsVgaY3PM",
+    "urls": [
+     {
+      "u": "https://t.co/ArsVgaY3PM",
+      "d": "therecord.media/ireland-tinder…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122376871115714997",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-16T17:10:52.000Z",
+    "text": "Russia has denied accusations that its state-backed hackers targeted a Romanian government institution in an attempt to intercept emails exchanged with NATO and the European Union  https://t.co/rq2Hvzqd8O",
+    "urls": [
+     {
+      "u": "https://t.co/rq2Hvzqd8O",
+      "d": "therecord.media/romania-russia…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122369113594966244",
+    "uid": "935278274845974528",
+    "cat": "CTI",
+    "at": "2026-11-16T16:40:03.000Z",
+    "text": "New GTIG AI Threat Tracker:\n\nAs 2027 nears, human latency is leaving the attack chain—from autonomous patch-to-exploit pipelines to hijacked cloud quotas & backdoored configs.\n\n📄 Full report: https://t.co/lNcURijizF\n\n▶️ 2027 insights: https://t.co/fBbsskkBuG https://t.co/uuiJN76nZd",
+    "urls": [
+     {
+      "u": "https://t.co/lNcURijizF",
+      "d": "goo.gle/3Wzn9zs"
+     },
+     {
+      "u": "https://t.co/fBbsskkBuG",
+      "d": "goo.gle/492TC3P"
+     },
+     {
+      "u": "https://t.co/uuiJN76nZd",
+      "d": "pic.x.com/uuiJN76nZd"
+     },
+     {
+      "u": "https://t.co/uuiJN76nZd",
+      "d": "pic.x.com/uuiJN76nZd"
+     },
+     {
+      "u": "https://t.co/uuiJN76nZd",
+      "d": "pic.x.com/uuiJN76nZd"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122346584545296506",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-16T15:10:31.000Z",
+    "text": "The European Union sanctioned a pro-Russian hacktivist group and two dozen employees of the Moscow firm behind the Doppelgänger disinformation campaign https://t.co/kpUsbpPive",
+    "urls": [
+     {
+      "u": "https://t.co/kpUsbpPive",
+      "d": "therecord.media/russia-europe-…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122317417493987378",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-16T13:14:37.000Z",
+    "text": "Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710) https://t.co/PhRuLrHPTA https://t.co/7XAN6horVo",
+    "urls": [
+     {
+      "u": "https://t.co/PhRuLrHPTA",
+      "d": "isc.sans.edu/diary/33522"
+     },
+     {
+      "u": "https://t.co/7XAN6horVo",
+      "d": "pic.x.com/7XAN6horVo"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-42271",
+     "CVE-2026-48710"
+    ],
+    "kev": [
+     "CVE-2026-42271",
+     "CVE-2026-48710"
+    ],
+    "signals": []
    }
   ]
  },
