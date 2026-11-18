@@ -80,6 +80,19 @@ Both show where victims are, not where attacks come from. Ransomware.live asks
 to be credited wherever its data is shown and does not allow commercial use
 without permission.
 
+## Feed tab: posts from X (optional)
+
+With a secret named `X_BEARER_TOKEN` (from the X Developer Console), the
+collector reads the newest posts from the 20 accounts in `X_ACCOUNTS` in
+`fetch.py` and shows them on the Feed tab (`#feed`).
+
+- X charges per post read, so `X_MAX_READS_PER_DAY` (default 100, about
+  $0.50 a day) caps it. Profiles are looked up once a week.
+- Each account is asked only for posts newer than the last one seen.
+- Posts are shown unchanged, with the picture, name, @username, X logo and a
+  time that links to the post, as X's display rules require. They stay 72 hours.
+- Set a spending limit in the X Developer Console as well.
+
 ## AI summaries (optional)
 
 If the repository has a secret named `ANTHROPIC_API_KEY`, the collector asks
