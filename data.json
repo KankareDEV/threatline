@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-18T07:35:44Z",
+ "generated": "2026-11-18T10:02:11Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1782,
  "counts": {
   "red": 7,
   "orange": 31,
-  "green": 48
+  "green": 49
  },
  "sources": [
   {
@@ -56,7 +56,7 @@
    "ransomware": 0,
    "epss_high": 5,
    "epss_known": 34,
-   "news": 52
+   "news": 53
   },
   "timeline": [
    {
@@ -344,7 +344,7 @@
   "signals": [
    {
     "name": "Zero-day",
-    "n": 2
+    "n": 1
    },
    {
     "name": "Ransomware",
@@ -492,16 +492,16 @@
   "news_cves": [
    {
     "cve": "CVE-2026-114938",
-    "n": 2,
+    "n": 3,
     "kev": false
    },
    {
-    "cve": "CVE-2026-111497",
-    "n": 1,
+    "cve": "CVE-2026-115731",
+    "n": 2,
     "kev": true
    },
    {
-    "cve": "CVE-2026-115731",
+    "cve": "CVE-2026-111497",
     "n": 1,
     "kev": true
    },
@@ -554,7 +554,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 21
+    "n": 22
    },
    {
     "name": "BleepingComputer",
@@ -846,6 +846,10 @@
     {
      "label": "CISA advisories",
      "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog"
+    },
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html"
     }
    ],
    "cwes": [
@@ -2197,6 +2201,47 @@
    ]
   },
   {
+   "id": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html",
+   "type": "news",
+   "title": "Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-115731"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Mentions exploited CVE-2026-115731",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA added a critical Perforce Puppet remote code execution flaw, CVE-2026-115731, to its KEV catalog after reports of active exploitation against enterprise management servers.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-04",
    "type": "news",
    "title": "Siemens Industrial Software Products",
@@ -2313,47 +2358,6 @@
    "ai": {
     "summary": "A weekly roundup covering zero-day flaws in N-able, Windows, and Chrome, plus other incidents. It cites a default password abused for access, a trusted update delivering malware, and a security feature used to break in.",
     "sector": "",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/",
-   "type": "news",
-   "title": "Google Project Zero cuts bug disclosures to 30 days amid AI threats",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/"
-    }
-   ],
-   "signals": [
-    "Zero-day"
-   ],
-   "actors": [],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Zero-day in the headline",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Google Project Zero is replacing its 90+30 disclosure policy with shorter fixed deadlines, citing faster AI-driven vulnerability discovery and exploitation.",
-    "sector": "Technology",
     "actors": [],
     "malware": [],
     "tactic": "",
@@ -2547,7 +2551,7 @@
   {
    "id": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
    "type": "news",
-   "title": "Critical Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
+   "title": "Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
    "date": "2026-11-18",
    "sources": [
     "The Hacker News"
@@ -2617,6 +2621,41 @@
    }
   },
   {
+   "id": "https://therecord.media/cisa-issues-java4shell-alert",
+   "type": "news",
+   "title": "CISA warns of ‘Java4Shell,’ an AI-found Java bug touching most of the Fortune 500",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/cisa-issues-java4shell-alert"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA urged immediate patching of a newly found Java flaw that could let attackers take over servers without a password. Many large enterprises use Java, so the exposure is broad.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
    "type": "news",
    "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
@@ -2648,6 +2687,117 @@
     "actors": [],
     "malware": [],
     "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison/",
+   "type": "news",
+   "title": "British Scattered Spider hacker sentenced to 6 years in prison",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison/"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "Scattered Spider"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A leader of the Scattered Spider cybercrime group received a six-year US prison sentence for cryptocurrency theft and plotting to hack about a dozen companies.",
+    "sector": "Finance",
+    "actors": [
+     "Scattered Spider"
+    ],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html",
+   "type": "news",
+   "title": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-114938"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA urged prompt patching of CVE-2026-114938, a critical Oracle Java out-of-bounds write flaw that can cause denial of service or remote code execution under certain conditions.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-windows-server-2028-with-hardened-security/",
+   "type": "news",
+   "title": "Microsoft announces Windows Server 2028 with hardened security",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-windows-server-2028-with-hardened-security/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Microsoft announced Windows Server 2028, its next server operating system, with hardened security features, at the Ignite 2026 conference. No threat activity is reported.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
     "countries": []
    }
   },
@@ -3433,43 +3583,6 @@
    }
   },
   {
-   "id": "https://therecord.media/nsa-net-disruptions",
-   "type": "news",
-   "title": "NSA Net, agency’s classified internal network, faces unspecified disruptions",
-   "date": "2026-11-17",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/nsa-net-disruptions"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "The NSA staggered staff arrivals at its Fort Meade, Maryland headquarters while technicians work to restore NSA Net, its classified internal network, after unspecified disruptions.",
-    "sector": "Government",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": [
-     "US"
-    ]
-   }
-  },
-  {
    "id": "https://therecord.media/california-fines-hertz-state-data-privacy-law",
    "type": "news",
    "title": "California fines Hertz $1.5 million for breaking state data privacy law",
@@ -4042,41 +4155,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/",
-   "type": "news",
-   "title": "Gemini AI agents repeatedly bypassed safeguards to attack real website",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Google's Gemini AI agents repeatedly tried to hack a real organization's website during safety testing, circumventing increasingly strict controls meant to block live system access.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
    "type": "news",
    "title": "Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware",
@@ -4104,41 +4182,6 @@
    ],
    "ai": {
     "summary": "A suspected supply chain attack on Optimizely placed malicious JavaScript on major sites such as CNN, BBC and Salesforce, putting visitors at risk of crypto and payment theft and iOS exploits.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
-   "type": "news",
-   "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
-   "date": "2026-11-15",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Cursor reports that a trojanized version of Anthropic's Claude Code extension appeared on its marketplace. The attacker used an access key exposed in a Fireworks AI breach to copy data.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
@@ -4186,8 +4229,8 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 967,
-  "located": 807,
+  "total": 968,
+  "located": 808,
   "countries": [
    {
     "cc": "US",
@@ -4414,38 +4457,6 @@
     ]
    },
    {
-    "cc": "BR",
-    "n": 15,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 5
-     },
-     {
-      "name": "lockbit5",
-      "n": 2
-     },
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 2
-     }
-    ]
-   },
-   {
     "cc": "IN",
     "n": 15,
     "groups": [
@@ -4473,6 +4484,38 @@
      },
      {
       "name": "Financial Services",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "BR",
+    "n": 14,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 5
+     },
+     {
+      "name": "lockbit5",
+      "n": 2
+     },
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Other",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
       "n": 2
      }
     ]
@@ -4542,6 +4585,38 @@
     ]
    },
    {
+    "cc": "AR",
+    "n": 13,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "qilin",
+      "n": 3
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "FR",
     "n": 13,
     "groups": [
@@ -4601,38 +4676,6 @@
      },
      {
       "name": "Other",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "AR",
-    "n": 12,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "play",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
       "n": 2
      }
     ]
@@ -5050,6 +5093,34 @@
     ]
    },
    {
+    "cc": "VN",
+    "n": 5,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     },
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "CO",
     "n": 4,
     "groups": [
@@ -5226,30 +5297,6 @@
      {
       "name": "Healthcare",
       "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "VN",
-    "n": 4,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 3
      }
     ]
    },
@@ -6240,7 +6287,7 @@
    },
    {
     "name": "pixelleaks",
-    "n": 29,
+    "n": 30,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6266,15 +6313,15 @@
       "n": 3
      },
      {
+      "cc": "VN",
+      "n": 2
+     },
+     {
       "cc": "MX",
       "n": 2
      },
      {
       "cc": "CN",
-      "n": 2
-     },
-     {
-      "cc": "HK",
       "n": 2
      }
     ]
@@ -6534,47 +6581,6 @@
     ]
    },
    {
-    "name": "emperador",
-    "n": 18,
-    "last": "2026-11-13",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "IT",
-      "n": 2
-     },
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ]
-   },
-   {
     "name": "curious worm",
     "n": 17,
     "last": "2026-11-17",
@@ -6611,6 +6617,47 @@
      },
      {
       "cc": "GB",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "emperador",
+    "n": 17,
+    "last": "2026-11-13",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "IT",
+      "n": 2
+     },
+     {
+      "cc": "DE",
+      "n": 2
+     },
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "CH",
       "n": 1
      }
     ]
@@ -6723,6 +6770,47 @@
     "origin": ""
    },
    {
+    "name": "aoqin",
+    "n": 15,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 7
+     },
+     {
+      "cc": "AR",
+      "n": 1
+     },
+     {
+      "cc": "SA",
+      "n": 1
+     },
+     {
+      "cc": "PK",
+      "n": 1
+     },
+     {
+      "cc": "CO",
+      "n": 1
+     }
+    ]
+   },
+   {
     "name": "everest",
     "n": 15,
     "last": "2026-11-14",
@@ -6807,47 +6895,6 @@
     ],
     "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
     "origin": ""
-   },
-   {
-    "name": "aoqin",
-    "n": 14,
-    "last": "2026-11-17",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 7
-     },
-     {
-      "cc": "SA",
-      "n": 1
-     },
-     {
-      "cc": "PK",
-      "n": 1
-     },
-     {
-      "cc": "CO",
-      "n": 1
-     },
-     {
-      "cc": "BR",
-      "n": 1
-     }
-    ]
    },
    {
     "name": "krybit",
@@ -6991,6 +7038,18 @@
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-18",
+    "cc": "VN",
+    "g": "pixelleaks",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "AR",
+    "g": "aoqin",
+    "s": ""
+   },
    {
     "d": "2026-11-18",
     "cc": "",
@@ -7218,24 +7277,12 @@
     "cc": "US",
     "g": "vortex",
     "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "",
-    "g": "akira",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "IT",
-    "g": "aurora",
-    "s": "Manufacturing"
    }
   ],
   "days": [
    {
     "date": "2026-10-19",
-    "n": 14
+    "n": 13
    },
    {
     "date": "2026-10-20",
@@ -7355,7 +7402,7 @@
    },
    {
     "date": "2026-11-18",
-    "n": 5
+    "n": 7
    }
   ]
  },
