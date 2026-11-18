@@ -73,7 +73,7 @@ AI_TACTICS = ["Reconnaissance", "Resource Development", "Initial Access", "Execu
 # X charges for every post it returns, so reads are capped per day.
 X_TOKEN = os.environ.get("X_BEARER_TOKEN", "").strip()
 X_API = "https://api.x.com/2/"
-X_MAX_READS_PER_DAY = 100   # about $0.50 a day at $0.005 per post; lower it to spend less
+X_MAX_READS_PER_DAY = 50   # about $0.50 a day at $0.005 per post; lower it to spend less
 X_PER_ACCOUNT = 5           # newest posts asked for per account per run (X's minimum is 5)
 X_KEEP_HOURS = 72           # how long a post stays on the site
 X_PROFILE_DAYS = 7          # how often names and profile pictures are refreshed
