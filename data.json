@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-18T00:54:59Z",
+ "generated": "2026-11-18T07:29:32Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1782,
  "counts": {
   "red": 7,
   "orange": 31,
-  "green": 46
+  "green": 48
  },
  "sources": [
   {
@@ -52,7 +52,7 @@
    "ransomware": 0,
    "epss_high": 5,
    "epss_known": 34,
-   "news": 50
+   "news": 52
   },
   "timeline": [
    {
@@ -348,7 +348,7 @@
    },
    {
     "name": "Data breach",
-    "n": 1
+    "n": 2
    }
   ],
   "actors": [
@@ -445,6 +445,16 @@
     ]
    },
    {
+    "name": "COLDRIVER",
+    "n": 1,
+    "links": [
+     {
+      "label": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+      "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html"
+     }
+    ]
+   },
+   {
     "name": "CoffeeLoader",
     "n": 1,
     "links": [
@@ -455,32 +465,22 @@
     ]
    },
    {
+    "name": "Cold Relic",
+    "n": 1,
+    "links": [
+     {
+      "label": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+      "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html"
+     }
+    ]
+   },
+   {
     "name": "EvilTokens",
     "n": 1,
     "links": [
      {
       "label": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
       "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/"
-     }
-    ]
-   },
-   {
-    "name": "GitDoor",
-    "n": 1,
-    "links": [
-     {
-      "label": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
-      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
-     }
-    ]
-   },
-   {
-    "name": "GraphDoor",
-    "n": 1,
-    "links": [
-     {
-      "label": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
-      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
      }
     ]
    }
@@ -550,7 +550,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 19
+    "n": 21
    },
    {
     "name": "BleepingComputer",
@@ -2449,6 +2449,57 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+   "type": "news",
+   "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [
+    "COLDRIVER",
+    "Cold Relic",
+    "UNC4057"
+   ],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "Russia-linked espionage group Cold Relic used a cloud compromise and stolen Google Workspace data to launch linked intrusions, including a 2026 breach at a U.S. organization, according to Google's Mandiant and GTIG.",
+    "sector": "",
+    "actors": [
+     "Cold Relic",
+     "COLDRIVER",
+     "UNC4057"
+    ],
+    "malware": [],
+    "tactic": "Lateral Movement",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
    "id": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
    "type": "news",
    "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
@@ -2490,6 +2541,43 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
+   "type": "news",
+   "title": "Critical Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-114938"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Oracle plans to release patches on November 17, 2026, for 11 Java SE flaws that may be exploited remotely without authentication. Separate reports warn of a critical OpenJDK remote code execution flaw, with a maximum CVSS 3.1 score of 8.1.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
    "type": "news",
    "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
@@ -2521,6 +2609,41 @@
     "actors": [],
     "malware": [],
     "tactic": "Defense Evasion",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+   "type": "news",
+   "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers compromised Microsoft's agent-framework PyPI package, publishing malicious versions 1.26.1 and 1.26.2 on November 17, 2026. The versions run a credential stealer on every Python start, targeting cloud credentials.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -3268,43 +3391,6 @@
     "countries": [
      "US"
     ]
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
-   "type": "news",
-   "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
-   "date": "2026-11-17",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-114938"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Oracle plans to patch 11 remotely exploitable Java SE flaws on 17 November 2026. Separate reports warn of a critical OpenJDK remote code execution flaw, CVE-2026-114938.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
    }
   },
   {
@@ -4097,15 +4183,15 @@
  "geo": {
   "window_days": 30,
   "total": 967,
-  "located": 809,
+  "located": 807,
   "countries": [
    {
     "cc": "US",
-    "n": 347,
+    "n": 346,
     "groups": [
      {
       "name": "qilin",
-      "n": 35
+      "n": 36
      },
      {
       "name": "thegentlemen",
@@ -4123,17 +4209,17 @@
      },
      {
       "name": "Healthcare",
-      "n": 59
+      "n": 60
      },
      {
       "name": "Manufacturing",
-      "n": 48
+      "n": 49
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 65,
+    "n": 64,
     "groups": [
      {
       "name": "payload",
@@ -4197,18 +4283,18 @@
    },
    {
     "cc": "CA",
-    "n": 28,
+    "n": 27,
     "groups": [
      {
       "name": "thegentlemen",
       "n": 4
      },
      {
-      "name": "incransom",
-      "n": 4
+      "name": "booba project",
+      "n": 3
      },
      {
-      "name": "booba project",
+      "name": "incransom",
       "n": 3
      }
     ],
@@ -4229,7 +4315,7 @@
    },
    {
     "cc": "MX",
-    "n": 25,
+    "n": 26,
     "groups": [
      {
       "name": "qilin",
@@ -4241,7 +4327,7 @@
      },
      {
       "name": "pixelleaks",
-      "n": 1
+      "n": 2
      }
     ],
     "sectors": [
@@ -5914,8 +6000,8 @@
   "groups": [
    {
     "name": "qilin",
-    "n": 114,
-    "last": "2026-11-16",
+    "n": 115,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Manufacturing",
@@ -5933,7 +6019,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 35
+      "n": 36
      },
      {
       "cc": "DE",
@@ -6000,7 +6086,7 @@
    },
    {
     "name": "incransom",
-    "n": 48,
+    "n": 46,
     "last": "2026-11-16",
     "sectors": [
      {
@@ -6008,11 +6094,11 @@
       "n": 13
      },
      {
-      "name": "Other",
-      "n": 6
+      "name": "Financial Services",
+      "n": 5
      },
      {
-      "name": "Financial Services",
+      "name": "Other",
       "n": 5
      }
     ],
@@ -6023,7 +6109,7 @@
      },
      {
       "cc": "CA",
-      "n": 4
+      "n": 3
      },
      {
       "cc": "IN",
@@ -6150,12 +6236,12 @@
    },
    {
     "name": "pixelleaks",
-    "n": 27,
-    "last": "2026-11-17",
+    "n": 29,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Technology",
-      "n": 7
+      "n": 8
      },
      {
       "name": "Healthcare",
@@ -6176,16 +6262,16 @@
       "n": 3
      },
      {
+      "cc": "MX",
+      "n": 2
+     },
+     {
       "cc": "CN",
       "n": 2
      },
      {
       "cc": "HK",
       "n": 2
-     },
-     {
-      "cc": "MX",
-      "n": 1
      }
     ]
    },
@@ -6569,6 +6655,39 @@
     "origin": ""
    },
    {
+    "name": "vortex",
+    "n": 17,
+    "last": "2026-11-17",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 9
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Financial Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 15
+     },
+     {
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ]
+   },
+   {
     "name": "payload",
     "n": 16,
     "last": "2026-11-17",
@@ -6598,39 +6717,6 @@
     ],
     "about": "Payload emerged in early 2026 and uses Babuk-derived source code to attack Windows and ESXi systems with double extortion. It targets healthcare, energy, real estate, and agriculture. It claimed 12 victims across seven countries within hours of launching its leak site.",
     "origin": ""
-   },
-   {
-    "name": "vortex",
-    "n": 16,
-    "last": "2026-11-17",
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 8
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Financial Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 14
-     },
-     {
-      "cc": "DE",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ]
    },
    {
     "name": "everest",
@@ -6902,6 +6988,42 @@
   ],
   "recent": [
    {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "helix",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "pixelleaks",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "MX",
+    "g": "pixelleaks",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "helix",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "qilin",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "vortex",
+    "s": "Healthcare"
+   },
+   {
     "d": "2026-11-17",
     "cc": "US",
     "g": "helix",
@@ -7104,48 +7226,12 @@
     "cc": "IT",
     "g": "aurora",
     "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "AR",
-    "g": "thegentlemen",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "KW",
-    "g": "netrunner",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "",
-    "g": "curious worm",
-    "s": ""
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "SA",
-    "g": "aoqin",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "curious worm",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "DE",
-    "g": "chaos",
-    "s": "Retail & E-Commerce"
    }
   ],
   "days": [
    {
     "date": "2026-10-19",
-    "n": 20
+    "n": 14
    },
    {
     "date": "2026-10-20",
@@ -7261,11 +7347,11 @@
    },
    {
     "date": "2026-11-17",
-    "n": 34
+    "n": 35
    },
    {
     "date": "2026-11-18",
-    "n": 0
+    "n": 5
    }
   ]
  },
