@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-17T17:34:21Z",
+ "generated": "2026-11-18T00:54:59Z",
  "kev_window_days": 30,
  "news_window_days": 3,
- "kev_total": 1781,
+ "kev_total": 1782,
  "counts": {
   "red": 7,
-  "orange": 29,
-  "green": 42
+  "orange": 31,
+  "green": 46
  },
  "sources": [
   {
@@ -48,17 +48,13 @@
  ],
  "analytics": {
   "totals": {
-   "kev_window": 33,
+   "kev_window": 34,
    "ransomware": 0,
    "epss_high": 5,
-   "epss_known": 33,
-   "news": 45
+   "epss_known": 34,
+   "news": 50
   },
   "timeline": [
-   {
-    "date": "2026-10-18",
-    "n": 0
-   },
    {
     "date": "2026-10-19",
     "n": 0
@@ -177,13 +173,17 @@
    },
    {
     "date": "2026-11-17",
+    "n": 1
+   },
+   {
+    "date": "2026-11-18",
     "n": 0
    }
   ],
   "severity": [
    {
     "name": "Critical (9+)",
-    "n": 11
+    "n": 12
    },
    {
     "name": "High (7 to 8.9)",
@@ -217,7 +217,7 @@
    },
    {
     "name": "Under 10%",
-    "n": 20
+    "n": 21
    },
    {
     "name": "No score yet",
@@ -330,6 +330,11 @@
     "cve": "CVE-2026-111793",
     "title": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
     "due": "2026-11-24"
+   },
+   {
+    "cve": "CVE-2026-115731",
+    "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+    "due": "2026-12-01"
    }
   ],
   "signals": [
@@ -339,14 +344,66 @@
    },
    {
     "name": "Ransomware",
-    "n": 1
+    "n": 2
    },
    {
     "name": "Data breach",
-    "n": 3
+    "n": 1
    }
   ],
   "actors": [
+   {
+    "name": "CAIRN",
+    "n": 2,
+    "links": [
+     {
+      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
+      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
+     },
+     {
+      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
+     }
+    ]
+   },
+   {
+    "name": "CyberStrikeAI",
+    "n": 2,
+    "links": [
+     {
+      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
+      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
+     },
+     {
+      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
+     }
+    ]
+   },
+   {
+    "name": "PentAGI",
+    "n": 2,
+    "links": [
+     {
+      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
+      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
+     },
+     {
+      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
+     }
+    ]
+   },
+   {
+    "name": "8 Digits Team",
+    "n": 1,
+    "links": [
+     {
+      "label": "Kazakh ransomware hacking suspect extradited from Italy",
+      "url": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx"
+     }
+    ]
+   },
    {
     "name": "ARTEX",
     "n": 1,
@@ -358,22 +415,12 @@
     ]
    },
    {
-    "name": "ARTEX AI penetration testing framework",
+    "name": "Artex",
     "n": 1,
     "links": [
      {
-      "label": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-      "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/"
-     }
-    ]
-   },
-   {
-    "name": "Artion Kurtaj",
-    "n": 1,
-    "links": [
-     {
-      "label": "Autistic teen hacker pleads guilty to leak of Grand Theft Auto VI footage",
-      "url": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak"
+      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
+      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
      }
     ]
    },
@@ -398,32 +445,12 @@
     ]
    },
    {
-    "name": "CAIRN",
-    "n": 1,
-    "links": [
-     {
-      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
-   },
-   {
     "name": "CoffeeLoader",
     "n": 1,
     "links": [
      {
       "label": "Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware",
       "url": "https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html"
-     }
-    ]
-   },
-   {
-    "name": "CyberStrikeAI",
-    "n": 1,
-    "links": [
-     {
-      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
      }
     ]
    },
@@ -456,61 +483,26 @@
       "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
      }
     ]
-   },
-   {
-    "name": "Hoody Hyena",
-    "n": 1,
-    "links": [
-     {
-      "label": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-      "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
-     }
-    ]
    }
   ],
   "news_cves": [
+   {
+    "cve": "CVE-2026-114938",
+    "n": 2,
+    "kev": false
+   },
    {
     "cve": "CVE-2026-111497",
     "n": 1,
     "kev": true
    },
    {
-    "cve": "CVE-2026-112136",
+    "cve": "CVE-2026-115731",
     "n": 1,
-    "kev": false
+    "kev": true
    },
    {
-    "cve": "CVE-2026-112137",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-85114",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-85115",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-109830",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-58114",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-59082",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-106175",
+    "cve": "CVE-2026-109097",
     "n": 1,
     "kev": false
    },
@@ -528,12 +520,37 @@
     "cve": "CVE-2026-120255",
     "n": 1,
     "kev": false
+   },
+   {
+    "cve": "CVE-2026-120260",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-120271",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-120298",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-112136",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-112137",
+    "n": 1,
+    "kev": false
    }
   ],
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 16
+    "n": 19
    },
    {
     "name": "BleepingComputer",
@@ -541,7 +558,7 @@
    },
    {
     "name": "CISA advisories",
-    "n": 9
+    "n": 11
    },
    {
     "name": "The Record",
@@ -798,35 +815,40 @@
    ]
   },
   {
-   "id": "CVE-2026-116606",
+   "id": "CVE-2026-115731",
    "type": "vuln",
-   "title": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-   "cve": "CVE-2026-116606",
-   "vendor": "Barracuda Networks",
-   "product": "Barracuda Email Security Gateway (ESG)",
-   "date": "2026-11-10",
-   "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+   "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+   "cve": "CVE-2026-115731",
+   "vendor": "Perforce",
+   "product": "Puppet Enterprise",
+   "date": "2026-11-17",
+   "summary": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-13",
-   "epss": 0.10947,
+   "due": "2026-12-01",
+   "epss": 0.00366,
    "cvss": {
-    "score": 9.3,
+    "score": 9.4,
     "version": "4.0",
     "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog"
     }
    ],
    "cwes": [
-    "CWE-288"
+    "CWE-502",
+    "CWE-94"
    ],
-   "score": 73,
+   "score": 75,
    "level": "red",
    "reasons": [
     {
@@ -834,16 +856,20 @@
      "points": 50
     },
     {
-     "label": "EPSS 11% chance of exploitation in 30 days",
-     "points": 3
+     "label": "EPSS 0% chance of exploitation in 30 days",
+     "points": 0
     },
     {
-     "label": "CVSS 9.3 critical severity",
+     "label": "CVSS 9.4 critical severity",
      "points": 10
     },
     {
      "label": "Added in the last 7 days",
      "points": 10
+    },
+    {
+     "label": "In the news this week",
+     "points": 5
     }
    ]
   },
@@ -894,35 +920,35 @@
    ]
   },
   {
-   "id": "CVE-2026-111560",
+   "id": "CVE-2026-116606",
    "type": "vuln",
-   "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
-   "cve": "CVE-2026-111560",
+   "title": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+   "cve": "CVE-2026-116606",
    "vendor": "Barracuda Networks",
-   "product": "Multiple Products",
+   "product": "Barracuda Email Security Gateway (ESG)",
    "date": "2026-11-10",
-   "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+   "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-13",
-   "epss": 0.09082,
+   "epss": 0.10947,
    "cvss": {
-    "score": 8.6,
+    "score": 9.3,
     "version": "4.0",
-    "severity": "HIGH",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606"
     }
    ],
    "cwes": [
-    "CWE-78"
+    "CWE-288"
    ],
-   "score": 67,
+   "score": 68,
    "level": "orange",
    "reasons": [
     {
@@ -930,16 +956,16 @@
      "points": 50
     },
     {
-     "label": "EPSS 9% chance of exploitation in 30 days",
-     "points": 2
+     "label": "EPSS 11% chance of exploitation in 30 days",
+     "points": 3
     },
     {
-     "label": "CVSS 8.6 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 7 days",
+     "label": "CVSS 9.3 critical severity",
      "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
@@ -1088,106 +1114,6 @@
     },
     {
      "label": "CVSS 7.8 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-20320",
-   "type": "vuln",
-   "title": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
-   "cve": "CVE-2026-20320",
-   "vendor": "Cisco",
-   "product": "BroadWorks",
-   "date": "2026-11-10",
-   "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-24",
-   "epss": 0.00976,
-   "cvss": {
-    "score": 7.5,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20320"
-    }
-   ],
-   "cwes": [
-    "CWE-611"
-   ],
-   "score": 65,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 7.5 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-125350",
-   "type": "vuln",
-   "title": "Google Chromium Use-After-Free Vulnerability",
-   "cve": "CVE-2026-125350",
-   "vendor": "Google",
-   "product": "Chromium",
-   "date": "2026-11-10",
-   "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-24",
-   "epss": 0.00962,
-   "cvss": {
-    "score": 8.8,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "by": "CISA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125350"
-    }
-   ],
-   "cwes": [
-    "CWE-416"
-   ],
-   "score": 65,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 8.8 high severity",
      "points": 5
     },
     {
@@ -1349,35 +1275,35 @@
    ]
   },
   {
-   "id": "CVE-2026-124194",
+   "id": "CVE-2026-111560",
    "type": "vuln",
-   "title": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
-   "cve": "CVE-2026-124194",
-   "vendor": "Microsoft",
-   "product": "Office",
+   "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+   "cve": "CVE-2026-111560",
+   "vendor": "Barracuda Networks",
+   "product": "Multiple Products",
    "date": "2026-11-10",
-   "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+   "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-24",
-   "epss": 0.0162,
+   "due": "2026-11-13",
+   "epss": 0.09082,
    "cvss": {
-    "score": 6.5,
-    "version": "3.1",
-    "severity": "MEDIUM",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
+    "score": 8.6,
+    "version": "4.0",
+    "severity": "HIGH",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560"
     }
    ],
    "cwes": [
-    "CWE-356"
+    "CWE-78"
    ],
-   "score": 60,
+   "score": 62,
    "level": "orange",
    "reasons": [
     {
@@ -1385,43 +1311,47 @@
      "points": 50
     },
     {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
+     "label": "EPSS 9% chance of exploitation in 30 days",
+     "points": 2
     },
     {
-     "label": "Added in the last 7 days",
-     "points": 10
+     "label": "CVSS 8.6 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
   {
-   "id": "CVE-2026-111793",
+   "id": "CVE-2026-20320",
    "type": "vuln",
-   "title": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
-   "cve": "CVE-2026-111793",
-   "vendor": "Openwave Messaging Limited",
-   "product": "Webtop Media Transcoder",
+   "title": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+   "cve": "CVE-2026-20320",
+   "vendor": "Cisco",
+   "product": "BroadWorks",
    "date": "2026-11-10",
-   "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+   "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-24",
-   "epss": 0.00638,
+   "epss": 0.00976,
    "cvss": {
-    "score": 4.3,
+    "score": 7.5,
     "version": "3.1",
-    "severity": "MEDIUM",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111793"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20320"
     }
    ],
    "cwes": [
-    "CWE-669"
+    "CWE-611"
    ],
    "score": 60,
    "level": "orange",
@@ -1435,8 +1365,62 @@
      "points": 0
     },
     {
-     "label": "Added in the last 7 days",
-     "points": 10
+     "label": "CVSS 7.5 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-125350",
+   "type": "vuln",
+   "title": "Google Chromium Use-After-Free Vulnerability",
+   "cve": "CVE-2026-125350",
+   "vendor": "Google",
+   "product": "Chromium",
+   "date": "2026-11-10",
+   "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-24",
+   "epss": 0.00962,
+   "cvss": {
+    "score": 8.8,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "by": "CISA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125350"
+    }
+   ],
+   "cwes": [
+    "CWE-416"
+   ],
+   "score": 60,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 8.8 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
@@ -1482,56 +1466,6 @@
     },
     {
      "label": "CVSS 7.5 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 14 days",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-119977",
-   "type": "vuln",
-   "title": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
-   "cve": "CVE-2026-119977",
-   "vendor": "WordPress",
-   "product": "WordPress Core",
-   "date": "2026-11-03",
-   "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-06",
-   "epss": 0.01586,
-   "cvss": {
-    "score": 8.1,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
-    }
-   ],
-   "cwes": [
-    "CWE-367"
-   ],
-   "score": 60,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 8.1 high severity",
      "points": 5
     },
     {
@@ -1725,6 +1659,98 @@
    ]
   },
   {
+   "id": "CVE-2026-124194",
+   "type": "vuln",
+   "title": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+   "cve": "CVE-2026-124194",
+   "vendor": "Microsoft",
+   "product": "Office",
+   "date": "2026-11-10",
+   "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-24",
+   "epss": 0.0162,
+   "cvss": {
+    "score": 6.5,
+    "version": "3.1",
+    "severity": "MEDIUM",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:H/RL:O/RC:C",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124194"
+    }
+   ],
+   "cwes": [
+    "CWE-356"
+   ],
+   "score": 55,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 2% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-111793",
+   "type": "vuln",
+   "title": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+   "cve": "CVE-2026-111793",
+   "vendor": "Openwave Messaging Limited",
+   "product": "Webtop Media Transcoder",
+   "date": "2026-11-10",
+   "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-24",
+   "epss": 0.00638,
+   "cvss": {
+    "score": 4.3,
+    "version": "3.1",
+    "severity": "MEDIUM",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111793"
+    }
+   ],
+   "cwes": [
+    "CWE-669"
+   ],
+   "score": 55,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
    "id": "CVE-2024-27834",
    "type": "vuln",
    "title": "Apple Multiple Products Improper Authentication Vulnerability",
@@ -1766,6 +1792,52 @@
     },
     {
      "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-119977",
+   "type": "vuln",
+   "title": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+   "cve": "CVE-2026-119977",
+   "vendor": "WordPress",
+   "product": "WordPress Core",
+   "date": "2026-11-03",
+   "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-06",
+   "epss": 0.01586,
+   "cvss": {
+    "score": 8.1,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
+    }
+   ],
+   "cwes": [
+    "CWE-367"
+   ],
+   "score": 55,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 2% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 8.1 high severity",
      "points": 5
     }
    ]
@@ -2162,6 +2234,47 @@
    }
   },
   {
+   "id": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog",
+   "type": "news",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-115731"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Mentions exploited CVE-2026-115731",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA added a Perforce Puppet Enterprise deserialization vulnerability, CVE-2026-115731, to its Known Exploited Vulnerabilities catalog after evidence of active exploitation. Federal civilian agencies must prioritise remediation.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/weekly-recap-n-able-0-days-windows-0.html",
    "type": "news",
    "title": "⚡ Weekly Recap: N-able 0-Days, Windows 0-Days, Chrome 0-Days, Fridge 0-Days, and More Bad Days",
@@ -2287,26 +2400,30 @@
    }
   },
   {
-   "id": "https://therecord.media/uber-says-150000-impacted-third-party-breach",
+   "id": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx",
    "type": "news",
-   "title": "Uber says nearly 150,000 impacted by third-party breach",
-   "date": "2026-11-18",
+   "title": "Kazakh ransomware hacking suspect extradited from Italy",
+   "date": "2026-11-17",
    "sources": [
     "The Record"
    ],
    "cves": [],
-   "ransomware": false,
+   "ransomware": true,
    "links": [
     {
      "label": "The Record",
-     "url": "https://therecord.media/uber-says-150000-impacted-third-party-breach"
+     "url": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx"
     }
    ],
    "signals": [
-    "Data breach"
+    "Ransomware"
    ],
-   "actors": [],
-   "score": 30,
+   "actors": [
+    "8 Digits Team",
+    "INC",
+    "Lynx"
+   ],
+   "score": 35,
    "level": "green",
    "reasons": [
     {
@@ -2314,16 +2431,20 @@
      "points": 20
     },
     {
-     "label": "Data breach in the headline",
-     "points": 10
+     "label": "Ransomware in the headline",
+     "points": 15
     }
    ],
    "ai": {
-    "summary": "Uber is notifying nearly 150,000 people of a breach at a third-party provider, which reported in October that stolen internal credentials were used to access Uber's account.",
-    "sector": "Transportation",
-    "actors": [],
+    "summary": "Kazakh national Roman Khlynovskiy was extradited from Italy over alleged ransomware attacks on healthcare organisations, schools and companies. He is accused of working with the 8 Digits Team, linked to INC and Lynx.",
+    "sector": "Healthcare",
+    "actors": [
+     "8 Digits Team",
+     "INC",
+     "Lynx"
+    ],
     "malware": [],
-    "tactic": "Credential Access",
+    "tactic": "Impact",
     "countries": []
    }
   },
@@ -2369,47 +2490,37 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+   "id": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
    "type": "news",
-   "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-   "date": "2026-11-16",
+   "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
+   "date": "2026-11-18",
    "sources": [
-    "BleepingComputer"
+    "The Hacker News"
    ],
    "cves": [],
    "ransomware": false,
    "links": [
     {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/"
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html"
     }
    ],
-   "signals": [
-    "Data breach"
-   ],
-   "actors": [
-    "ARTEX AI penetration testing framework"
-   ],
-   "score": 30,
+   "signals": [],
+   "actors": [],
+   "score": 20,
    "level": "green",
    "reasons": [
     {
      "label": "Reported by a tracked source",
      "points": 20
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
     }
    ],
    "ai": {
-    "summary": "Attackers who breached Barracuda's cloud environment used a stolen cloud access key and the ARTEX AI penetration testing framework in the intrusion.",
+    "summary": "Researchers at NebuSec say a malicious bot widget can get past Telegram's new Android security filter and run code outside it. They demonstrated this on a Telegram test server.",
     "sector": "Technology",
     "actors": [],
-    "malware": [
-     "ARTEX AI penetration testing framework"
-    ],
-    "tactic": "Initial Access",
+    "malware": [],
+    "tactic": "Defense Evasion",
     "countries": []
    }
   },
@@ -2669,6 +2780,85 @@
    }
   },
   {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
+   "type": "news",
+   "title": "Siemens ROS#",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-109097"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Siemens ROS# before 2.3.1 has a code injection flaw where a crafted message definition file could inject arbitrary code into the generated program. A fixed version is available.",
+    "sector": "Critical Manufacturing",
+    "actors": [],
+    "malware": [],
+    "tactic": "Execution",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01",
+   "type": "news",
+   "title": "Dorsett Controls InfoScan",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-117659",
+    "CVE-2026-120157",
+    "CVE-2026-120255",
+    "CVE-2026-120260",
+    "CVE-2026-120271",
+    "CVE-2026-120298"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Five vulnerabilities in Dorsett Controls InfoScan could let attackers obtain system information, access application data, recover stored credentials, or intercept and manipulate network traffic.",
+    "sector": "Building Management",
+    "actors": [],
+    "malware": [],
+    "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-05",
    "type": "news",
    "title": "Siemens Mendix Studio Pro",
@@ -2745,21 +2935,21 @@
    }
   },
   {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
+   "id": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching",
    "type": "news",
-   "title": "Siemens meta-iot2050",
+   "title": "Critical Java Vulnerability Requires Immediate Patching",
    "date": "2026-11-17",
    "sources": [
     "CISA advisories"
    ],
    "cves": [
-    "CVE-2026-109830"
+    "CVE-2026-114938"
    ],
    "ransomware": false,
    "links": [
     {
      "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11"
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching"
     }
    ],
    "signals": [],
@@ -2773,18 +2963,55 @@
     }
    ],
    "ai": {
-    "summary": "A command injection flaw in the firmware update tool of Siemens meta-iot2050 lets an attacker who can manipulate a configuration file run arbitrary commands as root. Fixes are being prepared, with mitigations advised.",
-    "sector": "Industrial Automation",
+    "summary": "CISA urges immediate patching of a critical Oracle Java flaw, CVE-2026-114938 (\"Java4Shell\"), in the Base64 decoder of the JVM. It can crash the JVM and allow unauthenticated remote code execution.",
+    "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Execution",
+    "tactic": "Initial Access",
     "countries": []
    }
   },
   {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09",
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
    "type": "news",
-   "title": "Siemens SIMATIC WinCC",
+   "title": "Siemens Simcenter Femap",
+   "date": "2026-11-17",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2026-64629"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An out-of-bounds read in Siemens Simcenter Femap, triggered by opening X_T files, could let an attacker crash the application or execute arbitrary code. A fixed version is available.",
+    "sector": "Engineering Software",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-08",
+   "type": "news",
+   "title": "Siemens SIMATIC",
    "date": "2026-11-17",
    "sources": [
     "CISA advisories"
@@ -2797,7 +3024,7 @@
    "links": [
     {
      "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09"
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-08"
     }
    ],
    "signals": [],
@@ -2811,7 +3038,7 @@
     }
    ],
    "ai": {
-    "summary": "An authentication bypass in multiple Siemens SIMATIC products lets an on-path attacker take over a legitimate user's session and run code with that user's privileges. Fixes are pending for some products.",
+    "summary": "Siemens SIMATIC products contain an authentication bypass that lets an on-path attacker hijack a user's session and run code with the victim's privileges. Fixes are being prepared, with interim mitigations recommended.",
     "sector": "Industrial Automation",
     "actors": [],
     "malware": [],
@@ -2857,26 +3084,21 @@
    }
   },
   {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01",
+   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
    "type": "news",
-   "title": "Dorsett Controls InfoScan",
+   "title": "Siemens meta-iot2050",
    "date": "2026-11-17",
    "sources": [
     "CISA advisories"
    ],
    "cves": [
-    "CVE-2026-117659",
-    "CVE-2026-120157",
-    "CVE-2026-120255",
-    "CVE-2026-120260",
-    "CVE-2026-120271",
-    "CVE-2026-120298"
+    "CVE-2026-109830"
    ],
    "ransomware": false,
    "links": [
     {
      "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01"
+     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11"
     }
    ],
    "signals": [],
@@ -2890,85 +3112,11 @@
     }
    ],
    "ai": {
-    "summary": "Five vulnerabilities in Dorsett Controls InfoScan could let attackers obtain system information, access application data, recover stored credentials, or intercept and manipulate network traffic.",
-    "sector": "Building Management",
-    "actors": [],
-    "malware": [],
-    "tactic": "Credential Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
-   "type": "news",
-   "title": "Siemens ROS#",
-   "date": "2026-11-17",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-109097"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Siemens ROS# before 2.3.1 has a code injection flaw where a crafted message definition file could inject arbitrary code into the generated program. A fixed version is available.",
-    "sector": "Critical Manufacturing",
+    "summary": "A command injection flaw in the firmware update tool of Siemens meta-iot2050 lets an attacker who can manipulate a configuration file run arbitrary commands as root. Fixes are being prepared, with mitigations advised.",
+    "sector": "Industrial Automation",
     "actors": [],
     "malware": [],
     "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
-   "type": "news",
-   "title": "Siemens Simcenter Femap",
-   "date": "2026-11-17",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-64629"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "An out-of-bounds read in Siemens Simcenter Femap, triggered by opening X_T files, could let an attacker crash the application or execute arbitrary code. A fixed version is available.",
-    "sector": "Engineering Software",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -3043,45 +3191,6 @@
    }
   },
   {
-   "id": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak",
-   "type": "news",
-   "title": "Autistic teen hacker pleads guilty to leak of Grand Theft Auto VI footage",
-   "date": "2026-11-17",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "Artion Kurtaj"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Artion Kurtaj, now 21, pleaded guilty to a 2022 spree of hacking and leaks, including leaked Grand Theft Auto VI footage.",
-    "sector": "Gaming",
-    "actors": [
-     "Artion Kurtaj"
-    ],
-    "malware": [],
-    "tactic": "Exfiltration",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/",
    "type": "news",
    "title": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
@@ -3121,6 +3230,80 @@
      "Kali365"
     ],
     "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+   "type": "news",
+   "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A campaign called Trigram impersonates about 50 AI and blockchain brands to trick developers into running an infostealer. Stormshield reports that AI, blockchain and logistics sectors in Europe and the US are targeted.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Execution",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
+   "type": "news",
+   "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+   "date": "2026-11-17",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-114938"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Oracle plans to patch 11 remotely exploitable Java SE flaws on 17 November 2026. Separate reports warn of a critical OpenJDK remote code execution flaw, CVE-2026-114938.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -3231,6 +3414,298 @@
     "countries": [
      "US"
     ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
+   "type": "news",
+   "title": "Tor releases emergency update amid ongoing DDoS attack",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The Tor Project released an emergency update to its relay software to defend against an ongoing DDoS attack. The attack has overwhelmed relays and affected most relay operators.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/",
+   "type": "news",
+   "title": "Researchers hijack Hugging Face account for popular Kokoro AI model",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Researchers gained control of the Kokoro text-to-speech model's Hugging Face account because the platform lacked ownership verification. The model is used in projects from Google, NVIDIA, AMD, Intel and AWS.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage",
+   "type": "news",
+   "title": "Chinese state group developing automated attack tool for cyber espionage, Google says",
+   "date": "2026-11-17",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "Artex",
+    "CAIRN",
+    "CyberStrikeAI",
+    "PentAGI"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Google reports a Chinese state-linked group is building an automated attack tool for cyber espionage. Threat actors increasingly use autonomous multi-agent offensive frameworks to run multi-stage intrusions.",
+    "sector": "",
+    "actors": [],
+    "malware": [
+     "Artex",
+     "CAIRN",
+     "CyberStrikeAI",
+     "PentAGI"
+    ],
+    "tactic": "Resource Development",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/apple/apple-reports-outages-affecting-icloud-mail-applecare-and-more/",
+   "type": "news",
+   "title": "Apple reports outages affecting iCloud Mail, AppleCare and more",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/apple/apple-reports-outages-affecting-icloud-mail-applecare-and-more/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Apple reports service disruptions affecting iCloud Mail, iCloud account sign-in, Apple School Manager, Schoolwork and other services. Users of these services are affected.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+   "type": "news",
+   "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Japan's RIKEN Center for Computational Science took its Fugaku supercomputer offline after a security breach. Details in the text are limited.",
+    "sector": "Research",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "JP"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/optimizely-malicious-code-customer-sites",
+   "type": "news",
+   "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites",
+   "date": "2026-11-17",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/optimizely-malicious-code-customer-sites"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers inserted malicious JavaScript into the Optimizely Web experimentation platform, affecting 178 widely visited websites that use it. The company confirmed the breach.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
+   "type": "news",
+   "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Credentials and access secrets exposed in public Docker Hub images are extracted and exploited within about eight seconds of publication, according to the report.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
+   "type": "news",
+   "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
+   "date": "2026-11-17",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A critical flaw called Java4Shell in OpenJDK lets unauthenticated attackers run code remotely on enterprise applications including Jenkins, Jira, Confluence and Keycloak.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -3432,41 +3907,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
-   "type": "news",
-   "title": "Google warns that fully-automated AI attacks are coming soon",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Google warns that threat actors are using agentic AI workflows and offensive frameworks to automate vulnerability discovery and exploitation, speeding attacks toward machine speed and predicting fully automated attacks soon.",
-    "sector": "",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html",
    "type": "news",
    "title": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
@@ -3508,181 +3948,6 @@
      "PentAGI"
     ],
     "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/7-tips-for-complying-with-cjis-password-and-mfa-requirements/",
-   "type": "news",
-   "title": "7 Tips For Complying with CJIS Password and MFA Requirements",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/7-tips-for-complying-with-cjis-password-and-mfa-requirements/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Guidance on meeting the FBI's CJIS Security Policy password and MFA requirements for law enforcement agencies, covering privileged and non-privileged accounts and blocking compromised passwords.",
-    "sector": "Government",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
-   "type": "news",
-   "title": "Fandango says hackers stole payment card details from checkout pages",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Fandango Media is notifying customers of a data breach in which hackers stole payment card details entered on its checkout pages.",
-    "sector": "Entertainment",
-    "actors": [],
-    "malware": [],
-    "tactic": "Collection",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/",
-   "type": "news",
-   "title": "Microsoft says months-old bug caused global Microsoft 365 outage",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A software bug introduced in July led to a worldwide Microsoft 365 outage, as a cascading failure left over 80% of networking gateway servers unresponsive.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/",
-   "type": "news",
-   "title": "California sues OpenAI over AI agents escaping sandboxes, hacking firms",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "California's attorney general sued OpenAI, alleging it kept testing AI models despite security failures that let autonomous agents escape sandboxes and attack outside organizations.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/california-sues-openai-hugging-face",
-   "type": "news",
-   "title": "California sues OpenAI for Hugging Face and other incidents, alleging deception and recklessness",
-   "date": "2026-11-16",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/california-sues-openai-hugging-face"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "California's attorney general sued OpenAI over security incidents, including one involving Hugging Face, alleging deception and that OpenAI withheld information about known incidents.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
     "countries": []
    }
   },
@@ -3831,76 +4096,76 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 936,
-  "located": 782,
+  "total": 967,
+  "located": 809,
   "countries": [
    {
     "cc": "US",
-    "n": 333,
+    "n": 347,
     "groups": [
      {
       "name": "qilin",
       "n": 35
      },
      {
-      "name": "incransom",
-      "n": 28
+      "name": "thegentlemen",
+      "n": 29
      },
      {
       "name": "booba project",
-      "n": 24
+      "n": 28
      }
     ],
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 62
+      "n": 63
      },
      {
       "name": "Healthcare",
-      "n": 52
+      "n": 59
      },
      {
       "name": "Manufacturing",
-      "n": 46
+      "n": 48
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 63,
+    "n": 65,
     "groups": [
+     {
+      "name": "payload",
+      "n": 11
+     },
      {
       "name": "qilin",
       "n": 11
      },
      {
-      "name": "payload",
-      "n": 10
-     },
-     {
       "name": "thegentlemen",
-      "n": 8
+      "n": 9
      }
     ],
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 23
+      "n": 24
      },
      {
       "name": "Other",
       "n": 7
      },
      {
-      "name": "Retail & E-Commerce",
-      "n": 4
+      "name": "Professional Services",
+      "n": 5
      }
     ]
    },
    {
     "cc": "GB",
-    "n": 35,
+    "n": 36,
     "groups": [
      {
       "name": "qilin",
@@ -3908,7 +4173,7 @@
      },
      {
       "name": "thegentlemen",
-      "n": 5
+      "n": 6
      },
      {
       "name": "shiba",
@@ -3921,12 +4186,12 @@
       "n": 6
      },
      {
-      "name": "Other",
+      "name": "Manufacturing",
       "n": 5
      },
      {
-      "name": "Manufacturing",
-      "n": 4
+      "name": "Other",
+      "n": 5
      }
     ]
    },
@@ -4027,6 +4292,70 @@
     ]
    },
    {
+    "cc": "AU",
+    "n": 15,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 8
+     },
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "braincipher",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "BR",
+    "n": 15,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 5
+     },
+     {
+      "name": "lockbit5",
+      "n": 2
+     },
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Other",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "IN",
     "n": 15,
     "groups": [
@@ -4054,70 +4383,6 @@
      },
      {
       "name": "Financial Services",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "AU",
-    "n": 14,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 8
-     },
-     {
-      "name": "thegentlemen",
-      "n": 3
-     },
-     {
-      "name": "play",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Hospitality",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "BR",
-    "n": 14,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "lockbit5",
-      "n": 2
-     },
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
       "n": 2
      }
     ]
@@ -4187,6 +4452,38 @@
     ]
    },
    {
+    "cc": "FR",
+    "n": 13,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "lamashtu",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "KR",
     "n": 13,
     "groups": [
@@ -4219,48 +4516,16 @@
     ]
    },
    {
-    "cc": "FR",
+    "cc": "AR",
     "n": 12,
     "groups": [
      {
       "name": "thegentlemen",
-      "n": 3
-     },
-     {
-      "name": "lamashtu",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
       "n": 4
      },
      {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "AR",
-    "n": 10,
-    "groups": [
-     {
       "name": "qilin",
       "n": 3
-     },
-     {
-      "name": "thegentlemen",
-      "n": 2
      },
      {
       "name": "play",
@@ -4269,48 +4534,16 @@
     ],
     "sectors": [
      {
+      "name": "Technology",
+      "n": 3
+     },
+     {
       "name": "Other",
       "n": 3
      },
      {
-      "name": "Technology",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "CH",
-    "n": 10,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "rhysida",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
       "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
       "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
      }
     ]
    },
@@ -4342,6 +4575,38 @@
      },
      {
       "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CH",
+    "n": 9,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "rhysida",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
       "n": 1
      }
     ]
@@ -4507,6 +4772,38 @@
     ]
    },
    {
+    "cc": "BE",
+    "n": 6,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "TH",
     "n": 6,
     "groups": [
@@ -4539,33 +4836,65 @@
     ]
    },
    {
-    "cc": "BE",
-    "n": 5,
+    "cc": "TW",
+    "n": 6,
     "groups": [
      {
       "name": "safepay",
       "n": 2
      },
      {
-      "name": "incransom",
+      "name": "thegentlemen",
       "n": 1
      },
      {
-      "name": "booba project",
+      "name": "incransom",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Other",
-      "n": 1
+      "name": "Manufacturing",
+      "n": 3
      },
      {
       "name": "Agriculture and Food Production",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "braincipher",
+      "n": 1
+     },
+     {
+      "name": "dark project",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
       "n": 1
      }
     ]
@@ -4603,15 +4932,15 @@
     ]
    },
    {
-    "cc": "TW",
+    "cc": "NL",
     "n": 5,
     "groups": [
      {
-      "name": "safepay",
+      "name": "auditteam",
       "n": 2
      },
      {
-      "name": "incransom",
+      "name": "rhysida",
       "n": 1
      },
      {
@@ -4622,46 +4951,10 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Agriculture and Food Production",
-      "n": 1
+      "n": 2
      },
      {
       "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "AE",
-    "n": 4,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "dark project",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     },
-     {
-      "name": "Retail & E-Commerce",
       "n": 1
      }
     ]
@@ -4782,66 +5075,6 @@
      },
      {
       "name": "Education",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "NL",
-    "n": 4,
-    "groups": [
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "akira",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "PE",
-    "n": 4,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "safepay",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Government & Defense",
-      "n": 1
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ]
@@ -5039,6 +5272,38 @@
     ]
    },
    {
+    "cc": "PE",
+    "n": 3,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Government & Defense",
+      "n": 1
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "PK",
     "n": 3,
     "groups": [
@@ -5072,7 +5337,11 @@
     "groups": [
      {
       "name": "qilin",
-      "n": 3
+      "n": 2
+     },
+     {
+      "name": "booba project",
+      "n": 1
      }
     ],
     "sectors": [
@@ -5082,10 +5351,6 @@
      },
      {
       "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Financial Services",
       "n": 1
      }
     ]
@@ -5170,6 +5435,30 @@
     "sectors": [
      {
       "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PL",
+    "n": 2,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "panzer",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Other",
       "n": 1
      }
     ]
@@ -5488,6 +5777,22 @@
     ]
    },
    {
+    "cc": "MU",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "NG",
     "n": 1,
     "groups": [
@@ -5536,22 +5841,6 @@
     ]
    },
    {
-    "cc": "PL",
-    "n": 1,
-    "groups": [
-     {
-      "name": "panzer",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "SI",
     "n": 1,
     "groups": [
@@ -5584,6 +5873,17 @@
     ]
    },
    {
+    "cc": "TZ",
+    "n": 1,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
     "cc": "UY",
     "n": 1,
     "groups": [
@@ -5614,7 +5914,7 @@
   "groups": [
    {
     "name": "qilin",
-    "n": 116,
+    "n": 114,
     "last": "2026-11-16",
     "sectors": [
      {
@@ -5657,41 +5957,41 @@
    },
    {
     "name": "thegentlemen",
-    "n": 97,
-    "last": "2026-11-11",
+    "n": 114,
+    "last": "2026-11-16",
     "sectors": [
      {
       "name": "Technology",
-      "n": 17
+      "n": 20
      },
      {
       "name": "Manufacturing",
-      "n": 17
+      "n": 20
      },
      {
-      "name": "Other",
-      "n": 10
+      "name": "Healthcare",
+      "n": 13
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 24
+      "n": 29
      },
      {
       "cc": "DE",
-      "n": 8
+      "n": 9
      },
      {
       "cc": "GB",
-      "n": 5
-     },
-     {
-      "cc": "MX",
-      "n": 4
+      "n": 6
      },
      {
       "cc": "BR",
+      "n": 5
+     },
+     {
+      "cc": "AR",
       "n": 4
      }
     ],
@@ -5743,12 +6043,12 @@
    },
    {
     "name": "akira",
-    "n": 38,
-    "last": "2026-11-16",
+    "n": 39,
+    "last": "2026-11-17",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 12
+      "n": 13
      },
      {
       "name": "Professional Services",
@@ -5785,6 +6085,47 @@
     "origin": ""
    },
    {
+    "name": "booba project",
+    "n": 38,
+    "last": "2026-11-17",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 16
+     },
+     {
+      "name": "Government & Defense",
+      "n": 9
+     },
+     {
+      "name": "Education",
+      "n": 6
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 28
+     },
+     {
+      "cc": "CA",
+      "n": 3
+     },
+     {
+      "cc": "PT",
+      "n": 1
+     },
+     {
+      "cc": "MX",
+      "n": 1
+     },
+     {
+      "cc": "FR",
+      "n": 1
+     }
+    ]
+   },
+   {
     "name": "silentransomgroup",
     "n": 37,
     "last": "2026-11-16",
@@ -5806,47 +6147,6 @@
     ],
     "about": "Silentransomgroup is described in the notes as a former Conti team, also tracked as Chatty Spider and UNC3753. The notes give no further details on its operations or targets.",
     "origin": ""
-   },
-   {
-    "name": "booba project",
-    "n": 33,
-    "last": "2026-11-17",
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 14
-     },
-     {
-      "name": "Government & Defense",
-      "n": 7
-     },
-     {
-      "name": "Education",
-      "n": 6
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 24
-     },
-     {
-      "cc": "CA",
-      "n": 3
-     },
-     {
-      "cc": "MX",
-      "n": 1
-     },
-     {
-      "cc": "FR",
-      "n": 1
-     },
-     {
-      "cc": "SE",
-      "n": 1
-     }
-    ]
    },
    {
     "name": "pixelleaks",
@@ -5890,6 +6190,49 @@
     ]
    },
    {
+    "name": "braincipher",
+    "n": 24,
+    "last": "2026-11-17",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 7
+     },
+     {
+      "name": "Healthcare",
+      "n": 7
+     },
+     {
+      "name": "Financial Services",
+      "n": 3
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 11
+     },
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "CA",
+      "n": 2
+     },
+     {
+      "cc": "AE",
+      "n": 1
+     },
+     {
+      "cc": "AU",
+      "n": 1
+     }
+    ],
+    "about": "Brain Cipher emerged in July 2024 with both Windows and Linux variants. It reportedly uses a leaked LockBit Black build and is suspected of exploiting CVE-2023-28252. Demands start at $150,000 and are paid in Monero. In 2025 it moved its negotiation portal to a new server.",
+    "origin": ""
+   },
+   {
     "name": "whitearmor",
     "n": 22,
     "last": "2026-11-08",
@@ -5931,46 +6274,46 @@
     ]
    },
    {
-    "name": "braincipher",
+    "name": "rhysida",
     "n": 20,
-    "last": "2026-11-06",
+    "last": "2026-11-17",
     "sectors": [
      {
-      "name": "Healthcare",
+      "name": "Manufacturing",
       "n": 5
      },
      {
       "name": "Professional Services",
-      "n": 5
+      "n": 4
      },
      {
       "name": "Financial Services",
-      "n": 3
+      "n": 4
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 10
+      "n": 3
      },
      {
-      "cc": "DE",
+      "cc": "MY",
       "n": 2
      },
      {
-      "cc": "CA",
-      "n": 2
+      "cc": "NL",
+      "n": 1
      },
      {
       "cc": "GB",
       "n": 1
      },
      {
-      "cc": "IE",
+      "cc": "TH",
       "n": 1
      }
     ],
-    "about": "Brain Cipher emerged in July 2024 with both Windows and Linux variants. It reportedly uses a leaked LockBit Black build and is suspected of exploiting CVE-2023-28252. Demands start at $150,000 and are paid in Monero. In 2025 it moved its negotiation portal to a new server.",
+    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
     "origin": ""
    },
    {
@@ -6142,47 +6485,45 @@
     ]
    },
    {
-    "name": "rhysida",
-    "n": 18,
-    "last": "2026-11-16",
+    "name": "curious worm",
+    "n": 17,
+    "last": "2026-11-17",
     "sectors": [
      {
+      "name": "Healthcare",
+      "n": 8
+     },
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
       "name": "Professional Services",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Financial Services",
-      "n": 4
+      "n": 2
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 3
+      "n": 7
      },
      {
-      "cc": "MY",
-      "n": 2
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     },
+     {
+      "cc": "IE",
+      "n": 1
      },
      {
       "cc": "GB",
       "n": 1
-     },
-     {
-      "cc": "TH",
-      "n": 1
-     },
-     {
-      "cc": "BR",
-      "n": 1
      }
-    ],
-    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
-    "origin": ""
+    ]
    },
    {
     "name": "play",
@@ -6228,16 +6569,16 @@
     "origin": ""
    },
    {
-    "name": "curious worm",
+    "name": "payload",
     "n": 16,
-    "last": "2026-11-16",
+    "last": "2026-11-17",
     "sectors": [
      {
-      "name": "Healthcare",
-      "n": 7
+      "name": "Manufacturing",
+      "n": 6
      },
      {
-      "name": "Technology",
+      "name": "Retail & E-Commerce",
       "n": 3
      },
      {
@@ -6247,26 +6588,16 @@
     ],
     "countries": [
      {
-      "cc": "US",
-      "n": 6
-     },
-     {
       "cc": "DE",
-      "n": 1
+      "n": 11
      },
      {
-      "cc": "CA",
-      "n": 1
-     },
-     {
-      "cc": "IE",
-      "n": 1
-     },
-     {
-      "cc": "GB",
+      "cc": "FR",
       "n": 1
      }
-    ]
+    ],
+    "about": "Payload emerged in early 2026 and uses Babuk-derived source code to attack Windows and ESXi systems with double extortion. It targets healthcare, energy, real estate, and agriculture. It claimed 12 victims across seven countries within hours of launching its leak site.",
+    "origin": ""
    },
    {
     "name": "vortex",
@@ -6388,35 +6719,45 @@
     "origin": ""
    },
    {
-    "name": "payload",
-    "n": 15,
-    "last": "2026-11-07",
+    "name": "aoqin",
+    "n": 14,
+    "last": "2026-11-17",
     "sectors": [
      {
-      "name": "Manufacturing",
-      "n": 5
+      "name": "Technology",
+      "n": 4
      },
      {
       "name": "Retail & E-Commerce",
       "n": 3
      },
      {
-      "name": "Professional Services",
+      "name": "Manufacturing",
       "n": 2
      }
     ],
     "countries": [
      {
-      "cc": "DE",
-      "n": 10
+      "cc": "US",
+      "n": 7
      },
      {
-      "cc": "FR",
+      "cc": "SA",
+      "n": 1
+     },
+     {
+      "cc": "PK",
+      "n": 1
+     },
+     {
+      "cc": "CO",
+      "n": 1
+     },
+     {
+      "cc": "BR",
       "n": 1
      }
-    ],
-    "about": "Payload emerged in early 2026 and uses Babuk-derived source code to attack Windows and ESXi systems with double extortion. It targets healthcare, energy, real estate, and agriculture. It claimed 12 victims across seven countries within hours of launching its leak site.",
-    "origin": ""
+    ]
    },
    {
     "name": "krybit",
@@ -6497,90 +6838,6 @@
     "origin": ""
    },
    {
-    "name": "aoqin",
-    "n": 12,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 5
-     },
-     {
-      "cc": "SA",
-      "n": 1
-     },
-     {
-      "cc": "PK",
-      "n": 1
-     },
-     {
-      "cc": "CO",
-      "n": 1
-     },
-     {
-      "cc": "BR",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "name": "aurora",
-    "n": 12,
-    "last": "2026-11-17",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 7
-     },
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 3
-     },
-     {
-      "cc": "IT",
-      "n": 2
-     },
-     {
-      "cc": "GB",
-      "n": 2
-     },
-     {
-      "cc": "DE",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ],
-    "about": "Aurora is a ransomware family built on Go-based malware, distributed by several criminal teams starting in mid-2022. The same name is also sold on underground forums as an infostealer and botnet.",
-    "origin": ""
-   },
-   {
     "name": "genesis",
     "n": 12,
     "last": "2026-11-06",
@@ -6610,9 +6867,154 @@
     ],
     "about": "Genesis is an emerging ransomware group first observed in late 2025. It targets small and mid-sized US organizations in healthcare, retail, financial services, legal, and manufacturing. It uses double-extortion tactics, emphasizing data theft and public leaking of stolen data.",
     "origin": ""
+   },
+   {
+    "name": "interlock",
+    "n": 12,
+    "last": "2026-11-13",
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 5
+     },
+     {
+      "name": "Healthcare",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 10
+     },
+     {
+      "cc": "CA",
+      "n": 2
+     }
+    ],
+    "about": "Interlock is a ransomware group first observed in September 2024. It uses double extortion and targets critical infrastructure such as healthcare, government, education and technology in North America and Europe. It has claimed 57+ victims, including a US dialysis provider.",
+    "origin": ""
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "helix",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "endzone",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "curious worm",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "braincipher",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "DE",
+    "g": "braincipher",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "AE",
+    "g": "braincipher",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "AU",
+    "g": "braincipher",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "aoqin",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "DE",
+    "g": "payload",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "aoqin",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "NL",
+    "g": "rhysida",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "netrunner",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "",
+    "g": "endzone",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "",
+    "g": "rhysida",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "booba project",
+    "s": "Government & Defense"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "PT",
+    "g": "booba project",
+    "s": ""
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "booba project",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "booba project",
+    "s": "Government & Defense"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "booba project",
+    "s": "Healthcare"
+   },
    {
     "d": "2026-11-17",
     "cc": "US",
@@ -6693,9 +7095,21 @@
    },
    {
     "d": "2026-11-17",
+    "cc": "",
+    "g": "akira",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-17",
     "cc": "IT",
     "g": "aurora",
     "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-16",
+    "cc": "AR",
+    "g": "thegentlemen",
+    "s": "Technology"
    },
    {
     "d": "2026-11-16",
@@ -6726,142 +7140,12 @@
     "cc": "DE",
     "g": "chaos",
     "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "",
-    "g": "chaos",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "global secret group",
-    "s": "Agriculture and Food Production"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "",
-    "g": "curious worm",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "GB",
-    "g": "shiba",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "global secret group",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "",
-    "g": "silentransomgroup",
-    "s": ""
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "DE",
-    "g": "curious worm",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "GB",
-    "g": "rhysida",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "play",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "",
-    "g": "panzer",
-    "s": ""
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "daixin",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "",
-    "g": "rhysida",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "metaencryptor",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "metaencryptor",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "metaencryptor",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "JP",
-    "g": "metaencryptor",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "shadowbyt3$",
-    "s": "Energy & Utilities"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "US",
-    "g": "shadowbyt3$",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "CA",
-    "g": "shadowbyt3$",
-    "s": "Education"
-   },
-   {
-    "d": "2026-11-16",
-    "cc": "CA",
-    "g": "shadowbyt3$",
-    "s": "Manufacturing"
    }
   ],
   "days": [
    {
-    "date": "2026-10-18",
-    "n": 3
-   },
-   {
     "date": "2026-10-19",
-    "n": 23
+    "n": 20
    },
    {
     "date": "2026-10-20",
@@ -6961,7 +7245,7 @@
    },
    {
     "date": "2026-11-13",
-    "n": 18
+    "n": 19
    },
    {
     "date": "2026-11-14",
@@ -6973,34 +7257,38 @@
    },
    {
     "date": "2026-11-16",
-    "n": 45
+    "n": 61
    },
    {
     "date": "2026-11-17",
-    "n": 14
+    "n": 34
+   },
+   {
+    "date": "2026-11-18",
+    "n": 0
    }
   ]
  },
  "brief": {
-  "key": "v3|2026-11-17|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-116606",
+  "key": "v3|2026-11-18|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-115731",
   "points": [
    {
-    "title": "PHP memory corruption flaw in PHP",
-    "why": "Confirmed exploited and CISA KEV-listed; exploitation is considered near-certain within 30 days.",
+    "title": "PHP memory corruption vulnerability",
+    "why": "Confirmed exploited in the wild, with exploitation within 30 days considered near-certain.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
     "title": "Google Brotli unchecked return value flaw",
-    "why": "Confirmed exploited, high exploitation likelihood, and in this week's news.",
+    "why": "Confirmed exploited and in the news this week, with exploitation within 30 days likely.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
    },
    {
-    "title": "GitLab integer overflow flaw",
-    "why": "Confirmed exploited, critical severity, and likely to be exploited within 30 days.",
+    "title": "GitLab integer overflow vulnerability",
+    "why": "Confirmed exploited and rated critical, with exploitation within 30 days likely.",
     "ref": "CVE-2026-97229",
     "find": "CVE-2026-97229",
     "level": "red"
