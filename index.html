@@ -168,7 +168,8 @@ body:not([data-view="brief"]) .brief-only{display:none !important}
 body:not([data-view="cti"]) #ctiView{display:none}
 body:not([data-view="about"]) #aboutView{display:none}
 body:not([data-view="map"]) #mapView{display:none}
-body[data-view="about"] footer.about,body[data-view="map"] footer.about{display:none}
+body:not([data-view="feed"]) #feedView{display:none}
+body[data-view="about"] footer.about,body[data-view="map"] footer.about,body[data-view="feed"] footer.about{display:none}
 
 /* CTI view */
 .cti{display:flex;flex-direction:column;gap:10px;padding-top:28px}
@@ -345,6 +346,50 @@ button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
 @media (prefers-reduced-motion:reduce){ .tk-view{overflow-x:auto;-webkit-mask-image:none;mask-image:none} .tk-pause{display:none} }
 @media (max-width:640px){ .tk-label span{display:none} .tk-label{padding:0 12px} }
 
+/* Feed tab: posts from security accounts on X.
+   Laid out the way X's display rules ask: picture left of the name and
+   @username, text below, the X logo top right, the time linking to the post. */
+.feedv{display:flex;flex-direction:column;gap:12px;padding-top:28px;padding-bottom:8px}
+.feedv > header{display:flex;flex-direction:column;gap:12px;margin-bottom:6px}
+.feedv h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0;text-wrap:balance}
+.feedv > header p{margin:0;color:var(--muted);font-size:17px;max-width:65ch}
+.fbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.fbar .search{margin-left:auto}
+.fcount{color:var(--muted);font-size:14px}
+.posts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-width:720px}
+.post{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 12px;
+  display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;animation:rise .35s ease both;transition:border-color .15s ease}
+.post:hover{border-color:#3a3a40}
+.post .pic{grid-row:1 / span 2;grid-column:1;width:44px;height:44px;border-radius:50%;overflow:hidden;display:block;background:var(--raise);text-decoration:none}
+.post .who,.post .txt,.post .ptags,.post .pfoot{grid-column:2}
+.post .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.post .pic span{display:flex;width:100%;height:100%;align-items:center;justify-content:center;font:600 14px/1 var(--mono);color:var(--muted)}
+.post .who{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding-right:30px;min-width:0}
+.post .who a{text-decoration:none}
+.post .who .nm{font-weight:600;color:var(--text)}
+.post .who .nm:hover,.post .who .hd:hover{text-decoration:underline}
+.post .who .hd{color:var(--muted);font-size:14px}
+.post .cat{font-size:11.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.post .xlogo{position:absolute;top:14px;right:14px;width:16px;height:16px;color:var(--text);opacity:.85}
+.post .xlogo svg{width:100%;height:100%;display:block}
+.post .txt{margin:2px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15.5px;line-height:1.5;color:#e6e6e3}
+.post .txt a{color:#6cb6ff;text-decoration:none} .post .txt a:hover{text-decoration:underline}
+.post .ptags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.post .ptags a,.post .ptags span{font-size:12.5px;border:1px solid var(--line);border-radius:4px;padding:1px 7px;text-decoration:none;color:var(--text)}
+.post .ptags .cvex{font-family:var(--mono)}
+.post .ptags .exp{border-color:var(--red);color:var(--red)}
+.post .pfoot{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px;font-size:13.5px;color:var(--muted)}
+.post .pfoot a{color:var(--muted)} .post .pfoot a:hover{color:var(--text)}
+.feedx{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px}
+.feedx svg{width:14px;height:14px;color:var(--text)}
+.follow{max-width:720px}
+.follow summary{cursor:pointer;color:var(--muted);font-size:14px}
+.follow ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.follow li a{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:13.5px;text-decoration:none;color:var(--text)}
+.follow li a:hover{border-color:#4a4a50}
+@media (max-width:640px){ .fbar .search{margin-left:0;max-width:none} .post{grid-template-columns:40px minmax(0,1fr);padding:12px 12px 10px} .post .pic{width:40px;height:40px} }
+
 /* site footer (shown on every tab) */
 .site{border-top:1px solid var(--line);margin-top:28px;background:#050506;color:var(--muted);font-size:14px}
 .sitein{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:22px 34px;padding-top:30px;padding-bottom:26px}
@@ -505,6 +550,7 @@ button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
       <a href="#brief" id="navBrief" aria-current="page">Brief</a>
       <a href="#cti" id="navCti">CTI</a>
       <a href="#map" id="navMap">Map</a>
+      <a href="#feed" id="navFeed">Feed</a>
       <a href="#about" id="navAbout">About</a>
     </nav>
     <div class="updated" id="updated">Loading</div>
@@ -674,6 +720,25 @@ button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
   <p class="note" id="mapNote"></p>
 </section>
 
+<section class="wrap feedv" id="feedView" aria-label="Security feed">
+  <header>
+    <h1>Security feed</h1>
+    <p>The latest posts from 20 security news sites, threat intelligence teams, vulnerability researchers and official agencies on X, in one place. Tap a post's time to open it on X.</p>
+  </header>
+  <div class="fbar">
+    <div class="chips" id="fChips"></div>
+    <input class="search" id="fq" type="search" placeholder="Search posts, CVE or account" aria-label="Search posts">
+  </div>
+  <div class="feedx"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg><span id="fCount"></span></div>
+  <ol class="posts" id="fList"></ol>
+  <div class="btns"><button class="btn" type="button" id="fMore" hidden>Show more posts</button></div>
+  <details class="follow">
+    <summary>The 20 accounts in this feed</summary>
+    <ul id="fAccounts"></ul>
+  </details>
+  <p class="note">Posts come from X and belong to their authors. Vulforce shows them unchanged and adds tags: a red tag means the CVE is on CISA's list of exploited vulnerabilities. Posts stay here for 3 days.</p>
+</section>
+
 <section class="wrap page" id="aboutView" aria-label="About">
   <header>
     <svg class="biglogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 120" role="img" aria-label="Vulforce"><g transform="translate(0,0)"><polygon points="60,8 105,34 105,86 60,112 15,86 15,34" fill="none" stroke="#F2F4F7" stroke-width="7" stroke-linejoin="round"/><line x1="38" y1="38" x2="55" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><line x1="82" y1="38" x2="65" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><circle cx="60" cy="84" r="8" fill="#FF4D4F"/><path d="M160.54 83.1 149.584 50.56199999999999H156.778L165.424 78.08399999999999H166.48L175.126 50.56199999999999H182.32L171.364 83.1Z M200.074 83.69399999999999Q196.37800000000001 83.69399999999999 193.474 82.04399999999998Q190.57 80.39399999999999 188.92000000000002 77.35799999999999Q187.27 74.32199999999999 187.27 70.098V50.56199999999999H194.068V69.636Q194.068 73.86 196.18 75.87299999999999Q198.292 77.886 202.054 77.886Q206.212 77.886 208.753 75.08099999999999Q211.294 72.276 211.294 66.996V50.56199999999999H218.092V83.1H211.42600000000002V78.216H210.37Q209.446 80.196 207.07 81.945Q204.69400000000002 83.69399999999999 200.074 83.69399999999999Z M226.804 83.1V36.89999999999999H233.602V83.1Z M247.39600000000002 83.1V57.227999999999994H239.08V50.36399999999999H247.39600000000002V44.291999999999994Q247.39600000000002 40.925999999999995 249.409 38.913Q251.422 36.89999999999999 254.656 36.89999999999999H263.236V43.763999999999996H257.56Q255.71200000000002 43.763999999999996 255.71200000000002 45.74399999999999V50.36399999999999H264.29200000000003V57.227999999999994H255.71200000000002V83.1Z M285.016 84.024Q280.132 84.024 276.238 82.044Q272.344 80.064 270.1 76.30199999999999Q267.856 72.53999999999999 267.856 67.25999999999999V66.204Q267.856 60.92399999999999 270.1 57.16199999999999Q272.344 53.39999999999999 276.238 51.41999999999999Q280.132 49.43999999999999 285.016 49.43999999999999Q289.9 49.43999999999999 293.794 51.41999999999999Q297.688 53.39999999999999 299.932 57.16199999999999Q302.176 60.92399999999999 302.176 66.204V67.25999999999999Q302.176 72.53999999999999 299.932 76.30199999999999Q297.688 80.064 293.794 82.044Q289.9 84.024 285.016 84.024ZM285.016 76.63199999999999Q288.844 76.63199999999999 291.352 74.15699999999998Q293.86 71.68199999999999 293.86 67.062V66.40199999999999Q293.86 61.782 291.385 59.306999999999995Q288.90999999999997 56.831999999999994 285.016 56.831999999999994Q281.188 56.831999999999994 278.67999999999995 59.306999999999995Q276.17199999999997 61.782 276.17199999999997 66.40199999999999V67.062Q276.17199999999997 71.68199999999999 278.67999999999995 74.15699999999998Q281.188 76.63199999999999 285.016 76.63199999999999Z M308.512 83.1V50.36399999999999H316.69599999999997V54.05999999999999H317.884Q318.61 52.07999999999999 320.293 51.15599999999999Q321.976 50.23199999999999 324.21999999999997 50.23199999999999H328.18V57.623999999999995H324.088Q320.92 57.623999999999995 318.874 59.306999999999995Q316.828 60.989999999999995 316.828 64.488V83.1Z M348.70599999999996 84.024Q343.95399999999995 84.024 340.09299999999996 82.044Q336.23199999999997 80.064 333.98799999999994 76.30199999999999Q331.74399999999997 72.53999999999999 331.74399999999997 67.19399999999999V66.27Q331.74399999999997 60.92399999999999 333.98799999999994 57.16199999999999Q336.23199999999997 53.39999999999999 340.09299999999996 51.41999999999999Q343.95399999999995 49.43999999999999 348.70599999999996 49.43999999999999Q353.392 49.43999999999999 356.758 51.08999999999999Q360.12399999999997 52.739999999999995 362.203 55.61099999999999Q364.282 58.48199999999999 364.94199999999995 62.111999999999995L356.89 63.82799999999999Q356.626 61.84799999999999 355.702 60.263999999999996Q354.77799999999996 58.67999999999999 353.09499999999997 57.75599999999999Q351.412 56.831999999999994 348.904 56.831999999999994Q346.39599999999996 56.831999999999994 344.3829999999999 57.92099999999999Q342.36999999999995 59.00999999999999 341.2149999999999 61.154999999999994Q340.05999999999995 63.3 340.05999999999995 66.40199999999999V67.062Q340.05999999999995 70.16399999999999 341.2149999999999 72.309Q342.36999999999995 74.454 344.3829999999999 75.54299999999999Q346.39599999999996 76.63199999999999 348.904 76.63199999999999Q352.666 76.63199999999999 354.61299999999994 74.685Q356.55999999999995 72.738 357.08799999999997 69.57L365.14 71.484Q364.282 74.982 362.203 77.853Q360.12399999999997 80.72399999999999 356.758 82.374Q353.392 84.024 348.70599999999996 84.024Z M385.59999999999997 84.024Q380.71599999999995 84.024 376.98699999999997 81.945Q373.258 79.866 371.179 76.071Q369.09999999999997 72.276 369.09999999999997 67.12799999999999V66.336Q369.09999999999997 61.18799999999999 371.14599999999996 57.39299999999999Q373.19199999999995 53.59799999999999 376.8879999999999 51.51899999999999Q380.58399999999995 49.43999999999999 385.46799999999996 49.43999999999999Q390.28599999999994 49.43999999999999 393.84999999999997 51.584999999999994Q397.414 53.72999999999999 399.394 57.52499999999999Q401.37399999999997 61.31999999999999 401.37399999999997 66.336V69.17399999999999H377.54799999999994Q377.67999999999995 72.53999999999999 380.0559999999999 74.65199999999999Q382.43199999999996 76.764 385.864 76.764Q389.36199999999997 76.764 391.01199999999994 75.246Q392.662 73.728 393.52 71.88L400.318 75.44399999999999Q399.39399999999995 77.16 397.645 79.173Q395.89599999999996 81.18599999999999 392.99199999999996 82.60499999999999Q390.08799999999997 84.024 385.59999999999997 84.024ZM377.614 62.96999999999999H392.926Q392.662 60.13199999999999 390.649 58.41599999999999Q388.63599999999997 56.69999999999999 385.402 56.69999999999999Q382.03599999999994 56.69999999999999 380.0559999999999 58.41599999999999Q378.07599999999996 60.13199999999999 377.614 62.96999999999999Z" fill="#F2F4F7"/></g></svg>
@@ -696,6 +761,7 @@ button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
       <tr><td><a href="https://www.first.org/epss/" target="_blank" rel="noopener">FIRST EPSS</a></td><td>The predicted chance that a vulnerability is exploited in the next 30 days.</td></tr>
       <tr><td><a href="https://www.cve.org" target="_blank" rel="noopener">CVE Program records</a></td><td>CVSS severity, taken from the vendor's score or, if there is none, from CISA's.</td></tr>
       <tr><td><a href="https://www.ransomware.live" target="_blank" rel="noopener">Ransomware.live</a></td><td>Victims claimed by ransomware groups on their leak sites. Vulforce keeps only counts per country, group and sector, and shows no victim names.</td></tr>
+      <tr><td><a href="https://x.com" target="_blank" rel="noopener">X</a></td><td>Recent posts from 20 security accounts, shown on the Feed tab unchanged and linked to the original post.</td></tr>
       <tr><td>News feeds</td><td><a href="https://www.bleepingcomputer.com" target="_blank" rel="noopener">BleepingComputer</a>, <a href="https://therecord.media" target="_blank" rel="noopener">The Record</a>, <a href="https://thehackernews.com" target="_blank" rel="noopener">The Hacker News</a> and <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">CISA advisories</a>. Only the headline, date and link are kept.</td></tr>
     </table></div>
     <p>Vulforce is not affiliated with or endorsed by any of these organisations. Headlines belong to their publishers.</p>
@@ -790,6 +856,7 @@ button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
         <li><a href="#brief">Brief</a></li>
         <li><a href="#cti">CTI workbench</a></li>
         <li><a href="#map">Global threat map</a></li>
+        <li><a href="#feed">Security feed</a></li>
         <li><a href="#about">About and method</a></li>
       </ul>
     </div>
@@ -1367,13 +1434,92 @@ function openMap(){
 byId("mapChips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; mapLayer = b.dataset.l; mapSel = null; renderMap(); });
 window.addEventListener("resize", sizeGlobe);
 
+/* ---------- Feed tab ---------- */
+const XLOGO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>';
+const FEED_CATS = ["All", "News", "CTI", "Vulnerabilities", "Official", "Researchers"];
+let feedCat = "All", feedQ = "", feedShown = 30;
+// "3 h ago" for recent posts, the date for older ones.
+function ago(iso){
+  const m = Math.round((Date.now() - Date.parse(iso)) / 60000);
+  if (m < 60) return Math.max(1, m) + " min ago";
+  if (m < 24 * 60) return Math.round(m / 60) + " h ago";
+  return new Date(iso).toLocaleDateString("en-GB", {day: "numeric", month: "short"});
+}
+// Builds the post text with working links, without changing a single character:
+// t.co links show their display address, @names go to the profile and
+// #hashtags to an X search, as X's display rules require.
+function postText(p){
+  const box = el("p","txt"), urls = {}, men = new Set((p.mentions || []).map(x => x.toLowerCase())), tags = new Set((p.tags || []).map(x => x.toLowerCase()));
+  (p.urls || []).forEach(u => { urls[u.u] = u.d; });
+  const re = /https:\/\/t\.co\/\w+|@\w{1,15}|#\w+/g; let last = 0, m;
+  const link = (text, href) => { const a = el("a", null, text); a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; return a; };
+  while ((m = re.exec(p.text))){
+    const t = m[0]; let node = null;
+    if (t.startsWith("https://t.co/")) node = link(urls[t] || t, t);
+    else if (t[0] === "@" && men.has(t.slice(1).toLowerCase())) node = link(t, "https://x.com/" + t.slice(1));
+    else if (t[0] === "#" && tags.has(t.slice(1).toLowerCase())) node = link(t, "https://x.com/search?q=" + encodeURIComponent(t));
+    if (!node) continue;
+    box.append(document.createTextNode(p.text.slice(last, m.index)), node); last = m.index + t.length;
+  }
+  box.append(document.createTextNode(p.text.slice(last)));
+  return box;
+}
+function postCard(p, users){
+  const u = users[p.uid] || {}, profile = "https://x.com/" + (u.username || ""), permalink = profile + "/status/" + p.id;
+  const li = el("li","post");
+  const pic = el("a","pic"); pic.href = profile; pic.target = "_blank"; pic.rel = "noopener noreferrer"; pic.setAttribute("aria-label", (u.name || "") + " on X");
+  if (u.img){ const img = el("img"); img.src = u.img; img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+    img.addEventListener("error", () => { pic.replaceChildren(el("span", null, (u.username || "?").slice(0, 2))); }); pic.append(img); }
+  else pic.append(el("span", null, (u.username || "?").slice(0, 2)));
+  const who = el("div","who"), nm = el("a","nm", u.name || u.username), hd = el("a","hd", "@" + (u.username || ""));
+  nm.href = hd.href = profile; nm.target = hd.target = "_blank"; nm.rel = hd.rel = "noopener noreferrer";
+  who.append(nm, hd, el("span","cat", p.cat));
+  const xl = el("a","xlogo"); xl.href = permalink; xl.target = "_blank"; xl.rel = "noopener noreferrer"; xl.setAttribute("aria-label","View on X"); xl.innerHTML = XLOGO;
+  li.append(pic, who, xl, postText(p));
+  if ((p.cves || []).length || (p.signals || []).length){
+    const tg = el("div","ptags");
+    (p.cves || []).forEach(c => { const a = el("a", "cvex" + ((p.kev || []).includes(c) ? " exp" : ""), c + ((p.kev || []).includes(c) ? " · exploited" : ""));
+      a.href = "https://nvd.nist.gov/vuln/detail/" + encodeURIComponent(c); a.target = "_blank"; a.rel = "noopener noreferrer"; tg.append(a); });
+    (p.signals || []).forEach(sg => tg.append(el("span", null, sg)));
+    li.append(tg);
+  }
+  const ft = el("div","pfoot"), when = el("a", null, ago(p.at) + (p.edited ? " · edited" : "")), view = el("a", null, "View on X");
+  when.href = view.href = permalink; when.target = view.target = "_blank"; when.rel = view.rel = "noopener noreferrer";
+  when.title = new Date(p.at).toLocaleString("en-GB", {dateStyle: "medium", timeStyle: "short"});
+  ft.append(when, view); li.append(ft);
+  return li;
+}
+function renderFeed(){
+  if (!DATA) return;
+  const x = DATA.x, list = byId("fList"); list.textContent = "";
+  const chips = byId("fChips"); chips.textContent = "";
+  FEED_CATS.forEach(c => { const b = el("button","chip",c); b.type = "button"; b.setAttribute("aria-pressed", String(c === feedCat));
+    b.addEventListener("click", () => { feedCat = c; feedShown = 30; renderFeed(); }); chips.append(b); });
+  if (!x || !(x.posts || []).length){
+    list.append(el("li","empty", x ? "No posts in the last " + (x.keep_hours || 72) + " hours yet." : "The X feed is not connected yet."));
+    byId("fCount").textContent = ""; byId("fMore").hidden = true; return;
+  }
+  const users = {}; Object.values(x.users || {}).forEach(u => { users[u.id] = u; });
+  const q = feedQ.toLowerCase();
+  const shown = x.posts.filter(p => (feedCat === "All" || p.cat === feedCat) &&
+    (!q || (p.text + " " + ((users[p.uid] || {}).username || "") + " " + ((users[p.uid] || {}).name || "") + " " + (p.cves || []).join(" ")).toLowerCase().includes(q)));
+  byId("fCount").textContent = shown.length + (shown.length === 1 ? " post" : " posts") + " from the last " + Math.round((x.keep_hours || 72) / 24) + " days";
+  if (!shown.length) list.append(el("li","empty","No posts match. Clear the search or choose All."));
+  shown.slice(0, feedShown).forEach((p, k) => { const c = postCard(p, users); c.style.animationDelay = Math.min(k, 10) * 30 + "ms"; list.append(c); });
+  byId("fMore").hidden = shown.length <= feedShown;
+  const acc = byId("fAccounts"); acc.textContent = "";
+  (x.accounts || []).forEach(a => { const li = el("li"), l = el("a", null, "@" + a.username); l.href = "https://x.com/" + a.username; l.target = "_blank"; l.rel = "noopener noreferrer"; li.append(l); acc.append(li); });
+}
+byId("fq").addEventListener("input", e => { feedQ = e.target.value.trim(); feedShown = 30; renderFeed(); });
+byId("fMore").addEventListener("click", () => { feedShown += 30; renderFeed(); });
+
 /* views: #brief and #cti */
 // The four tabs are one page. The part after # in the address decides which
 // one is visible, so the back button and shared links both work.
 function route(){
-  const h = location.hash, v = h === "#cti" ? "cti" : h === "#about" ? "about" : h === "#map" ? "map" : "brief";
+  const h = location.hash, v = h === "#cti" ? "cti" : h === "#about" ? "about" : h === "#map" ? "map" : h === "#feed" ? "feed" : "brief";
   document.body.dataset.view = v;
-  [["brief","navBrief"],["cti","navCti"],["map","navMap"],["about","navAbout"]].forEach(([name, id]) => {
+  [["brief","navBrief"],["cti","navCti"],["map","navMap"],["feed","navFeed"],["about","navAbout"]].forEach(([name, id]) => {
     if (name === v) byId(id).setAttribute("aria-current","page"); else byId(id).removeAttribute("aria-current"); });
   if (v === "cti" && DATA) countUp();
   if (v === "map") openMap(); else if (globe) globe.pauseAnimation();
@@ -1401,7 +1547,7 @@ byId("year").textContent = String(new Date().getFullYear());
 // page only redraws if the file really changed.
 function load(first){
   fetch("data.json", {cache:"no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(d => { if (DATA && DATA.generated === d.generated) return; DATA = d; summary(); render(); renderCti(); renderMap(); })
+    .then(d => { if (DATA && DATA.generated === d.generated) return; DATA = d; summary(); render(); renderCti(); renderMap(); renderFeed(); })
     .catch(() => {
       if (!first) return;
       byId("updated").textContent = "No data";
