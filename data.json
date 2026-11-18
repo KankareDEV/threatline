@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-18T10:02:11Z",
+ "generated": "2026-11-18T18:48:23Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1782,
  "counts": {
-  "red": 7,
+  "red": 8,
   "orange": 31,
-  "green": 49
+  "green": 50
  },
  "sources": [
   {
@@ -54,9 +54,9 @@
   "totals": {
    "kev_window": 34,
    "ransomware": 0,
-   "epss_high": 5,
+   "epss_high": 6,
    "epss_known": 34,
-   "news": 53
+   "news": 55
   },
   "timeline": [
    {
@@ -213,7 +213,7 @@
    },
    {
     "name": "50 to 89%",
-    "n": 3
+    "n": 4
    },
    {
     "name": "10 to 49%",
@@ -221,7 +221,7 @@
    },
    {
     "name": "Under 10%",
-    "n": 21
+    "n": 20
    },
    {
     "name": "No score yet",
@@ -294,13 +294,13 @@
     "n": 2
    },
    {
-    "id": "CWE-862",
-    "name": "Missing authorization",
+    "id": "CWE-287",
+    "name": "Improper authentication",
     "n": 2
    },
    {
-    "id": "CWE-287",
-    "name": "Improper authentication",
+    "id": "CWE-862",
+    "name": "Missing authorization",
     "n": 2
    }
   ],
@@ -347,67 +347,15 @@
     "n": 1
    },
    {
-    "name": "Ransomware",
-    "n": 2
+    "name": "Exploited in the wild",
+    "n": 1
    },
    {
     "name": "Data breach",
-    "n": 2
+    "n": 1
    }
   ],
   "actors": [
-   {
-    "name": "CAIRN",
-    "n": 2,
-    "links": [
-     {
-      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
-      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
-     },
-     {
-      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
-   },
-   {
-    "name": "CyberStrikeAI",
-    "n": 2,
-    "links": [
-     {
-      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
-      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
-     },
-     {
-      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
-   },
-   {
-    "name": "PentAGI",
-    "n": 2,
-    "links": [
-     {
-      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
-      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
-     },
-     {
-      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
-   },
-   {
-    "name": "8 Digits Team",
-    "n": 1,
-    "links": [
-     {
-      "label": "Kazakh ransomware hacking suspect extradited from Italy",
-      "url": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx"
-     }
-    ]
-   },
    {
     "name": "ARTEX",
     "n": 1,
@@ -415,16 +363,6 @@
      {
       "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
       "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
-   },
-   {
-    "name": "Artex",
-    "n": 1,
-    "links": [
-     {
-      "label": "Chinese state group developing automated attack tool for cyber espionage, Google says",
-      "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
      }
     ]
    },
@@ -445,6 +383,16 @@
      {
       "label": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
       "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
+     }
+    ]
+   },
+   {
+    "name": "CAIRN",
+    "n": 1,
+    "links": [
+     {
+      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
      }
     ]
    },
@@ -479,12 +427,52 @@
     ]
    },
    {
+    "name": "CyberStrikeAI",
+    "n": 1,
+    "links": [
+     {
+      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
+     }
+    ]
+   },
+   {
+    "name": "EggStreme",
+    "n": 1,
+    "links": [
+     {
+      "label": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
+      "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
+     }
+    ]
+   },
+   {
     "name": "EvilTokens",
     "n": 1,
     "links": [
      {
       "label": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
       "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/"
+     }
+    ]
+   },
+   {
+    "name": "GitDoor",
+    "n": 1,
+    "links": [
+     {
+      "label": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
+     }
+    ]
+   },
+   {
+    "name": "GraphDoor",
+    "n": 1,
+    "links": [
+     {
+      "label": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+      "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
      }
     ]
    }
@@ -554,7 +542,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 22
+    "n": 25
    },
    {
     "name": "BleepingComputer",
@@ -819,6 +807,52 @@
    ]
   },
   {
+   "id": "CVE-2026-48356",
+   "type": "vuln",
+   "title": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+   "cve": "CVE-2026-48356",
+   "vendor": "Adobe",
+   "product": "Commerce and Magento",
+   "date": "2026-10-27",
+   "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-10",
+   "epss": 0.6639,
+   "cvss": {
+    "score": 9.3,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+    }
+   ],
+   "cwes": [
+    "CWE-434"
+   ],
+   "score": 77,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 66% chance of exploitation in 30 days",
+     "points": 17
+    },
+    {
+     "label": "CVSS 9.3 critical severity",
+     "points": 10
+    }
+   ]
+  },
+  {
    "id": "CVE-2026-115731",
    "type": "vuln",
    "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
@@ -829,7 +863,7 @@
    "summary": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-12-01",
-   "epss": 0.00366,
+   "epss": 0.00691,
    "cvss": {
     "score": 9.4,
     "version": "4.0",
@@ -864,7 +898,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 0% chance of exploitation in 30 days",
+     "label": "EPSS 1% chance of exploitation in 30 days",
      "points": 0
     },
     {
@@ -882,35 +916,37 @@
    ]
   },
   {
-   "id": "CVE-2026-48356",
+   "id": "CVE-2026-116779",
    "type": "vuln",
-   "title": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
-   "cve": "CVE-2026-48356",
-   "vendor": "Adobe",
-   "product": "Commerce and Magento",
-   "date": "2026-10-27",
-   "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+   "title": "SignalWire FreeSwitch Code Injection Vulnerability",
+   "cve": "CVE-2026-116779",
+   "vendor": "SignalWire",
+   "product": "FreeSwitch",
+   "date": "2026-11-09",
+   "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-10",
-   "epss": 0.47472,
+   "due": "2026-11-12",
+   "epss": 0.22081,
    "cvss": {
-    "score": 9.3,
+    "score": 9.8,
     "version": "3.1",
     "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
     }
    ],
    "cwes": [
-    "CWE-434"
+    "CWE-77",
+    "CWE-78",
+    "CWE-749"
    ],
-   "score": 72,
+   "score": 71,
    "level": "red",
    "reasons": [
     {
@@ -918,12 +954,16 @@
      "points": 50
     },
     {
-     "label": "EPSS 47% chance of exploitation in 30 days",
-     "points": 12
+     "label": "EPSS 22% chance of exploitation in 30 days",
+     "points": 6
     },
     {
-     "label": "CVSS 9.3 critical severity",
+     "label": "CVSS 9.8 critical severity",
      "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
@@ -978,17 +1018,17 @@
    ]
   },
   {
-   "id": "CVE-2026-116779",
+   "id": "CVE-2026-102895",
    "type": "vuln",
-   "title": "SignalWire FreeSwitch Code Injection Vulnerability",
-   "cve": "CVE-2026-116779",
-   "vendor": "SignalWire",
-   "product": "FreeSwitch",
+   "title": "GPUStack Improper Authentication Vulnerability",
+   "cve": "CVE-2026-102895",
+   "vendor": "GPUStack",
+   "product": "GPUStack",
    "date": "2026-11-09",
-   "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+   "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-12",
-   "epss": 0.02473,
+   "epss": 0.0573,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1000,13 +1040,13 @@
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895"
     }
    ],
    "cwes": [
-    "CWE-77",
-    "CWE-78",
-    "CWE-749"
+    "CWE-287",
+    "CWE-290",
+    "CWE-346"
    ],
    "score": 66,
    "level": "orange",
@@ -1016,7 +1056,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 2% chance of exploitation in 30 days",
+     "label": "EPSS 6% chance of exploitation in 30 days",
      "points": 1
     },
     {
@@ -1127,58 +1167,6 @@
     {
      "label": "Added in the last 7 days",
      "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-102895",
-   "type": "vuln",
-   "title": "GPUStack Improper Authentication Vulnerability",
-   "cve": "CVE-2026-102895",
-   "vendor": "GPUStack",
-   "product": "GPUStack",
-   "date": "2026-11-09",
-   "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.00517,
-   "cvss": {
-    "score": 9.8,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895"
-    }
-   ],
-   "cwes": [
-    "CWE-287",
-    "CWE-290",
-    "CWE-346"
-   ],
-   "score": 65,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 9.8 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 14 days",
-     "points": 5
     }
    ]
   },
@@ -2242,6 +2230,47 @@
    }
   },
   {
+   "id": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
+   "type": "news",
+   "title": "Apache warns of Roller RCE vulnerability exploited in attacks",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"
+    }
+   ],
+   "signals": [
+    "Exploited in the wild"
+   ],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Exploited in the wild in the headline",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Apache released patches for a critical Roller flaw that attackers are actively exploiting to run code on vulnerable servers.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-04",
    "type": "news",
    "title": "Siemens Industrial Software Products",
@@ -2365,98 +2394,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/",
-   "type": "news",
-   "title": "Ransomware affiliate suspect extradited to US, faces 27 years in prison",
-   "date": "2026-11-17",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": true,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/"
-    }
-   ],
-   "signals": [
-    "Ransomware"
-   ],
-   "actors": [],
-   "score": 35,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Ransomware in the headline",
-     "points": 15
-    }
-   ],
-   "ai": {
-    "summary": "A Kazakh national was extradited from Italy to the US to face charges over ransomware attacks on American schools, hospitals and healthcare providers, with up to 27 years in prison possible.",
-    "sector": "Healthcare",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": [
-     "US"
-    ]
-   }
-  },
-  {
-   "id": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx",
-   "type": "news",
-   "title": "Kazakh ransomware hacking suspect extradited from Italy",
-   "date": "2026-11-17",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": true,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx"
-    }
-   ],
-   "signals": [
-    "Ransomware"
-   ],
-   "actors": [
-    "8 Digits Team",
-    "INC",
-    "Lynx"
-   ],
-   "score": 35,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Ransomware in the headline",
-     "points": 15
-    }
-   ],
-   "ai": {
-    "summary": "Kazakh national Roman Khlynovskiy was extradited from Italy over alleged ransomware attacks on healthcare organisations, schools and companies. He is accused of working with the 8 Digits Team, linked to INC and Lynx.",
-    "sector": "Healthcare",
-    "actors": [
-     "8 Digits Team",
-     "INC",
-     "Lynx"
-    ],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
    "type": "news",
    "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
@@ -2508,24 +2445,27 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+   "id": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
    "type": "news",
-   "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
-   "date": "2026-11-17",
+   "title": "Microsoft’s Agent Framework PyPI package compromised to steal credentials",
+   "date": "2026-11-18",
    "sources": [
-    "BleepingComputer"
+    "BleepingComputer",
+    "The Hacker News"
    ],
    "cves": [],
    "ransomware": false,
    "links": [
     {
      "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/"
+     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
+    },
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html"
     }
    ],
-   "signals": [
-    "Data breach"
-   ],
+   "signals": [],
    "actors": [],
    "score": 30,
    "level": "green",
@@ -2535,16 +2475,16 @@
      "points": 20
     },
     {
-     "label": "Data breach in the headline",
+     "label": "Covered by 2 sources",
      "points": 10
     }
    ],
    "ai": {
-    "summary": "Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October.",
-    "sector": "Transportation",
+    "summary": "Attackers published two malicious versions of Microsoft's agent-framework Python package, which run a credential stealer every time Python starts. Several security firms reported it.",
+    "sector": "Technology",
     "actors": [],
     "malware": [],
-    "tactic": "Exfiltration",
+    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -2617,76 +2557,6 @@
     "actors": [],
     "malware": [],
     "tactic": "Defense Evasion",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/cisa-issues-java4shell-alert",
-   "type": "news",
-   "title": "CISA warns of ‘Java4Shell,’ an AI-found Java bug touching most of the Fortune 500",
-   "date": "2026-11-18",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/cisa-issues-java4shell-alert"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA urged immediate patching of a newly found Java flaw that could let attackers take over servers without a password. Many large enterprises use Java, so the exposure is broad.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
-   "type": "news",
-   "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Attackers compromised Microsoft's agent-framework PyPI package, publishing malicious versions 1.26.1 and 1.26.2 on November 17, 2026. The versions run a credential stealer on every Python start, targeting cloud credentials.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -2802,6 +2672,403 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html",
+   "type": "news",
+   "title": "Quality Isn’t The Main Worry About AI Pentesting — Data Privacy and Production Safety Are",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Article arguing that data privacy and production safety matter more than output quality when choosing AI penetration testing, as AI speeds up both development and attacks.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/dizigom-illegal-streaming-service-with-21m-monthly-visits-shuts-down/",
+   "type": "news",
+   "title": "Dizigom illegal streaming service with 21M monthly visits shuts down",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/dizigom-illegal-streaming-service-with-21m-monthly-visits-shuts-down/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The Alliance for Creativity and Entertainment announced the shutdown of Dizigom, a large Turkish illegal streaming site, after a settlement with its operators.",
+    "sector": "Media",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": [
+     "TR"
+    ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
+   "type": "news",
+   "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Checklist of fifteen questions for evaluating AI penetration testing vendors for web applications, noting that exploitation often starts before patches exist.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
+   "type": "news",
+   "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Researchers showed that opening a PC case lets someone reset the TPM lockout on some AMD and Intel machines, enabling guessing of short Windows Hello and BitLocker PINs.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Credential Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/norway-equinor-cyberattack-energy",
+   "type": "news",
+   "title": "Cyberattack hits Norwegian energy giant Equinor, disrupting internal services",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/norway-equinor-cyberattack-energy"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Norwegian energy company Equinor is containing a cyberattack on its IT systems that disrupted internal services but has not affected oil and gas production.",
+    "sector": "Energy",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "NO"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/russia-hockey-cyberattack-championships",
+   "type": "news",
+   "title": "Ice hockey governing body website defaced amid dispute over Russia's exclusion",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/russia-hockey-cyberattack-championships"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The International Ice Hockey Federation confirmed hackers defaced its website, replacing the homepage with a pro-Russian message protesting Russia's exclusion from competitions.",
+    "sector": "Sports",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+   "type": "news",
+   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "EggStreme"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A suspected Chinese APT group rebuilt the EggStreme malware to evade security tools while continuing to target Philippine government organisations, according to Bitdefender.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [
+     "EggStreme"
+    ],
+    "tactic": "Defense Evasion",
+    "countries": [
+     "PH"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/british-hacker-gets-six-year-sentence-scattered-spider",
+   "type": "news",
+   "title": "British hacker gets 6 year sentence for $11.6M crypto theft scheme",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/british-hacker-gets-six-year-sentence-scattered-spider"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Tyler Robert Buchanan, described as the suspected ringleader of a hacking collective, was sentenced to six years for a $11.6M cryptocurrency theft scheme.",
+    "sector": "Finance",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
+   "type": "news",
+   "title": "From Deepfakes to Helpdesk Impersonation: Why Stronger Verification Matters",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers use deepfakes, helpdesk impersonation and fake IT support requests to trick employees into granting unauthorized corporate system access. Specops urges stronger identity verification to counter these social engineering threats.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/russia-cyber-espionage-google",
+   "type": "news",
+   "title": "Russian cyber-espionage group used stolen cloud data to hack into organizations, Google says",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/russia-cyber-espionage-google"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Russian state-backed hackers are using data stolen from cloud accounts to impersonate trusted contacts and launch espionage attacks on people in victims' professional networks.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/nsa-continues-response-to-nsa-net-problems",
+   "type": "news",
+   "title": "NSA continues response to interruptions in classified internal network",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/nsa-continues-response-to-nsa-net-problems"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "On day two of disruptions to the NSA's classified internal network, staggered arrivals and logins occurred at Fort Meade. A source said classified national security work continued unimpeded.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
    "type": "news",
    "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
@@ -2907,41 +3174,6 @@
     "actors": [],
     "malware": [],
     "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
-   "type": "news",
-   "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
-   "date": "2026-11-17",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A US judge acquitted two brothers accused of stealing $25 million in cryptocurrency in about 12 seconds by exploiting an Ethereum blockchain bug.",
-    "sector": "Finance",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
     "countries": []
    }
   },
@@ -3583,43 +3815,6 @@
    }
   },
   {
-   "id": "https://therecord.media/california-fines-hertz-state-data-privacy-law",
-   "type": "news",
-   "title": "California fines Hertz $1.5 million for breaking state data privacy law",
-   "date": "2026-11-17",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/california-fines-hertz-state-data-privacy-law"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Hertz agreed to pay a $1.5 million fine to California's privacy regulator, the CPPA, and to change its business practices after breaching state data privacy law.",
-    "sector": "Car rental",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": [
-     "US"
-    ]
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
    "type": "news",
    "title": "Tor releases emergency update amid ongoing DDoS attack",
@@ -3686,51 +3881,6 @@
     "actors": [],
     "malware": [],
     "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage",
-   "type": "news",
-   "title": "Chinese state group developing automated attack tool for cyber espionage, Google says",
-   "date": "2026-11-17",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "Artex",
-    "CAIRN",
-    "CyberStrikeAI",
-    "PentAGI"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Google reports a Chinese state-linked group is building an automated attack tool for cyber espionage. Threat actors increasingly use autonomous multi-agent offensive frameworks to run multi-stage intrusions.",
-    "sector": "",
-    "actors": [],
-    "malware": [
-     "Artex",
-     "CAIRN",
-     "CyberStrikeAI",
-     "PentAGI"
-    ],
-    "tactic": "Resource Development",
     "countries": []
    }
   },
@@ -3804,41 +3954,6 @@
     "countries": [
      "JP"
     ]
-   }
-  },
-  {
-   "id": "https://therecord.media/optimizely-malicious-code-customer-sites",
-   "type": "news",
-   "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites",
-   "date": "2026-11-17",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/optimizely-malicious-code-customer-sites"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Attackers inserted malicious JavaScript into the Optimizely Web experimentation platform, affecting 178 widely visited websites that use it. The company confirmed the breach.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
    }
   },
   {
@@ -4153,120 +4268,48 @@
     "tactic": "Execution",
     "countries": []
    }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
-   "type": "news",
-   "title": "Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware",
-   "date": "2026-11-16",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A suspected supply chain attack on Optimizely placed malicious JavaScript on major sites such as CNN, BBC and Salesforce, putting visitors at risk of crypto and payment theft and iOS exploits.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
-   "type": "news",
-   "title": "Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
-   "date": "2026-11-15",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Italy's data protection authority fined Meta €805 million. It found Facebook's Android app accessed Italian users' gallery photos and videos by default without explicit consent.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": [
-     "IT"
-    ]
-   }
   }
  ],
  "geo": {
   "window_days": 30,
-  "total": 968,
-  "located": 808,
+  "total": 1105,
+  "located": 939,
   "countries": [
    {
     "cc": "US",
-    "n": 346,
+    "n": 427,
     "groups": [
      {
+      "name": "n0n",
+      "n": 78
+     },
+     {
       "name": "qilin",
-      "n": 36
+      "n": 35
      },
      {
       "name": "thegentlemen",
-      "n": 29
-     },
-     {
-      "name": "booba project",
-      "n": 28
+      "n": 31
      }
     ],
     "sectors": [
      {
-      "name": "Professional Services",
-      "n": 63
+      "name": "Healthcare",
+      "n": 75
      },
      {
-      "name": "Healthcare",
-      "n": 60
+      "name": "Professional Services",
+      "n": 71
      },
      {
       "name": "Manufacturing",
-      "n": 49
+      "n": 55
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 64,
+    "n": 66,
     "groups": [
      {
       "name": "payload",
@@ -4291,26 +4334,58 @@
       "n": 7
      },
      {
-      "name": "Professional Services",
+      "name": "Retail & E-Commerce",
       "n": 5
      }
     ]
    },
    {
+    "cc": "CA",
+    "n": 45,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 18
+     },
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "booba project",
+      "n": 3
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 10
+     },
+     {
+      "name": "Education",
+      "n": 7
+     },
+     {
+      "name": "Professional Services",
+      "n": 6
+     }
+    ]
+   },
+   {
     "cc": "GB",
-    "n": 36,
+    "n": 38,
     "groups": [
      {
       "name": "qilin",
-      "n": 9
+      "n": 8
      },
      {
       "name": "thegentlemen",
       "n": 6
      },
      {
-      "name": "shiba",
-      "n": 2
+      "name": "n0n",
+      "n": 3
      }
     ],
     "sectors": [
@@ -4323,39 +4398,7 @@
       "n": 5
      },
      {
-      "name": "Other",
-      "n": 5
-     }
-    ]
-   },
-   {
-    "cc": "CA",
-    "n": 27,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "booba project",
-      "n": 3
-     },
-     {
-      "name": "incransom",
-      "n": 3
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Education",
-      "n": 7
-     },
-     {
-      "name": "Technology",
-      "n": 5
-     },
-     {
-      "name": "Healthcare",
+      "name": "Retail & E-Commerce",
       "n": 5
      }
     ]
@@ -4366,7 +4409,7 @@
     "groups": [
      {
       "name": "qilin",
-      "n": 9
+      "n": 8
      },
      {
       "name": "thegentlemen",
@@ -4374,7 +4417,7 @@
      },
      {
       "name": "pixelleaks",
-      "n": 2
+      "n": 3
      }
     ],
     "sectors": [
@@ -4394,7 +4437,7 @@
    },
    {
     "cc": "ES",
-    "n": 19,
+    "n": 20,
     "groups": [
      {
       "name": "thegentlemen",
@@ -4420,6 +4463,38 @@
      },
      {
       "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "IT",
+    "n": 16,
+    "groups": [
+     {
+      "name": "aurora",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
       "n": 2
      }
     ]
@@ -4457,6 +4532,38 @@
     ]
    },
    {
+    "cc": "FR",
+    "n": 15,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "lamashtu",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "IN",
     "n": 15,
     "groups": [
@@ -4484,6 +4591,38 @@
      },
      {
       "name": "Financial Services",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "MY",
+    "n": 15,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "orova",
+      "n": 2
+     },
+     {
+      "name": "rhysida",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Government & Defense",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
       "n": 2
      }
     ]
@@ -4521,136 +4660,8 @@
     ]
    },
    {
-    "cc": "IT",
-    "n": 14,
-    "groups": [
-     {
-      "name": "aurora",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "emperador",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "MY",
-    "n": 14,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "orova",
-      "n": 2
-     },
-     {
-      "name": "rhysida",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Government & Defense",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "AR",
-    "n": 13,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "aoqin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "FR",
-    "n": 13,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "lamashtu",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ]
-   },
-   {
     "cc": "KR",
-    "n": 13,
+    "n": 14,
     "groups": [
      {
       "name": "metaencryptor",
@@ -4668,7 +4679,7 @@
     "sectors": [
      {
       "name": "Technology",
-      "n": 3
+      "n": 4
      },
      {
       "name": "Manufacturing",
@@ -4677,6 +4688,70 @@
      {
       "name": "Other",
       "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "AR",
+    "n": 13,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "CH",
+    "n": 10,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "rhysida",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
      }
     ]
    },
@@ -4713,30 +4788,30 @@
     ]
    },
    {
-    "cc": "CH",
-    "n": 9,
+    "cc": "HK",
+    "n": 8,
     "groups": [
      {
-      "name": "thegentlemen",
+      "name": "pixelleaks",
       "n": 2
      },
      {
-      "name": "pixelleaks",
-      "n": 1
+      "name": "krybit",
+      "n": 2
      },
      {
-      "name": "rhysida",
+      "name": "thegentlemen",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Manufacturing",
-      "n": 3
+      "name": "Financial Services",
+      "n": 2
      },
      {
-      "name": "Retail & E-Commerce",
-      "n": 2
+      "name": "Technology",
+      "n": 1
      },
      {
       "name": "Healthcare",
@@ -4777,65 +4852,33 @@
     ]
    },
    {
-    "cc": "CN",
+    "cc": "AE",
     "n": 7,
     "groups": [
      {
-      "name": "pixelleaks",
-      "n": 2
+      "name": "n0n",
+      "n": 3
      },
      {
-      "name": "auditteam",
+      "name": "braincipher",
       "n": 1
      },
      {
-      "name": "aoqin",
+      "name": "qilin",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Technology",
-      "n": 5
+      "name": "Retail & E-Commerce",
+      "n": 3
      },
      {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "HK",
-    "n": 7,
-    "groups": [
-     {
-      "name": "pixelleaks",
+      "name": "Professional Services",
       "n": 2
      },
      {
-      "name": "krybit",
-      "n": 2
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Financial Services",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
+      "name": "Transportation",
       "n": 1
      }
     ]
@@ -4905,6 +4948,38 @@
     ]
    },
    {
+    "cc": "TW",
+    "n": 7,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
+      "name": "hyflock",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "BE",
     "n": 6,
     "groups": [
@@ -4932,6 +5007,198 @@
      },
      {
       "name": "Agriculture and Food Production",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CN",
+    "n": 6,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     },
+     {
+      "name": "auditteam",
+      "n": 1
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "DK",
+    "n": 6,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "whitearmor",
+      "n": 1
+     },
+     {
+      "name": "majinahanashi",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ID",
+    "n": 6,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "IE",
+    "n": 6,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "curious worm",
+      "n": 1
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "NL",
+    "n": 6,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "rhysida",
+      "n": 1
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SA",
+    "n": 6,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Financial Services",
       "n": 1
      }
     ]
@@ -4969,125 +5236,33 @@
     ]
    },
    {
-    "cc": "TW",
-    "n": 6,
+    "cc": "CO",
+    "n": 5,
     "groups": [
-     {
-      "name": "safepay",
-      "n": 2
-     },
      {
       "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Agriculture and Food Production",
       "n": 2
      },
      {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "AE",
-    "n": 5,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "braincipher",
+      "name": "hyflock",
       "n": 1
      },
      {
-      "name": "dark project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "IE",
-    "n": 5,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "curious worm",
-      "n": 1
-     },
-     {
-      "name": "incransom",
+      "name": "aoqin",
       "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
       "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "NL",
-    "n": 5,
-    "groups": [
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "rhysida",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
      },
      {
       "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
       "n": 1
      }
     ]
@@ -5121,93 +5296,33 @@
     ]
    },
    {
-    "cc": "CO",
-    "n": 4,
+    "cc": "ZA",
+    "n": 5,
     "groups": [
      {
       "name": "thegentlemen",
       "n": 2
      },
      {
-      "name": "aoqin",
+      "name": "global secret group",
       "n": 1
      },
      {
-      "name": "whitearmor",
+      "name": "n0n",
       "n": 1
      }
     ],
     "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "DK",
-    "n": 4,
-    "groups": [
-     {
-      "name": "whitearmor",
-      "n": 1
-     },
-     {
-      "name": "majinahanashi",
-      "n": 1
-     },
-     {
-      "name": "play",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 2
-     },
      {
       "name": "Retail & E-Commerce",
-      "n": 1
-     },
-     {
-      "name": "Education",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "ID",
-    "n": 4,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     },
-     {
-      "name": "lockbit5",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
       "n": 2
      },
      {
       "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
       "n": 1
      }
     ]
@@ -5241,33 +5356,33 @@
     ]
    },
    {
-    "cc": "SA",
+    "cc": "PT",
     "n": 4,
     "groups": [
      {
-      "name": "thegentlemen",
+      "name": "qilin",
       "n": 2
      },
      {
-      "name": "aoqin",
+      "name": "booba project",
       "n": 1
      },
      {
-      "name": "curious worm",
+      "name": "n0n",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Healthcare",
-      "n": 2
+      "name": "Technology",
+      "n": 1
      },
      {
       "name": "Other",
       "n": 1
      },
      {
-      "name": "Financial Services",
+      "name": "Manufacturing",
       "n": 1
      }
     ]
@@ -5296,38 +5411,6 @@
      },
      {
       "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "ZA",
-    "n": 4,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "global secret group",
-      "n": 1
-     },
-     {
-      "name": "medusalocker",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Transportation",
       "n": 1
      }
     ]
@@ -5469,30 +5552,6 @@
     ]
    },
    {
-    "cc": "PT",
-    "n": 3,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "AT",
     "n": 2,
     "groups": [
@@ -5537,6 +5596,30 @@
     ]
    },
    {
+    "cc": "BG",
+    "n": 2,
+    "groups": [
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "CY",
     "n": 2,
     "groups": [
@@ -5556,6 +5639,30 @@
      },
      {
       "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "KE",
+    "n": 2,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
       "n": 1
      }
     ]
@@ -5636,22 +5743,6 @@
     "sectors": []
    },
    {
-    "cc": "BG",
-    "n": 1,
-    "groups": [
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "BJ",
     "n": 1,
     "groups": [
@@ -5682,6 +5773,17 @@
       "n": 1
      }
     ]
+   },
+   {
+    "cc": "BW",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": []
    },
    {
     "cc": "CI",
@@ -5743,6 +5845,22 @@
     "sectors": [
      {
       "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ET",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
       "n": 1
      }
     ]
@@ -5818,22 +5936,6 @@
     "sectors": [
      {
       "name": "Financial Services",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "KE",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
       "n": 1
      }
     ]
@@ -6010,6 +6112,33 @@
     ]
    },
    {
+    "cc": "TN",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TT",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": []
+   },
+   {
     "cc": "TZ",
     "n": 1,
     "groups": [
@@ -6050,56 +6179,54 @@
   ],
   "groups": [
    {
-    "name": "qilin",
-    "n": 115,
-    "last": "2026-11-18",
+    "name": "n0n",
+    "n": 131,
+    "last": "2026-11-16",
     "sectors": [
      {
-      "name": "Manufacturing",
-      "n": 20
+      "name": "Retail & E-Commerce",
+      "n": 30
      },
      {
-      "name": "Professional Services",
-      "n": 15
+      "name": "Healthcare",
+      "n": 21
      },
      {
-      "name": "Other",
-      "n": 12
+      "name": "Financial Services",
+      "n": 16
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 36
+      "n": 78
      },
      {
-      "cc": "DE",
-      "n": 11
-     },
-     {
-      "cc": "MX",
-      "n": 9
+      "cc": "CA",
+      "n": 18
      },
      {
       "cc": "GB",
-      "n": 9
+      "n": 3
      },
      {
-      "cc": "AU",
-      "n": 8
+      "cc": "AE",
+      "n": 3
+     },
+     {
+      "cc": "FR",
+      "n": 2
      }
-    ],
-    "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
-    "origin": ""
+    ]
    },
    {
     "name": "thegentlemen",
-    "n": 114,
-    "last": "2026-11-16",
+    "n": 116,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Technology",
-      "n": 20
+      "n": 21
      },
      {
       "name": "Manufacturing",
@@ -6107,13 +6234,13 @@
      },
      {
       "name": "Healthcare",
-      "n": 13
+      "n": 14
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 29
+      "n": 31
      },
      {
       "cc": "DE",
@@ -6133,6 +6260,49 @@
      }
     ],
     "about": "The Gentlemen is a ransomware-as-a-service group that emerged in July–August 2025 and quickly claimed over 320 victims in 17+ countries. It offers affiliates a 90% revenue share and uses a Go-based locker against Windows, Linux, NAS, and BSD. A 2026 compromised C2 server revealed over 1,570 linked victims.",
+    "origin": ""
+   },
+   {
+    "name": "qilin",
+    "n": 109,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 20
+     },
+     {
+      "name": "Professional Services",
+      "n": 15
+     },
+     {
+      "name": "Other",
+      "n": 11
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 35
+     },
+     {
+      "cc": "DE",
+      "n": 11
+     },
+     {
+      "cc": "AU",
+      "n": 8
+     },
+     {
+      "cc": "MX",
+      "n": 8
+     },
+     {
+      "cc": "GB",
+      "n": 8
+     }
+    ],
+    "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
     "origin": ""
    },
    {
@@ -6180,8 +6350,8 @@
    },
    {
     "name": "akira",
-    "n": 39,
-    "last": "2026-11-17",
+    "n": 40,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Manufacturing",
@@ -6199,7 +6369,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 10
+      "n": 11
      },
      {
       "cc": "CA",
@@ -6264,18 +6434,18 @@
    },
    {
     "name": "silentransomgroup",
-    "n": 37,
+    "n": 36,
     "last": "2026-11-16",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 16
+      "n": 15
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 13
+      "n": 12
      },
      {
       "cc": "GB",
@@ -6287,7 +6457,7 @@
    },
    {
     "name": "pixelleaks",
-    "n": 30,
+    "n": 34,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6295,18 +6465,22 @@
       "n": 8
      },
      {
-      "name": "Healthcare",
-      "n": 4
+      "name": "Financial Services",
+      "n": 5
      },
      {
-      "name": "Financial Services",
-      "n": 4
+      "name": "Healthcare",
+      "n": 5
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 6
+      "n": 7
+     },
+     {
+      "cc": "MX",
+      "n": 3
      },
      {
       "cc": "IN",
@@ -6314,10 +6488,6 @@
      },
      {
       "cc": "VN",
-      "n": 2
-     },
-     {
-      "cc": "MX",
       "n": 2
      },
      {
@@ -6371,8 +6541,8 @@
    },
    {
     "name": "whitearmor",
-    "n": 22,
-    "last": "2026-11-08",
+    "n": 23,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Technology",
@@ -6390,7 +6560,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 6
+      "n": 7
      },
      {
       "cc": "CO",
@@ -6412,16 +6582,16 @@
    },
    {
     "name": "rhysida",
-    "n": 20,
-    "last": "2026-11-17",
+    "n": 22,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 5
+      "n": 6
      },
      {
       "name": "Professional Services",
-      "n": 4
+      "n": 5
      },
      {
       "name": "Financial Services",
@@ -6581,6 +6751,47 @@
     ]
    },
    {
+    "name": "emperador",
+    "n": 18,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "IT",
+      "n": 2
+     },
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "CH",
+      "n": 1
+     }
+    ]
+   },
+   {
     "name": "curious worm",
     "n": 17,
     "last": "2026-11-17",
@@ -6617,47 +6828,6 @@
      },
      {
       "cc": "GB",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "name": "emperador",
-    "n": 17,
-    "last": "2026-11-13",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "IT",
-      "n": 2
-     },
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "CH",
       "n": 1
      }
     ]
@@ -7004,40 +7174,75 @@
     ],
     "about": "Genesis is an emerging ransomware group first observed in late 2025. It targets small and mid-sized US organizations in healthcare, retail, financial services, legal, and manufacturing. It uses double-extortion tactics, emphasizing data theft and public leaking of stolen data.",
     "origin": ""
-   },
-   {
-    "name": "interlock",
-    "n": 12,
-    "last": "2026-11-13",
-    "sectors": [
-     {
-      "name": "Education",
-      "n": 5
-     },
-     {
-      "name": "Healthcare",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 10
-     },
-     {
-      "cc": "CA",
-      "n": 2
-     }
-    ],
-    "about": "Interlock is a ransomware group first observed in September 2024. It uses double extortion and targets critical infrastructure such as healthcare, government, education and technology in North America and Europe. It has claimed 57+ victims, including a US dialysis provider.",
-    "origin": ""
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "rhysida",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "pixelleaks",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "whitearmor",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "CO",
+    "g": "hyflock",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "rhysida",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "TW",
+    "g": "hyflock",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "IN",
+    "g": "hyflock",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "KE",
+    "g": "pixelleaks",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "DE",
+    "g": "emperador",
+    "s": "Transportation"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "MX",
+    "g": "pixelleaks",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "pixelleaks",
+    "s": "Healthcare"
+   },
    {
     "d": "2026-11-18",
     "cc": "VN",
@@ -7077,6 +7282,18 @@
    {
     "d": "2026-11-18",
     "cc": "US",
+    "g": "akira",
+    "s": "Hospitality"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "thegentlemen",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
     "g": "qilin",
     "s": "Financial Services"
    },
@@ -7084,6 +7301,12 @@
     "d": "2026-11-17",
     "cc": "US",
     "g": "vortex",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-17",
+    "cc": "US",
+    "g": "thegentlemen",
     "s": "Healthcare"
    },
    {
@@ -7193,112 +7416,28 @@
     "cc": "US",
     "g": "booba project",
     "s": "Government & Defense"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "booba project",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "booba project",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "",
-    "g": "everstake",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "MX",
-    "g": "pixelleaks",
-    "s": ""
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "inception",
-    "s": "Agriculture and Food Production"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "inception",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "inception",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "inception",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Healthcare"
    }
   ],
   "days": [
    {
     "date": "2026-10-19",
-    "n": 13
+    "n": 7
    },
    {
     "date": "2026-10-20",
-    "n": 23
+    "n": 27
    },
    {
     "date": "2026-10-21",
-    "n": 50
+    "n": 55
    },
    {
     "date": "2026-10-22",
-    "n": 21
+    "n": 27
    },
    {
     "date": "2026-10-23",
-    "n": 43
+    "n": 44
    },
    {
     "date": "2026-10-24",
@@ -7314,11 +7453,11 @@
    },
    {
     "date": "2026-10-27",
-    "n": 44
+    "n": 45
    },
    {
     "date": "2026-10-28",
-    "n": 34
+    "n": 35
    },
    {
     "date": "2026-10-29",
@@ -7338,19 +7477,19 @@
    },
    {
     "date": "2026-11-02",
-    "n": 43
+    "n": 48
    },
    {
     "date": "2026-11-03",
-    "n": 27
+    "n": 37
    },
    {
     "date": "2026-11-04",
-    "n": 62
+    "n": 67
    },
    {
     "date": "2026-11-05",
-    "n": 17
+    "n": 22
    },
    {
     "date": "2026-11-06",
@@ -7358,7 +7497,7 @@
    },
    {
     "date": "2026-11-07",
-    "n": 29
+    "n": 39
    },
    {
     "date": "2026-11-08",
@@ -7366,7 +7505,7 @@
    },
    {
     "date": "2026-11-09",
-    "n": 34
+    "n": 96
    },
    {
     "date": "2026-11-10",
@@ -7382,7 +7521,7 @@
    },
    {
     "date": "2026-11-13",
-    "n": 19
+    "n": 20
    },
    {
     "date": "2026-11-14",
@@ -7394,15 +7533,15 @@
    },
    {
     "date": "2026-11-16",
-    "n": 61
+    "n": 74
    },
    {
     "date": "2026-11-17",
-    "n": 35
+    "n": 36
    },
    {
     "date": "2026-11-18",
-    "n": 7
+    "n": 20
    }
   ]
  },
@@ -8769,25 +8908,25 @@
   ]
  },
  "brief": {
-  "key": "v3|2026-11-18|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-115731",
+  "key": "v3|2026-11-18|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-48356",
   "points": [
    {
-    "title": "PHP memory corruption vulnerability",
-    "why": "Confirmed exploited in the wild, with exploitation within 30 days considered near-certain.",
+    "title": "PHP Memory Corruption Vulnerability",
+    "why": "Confirmed exploited; exploitation within 30 days is near-certain; critical severity.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
-    "title": "Google Brotli unchecked return value flaw",
-    "why": "Confirmed exploited and in the news this week, with exploitation within 30 days likely.",
+    "title": "Google Brotli Unchecked Return Value Flaw",
+    "why": "Confirmed exploited, high exploitation likelihood, and in this week's news.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
    },
    {
-    "title": "GitLab integer overflow vulnerability",
-    "why": "Confirmed exploited and rated critical, with exploitation within 30 days likely.",
+    "title": "GitLab Integer Overflow Vulnerability",
+    "why": "Confirmed exploited; high likelihood of exploitation within 30 days; critical severity.",
     "ref": "CVE-2026-97229",
     "find": "CVE-2026-97229",
     "level": "red"
