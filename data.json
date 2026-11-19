@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-19T01:51:38Z",
+ "generated": "2026-11-19T10:10:37Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1786,
  "counts": {
   "red": 12,
-  "orange": 32,
-  "green": 52
+  "orange": 33,
+  "green": 53
  },
  "sources": [
   {
@@ -56,7 +56,7 @@
    "ransomware": 0,
    "epss_high": 6,
    "epss_known": 38,
-   "news": 58
+   "news": 60
   },
   "timeline": [
    {
@@ -367,11 +367,11 @@
    },
    {
     "name": "Ransomware",
-    "n": 1
+    "n": 3
    },
    {
     "name": "Data breach",
-    "n": 2
+    "n": 4
    }
   ],
   "actors": [
@@ -382,26 +382,6 @@
      {
       "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
       "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
-     }
-    ]
-   },
-   {
-    "name": "BO Team",
-    "n": 1,
-    "links": [
-     {
-      "label": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-      "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
-     }
-    ]
-   },
-   {
-    "name": "Black Owl",
-    "n": 1,
-    "links": [
-     {
-      "label": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-      "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
      }
     ]
    },
@@ -466,6 +446,16 @@
     ]
    },
    {
+    "name": "Gentlemen ransomware group",
+    "n": 1,
+    "links": [
+     {
+      "label": "NVIDIA investigating Gentlemen ransomware breach claims",
+      "url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/"
+     }
+    ]
+   },
+   {
     "name": "GitDoor",
     "n": 1,
     "links": [
@@ -486,12 +476,22 @@
     ]
    },
    {
-    "name": "Hoody Hyena",
+    "name": "PentAGI",
     "n": 1,
     "links": [
      {
-      "label": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-      "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
+      "label": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html"
+     }
+    ]
+   },
+   {
+    "name": "Retadup",
+    "n": 1,
+    "links": [
+     {
+      "label": "Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware",
+      "url": "https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html"
      }
     ]
    }
@@ -561,7 +561,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 28
+    "n": 30
    },
    {
     "name": "BleepingComputer",
@@ -2437,6 +2437,56 @@
    ]
   },
   {
+   "id": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+   "type": "news",
+   "title": "NVIDIA investigating Gentlemen ransomware breach claims",
+   "date": "2026-11-19",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": true,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/"
+    }
+   ],
+   "signals": [
+    "Ransomware",
+    "Data breach"
+   ],
+   "actors": [
+    "Gentlemen ransomware group"
+   ],
+   "score": 45,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Ransomware in the headline",
+     "points": 15
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "NVIDIA is investigating claims of a breach after the Gentlemen ransomware group listed the company on its dark web leak site.",
+    "sector": "Technology",
+    "actors": [
+     "Gentlemen ransomware group"
+    ],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
    "id": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
    "type": "news",
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
@@ -2689,6 +2739,47 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+   "type": "news",
+   "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
+   "date": "2026-11-19",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": true,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html"
+    }
+   ],
+   "signals": [
+    "Ransomware"
+   ],
+   "actors": [],
+   "score": 35,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Ransomware in the headline",
+     "points": 15
+    }
+   ],
+   "ai": {
+    "summary": "CISA added four actively exploited flaws in Synology DSM, BerriAI LiteLLM, Apache Axis, and Vanderbilt REDCap to its KEV catalog.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
    "type": "news",
    "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
@@ -2723,6 +2814,47 @@
    "ai": {
     "summary": "Ukrainian authorities and the FBI arrested four suspected members of an international ransomware group linked to over $40.5 million in ransom payments from at least 28 companies worldwide.",
     "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+   "type": "news",
+   "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+   "date": "2026-11-19",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "N-able disclosed that unknown attackers accessed a server in its Mail Assure and Spam Experts Hosted Cloud, disabling management interfaces and APIs across three regions; the investigation is ongoing.",
+    "sector": "Technology",
     "actors": [],
     "malware": [],
     "tactic": "Impact",
@@ -2901,6 +3033,111 @@
     "actors": [],
     "malware": [],
     "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
+   "type": "news",
+   "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
+   "date": "2026-11-19",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "PHP maintainers announced an upcoming security release addressing critical flaws that affect all supported PHP versions, scheduled for November 19, 2026.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
+   "type": "news",
+   "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
+   "date": "2026-11-19",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A researcher published proof-of-concept exploits showing low-privilege database accounts can run code on servers via memory-corruption bugs in PostgreSQL, MySQL, ClickHouse, and Oracle.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Execution",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
+   "type": "news",
+   "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
+   "date": "2026-11-19",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Ruby released fixes for seven memory-safety flaws in its regex and string case-conversion code, five of which have proof-of-concept exploits showing possible remote code execution.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
     "countries": []
    }
   },
@@ -4192,41 +4429,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
-   "type": "news",
-   "title": "Tor releases emergency update amid ongoing DDoS attack",
-   "date": "2026-11-17",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "The Tor Project released an emergency update to its relay software to defend against an ongoing DDoS attack. The attack has overwhelmed relays and affected most relay operators.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/",
    "type": "news",
    "title": "Researchers hijack Hugging Face account for popular Kokoro AI model",
@@ -4404,128 +4606,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
-   "type": "news",
-   "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-   "date": "2026-11-16",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "BO Team",
-    "Black Owl",
-    "Hoody Hyena"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A threat actor exploited Log4Shell in VMware vCenter and spent months inside a Russian software developer's network. It compromised the firm's code-signing server, which Kaspersky ICS CERT investigated.",
-    "sector": "Software Development",
-    "actors": [
-     "BO Team",
-     "Black Owl",
-     "Hoody Hyena"
-    ],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": [
-     "RU"
-    ]
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
-   "type": "news",
-   "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
-   "date": "2026-11-16",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Amazon's threat intelligence team found attacker AI agents scanning exposed AI apps like LiteLLM, One API, and Dify. The agents steal provider API keys and use them to run their own searches.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Credential Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html",
-   "type": "news",
-   "title": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
-   "date": "2026-11-16",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "REF3364",
-    "SANSAR"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Threat cluster REF3364 runs a financially motivated Linux cryptomining operation. Its SANSAR toolkit, which uses Tor for commands, tampers with GPU readings to hide mining activity.",
-    "sector": "",
-    "actors": [
-     "REF3364"
-    ],
-    "malware": [
-     "SANSAR"
-    ],
-    "tactic": "Defense Evasion",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html",
    "type": "news",
    "title": "Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware",
@@ -4649,16 +4729,16 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1115,
-  "located": 945,
+  "total": 1141,
+  "located": 972,
   "countries": [
    {
     "cc": "US",
-    "n": 427,
+    "n": 443,
     "groups": [
      {
       "name": "n0n",
-      "n": 76
+      "n": 91
      },
      {
       "name": "qilin",
@@ -4672,7 +4752,7 @@
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 77
+      "n": 78
      },
      {
       "name": "Professional Services",
@@ -4718,11 +4798,11 @@
    },
    {
     "cc": "CA",
-    "n": 45,
+    "n": 48,
     "groups": [
      {
       "name": "n0n",
-      "n": 18
+      "n": 21
      },
      {
       "name": "thegentlemen",
@@ -4750,19 +4830,19 @@
    },
    {
     "cc": "GB",
-    "n": 38,
+    "n": 42,
     "groups": [
      {
       "name": "qilin",
       "n": 8
      },
      {
-      "name": "thegentlemen",
-      "n": 6
+      "name": "n0n",
+      "n": 7
      },
      {
-      "name": "n0n",
-      "n": 3
+      "name": "thegentlemen",
+      "n": 6
      }
     ],
     "sectors": [
@@ -4782,7 +4862,7 @@
    },
    {
     "cc": "MX",
-    "n": 26,
+    "n": 28,
     "groups": [
      {
       "name": "qilin",
@@ -5101,8 +5181,40 @@
     ]
    },
    {
-    "cc": "CH",
+    "cc": "TR",
     "n": 10,
+    "groups": [
+     {
+      "name": "doommageddon",
+      "n": 3
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "thegentlemen",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CH",
+    "n": 9,
     "groups": [
      {
       "name": "thegentlemen",
@@ -5133,34 +5245,98 @@
     ]
    },
    {
-    "cc": "TR",
-    "n": 10,
+    "cc": "JP",
+    "n": 9,
     "groups": [
      {
-      "name": "doommageddon",
+      "name": "qilin",
       "n": 3
      },
      {
-      "name": "qilin",
-      "n": 2
+      "name": "incransom",
+      "n": 1
      },
      {
-      "name": "thegentlemen",
-      "n": 2
+      "name": "metaencryptor",
+      "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 4
+      "n": 5
      },
      {
-      "name": "Technology",
+      "name": "Education",
+      "n": 1
+     },
+     {
+      "name": "Hospitality",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PH",
+    "n": 9,
+    "groups": [
+     {
+      "name": "qilin",
       "n": 3
      },
      {
-      "name": "Professional Services",
+      "name": "n0n",
       "n": 1
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     },
+     {
+      "name": "Government & Defense",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AE",
+    "n": 8,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 3
+     },
+     {
+      "name": "krybit",
+      "n": 1
+     },
+     {
+      "name": "braincipher",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
      }
     ]
    },
@@ -5197,70 +5373,6 @@
     ]
    },
    {
-    "cc": "JP",
-    "n": 8,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "metaencryptor",
-      "n": 1
-     },
-     {
-      "name": "byod",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Education",
-      "n": 1
-     },
-     {
-      "name": "Hospitality",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "PH",
-    "n": 8,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "sarcoma",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Government & Defense",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "SG",
     "n": 8,
     "groups": [
@@ -5288,38 +5400,6 @@
      },
      {
       "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "AE",
-    "n": 7,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 3
-     },
-     {
-      "name": "braincipher",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
       "n": 1
      }
     ]
@@ -6029,26 +6109,6 @@
     ]
    },
    {
-    "cc": "ET",
-    "n": 2,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Education",
-      "n": 1
-     },
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "KE",
     "n": 2,
     "groups": [
@@ -6255,6 +6315,22 @@
     ]
    },
    {
+    "cc": "ET",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "GA",
     "n": 1,
     "groups": [
@@ -6280,6 +6356,22 @@
      }
     ],
     "sectors": []
+   },
+   {
+    "cc": "GR",
+    "n": 1,
+    "groups": [
+     {
+      "name": "krybit",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
    },
    {
     "cc": "HU",
@@ -6437,6 +6529,22 @@
     ]
    },
    {
+    "cc": "MZ",
+    "n": 1,
+    "groups": [
+     {
+      "name": "medusalocker",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "NG",
     "n": 1,
     "groups": [
@@ -6501,6 +6609,22 @@
     ]
    },
    {
+    "cc": "RU",
+    "n": 1,
+    "groups": [
+     {
+      "name": "krybit",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Hospitality",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "SI",
     "n": 1,
     "groups": [
@@ -6531,33 +6655,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "cc": "TN",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "TT",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": []
    },
    {
     "cc": "TZ",
@@ -6601,8 +6698,8 @@
   "groups": [
    {
     "name": "n0n",
-    "n": 131,
-    "last": "2026-11-16",
+    "n": 152,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Retail & E-Commerce",
@@ -6610,7 +6707,7 @@
      },
      {
       "name": "Healthcare",
-      "n": 21
+      "n": 22
      },
      {
       "name": "Financial Services",
@@ -6620,22 +6717,22 @@
     "countries": [
      {
       "cc": "US",
-      "n": 76
+      "n": 91
      },
      {
       "cc": "CA",
-      "n": 18
+      "n": 21
      },
      {
       "cc": "GB",
-      "n": 3
+      "n": 7
      },
      {
       "cc": "AE",
       "n": 3
      },
      {
-      "cc": "ET",
+      "cc": "MX",
       "n": 2
      }
     ]
@@ -6728,26 +6825,26 @@
    },
    {
     "name": "incransom",
-    "n": 46,
-    "last": "2026-11-16",
+    "n": 48,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Professional Services",
       "n": 13
      },
      {
-      "name": "Financial Services",
+      "name": "Technology",
       "n": 5
      },
      {
-      "name": "Other",
+      "name": "Financial Services",
       "n": 5
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 28
+      "n": 29
      },
      {
       "cc": "CA",
@@ -6758,11 +6855,11 @@
       "n": 2
      },
      {
-      "cc": "MY",
+      "cc": "JP",
       "n": 1
      },
      {
-      "cc": "ID",
+      "cc": "MY",
       "n": 1
      }
     ],
@@ -7045,6 +7142,49 @@
     "origin": ""
    },
    {
+    "name": "medusalocker",
+    "n": 20,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "MZ",
+      "n": 1
+     },
+     {
+      "cc": "IN",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     }
+    ],
+    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
+    "origin": ""
+   },
+   {
     "name": "lockbit5",
     "n": 19,
     "last": "2026-11-18",
@@ -7085,49 +7225,6 @@
      }
     ],
     "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
-    "origin": ""
-   },
-   {
-    "name": "medusalocker",
-    "n": 19,
-    "last": "2026-11-11",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "IN",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ],
-    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
     "origin": ""
    },
    {
@@ -7297,6 +7394,49 @@
     ]
    },
    {
+    "name": "krybit",
+    "n": 18,
+    "last": "2026-11-19",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Hospitality",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "HK",
+      "n": 2
+     },
+     {
+      "cc": "RU",
+      "n": 1
+     },
+     {
+      "cc": "AE",
+      "n": 1
+     },
+     {
+      "cc": "GR",
+      "n": 1
+     }
+    ],
+    "about": "Krybit is an emerging RaaS group that launched in late March 2026. It offers affiliates an 80/20 revenue split and encrypts Windows, Linux, ESXi, and NAS devices. It became known for a public feud with rival 0APT, with each group leaking the other's operator data.",
+    "origin": ""
+   },
+   {
     "name": "play",
     "n": 17,
     "last": "2026-11-16",
@@ -7457,49 +7597,6 @@
     "origin": ""
    },
    {
-    "name": "krybit",
-    "n": 15,
-    "last": "2026-11-18",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Other",
-      "n": 2
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "HK",
-      "n": 2
-     },
-     {
-      "cc": "SG",
-      "n": 1
-     },
-     {
-      "cc": "CY",
-      "n": 1
-     },
-     {
-      "cc": "TH",
-      "n": 1
-     }
-    ],
-    "about": "Krybit is an emerging RaaS group that launched in late March 2026. It offers affiliates an 80/20 revenue split and encrypts Windows, Linux, ESXi, and NAS devices. It became known for a public feud with rival 0APT, with each group leaking the other's operator data.",
-    "origin": ""
-   },
-   {
     "name": "metaencryptor",
     "n": 14,
     "last": "2026-11-16",
@@ -7599,6 +7696,180 @@
   ],
   "recent": [
    {
+    "d": "2026-11-19",
+    "cc": "RU",
+    "g": "krybit",
+    "s": "Hospitality"
+   },
+   {
+    "d": "2026-11-19",
+    "cc": "AE",
+    "g": "krybit",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-19",
+    "cc": "GR",
+    "g": "krybit",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "MZ",
+    "g": "medusalocker",
+    "s": "Transportation"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "PH",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "GB",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "MX",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "GB",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "MX",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "GB",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "GB",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "CA",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "CA",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "CA",
+    "g": "n0n",
+    "s": ""
+   },
+   {
     "d": "2026-11-18",
     "cc": "US",
     "g": "silentransomgroup",
@@ -7663,186 +7934,12 @@
     "cc": "US",
     "g": "lockbit5",
     "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "SG",
-    "g": "krybit",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "rhysida",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "pixelleaks",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "US",
-    "g": "whitearmor",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "CO",
-    "g": "hyflock",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "rhysida",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "TW",
-    "g": "hyflock",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "IN",
-    "g": "hyflock",
-    "s": ""
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "KE",
-    "g": "pixelleaks",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "DE",
-    "g": "emperador",
-    "s": "Transportation"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "MX",
-    "g": "pixelleaks",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "US",
-    "g": "pixelleaks",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "VN",
-    "g": "pixelleaks",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "AR",
-    "g": "aoqin",
-    "s": ""
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "helix",
-    "s": ""
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "pixelleaks",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "MX",
-    "g": "pixelleaks",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "US",
-    "g": "helix",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "akira",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "",
-    "g": "akira",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "US",
-    "g": "akira",
-    "s": "Hospitality"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "US",
-    "g": "thegentlemen",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "US",
-    "g": "qilin",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-18",
-    "cc": "JP",
-    "g": "qilin",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "vortex",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "thegentlemen",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "helix",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "endzone",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "curious worm",
-    "s": "Healthcare"
    }
   ],
   "days": [
    {
     "date": "2026-10-20",
-    "n": 22
+    "n": 17
    },
    {
     "date": "2026-10-21",
@@ -7958,11 +8055,11 @@
    },
    {
     "date": "2026-11-18",
-    "n": 35
+    "n": 63
    },
    {
     "date": "2026-11-19",
-    "n": 0
+    "n": 3
    }
   ]
  },
@@ -8111,10 +8208,10 @@
   },
   "profiles_at": "2026-11-18T07:35:44.387870+00:00",
   "since": {
-   "209811713": "2123124212068130839",
-   "50026664": "2123191728152727854",
+   "209811713": "2123349362525044792",
+   "50026664": "2123346441150030089",
    "1290332482374598658": "2123072808997814580",
-   "41258937": "2123212160025170411",
+   "41258937": "2123344107179274742",
    "4487645412": "2122801967579759028",
    "54316357": "2122993566959976662",
    "935278274845974528": "2123159310075117919",
@@ -8129,10 +8226,10 @@
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-19T01:51:38.191523+00:00",
-   "bleepincomputer": "2026-11-19T01:51:38.191523+00:00",
-   "therecord_media": "2026-11-19T01:51:38.191523+00:00",
-   "securityweek": "2026-11-19T01:51:38.191523+00:00",
+   "thehackersnews": "2026-11-19T10:10:37.794183+00:00",
+   "bleepincomputer": "2026-11-19T10:10:37.794183+00:00",
+   "therecord_media": "2026-11-19T10:10:37.794183+00:00",
+   "securityweek": "2026-11-19T10:10:37.794183+00:00",
    "unit42_intel": "2026-11-19T01:51:38.191523+00:00",
    "esetresearch": "2026-11-19T01:51:38.191523+00:00",
    "ciscotalos": "2026-11-19T01:51:38.191523+00:00",
@@ -8152,7 +8249,7 @@
   },
   "budget": {
    "day": "2026-11-19",
-   "used": 38
+   "used": 49
   },
   "accounts": [
    {
@@ -8238,6 +8335,233 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2123349362525044792",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-19T09:35:12.000Z",
+    "text": "‼️ BREAKING: N-able confirms hackers breached a cloud server behind Mail Assure and SpamExperts.\n\nManagement portals, APIs, quarantine, and logging remain offline across multiple regions.\n\nNo evidence of customer data theft so far.\n\nRead → https://t.co/TTgva6Jc8N",
+    "urls": [
+     {
+      "u": "https://t.co/TTgva6Jc8N",
+      "d": "thehackernews.com/2026/11/n-able…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2123346441150030089",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-19T09:23:36.000Z",
+    "text": "NVIDIA investigating Gentlemen ransomware breach claims\nhttps://t.co/yDqryID7Q3\n\nhttps://t.co/yDqryID7Q3",
+    "urls": [
+     {
+      "u": "https://t.co/yDqryID7Q3",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/yDqryID7Q3",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Ransomware",
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2123345678793597271",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-19T09:20:34.000Z",
+    "text": "⚠️ CISA ALERT: 4 vulnerabilities are under active attack.\n\nHackers are exploiting flaws in Synology DSM, LiteLLM, Apache Axis, and REDCap to deploy ransomware, mine crypto, and hijack AI infrastructure.\n\n3 flaws carry critical 9.8 CVSS scores.\n\nRead → https://t.co/nIRJSmJjsd",
+    "urls": [
+     {
+      "u": "https://t.co/nIRJSmJjsd",
+      "d": "thehackernews.com/2026/11/cisa-w…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Ransomware"
+    ]
+   },
+   {
+    "id": "2123344107179274742",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-19T09:14:19.000Z",
+    "text": "#Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories https://t.co/vL5UsYzOcv",
+    "urls": [
+     {
+      "u": "https://t.co/vL5UsYzOcv",
+      "d": "securityweek.com/java4shell-exp…"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "Java4Shell"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123337568469373104",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-19T08:48:20.000Z",
+    "text": "‼️WARNING: Ruby releases patches for 7 security flaws — 5 already have proof-of-concept exploits demonstrating remote code execution (RCE).\n\n3 are rated CRITICAL. The flaws affect regex processing and string handling.\n\nCheck the details → https://t.co/g1TvgDU4Ek",
+    "urls": [
+     {
+      "u": "https://t.co/g1TvgDU4Ek",
+      "d": "thehackernews.com/2026/11/ruby-r…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123336727729164633",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-19T08:45:00.000Z",
+    "text": "Can crypto technology help build a more secure internet?\n\nNetcoreNetwork is combining Byzantine fault-tolerant consensus with P2P networking to reduce centralized attack surfaces, improve privacy, and strengthen resilience.\n\nHere's how the architecture works → https://t.co/KVaKUVjWn8",
+    "urls": [
+     {
+      "u": "https://t.co/KVaKUVjWn8",
+      "d": "thehackernews.com/expert-insight…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123329505364513258",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-19T08:16:18.000Z",
+    "text": "🚨 Researcher demonstrates RCE exploits against #PostgreSQL, #MySQL, and ClickHouse — plus a pre-auth attack chain targeting Oracle.\n\nThe findings expose how database vulnerabilities can lead to server compromise, even with limited privileges.\n\nDetails → https://t.co/qQncqChf0T",
+    "urls": [
+     {
+      "u": "https://t.co/qQncqChf0T",
+      "d": "thehackernews.com/2026/11/resear…"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "MySQL",
+     "PostgreSQL"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123322066506072204",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-19T07:46:44.000Z",
+    "text": "PHP Readies Critical Security Updates to Patch Another RCE Flaw https://t.co/Yj9ZRINlNj",
+    "urls": [
+     {
+      "u": "https://t.co/Yj9ZRINlNj",
+      "d": "securityweek.com/php-readies-cr…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123257459330429342",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-19T03:30:01.000Z",
+    "text": "CISO Conversations: Patti Degnan – Part of the Job Is Deciding What Not to Do https://t.co/aVYD7EksW0",
+    "urls": [
+     {
+      "u": "https://t.co/aVYD7EksW0",
+      "d": "securityweek.com/ciso-conversat…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123257458764263817",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-19T03:30:01.000Z",
+    "text": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization https://t.co/Zirn6CymMD",
+    "urls": [
+     {
+      "u": "https://t.co/Zirn6CymMD",
+      "d": "securityweek.com/russian-apt-po…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2123256671585599886",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-19T03:26:53.000Z",
+    "text": "Palo Alto Networks ($PANW) agreed to acquire AI infrastructure company Applied Compute in an all-stock transaction valued at $4.5 billion  -https://t.co/XjluV1imTJ",
+    "urls": [
+     {
+      "u": "https://t.co/XjluV1imTJ",
+      "d": "securityweek.com/palo-alto-netw…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2123212982994001955",
     "uid": "1540951016",
