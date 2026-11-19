@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-18T18:48:23Z",
+ "generated": "2026-11-19T01:51:38Z",
  "kev_window_days": 30,
  "news_window_days": 3,
- "kev_total": 1782,
+ "kev_total": 1786,
  "counts": {
-  "red": 8,
-  "orange": 31,
-  "green": 50
+  "red": 12,
+  "orange": 32,
+  "green": 52
  },
  "sources": [
   {
@@ -52,17 +52,13 @@
  ],
  "analytics": {
   "totals": {
-   "kev_window": 34,
+   "kev_window": 38,
    "ransomware": 0,
    "epss_high": 6,
-   "epss_known": 34,
-   "news": 55
+   "epss_known": 38,
+   "news": 58
   },
   "timeline": [
-   {
-    "date": "2026-10-19",
-    "n": 0
-   },
    {
     "date": "2026-10-20",
     "n": 6
@@ -181,17 +177,21 @@
    },
    {
     "date": "2026-11-18",
+    "n": 4
+   },
+   {
+    "date": "2026-11-19",
     "n": 0
    }
   ],
   "severity": [
    {
     "name": "Critical (9+)",
-    "n": 12
+    "n": 15
    },
    {
     "name": "High (7 to 8.9)",
-    "n": 14
+    "n": 15
    },
    {
     "name": "Medium (4 to 6.9)",
@@ -217,11 +217,11 @@
    },
    {
     "name": "10 to 49%",
-    "n": 8
+    "n": 9
    },
    {
     "name": "Under 10%",
-    "n": 20
+    "n": 23
    },
    {
     "name": "No score yet",
@@ -294,26 +294,36 @@
     "n": 2
    },
    {
-    "id": "CWE-287",
-    "name": "Improper authentication",
+    "id": "CWE-73",
+    "name": "",
     "n": 2
    },
    {
-    "id": "CWE-862",
-    "name": "Missing authorization",
+    "id": "CWE-94",
+    "name": "Code injection",
     "n": 2
    }
   ],
   "deadlines": [
    {
-    "cve": "CVE-2024-27834",
-    "title": "Apple Multiple Products Improper Authentication Vulnerability",
-    "due": "2026-11-18"
-   },
-   {
     "cve": "CVE-2026-19868",
     "title": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
     "due": "2026-11-20"
+   },
+   {
+    "cve": "CVE-2026-90817",
+    "title": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+    "due": "2026-11-21"
+   },
+   {
+    "cve": "CVE-2024-10441",
+    "title": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+    "due": "2026-11-21"
+   },
+   {
+    "cve": "CVE-2026-90436",
+    "title": "Apache Axis Unsafe Reflection Vulnerability",
+    "due": "2026-11-21"
    },
    {
     "cve": "CVE-2026-20320",
@@ -339,6 +349,11 @@
     "cve": "CVE-2026-115731",
     "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
     "due": "2026-12-01"
+   },
+   {
+    "cve": "CVE-2026-40217",
+    "title": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+    "due": "2026-12-02"
    }
   ],
   "signals": [
@@ -348,11 +363,15 @@
    },
    {
     "name": "Exploited in the wild",
+    "n": 2
+   },
+   {
+    "name": "Ransomware",
     "n": 1
    },
    {
     "name": "Data breach",
-    "n": 1
+    "n": 2
    }
   ],
   "actors": [
@@ -447,16 +466,6 @@
     ]
    },
    {
-    "name": "EvilTokens",
-    "n": 1,
-    "links": [
-     {
-      "label": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
-      "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/"
-     }
-    ]
-   },
-   {
     "name": "GitDoor",
     "n": 1,
     "links": [
@@ -475,6 +484,16 @@
       "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
      }
     ]
+   },
+   {
+    "name": "Hoody Hyena",
+    "n": 1,
+    "links": [
+     {
+      "label": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
+      "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
+     }
+    ]
    }
   ],
   "news_cves": [
@@ -489,9 +508,39 @@
     "kev": true
    },
    {
+    "cve": "CVE-2024-10441",
+    "n": 1,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-40217",
+    "n": 1,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-90436",
+    "n": 1,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-90817",
+    "n": 1,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-129448",
+    "n": 1,
+    "kev": false
+   },
+   {
     "cve": "CVE-2026-111497",
     "n": 1,
     "kev": true
+   },
+   {
+    "cve": "CVE-2026-123007",
+    "n": 1,
+    "kev": false
    },
    {
     "cve": "CVE-2026-109097",
@@ -507,42 +556,12 @@
     "cve": "CVE-2026-120157",
     "n": 1,
     "kev": false
-   },
-   {
-    "cve": "CVE-2026-120255",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-120260",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-120271",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-120298",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-112136",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-112137",
-    "n": 1,
-    "kev": false
    }
   ],
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 25
+    "n": 28
    },
    {
     "name": "BleepingComputer",
@@ -853,6 +872,181 @@
    ]
   },
   {
+   "id": "CVE-2026-90817",
+   "type": "vuln",
+   "title": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+   "cve": "CVE-2026-90817",
+   "vendor": "Vanderbilt University",
+   "product": "Research Electronic Data Capture (REDCap)",
+   "date": "2026-11-18",
+   "summary": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-21",
+   "epss": 0.03749,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    }
+   ],
+   "cwes": [
+    "CWE-73",
+    "CWE-94"
+   ],
+   "score": 76,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 4% chance of exploitation in 30 days",
+     "points": 1
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
+    },
+    {
+     "label": "In the news this week",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2024-10441",
+   "type": "vuln",
+   "title": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+   "cve": "CVE-2024-10441",
+   "vendor": "Synology",
+   "product": "DiskStation Manager (DSM)",
+   "date": "2026-11-18",
+   "summary": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-21",
+   "epss": 0.01251,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    }
+   ],
+   "cwes": [
+    "CWE-116"
+   ],
+   "score": 75,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
+    },
+    {
+     "label": "In the news this week",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-90436",
+   "type": "vuln",
+   "title": "Apache Axis Unsafe Reflection Vulnerability",
+   "cve": "CVE-2026-90436",
+   "vendor": "Apache",
+   "product": "Axis",
+   "date": "2026-11-18",
+   "summary": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-21",
+   "epss": 0.01128,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CISA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    }
+   ],
+   "cwes": [
+    "CWE-470"
+   ],
+   "score": 75,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
+    },
+    {
+     "label": "In the news this week",
+     "points": 5
+    }
+   ]
+  },
+  {
    "id": "CVE-2026-115731",
    "type": "vuln",
    "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
@@ -904,6 +1098,64 @@
     {
      "label": "CVSS 9.4 critical severity",
      "points": 10
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
+    },
+    {
+     "label": "In the news this week",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-40217",
+   "type": "vuln",
+   "title": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+   "cve": "CVE-2026-40217",
+   "vendor": "BerriAI",
+   "product": "LiteLLM",
+   "date": "2026-11-18",
+   "summary": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-12-02",
+   "epss": 0.1702,
+   "cvss": {
+    "score": 8.8,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40217"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    }
+   ],
+   "cwes": [
+    "CWE-420"
+   ],
+   "score": 74,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 17% chance of exploitation in 30 days",
+     "points": 4
+    },
+    {
+     "label": "CVSS 8.8 high severity",
+     "points": 5
     },
     {
      "label": "Added in the last 7 days",
@@ -1747,52 +1999,6 @@
    ]
   },
   {
-   "id": "CVE-2024-27834",
-   "type": "vuln",
-   "title": "Apple Multiple Products Improper Authentication Vulnerability",
-   "cve": "CVE-2024-27834",
-   "vendor": "Apple",
-   "product": "Multiple Products",
-   "date": "2026-11-04",
-   "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-18",
-   "epss": 0.01502,
-   "cvss": {
-    "score": 5.5,
-    "version": "3.1",
-    "severity": "MEDIUM",
-    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
-    "by": "CISA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27834"
-    }
-   ],
-   "cwes": [
-    "CWE-287"
-   ],
-   "score": 55,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "Added in the last 14 days",
-     "points": 5
-    }
-   ]
-  },
-  {
    "id": "CVE-2026-119977",
    "type": "vuln",
    "title": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
@@ -2105,6 +2311,48 @@
    ]
   },
   {
+   "id": "CVE-2024-27834",
+   "type": "vuln",
+   "title": "Apple Multiple Products Improper Authentication Vulnerability",
+   "cve": "CVE-2024-27834",
+   "vendor": "Apple",
+   "product": "Multiple Products",
+   "date": "2026-11-04",
+   "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-18",
+   "epss": 0.01502,
+   "cvss": {
+    "score": 5.5,
+    "version": "3.1",
+    "severity": "MEDIUM",
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+    "by": "CISA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27834"
+    }
+   ],
+   "cwes": [
+    "CWE-287"
+   ],
+   "score": 50,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 2% chance of exploitation in 30 days",
+     "points": 0
+    }
+   ]
+  },
+  {
    "id": "CVE-2026-118527",
    "type": "vuln",
    "title": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
@@ -2189,6 +2437,51 @@
    ]
   },
   {
+   "id": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+   "type": "news",
+   "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+   "date": "2026-11-18",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2024-10441",
+    "CVE-2026-115731",
+    "CVE-2026-40217",
+    "CVE-2026-90436",
+    "CVE-2026-90817"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Mentions exploited CVE-2024-10441",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA added four vulnerabilities from Synology, BerriAI, Apache Axis and Vanderbilt's REDCap to its catalog of flaws under active exploitation, warning federal agencies about the risk.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html",
    "type": "news",
    "title": "Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers",
@@ -2271,6 +2564,49 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
+   "type": "news",
+   "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-129448"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
+    }
+   ],
+   "signals": [
+    "Exploited in the wild"
+   ],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Exploited in the wild in the headline",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An unauthenticated deserialization flaw in Apache Roller's XML-RPC endpoint, rated 9.8 CVSS, is being actively exploited to enable remote code execution on blogging servers.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-04",
    "type": "news",
    "title": "Siemens Industrial Software Products",
@@ -2305,47 +2641,6 @@
    "ai": {
     "summary": "Siemens assessed its software products for impact from a critical Brotli decoder flaw in Node.js, tracked as CVE-2026-111497, which could allow remote code execution via memory corruption.",
     "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog",
-   "type": "news",
-   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-   "date": "2026-11-17",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-115731"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Mentions exploited CVE-2026-115731",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA added a Perforce Puppet Enterprise deserialization vulnerability, CVE-2026-115731, to its Known Exploited Vulnerabilities catalog after evidence of active exploitation. Federal civilian agencies must prioritise remediation.",
-    "sector": "Government",
     "actors": [],
     "malware": [],
     "tactic": "Initial Access",
@@ -2390,6 +2685,47 @@
     "actors": [],
     "malware": [],
     "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
+   "type": "news",
+   "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": true,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/"
+    }
+   ],
+   "signals": [
+    "Ransomware"
+   ],
+   "actors": [],
+   "score": 35,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Ransomware in the headline",
+     "points": 15
+    }
+   ],
+   "ai": {
+    "summary": "Ukrainian authorities and the FBI arrested four suspected members of an international ransomware group linked to over $40.5 million in ransom payments from at least 28 companies worldwide.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
     "countries": []
    }
   },
@@ -2481,6 +2817,86 @@
    ],
    "ai": {
     "summary": "Attackers published two malicious versions of Microsoft's agent-framework Python package, which run a credential stealer every time Python starts. Several security firms reported it.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
+   "type": "news",
+   "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "A reported attack on IT provider Wellington IT exposed sensitive member data of credit unions, mostly in Ireland. The headline says 40 Irish credit unions, while the feed text says 50.",
+    "sector": "Finance",
+    "actors": [],
+    "malware": [],
+    "tactic": "Exfiltration",
+    "countries": [
+     "IE"
+    ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
+   "type": "news",
+   "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
+   "date": "2026-11-19",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-123007"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A decade-old NGINX HTTP/2 flaw, CVE-2026-123007, lets unauthenticated attackers run code on servers with HTTP/2 enabled. Fixed versions 1.31.9 and 1.30.7 are now available.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
@@ -2814,78 +3230,6 @@
    }
   },
   {
-   "id": "https://therecord.media/norway-equinor-cyberattack-energy",
-   "type": "news",
-   "title": "Cyberattack hits Norwegian energy giant Equinor, disrupting internal services",
-   "date": "2026-11-18",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/norway-equinor-cyberattack-energy"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Norwegian energy company Equinor is containing a cyberattack on its IT systems that disrupted internal services but has not affected oil and gas production.",
-    "sector": "Energy",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": [
-     "NO"
-    ]
-   }
-  },
-  {
-   "id": "https://therecord.media/russia-hockey-cyberattack-championships",
-   "type": "news",
-   "title": "Ice hockey governing body website defaced amid dispute over Russia's exclusion",
-   "date": "2026-11-18",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/russia-hockey-cyberattack-championships"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "The International Ice Hockey Federation confirmed hackers defaced its website, replacing the homepage with a pro-Russian message protesting Russia's exclusion from competitions.",
-    "sector": "Sports",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
    "type": "news",
    "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
@@ -2924,41 +3268,6 @@
     "countries": [
      "PH"
     ]
-   }
-  },
-  {
-   "id": "https://therecord.media/british-hacker-gets-six-year-sentence-scattered-spider",
-   "type": "news",
-   "title": "British hacker gets 6 year sentence for $11.6M crypto theft scheme",
-   "date": "2026-11-18",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/british-hacker-gets-six-year-sentence-scattered-spider"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Tyler Robert Buchanan, described as the suspected ringleader of a hacking collective, was sentenced to six years for a $11.6M cryptocurrency theft scheme.",
-    "sector": "Finance",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
    }
   },
   {
@@ -3066,6 +3375,187 @@
     "countries": [
      "US"
     ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
+   "type": "news",
+   "title": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
+   "date": "2026-11-18",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Six critical F5 BIG-IP flaws let unauthenticated attackers crash the traffic management microkernel under specific configurations, disrupting traffic and possibly enabling remote code execution.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/ai-cyber-white-house",
+   "type": "news",
+   "title": "Lawmakers call on White House to develop defensive AI cyber systems",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/ai-cyber-white-house"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Two bipartisan senators urged the White House to launch a national effort to defend against AI-enabled cyber threats after recent AI-related security incidents.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/tech-disruptions-house-homeland-committee-testimony",
+   "type": "news",
+   "title": "Trump administration officials size-up a bad stretch for tech",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/tech-disruptions-house-homeland-committee-testimony"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Homeland Security Secretary Markwayne Mullin said the administration will ask tech companies to share more information about major patches before they are released.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/judge-signs-off-google-purchase-spirit-airlines-data",
+   "type": "news",
+   "title": "Judge signs off on sale of Spirit Airlines’ data to Google",
+   "date": "2026-11-18",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/judge-signs-off-google-purchase-spirit-airlines-data"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A federal bankruptcy judge approved Google's $10 million purchase of defunct Spirit Airlines' data, with protections in place as Google plans to use it in AI projects.",
+    "sector": "Aviation",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
+   "type": "news",
+   "title": "Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam",
+   "date": "2026-11-18",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Coinbase blocked $4.7 million in crypto transfers tied to a fake giveaway scam using an AI deepfake of Elon Musk during a Tesla livestream watched by over 500,000 viewers.",
+    "sector": "Finance",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": []
    }
   },
   {
@@ -3205,41 +3695,6 @@
    ],
    "ai": {
     "summary": "Apple previewed macOS 27.3 beta 2 controls giving Mac users finer-grained control over app access to data, including for AI agent apps. The changes cover Device Control, Data Access and Full Disk Access.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
-   "type": "news",
-   "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
-   "date": "2026-11-17",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Microsoft is testing a feature that lets enterprise administrators remotely lock lost or stolen Windows devices without erasing their data.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
@@ -3700,49 +4155,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/",
-   "type": "news",
-   "title": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
-   "date": "2026-11-17",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "EvilTokens",
-    "Kali365",
-    "Knight Office"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Huntress researchers describe three phishing kits that capture and replay Microsoft 365 session tokens, and how defenders can detect and contain them. Microsoft 365 users are the target.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [
-     "EvilTokens",
-     "Knight Office",
-     "Kali365"
-    ],
-    "tactic": "Credential Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
    "type": "news",
    "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
@@ -3777,41 +4189,6 @@
     "countries": [
      "US"
     ]
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/hardware/flipper-devices-launches-399-flipper-one-linux-based-multi-tool/",
-   "type": "news",
-   "title": "Flipper Devices launches $399 ‘Flipper One’ Linux-based multi-tool",
-   "date": "2026-11-17",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/hardware/flipper-devices-launches-399-flipper-one-linux-based-multi-tool/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Flipper Devices, maker of the Flipper Zero pentesting device, launched a crowdfunding campaign for Flipper One, a $399 portable Linux computer and networking multi-tool. No security incident is described.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
    }
   },
   {
@@ -4272,8 +4649,8 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1105,
-  "located": 939,
+  "total": 1115,
+  "located": 945,
   "countries": [
    {
     "cc": "US",
@@ -4281,11 +4658,11 @@
     "groups": [
      {
       "name": "n0n",
-      "n": 78
+      "n": 76
      },
      {
       "name": "qilin",
-      "n": 35
+      "n": 34
      },
      {
       "name": "thegentlemen",
@@ -4295,29 +4672,29 @@
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 75
+      "n": 77
      },
      {
       "name": "Professional Services",
-      "n": 71
+      "n": 73
      },
      {
       "name": "Manufacturing",
-      "n": 55
+      "n": 56
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 66,
+    "n": 65,
     "groups": [
-     {
-      "name": "payload",
-      "n": 11
-     },
      {
       "name": "qilin",
       "n": 11
+     },
+     {
+      "name": "payload",
+      "n": 10
      },
      {
       "name": "thegentlemen",
@@ -4327,7 +4704,7 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 24
+      "n": 23
      },
      {
       "name": "Other",
@@ -4437,7 +4814,7 @@
    },
    {
     "cc": "ES",
-    "n": 20,
+    "n": 19,
     "groups": [
      {
       "name": "thegentlemen",
@@ -4445,7 +4822,7 @@
      },
      {
       "name": "qilin",
-      "n": 4
+      "n": 3
      },
      {
       "name": "black x",
@@ -4463,6 +4840,38 @@
      },
      {
       "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "IN",
+    "n": 16,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 3
+     },
+     {
+      "name": "climax inc",
+      "n": 3
+     },
+     {
+      "name": "lockbit5",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 6
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Financial Services",
       "n": 2
      }
     ]
@@ -4559,38 +4968,6 @@
      },
      {
       "name": "Professional Services",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "IN",
-    "n": 15,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 3
-     },
-     {
-      "name": "climax inc",
-      "n": 3
-     },
-     {
-      "name": "incransom",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 6
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Financial Services",
       "n": 2
      }
     ]
@@ -4820,6 +5197,38 @@
     ]
    },
    {
+    "cc": "JP",
+    "n": 8,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 3
+     },
+     {
+      "name": "metaencryptor",
+      "n": 1
+     },
+     {
+      "name": "byod",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Education",
+      "n": 1
+     },
+     {
+      "name": "Hospitality",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "PH",
     "n": 8,
     "groups": [
@@ -4852,6 +5261,38 @@
     ]
    },
    {
+    "cc": "SG",
+    "n": 8,
+    "groups": [
+     {
+      "name": "orova",
+      "n": 2
+     },
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "krybit",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "AE",
     "n": 7,
     "groups": [
@@ -4879,70 +5320,6 @@
      },
      {
       "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "JP",
-    "n": 7,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "metaencryptor",
-      "n": 1
-     },
-     {
-      "name": "byod",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Education",
-      "n": 1
-     },
-     {
-      "name": "Hospitality",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "SG",
-    "n": 7,
-    "groups": [
-     {
-      "name": "orova",
-      "n": 2
-     },
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "eclipse",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 1
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     },
-     {
-      "name": "Hospitality",
       "n": 1
      }
     ]
@@ -5236,6 +5613,38 @@
     ]
    },
    {
+    "cc": "VN",
+    "n": 6,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 2
+     },
+     {
+      "name": "lockbit5",
+      "n": 1
+     },
+     {
+      "name": "vexy ransomware",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "CO",
     "n": 5,
     "groups": [
@@ -5268,34 +5677,6 @@
     ]
    },
    {
-    "cc": "VN",
-    "n": 5,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 2
-     },
-     {
-      "name": "vexy ransomware",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "ZA",
     "n": 5,
     "groups": [
@@ -5323,6 +5704,34 @@
      },
      {
       "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "EC",
+    "n": 4,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "lockbit5",
+      "n": 1
+     },
+     {
+      "name": "safepay",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 2
+     },
+     {
+      "name": "Healthcare",
       "n": 1
      }
     ]
@@ -5439,30 +5848,6 @@
      },
      {
       "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "EC",
-    "n": 3,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "safepay",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
       "n": 1
      }
     ]
@@ -5635,6 +6020,26 @@
     "sectors": [
      {
       "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "ET",
+    "n": 2,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Education",
       "n": 1
      },
      {
@@ -5850,22 +6255,6 @@
     ]
    },
    {
-    "cc": "ET",
-    "n": 1,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "GA",
     "n": 1,
     "groups": [
@@ -5984,6 +6373,22 @@
     ]
    },
    {
+    "cc": "MA",
+    "n": 1,
+    "groups": [
+     {
+      "name": "hyflock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Financial Services",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "MK",
     "n": 1,
     "groups": [
@@ -6075,6 +6480,22 @@
     "sectors": [
      {
       "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "QA",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Energy & Utilities",
       "n": 1
      }
     ]
@@ -6185,7 +6606,7 @@
     "sectors": [
      {
       "name": "Retail & E-Commerce",
-      "n": 30
+      "n": 29
      },
      {
       "name": "Healthcare",
@@ -6199,7 +6620,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 78
+      "n": 76
      },
      {
       "cc": "CA",
@@ -6214,7 +6635,7 @@
       "n": 3
      },
      {
-      "cc": "FR",
+      "cc": "ET",
       "n": 2
      }
     ]
@@ -6264,12 +6685,12 @@
    },
    {
     "name": "qilin",
-    "n": 109,
+    "n": 108,
     "last": "2026-11-18",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 20
+      "n": 21
      },
      {
       "name": "Professional Services",
@@ -6283,7 +6704,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 35
+      "n": 34
      },
      {
       "cc": "DE",
@@ -6350,7 +6771,7 @@
    },
    {
     "name": "akira",
-    "n": 40,
+    "n": 42,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6362,7 +6783,7 @@
       "n": 5
      },
      {
-      "name": "Retail & E-Commerce",
+      "name": "Financial Services",
       "n": 4
      }
     ],
@@ -6389,6 +6810,29 @@
      }
     ],
     "about": "Akira reportedly emerged in March 2023 and has been speculated to have ties to the former Conti group. Its affiliates reportedly also work with Snatch and BlackByte. The first version was written in C++ and later versions in Rust. Initial access has involved brute-force attacks on Cisco VPNs and exploitation of two CVEs.",
+    "origin": ""
+   },
+   {
+    "name": "silentransomgroup",
+    "n": 39,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 17
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 14
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ],
+    "about": "Silentransomgroup is described in the notes as a former Conti team, also tracked as Chatty Spider and UNC3753. The notes give no further details on its operations or targets.",
     "origin": ""
    },
    {
@@ -6431,29 +6875,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "name": "silentransomgroup",
-    "n": 36,
-    "last": "2026-11-16",
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 15
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 12
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ],
-    "about": "Silentransomgroup is described in the notes as a former Conti team, also tracked as Chatty Spider and UNC3753. The notes give no further details on its operations or targets.",
-    "origin": ""
    },
    {
     "name": "pixelleaks",
@@ -6624,6 +7045,49 @@
     "origin": ""
    },
    {
+    "name": "lockbit5",
+    "n": 19,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 4
+     },
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
+      "n": 3
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 3
+     },
+     {
+      "cc": "IN",
+      "n": 2
+     },
+     {
+      "cc": "BR",
+      "n": 2
+     },
+     {
+      "cc": "TH",
+      "n": 2
+     },
+     {
+      "cc": "VN",
+      "n": 1
+     }
+    ],
+    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
+    "origin": ""
+   },
+   {
     "name": "medusalocker",
     "n": 19,
     "last": "2026-11-11",
@@ -6751,6 +7215,47 @@
     ]
    },
    {
+    "name": "curious worm",
+    "n": 18,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 8
+     },
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 7
+     },
+     {
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     },
+     {
+      "cc": "IE",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ]
+   },
+   {
     "name": "emperador",
     "n": 18,
     "last": "2026-11-18",
@@ -6787,47 +7292,6 @@
      },
      {
       "cc": "CH",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "name": "curious worm",
-    "n": 17,
-    "last": "2026-11-17",
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 8
-     },
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 7
-     },
-     {
-      "cc": "DE",
-      "n": 1
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     },
-     {
-      "cc": "IE",
-      "n": 1
-     },
-     {
-      "cc": "GB",
       "n": 1
      }
     ]
@@ -6907,37 +7371,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "name": "payload",
-    "n": 16,
-    "last": "2026-11-17",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 6
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 11
-     },
-     {
-      "cc": "FR",
-      "n": 1
-     }
-    ],
-    "about": "Payload emerged in early 2026 and uses Babuk-derived source code to attack Windows and ESXi systems with double extortion. It targets healthcare, energy, real estate, and agriculture. It claimed 12 victims across seven countries within hours of launching its leak site.",
-    "origin": ""
    },
    {
     "name": "aoqin",
@@ -7024,63 +7457,20 @@
     "origin": ""
    },
    {
-    "name": "lockbit5",
-    "n": 15,
-    "last": "2026-11-14",
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Hospitality",
-      "n": 1
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "BR",
-      "n": 2
-     },
-     {
-      "cc": "TH",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "IN",
-      "n": 1
-     }
-    ],
-    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
-    "origin": ""
-   },
-   {
     "name": "krybit",
-    "n": 14,
-    "last": "2026-11-12",
+    "n": 15,
+    "last": "2026-11-18",
     "sectors": [
      {
       "name": "Technology",
       "n": 4
      },
      {
-      "name": "Professional Services",
+      "name": "Other",
       "n": 2
      },
      {
-      "name": "Retail & E-Commerce",
+      "name": "Professional Services",
       "n": 2
      }
     ],
@@ -7094,15 +7484,15 @@
       "n": 2
      },
      {
+      "cc": "SG",
+      "n": 1
+     },
+     {
       "cc": "CY",
       "n": 1
      },
      {
       "cc": "TH",
-      "n": 1
-     },
-     {
-      "cc": "LY",
       "n": 1
      }
     ],
@@ -7145,6 +7535,37 @@
     "origin": ""
    },
    {
+    "name": "payload",
+    "n": 14,
+    "last": "2026-11-17",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 10
+     },
+     {
+      "cc": "FR",
+      "n": 1
+     }
+    ],
+    "about": "Payload emerged in early 2026 and uses Babuk-derived source code to attack Windows and ESXi systems with double extortion. It targets healthcare, energy, real estate, and agriculture. It claimed 12 victims across seven countries within hours of launching its leak site.",
+    "origin": ""
+   },
+   {
     "name": "genesis",
     "n": 12,
     "last": "2026-11-06",
@@ -7177,6 +7598,78 @@
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "silentransomgroup",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "direwolf",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "silentransomgroup",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "silentransomgroup",
+    "s": ""
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "MA",
+    "g": "hyflock",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "curious worm",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "VN",
+    "g": "lockbit5",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "EC",
+    "g": "lockbit5",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "IN",
+    "g": "lockbit5",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "lockbit5",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "US",
+    "g": "lockbit5",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "SG",
+    "g": "krybit",
+    "s": "Other"
+   },
    {
     "d": "2026-11-18",
     "cc": "",
@@ -7281,6 +7774,18 @@
    },
    {
     "d": "2026-11-18",
+    "cc": "",
+    "g": "akira",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "",
+    "g": "akira",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-18",
     "cc": "US",
     "g": "akira",
     "s": "Hospitality"
@@ -7296,6 +7801,12 @@
     "cc": "US",
     "g": "qilin",
     "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-18",
+    "cc": "JP",
+    "g": "qilin",
+    "s": "Manufacturing"
    },
    {
     "d": "2026-11-17",
@@ -7326,118 +7837,24 @@
     "cc": "US",
     "g": "curious worm",
     "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "braincipher",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "DE",
-    "g": "braincipher",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "AE",
-    "g": "braincipher",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "AU",
-    "g": "braincipher",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "aoqin",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "DE",
-    "g": "payload",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "aoqin",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "NL",
-    "g": "rhysida",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "netrunner",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "",
-    "g": "endzone",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "",
-    "g": "rhysida",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "booba project",
-    "s": "Government & Defense"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "PT",
-    "g": "booba project",
-    "s": ""
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "booba project",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-17",
-    "cc": "US",
-    "g": "booba project",
-    "s": "Government & Defense"
    }
   ],
   "days": [
    {
-    "date": "2026-10-19",
-    "n": 7
-   },
-   {
     "date": "2026-10-20",
-    "n": 27
+    "n": 22
    },
    {
     "date": "2026-10-21",
-    "n": 55
+    "n": 56
    },
    {
     "date": "2026-10-22",
-    "n": 27
+    "n": 28
    },
    {
     "date": "2026-10-23",
-    "n": 44
+    "n": 45
    },
    {
     "date": "2026-10-24",
@@ -7449,7 +7866,7 @@
    },
    {
     "date": "2026-10-26",
-    "n": 72
+    "n": 73
    },
    {
     "date": "2026-10-27",
@@ -7461,7 +7878,7 @@
    },
    {
     "date": "2026-10-29",
-    "n": 33
+    "n": 34
    },
    {
     "date": "2026-10-30",
@@ -7513,7 +7930,7 @@
    },
    {
     "date": "2026-11-11",
-    "n": 42
+    "n": 44
    },
    {
     "date": "2026-11-12",
@@ -7541,7 +7958,11 @@
    },
    {
     "date": "2026-11-18",
-    "n": 20
+    "n": 35
+   },
+   {
+    "date": "2026-11-19",
+    "n": 0
    }
   ]
  },
@@ -7690,40 +8111,48 @@
   },
   "profiles_at": "2026-11-18T07:35:44.387870+00:00",
   "since": {
-   "209811713": "2122951690903281694",
-   "50026664": "2122828312313524522",
-   "1290332482374598658": "2122427309802111413",
-   "41258937": "2122901861984580087",
+   "209811713": "2123124212068130839",
+   "50026664": "2123191728152727854",
+   "1290332482374598658": "2123072808997814580",
+   "41258937": "2123212160025170411",
    "4487645412": "2122801967579759028",
-   "54316357": "2122644271899549868",
-   "935278274845974528": "2122464740869849329",
+   "54316357": "2122993566959976662",
+   "935278274845974528": "2123159310075117919",
    "217462908": "2122770379915805067",
-   "1158139840866791424": "2122935772470788166",
-   "702994808181170176": "2122719155556368768",
-   "1324374317484793856": "2122809210324795763",
-   "6821102": "2122872608295457197",
-   "964227358218649600": "2122804731563118841"
+   "1158139840866791424": "2123193855160020995",
+   "702994808181170176": "2123098949410345412",
+   "1324374317484793856": "2123088263086846150",
+   "6821102": "2123143272352907456",
+   "964227358218649600": "2123159570969158086",
+   "24683268": "2123077080997114070",
+   "1540951016": "2123212982994001955",
+   "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-18T07:35:44.387870+00:00",
-   "bleepincomputer": "2026-11-18T07:35:44.387870+00:00",
-   "therecord_media": "2026-11-18T07:35:44.387870+00:00",
-   "securityweek": "2026-11-18T07:35:44.387870+00:00",
-   "unit42_intel": "2026-11-18T07:35:44.387870+00:00",
-   "esetresearch": "2026-11-18T07:35:44.387870+00:00",
-   "ciscotalos": "2026-11-18T07:35:44.387870+00:00",
-   "googlecloudsec": "2026-11-18T07:35:44.387870+00:00",
-   "msftsecintel": "2026-11-18T07:35:44.387870+00:00",
-   "vxunderground": "2026-11-18T07:35:44.387870+00:00",
-   "projectzerobugs": "2026-11-18T07:35:44.387870+00:00",
-   "thezdi": "2026-11-18T07:35:44.387870+00:00",
-   "watchtowrcyber": "2026-11-18T07:35:44.387870+00:00",
-   "sans_isc": "2026-11-18T07:35:44.387870+00:00",
-   "cisagov": "2026-11-18T07:35:44.387870+00:00"
+   "thehackersnews": "2026-11-19T01:51:38.191523+00:00",
+   "bleepincomputer": "2026-11-19T01:51:38.191523+00:00",
+   "therecord_media": "2026-11-19T01:51:38.191523+00:00",
+   "securityweek": "2026-11-19T01:51:38.191523+00:00",
+   "unit42_intel": "2026-11-19T01:51:38.191523+00:00",
+   "esetresearch": "2026-11-19T01:51:38.191523+00:00",
+   "ciscotalos": "2026-11-19T01:51:38.191523+00:00",
+   "googlecloudsec": "2026-11-19T01:51:38.191523+00:00",
+   "msftsecintel": "2026-11-19T01:51:38.191523+00:00",
+   "vxunderground": "2026-11-19T01:51:38.191523+00:00",
+   "projectzerobugs": "2026-11-19T01:51:38.191523+00:00",
+   "thezdi": "2026-11-19T01:51:38.191523+00:00",
+   "watchtowrcyber": "2026-11-19T01:51:38.191523+00:00",
+   "sans_isc": "2026-11-19T01:51:38.191523+00:00",
+   "cisagov": "2026-11-19T01:51:38.191523+00:00",
+   "enisa_eu": "2026-11-19T01:51:38.191523+00:00",
+   "cert_eu": "2026-11-19T01:51:38.191523+00:00",
+   "shadowserver": "2026-11-19T01:51:38.191523+00:00",
+   "gossithedog": "2026-11-19T01:51:38.191523+00:00",
+   "malwaretechblog": "2026-11-19T01:51:38.191523+00:00"
   },
   "budget": {
-   "day": "2026-11-18",
-   "used": 49
+   "day": "2026-11-19",
+   "used": 38
   },
   "accounts": [
    {
@@ -7809,6 +8238,752 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2123212982994001955",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-19T00:33:17.000Z",
+    "text": "It really feels like something affected people's ability to just deal with minor inconveniences. I thought it was social media mass psychosis, but then I went out today and people were freaking out that the power and internet was going to go out at any minute.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123212160025170411",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-19T00:30:00.000Z",
+    "text": "Microsoft Agent Framework Releases Poisoned With Credential Stealer https://t.co/4qygOisWPm",
+    "urls": [
+     {
+      "u": "https://t.co/4qygOisWPm",
+      "d": "securityweek.com/microsoft-agen…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123193855160020995",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T23:17:16.000Z",
+    "text": "I'm being so deadass tho, the only game I actually give a fuck about is a new Elder Scrolls game. I likely won't have time for it, but even the idea of it excites me. I played Morrowind, Oblivion, and Skyrim. I just want one more Elder Scrolls game. Please Todd, don't fuck it up",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123191728152727854",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-18T23:08:49.000Z",
+    "text": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms\nhttps://t.co/VYVXb2aKw5\n\nhttps://t.co/VYVXb2aKw5",
+    "urls": [
+     {
+      "u": "https://t.co/VYVXb2aKw5",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/VYVXb2aKw5",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Ransomware"
+    ]
+   },
+   {
+    "id": "2123189827566989421",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T23:01:16.000Z",
+    "text": "Does anyone know when GTA 7 is scheduled for release",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123159570969158086",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-18T21:01:02.000Z",
+    "text": "🏟️ Big events need big resilience. Lessons from venue security and cross sector coordination show how planning pays off. Learn more: https://t.co/naPSkBUSep #ResolveToBeResilient https://t.co/jU0SEvAAac",
+    "urls": [
+     {
+      "u": "https://t.co/naPSkBUSep",
+      "d": "go.dhs.gov/5CU"
+     },
+     {
+      "u": "https://t.co/jU0SEvAAac",
+      "d": "pic.x.com/jU0SEvAAac"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "ResolveToBeResilient"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123159317767397766",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T21:00:02.000Z",
+    "text": "#Java4Shell Vulnerability Puts Many Enterprise Applications at Risk of Takeover https://t.co/9AjKmiIFAX",
+    "urls": [
+     {
+      "u": "https://t.co/9AjKmiIFAX",
+      "d": "securityweek.com/java4shell-vul…"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "Java4Shell"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123159310075117919",
+    "uid": "935278274845974528",
+    "cat": "CTI",
+    "at": "2026-11-18T21:00:00.000Z",
+    "text": "Ramya Chitrakar leads engineers building autonomous defense, giving her a clear view of how security teams will work in 2027.\n\nAs agents handle moment-to-moment response, defenders can set guardrails up front and focus on strategy and risk.\n\nTake a look ⬇️ https://t.co/ROceshMgeL",
+    "urls": [
+     {
+      "u": "https://t.co/ROceshMgeL",
+      "d": "pic.x.com/ROceshMgeL"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123156742242533508",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-18T20:49:48.000Z",
+    "text": "Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam\nhttps://t.co/SlmKFP1a6h\n\nhttps://t.co/SlmKFP1a6h",
+    "urls": [
+     {
+      "u": "https://t.co/SlmKFP1a6h",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/SlmKFP1a6h",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123153582463615341",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T20:37:15.000Z",
+    "text": "Oh, or the nooby poop goop developers trying to flex by saying they have a custom C2 backend..... But leave it exposed and don't implement authentication so you can connect directly to the C2 and hijack their entire botnet and instruct all of the infected machines to uninstall the malware, rending their entire operation dead in the water.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123152484202078260",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-18T20:32:53.000Z",
+    "text": "Have I seen AI generated malware? Yes.\n\nIs it impressive? Ehhhh\n\nYeah, so basically it's an undeniable fact internet nerds are using AI for their goop. Malware developers who have historically been pretty good at malware development are suddenly churning out malware variations at lightning speed (or they're smoking methamphetamine).\n\nNooby poop goop developers are spreading malware which give the facade of sophistication, but it's not.\n\nI can immediately tell when someone is using AI to make malware, who doesn't know what they're doing, because they'll do all sorts of goofy shit which any actually skilled malware developer would never do.\n\nExamples:\n- Leaving notes in stagers\n- Leaving notes in encoded strings \n- Leaving notes in encrypted strings\n- Stupid goop architectural decisions which make no sense and serve no purpose\n- Attempts at obfuscation which ... aren't obfuscation at all\n- Buggy code (uncharacteristically buggy, either they're brain dead or AI slop)\n- Forgetting to insert C2s (literally seeing: \"Insert_Weburl_Here\")\n\nI have yet to encounter some \"god-tier\" malware that leaves me shaking, screaming, crying, throwing up. The enhancements are just:\n- More stagers\n- Cross language interop (Lua to C++ to Python to C++, using several different languages to accomplish tasks)\n- Faster code changes\n- Dramatically improved phishing lures\n\nIn conclusion, it's making the smart goop guys faster, leaner, stinkier. It's making the noobs think they're smart, but they're being goofy",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": true,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123143272352907456",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-18T19:56:16.000Z",
+    "text": "Java4Shell, NGINX2Shell and more: Why we are not at \"Yellow\" https://t.co/7bMS0O5dBO https://t.co/tvMFirzARO",
+    "urls": [
+     {
+      "u": "https://t.co/7bMS0O5dBO",
+      "d": "isc.sans.edu/diary/33532"
+     },
+     {
+      "u": "https://t.co/tvMFirzARO",
+      "d": "pic.x.com/tvMFirzARO"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123139131446325397",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-18T19:39:49.000Z",
+    "text": "Data breach impacts 40 Irish credit unions in reported IT provider hack\nhttps://t.co/4pEvcMjRIJ\n\nhttps://t.co/4pEvcMjRIJ",
+    "urls": [
+     {
+      "u": "https://t.co/4pEvcMjRIJ",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/4pEvcMjRIJ",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2123132186308026571",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-18T19:12:13.000Z",
+    "text": "Get Five AI apps in one bundle for $44.97 in this deal\nhttps://t.co/PiIkxFaMJD\n\nhttps://t.co/PiIkxFaMJD",
+    "urls": [
+     {
+      "u": "https://t.co/PiIkxFaMJD",
+      "d": "bleepingcomputer.com/offer/deals/ge…"
+     },
+     {
+      "u": "https://t.co/PiIkxFaMJD",
+      "d": "bleepingcomputer.com/offer/deals/ge…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123124212068130839",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T18:40:32.000Z",
+    "text": "Running NGINX? Check your exposure now.\n\n→ Patch to 1.30.7 (stable) or 1.31.9 (mainline)\n→ Verify HTTP/2 exposure\n→ Disable HTTP/2 temporarily if patching is delayed\n→ Investigate unusual worker crashes and command execution\n\nA reload alone won't replace the vulnerable binary.\n\nRead more: https://t.co/Yjxtm7Nfyp",
+    "urls": [
+     {
+      "u": "https://t.co/Yjxtm7Nfyp",
+      "d": "thehackernews.com/2026/11/10-yea…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123123980693631261",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T18:39:37.000Z",
+    "text": "And this isn't just theoretical.\n\nPublic PoC exploit code for CVE-2026-123007 is now on GitHub.\n\nThe published code demonstrates exploitation in a constrained local Docker test setup, not a universal exploit against every NGINX deployment. https://t.co/f13vjlrZLJ",
+    "urls": [
+     {
+      "u": "https://t.co/f13vjlrZLJ",
+      "d": "pic.x.com/f13vjlrZLJ"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-123007"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123123791752819019",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T18:38:52.000Z",
+    "text": "It gets worse.\n\nXint researchers chained the NGINX RCE with a separate Linux kernel flaw.\n\nResult in their tests:\n→ Remote code execution\n→ Docker container escape\n→ Root access on the host https://t.co/R9s4HTo8p6",
+    "urls": [
+     {
+      "u": "https://t.co/R9s4HTo8p6",
+      "d": "pic.x.com/R9s4HTo8p6"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123123706235093405",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T18:38:31.000Z",
+    "text": "Wiz researchers confirmed unauthenticated RCE on official NGINX 1.31.7 and 1.31.8 builds.\n\nThey also bypassed ASLR, a key exploit mitigation.\n\nNo backend application required. https://t.co/LwtpBYTyfL",
+    "urls": [
+     {
+      "u": "https://t.co/LwtpBYTyfL",
+      "d": "pic.x.com/LwtpBYTyfL"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123122809555866093",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-18T18:34:58.000Z",
+    "text": "This bug has been hiding in NGINX since 2015.\n\nThe dangerous part? HTTP/2 alone can expose an unpatched server. No vulnerable application code or third-party module needed.\n\nEven servers hosting static files are at risk.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123108891202625569",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-18T17:39:39.000Z",
+    "text": "It's wild how much money people are pouring into a completely economically unviable company that has like a year of runway left at best. https://t.co/Lel2SIDlDc",
+    "urls": [
+     {
+      "u": "https://t.co/Lel2SIDlDc",
+      "d": "x.com/unusual_whales…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123105849673465978",
+    "uid": "86973588",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-18T17:27:34.000Z",
+    "text": "Hostile Inference: Exploiting Docker Model Runner for Container Escapes - @_niteshsurana walks you through his research in his latest blog post. Videos and code walkthroughs included. https://t.co/RoX4U7Wb1J",
+    "urls": [
+     {
+      "u": "https://t.co/RoX4U7Wb1J",
+      "d": "zerodayinitiative.com/blog/2026/11/1…"
+     }
+    ],
+    "mentions": [
+     "_niteshsurana"
+    ],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123102905637233078",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-18T17:15:52.000Z",
+    "text": "If you hear anyone claiming \"AI is enabling unskilled criminals/hackers to operate with the sophistication of elite state-sponsored hackers\", you can safely unfollow them and ignore all their future takes on cybersecurity. \n\nAs someone who monitors threat actors professionally, and has watches thousands of unskilled hackers try to figure out how to hack with AI, it's basically just this: \n\nSometimes they succeed, a lot of the time they don't. But even when they do, it doesn't come within 1000 miles of anything resembling a sophisticated state-sponsored intrusion.",
+    "urls": [
+     {
+      "u": "https://t.co/Qsuk9oG4ER",
+      "d": "pic.x.com/Qsuk9oG4ER"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": true,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123100788067348751",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-18T17:07:27.000Z",
+    "text": "As much as this suck, it's a pretty good time for AI to have happened. Many devices have layers on layers of exploit mitigations, which makes exploiting vulnerabilities significantly more complex, and often requires chaining multiple vulnerabilities together, and/or version specific exploits. \n\nIf this had happened in the pre ASLR + DEP era, the entire internet would basically be hacked. Instead, it's mostly just a lot of patching theoretical vulnerabilities, with the occasional exploitation.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123098949410345412",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-18T17:00:09.000Z",
+    "text": "GMSCore: Firebase Cloud Messaging does not validate untrusted intents https://t.co/dwjWwtf9sg",
+    "urls": [
+     {
+      "u": "https://t.co/dwjWwtf9sg",
+      "d": "project-zero.issues.chromium.org/issues/5274596…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123098655393566922",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-18T16:58:59.000Z",
+    "text": "Microsoft’s Agent Framework PyPI package compromised to steal credentials\nhttps://t.co/Qvkxgk9CoQ\n\nhttps://t.co/Qvkxgk9CoQ",
+    "urls": [
+     {
+      "u": "https://t.co/Qvkxgk9CoQ",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/Qvkxgk9CoQ",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123088263086846150",
+    "uid": "1324374317484793856",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-18T16:17:41.000Z",
+    "text": "See the watchTowr Platform in action: https://t.co/fIlxCibP0g",
+    "urls": [
+     {
+      "u": "https://t.co/fIlxCibP0g",
+      "d": "watchtowr.com/demo/"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123088261933359267",
+    "uid": "1324374317484793856",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-18T16:17:41.000Z",
+    "text": "The watchTowr team is currently rapidly reacting to the newly published \"NGINX2root\" Remote Code Execution vulnerabilities, including CVE-2026-123633 and others in NGINX's HTTP/2 handling.\n\nActive watchTowr Platform clients are being made aware of their exposure. https://t.co/VzhrfFogNw",
+    "urls": [
+     {
+      "u": "https://t.co/VzhrfFogNw",
+      "d": "pic.x.com/VzhrfFogNw"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-123633"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123077080997114070",
+    "uid": "24683268",
+    "cat": "Official",
+    "at": "2026-11-18T15:33:15.000Z",
+    "text": "Honored to be recognized alongside talented partners with TRM Labs’ Blackout Award for Tycoon 2FA Disruption!     \n\nhttps://t.co/qbdYT5LZjR\n\n@trmlabs https://t.co/n2Q1DtYDiT",
+    "urls": [
+     {
+      "u": "https://t.co/qbdYT5LZjR",
+      "d": "trmlabs.com/resources/blog…"
+     },
+     {
+      "u": "https://t.co/n2Q1DtYDiT",
+      "d": "pic.x.com/n2Q1DtYDiT"
+     }
+    ],
+    "mentions": [
+     "trmlabs"
+    ],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123076261711143225",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T15:30:00.000Z",
+    "text": "Oracle Patches 640 Vulnerabilities With November 2026 CSPU https://t.co/rnEYp0ltS4",
+    "urls": [
+     {
+      "u": "https://t.co/rnEYp0ltS4",
+      "d": "securityweek.com/oracle-patches…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123072808997814580",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-18T15:16:17.000Z",
+    "text": "A British man linked to the Scattered Spider hacking group was sentenced to 6 years over a phishing campaign that stole more than $11.6 million in cryptocurrency from individuals in the United States https://t.co/xIQQPotyzv",
+    "urls": [
+     {
+      "u": "https://t.co/xIQQPotyzv",
+      "d": "therecord.media/british-hacker…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123066322992996729",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-18T14:50:30.000Z",
+    "text": "The International Ice Hockey Federation (IIHF) confirmed a cyberattack on its website after hackers replaced its homepage with a pro-Russian message criticizing the country's exclusion from international competitions https://t.co/ptro7TwgNr",
+    "urls": [
+     {
+      "u": "https://t.co/ptro7TwgNr",
+      "d": "therecord.media/russia-hockey-…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123066237089407322",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-18T14:50:10.000Z",
+    "text": "The Norwegian energy giant Equinor is working to contain a cyberattack on its IT systems, which the company said has not disrupted its oil and gas production https://t.co/jqLY35NuDo",
+    "urls": [
+     {
+      "u": "https://t.co/jqLY35NuDo",
+      "d": "therecord.media/norway-equinor…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123052612844921232",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-18T13:56:01.000Z",
+    "text": "When #K12 schools understand their unique security risks, they can make smarter, higher-impact investments. Our tool helps schools evaluate existing security measures and take a risk-informed approach to strengthening safety and resilience. https://t.co/Q9olAK09Qu #BeResilient https://t.co/ioiA5JVwDg",
+    "urls": [
+     {
+      "u": "https://t.co/Q9olAK09Qu",
+      "d": "go.dhs.gov/Z4c"
+     },
+     {
+      "u": "https://t.co/ioiA5JVwDg",
+      "d": "pic.x.com/ioiA5JVwDg"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "BeResilient",
+     "K12"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2123047217799762260",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T13:34:35.000Z",
+    "text": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization https://t.co/Zirn6CymMD",
+    "urls": [
+     {
+      "u": "https://t.co/Zirn6CymMD",
+      "d": "securityweek.com/russian-apt-po…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2123045416342360415",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-18T13:27:26.000Z",
+    "text": "Last of Five Defendants Sentenced in US Scattered Spider Hacking Case https://t.co/xuM02GCXcZ",
+    "urls": [
+     {
+      "u": "https://t.co/xuM02GCXcZ",
+      "d": "securityweek.com/last-of-five-d…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122993566959976662",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-18T10:01:24.000Z",
+    "text": "Hamas-affiliated #AridViper returned to Windows with a new #AridGopher backdoor. A lure document targeted what appears to be the 🇵🇸 Palestinian Authority’s Ministry of Foreign Affairs – potentially to gather intel on its position in the US-led peace talks. 2/3",
+    "urls": [],
+    "mentions": [],
+    "tags": [
+     "AridGopher",
+     "AridViper"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122993566075031565",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-18T10:01:24.000Z",
+    "text": "More on 🇮🇷 Iran- and Hamas-aligned APT activity in the full #ESETresearch APT Activity Report (Apr–Sep 2026): https://t.co/eptAf5DQhr 3/3",
+    "urls": [
+     {
+      "u": "https://t.co/eptAf5DQhr",
+      "d": "web-assets.esetstatic.com/wls/en/papers/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "ESETresearch"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2122993564992893407",
+    "uid": "54316357",
+    "cat": "CTI",
+    "at": "2026-11-18T10:01:23.000Z",
+    "text": "#ESETresearch APT Activity Report (Apr–Sep 2026): 🇮🇷 Iran-aligned APTs rebounded after a lull tied to the US/Israel war on Iran. Threat actors reemerged with new tooling, focusing on 🇮🇱 Israeli targets across sectors and, to a lesser extent, 🇺🇸 US entities. 1/3 https://t.co/YrTDwCTTEa",
+    "urls": [
+     {
+      "u": "https://t.co/YrTDwCTTEa",
+      "d": "pic.x.com/YrTDwCTTEa"
+     }
+    ],
+    "mentions": [],
+    "tags": [
+     "ESETresearch"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2122951690903281694",
     "uid": "209811713",
@@ -8908,25 +10083,25 @@
   ]
  },
  "brief": {
-  "key": "v3|2026-11-18|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-48356",
+  "key": "v3|2026-11-19|CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-110447,CVE-2026-97229,CVE-2026-48356",
   "points": [
    {
-    "title": "PHP Memory Corruption Vulnerability",
-    "why": "Confirmed exploited; exploitation within 30 days is near-certain; critical severity.",
+    "title": "PHP memory corruption flaw",
+    "why": "Confirmed exploited in the wild per CISA KEV; exploitation in the next 30 days is near-certain.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
-    "title": "Google Brotli Unchecked Return Value Flaw",
-    "why": "Confirmed exploited, high exploitation likelihood, and in this week's news.",
+    "title": "Google Brotli unchecked return value flaw",
+    "why": "Confirmed exploited and in the news this week; high likelihood of exploitation within 30 days.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
    },
    {
-    "title": "GitLab Integer Overflow Vulnerability",
-    "why": "Confirmed exploited; high likelihood of exploitation within 30 days; critical severity.",
+    "title": "GitLab integer overflow flaw",
+    "why": "Confirmed exploited per CISA KEV; critical severity and a majority chance of exploitation within 30 days.",
     "ref": "CVE-2026-97229",
     "find": "CVE-2026-97229",
     "level": "red"
