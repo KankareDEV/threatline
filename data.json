@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-21T11:37:05Z",
+ "generated": "2026-11-21T12:30:51Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1790,
  "counts": {
   "red": 18,
   "orange": 31,
-  "green": 42
+  "green": 40
  },
  "sources": [
   {
@@ -56,7 +56,7 @@
    "ransomware": 0,
    "epss_high": 7,
    "epss_known": 36,
-   "news": 55
+   "news": 53
   },
   "timeline": [
    {
@@ -521,17 +521,7 @@
     "kev": true
    },
    {
-    "cve": "CVE-2024-10441",
-    "n": 1,
-    "kev": true
-   },
-   {
     "cve": "CVE-2025-42884",
-    "n": 1,
-    "kev": true
-   },
-   {
-    "cve": "CVE-2026-40217",
     "n": 1,
     "kev": true
    },
@@ -564,12 +554,22 @@
     "cve": "CVE-2026-23871",
     "n": 1,
     "kev": false
+   },
+   {
+    "cve": "CVE-2026-123007",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-124281",
+    "n": 1,
+    "kev": false
    }
   ],
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 31
+    "n": 29
    },
    {
     "name": "BleepingComputer",
@@ -726,16 +726,12 @@
     {
      "label": "NVD entry",
      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40217"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
     }
    ],
    "cwes": [
     "CWE-420"
    ],
-   "score": 87,
+   "score": 82,
    "level": "red",
    "reasons": [
     {
@@ -753,69 +749,6 @@
     {
      "label": "Added in the last 7 days",
      "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-90817",
-   "type": "vuln",
-   "title": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
-   "cve": "CVE-2026-90817",
-   "vendor": "Vanderbilt University",
-   "product": "Research Electronic Data Capture (REDCap)",
-   "date": "2026-11-18",
-   "summary": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-21",
-   "epss": 0.25657,
-   "cvss": {
-    "score": 9.8,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
-    }
-   ],
-   "cwes": [
-    "CWE-73",
-    "CWE-94"
-   ],
-   "score": 81,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 26% chance of exploitation in 30 days",
-     "points": 6
-    },
-    {
-     "label": "CVSS 9.8 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
     }
    ]
   },
@@ -1005,17 +938,17 @@
    ]
   },
   {
-   "id": "CVE-2024-10441",
+   "id": "CVE-2026-90817",
    "type": "vuln",
-   "title": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
-   "cve": "CVE-2024-10441",
-   "vendor": "Synology",
-   "product": "DiskStation Manager (DSM)",
+   "title": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+   "cve": "CVE-2026-90817",
+   "vendor": "Vanderbilt University",
+   "product": "Research Electronic Data Capture (REDCap)",
    "date": "2026-11-18",
-   "summary": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+   "summary": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-21",
-   "epss": 0.02415,
+   "epss": 0.25657,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1027,15 +960,12 @@
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
     }
    ],
    "cwes": [
-    "CWE-116"
+    "CWE-73",
+    "CWE-94"
    ],
    "score": 76,
    "level": "red",
@@ -1045,8 +975,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 1
+     "label": "EPSS 26% chance of exploitation in 30 days",
+     "points": 6
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1055,10 +985,6 @@
     {
      "label": "Added in the last 7 days",
      "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
     }
    ]
   },
@@ -1088,12 +1014,12 @@
      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448"
     },
     {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
-    },
-    {
      "label": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
     }
    ],
    "cwes": [
@@ -1150,12 +1076,12 @@
      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890"
     },
     {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
-    },
-    {
      "label": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
     }
    ],
    "cwes": [
@@ -1212,12 +1138,12 @@
      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466"
     },
     {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
-    },
-    {
      "label": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html"
+    },
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
     }
    ],
    "cwes": [
@@ -1249,39 +1175,35 @@
    ]
   },
   {
-   "id": "CVE-2026-90436",
+   "id": "CVE-2024-10441",
    "type": "vuln",
-   "title": "Apache Axis Unsafe Reflection Vulnerability",
-   "cve": "CVE-2026-90436",
-   "vendor": "Apache",
-   "product": "Axis",
+   "title": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+   "cve": "CVE-2024-10441",
+   "vendor": "Synology",
+   "product": "DiskStation Manager (DSM)",
    "date": "2026-11-18",
-   "summary": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "summary": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-21",
-   "epss": 0.01833,
+   "epss": 0.02415,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
     "severity": "CRITICAL",
     "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CISA"
+    "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441"
     }
    ],
    "cwes": [
-    "CWE-470"
+    "CWE-116"
    ],
-   "score": 75,
+   "score": 71,
    "level": "red",
    "reasons": [
     {
@@ -1290,7 +1212,7 @@
     },
     {
      "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
+     "points": 1
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1299,10 +1221,6 @@
     {
      "label": "Added in the last 7 days",
      "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
     }
    ]
   },
@@ -1355,6 +1273,56 @@
     {
      "label": "Added in the last 14 days",
      "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-90436",
+   "type": "vuln",
+   "title": "Apache Axis Unsafe Reflection Vulnerability",
+   "cve": "CVE-2026-90436",
+   "vendor": "Apache",
+   "product": "Axis",
+   "date": "2026-11-18",
+   "summary": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-21",
+   "epss": 0.01833,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CISA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436"
+    }
+   ],
+   "cwes": [
+    "CWE-470"
+   ],
+   "score": 70,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 2% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
     }
    ]
   },
@@ -2736,52 +2704,6 @@
    }
   },
   {
-   "id": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-   "type": "news",
-   "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-   "date": "2026-11-20",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2024-10441",
-    "CVE-2025-42884",
-    "CVE-2026-123890",
-    "CVE-2026-129448",
-    "CVE-2026-40217",
-    "CVE-2026-76466"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Mentions exploited CVE-2024-10441",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalog after evidence of active exploitation. The flaws affect SAP NetWeaver, Cisco Expressway, VMware vCenter, and Apache Roller, and pose risks to federal agencies.",
-    "sector": "Government",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
    "type": "news",
    "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
@@ -2819,6 +2741,50 @@
     "actors": [],
     "malware": [],
     "tactic": "Execution",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+   "type": "news",
+   "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+   "date": "2026-11-20",
+   "sources": [
+    "CISA advisories"
+   ],
+   "cves": [
+    "CVE-2025-42884",
+    "CVE-2026-123890",
+    "CVE-2026-129448",
+    "CVE-2026-76466"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "CISA advisories",
+     "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Mentions exploited CVE-2025-42884",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalog after evidence of active exploitation. The flaws affect SAP NetWeaver, Cisco Expressway, VMware vCenter, and Apache Roller, and pose risks to federal agencies.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -3400,6 +3366,41 @@
     "actors": [],
     "malware": [],
     "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
+   "type": "news",
+   "title": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats",
+   "date": "2026-11-21",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Researchers showed a malicious webpage could extract a Meta Muse user's private chats and stored memories without approval prompts. The same flaw could reach stored connected-account credentials. It was a lab demonstration, not a real attack.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Collection",
     "countries": []
    }
   },
@@ -4391,113 +4392,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
-   "type": "news",
-   "title": "Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-114938"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Oracle plans to release patches on November 17, 2026, for 11 Java SE flaws that may be exploited remotely without authentication. Separate reports warn of a critical OpenJDK remote code execution flaw, with a maximum CVSS 3.1 score of 8.1.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
-   "type": "news",
-   "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Checklist of fifteen questions for evaluating AI penetration testing vendors for web applications, noting that exploitation often starts before patches exist.",
-    "sector": "",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
-   "type": "news",
-   "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Researchers showed that opening a PC case lets someone reset the TPM lockout on some AMD and Intel machines, enabling guessing of short Windows Hello and BitLocker PINs.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Credential Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
    "type": "news",
    "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
@@ -4576,12 +4470,12 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1158,
-  "located": 979,
+  "total": 1159,
+  "located": 980,
   "countries": [
    {
     "cc": "US",
-    "n": 450,
+    "n": 451,
     "groups": [
      {
       "name": "n0n",
@@ -4599,7 +4493,7 @@
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 82
+      "n": 83
      },
      {
       "name": "Professional Services",
@@ -7586,6 +7480,12 @@
    {
     "d": "2026-11-21",
     "cc": "US",
+    "g": "barracuda",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "US",
     "g": "inception",
     "s": "Manufacturing"
    },
@@ -7816,12 +7716,6 @@
     "cc": "US",
     "g": "inception",
     "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-19",
-    "cc": "US",
-    "g": "silentransomgroup",
-    "s": "Professional Services"
    }
   ],
   "days": [
@@ -7947,7 +7841,7 @@
    },
    {
     "date": "2026-11-21",
-    "n": 2
+    "n": 3
    }
   ]
  },
@@ -8096,10 +7990,10 @@
   },
   "profiles_at": "2026-11-18T07:35:44.387870+00:00",
   "since": {
-   "209811713": "2124097807435157635",
+   "209811713": "2124109522071630114",
    "50026664": "2123851867755012394",
    "1290332482374598658": "2123811194339467276",
-   "41258937": "2124103028349555181",
+   "41258937": "2124110583368659334",
    "4487645412": "2123909022675849487",
    "54316357": "2122993566959976662",
    "935278274845974528": "2123861502931218467",
@@ -8114,30 +8008,30 @@
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-21T11:37:05.672697+00:00",
-   "bleepincomputer": "2026-11-21T11:37:05.672697+00:00",
-   "therecord_media": "2026-11-21T11:37:05.672697+00:00",
-   "securityweek": "2026-11-21T11:37:05.672697+00:00",
-   "unit42_intel": "2026-11-21T11:37:05.672697+00:00",
-   "esetresearch": "2026-11-21T11:37:05.672697+00:00",
-   "ciscotalos": "2026-11-21T11:37:05.672697+00:00",
-   "googlecloudsec": "2026-11-21T11:37:05.672697+00:00",
-   "msftsecintel": "2026-11-21T11:37:05.672697+00:00",
-   "vxunderground": "2026-11-21T11:37:05.672697+00:00",
-   "projectzerobugs": "2026-11-21T11:37:05.672697+00:00",
-   "thezdi": "2026-11-21T11:37:05.672697+00:00",
-   "watchtowrcyber": "2026-11-21T11:37:05.672697+00:00",
-   "sans_isc": "2026-11-21T11:37:05.672697+00:00",
-   "cisagov": "2026-11-21T11:37:05.672697+00:00",
-   "enisa_eu": "2026-11-21T11:37:05.672697+00:00",
-   "cert_eu": "2026-11-21T11:37:05.672697+00:00",
-   "shadowserver": "2026-11-21T11:37:05.672697+00:00",
-   "gossithedog": "2026-11-21T11:37:05.672697+00:00",
-   "malwaretechblog": "2026-11-21T11:37:05.672697+00:00"
+   "thehackersnews": "2026-11-21T12:30:51.034135+00:00",
+   "bleepincomputer": "2026-11-21T12:30:51.034135+00:00",
+   "therecord_media": "2026-11-21T12:30:51.034135+00:00",
+   "securityweek": "2026-11-21T12:30:51.034135+00:00",
+   "unit42_intel": "2026-11-21T12:30:51.034135+00:00",
+   "esetresearch": "2026-11-21T12:30:51.034135+00:00",
+   "ciscotalos": "2026-11-21T12:30:51.034135+00:00",
+   "googlecloudsec": "2026-11-21T12:30:51.034135+00:00",
+   "msftsecintel": "2026-11-21T12:30:51.034135+00:00",
+   "vxunderground": "2026-11-21T12:30:51.034135+00:00",
+   "projectzerobugs": "2026-11-21T12:30:51.034135+00:00",
+   "thezdi": "2026-11-21T12:30:51.034135+00:00",
+   "watchtowrcyber": "2026-11-21T12:30:51.034135+00:00",
+   "sans_isc": "2026-11-21T12:30:51.034135+00:00",
+   "cisagov": "2026-11-21T12:30:51.034135+00:00",
+   "enisa_eu": "2026-11-21T12:30:51.034135+00:00",
+   "cert_eu": "2026-11-21T12:30:51.034135+00:00",
+   "shadowserver": "2026-11-21T12:30:51.034135+00:00",
+   "gossithedog": "2026-11-21T12:30:51.034135+00:00",
+   "malwaretechblog": "2026-11-21T12:30:51.034135+00:00"
   },
   "budget": {
    "day": "2026-11-21",
-   "used": 40
+   "used": 42
   },
   "accounts": [
    {
@@ -8223,6 +8117,44 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2124110583368659334",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-21T12:00:01.000Z",
+    "text": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE https://t.co/wvtKSJCc8O",
+    "urls": [
+     {
+      "u": "https://t.co/wvtKSJCc8O",
+      "d": "securityweek.com/ruby-patches-r…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124109522071630114",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-21T11:55:48.000Z",
+    "text": "🚨 A SINGLE malicious webpage was enough to hijack Meta's Muse AI agent.\n\nResearchers showed how it could steal private chats, extract stored memories, and ultimately access account credentials—without user approval.\n\nFull story: https://t.co/vUuNAFvvzi",
+    "urls": [
+     {
+      "u": "https://t.co/vUuNAFvvzi",
+      "d": "thehackernews.com/2026/11/a-sing…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2124103028349555181",
     "uid": "41258937",
@@ -10976,27 +10908,27 @@
   ]
  },
  "brief": {
-  "key": "v3|2026-11-21|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-90817,CVE-2026-111497,CVE-2026-110447",
+  "key": "v3|2026-11-21|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229",
   "points": [
    {
     "title": "PHP memory corruption and state flaws",
-    "why": "Two confirmed-exploited PHP flaws, near-certain exploitation, and in the news this week.",
+    "why": "Two critical PHP memory and state flaws confirmed exploited, with exploitation near-certain within 30 days.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
-    "title": "LiteLLM unprotected alternate channel flaw",
-    "why": "Confirmed exploited, added to KEV in the past week, and in the news this week.",
-    "ref": "CVE-2026-40217",
-    "find": "CVE-2026-40217",
+    "title": "GitLab integer overflow flaw",
+    "why": "Confirmed exploited in the wild at critical severity, with likely exploitation within the month.",
+    "ref": "CVE-2026-97229",
+    "find": "CVE-2026-97229",
     "level": "red"
    },
    {
-    "title": "GitLab integer overflow vulnerability",
-    "why": "Confirmed exploited and likely to be exploited within 30 days.",
-    "ref": "CVE-2026-97229",
-    "find": "CVE-2026-97229",
+    "title": "VMware vCenter authentication bypass flaw",
+    "why": "Confirmed exploited, critical, added within the last week and in the news this week.",
+    "ref": "CVE-2026-123890",
+    "find": "CVE-2026-123890",
     "level": "red"
    }
   ],
