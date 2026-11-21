@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-21T12:30:51Z",
+ "generated": "2026-11-21T20:28:13Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1790,
  "counts": {
-  "red": 18,
-  "orange": 31,
-  "green": 40
+  "red": 21,
+  "orange": 26,
+  "green": 38
  },
  "sources": [
   {
@@ -54,9 +54,9 @@
   "totals": {
    "kev_window": 36,
    "ransomware": 0,
-   "epss_high": 7,
+   "epss_high": 10,
    "epss_known": 36,
-   "news": 53
+   "news": 49
   },
   "timeline": [
    {
@@ -209,19 +209,19 @@
   "epss_bands": [
    {
     "name": "90% or more",
-    "n": 2
+    "n": 3
    },
    {
     "name": "50 to 89%",
-    "n": 5
+    "n": 7
    },
    {
     "name": "10 to 49%",
-    "n": 5
+    "n": 4
    },
    {
     "name": "Under 10%",
-    "n": 24
+    "n": 22
    },
    {
     "name": "No score yet",
@@ -242,15 +242,15 @@
     "n": 2
    },
    {
+    "name": "Barracuda Networks",
+    "n": 2
+   },
+   {
     "name": "Apache",
     "n": 2
    },
    {
     "name": "Broadcom",
-    "n": 2
-   },
-   {
-    "name": "Barracuda Networks",
     "n": 2
    },
    {
@@ -294,13 +294,13 @@
     "n": 2
    },
    {
-    "id": "CWE-94",
-    "name": "Code injection",
+    "id": "CWE-288",
+    "name": "Authentication bypass by alternate path",
     "n": 2
    },
    {
-    "id": "CWE-502",
-    "name": "Unsafe deserialization",
+    "id": "CWE-94",
+    "name": "Code injection",
     "n": 2
    }
   ],
@@ -373,19 +373,19 @@
    },
    {
     "name": "Exploited in the wild",
-    "n": 2
+    "n": 1
    },
    {
     "name": "Ransomware",
-    "n": 2
+    "n": 1
    },
    {
     "name": "Data breach",
-    "n": 6
+    "n": 5
    },
    {
     "name": "Critical flaw",
-    "n": 3
+    "n": 2
    }
   ],
   "actors": [
@@ -410,6 +410,16 @@
      {
       "label": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
       "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
+     }
+    ]
+   },
+   {
+    "name": "BADBOX",
+    "n": 1,
+    "links": [
+     {
+      "label": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
+      "url": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/"
      }
     ]
    },
@@ -450,16 +460,6 @@
      {
       "label": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
       "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-     }
-    ]
-   },
-   {
-    "name": "EggStreme",
-    "n": 1,
-    "links": [
-     {
-      "label": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
-      "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
      }
     ]
    },
@@ -506,17 +506,17 @@
   ],
   "news_cves": [
    {
-    "cve": "CVE-2026-129448",
-    "n": 3,
-    "kev": true
-   },
-   {
     "cve": "CVE-2026-123890",
     "n": 2,
     "kev": true
    },
    {
     "cve": "CVE-2026-76466",
+    "n": 2,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-129448",
     "n": 2,
     "kev": true
    },
@@ -556,12 +556,12 @@
     "kev": false
    },
    {
-    "cve": "CVE-2026-123007",
+    "cve": "CVE-2026-124281",
     "n": 1,
     "kev": false
    },
    {
-    "cve": "CVE-2026-124281",
+    "cve": "CVE-2026-125273",
     "n": 1,
     "kev": false
    }
@@ -569,7 +569,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 29
+    "n": 25
    },
    {
     "name": "BleepingComputer",
@@ -713,7 +713,7 @@
    "summary": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-12-02",
-   "epss": 0.68902,
+   "epss": 0.78004,
    "cvss": {
     "score": 8.8,
     "version": "3.1",
@@ -731,7 +731,7 @@
    "cwes": [
     "CWE-420"
    ],
-   "score": 82,
+   "score": 85,
    "level": "red",
    "reasons": [
     {
@@ -739,8 +739,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 69% chance of exploitation in 30 days",
-     "points": 17
+     "label": "EPSS 78% chance of exploitation in 30 days",
+     "points": 20
     },
     {
      "label": "CVSS 8.8 high severity",
@@ -763,7 +763,7 @@
    "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-10",
-   "epss": 0.8237,
+   "epss": 0.99931,
    "cvss": {
     "score": 9.2,
     "version": "4.0",
@@ -782,7 +782,7 @@
     "CWE-252",
     "CWE-787"
    ],
-   "score": 81,
+   "score": 85,
    "level": "red",
    "reasons": [
     {
@@ -790,8 +790,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 82% chance of exploitation in 30 days",
-     "points": 21
+     "label": "EPSS 100% chance of exploitation in 30 days",
+     "points": 25
     },
     {
      "label": "CVSS 9.2 critical severity",
@@ -800,35 +800,35 @@
    ]
   },
   {
-   "id": "CVE-2026-110447",
+   "id": "CVE-2026-116606",
    "type": "vuln",
-   "title": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-   "cve": "CVE-2026-110447",
-   "vendor": "Collabora",
-   "product": "Collabora Online – Built-in CODE Server",
-   "date": "2026-10-23",
-   "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+   "title": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+   "cve": "CVE-2026-116606",
+   "vendor": "Barracuda Networks",
+   "product": "Barracuda Email Security Gateway (ESG)",
+   "date": "2026-11-10",
+   "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-10-26",
-   "epss": 0.73307,
+   "due": "2026-11-13",
+   "epss": 0.7452,
    "cvss": {
-    "score": 9.2,
+    "score": 9.3,
     "version": "4.0",
     "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606"
     }
    ],
    "cwes": [
-    "CWE-78"
+    "CWE-288"
    ],
-   "score": 78,
+   "score": 84,
    "level": "red",
    "reasons": [
     {
@@ -836,45 +836,49 @@
      "points": 50
     },
     {
-     "label": "EPSS 73% chance of exploitation in 30 days",
-     "points": 18
+     "label": "EPSS 75% chance of exploitation in 30 days",
+     "points": 19
     },
     {
-     "label": "CVSS 9.2 critical severity",
+     "label": "CVSS 9.3 critical severity",
      "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
   {
-   "id": "CVE-2026-97229",
+   "id": "CVE-2026-123158",
    "type": "vuln",
-   "title": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
-   "cve": "CVE-2026-97229",
-   "vendor": "GitLab",
-   "product": "Community Edition and Enterprise Edition",
-   "date": "2026-10-29",
-   "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+   "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+   "cve": "CVE-2026-123158",
+   "vendor": "OpenBSD",
+   "product": "OpenSSH",
+   "date": "2026-11-09",
+   "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-01",
-   "epss": 0.69289,
+   "due": "2026-11-12",
+   "epss": 0.8768,
    "cvss": {
-    "score": 10.0,
+    "score": 8.1,
     "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
     }
    ],
    "cwes": [
-    "CWE-190"
+    "CWE-394"
    ],
-   "score": 77,
+   "score": 82,
    "level": "red",
    "reasons": [
     {
@@ -882,12 +886,16 @@
      "points": 50
     },
     {
-     "label": "EPSS 69% chance of exploitation in 30 days",
-     "points": 17
+     "label": "EPSS 88% chance of exploitation in 30 days",
+     "points": 22
     },
     {
-     "label": "CVSS 10.0 critical severity",
-     "points": 10
+     "label": "CVSS 8.1 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
     }
    ]
   },
@@ -902,7 +910,7 @@
    "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-10",
-   "epss": 0.6639,
+   "epss": 0.81624,
    "cvss": {
     "score": 9.3,
     "version": "3.1",
@@ -920,7 +928,7 @@
    "cwes": [
     "CWE-434"
    ],
-   "score": 77,
+   "score": 80,
    "level": "red",
    "reasons": [
     {
@@ -928,11 +936,103 @@
      "points": 50
     },
     {
-     "label": "EPSS 66% chance of exploitation in 30 days",
-     "points": 17
+     "label": "EPSS 82% chance of exploitation in 30 days",
+     "points": 20
     },
     {
      "label": "CVSS 9.3 critical severity",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-97229",
+   "type": "vuln",
+   "title": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+   "cve": "CVE-2026-97229",
+   "vendor": "GitLab",
+   "product": "Community Edition and Enterprise Edition",
+   "date": "2026-10-29",
+   "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-01",
+   "epss": 0.74315,
+   "cvss": {
+    "score": 10.0,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+    }
+   ],
+   "cwes": [
+    "CWE-190"
+   ],
+   "score": 79,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 74% chance of exploitation in 30 days",
+     "points": 19
+    },
+    {
+     "label": "CVSS 10.0 critical severity",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-110447",
+   "type": "vuln",
+   "title": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+   "cve": "CVE-2026-110447",
+   "vendor": "Collabora",
+   "product": "Collabora Online – Built-in CODE Server",
+   "date": "2026-10-23",
+   "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-10-26",
+   "epss": 0.7615,
+   "cvss": {
+    "score": 9.2,
+    "version": "4.0",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447"
+    }
+   ],
+   "cwes": [
+    "CWE-78"
+   ],
+   "score": 79,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 76% chance of exploitation in 30 days",
+     "points": 19
+    },
+    {
+     "label": "CVSS 9.2 critical severity",
      "points": 10
     }
    ]
@@ -948,7 +1048,7 @@
    "summary": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-21",
-   "epss": 0.25657,
+   "epss": 0.33395,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -967,7 +1067,7 @@
     "CWE-73",
     "CWE-94"
    ],
-   "score": 76,
+   "score": 78,
    "level": "red",
    "reasons": [
     {
@@ -975,8 +1075,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 26% chance of exploitation in 30 days",
-     "points": 6
+     "label": "EPSS 33% chance of exploitation in 30 days",
+     "points": 8
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -999,7 +1099,7 @@
    "summary": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-23",
-   "epss": 0.01191,
+   "epss": 0.05459,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1014,18 +1114,18 @@
      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448"
     },
     {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
-    },
-    {
      "label": "CISA advisories",
      "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+    },
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
     }
    ],
    "cwes": [
     "CWE-502"
    ],
-   "score": 75,
+   "score": 76,
    "level": "red",
    "reasons": [
     {
@@ -1033,8 +1133,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
+     "label": "EPSS 5% chance of exploitation in 30 days",
+     "points": 1
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1061,7 +1161,7 @@
    "summary": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines",
    "due": "2026-11-23",
-   "epss": 0.00843,
+   "epss": 0.02985,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1087,7 +1187,7 @@
    "cwes": [
     "CWE-288"
    ],
-   "score": 75,
+   "score": 76,
    "level": "red",
    "reasons": [
     {
@@ -1095,8 +1195,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
+     "label": "EPSS 3% chance of exploitation in 30 days",
+     "points": 1
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1123,7 +1223,7 @@
    "summary": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-23",
-   "epss": 0.00417,
+   "epss": 0.02187,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1149,7 +1249,7 @@
    "cwes": [
     "CWE-798"
    ],
-   "score": 75,
+   "score": 76,
    "level": "red",
    "reasons": [
     {
@@ -1157,8 +1257,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 0% chance of exploitation in 30 days",
-     "points": 0
+     "label": "EPSS 2% chance of exploitation in 30 days",
+     "points": 1
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1175,6 +1275,108 @@
    ]
   },
   {
+   "id": "CVE-2026-111560",
+   "type": "vuln",
+   "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+   "cve": "CVE-2026-111560",
+   "vendor": "Barracuda Networks",
+   "product": "Multiple Products",
+   "date": "2026-11-10",
+   "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-13",
+   "epss": 0.63769,
+   "cvss": {
+    "score": 8.6,
+    "version": "4.0",
+    "severity": "HIGH",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560"
+    }
+   ],
+   "cwes": [
+    "CWE-78"
+   ],
+   "score": 76,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 64% chance of exploitation in 30 days",
+     "points": 16
+    },
+    {
+     "label": "CVSS 8.6 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-116779",
+   "type": "vuln",
+   "title": "SignalWire FreeSwitch Code Injection Vulnerability",
+   "cve": "CVE-2026-116779",
+   "vendor": "SignalWire",
+   "product": "FreeSwitch",
+   "date": "2026-11-09",
+   "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-12",
+   "epss": 0.44112,
+   "cvss": {
+    "score": 9.8,
+    "version": "3.1",
+    "severity": "CRITICAL",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
+    }
+   ],
+   "cwes": [
+    "CWE-77",
+    "CWE-78",
+    "CWE-749"
+   ],
+   "score": 76,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 44% chance of exploitation in 30 days",
+     "points": 11
+    },
+    {
+     "label": "CVSS 9.8 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 14 days",
+     "points": 5
+    }
+   ]
+  },
+  {
    "id": "CVE-2024-10441",
    "type": "vuln",
    "title": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
@@ -1185,7 +1387,7 @@
    "summary": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-21",
-   "epss": 0.02415,
+   "epss": 0.03129,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1211,7 +1413,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 2% chance of exploitation in 30 days",
+     "label": "EPSS 3% chance of exploitation in 30 days",
      "points": 1
     },
     {
@@ -1221,58 +1423,6 @@
     {
      "label": "Added in the last 7 days",
      "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-116779",
-   "type": "vuln",
-   "title": "SignalWire FreeSwitch Code Injection Vulnerability",
-   "cve": "CVE-2026-116779",
-   "vendor": "SignalWire",
-   "product": "FreeSwitch",
-   "date": "2026-11-09",
-   "summary": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.22081,
-   "cvss": {
-    "score": 9.8,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779"
-    }
-   ],
-   "cwes": [
-    "CWE-77",
-    "CWE-78",
-    "CWE-749"
-   ],
-   "score": 71,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 22% chance of exploitation in 30 days",
-     "points": 6
-    },
-    {
-     "label": "CVSS 9.8 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 14 days",
-     "points": 5
     }
    ]
   },
@@ -1287,7 +1437,7 @@
    "summary": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-21",
-   "epss": 0.01833,
+   "epss": 0.03813,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1305,7 +1455,7 @@
    "cwes": [
     "CWE-470"
    ],
-   "score": 70,
+   "score": 71,
    "level": "red",
    "reasons": [
     {
@@ -1313,8 +1463,8 @@
      "points": 50
     },
     {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
+     "label": "EPSS 4% chance of exploitation in 30 days",
+     "points": 1
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1337,7 +1487,7 @@
    "summary": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-12-01",
-   "epss": 0.00691,
+   "epss": 0.01231,
    "cvss": {
     "score": 9.4,
     "version": "4.0",
@@ -1378,56 +1528,6 @@
    ]
   },
   {
-   "id": "CVE-2026-116606",
-   "type": "vuln",
-   "title": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-   "cve": "CVE-2026-116606",
-   "vendor": "Barracuda Networks",
-   "product": "Barracuda Email Security Gateway (ESG)",
-   "date": "2026-11-10",
-   "summary": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-13",
-   "epss": 0.10947,
-   "cvss": {
-    "score": 9.3,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606"
-    }
-   ],
-   "cwes": [
-    "CWE-288"
-   ],
-   "score": 68,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 11% chance of exploitation in 30 days",
-     "points": 3
-    },
-    {
-     "label": "CVSS 9.3 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 14 days",
-     "points": 5
-    }
-   ]
-  },
-  {
    "id": "CVE-2026-102895",
    "type": "vuln",
    "title": "GPUStack Improper Authentication Vulnerability",
@@ -1438,7 +1538,7 @@
    "summary": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-12",
-   "epss": 0.0573,
+   "epss": 0.18787,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1458,16 +1558,16 @@
     "CWE-290",
     "CWE-346"
    ],
-   "score": 66,
-   "level": "orange",
+   "score": 70,
+   "level": "red",
    "reasons": [
     {
      "label": "Confirmed exploited (CISA KEV)",
      "points": 50
     },
     {
-     "label": "EPSS 6% chance of exploitation in 30 days",
-     "points": 1
+     "label": "EPSS 19% chance of exploitation in 30 days",
+     "points": 5
     },
     {
      "label": "CVSS 9.8 critical severity",
@@ -1490,7 +1590,7 @@
    "summary": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-23",
-   "epss": 0.00276,
+   "epss": 0.00714,
    "cvss": {
     "score": 6.5,
     "version": "3.1",
@@ -1520,7 +1620,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 0% chance of exploitation in 30 days",
+     "label": "EPSS 1% chance of exploitation in 30 days",
      "points": 0
     },
     {
@@ -1529,56 +1629,6 @@
     },
     {
      "label": "In the news this week",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-123158",
-   "type": "vuln",
-   "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
-   "cve": "CVE-2026-123158",
-   "vendor": "OpenBSD",
-   "product": "OpenSSH",
-   "date": "2026-11-09",
-   "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.189,
-   "cvss": {
-    "score": 8.1,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
-    }
-   ],
-   "cwes": [
-    "CWE-394"
-   ],
-   "score": 65,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 19% chance of exploitation in 30 days",
-     "points": 5
-    },
-    {
-     "label": "CVSS 8.1 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 14 days",
      "points": 5
     }
    ]
@@ -1594,7 +1644,7 @@
    "summary": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-12",
-   "epss": 0.00535,
+   "epss": 0.01013,
    "cvss": {
     "score": 9.8,
     "version": "3.1",
@@ -1634,33 +1684,33 @@
    ]
   },
   {
-   "id": "CVE-2026-111560",
+   "id": "CVE-2026-114625",
    "type": "vuln",
-   "title": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
-   "cve": "CVE-2026-111560",
-   "vendor": "Barracuda Networks",
-   "product": "Multiple Products",
-   "date": "2026-11-10",
-   "summary": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+   "title": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+   "cve": "CVE-2026-114625",
+   "vendor": "Arista",
+   "product": "VeloCloud Orchestrator",
+   "date": "2026-10-23",
+   "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-13",
-   "epss": 0.09082,
+   "due": "2026-10-26",
+   "epss": 0.07666,
    "cvss": {
-    "score": 8.6,
+    "score": 9.4,
     "version": "4.0",
-    "severity": "HIGH",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111560"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625"
     }
    ],
    "cwes": [
-    "CWE-78"
+    "CWE-89"
    ],
    "score": 62,
    "level": "orange",
@@ -1670,11 +1720,58 @@
      "points": 50
     },
     {
-     "label": "EPSS 9% chance of exploitation in 30 days",
+     "label": "EPSS 8% chance of exploitation in 30 days",
      "points": 2
     },
     {
-     "label": "CVSS 8.6 high severity",
+     "label": "CVSS 9.4 critical severity",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-123039",
+   "type": "vuln",
+   "title": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+   "cve": "CVE-2026-123039",
+   "vendor": "Check Point",
+   "product": "Multiple Products",
+   "date": "2026-11-13",
+   "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-16",
+   "epss": 0.03269,
+   "cvss": {
+    "score": 7.8,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123039"
+    }
+   ],
+   "cwes": [
+    "CWE-732",
+    "CWE-862"
+   ],
+   "score": 61,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 3% chance of exploitation in 30 days",
+     "points": 1
+    },
+    {
+     "label": "CVSS 7.8 high severity",
      "points": 5
     },
     {
@@ -1783,53 +1880,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
-   "type": "news",
-   "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-129448"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
-    }
-   ],
-   "signals": [
-    "Exploited in the wild"
-   ],
-   "actors": [],
-   "score": 60,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Exploited in the wild in the headline",
-     "points": 20
-    },
-    {
-     "label": "Mentions exploited CVE-2026-129448",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "An unauthenticated deserialization flaw in Apache Roller's XML-RPC endpoint, rated 9.8 CVSS, is being actively exploited to enable remote code execution on blogging servers.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "CVE-2026-114713",
    "type": "vuln",
    "title": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
@@ -1840,7 +1890,7 @@
    "summary": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-16",
-   "epss": 0.00467,
+   "epss": 0.01148,
    "cvss": {
     "score": 8.6,
     "version": "3.1",
@@ -1866,62 +1916,11 @@
      "points": 50
     },
     {
-     "label": "EPSS 0% chance of exploitation in 30 days",
+     "label": "EPSS 1% chance of exploitation in 30 days",
      "points": 0
     },
     {
      "label": "CVSS 8.6 high severity",
-     "points": 5
-    },
-    {
-     "label": "Added in the last 14 days",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-123039",
-   "type": "vuln",
-   "title": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
-   "cve": "CVE-2026-123039",
-   "vendor": "Check Point",
-   "product": "Multiple Products",
-   "date": "2026-11-13",
-   "summary": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-16",
-   "epss": 0.01938,
-   "cvss": {
-    "score": 7.8,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123039"
-    }
-   ],
-   "cwes": [
-    "CWE-732",
-    "CWE-862"
-   ],
-   "score": 60,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 7.8 high severity",
      "points": 5
     },
     {
@@ -1941,7 +1940,7 @@
    "summary": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-24",
-   "epss": 0.00976,
+   "epss": 0.01682,
    "cvss": {
     "score": 7.5,
     "version": "3.1",
@@ -1967,7 +1966,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 1% chance of exploitation in 30 days",
+     "label": "EPSS 2% chance of exploitation in 30 days",
      "points": 0
     },
     {
@@ -1991,7 +1990,7 @@
    "summary": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-24",
-   "epss": 0.00962,
+   "epss": 0.0189,
    "cvss": {
     "score": 8.8,
     "version": "3.1",
@@ -2017,7 +2016,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 1% chance of exploitation in 30 days",
+     "label": "EPSS 2% chance of exploitation in 30 days",
      "points": 0
     },
     {
@@ -2027,52 +2026,6 @@
     {
      "label": "Added in the last 14 days",
      "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-114625",
-   "type": "vuln",
-   "title": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-   "cve": "CVE-2026-114625",
-   "vendor": "Arista",
-   "product": "VeloCloud Orchestrator",
-   "date": "2026-10-23",
-   "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-10-26",
-   "epss": 0.01025,
-   "cvss": {
-    "score": 9.4,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625"
-    }
-   ],
-   "cwes": [
-    "CWE-89"
-   ],
-   "score": 60,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 9.4 critical severity",
-     "points": 10
     }
    ]
   },
@@ -2087,7 +2040,7 @@
    "summary": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-10-31",
-   "epss": 0.1613,
+   "epss": 0.17203,
    "cvss": {
     "score": 7.8,
     "version": "3.1",
@@ -2113,11 +2066,149 @@
      "points": 50
     },
     {
-     "label": "EPSS 16% chance of exploitation in 30 days",
+     "label": "EPSS 17% chance of exploitation in 30 days",
      "points": 4
     },
     {
      "label": "CVSS 7.8 high severity",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-19868",
+   "type": "vuln",
+   "title": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+   "cve": "CVE-2026-19868",
+   "vendor": "SonicWall",
+   "product": "SonicOS SSLVPN",
+   "date": "2026-11-06",
+   "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-20",
+   "epss": 0.0804,
+   "cvss": {
+    "score": 7.5,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
+    "by": "CISA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868"
+    }
+   ],
+   "cwes": [
+    "CWE-308"
+   ],
+   "score": 57,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 8% chance of exploitation in 30 days",
+     "points": 2
+    },
+    {
+     "label": "CVSS 7.5 high severity",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-119977",
+   "type": "vuln",
+   "title": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+   "cve": "CVE-2026-119977",
+   "vendor": "WordPress",
+   "product": "WordPress Core",
+   "date": "2026-11-03",
+   "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-06",
+   "epss": 0.08054,
+   "cvss": {
+    "score": 8.1,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
+    }
+   ],
+   "cwes": [
+    "CWE-367"
+   ],
+   "score": 57,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 8% chance of exploitation in 30 days",
+     "points": 2
+    },
+    {
+     "label": "CVSS 8.1 high severity",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-76418",
+   "type": "vuln",
+   "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+   "cve": "CVE-2026-76418",
+   "vendor": "Cisco",
+   "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+   "date": "2026-10-29",
+   "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-01",
+   "epss": 0.08547,
+   "cvss": {
+    "score": 8.6,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418"
+    }
+   ],
+   "cwes": [
+    "CWE-690"
+   ],
+   "score": 57,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 9% chance of exploitation in 30 days",
+     "points": 2
+    },
+    {
+     "label": "CVSS 8.6 high severity",
      "points": 5
     }
    ]
@@ -2133,7 +2224,7 @@
    "summary": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-24",
-   "epss": 0.0162,
+   "epss": 0.01939,
    "cvss": {
     "score": 6.5,
     "version": "3.1",
@@ -2179,7 +2270,7 @@
    "summary": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-24",
-   "epss": 0.00638,
+   "epss": 0.01172,
    "cvss": {
     "score": 4.3,
     "version": "3.1",
@@ -2215,98 +2306,6 @@
    ]
   },
   {
-   "id": "CVE-2026-19868",
-   "type": "vuln",
-   "title": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
-   "cve": "CVE-2026-19868",
-   "vendor": "SonicWall",
-   "product": "SonicOS SSLVPN",
-   "date": "2026-11-06",
-   "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-20",
-   "epss": 0.00532,
-   "cvss": {
-    "score": 7.5,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
-    "by": "CISA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868"
-    }
-   ],
-   "cwes": [
-    "CWE-308"
-   ],
-   "score": 55,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 7.5 high severity",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-119977",
-   "type": "vuln",
-   "title": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
-   "cve": "CVE-2026-119977",
-   "vendor": "WordPress",
-   "product": "WordPress Core",
-   "date": "2026-11-03",
-   "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-06",
-   "epss": 0.01586,
-   "cvss": {
-    "score": 8.1,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
-    }
-   ],
-   "cwes": [
-    "CWE-367"
-   ],
-   "score": 55,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 8.1 high severity",
-     "points": 5
-    }
-   ]
-  },
-  {
    "id": "CVE-2026-111357",
    "type": "vuln",
    "title": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
@@ -2317,7 +2316,7 @@
    "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-02",
-   "epss": 0.00533,
+   "epss": 0.00803,
    "cvss": {
     "score": 7.0,
     "version": "3.1",
@@ -2350,52 +2349,6 @@
     },
     {
      "label": "CVSS 7.0 high severity",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-76418",
-   "type": "vuln",
-   "title": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
-   "cve": "CVE-2026-76418",
-   "vendor": "Cisco",
-   "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
-   "date": "2026-10-29",
-   "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-01",
-   "epss": 0.00821,
-   "cvss": {
-    "score": 8.6,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418"
-    }
-   ],
-   "cwes": [
-    "CWE-690"
-   ],
-   "score": 55,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 1% chance of exploitation in 30 days",
-     "points": 0
-    },
-    {
-     "label": "CVSS 8.6 high severity",
      "points": 5
     }
    ]
@@ -2460,7 +2413,7 @@
    "summary": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-18",
-   "epss": 0.01502,
+   "epss": 0.01558,
    "cvss": {
     "score": 5.5,
     "version": "3.1",
@@ -2502,7 +2455,7 @@
    "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-13",
-   "epss": 0.00822,
+   "epss": 0.00991,
    "cvss": {
     "score": 4.3,
     "version": "3.1",
@@ -2544,7 +2497,7 @@
    "summary": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-11-11",
-   "epss": 0.00689,
+   "epss": 0.00901,
    "cvss": {
     "score": 2.7,
     "version": "3.1",
@@ -2574,52 +2527,6 @@
      "points": 0
     }
    ]
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
-   "type": "news",
-   "title": "Five warning signs of ransomware breach before encryption or data theft",
-   "date": "2026-11-19",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": true,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/"
-    }
-   ],
-   "signals": [
-    "Ransomware",
-    "Data breach"
-   ],
-   "actors": [],
-   "score": 45,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Ransomware in the headline",
-     "points": 15
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "summary": "Acronis outlines five early warning signs of ransomware, such as credential theft, lateral movement, and attempts to disable security controls, to help defenders detect and contain intrusions sooner.",
-    "sector": "",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
   },
   {
    "id": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
@@ -3214,47 +3121,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/",
-   "type": "news",
-   "title": "PHP security updates fix 18 flaws, including critical RCE bugs",
-   "date": "2026-11-19",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/"
-    }
-   ],
-   "signals": [
-    "Critical flaw"
-   ],
-   "actors": [],
-   "score": 30,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Critical flaw in the headline",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "summary": "PHP released security updates fixing 18 vulnerabilities, including critical flaws that could let unauthenticated attackers remotely execute code on vulnerable servers.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
    "type": "news",
    "title": "Transport for London breach exposes 265,000 Oyster card users' data",
@@ -3401,6 +3267,117 @@
     "actors": [],
     "malware": [],
     "tactic": "Collection",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+   "type": "news",
+   "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+   "date": "2026-11-21",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "FBI systems were reportedly breached again, this time hitting the NCIC database that federal, state, and local police use to share criminal information.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Collection",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+   "type": "news",
+   "title": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
+   "date": "2026-11-21",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "BADBOX"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The BADBOX malware, which infects generic Android TV boxes, has returned to run large-scale ad-fraud operations, generating about 40 billion ad requests daily.",
+    "sector": "Advertising",
+    "actors": [],
+    "malware": [
+     "BADBOX"
+    ],
+    "tactic": "Impact",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+   "type": "news",
+   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+   "date": "2026-11-21",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Microsoft disclosed a breach in which attackers exploited a flaw in its Entra Connect Health service to access administrator emails and tenant configuration data.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
     "countries": []
    }
   },
@@ -3958,43 +3935,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
-   "type": "news",
-   "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-123007"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A decade-old NGINX HTTP/2 flaw, CVE-2026-123007, lets unauthenticated attackers run code on servers with HTTP/2 enabled. Fixed versions 1.31.9 and 1.30.7 are now available.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
    "type": "news",
    "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
@@ -4248,41 +4188,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
-   "type": "news",
-   "title": "Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers",
-   "date": "2026-11-19",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Two critical NGINX flaws, dubbed nginx2root, let unauthenticated attackers run code on web servers and, when chained with a Linux kernel bug, gain root access.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
    "type": "news",
    "title": "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
@@ -4390,92 +4295,16 @@
      "US"
     ]
    }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
-   "type": "news",
-   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "EggStreme"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A suspected Chinese APT group rebuilt the EggStreme malware to evade security tools while continuing to target Philippine government organisations, according to Bitdefender.",
-    "sector": "Government",
-    "actors": [],
-    "malware": [
-     "EggStreme"
-    ],
-    "tactic": "Defense Evasion",
-    "countries": [
-     "PH"
-    ]
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
-   "type": "news",
-   "title": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
-   "date": "2026-11-18",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Six critical F5 BIG-IP flaws let unauthenticated attackers crash the traffic management microkernel under specific configurations, disrupting traffic and possibly enabling remote code execution.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
   }
  ],
  "geo": {
   "window_days": 30,
-  "total": 1159,
-  "located": 980,
+  "total": 1152,
+  "located": 976,
   "countries": [
    {
     "cc": "US",
-    "n": 451,
+    "n": 449,
     "groups": [
      {
       "name": "n0n",
@@ -4483,7 +4312,7 @@
      },
      {
       "name": "qilin",
-      "n": 34
+      "n": 33
      },
      {
       "name": "thegentlemen",
@@ -4497,7 +4326,7 @@
      },
      {
       "name": "Professional Services",
-      "n": 80
+      "n": 79
      },
      {
       "name": "Manufacturing",
@@ -4507,7 +4336,7 @@
    },
    {
     "cc": "DE",
-    "n": 59,
+    "n": 58,
     "groups": [
      {
       "name": "qilin",
@@ -4525,7 +4354,7 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 20
+      "n": 19
      },
      {
       "name": "Professional Services",
@@ -4571,7 +4400,7 @@
    },
    {
     "cc": "GB",
-    "n": 42,
+    "n": 41,
     "groups": [
      {
       "name": "qilin",
@@ -4588,15 +4417,15 @@
     ],
     "sectors": [
      {
-      "name": "Professional Services",
-      "n": 6
-     },
-     {
       "name": "Retail & E-Commerce",
       "n": 6
      },
      {
       "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Professional Services",
       "n": 5
      }
     ]
@@ -4794,38 +4623,6 @@
     ]
    },
    {
-    "cc": "AU",
-    "n": 14,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 7
-     },
-     {
-      "name": "thegentlemen",
-      "n": 3
-     },
-     {
-      "name": "braincipher",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Manufacturing",
-      "n": 2
-     }
-    ]
-   },
-   {
     "cc": "BR",
     "n": 14,
     "groups": [
@@ -4878,6 +4675,38 @@
      {
       "name": "Technology",
       "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "AU",
+    "n": 13,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 6
+     },
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "braincipher",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 2
      },
      {
       "name": "Manufacturing",
@@ -5942,6 +5771,26 @@
     ]
    },
    {
+    "cc": "VE",
+    "n": 2,
+    "groups": [
+     {
+      "name": "lockbit5",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "AL",
     "n": 1,
     "groups": [
@@ -6448,17 +6297,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "cc": "VE",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": []
    }
   ],
   "groups": [
@@ -6548,7 +6386,7 @@
    },
    {
     "name": "qilin",
-    "n": 106,
+    "n": 103,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6561,13 +6399,13 @@
      },
      {
       "name": "Other",
-      "n": 11
+      "n": 10
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 34
+      "n": 33
      },
      {
       "cc": "DE",
@@ -6578,12 +6416,12 @@
       "n": 8
      },
      {
-      "cc": "AU",
+      "cc": "MX",
       "n": 7
      },
      {
-      "cc": "MX",
-      "n": 7
+      "cc": "AU",
+      "n": 6
      }
     ],
     "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
@@ -6718,18 +6556,18 @@
    },
    {
     "name": "silentransomgroup",
-    "n": 36,
+    "n": 33,
     "last": "2026-11-20",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 18
+      "n": 17
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 15
+      "n": 14
      },
      {
       "cc": "GB",
@@ -6781,8 +6619,49 @@
     ]
    },
    {
-    "name": "rhysida",
+    "name": "soulgroup",
     "n": 27,
+    "last": "2026-11-21",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 9
+     },
+     {
+      "name": "Professional Services",
+      "n": 5
+     },
+     {
+      "name": "Technology",
+      "n": 4
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 20
+     },
+     {
+      "cc": "ES",
+      "n": 2
+     },
+     {
+      "cc": "PA",
+      "n": 1
+     },
+     {
+      "cc": "AR",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "name": "rhysida",
+    "n": 26,
     "last": "2026-11-20",
     "sectors": [
      {
@@ -6791,7 +6670,7 @@
      },
      {
       "name": "Manufacturing",
-      "n": 6
+      "n": 5
      },
      {
       "name": "Financial Services",
@@ -6822,47 +6701,6 @@
     ],
     "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
     "origin": ""
-   },
-   {
-    "name": "soulgroup",
-    "n": 26,
-    "last": "2026-11-19",
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 9
-     },
-     {
-      "name": "Professional Services",
-      "n": 5
-     },
-     {
-      "name": "Technology",
-      "n": 4
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 19
-     },
-     {
-      "cc": "ES",
-      "n": 2
-     },
-     {
-      "cc": "PA",
-      "n": 1
-     },
-     {
-      "cc": "AR",
-      "n": 1
-     },
-     {
-      "cc": "CA",
-      "n": 1
-     }
-    ]
    },
    {
     "name": "vortex",
@@ -6943,8 +6781,51 @@
     ]
    },
    {
-    "name": "everest",
+    "name": "medusalocker",
     "n": 21,
+    "last": "2026-11-20",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 3
+     },
+     {
+      "cc": "MZ",
+      "n": 1
+     },
+     {
+      "cc": "IN",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "CA",
+      "n": 1
+     }
+    ],
+    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
+    "origin": ""
+   },
+   {
+    "name": "everest",
+    "n": 20,
     "last": "2026-11-20",
     "sectors": [
      {
@@ -6986,21 +6867,21 @@
     "origin": ""
    },
    {
-    "name": "medusalocker",
-    "n": 21,
-    "last": "2026-11-20",
+    "name": "lockbit5",
+    "n": 19,
+    "last": "2026-11-21",
     "sectors": [
      {
-      "name": "Technology",
+      "name": "Other",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
       "n": 3
      },
      {
-      "name": "Manufacturing",
+      "name": "Healthcare",
       "n": 3
-     },
-     {
-      "name": "Transportation",
-      "n": 2
      }
     ],
     "countries": [
@@ -7009,23 +6890,23 @@
       "n": 3
      },
      {
-      "cc": "MZ",
-      "n": 1
-     },
-     {
       "cc": "IN",
-      "n": 1
+      "n": 2
      },
      {
-      "cc": "GB",
-      "n": 1
+      "cc": "BR",
+      "n": 2
      },
      {
-      "cc": "CA",
+      "cc": "TH",
+      "n": 2
+     },
+     {
+      "cc": "VE",
       "n": 1
      }
     ],
-    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
+    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
     "origin": ""
    },
    {
@@ -7153,49 +7034,6 @@
      }
     ],
     "about": "Krybit is an emerging RaaS group that launched in late March 2026. It offers affiliates an 80/20 revenue split and encrypts Windows, Linux, ESXi, and NAS devices. It became known for a public feud with rival 0APT, with each group leaking the other's operator data.",
-    "origin": ""
-   },
-   {
-    "name": "lockbit5",
-    "n": 18,
-    "last": "2026-11-18",
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Healthcare",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 3
-     },
-     {
-      "cc": "IN",
-      "n": 2
-     },
-     {
-      "cc": "BR",
-      "n": 2
-     },
-     {
-      "cc": "TH",
-      "n": 2
-     },
-     {
-      "cc": "VN",
-      "n": 1
-     }
-    ],
-    "about": "LockBit 5.0, also called ChuongDong, emerged in September 2025 after the February 2024 law enforcement takedown of LockBit. It introduced cross-platform payloads targeting Windows, Linux, and VMware ESXi. It continues the RaaS affiliate model of its predecessors.",
     "origin": ""
    },
    {
@@ -7480,6 +7318,18 @@
    {
     "d": "2026-11-21",
     "cc": "US",
+    "g": "soulgroup",
+    "s": "Government & Defense"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "VE",
+    "g": "lockbit5",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "US",
     "g": "barracuda",
     "s": "Healthcare"
    },
@@ -7704,24 +7554,12 @@
     "cc": "US",
     "g": "rhysida",
     "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-19",
-    "cc": "",
-    "g": "silentransomgroup",
-    "s": ""
-   },
-   {
-    "d": "2026-11-19",
-    "cc": "US",
-    "g": "inception",
-    "s": "Retail & E-Commerce"
    }
   ],
   "days": [
    {
     "date": "2026-10-22",
-    "n": 10
+    "n": 1
    },
    {
     "date": "2026-10-23",
@@ -7841,7 +7679,7 @@
    },
    {
     "date": "2026-11-21",
-    "n": 3
+    "n": 5
    }
   ]
  },
@@ -7991,7 +7829,7 @@
   "profiles_at": "2026-11-18T07:35:44.387870+00:00",
   "since": {
    "209811713": "2124109522071630114",
-   "50026664": "2123851867755012394",
+   "50026664": "2124202337967185945",
    "1290332482374598658": "2123811194339467276",
    "41258937": "2124110583368659334",
    "4487645412": "2123909022675849487",
@@ -8008,8 +7846,8 @@
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-21T12:30:51.034135+00:00",
-   "bleepincomputer": "2026-11-21T12:30:51.034135+00:00",
+   "thehackersnews": "2026-11-21T20:28:13.854007+00:00",
+   "bleepincomputer": "2026-11-21T20:28:13.854007+00:00",
    "therecord_media": "2026-11-21T12:30:51.034135+00:00",
    "securityweek": "2026-11-21T12:30:51.034135+00:00",
    "unit42_intel": "2026-11-21T12:30:51.034135+00:00",
@@ -8031,7 +7869,7 @@
   },
   "budget": {
    "day": "2026-11-21",
-   "used": 42
+   "used": 46
   },
   "accounts": [
    {
@@ -8117,6 +7955,98 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2124202337967185945",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-21T18:04:37.000Z",
+    "text": "🚨 Microsoft Entra Connect Health flaw exploited to steal tenant data!\n\nAttackers accessed administrator email addresses, tenant IDs, configuration metadata, and synchronization status.\n\nMicrosoft patched the flaw on November 19 and is notifying affected organizations.\n\nThe number of impacted tenants remains unknown.\n\n➡️https://t.co/8fDUEL2qNr\nhttps://t.co/8fDUEL2qNr",
+    "urls": [
+     {
+      "u": "https://t.co/8fDUEL2qNr",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/8fDUEL2qNr",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124160467090174399",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-21T15:18:15.000Z",
+    "text": "BADBOX 3.0 botnet returns with record-breaking 40 billion daily ad requests\nhttps://t.co/ODlSUwJcIk\n\nhttps://t.co/ODlSUwJcIk",
+    "urls": [
+     {
+      "u": "https://t.co/ODlSUwJcIk",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/ODlSUwJcIk",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124147398028952058",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-21T14:26:19.000Z",
+    "text": "FBI reportedly hacked again, this time targeting nationwide police database\nhttps://t.co/rQ285KQ9Ao\n\nhttps://t.co/rQ285KQ9Ao",
+    "urls": [
+     {
+      "u": "https://t.co/rQ285KQ9Ao",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/rQ285KQ9Ao",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124128754515497312",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-21T13:12:14.000Z",
+    "text": "FileJump’s 2TB cloud storage plan drops to $54.97 for life\nhttps://t.co/LCiLbk6Vpc\n\nhttps://t.co/LCiLbk6Vpc",
+    "urls": [
+     {
+      "u": "https://t.co/LCiLbk6Vpc",
+      "d": "bleepingcomputer.com/offer/deals/fi…"
+     },
+     {
+      "u": "https://t.co/LCiLbk6Vpc",
+      "d": "bleepingcomputer.com/offer/deals/fi…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2124110583368659334",
     "uid": "41258937",
@@ -10419,516 +10349,31 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2123143272352907456",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-18T19:56:16.000Z",
-    "text": "Java4Shell, NGINX2Shell and more: Why we are not at \"Yellow\" https://t.co/7bMS0O5dBO https://t.co/tvMFirzARO",
-    "urls": [
-     {
-      "u": "https://t.co/7bMS0O5dBO",
-      "d": "isc.sans.edu/diary/33532"
-     },
-     {
-      "u": "https://t.co/tvMFirzARO",
-      "d": "pic.x.com/tvMFirzARO"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123139131446325397",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-18T19:39:49.000Z",
-    "text": "Data breach impacts 40 Irish credit unions in reported IT provider hack\nhttps://t.co/4pEvcMjRIJ\n\nhttps://t.co/4pEvcMjRIJ",
-    "urls": [
-     {
-      "u": "https://t.co/4pEvcMjRIJ",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/4pEvcMjRIJ",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2123132186308026571",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-18T19:12:13.000Z",
-    "text": "Get Five AI apps in one bundle for $44.97 in this deal\nhttps://t.co/PiIkxFaMJD\n\nhttps://t.co/PiIkxFaMJD",
-    "urls": [
-     {
-      "u": "https://t.co/PiIkxFaMJD",
-      "d": "bleepingcomputer.com/offer/deals/ge…"
-     },
-     {
-      "u": "https://t.co/PiIkxFaMJD",
-      "d": "bleepingcomputer.com/offer/deals/ge…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123124212068130839",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-18T18:40:32.000Z",
-    "text": "Running NGINX? Check your exposure now.\n\n→ Patch to 1.30.7 (stable) or 1.31.9 (mainline)\n→ Verify HTTP/2 exposure\n→ Disable HTTP/2 temporarily if patching is delayed\n→ Investigate unusual worker crashes and command execution\n\nA reload alone won't replace the vulnerable binary.\n\nRead more: https://t.co/Yjxtm7Nfyp",
-    "urls": [
-     {
-      "u": "https://t.co/Yjxtm7Nfyp",
-      "d": "thehackernews.com/2026/11/10-yea…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123123980693631261",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-18T18:39:37.000Z",
-    "text": "And this isn't just theoretical.\n\nPublic PoC exploit code for CVE-2026-123007 is now on GitHub.\n\nThe published code demonstrates exploitation in a constrained local Docker test setup, not a universal exploit against every NGINX deployment. https://t.co/f13vjlrZLJ",
-    "urls": [
-     {
-      "u": "https://t.co/f13vjlrZLJ",
-      "d": "pic.x.com/f13vjlrZLJ"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-123007"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123123791752819019",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-18T18:38:52.000Z",
-    "text": "It gets worse.\n\nXint researchers chained the NGINX RCE with a separate Linux kernel flaw.\n\nResult in their tests:\n→ Remote code execution\n→ Docker container escape\n→ Root access on the host https://t.co/R9s4HTo8p6",
-    "urls": [
-     {
-      "u": "https://t.co/R9s4HTo8p6",
-      "d": "pic.x.com/R9s4HTo8p6"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123123706235093405",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-18T18:38:31.000Z",
-    "text": "Wiz researchers confirmed unauthenticated RCE on official NGINX 1.31.7 and 1.31.8 builds.\n\nThey also bypassed ASLR, a key exploit mitigation.\n\nNo backend application required. https://t.co/LwtpBYTyfL",
-    "urls": [
-     {
-      "u": "https://t.co/LwtpBYTyfL",
-      "d": "pic.x.com/LwtpBYTyfL"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123122809555866093",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-18T18:34:58.000Z",
-    "text": "This bug has been hiding in NGINX since 2015.\n\nThe dangerous part? HTTP/2 alone can expose an unpatched server. No vulnerable application code or third-party module needed.\n\nEven servers hosting static files are at risk.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123108891202625569",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-18T17:39:39.000Z",
-    "text": "It's wild how much money people are pouring into a completely economically unviable company that has like a year of runway left at best. https://t.co/Lel2SIDlDc",
-    "urls": [
-     {
-      "u": "https://t.co/Lel2SIDlDc",
-      "d": "x.com/unusual_whales…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123105849673465978",
-    "uid": "86973588",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-18T17:27:34.000Z",
-    "text": "Hostile Inference: Exploiting Docker Model Runner for Container Escapes - @_niteshsurana walks you through his research in his latest blog post. Videos and code walkthroughs included. https://t.co/RoX4U7Wb1J",
-    "urls": [
-     {
-      "u": "https://t.co/RoX4U7Wb1J",
-      "d": "zerodayinitiative.com/blog/2026/11/1…"
-     }
-    ],
-    "mentions": [
-     "_niteshsurana"
-    ],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123102905637233078",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-18T17:15:52.000Z",
-    "text": "If you hear anyone claiming \"AI is enabling unskilled criminals/hackers to operate with the sophistication of elite state-sponsored hackers\", you can safely unfollow them and ignore all their future takes on cybersecurity. \n\nAs someone who monitors threat actors professionally, and has watches thousands of unskilled hackers try to figure out how to hack with AI, it's basically just this: \n\nSometimes they succeed, a lot of the time they don't. But even when they do, it doesn't come within 1000 miles of anything resembling a sophisticated state-sponsored intrusion.",
-    "urls": [
-     {
-      "u": "https://t.co/Qsuk9oG4ER",
-      "d": "pic.x.com/Qsuk9oG4ER"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": true,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123100788067348751",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-18T17:07:27.000Z",
-    "text": "As much as this suck, it's a pretty good time for AI to have happened. Many devices have layers on layers of exploit mitigations, which makes exploiting vulnerabilities significantly more complex, and often requires chaining multiple vulnerabilities together, and/or version specific exploits. \n\nIf this had happened in the pre ASLR + DEP era, the entire internet would basically be hacked. Instead, it's mostly just a lot of patching theoretical vulnerabilities, with the occasional exploitation.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123098949410345412",
-    "uid": "702994808181170176",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-18T17:00:09.000Z",
-    "text": "GMSCore: Firebase Cloud Messaging does not validate untrusted intents https://t.co/dwjWwtf9sg",
-    "urls": [
-     {
-      "u": "https://t.co/dwjWwtf9sg",
-      "d": "project-zero.issues.chromium.org/issues/5274596…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123098655393566922",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-18T16:58:59.000Z",
-    "text": "Microsoft’s Agent Framework PyPI package compromised to steal credentials\nhttps://t.co/Qvkxgk9CoQ\n\nhttps://t.co/Qvkxgk9CoQ",
-    "urls": [
-     {
-      "u": "https://t.co/Qvkxgk9CoQ",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/Qvkxgk9CoQ",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123088263086846150",
-    "uid": "1324374317484793856",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-18T16:17:41.000Z",
-    "text": "See the watchTowr Platform in action: https://t.co/fIlxCibP0g",
-    "urls": [
-     {
-      "u": "https://t.co/fIlxCibP0g",
-      "d": "watchtowr.com/demo/"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123088261933359267",
-    "uid": "1324374317484793856",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-18T16:17:41.000Z",
-    "text": "The watchTowr team is currently rapidly reacting to the newly published \"NGINX2root\" Remote Code Execution vulnerabilities, including CVE-2026-123633 and others in NGINX's HTTP/2 handling.\n\nActive watchTowr Platform clients are being made aware of their exposure. https://t.co/VzhrfFogNw",
-    "urls": [
-     {
-      "u": "https://t.co/VzhrfFogNw",
-      "d": "pic.x.com/VzhrfFogNw"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-123633"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123077080997114070",
-    "uid": "24683268",
-    "cat": "Official",
-    "at": "2026-11-18T15:33:15.000Z",
-    "text": "Honored to be recognized alongside talented partners with TRM Labs’ Blackout Award for Tycoon 2FA Disruption!     \n\nhttps://t.co/qbdYT5LZjR\n\n@trmlabs https://t.co/n2Q1DtYDiT",
-    "urls": [
-     {
-      "u": "https://t.co/qbdYT5LZjR",
-      "d": "trmlabs.com/resources/blog…"
-     },
-     {
-      "u": "https://t.co/n2Q1DtYDiT",
-      "d": "pic.x.com/n2Q1DtYDiT"
-     }
-    ],
-    "mentions": [
-     "trmlabs"
-    ],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123076261711143225",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-18T15:30:00.000Z",
-    "text": "Oracle Patches 640 Vulnerabilities With November 2026 CSPU https://t.co/rnEYp0ltS4",
-    "urls": [
-     {
-      "u": "https://t.co/rnEYp0ltS4",
-      "d": "securityweek.com/oracle-patches…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123072808997814580",
-    "uid": "1290332482374598658",
-    "cat": "News",
-    "at": "2026-11-18T15:16:17.000Z",
-    "text": "A British man linked to the Scattered Spider hacking group was sentenced to 6 years over a phishing campaign that stole more than $11.6 million in cryptocurrency from individuals in the United States https://t.co/xIQQPotyzv",
-    "urls": [
-     {
-      "u": "https://t.co/xIQQPotyzv",
-      "d": "therecord.media/british-hacker…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123066322992996729",
-    "uid": "1290332482374598658",
-    "cat": "News",
-    "at": "2026-11-18T14:50:30.000Z",
-    "text": "The International Ice Hockey Federation (IIHF) confirmed a cyberattack on its website after hackers replaced its homepage with a pro-Russian message criticizing the country's exclusion from international competitions https://t.co/ptro7TwgNr",
-    "urls": [
-     {
-      "u": "https://t.co/ptro7TwgNr",
-      "d": "therecord.media/russia-hockey-…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123066237089407322",
-    "uid": "1290332482374598658",
-    "cat": "News",
-    "at": "2026-11-18T14:50:10.000Z",
-    "text": "The Norwegian energy giant Equinor is working to contain a cyberattack on its IT systems, which the company said has not disrupted its oil and gas production https://t.co/jqLY35NuDo",
-    "urls": [
-     {
-      "u": "https://t.co/jqLY35NuDo",
-      "d": "therecord.media/norway-equinor…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123052612844921232",
-    "uid": "964227358218649600",
-    "cat": "Official",
-    "at": "2026-11-18T13:56:01.000Z",
-    "text": "When #K12 schools understand their unique security risks, they can make smarter, higher-impact investments. Our tool helps schools evaluate existing security measures and take a risk-informed approach to strengthening safety and resilience. https://t.co/Q9olAK09Qu #BeResilient https://t.co/ioiA5JVwDg",
-    "urls": [
-     {
-      "u": "https://t.co/Q9olAK09Qu",
-      "d": "go.dhs.gov/Z4c"
-     },
-     {
-      "u": "https://t.co/ioiA5JVwDg",
-      "d": "pic.x.com/ioiA5JVwDg"
-     }
-    ],
-    "mentions": [],
-    "tags": [
-     "BeResilient",
-     "K12"
-    ],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123047217799762260",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-18T13:34:35.000Z",
-    "text": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization https://t.co/Zirn6CymMD",
-    "urls": [
-     {
-      "u": "https://t.co/Zirn6CymMD",
-      "d": "securityweek.com/russian-apt-po…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2123045416342360415",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-18T13:27:26.000Z",
-    "text": "Last of Five Defendants Sentenced in US Scattered Spider Hacking Case https://t.co/xuM02GCXcZ",
-    "urls": [
-     {
-      "u": "https://t.co/xuM02GCXcZ",
-      "d": "securityweek.com/last-of-five-d…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
   ]
  },
  "brief": {
-  "key": "v3|2026-11-21|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-111497,CVE-2026-110447,CVE-2026-97229",
+  "key": "v3|2026-11-21|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-111497,CVE-2026-116606,CVE-2026-123158",
   "points": [
    {
     "title": "PHP memory corruption and state flaws",
-    "why": "Two critical PHP memory and state flaws confirmed exploited, with exploitation near-certain within 30 days.",
+    "why": "Two PHP flaws confirmed exploited and in the news; exploitation expected within 30 days.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
-    "title": "GitLab integer overflow flaw",
-    "why": "Confirmed exploited in the wild at critical severity, with likely exploitation within the month.",
-    "ref": "CVE-2026-97229",
-    "find": "CVE-2026-97229",
+    "title": "LiteLLM unprotected alternate channel flaw",
+    "why": "Confirmed exploited, added to CISA's KEV catalog within the last week; high exploitation likelihood.",
+    "ref": "CVE-2026-40217",
+    "find": "CVE-2026-40217",
     "level": "red"
    },
    {
-    "title": "VMware vCenter authentication bypass flaw",
-    "why": "Confirmed exploited, critical, added within the last week and in the news this week.",
-    "ref": "CVE-2026-123890",
-    "find": "CVE-2026-123890",
+    "title": "Google Brotli unchecked return value flaw",
+    "why": "Confirmed exploited in the wild and rated critical; exploitation expected within 30 days.",
+    "ref": "CVE-2026-111497",
+    "find": "CVE-2026-111497",
     "level": "red"
    }
   ],
