@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T20:28:13Z",
+ "generated": "2026-11-22T02:06:38Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1790,
@@ -59,10 +59,6 @@
    "news": 49
   },
   "timeline": [
-   {
-    "date": "2026-10-22",
-    "n": 0
-   },
    {
     "date": "2026-10-23",
     "n": 2
@@ -181,6 +177,10 @@
    },
    {
     "date": "2026-11-21",
+    "n": 0
+   },
+   {
+    "date": "2026-11-22",
     "n": 0
    }
   ],
@@ -306,21 +306,6 @@
   ],
   "deadlines": [
    {
-    "cve": "CVE-2026-90817",
-    "title": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
-    "due": "2026-11-21"
-   },
-   {
-    "cve": "CVE-2024-10441",
-    "title": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
-    "due": "2026-11-21"
-   },
-   {
-    "cve": "CVE-2026-90436",
-    "title": "Apache Axis Unsafe Reflection Vulnerability",
-    "due": "2026-11-21"
-   },
-   {
     "cve": "CVE-2026-129448",
     "title": "Apache Roller Deserialization of Untrusted Data Vulnerability",
     "due": "2026-11-23"
@@ -364,6 +349,11 @@
     "cve": "CVE-2026-115731",
     "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
     "due": "2026-12-01"
+   },
+   {
+    "cve": "CVE-2026-40217",
+    "title": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+    "due": "2026-12-02"
    }
   ],
   "signals": [
@@ -2914,6 +2904,47 @@
    }
   },
   {
+   "id": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+   "type": "news",
+   "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+   "date": "2026-11-21",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "Rackspace warned that attackers breached its Rackspace Spot cloud platform using compromised credentials, deploying unauthorized workloads and reaching Kubernetes secrets in customer clusters.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
    "type": "news",
    "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
@@ -3118,49 +3149,6 @@
     "malware": [],
     "tactic": "Execution",
     "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
-   "type": "news",
-   "title": "Transport for London breach exposes 265,000 Oyster card users' data",
-   "date": "2026-11-19",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/"
-    }
-   ],
-   "signals": [
-    "Data breach"
-   ],
-   "actors": [],
-   "score": 30,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "summary": "Transport for London says about 265,000 Oyster photocard customers may have had their account details exposed in a data breach.",
-    "sector": "Transport",
-    "actors": [],
-    "malware": [],
-    "tactic": "Exfiltration",
-    "countries": [
-     "GB"
-    ]
    }
   },
   {
@@ -4299,12 +4287,12 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1152,
-  "located": 976,
+  "total": 1153,
+  "located": 977,
   "countries": [
    {
     "cc": "US",
-    "n": 449,
+    "n": 448,
     "groups": [
      {
       "name": "n0n",
@@ -4316,17 +4304,17 @@
      },
      {
       "name": "thegentlemen",
-      "n": 31
+      "n": 32
      }
     ],
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 83
+      "n": 85
      },
      {
       "name": "Professional Services",
-      "n": 79
+      "n": 78
      },
      {
       "name": "Manufacturing",
@@ -4336,7 +4324,7 @@
    },
    {
     "cc": "DE",
-    "n": 58,
+    "n": 56,
     "groups": [
      {
       "name": "qilin",
@@ -4354,7 +4342,7 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 19
+      "n": 18
      },
      {
       "name": "Professional Services",
@@ -4400,11 +4388,11 @@
    },
    {
     "cc": "GB",
-    "n": 41,
+    "n": 42,
     "groups": [
      {
       "name": "qilin",
-      "n": 8
+      "n": 9
      },
      {
       "name": "n0n",
@@ -4417,26 +4405,26 @@
     ],
     "sectors": [
      {
+      "name": "Professional Services",
+      "n": 6
+     },
+     {
       "name": "Retail & E-Commerce",
       "n": 6
      },
      {
       "name": "Manufacturing",
       "n": 5
-     },
-     {
-      "name": "Professional Services",
-      "n": 5
      }
     ]
    },
    {
     "cc": "MX",
-    "n": 26,
+    "n": 25,
     "groups": [
      {
       "name": "qilin",
-      "n": 7
+      "n": 6
      },
      {
       "name": "thegentlemen",
@@ -4459,38 +4447,6 @@
      {
       "name": "Manufacturing",
       "n": 3
-     }
-    ]
-   },
-   {
-    "cc": "ES",
-    "n": 20,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "qilin",
-      "n": 3
-     },
-     {
-      "name": "soulgroup",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Technology",
-      "n": 2
-     },
-     {
-      "name": "Financial Services",
-      "n": 2
      }
     ]
    },
@@ -4522,6 +4478,38 @@
      },
      {
       "name": "Other",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "ES",
+    "n": 18,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
+      "name": "soulgroup",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Hospitality",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Manufacturing",
       "n": 2
      }
     ]
@@ -4591,33 +4579,33 @@
     ]
    },
    {
-    "cc": "MY",
-    "n": 15,
+    "cc": "AR",
+    "n": 14,
     "groups": [
      {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "safepay",
+      "n": 2
+     },
+     {
       "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "orova",
-      "n": 2
-     },
-     {
-      "name": "rhysida",
       "n": 2
      }
     ],
     "sectors": [
      {
-      "name": "Manufacturing",
-      "n": 4
+      "name": "Technology",
+      "n": 3
      },
      {
-      "name": "Government & Defense",
+      "name": "Financial Services",
       "n": 2
      },
      {
-      "name": "Healthcare",
+      "name": "Manufacturing",
       "n": 2
      }
     ]
@@ -4655,44 +4643,44 @@
     ]
    },
    {
-    "cc": "AR",
-    "n": 13,
+    "cc": "MY",
+    "n": 14,
     "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
      {
       "name": "qilin",
       "n": 2
      },
      {
-      "name": "soulgroup",
+      "name": "rhysida",
+      "n": 2
+     },
+     {
+      "name": "incransom",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Technology",
-      "n": 3
+      "name": "Manufacturing",
+      "n": 4
      },
      {
-      "name": "Manufacturing",
+      "name": "Government & Defense",
       "n": 2
      },
      {
-      "name": "Other",
+      "name": "Healthcare",
       "n": 2
      }
     ]
    },
    {
     "cc": "AU",
-    "n": 13,
+    "n": 12,
     "groups": [
      {
       "name": "qilin",
-      "n": 6
+      "n": 5
      },
      {
       "name": "thegentlemen",
@@ -4751,34 +4739,34 @@
     ]
    },
    {
-    "cc": "CH",
-    "n": 10,
+    "cc": "SG",
+    "n": 11,
     "groups": [
      {
-      "name": "thegentlemen",
+      "name": "safepay",
       "n": 2
      },
      {
-      "name": "handsome boy hacking club",
-      "n": 1
+      "name": "orova",
+      "n": 2
      },
      {
-      "name": "pixelleaks",
-      "n": 1
+      "name": "auditteam",
+      "n": 2
      }
     ],
     "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
      {
       "name": "Other",
       "n": 2
      },
      {
-      "name": "Retail & E-Commerce",
+      "name": "Energy & Utilities",
       "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
      }
     ]
    },
@@ -4816,14 +4804,46 @@
    },
    {
     "cc": "PH",
-    "n": 9,
+    "n": 10,
     "groups": [
      {
       "name": "qilin",
       "n": 3
      },
      {
+      "name": "safepay",
+      "n": 1
+     },
+     {
       "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "CH",
+    "n": 9,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "handsome boy hacking club",
       "n": 1
      },
      {
@@ -4833,15 +4853,15 @@
     ],
     "sectors": [
      {
-      "name": "Technology",
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
       "n": 2
      },
      {
-      "name": "Transportation",
-      "n": 2
-     },
-     {
-      "name": "Government & Defense",
+      "name": "Other",
       "n": 1
      }
     ]
@@ -4943,33 +4963,33 @@
     ]
    },
    {
-    "cc": "SG",
+    "cc": "TW",
     "n": 8,
     "groups": [
      {
-      "name": "orova",
-      "n": 2
+      "name": "safepay",
+      "n": 3
      },
      {
-      "name": "auditteam",
-      "n": 2
+      "name": "osiris",
+      "n": 1
      },
      {
-      "name": "krybit",
+      "name": "hyflock",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Other",
-      "n": 1
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     },
-     {
       "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 2
+     },
+     {
+      "name": "Other",
       "n": 1
      }
     ]
@@ -5003,38 +5023,6 @@
      {
       "name": "Technology",
       "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "TW",
-    "n": 7,
-    "groups": [
-     {
-      "name": "safepay",
-      "n": 2
-     },
-     {
-      "name": "hyflock",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Technology",
-      "n": 2
-     },
-     {
-      "name": "Agriculture and Food Production",
-      "n": 2
      }
     ]
    },
@@ -5167,38 +5155,6 @@
     ]
    },
    {
-    "cc": "NL",
-    "n": 6,
-    "groups": [
-     {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "rhysida",
-      "n": 1
-     },
-     {
-      "name": "n0n",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "SA",
     "n": 6,
     "groups": [
@@ -5226,6 +5182,38 @@
      },
      {
       "name": "Financial Services",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SE",
+    "n": 6,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "booba project",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Other",
+      "n": 2
+     },
+     {
+      "name": "Energy & Utilities",
       "n": 1
      }
     ]
@@ -5323,19 +5311,19 @@
     ]
    },
    {
-    "cc": "SE",
+    "cc": "EC",
     "n": 5,
     "groups": [
      {
+      "name": "safepay",
+      "n": 2
+     },
+     {
       "name": "thegentlemen",
-      "n": 3
+      "n": 2
      },
      {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "booba project",
+      "name": "lockbit5",
       "n": 1
      }
     ],
@@ -5345,11 +5333,75 @@
       "n": 2
      },
      {
-      "name": "Technology",
+      "name": "Professional Services",
       "n": 1
      },
      {
-      "name": "Energy & Utilities",
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "IL",
+    "n": 5,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 3
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "global secret group",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NL",
+    "n": 5,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "rhysida",
+      "n": 1
+     },
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
+      "name": "Technology",
       "n": 1
      }
     ]
@@ -5387,57 +5439,33 @@
     ]
    },
    {
-    "cc": "EC",
+    "cc": "CL",
     "n": 4,
     "groups": [
      {
-      "name": "thegentlemen",
+      "name": "qilin",
       "n": 2
      },
      {
-      "name": "lockbit5",
+      "name": "safepay",
       "n": 1
      },
      {
-      "name": "safepay",
+      "name": "aoqin",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Other",
-      "n": 2
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
      },
      {
       "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "IL",
-    "n": 4,
-    "groups": [
-     {
-      "name": "safepay",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "global secret group",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Education",
       "n": 1
      }
     ]
@@ -5466,34 +5494,6 @@
      },
      {
       "name": "Manufacturing",
-      "n": 1
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "CL",
-    "n": 3,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "aoqin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
       "n": 1
      },
      {
@@ -6343,12 +6343,12 @@
    },
    {
     "name": "thegentlemen",
-    "n": 116,
+    "n": 120,
     "last": "2026-11-18",
     "sectors": [
      {
       "name": "Technology",
-      "n": 21
+      "n": 23
      },
      {
       "name": "Manufacturing",
@@ -6356,13 +6356,13 @@
      },
      {
       "name": "Healthcare",
-      "n": 14
+      "n": 15
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 31
+      "n": 32
      },
      {
       "cc": "DE",
@@ -6377,7 +6377,7 @@
       "n": 5
      },
      {
-      "cc": "AR",
+      "cc": "SE",
       "n": 4
      }
     ],
@@ -6386,7 +6386,7 @@
    },
    {
     "name": "qilin",
-    "n": 103,
+    "n": 101,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6399,7 +6399,7 @@
      },
      {
       "name": "Other",
-      "n": 10
+      "n": 9
      }
     ],
     "countries": [
@@ -6413,15 +6413,15 @@
      },
      {
       "cc": "GB",
-      "n": 8
+      "n": 9
      },
      {
       "cc": "MX",
-      "n": 7
+      "n": 6
      },
      {
       "cc": "AU",
-      "n": 6
+      "n": 5
      }
     ],
     "about": "Qilin ransomware was first observed in July 2022. It is written in Golang and offers multiple encryption modes that the operator controls. The group uses double extortion, demanding payment for a decryptor and for not releasing stolen data.",
@@ -6429,8 +6429,8 @@
    },
    {
     "name": "incransom",
-    "n": 46,
-    "last": "2026-11-20",
+    "n": 47,
+    "last": "2026-11-21",
     "sectors": [
      {
       "name": "Professional Services",
@@ -6441,14 +6441,14 @@
       "n": 5
      },
      {
-      "name": "Manufacturing",
+      "name": "Healthcare",
       "n": 4
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 27
+      "n": 28
      },
      {
       "cc": "IN",
@@ -6513,20 +6513,20 @@
    },
    {
     "name": "akira",
-    "n": 38,
+    "n": 35,
     "last": "2026-11-20",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 12
+      "n": 11
      },
      {
       "name": "Professional Services",
-      "n": 5
+      "n": 4
      },
      {
       "name": "Financial Services",
-      "n": 4
+      "n": 3
      }
     ],
     "countries": [
@@ -6617,6 +6617,49 @@
       "n": 1
      }
     ]
+   },
+   {
+    "name": "safepay",
+    "n": 28,
+    "last": "2026-11-21",
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 8
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Education",
+      "n": 3
+     }
+    ],
+    "countries": [
+     {
+      "cc": "TW",
+      "n": 3
+     },
+     {
+      "cc": "IL",
+      "n": 3
+     },
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "SG",
+      "n": 2
+     },
+     {
+      "cc": "ES",
+      "n": 2
+     }
+    ],
+    "about": "SafePay emerged in September 2024 and grew rapidly while rejecting the RaaS model, running all operations in-house. It claimed over 300 victims worldwide by mid-2025. An early high-profile attack on UK telematics firm Microlise reportedly stole 1.2 TB of data.",
+    "origin": ""
    },
    {
     "name": "soulgroup",
@@ -6910,49 +6953,6 @@
     "origin": ""
    },
    {
-    "name": "safepay",
-    "n": 19,
-    "last": "2026-11-12",
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Education",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 3
-     },
-     {
-      "cc": "IL",
-      "n": 2
-     },
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "BE",
-      "n": 2
-     },
-     {
-      "cc": "TW",
-      "n": 2
-     }
-    ],
-    "about": "SafePay emerged in September 2024 and grew rapidly while rejecting the RaaS model, running all operations in-house. It claimed over 300 victims worldwide by mid-2025. An early high-profile attack on UK telematics firm Microlise reportedly stole 1.2 TB of data.",
-    "origin": ""
-   },
-   {
     "name": "curious worm",
     "n": 18,
     "last": "2026-11-18",
@@ -7162,49 +7162,6 @@
     ]
    },
    {
-    "name": "aurora",
-    "n": 14,
-    "last": "2026-11-20",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 6
-     },
-     {
-      "name": "Other",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "IT",
-      "n": 3
-     },
-     {
-      "cc": "GB",
-      "n": 3
-     },
-     {
-      "cc": "DE",
-      "n": 2
-     },
-     {
-      "cc": "US",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     }
-    ],
-    "about": "Aurora is ransomware associated with a multi-purpose Go-based malware in use since mid-2022. Multiple criminal teams distribute it, and it is also sold on underground forums as an infostealer and botnet under the same name.",
-    "origin": ""
-   },
-   {
     "name": "metaencryptor",
     "n": 14,
     "last": "2026-11-16",
@@ -7271,6 +7228,45 @@
     "origin": ""
    },
    {
+    "name": "aurora",
+    "n": 13,
+    "last": "2026-11-20",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 6
+     },
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "IT",
+      "n": 3
+     },
+     {
+      "cc": "GB",
+      "n": 3
+     },
+     {
+      "cc": "DE",
+      "n": 2
+     },
+     {
+      "cc": "US",
+      "n": 1
+     }
+    ],
+    "about": "Aurora is ransomware associated with a multi-purpose Go-based malware in use since mid-2022. Multiple criminal teams distribute it, and it is also sold on underground forums as an infostealer and botnet under the same name.",
+    "origin": ""
+   },
+   {
     "name": "play",
     "n": 13,
     "last": "2026-11-16",
@@ -7317,6 +7313,66 @@
   "recent": [
    {
     "d": "2026-11-21",
+    "cc": "PH",
+    "g": "safepay",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "TW",
+    "g": "safepay",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "CL",
+    "g": "safepay",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "SG",
+    "g": "safepay",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "ES",
+    "g": "safepay",
+    "s": "Hospitality"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "AR",
+    "g": "safepay",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "EC",
+    "g": "safepay",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "SG",
+    "g": "safepay",
+    "s": "Energy & Utilities"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "IL",
+    "g": "safepay",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "US",
+    "g": "incransom",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-21",
     "cc": "US",
     "g": "soulgroup",
     "s": "Government & Defense"
@@ -7338,6 +7394,12 @@
     "cc": "US",
     "g": "inception",
     "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-21",
+    "cc": "TW",
+    "g": "osiris",
+    "s": "Education"
    },
    {
     "d": "2026-11-21",
@@ -7488,82 +7550,12 @@
     "cc": "US",
     "g": "spacebears",
     "s": "Transportation"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "GB",
-    "g": "spacebears",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "US",
-    "g": "spacebears",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "US",
-    "g": "spacebears",
-    "s": "Hospitality"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "US",
-    "g": "incransom",
-    "s": "Government & Defense"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "CO",
-    "g": "whitearmor",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "",
-    "g": "whitearmor",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "CH",
-    "g": "handsome boy hacking club",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "DE",
-    "g": "aurora",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "IT",
-    "g": "aurora",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "IT",
-    "g": "akira",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-19",
-    "cc": "US",
-    "g": "rhysida",
-    "s": "Professional Services"
    }
   ],
   "days": [
    {
-    "date": "2026-10-22",
-    "n": 1
-   },
-   {
     "date": "2026-10-23",
-    "n": 47
+    "n": 33
    },
    {
     "date": "2026-10-24",
@@ -7659,7 +7651,7 @@
    },
    {
     "date": "2026-11-16",
-    "n": 81
+    "n": 82
    },
    {
     "date": "2026-11-17",
@@ -7667,7 +7659,7 @@
    },
    {
     "date": "2026-11-18",
-    "n": 67
+    "n": 71
    },
    {
     "date": "2026-11-19",
@@ -7679,7 +7671,11 @@
    },
    {
     "date": "2026-11-21",
-    "n": 5
+    "n": 16
+   },
+   {
+    "date": "2026-11-22",
+    "n": 0
    }
   ]
  },
@@ -7829,47 +7825,47 @@
   "profiles_at": "2026-11-18T07:35:44.387870+00:00",
   "since": {
    "209811713": "2124109522071630114",
-   "50026664": "2124202337967185945",
+   "50026664": "2124276769196740774",
    "1290332482374598658": "2123811194339467276",
-   "41258937": "2124110583368659334",
+   "41258937": "2124305484375027919",
    "4487645412": "2123909022675849487",
    "54316357": "2122993566959976662",
-   "935278274845974528": "2123861502931218467",
+   "935278274845974528": "2124186076407349641",
    "217462908": "2122770379915805067",
-   "1158139840866791424": "2123976187516952869",
+   "1158139840866791424": "2124314247240757629",
    "702994808181170176": "2123098949410345412",
    "1324374317484793856": "2123425337644101666",
    "6821102": "2123597393061151195",
-   "964227358218649600": "2123902476805886050",
+   "964227358218649600": "2124155444658602130",
    "24683268": "2123077080997114070",
-   "1540951016": "2124016109934563809",
+   "1540951016": "2124292216785093082",
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-21T20:28:13.854007+00:00",
-   "bleepincomputer": "2026-11-21T20:28:13.854007+00:00",
-   "therecord_media": "2026-11-21T12:30:51.034135+00:00",
-   "securityweek": "2026-11-21T12:30:51.034135+00:00",
-   "unit42_intel": "2026-11-21T12:30:51.034135+00:00",
-   "esetresearch": "2026-11-21T12:30:51.034135+00:00",
-   "ciscotalos": "2026-11-21T12:30:51.034135+00:00",
-   "googlecloudsec": "2026-11-21T12:30:51.034135+00:00",
-   "msftsecintel": "2026-11-21T12:30:51.034135+00:00",
-   "vxunderground": "2026-11-21T12:30:51.034135+00:00",
-   "projectzerobugs": "2026-11-21T12:30:51.034135+00:00",
-   "thezdi": "2026-11-21T12:30:51.034135+00:00",
-   "watchtowrcyber": "2026-11-21T12:30:51.034135+00:00",
-   "sans_isc": "2026-11-21T12:30:51.034135+00:00",
-   "cisagov": "2026-11-21T12:30:51.034135+00:00",
-   "enisa_eu": "2026-11-21T12:30:51.034135+00:00",
-   "cert_eu": "2026-11-21T12:30:51.034135+00:00",
-   "shadowserver": "2026-11-21T12:30:51.034135+00:00",
-   "gossithedog": "2026-11-21T12:30:51.034135+00:00",
-   "malwaretechblog": "2026-11-21T12:30:51.034135+00:00"
+   "thehackersnews": "2026-11-22T02:06:38.388194+00:00",
+   "bleepincomputer": "2026-11-22T02:06:38.388194+00:00",
+   "therecord_media": "2026-11-22T02:06:38.388194+00:00",
+   "securityweek": "2026-11-22T02:06:38.388194+00:00",
+   "unit42_intel": "2026-11-22T02:06:38.388194+00:00",
+   "esetresearch": "2026-11-22T02:06:38.388194+00:00",
+   "ciscotalos": "2026-11-22T02:06:38.388194+00:00",
+   "googlecloudsec": "2026-11-22T02:06:38.388194+00:00",
+   "msftsecintel": "2026-11-22T02:06:38.388194+00:00",
+   "vxunderground": "2026-11-22T02:06:38.388194+00:00",
+   "projectzerobugs": "2026-11-22T02:06:38.388194+00:00",
+   "thezdi": "2026-11-22T02:06:38.388194+00:00",
+   "watchtowrcyber": "2026-11-22T02:06:38.388194+00:00",
+   "sans_isc": "2026-11-22T02:06:38.388194+00:00",
+   "cisagov": "2026-11-22T02:06:38.388194+00:00",
+   "enisa_eu": "2026-11-22T02:06:38.388194+00:00",
+   "cert_eu": "2026-11-22T02:06:38.388194+00:00",
+   "shadowserver": "2026-11-22T02:06:38.388194+00:00",
+   "gossithedog": "2026-11-22T02:06:38.388194+00:00",
+   "malwaretechblog": "2026-11-22T02:06:38.388194+00:00"
   },
   "budget": {
-   "day": "2026-11-21",
-   "used": 46
+   "day": "2026-11-22",
+   "used": 10
   },
   "accounts": [
    {
@@ -7956,6 +7952,134 @@
   "keep_hours": 72,
   "posts": [
    {
+    "id": "2124314247240757629",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-22T01:29:19.000Z",
+    "text": "Thinking of challenging myself and attempting to read the entire vx-underground malware analysis collection.\n\nIt'd have to read like, 16,000+- papers. If I did 20 a day, everyday, I could do it in two years.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124305484375027919",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-22T00:54:29.000Z",
+    "text": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database - https://t.co/RFmI5fYoAF",
+    "urls": [
+     {
+      "u": "https://t.co/RFmI5fYoAF",
+      "d": "securityweek.com/fbi-investigat…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124292216785093082",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-22T00:01:46.000Z",
+    "text": "The cool thing about this post is just as I suspected, the comments proved my point. Have a quick browse through and look at the amount of cope and seethe from people whose only personality is \"the economy\". I love when just posting the hyposthesis produces the evidence.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124285344267079972",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-21T23:34:28.000Z",
+    "text": "After Hugging Face there was this silly discourse about how you can't do anything against zero-day exploits.\n\nAssume you have one of those enterprise gateway/firewall appliances that have zero-days found in their web management interfaces every other week.\n\nFor arguments sake, I'm going to simply accept that you can't take the management interface offline. You can't configure it to be accessible only from the local network. It has to be accessible to anyone connecting from anywhere.\n\nThe overwhelming majority of threat actors (including state-sponsored ones) tend to be overly reliant on internet scanning. They use services like Shodan/Censys, which scan every IPv4 address, then create indexes listing all the devices they find.\n\nThreat actors then come along, use a search query to export a list of \"<insert appliance type> by <insert vendor>\", then either mass-exploit them, or pick and choose the devices belonging to organizations they're interested in.\n\nOne option: Create a subdomain, ideally something not easily guessable like \"firewall-​a4f8d5.​yourcompany​.com\". \n\nSign up for a proxy/CDN provider like Cloudflare or similar. Configure the provider to forward traffic designated for that domain to the public IP address of your appliance, then enable revere proxy mode.\n\nNow, go into your firewall and set up a rule to block all access to the management interface from IPs not belonging to Cloudflare. Either with an CIDR or ASN allow list.\n\nYour device now doesn't show up in any internet scans at all, including those provided by Shodan or Censys, and the device is not directly accessible via IP address. But it is still accessible to anyone with the domain.\n\nYou've now reduced your blast radius from \"every zero-day (or n-day if you don't patch immediately) is rocking my device\" to \"99.9% of exploitation attempts don't even see it\", all without sacrificing availability.\n\nHighly targeted attacker may go to the extra effort of figuring out the subdomain you use, and try to exploit the devices through the reverse proxy. But the way reverse proxies work breaks a lot of exploits, and Web Application Firewalls add a layer of additional protection.\n\nTechniques like this work for most web-based appliances (which tend to get hit a lot as the result of internet scans). And there are plenty of simple things you can do for other software/devices which massively reduces your attack surface. Just one extra layer between the attacker and the target works wonders.\n\nThe whole \"zero-day exploits are unstoppable\" attitude is extremely defeatists, and also extremely wrong. Ask your friendly neighborhood blue teamer or threat intelligence professional for attack surface reduction advice.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Zero-day"
+    ]
+   },
+   {
+    "id": "2124276769196740774",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-21T23:00:23.000Z",
+    "text": "Rackspace Spot breach let hackers access customer Kubernetes secrets\nhttps://t.co/QliKSG9KZE\n\nhttps://t.co/QliKSG9KZE",
+    "urls": [
+     {
+      "u": "https://t.co/QliKSG9KZE",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/QliKSG9KZE",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2124258900992262364",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-21T21:49:23.000Z",
+    "text": "IMO AI use is largely a trauma response. US propaganda has conditioned people into tying their self-worth to their economic output, and by extension their internal feelings of productivity. They simply cannot enjoy their passions, doing as much as possible as fast as possible is the only thing that quells their existential anxiety.\n\nI see evidence of it everywhere. People who have zero stake in me or my work will get seething mad because I simply enjoy doing a task without AI, or that I said that I do not want to use AI for something. Some dude last month had a major crash out in my replies and accused me of \"holding back the entire industry\" because I'm vocal about my disdain for AI.\n\nIt's become so normal, nobody even takes a step back and thinks about it for a second. Why on earth would someone get sent into an uncontrollable rage as a result of seeing someone else enjoying themselves doing a task at whatever pace they feel like?\n\nIt's also not uncommon to get hit with the classic \"this is why Europeans don't have trillion dollar companies\". I'm sorry...what? Who tf wants that?\n\nPeople have fresh food, clean water, roofs over their heads, 20-30 days of mandatory paid leave per year, maternity leave, healthcare, livable wages, normal working hours, vacations, and so much more. What sane person would throw it all away so that some other dude can have a billions of dollars?\n\nThe \"do as much as possible as fast as possible\" people are genuinely a nuisance to society. They rarely ever enjoy themselves, and they take away other people's enjoyment of life with their incessant need to maximize the output of everything possible.\n\nIt's a trauma response. Existential anxiety caused by the belief that productivity and economy output are the ultimate measures of a person's worth.",
+    "urls": [
+     {
+      "u": "https://t.co/GfK0xsWkle",
+      "d": "x.com/Polymarket/sta…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": true,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Zero-day"
+    ]
+   },
+   {
+    "id": "2124243629741142272",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-21T20:48:42.000Z",
+    "text": "IM ABOUT TO CRASH OUT. STOP NAMING SHIT 2SHELL\n\nLORD GIVE ME THE STRENGTH https://t.co/mXaILGBMvl",
+    "urls": [
+     {
+      "u": "https://t.co/mXaILGBMvl",
+      "d": "x.com/PaulosYibelo/s…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
     "id": "2124202337967185945",
     "uid": "50026664",
     "cat": "News",
@@ -7979,6 +8103,27 @@
     "signals": []
    },
    {
+    "id": "2124186076407349641",
+    "uid": "935278274845974528",
+    "cat": "CTI",
+    "at": "2026-11-21T17:00:00.000Z",
+    "text": "Hear how @MindsprintGlobl is building its next generation of SOC services on Google Cloud, using cloud-native Google SecOps as its foundation while looking ahead to what’s next with Google’s agents. ⬇️ https://t.co/do4gkszCgN",
+    "urls": [
+     {
+      "u": "https://t.co/do4gkszCgN",
+      "d": "pic.x.com/do4gkszCgN"
+     }
+    ],
+    "mentions": [
+     "MindsprintGlobl"
+    ],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
     "id": "2124160467090174399",
     "uid": "50026664",
     "cat": "News",
@@ -7992,6 +8137,29 @@
      {
       "u": "https://t.co/ODlSUwJcIk",
       "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124155444658602130",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-21T14:58:17.000Z",
+    "text": "👀 You won't want to miss this week's highlights. Learn more at https://t.co/HqzgvgUoCo. https://t.co/gsns7Nw5uY",
+    "urls": [
+     {
+      "u": "https://t.co/HqzgvgUoCo",
+      "d": "cisa.gov"
+     },
+     {
+      "u": "https://t.co/gsns7Nw5uY",
+      "d": "pic.x.com/gsns7Nw5uY"
      }
     ],
     "mentions": [],
@@ -8023,6 +8191,27 @@
     "cves": [],
     "kev": [],
     "signals": []
+   },
+   {
+    "id": "2124129451260993692",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-21T13:15:00.000Z",
+    "text": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day https://t.co/P9I6QxBAgI",
+    "urls": [
+     {
+      "u": "https://t.co/P9I6QxBAgI",
+      "d": "securityweek.com/amazon-china-l…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Zero-day"
+    ]
    },
    {
     "id": "2124128754515497312",
@@ -10098,280 +10287,29 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2123235118819258862",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-19T02:01:14.000Z",
-    "text": "NGINX2ROOT HTTP/2 RCEs (CVE-2026-123007, CVE-2026-123633); Microsoft Agent Framework PyPI Compromise; Holiday Hack Challenge (Nov 19 2026)\n https://t.co/VloYnlC8AR https://t.co/x3Nod0LB1L",
-    "urls": [
-     {
-      "u": "https://t.co/VloYnlC8AR",
-      "d": "isc.sans.edu/podcastdetail/…"
-     },
-     {
-      "u": "https://t.co/x3Nod0LB1L",
-      "d": "pic.x.com/x3Nod0LB1L"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-123007",
-     "CVE-2026-123633"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123233866764972422",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-19T01:56:16.000Z",
-    "text": "Treat Your Honeypot Analysis Like Code: Git, Pull Requests and a Human Gate for AI [Guest Diary] https://t.co/nqZFfyPOpi https://t.co/QSm4cAVxJD",
-    "urls": [
-     {
-      "u": "https://t.co/nqZFfyPOpi",
-      "d": "isc.sans.edu/diary/33534"
-     },
-     {
-      "u": "https://t.co/QSm4cAVxJD",
-      "d": "pic.x.com/QSm4cAVxJD"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123212982994001955",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-19T00:33:17.000Z",
-    "text": "It really feels like something affected people's ability to just deal with minor inconveniences. I thought it was social media mass psychosis, but then I went out today and people were freaking out that the power and internet was going to go out at any minute.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123212160025170411",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T00:30:00.000Z",
-    "text": "Microsoft Agent Framework Releases Poisoned With Credential Stealer https://t.co/4qygOisWPm",
-    "urls": [
-     {
-      "u": "https://t.co/4qygOisWPm",
-      "d": "securityweek.com/microsoft-agen…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123193855160020995",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-18T23:17:16.000Z",
-    "text": "I'm being so deadass tho, the only game I actually give a fuck about is a new Elder Scrolls game. I likely won't have time for it, but even the idea of it excites me. I played Morrowind, Oblivion, and Skyrim. I just want one more Elder Scrolls game. Please Todd, don't fuck it up",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123191728152727854",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-18T23:08:49.000Z",
-    "text": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms\nhttps://t.co/VYVXb2aKw5\n\nhttps://t.co/VYVXb2aKw5",
-    "urls": [
-     {
-      "u": "https://t.co/VYVXb2aKw5",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/VYVXb2aKw5",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Ransomware"
-    ]
-   },
-   {
-    "id": "2123189827566989421",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-18T23:01:16.000Z",
-    "text": "Does anyone know when GTA 7 is scheduled for release",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123159570969158086",
-    "uid": "964227358218649600",
-    "cat": "Official",
-    "at": "2026-11-18T21:01:02.000Z",
-    "text": "🏟️ Big events need big resilience. Lessons from venue security and cross sector coordination show how planning pays off. Learn more: https://t.co/naPSkBUSep #ResolveToBeResilient https://t.co/jU0SEvAAac",
-    "urls": [
-     {
-      "u": "https://t.co/naPSkBUSep",
-      "d": "go.dhs.gov/5CU"
-     },
-     {
-      "u": "https://t.co/jU0SEvAAac",
-      "d": "pic.x.com/jU0SEvAAac"
-     }
-    ],
-    "mentions": [],
-    "tags": [
-     "ResolveToBeResilient"
-    ],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123159317767397766",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-18T21:00:02.000Z",
-    "text": "#Java4Shell Vulnerability Puts Many Enterprise Applications at Risk of Takeover https://t.co/9AjKmiIFAX",
-    "urls": [
-     {
-      "u": "https://t.co/9AjKmiIFAX",
-      "d": "securityweek.com/java4shell-vul…"
-     }
-    ],
-    "mentions": [],
-    "tags": [
-     "Java4Shell"
-    ],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123159310075117919",
-    "uid": "935278274845974528",
-    "cat": "CTI",
-    "at": "2026-11-18T21:00:00.000Z",
-    "text": "Ramya Chitrakar leads engineers building autonomous defense, giving her a clear view of how security teams will work in 2027.\n\nAs agents handle moment-to-moment response, defenders can set guardrails up front and focus on strategy and risk.\n\nTake a look ⬇️ https://t.co/ROceshMgeL",
-    "urls": [
-     {
-      "u": "https://t.co/ROceshMgeL",
-      "d": "pic.x.com/ROceshMgeL"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123156742242533508",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-18T20:49:48.000Z",
-    "text": "Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam\nhttps://t.co/SlmKFP1a6h\n\nhttps://t.co/SlmKFP1a6h",
-    "urls": [
-     {
-      "u": "https://t.co/SlmKFP1a6h",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/SlmKFP1a6h",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123153582463615341",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-18T20:37:15.000Z",
-    "text": "Oh, or the nooby poop goop developers trying to flex by saying they have a custom C2 backend..... But leave it exposed and don't implement authentication so you can connect directly to the C2 and hijack their entire botnet and instruct all of the infected machines to uninstall the malware, rending their entire operation dead in the water.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123152484202078260",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-18T20:32:53.000Z",
-    "text": "Have I seen AI generated malware? Yes.\n\nIs it impressive? Ehhhh\n\nYeah, so basically it's an undeniable fact internet nerds are using AI for their goop. Malware developers who have historically been pretty good at malware development are suddenly churning out malware variations at lightning speed (or they're smoking methamphetamine).\n\nNooby poop goop developers are spreading malware which give the facade of sophistication, but it's not.\n\nI can immediately tell when someone is using AI to make malware, who doesn't know what they're doing, because they'll do all sorts of goofy shit which any actually skilled malware developer would never do.\n\nExamples:\n- Leaving notes in stagers\n- Leaving notes in encoded strings \n- Leaving notes in encrypted strings\n- Stupid goop architectural decisions which make no sense and serve no purpose\n- Attempts at obfuscation which ... aren't obfuscation at all\n- Buggy code (uncharacteristically buggy, either they're brain dead or AI slop)\n- Forgetting to insert C2s (literally seeing: \"Insert_Weburl_Here\")\n\nI have yet to encounter some \"god-tier\" malware that leaves me shaking, screaming, crying, throwing up. The enhancements are just:\n- More stagers\n- Cross language interop (Lua to C++ to Python to C++, using several different languages to accomplish tasks)\n- Faster code changes\n- Dramatically improved phishing lures\n\nIn conclusion, it's making the smart goop guys faster, leaner, stinkier. It's making the noobs think they're smart, but they're being goofy",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": true,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
   ]
  },
  "brief": {
-  "key": "v3|2026-11-21|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-111497,CVE-2026-116606,CVE-2026-123158",
+  "key": "v3|2026-11-22|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-111497,CVE-2026-116606,CVE-2026-123158",
   "points": [
    {
-    "title": "PHP memory corruption and state flaws",
-    "why": "Two PHP flaws confirmed exploited and in the news; exploitation expected within 30 days.",
+    "title": "PHP memory corruption and stale-state flaws",
+    "why": "Two critical PHP flaws are confirmed exploited and in the news this week; exploitation within 30 days is near-certain.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
-    "title": "LiteLLM unprotected alternate channel flaw",
-    "why": "Confirmed exploited, added to CISA's KEV catalog within the last week; high exploitation likelihood.",
-    "ref": "CVE-2026-40217",
-    "find": "CVE-2026-40217",
+    "title": "Barracuda ESG authentication bypass flaw",
+    "why": "Email gateway authentication bypass, confirmed exploited and added to KEV within two weeks; exploitation is likely.",
+    "ref": "CVE-2026-116606",
+    "find": "CVE-2026-116606",
     "level": "red"
    },
    {
     "title": "Google Brotli unchecked return value flaw",
-    "why": "Confirmed exploited in the wild and rated critical; exploitation expected within 30 days.",
+    "why": "Confirmed exploited critical flaw; exploitation is highly likely within the next month.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
