@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-22T02:06:38Z",
+ "generated": "2026-11-22T09:42:48Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1790,
  "counts": {
   "red": 21,
   "orange": 26,
-  "green": 38
+  "green": 35
  },
  "sources": [
   {
@@ -56,7 +56,7 @@
    "ransomware": 0,
    "epss_high": 10,
    "epss_known": 36,
-   "news": 49
+   "news": 46
   },
   "timeline": [
    {
@@ -366,12 +366,8 @@
     "n": 1
    },
    {
-    "name": "Ransomware",
-    "n": 1
-   },
-   {
     "name": "Data breach",
-    "n": 5
+    "n": 4
    },
    {
     "name": "Critical flaw",
@@ -559,7 +555,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 25
+    "n": 22
    },
    {
     "name": "BleepingComputer",
@@ -2863,47 +2859,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
-   "type": "news",
-   "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": true,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html"
-    }
-   ],
-   "signals": [
-    "Ransomware"
-   ],
-   "actors": [],
-   "score": 35,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Ransomware in the headline",
-     "points": 15
-    }
-   ],
-   "ai": {
-    "summary": "CISA added four actively exploited flaws in Synology DSM, BerriAI LiteLLM, Apache Axis, and Vanderbilt REDCap to its KEV catalog.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
    "type": "news",
    "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
@@ -3068,47 +3023,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
-   "type": "news",
-   "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html"
-    }
-   ],
-   "signals": [
-    "Data breach"
-   ],
-   "actors": [],
-   "score": 30,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "summary": "N-able disclosed that unknown attackers accessed a server in its Mail Assure and Spam Experts Hosted Cloud, disabling management interfaces and APIs across three regions; the investigation is ongoing.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Impact",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
    "type": "news",
    "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
@@ -3148,6 +3062,76 @@
     "actors": [],
     "malware": [],
     "tactic": "Execution",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+   "type": "news",
+   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+   "date": "2026-11-22",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A patched Ghostscript flaw lets a crafted file escape its sandbox and run commands on servers that process uploads, according to researchers at pwn.ai.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+   "type": "news",
+   "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+   "date": "2026-11-22",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers secretly stole customer prompts from three AI inference providers for months. The providers were unaware until Dragos alerted them. OpenRouter dropped the three providers from its gateway.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Exfiltration",
     "countries": []
    }
   },
@@ -3923,111 +3907,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
-   "type": "news",
-   "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "PHP maintainers announced an upcoming security release addressing critical flaws that affect all supported PHP versions, scheduled for November 19, 2026.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
-   "type": "news",
-   "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A researcher published proof-of-concept exploits showing low-privilege database accounts can run code on servers via memory-corruption bugs in PostgreSQL, MySQL, ClickHouse, and Oracle.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
-   "type": "news",
-   "title": "Ruby Ships Fixes for 7 Flaws, Including Critical Ruby2Shell, Said to Hit Default Rails Apps Pre-Auth",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Ruby released fixes for seven memory-safety flaws in its regex and string case-conversion code, five of which have proof-of-concept exploits showing possible remote code execution.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
    "type": "news",
    "title": "Elecbrakes EB2, VM1, ELBC2000",
@@ -4287,12 +4166,12 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1153,
-  "located": 977,
+  "total": 1148,
+  "located": 973,
   "countries": [
    {
     "cc": "US",
-    "n": 448,
+    "n": 445,
     "groups": [
      {
       "name": "n0n",
@@ -4310,11 +4189,11 @@
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 85
+      "n": 84
      },
      {
       "name": "Professional Services",
-      "n": 78
+      "n": 76
      },
      {
       "name": "Manufacturing",
@@ -4451,38 +4330,6 @@
     ]
    },
    {
-    "cc": "IT",
-    "n": 19,
-    "groups": [
-     {
-      "name": "aurora",
-      "n": 3
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 2
-     }
-    ]
-   },
-   {
     "cc": "ES",
     "n": 18,
     "groups": [
@@ -4510,6 +4357,38 @@
      },
      {
       "name": "Manufacturing",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "IT",
+    "n": 18,
+    "groups": [
+     {
+      "name": "aurora",
+      "n": 3
+     },
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "emperador",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Other",
       "n": 2
      }
     ]
@@ -5123,38 +5002,6 @@
     ]
    },
    {
-    "cc": "IE",
-    "n": 6,
-    "groups": [
-     {
-      "name": "eclipse",
-      "n": 1
-     },
-     {
-      "name": "vortex",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "SA",
     "n": 6,
     "groups": [
@@ -5338,6 +5185,38 @@
      },
      {
       "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "IE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "eclipse",
+      "n": 1
+     },
+     {
+      "name": "vortex",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
       "n": 1
      }
     ]
@@ -6080,6 +5959,22 @@
     ]
    },
    {
+    "cc": "MF",
+    "n": 1,
+    "groups": [
+     {
+      "name": "medusalocker",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "MK",
     "n": 1,
     "groups": [
@@ -6386,7 +6281,7 @@
    },
    {
     "name": "qilin",
-    "n": 101,
+    "n": 100,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6429,12 +6324,12 @@
    },
    {
     "name": "incransom",
-    "n": 47,
+    "n": 45,
     "last": "2026-11-21",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 12
+      "n": 11
      },
      {
       "name": "Technology",
@@ -6448,7 +6343,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 28
+      "n": 27
      },
      {
       "cc": "IN",
@@ -6825,12 +6720,12 @@
    },
    {
     "name": "medusalocker",
-    "n": 21,
-    "last": "2026-11-20",
+    "n": 22,
+    "last": "2026-11-21",
     "sectors": [
      {
       "name": "Technology",
-      "n": 3
+      "n": 4
      },
      {
       "name": "Manufacturing",
@@ -6847,6 +6742,10 @@
       "n": 3
      },
      {
+      "cc": "MF",
+      "n": 1
+     },
+     {
       "cc": "MZ",
       "n": 1
      },
@@ -6856,10 +6755,6 @@
      },
      {
       "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "CA",
       "n": 1
      }
     ],
@@ -7037,47 +6932,6 @@
     "origin": ""
    },
    {
-    "name": "emperador",
-    "n": 17,
-    "last": "2026-11-18",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 3
-     },
-     {
-      "cc": "IT",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     },
-     {
-      "cc": "UY",
-      "n": 1
-     }
-    ]
-   },
-   {
     "name": "braincipher",
     "n": 16,
     "last": "2026-11-17",
@@ -7119,6 +6973,47 @@
     ],
     "about": "Brain Cipher emerged in July 2024 with both Windows and Linux variants. It reportedly uses a leaked LockBit Black build and is suspected of exploiting CVE-2023-28252. Demands start at $150,000 and are paid in Monero. In 2025 it moved its negotiation portal to a new server.",
     "origin": ""
+   },
+   {
+    "name": "emperador",
+    "n": 16,
+    "last": "2026-11-18",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "IT",
+      "n": 2
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "CH",
+      "n": 1
+     },
+     {
+      "cc": "UY",
+      "n": 1
+     }
+    ]
    },
    {
     "name": "aoqin",
@@ -7311,6 +7206,12 @@
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-21",
+    "cc": "MF",
+    "g": "medusalocker",
+    "s": "Technology"
+   },
    {
     "d": "2026-11-21",
     "cc": "PH",
@@ -7544,18 +7445,12 @@
     "cc": "JP",
     "g": "blackout",
     "s": "Other"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "US",
-    "g": "spacebears",
-    "s": "Transportation"
    }
   ],
   "days": [
    {
     "date": "2026-10-23",
-    "n": 33
+    "n": 27
    },
    {
     "date": "2026-10-24",
@@ -7671,7 +7566,7 @@
    },
    {
     "date": "2026-11-21",
-    "n": 16
+    "n": 17
    },
    {
     "date": "2026-11-22",
@@ -7824,48 +7719,48 @@
   },
   "profiles_at": "2026-11-18T07:35:44.387870+00:00",
   "since": {
-   "209811713": "2124109522071630114",
+   "209811713": "2124374819538088284",
    "50026664": "2124276769196740774",
    "1290332482374598658": "2123811194339467276",
-   "41258937": "2124305484375027919",
+   "41258937": "2124344620251242819",
    "4487645412": "2123909022675849487",
    "54316357": "2122993566959976662",
    "935278274845974528": "2124186076407349641",
    "217462908": "2122770379915805067",
-   "1158139840866791424": "2124314247240757629",
+   "1158139840866791424": "2124350161879019632",
    "702994808181170176": "2123098949410345412",
    "1324374317484793856": "2123425337644101666",
    "6821102": "2123597393061151195",
    "964227358218649600": "2124155444658602130",
    "24683268": "2123077080997114070",
-   "1540951016": "2124292216785093082",
+   "1540951016": "2124360073782940012",
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-22T02:06:38.388194+00:00",
-   "bleepincomputer": "2026-11-22T02:06:38.388194+00:00",
-   "therecord_media": "2026-11-22T02:06:38.388194+00:00",
-   "securityweek": "2026-11-22T02:06:38.388194+00:00",
-   "unit42_intel": "2026-11-22T02:06:38.388194+00:00",
-   "esetresearch": "2026-11-22T02:06:38.388194+00:00",
-   "ciscotalos": "2026-11-22T02:06:38.388194+00:00",
-   "googlecloudsec": "2026-11-22T02:06:38.388194+00:00",
-   "msftsecintel": "2026-11-22T02:06:38.388194+00:00",
-   "vxunderground": "2026-11-22T02:06:38.388194+00:00",
-   "projectzerobugs": "2026-11-22T02:06:38.388194+00:00",
-   "thezdi": "2026-11-22T02:06:38.388194+00:00",
-   "watchtowrcyber": "2026-11-22T02:06:38.388194+00:00",
-   "sans_isc": "2026-11-22T02:06:38.388194+00:00",
-   "cisagov": "2026-11-22T02:06:38.388194+00:00",
-   "enisa_eu": "2026-11-22T02:06:38.388194+00:00",
-   "cert_eu": "2026-11-22T02:06:38.388194+00:00",
-   "shadowserver": "2026-11-22T02:06:38.388194+00:00",
-   "gossithedog": "2026-11-22T02:06:38.388194+00:00",
-   "malwaretechblog": "2026-11-22T02:06:38.388194+00:00"
+   "thehackersnews": "2026-11-22T09:42:48.820010+00:00",
+   "bleepincomputer": "2026-11-22T09:42:48.820010+00:00",
+   "therecord_media": "2026-11-22T09:42:48.820010+00:00",
+   "securityweek": "2026-11-22T09:42:48.820010+00:00",
+   "unit42_intel": "2026-11-22T09:42:48.820010+00:00",
+   "esetresearch": "2026-11-22T09:42:48.820010+00:00",
+   "ciscotalos": "2026-11-22T09:42:48.820010+00:00",
+   "googlecloudsec": "2026-11-22T09:42:48.820010+00:00",
+   "msftsecintel": "2026-11-22T09:42:48.820010+00:00",
+   "vxunderground": "2026-11-22T09:42:48.820010+00:00",
+   "projectzerobugs": "2026-11-22T09:42:48.820010+00:00",
+   "thezdi": "2026-11-22T09:42:48.820010+00:00",
+   "watchtowrcyber": "2026-11-22T09:42:48.820010+00:00",
+   "sans_isc": "2026-11-22T09:42:48.820010+00:00",
+   "cisagov": "2026-11-22T09:42:48.820010+00:00",
+   "enisa_eu": "2026-11-22T09:42:48.820010+00:00",
+   "cert_eu": "2026-11-22T09:42:48.820010+00:00",
+   "shadowserver": "2026-11-22T09:42:48.820010+00:00",
+   "gossithedog": "2026-11-22T09:42:48.820010+00:00",
+   "malwaretechblog": "2026-11-22T09:42:48.820010+00:00"
   },
   "budget": {
    "day": "2026-11-22",
-   "used": 10
+   "used": 17
   },
   "accounts": [
    {
@@ -7951,6 +7846,135 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2124374819538088284",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-22T05:30:00.000Z",
+    "text": "👻 That image upload might be code in disguise.\n\nResearchers turned crafted files into server command execution through Ghostscript (CVE-2026-125396) — shown across ~10 popular apps, from Roundcube webmail (no click, just opening the email) to CUPS print queues.\n\n▸ Patched: Ghostscript 10.08.0\n▸ But many Linux distros still lag\n\nHow it works ↓ https://t.co/oUFa7kmmau",
+    "urls": [
+     {
+      "u": "https://t.co/oUFa7kmmau",
+      "d": "thehackernews.com/2026/11/resear…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-125396"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124369776827097236",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-22T05:09:58.000Z",
+    "text": "‼️ OpenRouter just DROPPED 3 AI providers and stripped 125 endpoints of “Zero Data Retention” status.\n\nResearchers uncovered months of AI prompt theft, including requests that were never supposed to be stored.\n\nHere's how they caught it: https://t.co/ICI5tTmxK7",
+    "urls": [
+     {
+      "u": "https://t.co/ICI5tTmxK7",
+      "d": "thehackernews.com/2026/11/openro…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124360073782940012",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-22T04:31:24.000Z",
+    "text": "That said, the password \"killmenow\" erasing the entire phone would have been extremely funny to watch for about 10 seconds.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124359758274863290",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-22T04:30:09.000Z",
+    "text": "More logical option would be to have a dual-boot setup where the phone has two encrypted operating systems. One password decrypts and loads the real phone OS, duress password loads a decoy operating system full of synthetic data. https://t.co/4DuEVcTvrA",
+    "urls": [
+     {
+      "u": "https://t.co/4DuEVcTvrA",
+      "d": "x.com/IntCyberDigest…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124350161879019632",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-22T03:52:01.000Z",
+    "text": "BREAKING: JENSEN HUANG ALLEGEDLY BROKE POOL STICK OVER HIS KNEE AND MADE LEADERSHIP FIGHT TO THE DEATH WHILE NVIDIA TRIBESMEN BANGED ON DRUMS",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124344620251242819",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-22T03:30:00.000Z",
+    "text": "SBC Medical Group Data Breach Impacts Over 2 Million https://t.co/g4hpjESRgh",
+    "urls": [
+     {
+      "u": "https://t.co/g4hpjESRgh",
+      "d": "securityweek.com/sbc-medical-gr…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2124327399571558693",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-22T02:21:34.000Z",
+    "text": "> wake up\n> take a shit\n> get out of bed\n> shit2bed zero day\n\nOh btw Microsoft did a silly again https://t.co/R6HTNkQQGT",
+    "urls": [
+     {
+      "u": "https://t.co/R6HTNkQQGT",
+      "d": "x.com/IntCyberDigest…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Zero-day"
+    ]
+   },
    {
     "id": "2124314247240757629",
     "uid": "1158139840866791424",
@@ -10057,233 +10081,6 @@
     "mentions": [],
     "tags": [],
     "edited": true,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123349362525044792",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-19T09:35:12.000Z",
-    "text": "‼️ BREAKING: N-able confirms hackers breached a cloud server behind Mail Assure and SpamExperts.\n\nManagement portals, APIs, quarantine, and logging remain offline across multiple regions.\n\nNo evidence of customer data theft so far.\n\nRead → https://t.co/TTgva6Jc8N",
-    "urls": [
-     {
-      "u": "https://t.co/TTgva6Jc8N",
-      "d": "thehackernews.com/2026/11/n-able…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2123346441150030089",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-19T09:23:36.000Z",
-    "text": "NVIDIA investigating Gentlemen ransomware breach claims\nhttps://t.co/yDqryID7Q3\n\nhttps://t.co/yDqryID7Q3",
-    "urls": [
-     {
-      "u": "https://t.co/yDqryID7Q3",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/yDqryID7Q3",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Ransomware",
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2123345678793597271",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-19T09:20:34.000Z",
-    "text": "⚠️ CISA ALERT: 4 vulnerabilities are under active attack.\n\nHackers are exploiting flaws in Synology DSM, LiteLLM, Apache Axis, and REDCap to deploy ransomware, mine crypto, and hijack AI infrastructure.\n\n3 flaws carry critical 9.8 CVSS scores.\n\nRead → https://t.co/nIRJSmJjsd",
-    "urls": [
-     {
-      "u": "https://t.co/nIRJSmJjsd",
-      "d": "thehackernews.com/2026/11/cisa-w…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Ransomware"
-    ]
-   },
-   {
-    "id": "2123344107179274742",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T09:14:19.000Z",
-    "text": "#Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories https://t.co/vL5UsYzOcv",
-    "urls": [
-     {
-      "u": "https://t.co/vL5UsYzOcv",
-      "d": "securityweek.com/java4shell-exp…"
-     }
-    ],
-    "mentions": [],
-    "tags": [
-     "Java4Shell"
-    ],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123337568469373104",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-19T08:48:20.000Z",
-    "text": "‼️WARNING: Ruby releases patches for 7 security flaws — 5 already have proof-of-concept exploits demonstrating remote code execution (RCE).\n\n3 are rated CRITICAL. The flaws affect regex processing and string handling.\n\nCheck the details → https://t.co/g1TvgDU4Ek",
-    "urls": [
-     {
-      "u": "https://t.co/g1TvgDU4Ek",
-      "d": "thehackernews.com/2026/11/ruby-r…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123336727729164633",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-19T08:45:00.000Z",
-    "text": "Can crypto technology help build a more secure internet?\n\nNetcoreNetwork is combining Byzantine fault-tolerant consensus with P2P networking to reduce centralized attack surfaces, improve privacy, and strengthen resilience.\n\nHere's how the architecture works → https://t.co/KVaKUVjWn8",
-    "urls": [
-     {
-      "u": "https://t.co/KVaKUVjWn8",
-      "d": "thehackernews.com/expert-insight…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123329505364513258",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-19T08:16:18.000Z",
-    "text": "🚨 Researcher demonstrates RCE exploits against #PostgreSQL, #MySQL, and ClickHouse — plus a pre-auth attack chain targeting Oracle.\n\nThe findings expose how database vulnerabilities can lead to server compromise, even with limited privileges.\n\nDetails → https://t.co/qQncqChf0T",
-    "urls": [
-     {
-      "u": "https://t.co/qQncqChf0T",
-      "d": "thehackernews.com/2026/11/resear…"
-     }
-    ],
-    "mentions": [],
-    "tags": [
-     "MySQL",
-     "PostgreSQL"
-    ],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123322066506072204",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T07:46:44.000Z",
-    "text": "PHP Readies Critical Security Updates to Patch Another RCE Flaw https://t.co/Yj9ZRINlNj",
-    "urls": [
-     {
-      "u": "https://t.co/Yj9ZRINlNj",
-      "d": "securityweek.com/php-readies-cr…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123257459330429342",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T03:30:01.000Z",
-    "text": "CISO Conversations: Patti Degnan – Part of the Job Is Deciding What Not to Do https://t.co/aVYD7EksW0",
-    "urls": [
-     {
-      "u": "https://t.co/aVYD7EksW0",
-      "d": "securityweek.com/ciso-conversat…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123257458764263817",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T03:30:01.000Z",
-    "text": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization https://t.co/Zirn6CymMD",
-    "urls": [
-     {
-      "u": "https://t.co/Zirn6CymMD",
-      "d": "securityweek.com/russian-apt-po…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2123256671585599886",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T03:26:53.000Z",
-    "text": "Palo Alto Networks ($PANW) agreed to acquire AI infrastructure company Applied Compute in an all-stock transaction valued at $4.5 billion  -https://t.co/XjluV1imTJ",
-    "urls": [
-     {
-      "u": "https://t.co/XjluV1imTJ",
-      "d": "securityweek.com/palo-alto-netw…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
     "cves": [],
     "kev": [],
     "signals": []
