@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-22T09:42:48Z",
+ "generated": "2026-11-22T12:02:03Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1790,
  "counts": {
   "red": 21,
-  "orange": 26,
-  "green": 35
+  "orange": 25,
+  "green": 32
  },
  "sources": [
   {
@@ -56,7 +56,7 @@
    "ransomware": 0,
    "epss_high": 10,
    "epss_known": 36,
-   "news": 46
+   "news": 42
   },
   "timeline": [
    {
@@ -234,11 +234,11 @@
     "n": 3
    },
    {
-    "name": "PHP Group",
+    "name": "Google",
     "n": 2
    },
    {
-    "name": "Google",
+    "name": "PHP Group",
     "n": 2
    },
    {
@@ -460,16 +460,6 @@
     ]
    },
    {
-    "name": "PHP2Shell",
-    "n": 1,
-    "links": [
-     {
-      "label": "Everything Is a Web Application, Including Your Firewall",
-      "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
-     }
-    ]
-   },
-   {
     "name": "ROMULUS",
     "n": 1,
     "links": [
@@ -512,16 +502,6 @@
     "kev": true
    },
    {
-    "cve": "CVE-2026-109618",
-    "n": 1,
-    "kev": true
-   },
-   {
-    "cve": "CVE-2026-109619",
-    "n": 1,
-    "kev": true
-   },
-   {
     "cve": "CVE-2026-115560",
     "n": 1,
     "kev": false
@@ -542,12 +522,7 @@
     "kev": false
    },
    {
-    "cve": "CVE-2026-124281",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-125273",
+    "cve": "CVE-2026-126714",
     "n": 1,
     "kev": false
    }
@@ -555,7 +530,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 22
+    "n": 21
    },
    {
     "name": "BleepingComputer",
@@ -567,127 +542,11 @@
    },
    {
     "name": "CISA advisories",
-    "n": 4
+    "n": 1
    }
   ]
  },
  "items": [
-  {
-   "id": "CVE-2026-109618",
-   "type": "vuln",
-   "title": "PHP Memory Corruption Vulnerability",
-   "cve": "CVE-2026-109618",
-   "vendor": "PHP Group",
-   "product": "PHP",
-   "date": "2026-10-26",
-   "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-10-29",
-   "epss": 0.99999,
-   "cvss": {
-    "score": 9.2,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
-    },
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
-    }
-   ],
-   "cwes": [
-    "CWE-416",
-    "CWE-755",
-    "CWE-824",
-    "CWE-1325",
-    "CWE-1419"
-   ],
-   "score": 90,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 100% chance of exploitation in 30 days",
-     "points": 25
-    },
-    {
-     "label": "CVSS 9.2 critical severity",
-     "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-109619",
-   "type": "vuln",
-   "title": "PHP Stale Internal Request-State Vulnerability",
-   "cve": "CVE-2026-109619",
-   "vendor": "PHP Group",
-   "product": "PHP",
-   "date": "2026-10-26",
-   "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-10-29",
-   "epss": 0.99999,
-   "cvss": {
-    "score": 9.2,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
-    },
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
-    }
-   ],
-   "cwes": [
-    "CWE-416",
-    "CWE-755",
-    "CWE-824",
-    "CWE-1325",
-    "CWE-1419"
-   ],
-   "score": 90,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 100% chance of exploitation in 30 days",
-     "points": 25
-    },
-    {
-     "label": "CVSS 9.2 critical severity",
-     "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
-    }
-   ]
-  },
   {
    "id": "CVE-2026-40217",
    "type": "vuln",
@@ -767,6 +626,106 @@
    "cwes": [
     "CWE-252",
     "CWE-787"
+   ],
+   "score": 85,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 100% chance of exploitation in 30 days",
+     "points": 25
+    },
+    {
+     "label": "CVSS 9.2 critical severity",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-109618",
+   "type": "vuln",
+   "title": "PHP Memory Corruption Vulnerability",
+   "cve": "CVE-2026-109618",
+   "vendor": "PHP Group",
+   "product": "PHP",
+   "date": "2026-10-26",
+   "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-10-29",
+   "epss": 0.99999,
+   "cvss": {
+    "score": 9.2,
+    "version": "4.0",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+    }
+   ],
+   "cwes": [
+    "CWE-416",
+    "CWE-755",
+    "CWE-824",
+    "CWE-1325",
+    "CWE-1419"
+   ],
+   "score": 85,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 100% chance of exploitation in 30 days",
+     "points": 25
+    },
+    {
+     "label": "CVSS 9.2 critical severity",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "id": "CVE-2026-109619",
+   "type": "vuln",
+   "title": "PHP Stale Internal Request-State Vulnerability",
+   "cve": "CVE-2026-109619",
+   "vendor": "PHP Group",
+   "product": "PHP",
+   "date": "2026-10-26",
+   "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-10-29",
+   "epss": 0.99999,
+   "cvss": {
+    "score": 9.2,
+    "version": "4.0",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
+    }
+   ],
+   "cwes": [
+    "CWE-416",
+    "CWE-755",
+    "CWE-824",
+    "CWE-1325",
+    "CWE-1419"
    ],
    "score": 85,
    "level": "red",
@@ -2772,52 +2731,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
-   "type": "news",
-   "title": "Everything Is a Web Application, Including Your Firewall",
-   "date": "2026-11-19",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-109618",
-    "CVE-2026-109619"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "PHP2Shell"
-   ],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Mentions exploited CVE-2026-109618",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Attackers exploited two PHP flaws, CVE-2026-109618 and CVE-2026-109619, against internet-exposed PAN-OS management interfaces, letting unauthenticated users run code on Palo Alto firewalls.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [
-     "PHP2Shell"
-    ],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
    "type": "news",
    "title": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
@@ -3907,119 +3820,6 @@
    }
   },
   {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
-   "type": "news",
-   "title": "Elecbrakes EB2, VM1, ELBC2000",
-   "date": "2026-11-19",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-124281",
-    "CVE-2026-125273",
-    "CVE-2026-96805"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Elecbrakes EB2, VM1, and ELBC2000 devices have flaws that could let attackers seize trailer brake control, alter firmware, and disable brake lights and safety features.",
-    "sector": "Transportation",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-03",
-   "type": "news",
-   "title": "libumqtt",
-   "date": "2026-11-19",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-125132"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-03"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A remote integer underflow in libumqtt up to 1.1.1 (CVE-2026-125132) could allow denial of service, memory corruption, or information disclosure in deployed critical infrastructure systems.",
-    "sector": "Industrial",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01",
-   "type": "news",
-   "title": "Autonomy Logic OpenPLC Runtime",
-   "date": "2026-11-19",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-126088"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A race condition in Autonomy Logic OpenPLC Runtime up to 4.2.4 (CVE-2026-126088) lets unauthenticated parties create several admin accounts on industrial control systems.",
-    "sector": "Industrial",
-    "actors": [],
-    "malware": [],
-    "tactic": "Persistence",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
    "type": "news",
    "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
@@ -4166,24 +3966,24 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1148,
-  "located": 973,
+  "total": 1145,
+  "located": 972,
   "countries": [
    {
     "cc": "US",
-    "n": 445,
+    "n": 443,
     "groups": [
      {
       "name": "n0n",
-      "n": 86
+      "n": 85
      },
      {
       "name": "qilin",
-      "n": 33
+      "n": 34
      },
      {
       "name": "thegentlemen",
-      "n": 32
+      "n": 31
      }
     ],
     "sectors": [
@@ -5809,6 +5609,22 @@
     ]
    },
    {
+    "cc": "DO",
+    "n": 1,
+    "groups": [
+     {
+      "name": "hyflock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "ET",
     "n": 1,
     "groups": [
@@ -6197,7 +6013,7 @@
   "groups": [
    {
     "name": "n0n",
-    "n": 141,
+    "n": 140,
     "last": "2026-11-18",
     "sectors": [
      {
@@ -6216,7 +6032,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 86
+      "n": 85
      },
      {
       "cc": "CA",
@@ -6238,12 +6054,12 @@
    },
    {
     "name": "thegentlemen",
-    "n": 120,
+    "n": 119,
     "last": "2026-11-18",
     "sectors": [
      {
       "name": "Technology",
-      "n": 23
+      "n": 22
      },
      {
       "name": "Manufacturing",
@@ -6257,7 +6073,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 32
+      "n": 31
      },
      {
       "cc": "DE",
@@ -6281,8 +6097,8 @@
    },
    {
     "name": "qilin",
-    "n": 100,
-    "last": "2026-11-18",
+    "n": 101,
+    "last": "2026-11-22",
     "sectors": [
      {
       "name": "Manufacturing",
@@ -6300,7 +6116,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 33
+      "n": 34
      },
      {
       "cc": "DE",
@@ -6598,49 +6414,6 @@
     ]
    },
    {
-    "name": "rhysida",
-    "n": 26,
-    "last": "2026-11-20",
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 8
-     },
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Financial Services",
-      "n": 4
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 6
-     },
-     {
-      "cc": "MY",
-      "n": 2
-     },
-     {
-      "cc": "GA",
-      "n": 1
-     },
-     {
-      "cc": "NL",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ],
-    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
-    "origin": ""
-   },
-   {
     "name": "vortex",
     "n": 26,
     "last": "2026-11-19",
@@ -6676,6 +6449,49 @@
       "n": 1
      }
     ]
+   },
+   {
+    "name": "rhysida",
+    "n": 25,
+    "last": "2026-11-20",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 8
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Financial Services",
+      "n": 4
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 6
+     },
+     {
+      "cc": "MY",
+      "n": 2
+     },
+     {
+      "cc": "GA",
+      "n": 1
+     },
+     {
+      "cc": "NL",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     }
+    ],
+    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
+    "origin": ""
    },
    {
     "name": "whitearmor",
@@ -7207,6 +7023,18 @@
   ],
   "recent": [
    {
+    "d": "2026-11-22",
+    "cc": "DO",
+    "g": "hyflock",
+    "s": "Education"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "US",
+    "g": "qilin",
+    "s": "Retail & E-Commerce"
+   },
+   {
     "d": "2026-11-21",
     "cc": "MF",
     "g": "medusalocker",
@@ -7433,24 +7261,12 @@
     "cc": "GA",
     "g": "rhysida",
     "s": "Government & Defense"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "US",
-    "g": "barracuda",
-    "s": "Education"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "JP",
-    "g": "blackout",
-    "s": "Other"
    }
   ],
   "days": [
    {
     "date": "2026-10-23",
-    "n": 27
+    "n": 23
    },
    {
     "date": "2026-10-24",
@@ -7502,7 +7318,7 @@
    },
    {
     "date": "2026-11-05",
-    "n": 22
+    "n": 21
    },
    {
     "date": "2026-11-06",
@@ -7570,7 +7386,7 @@
    },
    {
     "date": "2026-11-22",
-    "n": 0
+    "n": 2
    }
   ]
  },
@@ -7722,7 +7538,7 @@
    "209811713": "2124374819538088284",
    "50026664": "2124276769196740774",
    "1290332482374598658": "2123811194339467276",
-   "41258937": "2124344620251242819",
+   "41258937": "2124472971838546216",
    "4487645412": "2123909022675849487",
    "54316357": "2122993566959976662",
    "935278274845974528": "2124186076407349641",
@@ -7737,30 +7553,30 @@
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-22T09:42:48.820010+00:00",
-   "bleepincomputer": "2026-11-22T09:42:48.820010+00:00",
-   "therecord_media": "2026-11-22T09:42:48.820010+00:00",
-   "securityweek": "2026-11-22T09:42:48.820010+00:00",
-   "unit42_intel": "2026-11-22T09:42:48.820010+00:00",
-   "esetresearch": "2026-11-22T09:42:48.820010+00:00",
-   "ciscotalos": "2026-11-22T09:42:48.820010+00:00",
-   "googlecloudsec": "2026-11-22T09:42:48.820010+00:00",
-   "msftsecintel": "2026-11-22T09:42:48.820010+00:00",
-   "vxunderground": "2026-11-22T09:42:48.820010+00:00",
-   "projectzerobugs": "2026-11-22T09:42:48.820010+00:00",
-   "thezdi": "2026-11-22T09:42:48.820010+00:00",
-   "watchtowrcyber": "2026-11-22T09:42:48.820010+00:00",
-   "sans_isc": "2026-11-22T09:42:48.820010+00:00",
-   "cisagov": "2026-11-22T09:42:48.820010+00:00",
-   "enisa_eu": "2026-11-22T09:42:48.820010+00:00",
-   "cert_eu": "2026-11-22T09:42:48.820010+00:00",
-   "shadowserver": "2026-11-22T09:42:48.820010+00:00",
-   "gossithedog": "2026-11-22T09:42:48.820010+00:00",
-   "malwaretechblog": "2026-11-22T09:42:48.820010+00:00"
+   "thehackersnews": "2026-11-22T12:02:03.778816+00:00",
+   "bleepincomputer": "2026-11-22T12:02:03.778816+00:00",
+   "therecord_media": "2026-11-22T12:02:03.778816+00:00",
+   "securityweek": "2026-11-22T12:02:03.778816+00:00",
+   "unit42_intel": "2026-11-22T12:02:03.778816+00:00",
+   "esetresearch": "2026-11-22T12:02:03.778816+00:00",
+   "ciscotalos": "2026-11-22T12:02:03.778816+00:00",
+   "googlecloudsec": "2026-11-22T12:02:03.778816+00:00",
+   "msftsecintel": "2026-11-22T12:02:03.778816+00:00",
+   "vxunderground": "2026-11-22T12:02:03.778816+00:00",
+   "projectzerobugs": "2026-11-22T12:02:03.778816+00:00",
+   "thezdi": "2026-11-22T12:02:03.778816+00:00",
+   "watchtowrcyber": "2026-11-22T12:02:03.778816+00:00",
+   "sans_isc": "2026-11-22T12:02:03.778816+00:00",
+   "cisagov": "2026-11-22T12:02:03.778816+00:00",
+   "enisa_eu": "2026-11-22T12:02:03.778816+00:00",
+   "cert_eu": "2026-11-22T12:02:03.778816+00:00",
+   "shadowserver": "2026-11-22T12:02:03.778816+00:00",
+   "gossithedog": "2026-11-22T12:02:03.778816+00:00",
+   "malwaretechblog": "2026-11-22T12:02:03.778816+00:00"
   },
   "budget": {
    "day": "2026-11-22",
-   "used": 17
+   "used": 18
   },
   "accounts": [
    {
@@ -7846,6 +7662,25 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2124472971838546216",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-22T12:00:01.000Z",
+    "text": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit https://t.co/YkESBhlNPh",
+    "urls": [
+     {
+      "u": "https://t.co/YkESBhlNPh",
+      "d": "securityweek.com/in-other-news-…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2124374819538088284",
     "uid": "209811713",
@@ -10065,50 +9900,96 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2123383091335250210",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-19T11:49:14.000Z",
-    "text": "This is the take. It’s not 2shell if I have to pray to the heap gods, send 4 terabytes of data, write a love letter to my least favorite billionaire, and then there’s still a 50% chance the process just crashes instead of RCE. Just call it 2mucheffort or something. https://t.co/5Mqmha9CjA",
-    "urls": [
-     {
-      "u": "https://t.co/5Mqmha9CjA",
-      "d": "x.com/s1r1u5_/status…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": true,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
-  ]
+  ],
+  "digest": {
+   "key": "v1|2124128754515497312,2124129451260993692,2124147398028952058,2124155444658602130,2124160467090174399,2124186076407349641,2124202337967185945,2124243629741142272,2124258900992262364,2124276769196740774,2124285344267079972,2124292216785093082,2124305484375027919,2124314247240757629,2124327399571558693,2124344620251242819,2124350161879019632,2124359758274863290,2124360073782940012,2124369776827097236,2124374819538088284,2124472971838546216",
+   "overview": "Active exploitation and data theft dominate: a Microsoft Entra Connect flaw is being used to steal tenant data, China-linked actors exploited a medical software zero-day, and a Ghostscript RCE has lagging patches.",
+   "themes": [
+    {
+     "title": "China-linked AI-agent attacks exploit medical software zero-day",
+     "summary": "SecurityWeek reports, citing Amazon, that China-linked hackers used AI agents to exploit a zero-day in medical software. The post gives no CVE or patch details. Separately, researchers reported that OpenRouter removed three AI providers and 125 endpoints from its Zero Data Retention status after months of prompt theft.",
+     "posts": [
+      "2124129451260993692",
+      "2124369776827097236"
+     ],
+     "cves": [],
+     "level": "red",
+     "sources": 2
+    },
+    {
+     "title": "Ghostscript RCE via crafted files, patches lagging",
+     "summary": "The Hacker News reports researchers turned crafted files into server command execution through Ghostscript, demonstrated across about 10 popular apps, including Roundcube (triggered by opening an email) and CUPS. Ghostscript 10.08.0 fixes the flaw, but the post says many Linux distributions still lag behind on patches.",
+     "posts": [
+      "2124374819538088284"
+     ],
+     "cves": [
+      "CVE-2026-125396"
+     ],
+     "level": "orange",
+     "sources": 1
+    },
+    {
+     "title": "Breaches hit healthcare, cloud, and FBI systems",
+     "summary": "SecurityWeek reports a SBC Medical Group breach affecting over 2 million people. BleepinComputer reports Rackspace Spot breach let hackers access customer Kubernetes secrets. SecurityWeek and BleepinComputer both report an apparent FBI hack of a national criminal justice database, with the FBI investigating.",
+     "posts": [
+      "2124344620251242819",
+      "2124276769196740774",
+      "2124305484375027919",
+      "2124147398028952058"
+     ],
+     "cves": [],
+     "level": "orange",
+     "sources": 2
+    },
+    {
+     "title": "Microsoft Entra Connect Health flaw exploited for tenant data",
+     "summary": "BleepinComputer reports attackers exploited a Microsoft Entra Connect Health flaw to access administrator email addresses, tenant IDs, configuration metadata, and sync status. Microsoft patched it on November 19 and is notifying affected organizations. The number of impacted tenants is unknown.",
+     "posts": [
+      "2124202337967185945"
+     ],
+     "cves": [],
+     "level": "green",
+     "sources": 1
+    },
+    {
+     "title": "BADBOX 3.0 botnet returns at record scale",
+     "summary": "BleepinComputer reports the BADBOX 3.0 botnet has returned with a record 40 billion daily ad requests. The post gives no further technical detail on infection vectors or remediation.",
+     "posts": [
+      "2124160467090174399"
+     ],
+     "cves": [],
+     "level": "green",
+     "sources": 1
+    }
+   ],
+   "based_on": 22,
+   "at": "2026-11-22T12:02:03Z",
+   "model": "claude-haiku-5-5"
+  }
  },
  "brief": {
-  "key": "v3|2026-11-22|CVE-2026-109618,CVE-2026-109619,CVE-2026-40217,CVE-2026-111497,CVE-2026-116606,CVE-2026-123158",
+  "key": "v3|2026-11-22|CVE-2026-40217,CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-116606,CVE-2026-123158",
   "points": [
    {
-    "title": "PHP memory corruption and stale-state flaws",
-    "why": "Two critical PHP flaws are confirmed exploited and in the news this week; exploitation within 30 days is near-certain.",
+    "title": "Google Brotli unchecked return value flaw",
+    "why": "Confirmed exploited in the wild and rated near-certain to be exploited within 30 days.",
+    "ref": "CVE-2026-111497",
+    "find": "CVE-2026-111497",
+    "level": "red"
+   },
+   {
+    "title": "PHP memory corruption vulnerability",
+    "why": "Confirmed exploited in the wild; exploitation within 30 days is near-certain, with critical severity.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
     "title": "Barracuda ESG authentication bypass flaw",
-    "why": "Email gateway authentication bypass, confirmed exploited and added to KEV within two weeks; exploitation is likely.",
+    "why": "Confirmed exploited and added to KEV within 14 days; authentication bypass on an email gateway.",
     "ref": "CVE-2026-116606",
     "find": "CVE-2026-116606",
-    "level": "red"
-   },
-   {
-    "title": "Google Brotli unchecked return value flaw",
-    "why": "Confirmed exploited critical flaw; exploitation is highly likely within the next month.",
-    "ref": "CVE-2026-111497",
-    "find": "CVE-2026-111497",
     "level": "red"
    }
   ],
