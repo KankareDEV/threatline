@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-22T23:33:27Z",
+ "generated": "2026-11-23T07:23:32Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1790,
  "counts": {
-  "red": 20,
-  "orange": 24,
-  "green": 29
+  "red": 19,
+  "orange": 22,
+  "green": 28
  },
  "sources": [
   {
@@ -52,17 +52,13 @@
  ],
  "analytics": {
   "totals": {
-   "kev_window": 36,
+   "kev_window": 34,
    "ransomware": 0,
-   "epss_high": 10,
-   "epss_known": 36,
-   "news": 37
+   "epss_high": 9,
+   "epss_known": 34,
+   "news": 35
   },
   "timeline": [
-   {
-    "date": "2026-10-23",
-    "n": 2
-   },
    {
     "date": "2026-10-24",
     "n": 0
@@ -182,12 +178,16 @@
    {
     "date": "2026-11-22",
     "n": 0
+   },
+   {
+    "date": "2026-11-23",
+    "n": 0
    }
   ],
   "severity": [
    {
     "name": "Critical (9+)",
-    "n": 18
+    "n": 16
    },
    {
     "name": "High (7 to 8.9)",
@@ -213,7 +213,7 @@
    },
    {
     "name": "50 to 89%",
-    "n": 6
+    "n": 5
    },
    {
     "name": "10 to 49%",
@@ -221,7 +221,7 @@
    },
    {
     "name": "Under 10%",
-    "n": 22
+    "n": 21
    },
    {
     "name": "No score yet",
@@ -269,11 +269,6 @@
     "n": 3
    },
    {
-    "id": "CWE-78",
-    "name": "OS command injection",
-    "n": 3
-   },
-   {
     "id": "CWE-755",
     "name": "Improper handling of exceptional conditions",
     "n": 2
@@ -301,6 +296,11 @@
    {
     "id": "CWE-94",
     "name": "Code injection",
+    "n": 2
+   },
+   {
+    "id": "CWE-502",
+    "name": "Unsafe deserialization",
     "n": 2
    }
   ],
@@ -359,7 +359,7 @@
   "signals": [
    {
     "name": "Zero-day",
-    "n": 5
+    "n": 4
    },
    {
     "name": "Data breach",
@@ -416,46 +416,6 @@
     ]
    },
    {
-    "name": "CNCMachineRMS",
-    "n": 1,
-    "links": [
-     {
-      "label": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-      "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-     }
-    ]
-   },
-   {
-    "name": "ClickFix",
-    "n": 1,
-    "links": [
-     {
-      "label": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-      "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-     }
-    ]
-   },
-   {
-    "name": "Legion Loader",
-    "n": 1,
-    "links": [
-     {
-      "label": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-      "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-     }
-    ]
-   },
-   {
-    "name": "ROMULUS",
-    "n": 1,
-    "links": [
-     {
-      "label": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-      "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-     }
-    ]
-   },
-   {
     "name": "UNC5221",
     "n": 1,
     "links": [
@@ -505,12 +465,12 @@
   ],
   "by_source": [
    {
-    "name": "The Hacker News",
-    "n": 16
-   },
-   {
     "name": "BleepingComputer",
     "n": 15
+   },
+   {
+    "name": "The Hacker News",
+    "n": 14
    },
    {
     "name": "The Record",
@@ -959,52 +919,6 @@
     },
     {
      "label": "CVSS 10.0 critical severity",
-     "points": 10
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-110447",
-   "type": "vuln",
-   "title": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-   "cve": "CVE-2026-110447",
-   "vendor": "Collabora",
-   "product": "Collabora Online – Built-in CODE Server",
-   "date": "2026-10-23",
-   "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-10-26",
-   "epss": 0.7615,
-   "cvss": {
-    "score": 9.2,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447"
-    }
-   ],
-   "cwes": [
-    "CWE-78"
-   ],
-   "score": 79,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 76% chance of exploitation in 30 days",
-     "points": 19
-    },
-    {
-     "label": "CVSS 9.2 critical severity",
      "points": 10
     }
    ]
@@ -1651,52 +1565,6 @@
     {
      "label": "Added in the last 14 days",
      "points": 5
-    }
-   ]
-  },
-  {
-   "id": "CVE-2026-114625",
-   "type": "vuln",
-   "title": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-   "cve": "CVE-2026-114625",
-   "vendor": "Arista",
-   "product": "VeloCloud Orchestrator",
-   "date": "2026-10-23",
-   "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-10-26",
-   "epss": 0.07666,
-   "cvss": {
-    "score": 9.4,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625"
-    }
-   ],
-   "cwes": [
-    "CWE-89"
-   ],
-   "score": 62,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 8% chance of exploitation in 30 days",
-     "points": 2
-    },
-    {
-     "label": "CVSS 9.4 critical severity",
-     "points": 10
     }
    ]
   },
@@ -2486,47 +2354,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
-   "type": "news",
-   "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
-   "date": "2026-11-20",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html"
-    }
-   ],
-   "signals": [
-    "Zero-day"
-   ],
-   "actors": [],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Zero-day in the headline",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A researcher disclosed an unpatched Windows zero-day, FastUnlock, letting someone with physical access run programs on a locked PC without signing in, though only with a limited account.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
    "type": "news",
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
@@ -3224,51 +3051,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html",
-   "type": "news",
-   "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-   "date": "2026-11-20",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "CNCMachineRMS",
-    "ClickFix",
-    "Legion Loader",
-    "ROMULUS"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Threat actors used the ROMULUS ClickFix delivery platform to deploy an undocumented remote access trojan similar to CNCMachineRMS, alongside Legion Loader, per Blackpoint.",
-    "sector": "",
-    "actors": [],
-    "malware": [
-     "ROMULUS",
-     "ClickFix",
-     "CNCMachineRMS",
-     "Legion Loader"
-    ],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/",
    "type": "news",
    "title": "Windows 11 KB5132057 update released with 28 changes and fixes",
@@ -3740,8 +3522,8 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1130,
-  "located": 959,
+  "total": 1139,
+  "located": 967,
   "countries": [
    {
     "cc": "US",
@@ -3749,11 +3531,11 @@
     "groups": [
      {
       "name": "n0n",
-      "n": 86
+      "n": 87
      },
      {
       "name": "qilin",
-      "n": 34
+      "n": 33
      },
      {
       "name": "thegentlemen",
@@ -3763,21 +3545,21 @@
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 84
+      "n": 85
      },
      {
       "name": "Professional Services",
-      "n": 77
+      "n": 76
      },
      {
       "name": "Manufacturing",
-      "n": 54
+      "n": 53
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 54,
+    "n": 55,
     "groups": [
      {
       "name": "payload",
@@ -3904,19 +3686,51 @@
     ]
    },
    {
+    "cc": "IN",
+    "n": 19,
+    "groups": [
+     {
+      "name": "incransom",
+      "n": 5
+     },
+     {
+      "name": "pixelleaks",
+      "n": 4
+     },
+     {
+      "name": "lockbit5",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Technology",
+      "n": 3
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "IT",
-    "n": 17,
+    "n": 18,
     "groups": [
      {
       "name": "aurora",
       "n": 3
      },
      {
-      "name": "n0n",
+      "name": "panzer",
       "n": 2
      },
      {
-      "name": "emperador",
+      "name": "n0n",
       "n": 2
      }
     ],
@@ -3926,11 +3740,43 @@
       "n": 5
      },
      {
+      "name": "Other",
+      "n": 3
+     },
+     {
       "name": "Retail & E-Commerce",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "FR",
+    "n": 17,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 4
+     },
+     {
+      "name": "n0n",
       "n": 2
      },
      {
-      "name": "Other",
+      "name": "scarlettgroup",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
       "n": 2
      }
     ]
@@ -3963,70 +3809,6 @@
      },
      {
       "name": "Manufacturing",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "FR",
-    "n": 16,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "everest",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "IN",
-    "n": 16,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 3
-     },
-     {
-      "name": "incransom",
-      "n": 3
-     },
-     {
-      "name": "lockbit5",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Energy & Utilities",
-      "n": 2
-     },
-     {
-      "name": "Healthcare",
       "n": 2
      }
     ]
@@ -4892,38 +4674,6 @@
     ]
    },
    {
-    "cc": "PK",
-    "n": 4,
-    "groups": [
-     {
-      "name": "crypto24",
-      "n": 1
-     },
-     {
-      "name": "aoqin",
-      "n": 1
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 2
-     },
-     {
-      "name": "Manufacturing",
-      "n": 1
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "CL",
     "n": 3,
     "groups": [
@@ -5040,6 +4790,38 @@
     ]
    },
    {
+    "cc": "PK",
+    "n": 3,
+    "groups": [
+     {
+      "name": "crypto24",
+      "n": 1
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     },
+     {
+      "name": "booba project",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "PT",
     "n": 3,
     "groups": [
@@ -5112,6 +4894,26 @@
     ]
    },
    {
+    "cc": "HU",
+    "n": 2,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 1
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "KE",
     "n": 2,
     "groups": [
@@ -5151,6 +4953,30 @@
     "sectors": [
      {
       "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "NZ",
+    "n": 2,
+    "groups": [
+     {
+      "name": "falcon",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 1
+     },
+     {
+      "name": "Retail & E-Commerce",
       "n": 1
      }
     ]
@@ -5449,22 +5275,6 @@
     ]
    },
    {
-    "cc": "HU",
-    "n": 1,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "IR",
     "n": 1,
     "groups": [
@@ -5625,22 +5435,6 @@
     ]
    },
    {
-    "cc": "NZ",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "PA",
     "n": 1,
     "groups": [
@@ -5652,6 +5446,22 @@
     "sectors": [
      {
       "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PS",
+    "n": 1,
+    "groups": [
+     {
+      "name": "pixelleaks",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Agriculture and Food Production",
       "n": 1
      }
     ]
@@ -5751,8 +5561,8 @@
   "groups": [
    {
     "name": "n0n",
-    "n": 140,
-    "last": "2026-11-18",
+    "n": 141,
+    "last": "2026-11-22",
     "sectors": [
      {
       "name": "Retail & E-Commerce",
@@ -5770,7 +5580,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 86
+      "n": 87
      },
      {
       "cc": "CA",
@@ -5847,14 +5657,14 @@
       "n": 14
      },
      {
-      "name": "Retail & E-Commerce",
-      "n": 7
+      "name": "Other",
+      "n": 8
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 34
+      "n": 33
      },
      {
       "cc": "DE",
@@ -5878,7 +5688,7 @@
    },
    {
     "name": "incransom",
-    "n": 46,
+    "n": 48,
     "last": "2026-11-21",
     "sectors": [
      {
@@ -5887,7 +5697,7 @@
      },
      {
       "name": "Technology",
-      "n": 6
+      "n": 8
      },
      {
       "name": "Healthcare",
@@ -5901,7 +5711,7 @@
      },
      {
       "cc": "IN",
-      "n": 3
+      "n": 5
      },
      {
       "cc": "CA",
@@ -5921,8 +5731,8 @@
    },
    {
     "name": "pixelleaks",
-    "n": 39,
-    "last": "2026-11-20",
+    "n": 41,
+    "last": "2026-11-22",
     "sectors": [
      {
       "name": "Technology",
@@ -5943,11 +5753,11 @@
       "n": 7
      },
      {
-      "cc": "MX",
-      "n": 3
+      "cc": "IN",
+      "n": 4
      },
      {
-      "cc": "IN",
+      "cc": "MX",
       "n": 3
      },
      {
@@ -6189,6 +5999,49 @@
     ]
    },
    {
+    "name": "medusalocker",
+    "n": 25,
+    "last": "2026-11-22",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 4
+     },
+     {
+      "cc": "DE",
+      "n": 1
+     },
+     {
+      "cc": "MF",
+      "n": 1
+     },
+     {
+      "cc": "MZ",
+      "n": 1
+     },
+     {
+      "cc": "IN",
+      "n": 1
+     }
+    ],
+    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
+    "origin": ""
+   },
+   {
     "name": "rhysida",
     "n": 25,
     "last": "2026-11-22",
@@ -6271,49 +6124,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "name": "medusalocker",
-    "n": 22,
-    "last": "2026-11-21",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Transportation",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 3
-     },
-     {
-      "cc": "MF",
-      "n": 1
-     },
-     {
-      "cc": "MZ",
-      "n": 1
-     },
-     {
-      "cc": "IN",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ],
-    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
-    "origin": ""
    },
    {
     "name": "everest",
@@ -6759,6 +6569,60 @@
   ],
   "recent": [
    {
+    "d": "2026-11-23",
+    "cc": "NZ",
+    "g": "falcon",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "US",
+    "g": "medusalocker",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "DE",
+    "g": "medusalocker",
+    "s": ""
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "",
+    "g": "medusalocker",
+    "s": ""
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "IT",
+    "g": "panzer",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "PS",
+    "g": "pixelleaks",
+    "s": "Agriculture and Food Production"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "IN",
+    "g": "pixelleaks",
+    "s": "Transportation"
+   },
+   {
     "d": "2026-11-22",
     "cc": "",
     "g": "direwolf",
@@ -6793,6 +6657,18 @@
     "cc": "DO",
     "g": "hyflock",
     "s": "Education"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "FR",
+    "g": "scarlettgroup",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-22",
+    "cc": "HU",
+    "g": "qilin",
+    "s": "Other"
    },
    {
     "d": "2026-11-22",
@@ -6931,82 +6807,12 @@
     "cc": "EG",
     "g": "pixelleaks",
     "s": "Technology"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "US",
-    "g": "medusalocker",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "CZ",
-    "g": "everest",
-    "s": "Government & Defense"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "FR",
-    "g": "everest",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "",
-    "g": "everest",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "NO",
-    "g": "everest",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "",
-    "g": "everest",
-    "s": ""
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "CA",
-    "g": "dark project",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "IN",
-    "g": "everest",
-    "s": "Energy & Utilities"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "",
-    "g": "everest",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "",
-    "g": "everest",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-20",
-    "cc": "",
-    "g": "everest",
-    "s": "Technology"
    }
   ],
   "days": [
    {
-    "date": "2026-10-23",
-    "n": 1
-   },
-   {
     "date": "2026-10-24",
-    "n": 16
+    "n": 14
    },
    {
     "date": "2026-10-25",
@@ -7066,11 +6872,11 @@
    },
    {
     "date": "2026-11-08",
-    "n": 19
+    "n": 20
    },
    {
     "date": "2026-11-09",
-    "n": 97
+    "n": 96
    },
    {
     "date": "2026-11-10",
@@ -7098,7 +6904,7 @@
    },
    {
     "date": "2026-11-16",
-    "n": 82
+    "n": 83
    },
    {
     "date": "2026-11-17",
@@ -7122,7 +6928,11 @@
    },
    {
     "date": "2026-11-22",
-    "n": 7
+    "n": 17
+   },
+   {
+    "date": "2026-11-23",
+    "n": 1
    }
   ]
  },
@@ -7274,45 +7084,45 @@
    "209811713": "2124374819538088284",
    "50026664": "2124575838112784827",
    "1290332482374598658": "2123811194339467276",
-   "41258937": "2124472971838546216",
+   "41258937": "2124734669534949752",
    "4487645412": "2123909022675849487",
    "54316357": "2122993566959976662",
    "935278274845974528": "2124186076407349641",
    "217462908": "2122770379915805067",
-   "1158139840866791424": "2124638560343192053",
+   "1158139840866791424": "2124711674040947128",
    "702994808181170176": "2123098949410345412",
    "1324374317484793856": "2123425337644101666",
-   "6821102": "2124573747260916142",
+   "6821102": "2124684729773682949",
    "964227358218649600": "2124155444658602130",
    "24683268": "2123077080997114070",
-   "1540951016": "2124632027660226610",
+   "1540951016": "2124763123278373364",
    "86973588": "2123105849673465978"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-22T23:33:27.686154+00:00",
-   "bleepincomputer": "2026-11-22T23:33:27.686154+00:00",
-   "therecord_media": "2026-11-22T23:33:27.686154+00:00",
-   "securityweek": "2026-11-22T23:33:27.686154+00:00",
-   "unit42_intel": "2026-11-22T23:33:27.686154+00:00",
-   "esetresearch": "2026-11-22T23:33:27.686154+00:00",
-   "ciscotalos": "2026-11-22T23:33:27.686154+00:00",
-   "googlecloudsec": "2026-11-22T23:33:27.686154+00:00",
-   "msftsecintel": "2026-11-22T23:33:27.686154+00:00",
-   "vxunderground": "2026-11-22T23:33:27.686154+00:00",
-   "projectzerobugs": "2026-11-22T23:33:27.686154+00:00",
-   "thezdi": "2026-11-22T23:33:27.686154+00:00",
-   "watchtowrcyber": "2026-11-22T23:33:27.686154+00:00",
-   "sans_isc": "2026-11-22T23:33:27.686154+00:00",
-   "cisagov": "2026-11-22T23:33:27.686154+00:00",
-   "enisa_eu": "2026-11-22T23:33:27.686154+00:00",
-   "cert_eu": "2026-11-22T23:33:27.686154+00:00",
-   "shadowserver": "2026-11-22T23:33:27.686154+00:00",
-   "gossithedog": "2026-11-22T23:33:27.686154+00:00",
-   "malwaretechblog": "2026-11-22T23:33:27.686154+00:00"
+   "thehackersnews": "2026-11-23T07:23:32.048217+00:00",
+   "bleepincomputer": "2026-11-23T07:23:32.048217+00:00",
+   "therecord_media": "2026-11-23T07:23:32.048217+00:00",
+   "securityweek": "2026-11-23T07:23:32.048217+00:00",
+   "unit42_intel": "2026-11-23T07:23:32.048217+00:00",
+   "esetresearch": "2026-11-23T07:23:32.048217+00:00",
+   "ciscotalos": "2026-11-23T07:23:32.048217+00:00",
+   "googlecloudsec": "2026-11-23T07:23:32.048217+00:00",
+   "msftsecintel": "2026-11-23T07:23:32.048217+00:00",
+   "vxunderground": "2026-11-23T07:23:32.048217+00:00",
+   "projectzerobugs": "2026-11-23T07:23:32.048217+00:00",
+   "thezdi": "2026-11-23T07:23:32.048217+00:00",
+   "watchtowrcyber": "2026-11-23T07:23:32.048217+00:00",
+   "sans_isc": "2026-11-23T07:23:32.048217+00:00",
+   "cisagov": "2026-11-23T07:23:32.048217+00:00",
+   "enisa_eu": "2026-11-23T07:23:32.048217+00:00",
+   "cert_eu": "2026-11-23T07:23:32.048217+00:00",
+   "shadowserver": "2026-11-23T07:23:32.048217+00:00",
+   "gossithedog": "2026-11-23T07:23:32.048217+00:00",
+   "malwaretechblog": "2026-11-23T07:23:32.048217+00:00"
   },
   "budget": {
-   "day": "2026-11-22",
-   "used": 27
+   "day": "2026-11-23",
+   "used": 5
   },
   "accounts": [
    {
@@ -7398,6 +7208,108 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2124763123278373364",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-23T07:12:59.000Z",
+    "text": "Basically, the economy has centralized around a handful of tech CEOs, who can get away with anything because removing them crashes the stock, and the government is reliant on their goods & services. It's fascinating just how similar late stage capitalism is to early feudalism. https://t.co/ODO3H2pcFe",
+    "urls": [
+     {
+      "u": "https://t.co/ODO3H2pcFe",
+      "d": "x.com/KobeissiLetter…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": true,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124734669534949752",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-23T05:19:55.000Z",
+    "text": "President Trump Taps Kirsten Davies as National Cyber Director https://t.co/3CIboVx0l2",
+    "urls": [
+     {
+      "u": "https://t.co/3CIboVx0l2",
+      "d": "securityweek.com/president-trum…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124711674040947128",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-23T03:48:32.000Z",
+    "text": "To be fair, he's not wrong",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124711334294032517",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-23T03:47:11.000Z",
+    "text": "The CEO of Telegram posted WHAT https://t.co/aKF3FpG2p8 https://t.co/Oom6e1XCNM",
+    "urls": [
+     {
+      "u": "https://t.co/aKF3FpG2p8",
+      "d": "pic.x.com/aKF3FpG2p8"
+     },
+     {
+      "u": "https://t.co/Oom6e1XCNM",
+      "d": "x.com/durov/status/2…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2124684729773682949",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-23T02:01:28.000Z",
+    "text": "Syslog Timestamps; GL.iNet GoodCloud Breach; Ghostscript Upload2Shell RCE (CVE-2026-125396) (Nov 23rd 2026)\n https://t.co/rxV60mNi22 https://t.co/vAn0tXfKoI",
+    "urls": [
+     {
+      "u": "https://t.co/rxV60mNi22",
+      "d": "isc.sans.edu/podcastdetail/…"
+     },
+     {
+      "u": "https://t.co/vAn0tXfKoI",
+      "d": "pic.x.com/vAn0tXfKoI"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-125396"
+    ],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
    {
     "id": "2124638560343192053",
     "uid": "1158139840866791424",
@@ -9142,180 +9054,30 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2123663816328102214",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-20T06:24:44.000Z",
-    "text": "November 13th, 2026 - FAA outage\nNovember 17th, 2026 - NSANet outage\nNovember 20th, 2026 - USDA outage\n\nThe United States critical infrastructure: https://t.co/GhKPNPYVFo",
-    "urls": [
-     {
-      "u": "https://t.co/GhKPNPYVFo",
-      "d": "pic.x.com/GhKPNPYVFo"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123621624763089164",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-20T03:37:04.000Z",
-    "text": "I'm sorry, that's not directed at Aikido (unless they named it that, then yes it's aimed at them), but I'm grumpy and we've got exploit inflation now. Everything is an exploit and they all suck",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123621410010759515",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-20T03:36:13.000Z",
-    "text": "Oh, so everything is \"2shell\" now? How about you shell my balls because I'm tired of this fucking exploit slop\n\nLiterally anything is better. You could name the fucking exploit \"Ruby Osama Bin Laden is Cool 2026 exploit\" and it would be more well received than \"2shell\" https://t.co/UOW9NJyWnV",
-    "urls": [
-     {
-      "u": "https://t.co/UOW9NJyWnV",
-      "d": "x.com/AikidoSecurity…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123612303597969780",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-20T03:00:02.000Z",
-    "text": "Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks https://t.co/uJanB2xuQN",
-    "urls": [
-     {
-      "u": "https://t.co/uJanB2xuQN",
-      "d": "securityweek.com/critical-apach…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Exploited in the wild"
-    ]
-   },
-   {
-    "id": "2123605009996845418",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-20T02:31:03.000Z",
-    "text": "> National Cyber Director Sean Cairncross\n> Resigns after series of unfortunate events\n> Trump administration nominates new National Cyber Director\n> Michael LoSapio\n> Chief Information Security Officer of Palantir https://t.co/mdnOmddTIc",
-    "urls": [
-     {
-      "u": "https://t.co/mdnOmddTIc",
-      "d": "pic.x.com/mdnOmddTIc"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123597393061151195",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-20T02:00:47.000Z",
-    "text": "Honeypot Analysis as Code; PHP Patches and Session RCE (CVE-2026-126714); Dragos AI Canary Tokens; vCenter Exploit (CVE-2026-123890) (Nov 20th 2026)\n https://t.co/QNdcKxHSpJ https://t.co/noRRUI1YLo",
-    "urls": [
-     {
-      "u": "https://t.co/QNdcKxHSpJ",
-      "d": "isc.sans.edu/podcastdetail/…"
-     },
-     {
-      "u": "https://t.co/noRRUI1YLo",
-      "d": "pic.x.com/noRRUI1YLo"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-123890",
-     "CVE-2026-126714"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2123573713954050434",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-20T00:26:42.000Z",
-    "text": "VMware patches vCenter zero-day exploited in attacks since September\nhttps://t.co/FOmZgC3cot\n\nhttps://t.co/FOmZgC3cot",
-    "urls": [
-     {
-      "u": "https://t.co/FOmZgC3cot",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/FOmZgC3cot",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Zero-day",
-     "Exploited in the wild"
-    ]
-   },
-   {
-    "id": "2123563220115812689",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-19T23:45:00.000Z",
-    "text": "Splunk Patches Nearly 140 Flaws Across Three Core Products https://t.co/T2auoxMmWd",
-    "urls": [
-     {
-      "u": "https://t.co/T2auoxMmWd",
-      "d": "securityweek.com/splunk-patches…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
   ],
   "digest": {
-   "key": "v1|2124285344267079972,2124292216785093082,2124305484375027919,2124314247240757629,2124327399571558693,2124344620251242819,2124350161879019632,2124359758274863290,2124360073782940012,2124369776827097236,2124374819538088284,2124472971838546216,2124491147707855287,2124522859649286363,2124529175423865107,2124573747260916142,2124575838112784827,2124609260005015930,2124631062785769745,2124632027660226610,2124638560343192053",
-   "overview": "Today's most urgent items are a Ghostscript code-execution flaw with lagging patches, active GL.iNet router compromises, and two large data breaches, alongside a suspected FBI database hack.",
+   "key": "v1|2124472971838546216,2124491147707855287,2124522859649286363,2124529175423865107,2124573747260916142,2124575838112784827,2124609260005015930,2124631062785769745,2124632027660226610,2124638560343192053,2124684729773682949,2124711334294032517,2124711674040947128,2124734669534949752,2124763123278373364",
+   "overview": "Most posts are opinion or marketing. The defender-relevant items are an actively exploited GL.iNet GoodCloud compromise, a Ghostscript RCE, a payment-card data breach, and energy-sector attacks with a new exploit.",
    "themes": [
     {
-     "title": "Ghostscript flaw enables server command execution",
-     "summary": "Researchers show crafted files can trigger server command execution through Ghostscript (CVE-2026-125396) in about 10 popular apps, including Roundcube webmail, where merely opening an email may be enough, and CUPS print queues. Ghostscript 10.08.0 fixes it, but many Linux distributions still lag in patching.",
+     "title": "GL.iNet GoodCloud exploited to backdoor routers and KVMs",
+     "summary": "BleepinComputer reports hackers exploited a GoodCloud platform flaw to infect routers and KVM devices with custom malware, including root reverse shells, persistent backdoors, and disguised processes. Some infections may predate the November attacks. GL.iNet says it blocked the attack path and is releasing security firmware. SANS ISC also lists it as a breach.",
      "posts": [
-      "2124374819538088284"
+      "2124575838112784827",
+      "2124684729773682949"
+     ],
+     "cves": [
+      "CVE-2026-125396"
+     ],
+     "level": "orange",
+     "sources": 2
+    },
+    {
+     "title": "Ghostscript Upload2Shell RCE flagged by SANS",
+     "summary": "SANS ISC flags a remote code execution issue in Ghostscript, called Upload2Shell, tracked as CVE-2026-125396. The post is a roundup and gives little technical detail beyond the title and that it is an RCE. Only one source covers it, so check the vendor advisory and patch status before acting.",
+     "posts": [
+      "2124684729773682949"
      ],
      "cves": [
       "CVE-2026-125396"
@@ -9324,73 +9086,51 @@
      "sources": 1
     },
     {
-     "title": "Two data breaches expose cards and patient data",
-     "summary": "Cleverbridge warns that hackers stole credit card numbers and CVV codes in a data breach. Separately, SecurityWeek reports an SBC Medical Group breach affecting over 2 million people. Each breach is covered by a single outlet, so details beyond the headlines are limited.",
+     "title": "Cleverbridge breach exposes card numbers and CVVs",
+     "summary": "BleepinComputer reports Cleverbridge warned that hackers stole credit card numbers and CVV codes in a data breach. This is a single news source, and the post gives no further details on scope or timing. Organizations that use Cleverbridge for payments should review their exposure.",
      "posts": [
-      "2124529175423865107",
-      "2124344620251242819"
+      "2124529175423865107"
      ],
      "cves": [],
      "level": "orange",
-     "sources": 2
-    },
-    {
-     "title": "GL.iNet GoodCloud exploited to infect devices",
-     "summary": "Hackers exploited a vulnerability in GL.iNet's GoodCloud platform to infect routers and KVM devices with custom malware, including root-level reverse shells and persistent backdoors. Some infections may predate the November attacks. GL.iNet has blocked the attack path and is releasing security firmware updates. Only one source covers this, and it names no CVE.",
-     "posts": [
-      "2124575838112784827"
-     ],
-     "cves": [],
-     "level": "green",
      "sources": 1
     },
     {
-     "title": "Suspected FBI database hack and energy-sector attacks",
-     "summary": "SecurityWeek reports the FBI is investigating an apparent hack of its key National Criminal Justice Database. The same outlet's roundup also mentions cyberattacks on a Norwegian energy firm and a supercomputer hack, but the roundup gives no further detail on either.",
+     "title": "Norwegian energy attacks and Nightmare Eclipse exploit",
+     "summary": "SecurityWeek's roundup mentions cyberattacks on a Norwegian energy firm and a new exploit called Nightmare Eclipse. The post is a headline list with no technical detail, so the affected products, CVEs, and scope cannot be confirmed from it. Treat it as a lead to verify in primary reporting.",
      "posts": [
-      "2124305484375027919",
       "2124472971838546216"
-     ],
-     "cves": [],
-     "level": "green",
-     "sources": 1
-    },
-    {
-     "title": "OpenRouter exposes AI prompts and drops providers",
-     "summary": "TheHackersNews reports that OpenRouter removed 3 AI providers and stripped 125 endpoints of their Zero Data Retention status after researchers found months of AI prompt theft, including requests that were supposed to be unstored. The post does not detail the mechanism or the affected users.",
-     "posts": [
-      "2124369776827097236"
      ],
      "cves": [],
      "level": "green",
      "sources": 1
     }
    ],
-   "based_on": 21,
-   "at": "2026-11-22T23:33:27Z",
+   "based_on": 15,
+   "at": "2026-11-23T07:23:32Z",
    "model": "claude-haiku-5-5"
   }
  },
  "brief": {
-  "key": "v3|2026-11-22|CVE-2026-40217,CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-116606,CVE-2026-123158",
+  "key": "v3|2026-11-23|CVE-2026-40217,CVE-2026-111497,CVE-2026-109618,CVE-2026-109619,CVE-2026-116606,CVE-2026-123158",
   "points": [
    {
     "title": "Google Brotli unchecked return value flaw",
-    "why": "Confirmed exploited in the wild and rated near-certain to be exploited within 30 days.",
+    "why": "Confirmed exploited in the wild; near-certain exploitation within 30 days; critical severity.",
     "ref": "CVE-2026-111497",
     "find": "CVE-2026-111497",
     "level": "red"
    },
    {
-    "title": "PHP memory corruption vulnerability",
-    "why": "Confirmed exploited in the wild; exploitation within 30 days is near-certain, with critical severity.",
+    "title": "PHP memory corruption and stale-state flaws",
+    "why": "Two critical PHP flaws, both confirmed exploited and near-certain to be exploited soon.",
     "ref": "CVE-2026-109618",
     "find": "CVE-2026-109618",
     "level": "red"
    },
    {
-    "title": "Barracuda ESG authentication bypass flaw",
-    "why": "Confirmed exploited and added to KEV within 14 days; authentication bypass on an email gateway.",
+    "title": "Barracuda ESG email gateway authentication bypass",
+    "why": "Confirmed exploited and added to KEV in the last 14 days; critical authentication bypass with likely exploitation soon.",
     "ref": "CVE-2026-116606",
     "find": "CVE-2026-116606",
     "level": "red"
