@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-25T02:18:40Z",
+ "generated": "2026-11-25T14:11:00Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1795,
  "counts": {
-  "red": 21,
+  "red": 22,
   "orange": 25,
-  "green": 37
+  "green": 43
  },
  "sources": [
   {
@@ -23,7 +23,7 @@
   },
   {
    "name": "CVE Program (CVSS)",
-   "ok": true
+   "ok": false
   },
   {
    "name": "BleepingComputer",
@@ -56,7 +56,7 @@
    "ransomware": 1,
    "epss_high": 9,
    "epss_known": 38,
-   "news": 44
+   "news": 51
   },
   "timeline": [
    {
@@ -347,8 +347,20 @@
     "n": 3
    },
    {
+    "name": "Exploited in the wild",
+    "n": 1
+   },
+   {
+    "name": "Ransomware",
+    "n": 1
+   },
+   {
     "name": "Data breach",
-    "n": 8
+    "n": 7
+   },
+   {
+    "name": "Critical flaw",
+    "n": 1
    }
   ],
   "actors": [
@@ -377,6 +389,26 @@
      {
       "label": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
       "url": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/"
+     }
+    ]
+   },
+   {
+    "name": "Com-affiliated threat actors",
+    "n": 1,
+    "links": [
+     {
+      "label": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+      "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html"
+     }
+    ]
+   },
+   {
+    "name": "GreyNoise Threat 13 (GT13)",
+    "n": 1,
+    "links": [
+     {
+      "label": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+      "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
      }
     ]
    },
@@ -458,13 +490,13 @@
     "kev": true
    },
    {
-    "cve": "CVE-2026-131914",
+    "cve": "CVE-2026-132165",
     "n": 2,
     "kev": true
    },
    {
-    "cve": "CVE-2026-132165",
-    "n": 1,
+    "cve": "CVE-2026-131914",
+    "n": 2,
     "kev": true
    },
    {
@@ -488,6 +520,16 @@
     "kev": true
    },
    {
+    "cve": "CVE-2026-120705",
+    "n": 1,
+    "kev": false
+   },
+   {
+    "cve": "CVE-2026-129243",
+    "n": 1,
+    "kev": false
+   },
+   {
     "cve": "CVE-2026-129713",
     "n": 1,
     "kev": false
@@ -501,22 +543,12 @@
     "cve": "CVE-2026-127280",
     "n": 1,
     "kev": false
-   },
-   {
-    "cve": "CVE-2026-87268",
-    "n": 1,
-    "kev": false
-   },
-   {
-    "cve": "CVE-2026-134814",
-    "n": 1,
-    "kev": false
    }
   ],
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 20
+    "n": 27
    },
    {
     "name": "BleepingComputer",
@@ -1496,6 +1528,60 @@
    ]
   },
   {
+   "id": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+   "type": "news",
+   "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-132165"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html"
+    }
+   ],
+   "signals": [
+    "Exploited in the wild",
+    "Critical flaw"
+   ],
+   "actors": [],
+   "score": 70,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Exploited in the wild in the headline",
+     "points": 20
+    },
+    {
+     "label": "Critical flaw in the headline",
+     "points": 10
+    },
+    {
+     "label": "Mentions exploited CVE-2026-132165",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "CISA added a critical remote code execution flaw in Drupal core, CVE-2026-132165 (Fail2Install, CVSS 9.8), to its Known Exploited Vulnerabilities catalog. Federal agencies must patch by November 27, 2026.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
    "id": "CVE-2026-132224",
    "type": "vuln",
    "title": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
@@ -1626,6 +1712,10 @@
     {
      "label": "CISA advisories",
      "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+    },
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html"
     }
    ],
    "cwes": [
@@ -2729,6 +2819,92 @@
    }
   },
   {
+   "id": "https://therecord.media/guadeloupe-ransomware-hospital-cyber",
+   "type": "news",
+   "title": "Suspected ransomware attack disrupts cancer treatments, surgeries at Guadeloupe hospital",
+   "date": "2026-11-25",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": true,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/guadeloupe-ransomware-hospital-cyber"
+    }
+   ],
+   "signals": [
+    "Ransomware"
+   ],
+   "actors": [],
+   "score": 35,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Ransomware in the headline",
+     "points": 15
+    }
+   ],
+   "ai": {
+    "summary": "A suspected ransomware attack hit the University Hospital of Guadeloupe, disrupting its computer systems. Surgeries were postponed, some cancer treatments suspended, and staff moved to paper records. France's cybersecurity agency is investigating.",
+    "sector": "Healthcare",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "FR"
+    ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+   "type": "news",
+   "title": "Hackers reportedly breached CIA intelligence analysis system",
+   "date": "2026-11-25",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "Unknown attackers reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency. Details beyond the breach report are not included in the text.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
    "type": "news",
    "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
@@ -2816,47 +2992,6 @@
     "countries": [
      "JP"
     ]
-   }
-  },
-  {
-   "id": "https://therecord.media/carnegie-endowment-data-breach",
-   "type": "news",
-   "title": "Carnegie Endowment for International Peace says third-party breach leaked donation info",
-   "date": "2026-11-24",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/carnegie-endowment-data-breach"
-    }
-   ],
-   "signals": [
-    "Data breach"
-   ],
-   "actors": [],
-   "score": 30,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "summary": "Some donors to the Carnegie Endowment for International Peace had their information exposed after a cyberattack on third-party vendor Soapbox Engage.",
-    "sector": "Nonprofit",
-    "actors": [],
-    "malware": [],
-    "tactic": "Exfiltration",
-    "countries": []
    }
   },
   {
@@ -2983,10 +3118,127 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+   "id": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
    "type": "news",
-   "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-   "date": "2026-11-23",
+   "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "WordPress removed six plugins from developer WP Connect after they were backdoored, enabling arbitrary code execution on sites. A suspected developer account compromise caused it, and the releases were blocked before going live.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+   "type": "news",
+   "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "Com-affiliated threat actors"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Unit 42 reports Com-affiliated actors running vishing waves since August 2026 to hijack cloud accounts, steal data, and attempt extortion. Financial, healthcare, and legal firms in the US, UK, and Australia were targeted.",
+    "sector": "Financial services",
+    "actors": [
+     "Com-affiliated threat actors"
+    ],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": [
+     "AU",
+     "GB",
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+   "type": "news",
+   "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "GreyNoise Threat 13 (GT13)"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An unknown actor used AI-driven offensive tooling to compromise Check Point Security Management servers, affecting 22 organizations worldwide. Targets reportedly included financial services, energy, and government, tracked by GreyNoise as GT13.",
+    "sector": "Multiple sectors",
+    "actors": [
+     "GreyNoise Threat 13 (GT13)"
+    ],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
+   "type": "news",
+   "title": "Microsoft confirms authentication issues after November updates",
+   "date": "2026-11-25",
    "sources": [
     "BleepingComputer"
    ],
@@ -2995,34 +3247,315 @@
    "links": [
     {
      "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/"
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/"
     }
    ],
-   "signals": [
-    "Data breach"
-   ],
+   "signals": [],
    "actors": [],
-   "score": 30,
+   "score": 20,
    "level": "green",
    "reasons": [
     {
      "label": "Reported by a tracked source",
      "points": 20
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
     }
    ],
    "ai": {
-    "summary": "Attackers breached the internal network of South Korea's state power utility KEPCO and accessed two systems holding customer, employee, and contractor data. About 1.5 million people are affected.",
-    "sector": "Energy",
+    "summary": "Microsoft confirmed some customers may face authentication problems after installing November security updates, which fixed a high-severity remote code execution vulnerability.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+   "type": "news",
+   "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An attacker ran operating system commands on six production servers of Hex.pm, the Elixir and Erlang package registry, by exploiting a CVSS 10.0 flaw present since 2016. Servers were patched quickly after the first request.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
+   "type": "news",
+   "title": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
+   "date": "2026-11-25",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A critical Drupal remote code execution vulnerability is being actively exploited to hijack unpatched websites. Exploitation has occurred since at least Thursday, according to the Drupal security team.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/treasury-fincen-takes-systems-offline-after-cyber-incident",
+   "type": "news",
+   "title": "Treasury's FinCEN takes systems offline after cybersecurity incident",
+   "date": "2026-11-25",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/treasury-fincen-takes-systems-offline-after-cyber-incident"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The US Treasury took some FinCEN systems offline after a cybersecurity incident gave unauthorized access to a limited subset of its systems.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html",
+   "type": "news",
+   "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A federal judge granted a former OpenAI employee release on a $1 million bond. He is accused of hiding a covert recording device at the company's San Francisco offices.",
+    "sector": "Technology",
     "actors": [],
     "malware": [],
     "tactic": "Collection",
     "countries": [
-     "KR"
+     "US"
     ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-blank-dialog-that-made-microsoft-365-office-apps-unusable/",
+   "type": "news",
+   "title": "Microsoft fixes Microsoft 365 bug blocking access to Office apps",
+   "date": "2026-11-25",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-blank-dialog-that-made-microsoft-365-office-apps-unusable/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Microsoft resolved a known issue that had blocked some Microsoft 365 customers from accessing Office applications. The fix was released earlier in the week.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
+   "type": "news",
+   "title": "Credential Remediation Is Slow When You Don’t Know What Will Break",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "GitGuardian's 2026 report finds most valid secrets from 2022 still work, as teams hesitate to revoke them. It advises prioritizing credentials by access scope and public exposure, not validity alone.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+   "type": "news",
+   "title": "U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "FinCEN, a bureau of the U.S. Treasury that collects suspicious activity reports, suffered a cyber intrusion giving unauthorized access to a limited set of systems. Some systems were taken offline as a precaution.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": [
+     "US"
+    ]
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+   "type": "news",
+   "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
+   "date": "2026-11-25",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [
+    "CVE-2026-120705",
+    "CVE-2026-129243"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Threat actors are actively exploiting two newly patched GeoServer flaws, CVE-2026-120705 and CVE-2026-129243, which can enable file reads and unauthenticated remote code execution chains, according to watchTowr.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
    }
   },
   {
@@ -3391,43 +3924,6 @@
     ],
     "tactic": "",
     "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/cisa-nable-cybersecurity-bug",
-   "type": "news",
-   "title": "CISA warns of exploited N-able bug as company restores email platform",
-   "date": "2026-11-24",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/cisa-nable-cybersecurity-bug"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA ordered US government departments to patch an exploited N-able flaw in an email security platform by Thanksgiving, while the vendor restores the affected platform.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": [
-     "US"
-    ]
    }
   },
   {
@@ -3949,263 +4445,52 @@
     "tactic": "Defense Evasion",
     "countries": []
    }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-   "type": "news",
-   "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-   "date": "2026-11-23",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Spain's top men's football league LaLiga disclosed a breach exposing personal data of users of its services and those of some affiliated clubs.",
-    "sector": "Sports",
-    "actors": [],
-    "malware": [],
-    "tactic": "Exfiltration",
-    "countries": [
-     "ES"
-    ]
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
-   "type": "news",
-   "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-   "date": "2026-11-23",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Microsoft warns that a flaw in Azure API Management Classic tiers was exploited to steal stored API credentials, with Norwegian authorities linking it to attacks on energy companies.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Credential Access",
-    "countries": [
-     "NO"
-    ]
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
-   "type": "news",
-   "title": "OpenRouter drops AI providers over leaked prompts and secrets",
-   "date": "2026-11-23",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "OpenRouter removed three AI providers from its platform after they were found to have breached their data-handling policies and exposed sensitive information.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
-   "type": "news",
-   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
-   "date": "2026-11-22",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A patched Ghostscript flaw lets a crafted file escape its sandbox and run commands on servers that process uploads, according to researchers at pwn.ai.",
-    "sector": "",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-   "type": "news",
-   "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
-   "date": "2026-11-22",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Attackers secretly stole customer prompts from three AI inference providers for months. The providers were unaware until Dragos alerted them. OpenRouter dropped the three providers from its gateway.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Exfiltration",
-    "countries": []
-   }
   }
  ],
  "geo": {
   "window_days": 30,
-  "total": 1197,
-  "located": 1013,
+  "total": 1189,
+  "located": 1002,
   "countries": [
    {
     "cc": "US",
-    "n": 466,
+    "n": 458,
     "groups": [
      {
       "name": "n0n",
-      "n": 101
+      "n": 104
      },
      {
       "name": "thegentlemen",
-      "n": 35
+      "n": 32
      },
      {
-      "name": "qilin",
-      "n": 32
+      "name": "incransom",
+      "n": 30
      }
     ],
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 86
+      "n": 84
      },
      {
       "name": "Professional Services",
-      "n": 75
+      "n": 73
      },
      {
       "name": "Manufacturing",
-      "n": 54
-     }
-    ]
-   },
-   {
-    "cc": "DE",
-    "n": 57,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 11
-     },
-     {
-      "name": "qilin",
-      "n": 9
-     },
-     {
-      "name": "payload",
-      "n": 7
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 19
-     },
-     {
-      "name": "Professional Services",
-      "n": 7
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 5
+      "n": 52
      }
     ]
    },
    {
     "cc": "CA",
-    "n": 55,
+    "n": 56,
     "groups": [
      {
       "name": "n0n",
-      "n": 24
+      "n": 25
      },
      {
       "name": "thegentlemen",
@@ -4232,19 +4517,51 @@
     ]
    },
    {
+    "cc": "DE",
+    "n": 55,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 11
+     },
+     {
+      "name": "qilin",
+      "n": 7
+     },
+     {
+      "name": "payload",
+      "n": 7
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 18
+     },
+     {
+      "name": "Professional Services",
+      "n": 7
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 5
+     }
+    ]
+   },
+   {
     "cc": "GB",
-    "n": 44,
+    "n": 42,
     "groups": [
      {
       "name": "n0n",
       "n": 10
      },
      {
-      "name": "qilin",
-      "n": 8
+      "name": "thegentlemen",
+      "n": 6
      },
      {
-      "name": "thegentlemen",
+      "name": "qilin",
       "n": 6
      }
     ],
@@ -4259,7 +4576,7 @@
      },
      {
       "name": "Manufacturing",
-      "n": 5
+      "n": 4
      }
     ]
    },
@@ -4297,11 +4614,11 @@
    },
    {
     "cc": "IN",
-    "n": 22,
+    "n": 23,
     "groups": [
      {
       "name": "pixelleaks",
-      "n": 6
+      "n": 7
      },
      {
       "name": "incransom",
@@ -4315,7 +4632,7 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 4
+      "n": 5
      },
      {
       "name": "Energy & Utilities",
@@ -4329,11 +4646,11 @@
    },
    {
     "cc": "IT",
-    "n": 22,
+    "n": 21,
     "groups": [
      {
       "name": "thegentlemen",
-      "n": 4
+      "n": 3
      },
      {
       "name": "aurora",
@@ -4392,38 +4709,6 @@
     ]
    },
    {
-    "cc": "ES",
-    "n": 17,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "safepay",
-      "n": 3
-     },
-     {
-      "name": "black x",
-      "n": 3
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Hospitality",
-      "n": 3
-     },
-     {
-      "name": "Technology",
-      "n": 2
-     }
-    ]
-   },
-   {
     "cc": "BR",
     "n": 16,
     "groups": [
@@ -4456,6 +4741,38 @@
     ]
    },
    {
+    "cc": "ES",
+    "n": 16,
+    "groups": [
+     {
+      "name": "safepay",
+      "n": 3
+     },
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "black x",
+      "n": 3
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Hospitality",
+      "n": 3
+     },
+     {
+      "name": "Financial Services",
+      "n": 2
+     }
+    ]
+   },
+   {
     "cc": "AU",
     "n": 12,
     "groups": [
@@ -4465,25 +4782,25 @@
      },
      {
       "name": "thegentlemen",
-      "n": 3
+      "n": 2
      },
      {
-      "name": "lockbit5",
+      "name": "spacebears",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Healthcare",
-      "n": 2
+      "name": "Other",
+      "n": 3
      },
      {
       "name": "Manufacturing",
       "n": 2
      },
      {
-      "name": "Other",
-      "n": 2
+      "name": "Professional Services",
+      "n": 1
      }
     ]
    },
@@ -4776,38 +5093,6 @@
     ]
    },
    {
-    "cc": "CO",
-    "n": 8,
-    "groups": [
-     {
-      "name": "whitearmor",
-      "n": 4
-     },
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "hyflock",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 4
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 1
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "HK",
     "n": 8,
     "groups": [
@@ -4840,6 +5125,70 @@
     ]
    },
    {
+    "cc": "ID",
+    "n": 8,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 3
+     },
+     {
+      "name": "climax inc",
+      "n": 1
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "CO",
+    "n": 7,
+    "groups": [
+     {
+      "name": "whitearmor",
+      "n": 4
+     },
+     {
+      "name": "hyflock",
+      "n": 1
+     },
+     {
+      "name": "aoqin",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "TH",
     "n": 7,
     "groups": [
@@ -4867,70 +5216,6 @@
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "DK",
-    "n": 6,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 3
-     },
-     {
-      "name": "whitearmor",
-      "n": 1
-     },
-     {
-      "name": "majinahanashi",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Transportation",
-      "n": 1
-     },
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "ID",
-    "n": 6,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 2
-     },
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 2
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Technology",
       "n": 1
      }
     ]
@@ -4995,70 +5280,6 @@
      },
      {
       "name": "Financial Services",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "SE",
-    "n": 6,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 4
-     },
-     {
-      "name": "pixelleaks",
-      "n": 1
-     },
-     {
-      "name": "booba project",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 2
-     },
-     {
-      "name": "Other",
-      "n": 2
-     },
-     {
-      "name": "Energy & Utilities",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "TR",
-    "n": 6,
-    "groups": [
-     {
-      "name": "doommageddon",
-      "n": 2
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "hyflock",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Technology",
       "n": 1
      }
     ]
@@ -5156,6 +5377,38 @@
     ]
    },
    {
+    "cc": "DK",
+    "n": 5,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 3
+     },
+     {
+      "name": "whitearmor",
+      "n": 1
+     },
+     {
+      "name": "majinahanashi",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Transportation",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "EC",
     "n": 5,
     "groups": [
@@ -5215,6 +5468,70 @@
      },
      {
       "name": "Manufacturing",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "SE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 3
+     },
+     {
+      "name": "pixelleaks",
+      "n": 1
+     },
+     {
+      "name": "booba project",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 2
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "TR",
+    "n": 5,
+    "groups": [
+     {
+      "name": "doommageddon",
+      "n": 2
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "hyflock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Technology",
       "n": 1
      }
     ]
@@ -5284,6 +5601,38 @@
     ]
    },
    {
+    "cc": "PE",
+    "n": 4,
+    "groups": [
+     {
+      "name": "climax inc",
+      "n": 1
+     },
+     {
+      "name": "qilin",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Retail & E-Commerce",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Government & Defense",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "CL",
     "n": 3,
     "groups": [
@@ -5340,33 +5689,29 @@
     ]
    },
    {
-    "cc": "PE",
+    "cc": "MK",
     "n": 3,
     "groups": [
      {
-      "name": "qilin",
-      "n": 1
-     },
-     {
       "name": "thegentlemen",
-      "n": 1
+      "n": 2
      },
      {
-      "name": "safepay",
+      "name": "spacebears",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Professional Services",
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Education",
       "n": 1
      },
      {
       "name": "Government & Defense",
-      "n": 1
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ]
@@ -5399,6 +5744,38 @@
      },
      {
       "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "PL",
+    "n": 3,
+    "groups": [
+     {
+      "name": "spacebears",
+      "n": 1
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "panzer",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Other",
       "n": 1
      }
     ]
@@ -5564,46 +5941,6 @@
     ]
    },
    {
-    "cc": "MK",
-    "n": 2,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Education",
-      "n": 1
-     },
-     {
-      "name": "Government & Defense",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "NO",
-    "n": 2,
-    "groups": [
-     {
-      "name": "everest",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "NZ",
     "n": 2,
     "groups": [
@@ -5623,30 +5960,6 @@
      },
      {
       "name": "Retail & E-Commerce",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "PL",
-    "n": 2,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "panzer",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 1
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ]
@@ -5708,6 +6021,17 @@
       "n": 1
      }
     ]
+   },
+   {
+    "cc": "BJ",
+    "n": 1,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 1
+     }
+    ],
+    "sectors": []
    },
    {
     "cc": "BO",
@@ -5977,6 +6301,22 @@
     ]
    },
    {
+    "cc": "NO",
+    "n": 1,
+    "groups": [
+     {
+      "name": "everest",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "NP",
     "n": 1,
     "groups": [
@@ -6151,8 +6491,8 @@
   "groups": [
    {
     "name": "n0n",
-    "n": 166,
-    "last": "2026-11-23",
+    "n": 173,
+    "last": "2026-11-25",
     "sectors": [
      {
       "name": "Retail & E-Commerce",
@@ -6170,48 +6510,48 @@
     "countries": [
      {
       "cc": "US",
-      "n": 101
+      "n": 104
      },
      {
       "cc": "CA",
-      "n": 24
+      "n": 25
      },
      {
       "cc": "GB",
       "n": 10
      },
      {
-      "cc": "FR",
+      "cc": "ID",
       "n": 3
      },
      {
-      "cc": "DK",
+      "cc": "FR",
       "n": 3
      }
     ]
    },
    {
     "name": "thegentlemen",
-    "n": 129,
+    "n": 118,
     "last": "2026-11-23",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 23
-     },
-     {
-      "name": "Technology",
       "n": 20
      },
      {
+      "name": "Technology",
+      "n": 19
+     },
+     {
       "name": "Healthcare",
-      "n": 17
+      "n": 16
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 35
+      "n": 32
      },
      {
       "cc": "DE",
@@ -6235,37 +6575,37 @@
    },
    {
     "name": "qilin",
-    "n": 92,
+    "n": 77,
     "last": "2026-11-24",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 23
+      "n": 20
      },
      {
       "name": "Professional Services",
-      "n": 15
+      "n": 14
      },
      {
       "name": "Other",
-      "n": 8
+      "n": 7
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 32
+      "n": 22
      },
      {
       "cc": "DE",
-      "n": 9
-     },
-     {
-      "cc": "GB",
-      "n": 8
+      "n": 7
      },
      {
       "cc": "MX",
+      "n": 6
+     },
+     {
+      "cc": "GB",
       "n": 6
      },
      {
@@ -6278,12 +6618,12 @@
    },
    {
     "name": "incransom",
-    "n": 50,
+    "n": 51,
     "last": "2026-11-24",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 12
+      "n": 11
      },
      {
       "name": "Technology",
@@ -6291,13 +6631,13 @@
      },
      {
       "name": "Financial Services",
-      "n": 5
+      "n": 6
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 29
+      "n": 30
      },
      {
       "cc": "IN",
@@ -6321,7 +6661,7 @@
    },
    {
     "name": "pixelleaks",
-    "n": 44,
+    "n": 45,
     "last": "2026-11-24",
     "sectors": [
      {
@@ -6333,18 +6673,18 @@
       "n": 6
      },
      {
-      "name": "Healthcare",
+      "name": "Manufacturing",
       "n": 5
      }
     ],
     "countries": [
      {
-      "cc": "US",
+      "cc": "IN",
       "n": 7
      },
      {
-      "cc": "IN",
-      "n": 6
+      "cc": "US",
+      "n": 7
      },
      {
       "cc": "MX",
@@ -6362,18 +6702,18 @@
    },
    {
     "name": "silentransomgroup",
-    "n": 40,
+    "n": 42,
     "last": "2026-11-24",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 19
+      "n": 20
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 14
+      "n": 15
      },
      {
       "cc": "DE",
@@ -6515,6 +6855,49 @@
     ]
    },
    {
+    "name": "medusalocker",
+    "n": 28,
+    "last": "2026-11-24",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 4
+     },
+     {
+      "cc": "BR",
+      "n": 2
+     },
+     {
+      "cc": "ES",
+      "n": 1
+     },
+     {
+      "cc": "MY",
+      "n": 1
+     },
+     {
+      "cc": "MF",
+      "n": 1
+     }
+    ],
+    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
+    "origin": ""
+   },
+   {
     "name": "rhysida",
     "n": 28,
     "last": "2026-11-24",
@@ -6599,49 +6982,6 @@
     ]
    },
    {
-    "name": "medusalocker",
-    "n": 26,
-    "last": "2026-11-23",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 3
-     },
-     {
-      "name": "Healthcare",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 4
-     },
-     {
-      "cc": "BR",
-      "n": 2
-     },
-     {
-      "cc": "MY",
-      "n": 1
-     },
-     {
-      "cc": "MF",
-      "n": 1
-     },
-     {
-      "cc": "MZ",
-      "n": 1
-     }
-    ],
-    "about": "The notes describe Medusa as a DDoS bot written in .NET 2.0, not a ransomware group. Its current command-and-control uses HTTP, while its predecessor used IRC. The notes do not describe ransomware activity, so this entry may be mislabeled.",
-    "origin": ""
-   },
-   {
     "name": "vortex",
     "n": 26,
     "last": "2026-11-19",
@@ -6681,7 +7021,7 @@
    {
     "name": "everest",
     "n": 20,
-    "last": "2026-11-20",
+    "last": "2026-11-25",
     "sectors": [
      {
       "name": "Technology",
@@ -6804,6 +7144,49 @@
     ]
    },
    {
+    "name": "aurora",
+    "n": 18,
+    "last": "2026-11-25",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 8
+     },
+     {
+      "name": "Other",
+      "n": 4
+     },
+     {
+      "name": "Agriculture and Food Production",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "IT",
+      "n": 3
+     },
+     {
+      "cc": "GB",
+      "n": 3
+     },
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "CN",
+      "n": 1
+     }
+    ],
+    "about": "Aurora is ransomware associated with a multi-purpose Go-based malware in use since mid-2022. Multiple criminal teams distribute it, and it is also sold on underground forums as an infostealer and botnet under the same name.",
+    "origin": ""
+   },
+   {
     "name": "curious worm",
     "n": 18,
     "last": "2026-11-18",
@@ -6843,49 +7226,6 @@
       "n": 1
      }
     ]
-   },
-   {
-    "name": "aurora",
-    "n": 17,
-    "last": "2026-11-24",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 8
-     },
-     {
-      "name": "Other",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "DE",
-      "n": 3
-     },
-     {
-      "cc": "IT",
-      "n": 3
-     },
-     {
-      "cc": "GB",
-      "n": 3
-     },
-     {
-      "cc": "CN",
-      "n": 1
-     },
-     {
-      "cc": "US",
-      "n": 1
-     }
-    ],
-    "about": "Aurora is ransomware associated with a multi-purpose Go-based malware in use since mid-2022. Multiple criminal teams distribute it, and it is also sold on underground forums as an infostealer and botnet under the same name.",
-    "origin": ""
    },
    {
     "name": "play",
@@ -7157,6 +7497,114 @@
   ],
   "recent": [
    {
+    "d": "2026-11-25",
+    "cc": "BJ",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "CA",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "US",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "ID",
+    "g": "n0n",
+    "s": ""
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "MK",
+    "g": "spacebears",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "PL",
+    "g": "spacebears",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "AU",
+    "g": "spacebears",
+    "s": "Other"
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "MX",
+    "g": "spacebears",
+    "s": "Energy & Utilities"
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "US",
+    "g": "aurora",
+    "s": "Agriculture and Food Production"
+   },
+   {
+    "d": "2026-11-25",
+    "cc": "",
+    "g": "everest",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-24",
+    "cc": "US",
+    "g": "silentransomgroup",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-24",
+    "cc": "",
+    "g": "silentransomgroup",
+    "s": ""
+   },
+   {
+    "d": "2026-11-24",
+    "cc": "",
+    "g": "medusalocker",
+    "s": ""
+   },
+   {
+    "d": "2026-11-24",
+    "cc": "ES",
+    "g": "medusalocker",
+    "s": "Agriculture and Food Production"
+   },
+   {
+    "d": "2026-11-24",
+    "cc": "IN",
+    "g": "pixelleaks",
+    "s": "Manufacturing"
+   },
+   {
     "d": "2026-11-24",
     "cc": "",
     "g": "rhysida",
@@ -7287,120 +7735,12 @@
     "cc": "US",
     "g": "safepay",
     "s": "Technology"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "US",
-    "g": "soulgroup",
-    "s": "Government & Defense"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "DE",
-    "g": "anubis",
-    "s": ""
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "US",
-    "g": "anubis",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "CH",
-    "g": "qilin",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "",
-    "g": "aurora",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "DE",
-    "g": "aurora",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "IT",
-    "g": "eclipse",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-24",
-    "cc": "DE",
-    "g": "qilin",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "US",
-    "g": "rhysida",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "BR",
-    "g": "medusalocker",
-    "s": "Technology"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "TW",
-    "g": "thegentlemen",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "MK",
-    "g": "thegentlemen",
-    "s": "Education"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "US",
-    "g": "thegentlemen",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "IT",
-    "g": "thegentlemen",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "US",
-    "g": "thegentlemen",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "IT",
-    "g": "thegentlemen",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "MX",
-    "g": "thegentlemen",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-23",
-    "cc": "US",
-    "g": "thegentlemen",
-    "s": "Manufacturing"
    }
   ],
   "days": [
    {
     "date": "2026-10-26",
-    "n": 58
+    "n": 30
    },
    {
     "date": "2026-10-27",
@@ -7488,11 +7828,11 @@
    },
    {
     "date": "2026-11-17",
-    "n": 37
+    "n": 39
    },
    {
     "date": "2026-11-18",
-    "n": 72
+    "n": 74
    },
    {
     "date": "2026-11-19",
@@ -7500,7 +7840,7 @@
    },
    {
     "date": "2026-11-20",
-    "n": 34
+    "n": 33
    },
    {
     "date": "2026-11-21",
@@ -7512,15 +7852,15 @@
    },
    {
     "date": "2026-11-23",
-    "n": 69
+    "n": 68
    },
    {
     "date": "2026-11-24",
-    "n": 30
+    "n": 35
    },
    {
     "date": "2026-11-25",
-    "n": 0
+    "n": 13
    }
   ]
  },
@@ -7663,54 +8003,54 @@
     "id": "1540951016",
     "name": "Marcus Hutchins",
     "username": "MalwareTechBlog",
-    "img": "https://pbs.twimg.com/profile_images/2119989823671017472/KThGL431_bigger.jpg",
+    "img": "https://pbs.twimg.com/profile_images/2124809523659759616/L3UEZzUV_bigger.jpg",
     "verified": false
    }
   },
-  "profiles_at": "2026-11-18T07:35:44.387870+00:00",
+  "profiles_at": "2026-11-25T14:11:00.532536+00:00",
   "since": {
-   "209811713": "2125277013263130942",
-   "50026664": "2125343145722335420",
-   "1290332482374598658": "2125246541845979510",
-   "41258937": "2125402590250758204",
-   "4487645412": "2125390290487816590",
+   "209811713": "2125587413850599909",
+   "50026664": "2125563969637110216",
+   "1290332482374598658": "2125585703283437679",
+   "41258937": "2125585565722837259",
+   "4487645412": "2125587062900342991",
    "54316357": "2124929241330364647",
    "935278274845974528": "2125288339712462911",
    "217462908": "2122770379915805067",
-   "1158139840866791424": "2125338623705063582",
-   "702994808181170176": "2124927885291175955",
-   "1324374317484793856": "2125162616259490002",
-   "6821102": "2125409387414180063",
-   "964227358218649600": "2125346982684135683",
+   "1158139840866791424": "2125467507825815998",
+   "702994808181170176": "2125534146483327317",
+   "1324374317484793856": "2125547398021693623",
+   "6821102": "2125571896678732227",
+   "964227358218649600": "2125590422428823652",
    "24683268": "2123077080997114070",
    "1540951016": "2125410940179067246",
    "86973588": "2124975291571613803"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-25T02:18:40.007694+00:00",
-   "bleepincomputer": "2026-11-25T02:18:40.007694+00:00",
-   "therecord_media": "2026-11-25T02:18:40.007694+00:00",
-   "securityweek": "2026-11-25T02:18:40.007694+00:00",
-   "unit42_intel": "2026-11-25T02:18:40.007694+00:00",
-   "esetresearch": "2026-11-25T02:18:40.007694+00:00",
-   "ciscotalos": "2026-11-25T02:18:40.007694+00:00",
-   "googlecloudsec": "2026-11-25T02:18:40.007694+00:00",
-   "msftsecintel": "2026-11-25T02:18:40.007694+00:00",
-   "vxunderground": "2026-11-25T02:18:40.007694+00:00",
-   "projectzerobugs": "2026-11-25T02:18:40.007694+00:00",
-   "thezdi": "2026-11-25T02:18:40.007694+00:00",
-   "watchtowrcyber": "2026-11-25T02:18:40.007694+00:00",
-   "sans_isc": "2026-11-25T02:18:40.007694+00:00",
-   "cisagov": "2026-11-25T02:18:40.007694+00:00",
-   "enisa_eu": "2026-11-25T02:18:40.007694+00:00",
-   "cert_eu": "2026-11-25T02:18:40.007694+00:00",
-   "shadowserver": "2026-11-25T02:18:40.007694+00:00",
-   "gossithedog": "2026-11-25T02:18:40.007694+00:00",
-   "malwaretechblog": "2026-11-25T02:18:40.007694+00:00"
+   "thehackersnews": "2026-11-25T14:11:00.532536+00:00",
+   "bleepincomputer": "2026-11-25T14:11:00.532536+00:00",
+   "therecord_media": "2026-11-25T14:11:00.532536+00:00",
+   "securityweek": "2026-11-25T14:11:00.532536+00:00",
+   "unit42_intel": "2026-11-25T14:11:00.532536+00:00",
+   "esetresearch": "2026-11-25T14:11:00.532536+00:00",
+   "ciscotalos": "2026-11-25T14:11:00.532536+00:00",
+   "googlecloudsec": "2026-11-25T14:11:00.532536+00:00",
+   "msftsecintel": "2026-11-25T14:11:00.532536+00:00",
+   "vxunderground": "2026-11-25T14:11:00.532536+00:00",
+   "projectzerobugs": "2026-11-25T14:11:00.532536+00:00",
+   "thezdi": "2026-11-25T14:11:00.532536+00:00",
+   "watchtowrcyber": "2026-11-25T14:11:00.532536+00:00",
+   "sans_isc": "2026-11-25T14:11:00.532536+00:00",
+   "cisagov": "2026-11-25T14:11:00.532536+00:00",
+   "enisa_eu": "2026-11-25T14:11:00.532536+00:00",
+   "cert_eu": "2026-11-25T14:11:00.532536+00:00",
+   "shadowserver": "2026-11-25T14:11:00.532536+00:00",
+   "gossithedog": "2026-11-25T14:11:00.532536+00:00",
+   "malwaretechblog": "2026-11-25T14:11:00.532536+00:00"
   },
   "budget": {
    "day": "2026-11-25",
-   "used": 22
+   "used": 50
   },
   "accounts": [
    {
@@ -7796,6 +8136,588 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2125590422428823652",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-25T14:00:22.000Z",
+    "text": "🎃 Halloween may be over, but threats don't disappear when the decorations come down. Events like NYC's Halloween Parade, with 80,000 participants and 2 million spectators, remind us why preparedness, planning, and strong partnerships matter year-round. 🛡️🤝 https://t.co/nW6sQCudw5",
+    "urls": [
+     {
+      "u": "https://t.co/nW6sQCudw5",
+      "d": "pic.x.com/nW6sQCudw5"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125587413850599909",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-25T13:48:25.000Z",
+    "text": "UPDATE — The risk from the actively exploited GeoServer flaws extends beyond arbitrary file reads and authorization bypasses.\n\nWe've updated our reporting with additional technical findings from @_CryptoCat, Senior Security Researcher at Rapid7.",
+    "urls": [],
+    "mentions": [
+     "_CryptoCat"
+    ],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Exploited in the wild"
+    ]
+   },
+   {
+    "id": "2125587062900342991",
+    "uid": "4487645412",
+    "cat": "CTI",
+    "at": "2026-11-25T13:47:01.000Z",
+    "text": "We have tracked recurring vishing attacks by Com-affiliated threat groups against financial services, healthcare and legal sectors. Attackers capture session tokens, exfiltrate cloud repositories and extort victims without using encryption: https://t.co/ElIRsc1ZMD https://t.co/u3BLRv1jky",
+    "urls": [
+     {
+      "u": "https://t.co/ElIRsc1ZMD",
+      "d": "bit.ly/48CYXPs"
+     },
+     {
+      "u": "https://t.co/u3BLRv1jky",
+      "d": "pic.x.com/u3BLRv1jky"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125585703283437679",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-25T13:41:37.000Z",
+    "text": "The Treasury Department is the latest U.S. federal agency to be affected by a cyber incident, warning that it has taken some systems offline after a cyberattack resulted in \"unauthorized access\" to some systems at the Financial Crimes Enforcement Network https://t.co/ETX9mb7m5n",
+    "urls": [
+     {
+      "u": "https://t.co/ETX9mb7m5n",
+      "d": "therecord.media/treasury-fince…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125585565722837259",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-25T13:41:04.000Z",
+    "text": "US Treasury’s FinCEN Disconnects Systems Following Cyber Incident https://t.co/i23wVasI5G",
+    "urls": [
+     {
+      "u": "https://t.co/i23wVasI5G",
+      "d": "securityweek.com/us-treasurys-f…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125585090751463648",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-25T13:39:11.000Z",
+    "text": "France’s national cybersecurity agency is investigating a suspected ransomware attack that impaired the computer systems of the University Hospital of Guadeloupe, forcing doctors to suspend services https://t.co/W8c4lXMzIx",
+    "urls": [
+     {
+      "u": "https://t.co/W8c4lXMzIx",
+      "d": "therecord.media/guadeloupe-ran…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Ransomware"
+    ]
+   },
+   {
+    "id": "2125578074867843514",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-25T13:11:19.000Z",
+    "text": "🚨 UPDATE: Palo Alto Networks patches actively exploited Fragnesia flaw (CVE-2026-46300) in PAN-OS.\n\nHackers are chaining it with PHP2Shell flaws to gain root access on firewalls with internet-exposed management interfaces.\n\nUpgrade immediately. Details ↓\nhttps://t.co/2UHIeQ4NG1 https://t.co/UbHKM9hQum",
+    "urls": [
+     {
+      "u": "https://t.co/2UHIeQ4NG1",
+      "d": "thehackernews.com/2026/10/attack…"
+     },
+     {
+      "u": "https://t.co/UbHKM9hQum",
+      "d": "pic.x.com/UbHKM9hQum"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-46300"
+    ],
+    "kev": [
+     "CVE-2026-46300"
+    ],
+    "signals": [
+     "Exploited in the wild"
+    ]
+   },
+   {
+    "id": "2125575243372851404",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-25T13:00:03.000Z",
+    "text": "Drupal Flaw Found by Anthropic Scanner Exploited in Attacks https://t.co/lFwkkkbQCH",
+    "urls": [
+     {
+      "u": "https://t.co/lFwkkkbQCH",
+      "d": "securityweek.com/drupal-flaw-fo…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Exploited in the wild"
+    ]
+   },
+   {
+    "id": "2125573068504650142",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-25T12:51:25.000Z",
+    "text": "🛑 WARNING - Hackers are already exploiting two GeoServer vulnerabilities patched just YESTERDAY.\n\nResearchers warn the flaws can be chained with other bugs to achieve remote code execution without authentication.\n\nPatch urgently. Get the details ↓ https://t.co/LdAsn3PIzz",
+    "urls": [
+     {
+      "u": "https://t.co/LdAsn3PIzz",
+      "d": "thehackernews.com/2026/11/hacker…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125571896678732227",
+    "uid": "6821102",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T12:46:46.000Z",
+    "text": "Tomorrow is Thanksgiving, and it's also an anniversary for DShield, which got its start over Thanksgiving in 2000. 26 years later, the idea hasn't changed: volunteers share their firewall and honeypot logs, and together the data shows what no single network can see. Just this week, a new honeypot in Slovenia joined the network, logging about 8,000 SSH login attempts per day. Thank you to every sensor operator, diary handler, and Stormcast listener. If you'd like to run a sensor, start at https://t.co/8IgCGtJnZd. Happy Thanksgiving!",
+    "urls": [
+     {
+      "u": "https://t.co/8IgCGtJnZd",
+      "d": "isc.sans.edu"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125569105994682453",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-25T12:35:40.000Z",
+    "text": "‼️ ALERT -- U.S. Treasury’s FinCEN takes some systems offline after confirming unauthorized access.\n\nThe agency holds sensitive financial intelligence, including suspicious transaction reports from banks nationwide.\n\nFull story: https://t.co/hEzoXssKlE",
+    "urls": [
+     {
+      "u": "https://t.co/hEzoXssKlE",
+      "d": "thehackernews.com/2026/11/us-tre…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125563969637110216",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-25T12:15:16.000Z",
+    "text": "Early Black Friday deal — 3 years of GPT, Claude, and Gemini at $69.99\nhttps://t.co/vKMPhQkMst\n\nhttps://t.co/vKMPhQkMst",
+    "urls": [
+     {
+      "u": "https://t.co/vKMPhQkMst",
+      "d": "bleepingcomputer.com/offer/deals/ea…"
+     },
+     {
+      "u": "https://t.co/vKMPhQkMst",
+      "d": "bleepingcomputer.com/offer/deals/ea…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125558407352799323",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-25T11:53:09.000Z",
+    "text": "⚠️ 64% of exposed secrets found valid in 2022 still worked FOUR years later, GitGuardian research reveals.\n\nThe roadblock? Security teams fear breaking production by revoking credentials.\n\nHere's how to fix leaked credentials without causing downtime ↓ https://t.co/yEpLiPmNef https://t.co/j41eOOREhD",
+    "urls": [
+     {
+      "u": "https://t.co/yEpLiPmNef",
+      "d": "thehackernews.com/2026/11/creden…"
+     },
+     {
+      "u": "https://t.co/j41eOOREhD",
+      "d": "pic.x.com/j41eOOREhD"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125549617769054317",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-25T11:18:14.000Z",
+    "text": "Microsoft fixes Microsoft 365 bug blocking access to Office apps\nhttps://t.co/u2r5sh6MaK\n\nhttps://t.co/u2r5sh6MaK",
+    "urls": [
+     {
+      "u": "https://t.co/u2r5sh6MaK",
+      "d": "bleepingcomputer.com/news/microsoft…"
+     },
+     {
+      "u": "https://t.co/u2r5sh6MaK",
+      "d": "bleepingcomputer.com/news/microsoft…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125547398021693623",
+    "uid": "1324374317484793856",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T11:09:25.000Z",
+    "text": "🚨 watchTowr Intel has observed in-the-wild exploitation of the new GeoServer vulnerabilities, CVE-2026-120705 and CVE-2026-129243, across our honeypot network. Attackers sent error-based exploit probes to validate that the server is vulnerable by creating and invoking stored queries.",
+    "urls": [
+     {
+      "u": "https://t.co/dm4y5a4Laq",
+      "d": "pic.x.com/dm4y5a4Laq"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [
+     "CVE-2026-120705",
+     "CVE-2026-129243"
+    ],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125541133023391770",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-25T10:44:31.000Z",
+    "text": "Plagiarism Checker Turnitin Investigating Cyberattack https://t.co/iYQVLIAjrW",
+    "urls": [
+     {
+      "u": "https://t.co/iYQVLIAjrW",
+      "d": "securityweek.com/plagiarism-che…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125534146483327317",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T10:16:45.000Z",
+    "text": "Apple: RawCamera renders an uninitialised heap buffer as image data (CDNGLosslessJpegUnpacker) https://t.co/De2WLxx2Sc",
+    "urls": [
+     {
+      "u": "https://t.co/De2WLxx2Sc",
+      "d": "project-zero.issues.chromium.org/issues/5523060…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125534146462421322",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T10:16:45.000Z",
+    "text": "Apple: RawCamera heap out-of-bounds read in the Phase One IIQ decoder (CPhaseOneCompressedUnpacker) https://t.co/RJnuZgDVIl",
+    "urls": [
+     {
+      "u": "https://t.co/RJnuZgDVIl",
+      "d": "project-zero.issues.chromium.org/issues/5523033…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125533872511430909",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T10:15:40.000Z",
+    "text": "Apple: RawCamera heap buffer overflow in the Hasselblad raw decoder (CHasselbladUnpacker) https://t.co/Ka47MVPTW5",
+    "urls": [
+     {
+      "u": "https://t.co/Ka47MVPTW5",
+      "d": "project-zero.issues.chromium.org/issues/5523021…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125533872498802939",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T10:15:40.000Z",
+    "text": "Apple: RawCamera heap buffer overflow in the Sony Deflate decoder (CSonyDeflateUnpacker) https://t.co/74gsKU0ibD",
+    "urls": [
+     {
+      "u": "https://t.co/74gsKU0ibD",
+      "d": "project-zero.issues.chromium.org/issues/5523066…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125533872431731076",
+    "uid": "702994808181170176",
+    "cat": "Vulnerabilities",
+    "at": "2026-11-25T10:15:40.000Z",
+    "text": "Apple: RawCamera heap buffer overflow in the Deflate DNG decoder (CDNGDeflateUnpacker) https://t.co/R955NkHA92",
+    "urls": [
+     {
+      "u": "https://t.co/R955NkHA92",
+      "d": "project-zero.issues.chromium.org/issues/5522881…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125533016776696224",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-25T10:12:16.000Z",
+    "text": "Hackers now exploit critical Drupal RCE flaw to hijack sites\nhttps://t.co/Johqnk6NVs\n\nhttps://t.co/Johqnk6NVs",
+    "urls": [
+     {
+      "u": "https://t.co/Johqnk6NVs",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/Johqnk6NVs",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125516403289833865",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-25T09:06:15.000Z",
+    "text": "Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library https://t.co/Sl2yHVTt1U",
+    "urls": [
+     {
+      "u": "https://t.co/Sl2yHVTt1U",
+      "d": "securityweek.com/hackers-exploi…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125515628047908993",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-25T09:03:10.000Z",
+    "text": "Microsoft confirms authentication issues after November updates\nhttps://t.co/DAcQ4WI1eJ\n\nhttps://t.co/DAcQ4WI1eJ",
+    "urls": [
+     {
+      "u": "https://t.co/DAcQ4WI1eJ",
+      "d": "bleepingcomputer.com/news/microsoft…"
+     },
+     {
+      "u": "https://t.co/DAcQ4WI1eJ",
+      "d": "bleepingcomputer.com/news/microsoft…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125503576663593359",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-25T08:15:17.000Z",
+    "text": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls https://t.co/oDlwuwwIf0",
+    "urls": [
+     {
+      "u": "https://t.co/oDlwuwwIf0",
+      "d": "securityweek.com/palo-alto-netw…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125496032544927916",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-25T07:45:18.000Z",
+    "text": "Hackers reportedly breached CIA intelligence analysis system\nhttps://t.co/KSNsMaJW0f\n\nhttps://t.co/KSNsMaJW0f",
+    "urls": [
+     {
+      "u": "https://t.co/KSNsMaJW0f",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/KSNsMaJW0f",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2125467507825815998",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-25T05:51:57.000Z",
+    "text": "Related post \n\nhttps://t.co/7BEsr31BJJ",
+    "urls": [
+     {
+      "u": "https://t.co/7BEsr31BJJ",
+      "d": "x.com/vxunderground/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2125465422572953759",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-25T05:43:40.000Z",
+    "text": "The United States Treasury was WHAT https://t.co/oEIwJVOuge https://t.co/LZtNKzjs6L",
+    "urls": [
+     {
+      "u": "https://t.co/oEIwJVOuge",
+      "d": "pic.x.com/oEIwJVOuge"
+     },
+     {
+      "u": "https://t.co/LZtNKzjs6L",
+      "d": "x.com/disclosetv/sta…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2125410940179067246",
     "uid": "1540951016",
@@ -9728,236 +10650,68 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2124491147707855287",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-22T13:12:15.000Z",
-    "text": "Get a refurbished 10th Gen iPad with USB-C for $279.99\nhttps://t.co/xaXF3hyUu9\n\nhttps://t.co/xaXF3hyUu9",
-    "urls": [
-     {
-      "u": "https://t.co/xaXF3hyUu9",
-      "d": "bleepingcomputer.com/offer/deals/ge…"
-     },
-     {
-      "u": "https://t.co/xaXF3hyUu9",
-      "d": "bleepingcomputer.com/offer/deals/ge…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124472971838546216",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-22T12:00:01.000Z",
-    "text": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit https://t.co/YkESBhlNPh",
-    "urls": [
-     {
-      "u": "https://t.co/YkESBhlNPh",
-      "d": "securityweek.com/in-other-news-…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124374819538088284",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-22T05:30:00.000Z",
-    "text": "👻 That image upload might be code in disguise.\n\nResearchers turned crafted files into server command execution through Ghostscript (CVE-2026-125396) — shown across ~10 popular apps, from Roundcube webmail (no click, just opening the email) to CUPS print queues.\n\n▸ Patched: Ghostscript 10.08.0\n▸ But many Linux distros still lag\n\nHow it works ↓ https://t.co/oUFa7kmmau",
-    "urls": [
-     {
-      "u": "https://t.co/oUFa7kmmau",
-      "d": "thehackernews.com/2026/11/resear…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-125396"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124369776827097236",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-22T05:09:58.000Z",
-    "text": "‼️ OpenRouter just DROPPED 3 AI providers and stripped 125 endpoints of “Zero Data Retention” status.\n\nResearchers uncovered months of AI prompt theft, including requests that were never supposed to be stored.\n\nHere's how they caught it: https://t.co/ICI5tTmxK7",
-    "urls": [
-     {
-      "u": "https://t.co/ICI5tTmxK7",
-      "d": "thehackernews.com/2026/11/openro…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124360073782940012",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-22T04:31:24.000Z",
-    "text": "That said, the password \"killmenow\" erasing the entire phone would have been extremely funny to watch for about 10 seconds.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124359758274863290",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-22T04:30:09.000Z",
-    "text": "More logical option would be to have a dual-boot setup where the phone has two encrypted operating systems. One password decrypts and loads the real phone OS, duress password loads a decoy operating system full of synthetic data. https://t.co/4DuEVcTvrA",
-    "urls": [
-     {
-      "u": "https://t.co/4DuEVcTvrA",
-      "d": "x.com/IntCyberDigest…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124350161879019632",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-22T03:52:01.000Z",
-    "text": "BREAKING: JENSEN HUANG ALLEGEDLY BROKE POOL STICK OVER HIS KNEE AND MADE LEADERSHIP FIGHT TO THE DEATH WHILE NVIDIA TRIBESMEN BANGED ON DRUMS",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124344620251242819",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-22T03:30:00.000Z",
-    "text": "SBC Medical Group Data Breach Impacts Over 2 Million https://t.co/g4hpjESRgh",
-    "urls": [
-     {
-      "u": "https://t.co/g4hpjESRgh",
-      "d": "securityweek.com/sbc-medical-gr…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2124327399571558693",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-22T02:21:34.000Z",
-    "text": "> wake up\n> take a shit\n> get out of bed\n> shit2bed zero day\n\nOh btw Microsoft did a silly again https://t.co/R6HTNkQQGT",
-    "urls": [
-     {
-      "u": "https://t.co/R6HTNkQQGT",
-      "d": "x.com/IntCyberDigest…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Zero-day"
-    ]
    }
   ],
   "digest": {
-   "key": "v1|2125055901912781288,2125058082787242238,2125059035363745995,2125069397979283851,2125121428270067755,2125162616259490002,2125195622500479307,2125222119332340021,2125225717545963721,2125233709037318170,2125240789135679537,2125245733682954286,2125245951011131825,2125246122595680620,2125246541845979510,2125248827318055082,2125250897953612224,2125262084480913900,2125264237987574237,2125266858391781551,2125270897007419553,2125275551908630732,2125277013263130942,2125285665675833836,2125288339712462911,2125296657243713849,2125303563396034612,2125305754240364761,2125318735233703956,2125323001730388433,2125323883876057100,2125326527206494597,2125333642519912909,2125335240394649823,2125336610745331844,2125338623705063582,2125343145722335420,2125346982684135683,2125359590942572991,2125365867491770863,2125390290487816590,2125391768824991900,2125402590250758204,2125409387414180063,2125410940179067246",
-   "overview": "Active exploitation of VMware vCenter and Check Point management servers is the most urgent picture, alongside a new in-the-wild RCE, vishing extortion, and data breach disclosures.",
+   "key": "v1|2125233709037318170,2125240789135679537,2125245733682954286,2125245951011131825,2125246122595680620,2125246541845979510,2125248827318055082,2125250897953612224,2125262084480913900,2125264237987574237,2125266858391781551,2125270897007419553,2125275551908630732,2125277013263130942,2125285665675833836,2125288339712462911,2125296657243713849,2125303563396034612,2125305754240364761,2125318735233703956,2125323001730388433,2125323883876057100,2125326527206494597,2125333642519912909,2125335240394649823,2125336610745331844,2125338623705063582,2125343145722335420,2125346982684135683,2125359590942572991,2125365867491770863,2125390290487816590,2125391768824991900,2125402590250758204,2125409387414180063,2125410940179067246,2125465422572953759,2125467507825815998,2125496032544927916,2125503576663593359,2125515628047908993,2125516403289833865,2125533016776696224,2125533872431731076,2125533872498802939,2125533872511430909,2125534146462421322,2125534146483327317,2125541133023391770,2125547398021693623,2125549617769054317,2125558407352799323,2125563969637110216,2125569105994682453,2125571896678732227,2125573068504650142,2125575243372851404,2125578074867843514,2125585090751463648,2125585565722837259,2125585703283437679,2125587062900342991,2125587413850599909,2125590422428823652",
+   "overview": "Actively exploited edge and web flaws dominate: a PAN-OS root chain, GeoServer bugs, Drupal RCE and Check Point server compromises, alongside a federal Treasury intrusion.",
    "themes": [
     {
-     "title": "VMware vCenter critical auth bypass and scanning",
-     "summary": "Multiple sources report a new critical vCenter authentication bypass, CVE-2026-123903 (CVSS 9.8), exploitable by attackers with network access. The Hacker News says it follows a similar zero-day already exploited in attacks. SANS ISC links VMware advisory VMSA-2026-0011 to aggressive SSH scanning from 109.160.32.0/24. SecurityWeek reports patches for critical ESX and vCenter flaws.",
+     "title": "Actively exploited PAN-OS flaw Fragnesia",
+     "summary": "Palo Alto Networks patched Fragnesia (CVE-2026-46300) in PAN-OS, which attackers are exploiting. Per The Hacker News, they chain it with PHP2Shell flaws to gain root on firewalls with internet-exposed management interfaces. SecurityWeek agrees on the patch and root-access risk. Upgrade immediately.",
      "posts": [
-      "2125222119332340021",
-      "2125409387414180063",
-      "2125402590250758204"
+      "2125578074867843514",
+      "2125503576663593359"
+     ],
+     "cves": [
+      "CVE-2026-46300"
+     ],
+     "level": "red",
+     "sources": 2
+    },
+    {
+     "title": "GeoServer flaws exploited in the wild",
+     "summary": "Two GeoServer vulnerabilities patched recently are being exploited. The Hacker News reports they could be chained for unauthenticated remote code execution. watchTowr observed exploitation on its honeypots, with error-based probes that test for stored queries, and names CVE-2026-120705 and CVE-2026-129243. Patch urgently.",
+     "posts": [
+      "2125573068504650142",
+      "2125547398021693623",
+      "2125587413850599909"
+     ],
+     "cves": [
+      "CVE-2026-120705",
+      "CVE-2026-129243"
+     ],
+     "level": "red",
+     "sources": 2
+    },
+    {
+     "title": "FinCEN and Treasury systems hit by intrusion",
+     "summary": "The U.S. Treasury's FinCEN took some systems offline after a cyberattack led to unauthorized access, according to The Record, SecurityWeek and The Hacker News. The agency holds sensitive financial intelligence, including bank suspicious transaction reports. Reporting also links it to a reported breach of an unclassified CIA system.",
+     "posts": [
+      "2125569105994682453",
+      "2125585703283437679",
+      "2125359590942572991"
+     ],
+     "cves": [],
+     "level": "orange",
+     "sources": 3
+    },
+    {
+     "title": "Drupal RCE and VMware vCenter patches",
+     "summary": "Attackers are exploiting a critical Drupal RCE flaw to hijack sites, per BleepingComputer, and SecurityWeek reports the flaw was found by an Anthropic scanner. Separately, VMware patched critical ESX and vCenter flaws, and SANS ISC flags a vCenter authentication bypass (CVE-2026-123903) alongside SSH scanning.",
+     "posts": [
+      "2125533016776696224",
+      "2125409387414180063"
      ],
      "cves": [
       "CVE-2026-123903"
      ],
-     "level": "red",
-     "sources": 3
-    },
-    {
-     "title": "In-the-wild RCE in legacy Idunno.AntiCsrf",
-     "summary": "watchTowr reports in-the-wild exploitation of CVE-2026-131914, a remote code execution flaw in the legacy Idunno.AntiCsrf anti-CSRF library. Attacker probes were seen triggering a web redirect on vulnerable apps to validate exploitation. Only one source covers this, so it should be checked against the vendor and advisories.",
-     "posts": [
-      "2125162616259490002"
-     ],
-     "cves": [
-      "CVE-2026-131914"
-     ],
-     "level": "orange",
-     "sources": 1
-    },
-    {
-     "title": "Inception/ShinyHunters vishing and extortion",
-     "summary": "Okta links an active voice phishing group to a new data leak site and suggests it may operate as Inception, a possible ShinyHunters successor. BleepingComputer reports a large-scale vishing campaign by the Inception extortion gang. BleepingComputer also says ShinyHunters claims to be back, but it did not verify control of the group.",
-     "posts": [
-      "2125323883876057100",
-      "2125225717545963721",
-      "2125275551908630732"
-     ],
-     "cves": [],
      "level": "orange",
      "sources": 2
     },
     {
-     "title": "Data breaches with exposed keys and records",
-     "summary": "Several organizations disclosed breaches. Radware says attackers exposed customer cloud access keys. The European Commission confirmed data theft in an EU Academy breach. South Korea's KEPCO reports 1.5 million people affected. Turnitin disclosed a cyberattack on customer-facing systems. Exposed cloud keys are the most urgent item for defenders to check.",
-     "posts": [
-      "2125285665675833836",
-      "2125264237987574237",
-      "2125391768824991900"
-     ],
-     "cves": [],
-     "level": "orange",
-     "sources": 2
-    },
-    {
-     "title": "Check Point management servers compromised",
-     "summary": "BleepingComputer reports hackers compromised Check Point servers in 22 organizations. SecurityWeek independently reports that Check Point Security Management Servers were hacked in an AI-assisted campaign. The posts do not name a CVE, so the initial access method is unconfirmed.",
+     "title": "Check Point servers compromised in campaign",
+     "summary": "Hackers compromised Check Point servers in 22 organizations, per BleepingComputer. SecurityWeek reports the security management servers were hacked in an AI-assisted campaign. Defenders should review management-server exposure and integrity.",
      "posts": [
       "2125262084480913900",
       "2125233709037318170"
@@ -9967,8 +10721,8 @@
      "sources": 2
     }
    ],
-   "based_on": 45,
-   "at": "2026-11-25T02:18:40Z",
+   "based_on": 64,
+   "at": "2026-11-25T14:11:00Z",
    "model": "claude-haiku-5-5"
   }
  },
