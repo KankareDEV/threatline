@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vulforce | Exploited vulnerabilities and threat news, ranked</title>
+<meta name="description" content="Vulforce ranks the vulnerabilities attackers are exploiting right now, with CVSS, EPSS, ransomware activity and security news. Free, updated every 2 hours.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://vulforce.com/">
+
+<!-- Icons: browser tabs, Google results, phone home screens -->
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- How the page looks when a link is shared (LinkedIn, Slack, X, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vulforce">
+<meta property="og:title" content="Vulforce | Exploited vulnerabilities and threat news, ranked">
+<meta property="og:description" content="The vulnerabilities attackers are exploiting right now, ranked red, orange and green, with CVSS, EPSS, ransomware activity and security news.">
+<meta property="og:url" content="https://vulforce.com/">
+<meta property="og:image" content="https://vulforce.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vulforce logo: exploited vulnerabilities and threat news, ranked">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tells Google the site's name and logo (structured data) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vulforce.com/#website",
+      "name": "Vulforce",
+      "alternateName": ["vulforce.com"],
+      "url": "https://vulforce.com/",
+      "description": "A free, automated digest of exploited vulnerabilities and security news, ranked by risk.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://vulforce.com/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://vulforce.com/#org",
+      "name": "Vulforce",
+      "url": "https://vulforce.com/",
+      "logo": "https://vulforce.com/icon-512.png",
+      "founder": { "@type": "Person", "name": "Markus Kankare" },
+      "sameAs": ["https://github.com/KankareDEV"]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one black column. Colour is reserved for risk, so the only
+   things on the page that are red, orange or green are risk levels. */
+:root{
+  color-scheme:dark;
+  --bg:#000; --surface:#0c0c0d; --raise:#161618; --line:#26262a;
+  --text:#f2f2f0; --muted:#8e8e93;
+  --red:#ff3b30; --orange:#ff9500; --green:#30d158;
+  --vuln:#3987e5; --news:#c653b9; --geo:#35e0ff; --geo-low:#103440; --mark:var(--vuln); /* chart colours: blue = vulnerability data, magenta = news data. Red, orange and green stay reserved for risk. */
+  --display:"Archivo","IBM Plex Sans",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:960px;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--text);font:400 16px/1.55 var(--body);
+  -webkit-font-smoothing:antialiased}
+a{color:var(--text);text-underline-offset:3px;text-decoration-color:var(--muted)}
+a:hover{text-decoration-color:var(--text)}
+:focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.red{--lv:var(--red)} .orange{--lv:var(--orange)} .green{--lv:var(--green)}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:12px 22px;flex-wrap:wrap;
+  padding:18px 0;border-bottom:1px solid var(--line)}
+/* The logo is the kit's SVG, placed inline so it is sharp at any size and
+   needs no extra download. Its height sets its size; the width follows. */
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--text);flex:none;border-radius:6px}
+.brand .logo{display:block;height:46px;width:auto}
+.brand:hover .logo{filter:drop-shadow(0 0 10px rgba(255,77,79,.35))}
+.updated{color:var(--muted);font-size:14px;text-align:right}
+
+/* ---------- Brief ----------
+   Built to be read top-down in seconds: numbers you can tap, the three AI
+   picks, then one level at a time in one-line rows that open on tap. */
+.top{padding:24px 0 0;display:flex;flex-direction:column;gap:14px}
+.top h1{font:800 clamp(26px,4.6vw,40px)/1.05 var(--display);font-stretch:85%;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.top h1 small{display:block;font:500 14px/1.4 var(--body);color:var(--muted);letter-spacing:0;margin-top:6px}
+.note{color:var(--muted);font-size:14px}
+
+/* the tappable numbers ("KPIs") at the top of Brief and Feed */
+.kpis{display:flex;flex-wrap:wrap;gap:8px}
+.kpi{display:flex;align-items:baseline;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;
+  padding:10px 14px 10px 12px;color:var(--text);font:inherit;cursor:pointer;text-align:left;position:relative;overflow:hidden;
+  transition:border-color .15s ease,background .15s ease,transform .15s ease}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lv,#3a3a40)}
+.kpi b{font:800 26px/1 var(--display);font-stretch:85%;color:var(--lv,var(--text));font-variant-numeric:tabular-nums}
+.kpi span{font-size:14px;color:#c9c9ce;line-height:1.25}
+.kpi:hover{border-color:#4a4a50;transform:translateY(-1px)}
+.kpi[aria-pressed="true"]{border-color:var(--text);background:var(--raise)}
+.kpi.zero{opacity:.45;cursor:default}
+.kpi.zero:hover{transform:none;border-color:var(--line)}
+.kpi.newk{--lv:#ff4d4f}
+.kpi.blue{--lv:var(--vuln)}
+
+/* the three AI picks, side by side */
+.picks{display:flex;flex-direction:column;gap:8px}
+.picks[hidden]{display:none}
+.pickhead{display:flex;align-items:center;gap:8px;font:800 13px/1 var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase}
+.pickhead small{font:400 13px/1 var(--body);color:var(--muted);letter-spacing:0;text-transform:none}
+.pickrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.pick{height:100%;width:100%;background:linear-gradient(180deg,#131315,#0c0c0d);border:1px solid var(--line);border-top:3px solid var(--lv);
+  border-radius:12px;padding:13px 14px;display:flex;flex-direction:column;gap:6px;text-align:left;color:inherit;font:inherit;cursor:pointer;
+  transition:border-color .15s ease,transform .15s ease}
+.pick:hover{transform:translateY(-2px);border-color:#3a3a40;border-top-color:var(--lv)}
+.pick .ph{display:flex;align-items:baseline;gap:8px}
+.pick .no{font:800 22px/1 var(--display);font-stretch:85%;color:var(--lv)}
+.pick .pt{font:600 15.5px/1.3 var(--body)}
+.pick .why{color:#c9c9ce;font-size:14px;line-height:1.45}
+.pick .cve{font:400 12.5px/1.4 var(--mono);color:var(--muted);margin-top:auto}
+
+/* sticky bar: level tabs, type chips, search */
+.controls{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);margin-top:16px}
+.controls .wrap{display:flex;gap:10px;align-items:center;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.mix{display:flex;gap:2px;height:3px;width:100%;border-radius:2px;overflow:hidden}
+.mix i{display:block;min-width:2px;background:var(--lv);transition:flex-grow .4s ease}
+.lvtabs{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;overflow-x:auto;max-width:100%;scrollbar-width:none}
+.lvtabs::-webkit-scrollbar{display:none}
+.lvtab{display:flex;align-items:center;gap:7px;border:0;background:none;color:var(--muted);font:500 14px/1 var(--body);
+  padding:8px 12px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s ease,color .15s ease}
+.lvtab i{width:8px;height:8px;border-radius:50%;background:var(--lv,var(--muted))}
+.lvtab b{font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.lvtab:hover{color:var(--text)}
+.lvtab[aria-pressed="true"]{background:var(--raise);color:var(--text);box-shadow:inset 0 0 0 1px #3a3a40}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;
+  padding:7px 12px;font:500 13.5px/1 var(--body);cursor:pointer;white-space:nowrap}
+.chip:hover{color:var(--text);border-color:#4a4a50}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip b{font-weight:600;margin-left:5px;opacity:.75;font-variant-numeric:tabular-nums}
+.search{margin-left:auto;flex:1 1 180px;max-width:260px;background:var(--surface);
+  border:1px solid var(--line);border-radius:999px;color:var(--text);padding:8px 14px;font:400 14.5px/1.2 var(--body)}
+.search::placeholder{color:var(--muted)}
+.picked{display:flex;align-items:center;gap:6px;background:var(--raise);border:1px solid #3a3a40;border-radius:999px;
+  padding:5px 6px 5px 12px;font-size:13.5px}
+.picked[hidden]{display:none}
+.picked button{border:0;background:#2a2a2e;color:var(--text);width:22px;height:22px;border-radius:50%;cursor:pointer;line-height:1}
+
+/* compact list: each row answers "what is affected, what can happen, how urgent"
+   in plain words. Numbers and IDs wait inside the opened row. */
+#list{display:flex;flex-direction:column;gap:18px;padding-top:16px}
+.level{display:flex;flex-direction:column;gap:8px}
+.lvhead{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.lvhead h2{font:800 15px/1.2 var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;margin:0;
+  display:flex;align-items:center;gap:8px;color:var(--lv)}
+.lvhead h2::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--lv)}
+.lvhead span{color:var(--muted);font-size:13.5px}
+.rows{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.row{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--lv);border-radius:10px}
+.row summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px minmax(0,1fr) auto;
+  gap:4px 12px;align-items:center;padding:11px 14px 11px 12px;border-radius:10px}
+.row summary::-webkit-details-marker{display:none}
+.row summary:hover{background:var(--raise)}
+.ico{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--lv) 14%,transparent);color:var(--lv)}
+.ico svg{width:18px;height:18px}
+.rt{min-width:0}
+.title{font:650 15.5px/1.3 var(--body);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.title .kind{font-weight:400;color:var(--muted)}
+.what{margin:2px 0 0;color:#b9b9be;font-size:14px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pill{justify-self:end;font:600 12px/1 var(--body);border-radius:999px;padding:6px 10px;white-space:nowrap;
+  color:var(--pc,var(--text));background:color-mix(in srgb,var(--pc,#8e8e93) 14%,transparent);border:1px solid color-mix(in srgb,var(--pc,#8e8e93) 40%,transparent)}
+.pill.r{--pc:#ff6b62}.pill.o{--pc:#ffb340}.pill.g{--pc:#8e8e93}
+.newb{font:600 10.5px/1.6 var(--body);letter-spacing:.06em;color:#ff4d4f;border:1px solid rgba(255,77,79,.55);border-radius:4px;padding:0 5px;margin-right:6px;vertical-align:1px}
+.row[open] .title,.row[open] .what{white-space:normal}
+/* opened row */
+.more{padding:4px 16px 16px 58px;display:flex;flex-direction:column;gap:12px}
+.more p{margin:0;overflow-wrap:anywhere}
+.more,.row summary > div{min-width:0}
+.story{font-size:15.5px;line-height:1.55;color:#e6e6e3;max-width:72ch}
+.story .ai{margin-right:6px}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.fact{background:#111113;border:1px solid var(--line);border-radius:8px;padding:9px 11px;display:flex;flex-direction:column;gap:3px}
+.fact small{color:var(--muted);font-size:12px}
+.fact b{font:700 16px/1.2 var(--body)}
+.fact b.r{color:#ff6b62}.fact b.o{color:#ffb340}
+.fact em{font-style:normal;color:var(--muted);font-size:12px}
+.todo{background:color-mix(in srgb,var(--lv) 8%,#0f0f11);border:1px solid color-mix(in srgb,var(--lv) 35%,var(--line));border-radius:8px;padding:11px 13px;max-width:72ch}
+.todo b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--lv);margin-bottom:3px}
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+.acts a{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:14px;text-decoration:none;color:var(--text)}
+.acts a:hover{border-color:#4a4a50}
+.tech summary{cursor:pointer;color:var(--muted);font-size:13.5px}
+.tech[open] summary{margin-bottom:8px}
+.tech .meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 12px}
+.tech .cve,.tech code{font-family:var(--mono);font-size:12.5px;color:var(--text);overflow-wrap:anywhere}
+.tech p{font-size:13.5px;color:#b9b9be;margin-top:6px}
+.meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:3px 10px;align-items:center}
+.flag{border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:12px;color:var(--text);line-height:1.6}
+.flag.hot{border-color:rgba(255,59,48,.6);color:#ff6b62}
+.score{font:800 21px/1 var(--display);font-stretch:85%;color:var(--lv);font-variant-numeric:tabular-nums;text-align:center}
+.more h3{font:600 12.5px/1.3 var(--body);color:var(--muted);margin:8px 0 0;text-transform:uppercase;letter-spacing:.06em}
+.why{list-style:none;margin:0;padding:0;font-size:14px}
+.why li{display:flex;justify-content:space-between;gap:16px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.why li span{overflow-wrap:anywhere}
+.why li b{font-variant-numeric:tabular-nums;font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px}
+.empty{padding:22px 16px;color:var(--muted);border:1px dashed var(--line);border-radius:8px;list-style:none}
+.morebtn{width:100%;background:none;border:1px dashed var(--line);border-radius:8px;color:var(--muted);
+  font:500 14px/1 var(--body);padding:11px;cursor:pointer}
+.morebtn:hover{color:var(--text);border-color:#4a4a50}
+
+/* views */
+.nav{display:flex;gap:4px;margin-right:auto;margin-left:8px}
+.nav a{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font:500 14px/1 var(--body);
+  color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--text);border-color:#4a4a50}
+.nav a[aria-current="page"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+body:not([data-view="brief"]) .brief-only{display:none !important}
+body:not([data-view="cti"]) #ctiView{display:none}
+body:not([data-view="about"]) #aboutView{display:none}
+body:not([data-view="map"]) #mapView{display:none}
+body:not([data-view="feed"]) #feedView{display:none}
+
+/* CTI view */
+.cti{display:flex;flex-direction:column;gap:10px;padding-top:28px}
+.cti > header{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.cti h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0;text-wrap:balance}
+.cti > header p{margin:0;color:var(--muted);font-size:17px;max-width:65ch}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;
+  display:flex;flex-direction:column;gap:6px}
+.stat b{font:800 34px/1 var(--display);font-stretch:85%;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:14px;line-height:1.35}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.grid2[hidden]{display:none}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;
+  display:flex;flex-direction:column;gap:12px;min-width:0}
+.panel h2{font:800 15px/1.2 var(--display);font-stretch:85%;letter-spacing:.05em;text-transform:uppercase;margin:0}
+.panel .sub{color:var(--muted);font-size:14px;margin:0;max-width:70ch}
+.bars{display:flex;flex-direction:column;gap:9px;list-style:none;margin:0;padding:0}
+.bar{display:grid;grid-template-columns:minmax(0,40%) 1fr 30px;gap:10px;align-items:center;font-size:14.5px}
+.bar .lab{overflow-wrap:anywhere;line-height:1.3}
+.bar .lab small{display:block;color:var(--muted);font-size:12.5px}
+.bar .fill{display:block;height:10px;border-radius:0 4px 4px 0;background:var(--mark);min-width:3px}
+.bar:hover .fill{background:var(--text)}
+.bar .val{text-align:right;font-variant-numeric:tabular-nums}
+.cols{display:flex;align-items:flex-end;gap:2px;height:120px;border-bottom:1px solid var(--line)}
+.cols i{flex:1 1 0;align-self:stretch;display:flex;align-items:flex-end}
+.cols i u{display:block;width:100%;background:var(--mark);border-radius:3px 3px 0 0}
+.cols i:hover u{background:var(--text)}
+.axis{display:flex;justify-content:space-between;color:var(--muted);font-size:12.5px}
+.scroll{overflow-x:auto}
+.dl{width:100%;border-collapse:collapse;font-size:14.5px}
+.dl th{text-align:left;color:var(--muted);font-weight:500;font-size:13px;padding:0 10px 6px 0;white-space:nowrap}
+.dl td{padding:7px 10px 7px 0;border-top:1px dashed var(--line);vertical-align:top}
+.dl .cve{font-family:var(--mono);font-size:13.5px;white-space:nowrap}
+.dl .num{white-space:nowrap;font-variant-numeric:tabular-nums}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lv,var(--line));margin-right:7px}
+.none{color:var(--muted);font-size:14.5px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{border:1px solid var(--line);background:var(--raise);color:var(--text);border-radius:8px;
+  padding:9px 14px;font:500 14px/1.2 var(--body);cursor:pointer;text-decoration:none}
+.btn:hover{border-color:#4a4a50}
+.tip{position:fixed;z-index:20;pointer-events:none;display:none;background:var(--text);color:var(--bg);
+  font-size:13px;line-height:1.3;padding:5px 9px;border-radius:5px;max-width:260px}
+
+/* CTI colour and motion */
+.k-vuln{--mark:var(--vuln)} .k-news{--mark:var(--news)}
+.key{display:flex;flex-wrap:wrap;gap:6px 20px;color:var(--muted);font-size:14px}
+.key span{display:flex;align-items:center;gap:8px}
+.key i{width:12px;height:12px;border-radius:3px;background:var(--mark)}
+.stat{border-top:3px solid var(--mark);transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.stat:hover,.panel:hover{background:#101013}
+.stat:hover{transform:translateY(-2px)}
+.panel{transition:border-color .18s ease,background .18s ease}
+.panel:hover{border-color:#3a3a40}
+.panel h2{display:flex;align-items:center;gap:9px}
+.panel h2::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--mark);flex:none}
+.panel.plain h2::before{background:var(--muted)}
+.bar .fill{background:linear-gradient(90deg,color-mix(in srgb,var(--mark) 55%,#000),var(--mark));
+  transform-origin:left center;animation:growX .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+.bar:hover .fill{background:var(--mark);filter:brightness(1.25)}
+.cols i u{background:linear-gradient(180deg,var(--mark),color-mix(in srgb,var(--mark) 55%,#000));
+  transform-origin:center bottom;animation:growY .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*18ms)}
+.cols i:hover u{background:var(--mark);filter:brightness(1.25)}
+.cti > *{animation:rise .45s ease both}
+.cti > *:nth-child(2){animation-delay:.04s} .cti > *:nth-child(3){animation-delay:.08s}
+.cti > *:nth-child(4){animation-delay:.12s} .cti > *:nth-child(5){animation-delay:.16s}
+.cti > *:nth-child(n+6){animation-delay:.2s}
+.dl tr{transition:background .15s ease} .dl tr:hover td{background:var(--raise)}
+.btn{transition:border-color .15s ease,transform .15s ease} .btn:active{transform:scale(.97)}
+.row,.tile,.chip,.nav a{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .15s ease}
+.tile:hover{transform:translateY(-2px)}
+.rows .row{animation:rise .35s ease both}
+.live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--vuln);margin-right:8px;
+  animation:pulse 2.2s ease-out infinite}
+@keyframes growX{from{transform:scaleX(0)}}
+@keyframes growY{from{transform:scaleY(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--vuln) 70%,transparent)}
+  100%{box-shadow:0 0 0 9px transparent}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+
+/* expandable bar rows */
+.bars > li{display:flex;flex-direction:column;gap:8px}
+button.bar{background:none;border:0;color:inherit;font:inherit;font-size:14.5px;text-align:left;padding:3px 0;margin:0;
+  width:100%;cursor:pointer;grid-template-columns:minmax(0,40%) 1fr 30px 12px;border-radius:4px}
+button.bar .car{color:var(--muted);transition:transform .15s ease;text-align:center}
+button.bar[aria-expanded="true"] .car{transform:rotate(90deg)}
+.stories{list-style:none;margin:0 0 6px;padding:4px 0 4px 14px;border-left:2px solid var(--mark);
+  display:flex;flex-direction:column;gap:12px;font-size:14.5px}
+.stories[hidden]{display:none}
+.stories li{display:flex;flex-direction:column;gap:3px;animation:rise .25s ease both}
+.st-title{line-height:1.35;overflow-wrap:anywhere}
+.st-src{display:flex;flex-wrap:wrap;gap:2px 14px;color:var(--muted);font-size:13px}
+.st-src a{color:var(--muted)} .st-src a:hover{color:var(--text)}
+
+/* tables that stack into cards on phones */
+@media (max-width:640px){
+  .stack tr:first-child{display:none}
+  .stack tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:11px 0;border-top:1px dashed var(--line)}
+  .stack td{border:0;padding:0}
+  .stack td:last-child{flex-basis:100%;color:#c9c9ce}
+  .stack tr:hover td{background:none}
+}
+
+/* Map view */
+.mapv{display:flex;flex-direction:column;gap:10px;padding-top:28px;padding-bottom:8px}
+.mapv > *{animation:rise .45s ease both}
+.mapv > header{display:flex;flex-direction:column;gap:12px;margin-bottom:10px}
+.mapv h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0;text-wrap:balance}
+.mapv > header p{margin:0;color:var(--muted);font-size:17px;max-width:65ch}
+.mapbar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between}
+.mapstat{color:var(--muted);font-size:14.5px}
+.mapstat b{color:var(--text);font-variant-numeric:tabular-nums}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px;align-items:start}
+.globebox{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  background:radial-gradient(circle at 50% 46%,#0b1a20 0%,#04080a 55%,#000 100%)}
+#globe{height:540px;cursor:grab;touch-action:none}
+#globe:active{cursor:grabbing}
+#globeMsg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:24px;color:var(--muted);font-size:14.5px;pointer-events:none}
+.globebox.ready #globeMsg{display:none}
+.legend{position:absolute;left:14px;bottom:12px;display:flex;align-items:center;gap:8px;color:var(--muted);
+  font-size:12.5px;pointer-events:none}
+.legend i{width:110px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--geo-low),var(--geo))}
+.hint{position:absolute;right:14px;bottom:12px;color:var(--muted);font-size:12.5px;pointer-events:none}
+.side{display:flex;flex-direction:column;gap:10px;min-width:0}
+.rank{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.rank button{display:grid;grid-template-columns:22px minmax(0,1fr) 70px 34px;gap:10px;align-items:center;width:100%;
+  background:none;border:0;color:inherit;font:inherit;font-size:14.5px;text-align:left;padding:6px 8px;border-radius:6px;cursor:pointer}
+.rank button:hover{background:var(--raise)}
+.rank button[aria-pressed="true"]{background:var(--raise);box-shadow:inset 3px 0 0 var(--geo)}
+.rank .pos{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.rank .nm{overflow-wrap:anywhere;line-height:1.25}
+.rank .fill{display:block;height:8px;border-radius:0 4px 4px 0;min-width:3px;
+  background:linear-gradient(90deg,var(--geo-low),var(--geo));transform-origin:left center;
+  animation:growX .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*30ms)}
+.rank .val{text-align:right;font-variant-numeric:tabular-nums}
+.k-geo{--mark:var(--geo)}
+.detail h3{font:800 22px/1.15 var(--display);font-stretch:85%;margin:0}
+.detail .big{font:800 34px/1 var(--display);font-stretch:85%;font-variant-numeric:tabular-nums}
+.detail .big small{font:400 14px/1.3 var(--body);color:var(--muted);margin-left:8px}
+.detail h4{font:600 13px/1.3 var(--body);color:var(--muted);margin:6px 0 0;text-transform:uppercase;letter-spacing:.06em}
+.detail .tags{display:flex;flex-wrap:wrap;gap:6px}
+.detail .tags span{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:13.5px}
+.detail .tags span b{font-weight:600;margin-left:6px;color:var(--muted)}
+.scene-tooltip{font-family:var(--body) !important}
+.gl-tip{background:var(--text);color:var(--bg);font-size:13px;line-height:1.35;padding:5px 9px;border-radius:5px}
+@media (max-width:760px){ .mapgrid{grid-template-columns:1fr} #globe{height:360px} .hint{display:none} }
+
+/* Latest claims ticker: one row that moves slowly from right to left.
+   The list is drawn twice side by side; moving it by exactly half its width
+   lands on an identical picture, so the loop has no visible jump. */
+.ticker{display:flex;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;
+  overflow:hidden;min-height:46px}
+.ticker[hidden]{display:none}
+.tk-label{flex:none;display:flex;align-items:center;gap:9px;padding:0 14px;border-right:1px solid var(--line);
+  font:800 12.5px/1 var(--display);font-stretch:85%;letter-spacing:.08em;text-transform:uppercase;background:#101013;white-space:nowrap}
+.tk-label i{width:8px;height:8px;border-radius:50%;background:#ff4d4f;animation:livedot 1.6s ease-out infinite}
+.tk-view{flex:1 1 auto;min-width:0;overflow:hidden;display:flex;align-items:center;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 36px,#000 calc(100% - 36px),transparent 100%);
+          mask-image:linear-gradient(90deg,transparent 0,#000 36px,#000 calc(100% - 36px),transparent 100%)}
+.tk-track{display:flex;width:max-content;animation:tk var(--dur,60s) linear infinite}
+.ticker:hover .tk-track,.ticker:focus-within .tk-track,.ticker.paused .tk-track{animation-play-state:paused}
+.tk-item{display:flex;align-items:center;gap:8px;padding:0 18px;white-space:nowrap;font-size:14px;color:#c9c9ce;
+  border-right:1px solid var(--line);height:44px}
+.tk-item b{font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.tk-item .cc{font:500 11.5px/1 var(--mono);color:var(--geo);border:1px solid #1d4450;border-radius:4px;padding:3px 5px}
+.tk-item .new{width:6px;height:6px;border-radius:50%;background:#ff4d4f;flex:none}
+.tk-item .linkbtn{color:var(--text);font-weight:600}
+.tk-pause{flex:none;border:0;border-left:1px solid var(--line);background:#101013;color:var(--muted);width:44px;cursor:pointer;font-size:14px}
+.tk-pause:hover{color:var(--text)}
+@keyframes tk{to{transform:translateX(-50%)}}
+@keyframes livedot{0%{box-shadow:0 0 0 0 rgba(255,77,79,.7)}100%{box-shadow:0 0 0 8px rgba(255,77,79,0)}}
+@media (prefers-reduced-motion:reduce){ .tk-view{overflow-x:auto;-webkit-mask-image:none;mask-image:none} .tk-pause{display:none} }
+@media (max-width:640px){ .tk-label span{display:none} .tk-label{padding:0 12px} }
+
+/* ---------- Feed ----------
+   Layout: an activity strip and numbers on top, the AI themes as cards,
+   then a right-hand rail ("Don't miss" + "Trending") beside a compact stream
+   grouped by time. On phones the rail comes first, above the stream.
+   Every post follows X's display rules: picture left of name and @username,
+   X logo top right, text below, the time linking to the post on X. */
+.feedv{display:flex;flex-direction:column;gap:16px;padding-top:24px;padding-bottom:8px}
+.fhead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 24px}
+.fhead h1{font:800 clamp(26px,4.6vw,40px)/1.05 var(--display);font-stretch:85%;margin:0}
+.fhead p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:52ch}
+.pulse{display:flex;flex-direction:column;gap:5px;min-width:220px;flex:0 1 300px}
+.pulse .pbars{display:flex;align-items:flex-end;gap:2px;height:42px}
+.pulse .pbars i{flex:1 1 0;align-self:stretch;display:flex;align-items:flex-end}
+.pulse .pbars u{display:block;width:100%;min-height:2px;border-radius:2px 2px 0 0;background:linear-gradient(180deg,#5aa2f0,#1f4f86);
+  transform-origin:bottom;animation:growY .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*15ms)}
+.pulse .pbars i.hot u{background:linear-gradient(180deg,#ff6b62,#7a1d18)}
+.pulse .pbars i:hover u{filter:brightness(1.3)}
+.pulse .cap{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+
+.fblk{display:flex;flex-direction:column;gap:10px}
+.fblk[hidden]{display:none}
+.fblkh{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.fblkh h2{font:800 14px/1.2 var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;margin:0;display:flex;align-items:center;gap:8px}
+.fblkh small{color:var(--muted);font-size:13px}
+.ov{margin:0;font-size:16px;line-height:1.45;font-weight:500;max-width:75ch}
+
+/* AI theme cards */
+.tcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.tcard{width:100%;height:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:7px;
+  background:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--lv) 12%,transparent),transparent 60%),#0e0e10;
+  border:1px solid var(--line);border-radius:12px;padding:14px;position:relative;transition:border-color .15s ease,transform .15s ease}
+.tcard:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--lv) 55%,#3a3a40)}
+.tcard .th{display:flex;align-items:baseline;gap:9px}
+.tcard .no{font:800 20px/1 var(--display);font-stretch:85%;color:var(--lv)}
+.tcard .tt{font:600 15.5px/1.3 var(--body)}
+.tcard .ts{color:#c9c9ce;font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tcard .tf{display:flex;align-items:center;gap:10px;margin-top:auto;color:var(--muted);font-size:12.5px}
+.faces{display:flex}
+.faces img,.faces span{width:22px;height:22px;border-radius:50%;border:2px solid #0e0e10;margin-left:-6px;object-fit:cover;background:var(--raise);
+  display:inline-flex;align-items:center;justify-content:center;font:600 9px/1 var(--mono);color:var(--muted)}
+.faces > :first-child{margin-left:0}
+.tcard .cv{font:400 12px/1.5 var(--mono);border:1px solid var(--line);border-radius:4px;padding:0 6px;color:var(--text)}
+.tcard .cv.exp{border-color:rgba(255,59,48,.6);color:#ff6b62}
+
+.fgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}
+.frail{grid-column:2;grid-row:1;position:sticky;top:12px;display:flex;flex-direction:column;gap:18px;max-height:calc(100vh - 24px);overflow:auto;scrollbar-width:thin}
+.fmain{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:10px;min-width:0}
+
+/* Don't miss */
+.plist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.why2{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 4px}
+.why2 span{font:600 10.5px/1.6 var(--body);letter-spacing:.05em;text-transform:uppercase;color:var(--lv,#ff6b62);
+  border:1px solid color-mix(in srgb,var(--lv,#ff6b62) 55%,transparent);border-radius:4px;padding:0 5px}
+
+/* Trending */
+.trend{display:flex;flex-wrap:wrap;gap:6px}
+.tchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--text);
+  border-radius:999px;padding:6px 11px;font:500 13px/1 var(--body);cursor:pointer}
+.tchip:hover{border-color:#4a4a50}
+.tchip.cvechip{font-family:var(--mono);font-size:12px}
+.tchip.exp{border-color:rgba(255,59,48,.55);color:#ff6b62}
+.tchip b{color:var(--muted);font-weight:600;font-family:var(--body)}
+
+/* sticky filter bar inside the stream column */
+.fbar{position:sticky;top:0;z-index:4;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);display:flex;flex-wrap:wrap;gap:8px;
+  align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.fbar .search{max-width:220px}
+.feedx{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13.5px}
+.feedx svg{width:13px;height:13px;color:var(--text)}
+
+/* compact posts */
+.stream{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.tgroup{list-style:none;display:flex;align-items:center;gap:10px;color:var(--muted);font:600 12px/1 var(--body);letter-spacing:.07em;
+  text-transform:uppercase;padding:10px 0 2px}
+.tgroup::after{content:"";flex:1;height:1px;background:var(--line)}
+.tgroup b{font-weight:600;color:var(--text)}
+.cp{position:relative;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--lv,var(--line));border-radius:10px;
+  padding:10px 12px 9px;display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 10px;animation:rise .3s ease both}
+.cp:hover{border-color:#3a3a40;border-left-color:var(--lv,#3a3a40)}
+.cp .pic{grid-row:1 / span 2;grid-column:1;width:36px;height:36px;border-radius:50%;overflow:hidden;display:block;background:var(--raise);text-decoration:none}
+.cp .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.cp .pic span{display:flex;width:100%;height:100%;align-items:center;justify-content:center;font:600 12px/1 var(--mono);color:var(--muted)}
+.cp .cph,.cp .ctx,.cp .ptags,.cp .cpf,.cp .why2,.cp .clampbtn{grid-column:2}
+.cp .cph{display:flex;align-items:baseline;gap:2px 7px;min-width:0;padding-right:24px;font-size:14px;white-space:nowrap;overflow:hidden}
+.cp .cph a{text-decoration:none}
+.cp .nm{font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;flex:0 1 auto;min-width:0}
+.cp .hd,.cp .tm{color:var(--muted);flex:none}
+.cp .nm:hover,.cp .hd:hover,.cp .tm:hover{text-decoration:underline}
+.cp .xlogo{position:absolute;top:11px;right:12px;width:13px;height:13px;color:var(--text);opacity:.8}
+.cp .xlogo svg{width:100%;height:100%;display:block}
+.cp .ctx{margin:1px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14.5px;line-height:1.45;color:#e6e6e3}
+.cp .ctx.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cp .ctx a{color:#6cb6ff;text-decoration:none} .cp .ctx a:hover{text-decoration:underline}
+.cp .clampbtn{justify-self:start;background:none;border:0;padding:0;color:#6cb6ff;font:500 13px/1.6 var(--body);cursor:pointer}
+.cp .ptags{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.cp .ptags a,.cp .ptags span{font-size:12px;border:1px solid var(--line);border-radius:4px;padding:0 6px;text-decoration:none;color:var(--text);line-height:1.6}
+.cp .ptags .cvex{font-family:var(--mono)}
+.cp .ptags .exp{border-color:rgba(255,59,48,.6);color:#ff6b62}
+.cp .cpf{display:flex;gap:12px;font-size:12.5px;color:var(--muted);margin-top:3px}
+.cp .cpf a{color:var(--muted)} .cp .cpf a:hover{color:var(--text)}
+.cp .cat{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cp.mini .ctx.clamp{-webkit-line-clamp:2}
+.cp.mini .cph{flex-wrap:wrap;white-space:normal}
+.controls .search{flex:1 1 150px;min-width:0}
+
+/* full post (used in the theme window): same rules, more room */
+.posts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.post{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 12px;
+  display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px}
+.post .pic{grid-row:1 / span 2;grid-column:1;width:44px;height:44px;border-radius:50%;overflow:hidden;display:block;background:var(--raise);text-decoration:none}
+.post .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.post .pic span{display:flex;width:100%;height:100%;align-items:center;justify-content:center;font:600 14px/1 var(--mono);color:var(--muted)}
+.post .who,.post .txt,.post .ptags,.post .pfoot{grid-column:2}
+.post .who{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding-right:30px;min-width:0}
+.post .who a{text-decoration:none}
+.post .who .nm{font-weight:600;color:var(--text)}
+.post .who .hd{color:var(--muted);font-size:14px}
+.post .cat{font-size:11px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.post .xlogo{position:absolute;top:14px;right:14px;width:15px;height:15px;color:var(--text);opacity:.85}
+.post .xlogo svg{width:100%;height:100%;display:block}
+.post .txt{margin:2px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.5;color:#e6e6e3}
+.post .txt a{color:#6cb6ff;text-decoration:none}
+.post .ptags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.post .ptags a,.post .ptags span{font-size:12px;border:1px solid var(--line);border-radius:4px;padding:1px 7px;text-decoration:none;color:var(--text)}
+.post .ptags .cvex{font-family:var(--mono)}
+.post .ptags .exp{border-color:var(--red);color:var(--red)}
+.post .pfoot{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px;font-size:13px;color:var(--muted)}
+.post .pfoot a{color:var(--muted)}
+
+/* the theme window reuses the group pop-up, wider */
+.bubble.wide{width:min(660px,100%);max-height:min(90vh,820px)}
+.bubble .lvpill{align-self:flex-start;font:600 11px/1.6 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--lv);
+  border:1px solid color-mix(in srgb,var(--lv) 55%,transparent);border-radius:999px;padding:1px 9px}
+
+.follow summary{cursor:pointer;color:var(--muted);font-size:14px}
+.follow ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.follow li a{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;text-decoration:none;color:var(--text)}
+
+@media (max-width:860px){
+  .fgrid{grid-template-columns:minmax(0,1fr)}
+  .frail{grid-column:1;grid-row:auto;position:static;max-height:none;overflow:visible}
+  .fmain{grid-column:1;grid-row:auto}
+}
+@media (max-width:640px){
+  .pickrow,.tcards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -20px;padding:0 20px 6px;scrollbar-width:none}
+  .pickrow::-webkit-scrollbar,.tcards::-webkit-scrollbar{display:none}
+  .pickrow > li,.tcards > li{flex:0 0 84%;scroll-snap-align:start}
+  .pulse{flex-basis:100%}
+  .row summary{grid-template-columns:30px minmax(0,1fr);padding:10px 12px 10px 10px;align-items:start}
+  .ico{width:30px;height:30px}
+  .pill{grid-column:2;justify-self:start;margin-top:4px;padding:5px 9px}
+  .what{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .row[open] .what{display:block}
+  .title{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .row[open] .title{display:block}
+  .more{padding:2px 12px 14px}
+  .kpis{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px}
+  .kpi{flex-direction:column;align-items:flex-start;gap:4px;padding:10px 10px 10px 12px}
+  .kpi span{font-size:12.5px;line-height:1.25}
+  .top h1 small{font-size:13.5px}
+  .pickrow,.tcards{scroll-padding-inline:20px}
+  .controls .search,.fbar .search{max-width:none;margin-left:0}
+  .kpi.zero,.pickhead small{display:none}
+  .kpi b{font-size:22px}
+}
+
+/* site footer (shown on every tab) */
+.site{border-top:1px solid var(--line);margin-top:28px;background:#050506;color:var(--muted);font-size:14px}
+.sitein{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:22px 34px;padding-top:30px;padding-bottom:26px}
+.site .brand .logo{height:38px}
+.site p{margin:10px 0 0;max-width:34ch;line-height:1.5}
+.site h3{font:600 12.5px/1.3 var(--body);text-transform:uppercase;letter-spacing:.07em;color:var(--text);margin:0 0 10px}
+.site ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.site a{color:var(--muted);text-decoration:none} .site a:hover{color:var(--text);text-decoration:underline}
+.legal{border-top:1px solid var(--line);padding-top:14px;padding-bottom:22px;display:flex;flex-wrap:wrap;gap:6px 18px;
+  justify-content:space-between;font-size:13px}
+@media (max-width:640px){ .sitein{grid-template-columns:1fr 1fr} .sitein > div:first-child{grid-column:1 / -1} }
+
+/* the "who is behind it" block on the About page */
+.me img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid var(--line);margin-top:4px}
+.me img[hidden]{display:none}
+.me h2{border:0;padding:0}
+.me p{font-size:16.5px}
+
+/* extra ransomware panels under the globe */
+#ransomExtra{display:flex;flex-direction:column;gap:10px}
+#ransomExtra[hidden]{display:none}
+.detail .about{margin:0;border:0;padding:0;color:#c9c9ce;font-size:15px;line-height:1.5}
+.detail .hits{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:14px;color:#c9c9ce}
+.detail .hits b{color:var(--text);font-weight:500;font-variant-numeric:tabular-nums;margin-right:8px}
+.detail .out{font-size:14px}
+
+/* the group "bubble": a small window that pops up over the page */
+.veil{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.66);backdrop-filter:blur(3px);
+  display:flex;align-items:center;justify-content:center;padding:18px;animation:veilIn .18s ease both}
+.veil[hidden]{display:none}
+.bubble{position:relative;width:min(440px,100%);max-height:min(86vh,640px);overflow:auto;background:#0e1114;
+  border:1px solid #2b3742;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px;
+  box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 0 1px rgba(53,224,255,.08);animation:pop .26s cubic-bezier(.2,.9,.3,1.2) both}
+.bubble .x{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
+  background:var(--raise);color:var(--text);font-size:18px;line-height:1;cursor:pointer}
+/* Group badge: the hexagon from the Vulforce logo, drawn as an outline, with
+   the group's first two letters inside. Same look for every group. */
+.detail .head{display:flex;align-items:center;gap:14px}
+.bubble .head{padding-right:40px}
+.detail .head > div{min-width:0}
+.avatar{flex:none;position:relative;width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  font:600 14px/1 var(--mono);letter-spacing:.02em;text-transform:uppercase;color:var(--text)}
+.avatar svg{position:absolute;inset:0;width:100%;height:100%}
+.avatar polygon{fill:#0f1a1e;stroke:var(--geo);stroke-width:6;stroke-linejoin:round;opacity:.9}
+.avatar span{position:relative}
+.bubble h3{font:800 22px/1.15 var(--display);font-stretch:85%;margin:0;overflow-wrap:anywhere}
+.detail .kind{color:var(--muted);font-size:13.5px}
+.detail .tags button{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font:inherit;font-size:13.5px;
+  background:none;color:inherit;cursor:pointer}
+.detail .tags button:hover{border-color:var(--geo)}
+.detail .tags button b{font-weight:600;margin-left:6px;color:var(--muted)}
+.linkbtn{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;
+  text-decoration-color:var(--muted);text-underline-offset:3px}
+@keyframes veilIn{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.94)}}
+
+/* printable summary: hidden on screen, the only thing shown when printing */
+#report{display:none}
+@media print{
+  @page{margin:15mm}
+  html,body{background:#fff !important;color:#000 !important}
+  body > *:not(#report){display:none !important}
+  #report{display:block !important;font:10.5pt/1.4 "IBM Plex Sans",Arial,sans-serif;color:#000}
+  #report h1{font:700 22pt/1.1 "IBM Plex Sans",Arial,sans-serif;margin:0 0 2pt}
+  #report .when{color:#444;margin:0 0 12pt}
+  #report h2{font:700 12pt/1.2 "IBM Plex Sans",Arial,sans-serif;margin:16pt 0 6pt;padding-bottom:3pt;border-bottom:1pt solid #000;break-after:avoid}
+  #report p{margin:0 0 6pt}
+  #report table{width:100%;border-collapse:collapse;font-size:9pt}
+  #report th{text-align:left;font-weight:700;border-bottom:.75pt solid #000;padding:3pt 8pt 3pt 0}
+  #report td{border-bottom:.5pt solid #bbb;padding:3pt 8pt 3pt 0;vertical-align:top}
+  #report tr{break-inside:avoid}
+  #report .small{font-size:8.5pt;color:#333}
+  #report .cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 18pt}
+}
+
+/* AI text */
+.ai{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:0 6px;margin-right:8px;
+  font:500 11.5px/1.6 var(--body);letter-spacing:.04em;color:var(--muted);vertical-align:1px;white-space:nowrap}
+.more .sum{color:#e6e6e3;font-size:15px;line-height:1.5}
+.st-sum{color:#c9c9ce;font-size:13.5px;line-height:1.4}
+
+/* About page */
+.page{display:flex;flex-direction:column;gap:30px;padding-top:28px;padding-bottom:48px}
+.page > *{animation:rise .45s ease both}
+.page h1{font:800 clamp(28px,5vw,44px)/1.05 var(--display);font-stretch:85%;margin:0 0 12px;text-wrap:balance}
+.page .biglogo{display:block;height:84px;width:auto;margin:6px 0 22px}
+@media (max-width:640px){ .page .biglogo{height:62px} }
+.page .lead{font-size:18px;color:var(--text);max-width:62ch;margin:0}
+.page section{display:flex;flex-direction:column;gap:12px;max-width:760px}
+.page h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.05em;text-transform:uppercase;margin:0;
+  padding-top:22px;border-top:1px solid var(--line)}
+.page p,.page li{color:#c9c9ce;margin:0;max-width:68ch}
+.page ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.page .dl td:first-child{color:var(--text);font-weight:500;white-space:nowrap;padding-right:18px}
+.page .dl td{color:#c9c9ce}
+.page .dl .num{text-align:right;color:var(--text)}
+.page ul:has(.swatch){list-style:none;padding-left:0}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--lv);margin-right:8px}
+
+/* footer */
+.about{margin-top:40px;border-top:1px solid var(--line);padding:28px 20px 36px;color:var(--muted);font-size:15px}
+.about h2{font:800 16px/1.2 var(--display);font-stretch:85%;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--text);margin:0 0 10px}
+.about .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;height:auto;border-bottom:0;align-items:start}
+.about .col{display:flex;flex-direction:column;gap:22px}
+.about p{margin:0}
+.about ul{margin:0;padding-left:18px}
+.about li{margin-bottom:6px}
+.srcrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding-top:12px;font-size:12.5px;color:var(--muted)}
+.srcrow > b{font-weight:600;color:var(--text);font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+.src{display:flex;flex-wrap:wrap;gap:4px 14px}
+.src span{display:flex;align-items:center;gap:7px}
+.src span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.src span.down::before{background:var(--red)}
+
+@media (max-width:640px){
+  .more{padding-left:14px}
+  .about .cols{grid-template-columns:1fr}
+  .updated{font-size:13px}
+  .bar,button.bar{grid-template-columns:minmax(0,46%) 1fr 30px}
+  button.bar{grid-template-columns:minmax(0,46%) 1fr 30px 12px}
+  .stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+  .nav{margin-left:0}
+  .brand .logo{height:38px}
+  .site .brand .logo{height:34px}
+}
+@media (prefers-reduced-motion:reduce){.caret{transition:none}}
+</style>
+</head>
+<body data-view="brief">
+<div class="wrap">
+  <header class="mast">
+    <a class="brand" href="#brief" aria-label="Vulforce home"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 120" role="img" aria-label="Vulforce"><g transform="translate(0,0)"><polygon points="60,8 105,34 105,86 60,112 15,86 15,34" fill="none" stroke="#F2F4F7" stroke-width="7" stroke-linejoin="round"/><line x1="38" y1="38" x2="55" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><line x1="82" y1="38" x2="65" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><circle cx="60" cy="84" r="8" fill="#FF4D4F"/><path d="M160.54 83.1 149.584 50.56199999999999H156.778L165.424 78.08399999999999H166.48L175.126 50.56199999999999H182.32L171.364 83.1Z M200.074 83.69399999999999Q196.37800000000001 83.69399999999999 193.474 82.04399999999998Q190.57 80.39399999999999 188.92000000000002 77.35799999999999Q187.27 74.32199999999999 187.27 70.098V50.56199999999999H194.068V69.636Q194.068 73.86 196.18 75.87299999999999Q198.292 77.886 202.054 77.886Q206.212 77.886 208.753 75.08099999999999Q211.294 72.276 211.294 66.996V50.56199999999999H218.092V83.1H211.42600000000002V78.216H210.37Q209.446 80.196 207.07 81.945Q204.69400000000002 83.69399999999999 200.074 83.69399999999999Z M226.804 83.1V36.89999999999999H233.602V83.1Z M247.39600000000002 83.1V57.227999999999994H239.08V50.36399999999999H247.39600000000002V44.291999999999994Q247.39600000000002 40.925999999999995 249.409 38.913Q251.422 36.89999999999999 254.656 36.89999999999999H263.236V43.763999999999996H257.56Q255.71200000000002 43.763999999999996 255.71200000000002 45.74399999999999V50.36399999999999H264.29200000000003V57.227999999999994H255.71200000000002V83.1Z M285.016 84.024Q280.132 84.024 276.238 82.044Q272.344 80.064 270.1 76.30199999999999Q267.856 72.53999999999999 267.856 67.25999999999999V66.204Q267.856 60.92399999999999 270.1 57.16199999999999Q272.344 53.39999999999999 276.238 51.41999999999999Q280.132 49.43999999999999 285.016 49.43999999999999Q289.9 49.43999999999999 293.794 51.41999999999999Q297.688 53.39999999999999 299.932 57.16199999999999Q302.176 60.92399999999999 302.176 66.204V67.25999999999999Q302.176 72.53999999999999 299.932 76.30199999999999Q297.688 80.064 293.794 82.044Q289.9 84.024 285.016 84.024ZM285.016 76.63199999999999Q288.844 76.63199999999999 291.352 74.15699999999998Q293.86 71.68199999999999 293.86 67.062V66.40199999999999Q293.86 61.782 291.385 59.306999999999995Q288.90999999999997 56.831999999999994 285.016 56.831999999999994Q281.188 56.831999999999994 278.67999999999995 59.306999999999995Q276.17199999999997 61.782 276.17199999999997 66.40199999999999V67.062Q276.17199999999997 71.68199999999999 278.67999999999995 74.15699999999998Q281.188 76.63199999999999 285.016 76.63199999999999Z M308.512 83.1V50.36399999999999H316.69599999999997V54.05999999999999H317.884Q318.61 52.07999999999999 320.293 51.15599999999999Q321.976 50.23199999999999 324.21999999999997 50.23199999999999H328.18V57.623999999999995H324.088Q320.92 57.623999999999995 318.874 59.306999999999995Q316.828 60.989999999999995 316.828 64.488V83.1Z M348.70599999999996 84.024Q343.95399999999995 84.024 340.09299999999996 82.044Q336.23199999999997 80.064 333.98799999999994 76.30199999999999Q331.74399999999997 72.53999999999999 331.74399999999997 67.19399999999999V66.27Q331.74399999999997 60.92399999999999 333.98799999999994 57.16199999999999Q336.23199999999997 53.39999999999999 340.09299999999996 51.41999999999999Q343.95399999999995 49.43999999999999 348.70599999999996 49.43999999999999Q353.392 49.43999999999999 356.758 51.08999999999999Q360.12399999999997 52.739999999999995 362.203 55.61099999999999Q364.282 58.48199999999999 364.94199999999995 62.111999999999995L356.89 63.82799999999999Q356.626 61.84799999999999 355.702 60.263999999999996Q354.77799999999996 58.67999999999999 353.09499999999997 57.75599999999999Q351.412 56.831999999999994 348.904 56.831999999999994Q346.39599999999996 56.831999999999994 344.3829999999999 57.92099999999999Q342.36999999999995 59.00999999999999 341.2149999999999 61.154999999999994Q340.05999999999995 63.3 340.05999999999995 66.40199999999999V67.062Q340.05999999999995 70.16399999999999 341.2149999999999 72.309Q342.36999999999995 74.454 344.3829999999999 75.54299999999999Q346.39599999999996 76.63199999999999 348.904 76.63199999999999Q352.666 76.63199999999999 354.61299999999994 74.685Q356.55999999999995 72.738 357.08799999999997 69.57L365.14 71.484Q364.282 74.982 362.203 77.853Q360.12399999999997 80.72399999999999 356.758 82.374Q353.392 84.024 348.70599999999996 84.024Z M385.59999999999997 84.024Q380.71599999999995 84.024 376.98699999999997 81.945Q373.258 79.866 371.179 76.071Q369.09999999999997 72.276 369.09999999999997 67.12799999999999V66.336Q369.09999999999997 61.18799999999999 371.14599999999996 57.39299999999999Q373.19199999999995 53.59799999999999 376.8879999999999 51.51899999999999Q380.58399999999995 49.43999999999999 385.46799999999996 49.43999999999999Q390.28599999999994 49.43999999999999 393.84999999999997 51.584999999999994Q397.414 53.72999999999999 399.394 57.52499999999999Q401.37399999999997 61.31999999999999 401.37399999999997 66.336V69.17399999999999H377.54799999999994Q377.67999999999995 72.53999999999999 380.0559999999999 74.65199999999999Q382.43199999999996 76.764 385.864 76.764Q389.36199999999997 76.764 391.01199999999994 75.246Q392.662 73.728 393.52 71.88L400.318 75.44399999999999Q399.39399999999995 77.16 397.645 79.173Q395.89599999999996 81.18599999999999 392.99199999999996 82.60499999999999Q390.08799999999997 84.024 385.59999999999997 84.024ZM377.614 62.96999999999999H392.926Q392.662 60.13199999999999 390.649 58.41599999999999Q388.63599999999997 56.69999999999999 385.402 56.69999999999999Q382.03599999999994 56.69999999999999 380.0559999999999 58.41599999999999Q378.07599999999996 60.13199999999999 377.614 62.96999999999999Z" fill="#F2F4F7"/></g></svg></a>
+    <nav class="nav" aria-label="Views">
+      <a href="#brief" id="navBrief" aria-current="page">Brief</a>
+      <a href="#cti" id="navCti">CTI</a>
+      <a href="#map" id="navMap">Map</a>
+      <a href="#feed" id="navFeed">Feed</a>
+      <a href="#about" id="navAbout">About</a>
+    </nav>
+    <div class="updated" id="updated">Loading</div>
+  </header>
+
+  <section class="top brief-only">
+    <h1 id="headline">Today's threats, ranked<small id="note"></small></h1>
+    <noscript><p>Vulforce lists the vulnerabilities attackers are exploiting right now, from the CISA Known Exploited Vulnerabilities catalogue, ranked with CVSS and EPSS, alongside security news and ransomware activity. Turn on JavaScript to see today's list.</p></noscript>
+    <div class="kpis" id="kpis" aria-label="Today at a glance"></div>
+    <section class="picks" id="today" hidden aria-label="What matters today">
+      <div class="pickhead"><span class="ai">AI</span>What matters today <small>tap a card to find it below</small></div>
+      <ol class="pickrow" id="todayList"></ol>
+    </section>
+  </section>
+</div>
+
+<div class="brief-only">
+<div class="controls brief-only">
+  <div class="wrap">
+    <div class="mix" id="mix" aria-hidden="true"></div>
+    <div class="lvtabs" id="lvtabs" role="group" aria-label="Risk level"></div>
+    <div class="chips" id="chips">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">All types</button>
+      <button class="chip" type="button" data-f="vuln" aria-pressed="false">Vulnerabilities</button>
+      <button class="chip" type="button" data-f="news" aria-pressed="false">News</button>
+    </div>
+    <span class="picked" id="briefPicked" hidden><span id="briefPickedTxt"></span><button type="button" id="briefPickedX" aria-label="Clear this filter">&times;</button></span>
+    <input class="search" id="q" type="search" placeholder="Search CVE, vendor or keyword" aria-label="Search">
+  </div>
+</div>
+
+<main class="wrap brief-only" id="list"></main>
+</div>
+
+<section class="wrap cti" id="ctiView" aria-label="CTI view">
+  <header>
+    <h1>CTI workbench</h1>
+    <p>Everything the collector gathered in the last run, counted and grouped: what is being exploited, who is affected, what the news is about and what to patch first.</p>
+  </header>
+  <div class="key" aria-label="Colour key"><span class="k-vuln"><i></i>Vulnerability data (CISA, EPSS)</span><span class="k-news"><i></i>News data (feeds)</span></div>
+  <div class="stats" id="cStats"></div>
+  <section class="panel k-vuln">
+    <h2>New exploited vulnerabilities per day</h2>
+    <p class="sub" id="cTimeSub"></p>
+    <div class="cols" id="cTime"></div>
+    <div class="axis" id="cTimeAxis"></div>
+  </section>
+  <div class="grid2">
+    <section class="panel k-vuln">
+      <h2>Severity (CVSS)</h2>
+      <p class="sub">How bad each flaw is if exploited, on the 0 to 10 CVSS scale. Tap a row to see the vulnerabilities.</p>
+      <ul class="bars" id="cSeverity"></ul>
+    </section>
+    <section class="panel k-vuln">
+      <h2>Exploitation likelihood (EPSS)</h2>
+      <p class="sub">Predicted chance of exploitation in the next 30 days. Tap a row to see the vulnerabilities.</p>
+      <ul class="bars" id="cEpss"></ul>
+    </section>
+  </div>
+  <div class="grid2">
+    <section class="panel k-vuln">
+      <h2>Most affected vendors</h2>
+      <p class="sub">Entries added to CISA's exploited list in the window, by vendor. Tap a vendor to see them.</p>
+      <ul class="bars" id="cVendors"></ul>
+    </section>
+    <section class="panel k-vuln">
+      <h2>Weakness types</h2>
+      <p class="sub">The CWE classes behind those entries. One entry can have several. Tap a row to see them.</p>
+      <ul class="bars" id="cCwes"></ul>
+    </section>
+  </div>
+  <section class="panel k-vuln">
+    <h2>Patch deadlines coming up</h2>
+    <p class="sub">CISA's due dates for US federal agencies. A reasonable default if you have no deadline of your own.</p>
+    <div class="scroll"><table class="dl stack" id="cDue"></table></div>
+  </section>
+  <div class="grid2">
+    <section class="panel k-news">
+      <h2>What the news is about</h2>
+      <p class="sub" id="cSigSub"></p>
+      <ul class="bars" id="cSignals"></ul>
+    </section>
+    <section class="panel k-news">
+      <h2>Actors and malware named</h2>
+      <p class="sub">Watchlist names found in news text. Tap a row to see the stories and their sources.</p>
+      <ul class="bars" id="cActors"></ul>
+    </section>
+  </div>
+  <div class="grid2" id="cAiRow" hidden>
+    <section class="panel k-news">
+      <h2>Sectors in the news</h2>
+      <p class="sub"><span class="ai">AI</span>The main affected sector, read from each story by Claude.</p>
+      <ul class="bars" id="cSectors"></ul>
+    </section>
+    <section class="panel k-news">
+      <h2>ATT&amp;CK tactics in the news</h2>
+      <p class="sub"><span class="ai">AI</span>The best-fitting MITRE ATT&amp;CK tactic per story. Approximate.</p>
+      <ul class="bars" id="cTactics"></ul>
+    </section>
+  </div>
+  <section class="panel k-news">
+    <h2>All stories by source</h2>
+    <p class="sub">Every story collected in this run. Tap a source to read its headlines and open the originals.</p>
+    <ul class="bars" id="cSources"></ul>
+  </section>
+  <section class="panel k-news">
+    <h2>CVEs in the news</h2>
+    <p class="sub">CVE IDs mentioned in collected stories, and whether CISA lists them as exploited.</p>
+    <div class="scroll"><table class="dl" id="cNewsCves"></table></div>
+  </section>
+  <section class="panel plain">
+    <h2>Take the data with you</h2>
+    <p class="sub">Save a PDF summary to share, paste the CVE list into a scanner or ticket, or the CSV into a spreadsheet.</p>
+    <div class="btns">
+      <button class="btn" type="button" id="copyCves">Copy CVE list</button>
+      <button class="btn" type="button" id="copyCsv">Copy vulnerabilities as CSV</button>
+      <button class="btn" type="button" id="pdfBtn">Download PDF summary</button>
+      <a class="btn" href="data.json" target="_blank" rel="noopener">Open raw data (JSON)</a>
+    </div>
+    <p class="sub" id="copyMsg" aria-live="polite"></p>
+  </section>
+</section>
+<section class="wrap mapv" id="mapView" aria-label="Map">
+  <header>
+    <h1>Global threat map</h1>
+    <p>Where the victims are. Drag the globe to turn it and tap a country for the detail. It shows victim locations reported by the sources, never where attacks come from.</p>
+  </header>
+  <div class="mapbar">
+    <div class="chips" id="mapChips">
+      <button class="chip" type="button" data-l="ransom" aria-pressed="true">Ransomware victims</button>
+      <button class="chip" type="button" data-l="news" aria-pressed="false">Countries in the news</button>
+    </div>
+    <div class="mapstat" id="mapStat"></div>
+  </div>
+  <div class="ticker" id="ticker" hidden aria-label="Latest ransomware claims">
+    <div class="tk-label"><i></i><span>Latest claims</span></div>
+    <div class="tk-view"><div class="tk-track" id="tkTrack"></div></div>
+    <button class="tk-pause" type="button" id="tkPause" aria-label="Pause the ticker" title="Pause">&#10074;&#10074;</button>
+  </div>
+  <div class="mapgrid">
+    <div class="globebox" id="globeBox">
+      <div id="globe"></div>
+      <div id="globeMsg">Loading the globe</div>
+      <div class="legend"><span>1</span><i></i><span id="legendMax"></span></div>
+      <div class="hint">Drag to turn, scroll to zoom</div>
+    </div>
+    <div class="side">
+      <section class="panel k-geo detail" id="mapDetail"></section>
+      <section class="panel k-geo">
+        <h2 id="rankTitle">Most affected countries</h2>
+        <ol class="rank" id="mapRank"></ol>
+      </section>
+    </div>
+  </div>
+  <div id="ransomExtra" hidden>
+    <div class="grid2">
+      <section class="panel k-geo">
+        <h2>Most active groups</h2>
+        <p class="sub">Ransomware groups by victims claimed in the window. Tap one to read about it.</p>
+        <ol class="rank" id="grpRank"></ol>
+      </section>
+      <section class="panel k-geo detail" id="grpDetail"></section>
+    </div>
+    <section class="panel k-geo">
+      <h2>Victims claimed per day</h2>
+      <p class="sub" id="dayNote"></p>
+      <div class="cols" id="dayCols"></div>
+      <div class="axis" id="dayAxis"></div>
+    </section>
+  </div>
+  <p class="note" id="mapNote"></p>
+</section>
+
+<section class="wrap feedv" id="feedView" aria-label="Security feed">
+  <header class="fhead">
+    <div>
+      <h1>Security feed</h1>
+      <p>20 security news sites, threat intel teams, researchers and agencies on X. The important posts are pulled to the top so they can't scroll away.</p>
+    </div>
+    <div class="pulse" id="fPulse" aria-label="Posts per hour, last 24 hours"></div>
+  </header>
+  <div class="kpis" id="fKpis" aria-label="Feed at a glance"></div>
+
+  <section class="fblk" id="fNow" hidden aria-label="AI summary of the feed">
+    <div class="fblkh"><h2><span class="ai">AI</span>Right now</h2><small id="fNowWhen"></small></div>
+    <p class="ov" id="fNowOv"></p>
+    <ol class="tcards" id="fThemes"></ol>
+  </section>
+
+  <div class="fgrid">
+    <aside class="frail">
+      <section class="fblk" id="fPri" hidden>
+        <div class="fblkh"><h2 style="color:#ff6b62">Don't miss</h2><small>picked by fixed rules, not AI</small></div>
+        <ol class="plist" id="fPriList"></ol>
+      </section>
+      <section class="fblk" id="fTrend" hidden>
+        <div class="fblkh"><h2>Trending</h2><small>last 24 hours, tap to filter</small></div>
+        <div class="trend" id="fTrendList"></div>
+      </section>
+      <details class="follow">
+        <summary>The 20 accounts in this feed</summary>
+        <ul id="fAccounts"></ul>
+      </details>
+    </aside>
+    <div class="fmain">
+      <div class="fbar">
+        <div class="chips" id="fChips"></div>
+        <span class="picked" id="fPicked" hidden><span id="fPickedTxt"></span><button type="button" id="fPickedX" aria-label="Clear this filter">&times;</button></span>
+        <input class="search" id="fq" type="search" placeholder="Search posts, CVE or account" aria-label="Search posts">
+      </div>
+      <div class="feedx"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg><span id="fCount"></span></div>
+      <ol class="stream" id="fList"></ol>
+      <button class="morebtn" type="button" id="fMore" hidden>Show more posts</button>
+    </div>
+  </div>
+  <p class="note">Posts come from X and belong to their authors; Vulforce shows them unchanged. Red tags mark CVEs on CISA's list of exploited vulnerabilities. "Don't miss" and the colours are chosen by fixed rules; only the "Right now" text is written by AI. Posts stay here for 3 days.</p>
+</section>
+
+<section class="wrap page" id="aboutView" aria-label="About">
+  <header>
+    <svg class="biglogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 120" role="img" aria-label="Vulforce"><g transform="translate(0,0)"><polygon points="60,8 105,34 105,86 60,112 15,86 15,34" fill="none" stroke="#F2F4F7" stroke-width="7" stroke-linejoin="round"/><line x1="38" y1="38" x2="55" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><line x1="82" y1="38" x2="65" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><circle cx="60" cy="84" r="8" fill="#FF4D4F"/><path d="M160.54 83.1 149.584 50.56199999999999H156.778L165.424 78.08399999999999H166.48L175.126 50.56199999999999H182.32L171.364 83.1Z M200.074 83.69399999999999Q196.37800000000001 83.69399999999999 193.474 82.04399999999998Q190.57 80.39399999999999 188.92000000000002 77.35799999999999Q187.27 74.32199999999999 187.27 70.098V50.56199999999999H194.068V69.636Q194.068 73.86 196.18 75.87299999999999Q198.292 77.886 202.054 77.886Q206.212 77.886 208.753 75.08099999999999Q211.294 72.276 211.294 66.996V50.56199999999999H218.092V83.1H211.42600000000002V78.216H210.37Q209.446 80.196 207.07 81.945Q204.69400000000002 83.69399999999999 200.074 83.69399999999999Z M226.804 83.1V36.89999999999999H233.602V83.1Z M247.39600000000002 83.1V57.227999999999994H239.08V50.36399999999999H247.39600000000002V44.291999999999994Q247.39600000000002 40.925999999999995 249.409 38.913Q251.422 36.89999999999999 254.656 36.89999999999999H263.236V43.763999999999996H257.56Q255.71200000000002 43.763999999999996 255.71200000000002 45.74399999999999V50.36399999999999H264.29200000000003V57.227999999999994H255.71200000000002V83.1Z M285.016 84.024Q280.132 84.024 276.238 82.044Q272.344 80.064 270.1 76.30199999999999Q267.856 72.53999999999999 267.856 67.25999999999999V66.204Q267.856 60.92399999999999 270.1 57.16199999999999Q272.344 53.39999999999999 276.238 51.41999999999999Q280.132 49.43999999999999 285.016 49.43999999999999Q289.9 49.43999999999999 293.794 51.41999999999999Q297.688 53.39999999999999 299.932 57.16199999999999Q302.176 60.92399999999999 302.176 66.204V67.25999999999999Q302.176 72.53999999999999 299.932 76.30199999999999Q297.688 80.064 293.794 82.044Q289.9 84.024 285.016 84.024ZM285.016 76.63199999999999Q288.844 76.63199999999999 291.352 74.15699999999998Q293.86 71.68199999999999 293.86 67.062V66.40199999999999Q293.86 61.782 291.385 59.306999999999995Q288.90999999999997 56.831999999999994 285.016 56.831999999999994Q281.188 56.831999999999994 278.67999999999995 59.306999999999995Q276.17199999999997 61.782 276.17199999999997 66.40199999999999V67.062Q276.17199999999997 71.68199999999999 278.67999999999995 74.15699999999998Q281.188 76.63199999999999 285.016 76.63199999999999Z M308.512 83.1V50.36399999999999H316.69599999999997V54.05999999999999H317.884Q318.61 52.07999999999999 320.293 51.15599999999999Q321.976 50.23199999999999 324.21999999999997 50.23199999999999H328.18V57.623999999999995H324.088Q320.92 57.623999999999995 318.874 59.306999999999995Q316.828 60.989999999999995 316.828 64.488V83.1Z M348.70599999999996 84.024Q343.95399999999995 84.024 340.09299999999996 82.044Q336.23199999999997 80.064 333.98799999999994 76.30199999999999Q331.74399999999997 72.53999999999999 331.74399999999997 67.19399999999999V66.27Q331.74399999999997 60.92399999999999 333.98799999999994 57.16199999999999Q336.23199999999997 53.39999999999999 340.09299999999996 51.41999999999999Q343.95399999999995 49.43999999999999 348.70599999999996 49.43999999999999Q353.392 49.43999999999999 356.758 51.08999999999999Q360.12399999999997 52.739999999999995 362.203 55.61099999999999Q364.282 58.48199999999999 364.94199999999995 62.111999999999995L356.89 63.82799999999999Q356.626 61.84799999999999 355.702 60.263999999999996Q354.77799999999996 58.67999999999999 353.09499999999997 57.75599999999999Q351.412 56.831999999999994 348.904 56.831999999999994Q346.39599999999996 56.831999999999994 344.3829999999999 57.92099999999999Q342.36999999999995 59.00999999999999 341.2149999999999 61.154999999999994Q340.05999999999995 63.3 340.05999999999995 66.40199999999999V67.062Q340.05999999999995 70.16399999999999 341.2149999999999 72.309Q342.36999999999995 74.454 344.3829999999999 75.54299999999999Q346.39599999999996 76.63199999999999 348.904 76.63199999999999Q352.666 76.63199999999999 354.61299999999994 74.685Q356.55999999999995 72.738 357.08799999999997 69.57L365.14 71.484Q364.282 74.982 362.203 77.853Q360.12399999999997 80.72399999999999 356.758 82.374Q353.392 84.024 348.70599999999996 84.024Z M385.59999999999997 84.024Q380.71599999999995 84.024 376.98699999999997 81.945Q373.258 79.866 371.179 76.071Q369.09999999999997 72.276 369.09999999999997 67.12799999999999V66.336Q369.09999999999997 61.18799999999999 371.14599999999996 57.39299999999999Q373.19199999999995 53.59799999999999 376.8879999999999 51.51899999999999Q380.58399999999995 49.43999999999999 385.46799999999996 49.43999999999999Q390.28599999999994 49.43999999999999 393.84999999999997 51.584999999999994Q397.414 53.72999999999999 399.394 57.52499999999999Q401.37399999999997 61.31999999999999 401.37399999999997 66.336V69.17399999999999H377.54799999999994Q377.67999999999995 72.53999999999999 380.0559999999999 74.65199999999999Q382.43199999999996 76.764 385.864 76.764Q389.36199999999997 76.764 391.01199999999994 75.246Q392.662 73.728 393.52 71.88L400.318 75.44399999999999Q399.39399999999995 77.16 397.645 79.173Q395.89599999999996 81.18599999999999 392.99199999999996 82.60499999999999Q390.08799999999997 84.024 385.59999999999997 84.024ZM377.614 62.96999999999999H392.926Q392.662 60.13199999999999 390.649 58.41599999999999Q388.63599999999997 56.69999999999999 385.402 56.69999999999999Q382.03599999999994 56.69999999999999 380.0559999999999 58.41599999999999Q378.07599999999996 60.13199999999999 377.614 62.96999999999999Z" fill="#F2F4F7"/></g></svg>
+    <h1>About Vulforce</h1>
+    <p class="lead">Vulforce is a free, automated digest of the vulnerabilities attackers are exploiting right now and the security news around them. It sorts everything into red, orange and green, so an analyst can see in a minute what needs attention first.</p>
+  </header>
+
+  <section class="me">
+    <h2>Who is behind it</h2>
+    <p>Hi, I'm Markus. I study software engineering and work in security. I built Vulforce because I wanted one page that tells me each morning what attackers are using and what to look at first.</p>
+    <p>It's a personal project and I keep improving it. If you spot a mistake or have an idea, write to me by email or find me on <a href="https://github.com/KankareDEV" target="_blank" rel="noopener">GitHub</a>.</p>
+    <p><button class="btn" type="button" id="mailBtn">Show my email</button> <span id="mailOut"></span></p>
+    <img src="markus.jpeg" alt="Markus Kankare" id="mePhoto" width="120" height="120">
+  </section>
+
+  <section>
+    <h2>Where the data comes from</h2>
+    <div class="scroll"><table class="dl">
+      <tr><td><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA KEV catalogue</a></td><td>Which vulnerabilities are confirmed exploited, the required action, the due date, ransomware use and the weakness type.</td></tr>
+      <tr><td><a href="https://www.first.org/epss/" target="_blank" rel="noopener">FIRST EPSS</a></td><td>The predicted chance that a vulnerability is exploited in the next 30 days.</td></tr>
+      <tr><td><a href="https://www.cve.org" target="_blank" rel="noopener">CVE Program records</a></td><td>CVSS severity, taken from the vendor's score or, if there is none, from CISA's.</td></tr>
+      <tr><td><a href="https://www.ransomware.live" target="_blank" rel="noopener">Ransomware.live</a></td><td>Victims claimed by ransomware groups on their leak sites. Vulforce keeps only counts per country, group and sector, and shows no victim names.</td></tr>
+      <tr><td><a href="https://x.com" target="_blank" rel="noopener">X</a></td><td>Recent posts from 20 security accounts, shown on the Feed tab unchanged and linked to the original post.</td></tr>
+      <tr><td>News feeds</td><td><a href="https://www.bleepingcomputer.com" target="_blank" rel="noopener">BleepingComputer</a>, <a href="https://therecord.media" target="_blank" rel="noopener">The Record</a>, <a href="https://thehackernews.com" target="_blank" rel="noopener">The Hacker News</a> and <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">CISA advisories</a>. Only the headline, date and link are kept.</td></tr>
+    </table></div>
+    <p>Vulforce is not affiliated with or endorsed by any of these organisations. Headlines belong to their publishers.</p>
+  </section>
+
+  <section>
+    <h2>How the colours are decided</h2>
+    <p>Every item gets a score from 0 to 100 from fixed rules. No AI ranks anything, and each item shows the rules that produced its score.</p>
+    <div class="scroll"><table class="dl">
+      <tr><th>Exploited vulnerabilities</th><th class="num">Points</th></tr>
+      <tr><td>Confirmed exploited (in CISA KEV)</td><td class="num">50</td></tr>
+      <tr><td>EPSS probability</td><td class="num">0 to 25</td></tr>
+      <tr><td>Used in ransomware campaigns</td><td class="num">15</td></tr>
+      <tr><td>CVSS 9.0 or more / 7.0 to 8.9</td><td class="num">10 / 5</td></tr>
+      <tr><td>Added in the last 7 / 14 days</td><td class="num">10 / 5</td></tr>
+      <tr><td>In the news this week</td><td class="num">5</td></tr>
+    </table></div>
+    <div class="scroll"><table class="dl">
+      <tr><th>News stories</th><th class="num">Points</th></tr>
+      <tr><td>Reported by a tracked source</td><td class="num">20</td></tr>
+      <tr><td>Headline signals: zero-day, exploited, ransomware, supply chain, breach, critical flaw</td><td class="num">up to 40</td></tr>
+      <tr><td>Mentions a CVE on the exploited list</td><td class="num">20</td></tr>
+      <tr><td>Covered by more than one source</td><td class="num">up to 20</td></tr>
+    </table></div>
+    <ul>
+      <li><span class="swatch red"></span>Red, act now: vulnerabilities scoring 70 or more, news scoring 60 or more.</li>
+      <li><span class="swatch orange"></span>Orange, check this week: all other exploited vulnerabilities, news scoring 40 to 59.</li>
+      <li><span class="swatch green"></span>Green, good to know: news scoring under 40. An exploited vulnerability is never green.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How AI is used</h2>
+    <p>Text marked <span class="ai">AI</span> is written by Claude, an AI model from Anthropic: the short story summaries, the Feed tab's summary of X posts, the sector, country and ATT&amp;CK tags, some actor and malware names, and the note on what matters today. It is based only on the headline and the short description each feed provides, so it can be incomplete or wrong. Always open the linked source. Scores and colours never come from AI.</p>
+  </section>
+
+  <section>
+    <h2>How often it updates</h2>
+    <p>The sources are checked every 2 hours. An open page re-reads the data every 10 minutes, and the time of the data is shown at the top right.</p>
+  </section>
+
+  <section>
+    <h2>Limits you should know</h2>
+    <ul>
+      <li>It ranks general risk. It knows nothing about your systems, so a red item may not affect you and a green one might.</li>
+      <li>News is scored by keywords in the headline, which will sometimes misjudge a story.</li>
+      <li>Very new vulnerabilities often have no CVSS or EPSS score yet. They are scored without it.</li>
+      <li>The map shows where victims are reported to be, not where attackers are. Ransomware figures are the groups' own claims and are not verified.</li>
+      <li>Threat actor names come from a fixed watchlist, so an actor that is not on it will not appear.</li>
+      <li>The feed summary is written by AI from X posts. It can merge or misread stories, so open the source posts before relying on it.</li>
+      <li>The site is provided as is. Confirm against the original source before you act on anything here.</li>
+    </ul>
+  </section>
+</section>
+<div class="tip" id="tip" role="tooltip"></div>
+
+
+<footer class="site">
+  <div class="wrap sitein">
+    <div>
+      <a class="brand" href="#brief" aria-label="Vulforce home"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 120" role="img" aria-label="Vulforce"><g transform="translate(0,0)"><polygon points="60,8 105,34 105,86 60,112 15,86 15,34" fill="none" stroke="#F2F4F7" stroke-width="7" stroke-linejoin="round"/><line x1="38" y1="38" x2="55" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><line x1="82" y1="38" x2="65" y2="70" stroke="#F2F4F7" stroke-width="10" stroke-linecap="round"/><circle cx="60" cy="84" r="8" fill="#FF4D4F"/><path d="M160.54 83.1 149.584 50.56199999999999H156.778L165.424 78.08399999999999H166.48L175.126 50.56199999999999H182.32L171.364 83.1Z M200.074 83.69399999999999Q196.37800000000001 83.69399999999999 193.474 82.04399999999998Q190.57 80.39399999999999 188.92000000000002 77.35799999999999Q187.27 74.32199999999999 187.27 70.098V50.56199999999999H194.068V69.636Q194.068 73.86 196.18 75.87299999999999Q198.292 77.886 202.054 77.886Q206.212 77.886 208.753 75.08099999999999Q211.294 72.276 211.294 66.996V50.56199999999999H218.092V83.1H211.42600000000002V78.216H210.37Q209.446 80.196 207.07 81.945Q204.69400000000002 83.69399999999999 200.074 83.69399999999999Z M226.804 83.1V36.89999999999999H233.602V83.1Z M247.39600000000002 83.1V57.227999999999994H239.08V50.36399999999999H247.39600000000002V44.291999999999994Q247.39600000000002 40.925999999999995 249.409 38.913Q251.422 36.89999999999999 254.656 36.89999999999999H263.236V43.763999999999996H257.56Q255.71200000000002 43.763999999999996 255.71200000000002 45.74399999999999V50.36399999999999H264.29200000000003V57.227999999999994H255.71200000000002V83.1Z M285.016 84.024Q280.132 84.024 276.238 82.044Q272.344 80.064 270.1 76.30199999999999Q267.856 72.53999999999999 267.856 67.25999999999999V66.204Q267.856 60.92399999999999 270.1 57.16199999999999Q272.344 53.39999999999999 276.238 51.41999999999999Q280.132 49.43999999999999 285.016 49.43999999999999Q289.9 49.43999999999999 293.794 51.41999999999999Q297.688 53.39999999999999 299.932 57.16199999999999Q302.176 60.92399999999999 302.176 66.204V67.25999999999999Q302.176 72.53999999999999 299.932 76.30199999999999Q297.688 80.064 293.794 82.044Q289.9 84.024 285.016 84.024ZM285.016 76.63199999999999Q288.844 76.63199999999999 291.352 74.15699999999998Q293.86 71.68199999999999 293.86 67.062V66.40199999999999Q293.86 61.782 291.385 59.306999999999995Q288.90999999999997 56.831999999999994 285.016 56.831999999999994Q281.188 56.831999999999994 278.67999999999995 59.306999999999995Q276.17199999999997 61.782 276.17199999999997 66.40199999999999V67.062Q276.17199999999997 71.68199999999999 278.67999999999995 74.15699999999998Q281.188 76.63199999999999 285.016 76.63199999999999Z M308.512 83.1V50.36399999999999H316.69599999999997V54.05999999999999H317.884Q318.61 52.07999999999999 320.293 51.15599999999999Q321.976 50.23199999999999 324.21999999999997 50.23199999999999H328.18V57.623999999999995H324.088Q320.92 57.623999999999995 318.874 59.306999999999995Q316.828 60.989999999999995 316.828 64.488V83.1Z M348.70599999999996 84.024Q343.95399999999995 84.024 340.09299999999996 82.044Q336.23199999999997 80.064 333.98799999999994 76.30199999999999Q331.74399999999997 72.53999999999999 331.74399999999997 67.19399999999999V66.27Q331.74399999999997 60.92399999999999 333.98799999999994 57.16199999999999Q336.23199999999997 53.39999999999999 340.09299999999996 51.41999999999999Q343.95399999999995 49.43999999999999 348.70599999999996 49.43999999999999Q353.392 49.43999999999999 356.758 51.08999999999999Q360.12399999999997 52.739999999999995 362.203 55.61099999999999Q364.282 58.48199999999999 364.94199999999995 62.111999999999995L356.89 63.82799999999999Q356.626 61.84799999999999 355.702 60.263999999999996Q354.77799999999996 58.67999999999999 353.09499999999997 57.75599999999999Q351.412 56.831999999999994 348.904 56.831999999999994Q346.39599999999996 56.831999999999994 344.3829999999999 57.92099999999999Q342.36999999999995 59.00999999999999 341.2149999999999 61.154999999999994Q340.05999999999995 63.3 340.05999999999995 66.40199999999999V67.062Q340.05999999999995 70.16399999999999 341.2149999999999 72.309Q342.36999999999995 74.454 344.3829999999999 75.54299999999999Q346.39599999999996 76.63199999999999 348.904 76.63199999999999Q352.666 76.63199999999999 354.61299999999994 74.685Q356.55999999999995 72.738 357.08799999999997 69.57L365.14 71.484Q364.282 74.982 362.203 77.853Q360.12399999999997 80.72399999999999 356.758 82.374Q353.392 84.024 348.70599999999996 84.024Z M385.59999999999997 84.024Q380.71599999999995 84.024 376.98699999999997 81.945Q373.258 79.866 371.179 76.071Q369.09999999999997 72.276 369.09999999999997 67.12799999999999V66.336Q369.09999999999997 61.18799999999999 371.14599999999996 57.39299999999999Q373.19199999999995 53.59799999999999 376.8879999999999 51.51899999999999Q380.58399999999995 49.43999999999999 385.46799999999996 49.43999999999999Q390.28599999999994 49.43999999999999 393.84999999999997 51.584999999999994Q397.414 53.72999999999999 399.394 57.52499999999999Q401.37399999999997 61.31999999999999 401.37399999999997 66.336V69.17399999999999H377.54799999999994Q377.67999999999995 72.53999999999999 380.0559999999999 74.65199999999999Q382.43199999999996 76.764 385.864 76.764Q389.36199999999997 76.764 391.01199999999994 75.246Q392.662 73.728 393.52 71.88L400.318 75.44399999999999Q399.39399999999995 77.16 397.645 79.173Q395.89599999999996 81.18599999999999 392.99199999999996 82.60499999999999Q390.08799999999997 84.024 385.59999999999997 84.024ZM377.614 62.96999999999999H392.926Q392.662 60.13199999999999 390.649 58.41599999999999Q388.63599999999997 56.69999999999999 385.402 56.69999999999999Q382.03599999999994 56.69999999999999 380.0559999999999 58.41599999999999Q378.07599999999996 60.13199999999999 377.614 62.96999999999999Z" fill="#F2F4F7"/></g></svg></a>
+      <p>Exploited vulnerabilities and threat news, ranked for security analysts.</p>
+    </div>
+    <div>
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="#brief">Brief</a></li>
+        <li><a href="#cti">CTI workbench</a></li>
+        <li><a href="#map">Global threat map</a></li>
+        <li><a href="#feed">Security feed</a></li>
+        <li><a href="#about">About and method</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Data sources</h3>
+      <ul>
+        <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA KEV catalogue</a></li>
+        <li><a href="https://www.first.org/epss/" target="_blank" rel="noopener">FIRST EPSS</a></li>
+        <li><a href="https://www.cve.org" target="_blank" rel="noopener">CVE Program</a></li>
+        <li><a href="https://www.ransomware.live" target="_blank" rel="noopener">Ransomware.live</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap srcrow"><b>Sources in the last run</b><div class="src" id="src"></div></div>
+  <div class="wrap legal">
+    <span>&copy; <span id="year">2026</span> Vulforce. Built by Markus Kankare.</span>
+    <span>Provided as is. Confirm with the original source before acting.</span>
+  </div>
+</footer>
+
+<div class="veil" id="veil" hidden>
+  <div class="bubble detail" id="bubble" role="dialog" aria-modal="true" aria-labelledby="bubbleName"></div>
+</div>
+
+<div id="report"></div>
+
+<script>
+const LEVELS = [
+  ["red","Red","Act now","Exploited now, with signs of wide or damaging use. Check today."],
+  ["orange","Orange","Check this week","Confirmed exploitation or notable news with fewer aggravating signs."],
+  ["green","Green","Good to know","Background reading. No action expected."]
+];
+const el = (tag, cls, text) => { const n = document.createElement(tag);
+  if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+const fmtDate = s => new Date(s + (s.length === 10 ? "T00:00:00Z" : ""))
+  .toLocaleDateString("en-GB", {day:"numeric", month:"short", timeZone:"UTC"});
+const safeUrl = u => /^https?:\/\//i.test(u) ? u : "#";
+const byId = id => document.getElementById(id);
+let DATA = null, filter = "all", query = "", briefLevel = null, briefPick = null;
+let briefLimit = {};   // how many rows each level shows before "Show more"
+
+// "New since your last visit". The ids seen on the previous visit are kept in
+// this browser only (localStorage); nothing is sent anywhere. On a first visit
+// nothing is marked new.
+let SEEN = null;
+try { const raw = localStorage.getItem("vf_seen_v1"); if (raw) SEEN = new Set(JSON.parse(raw)); } catch (e) {}
+const isNew = id => SEEN !== null && !SEEN.has(id);
+function saveSeen(){
+  if (!DATA) return;
+  const ids = DATA.items.map(i => i.id).concat(((DATA.x || {}).posts || []).map(p => p.id));
+  try { localStorage.setItem("vf_seen_v1", JSON.stringify(ids.slice(0, 900))); } catch (e) {}
+}
+addEventListener("pagehide", saveSeen);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") saveSeen(); });
+
+// Does this item pass the type chips, the picked number and the search box?
+function matches(it){
+  if (filter === "vuln" && it.type !== "vuln") return false;
+  if (filter === "news" && it.type !== "news") return false;
+  if (briefPick === "ransomware" && !it.ransomware) return false;
+  if (briefPick === "due" && !(it.type === "vuln" && it.due && daysLeft(it.due) >= 0 && daysLeft(it.due) <= 7)) return false;
+  if (briefPick === "new" && !isNew(it.id)) return false;
+  if (!query) return true;
+  const hay = [it.title, it.cve, it.vendor, it.product, it.summary, (it.ai || {}).summary,
+    (it.sources||[]).join(" "), (it.cves||[]).join(" ")].join(" ").toLowerCase();
+  return query.split(/\s+/).every(w => hay.includes(w));
+}
+
+// One compact row: score, one-line title, the key facts as small chips.
+// Tapping it opens the full details. Everything is added with textContent,
+// never innerHTML, so text from feeds can't inject HTML into the page.
+// Small icons so the kind of item is clear before reading.
+const ICONS = {
+  vuln: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="M12 8v5"/><path d="M12 16.5h.01"/></svg>',
+  ransom: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+  news: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5"/></svg>'
+};
+// Turns the technical description into what an attacker can actually do.
+// Checked in order, first match wins; falls back to the source text.
+const IMPACTS = [
+  [/remote code execution|execute arbitrary code|arbitrary code execution|code injection/i, "Attackers can run their own code"],
+  [/command injection|os command|execute (arbitrary )?commands/i, "Attackers can run system commands"],
+  [/authentication bypass|bypass authentication|missing authentication|improper authentication/i, "Attackers can skip the login"],
+  [/privilege escalation|escalate privileges|elevation of privilege|gain (elevated|root|system)/i, "Attackers can get admin rights"],
+  [/sql injection/i, "Attackers can read or change the database"],
+  [/deserializ/i, "Attackers can run code through crafted data"],
+  [/path traversal|directory traversal|arbitrary file read/i, "Attackers can read files they shouldn't"],
+  [/file upload/i, "Attackers can upload harmful files"],
+  [/cross-site scripting|xss/i, "Attackers can run scripts in users' browsers"],
+  [/server-side request forgery|ssrf/i, "Attackers can make the server call other systems"],
+  [/information disclosure|expose|leak|sensitive information/i, "Can leak sensitive data"],
+  [/denial of service|crash/i, "Attackers can crash the service"],
+  [/memory corruption|out-of-bounds|use-after-free|buffer overflow|heap|type confusion/i, "Memory bug attackers can abuse"]
+];
+function impact(it){
+  const text = (it.summary || "") + " " + it.title;
+  const hit = IMPACTS.find(([re]) => re.test(text));
+  let line = hit ? hit[1] : "Attackers are exploiting this flaw";
+  if (hit && /unauthenticated|without authentication|no authentication|remote,? unauthenticated/i.test(text) && !/login/.test(line)) line += ", no login needed";
+  return line;
+}
+// The plain name of what is affected: "Synology DSM" rather than the full catalogue title.
+function product(it){
+  const v = it.vendor || "", p = it.product || "";
+  if (!p) return v || it.title;
+  const first = v.split(/\s+/)[0].toLowerCase();
+  return !v || p.toLowerCase().includes(first) ? p : v + " " + p;
+}
+// The kind of flaw, from the catalogue title: "PHP Memory Corruption Vulnerability" -> "Memory corruption".
+function flawKind(it){
+  let t = it.title;
+  [it.vendor, it.product].filter(Boolean).forEach(w => { t = t.split(w).join(" "); });
+  t = t.replace(/\b(vulnerabilit(y|ies)|multiple)\b/gi, " ").replace(/^[\s\-\u2013:,]+|[\s\-\u2013:,]+$/g, "").replace(/\s+/g, " ").trim();
+  if (!t || t.length > 48) return "";
+  return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
+}
+// The one label that says how urgent this is.
+function urgency(it){
+  if (it.type === "vuln"){
+    if (it.ransomware) return ["Used by ransomware", "r"];
+    if (it.due){ const n = daysLeft(it.due); if (n >= 0 && n <= 7) return [n === 0 ? "Patch today" : "Patch within " + n + (n === 1 ? " day" : " days"), "r"]; }
+    if (it.epss != null && it.epss >= .5) return ["Attacks likely", it.level === "green" ? "o" : "r"];
+    return ["Being exploited", it.level === "red" ? "r" : "o"];
+  }
+  if (it.ransomware) return ["Ransomware", "r"];
+  const sg = (it.signals || [])[0];
+  if (sg) return [sg, it.level === "red" ? "r" : "o"];
+  return [(it.sources || [])[0] || "News", "g"];
+}
+// KEV's "required action" text is written for US agencies; this says the same in one line.
+function plainAction(it){
+  const a = it.action || "";
+  if (/discontinue/i.test(a)) return "Install the vendor's update or follow its fix. If there is no fix, stop using the product until there is.";
+  if (/mitigat|update|patch/i.test(a)) return "Install the vendor's update or follow its fix as soon as you can.";
+  return a;
+}
+const timeAgo = d => { const n = Math.round((Date.now() - Date.parse(d)) / 864e5); return n <= 0 ? "today" : n === 1 ? "yesterday" : n + " days ago"; };
+
+// One row. Closed: icon, what is affected, what can happen, one urgency label.
+// Open: the story in plain words, the key facts, what to do, and the technical
+// details tucked away. All text goes in with textContent (never innerHTML),
+// so text from feeds can't inject HTML into the page.
+function row(it){
+  const li = el("li","row"), d = el("details"), s = el("summary");
+  const ico = el("span","ico"); ico.innerHTML = it.ransomware ? ICONS.ransom : it.type === "vuln" ? ICONS.vuln : ICONS.news;
+  const t = el("div","rt"), h = el("h3","title");
+  if (isNew(it.id)) h.append(el("span","newb","NEW"));
+  if (it.type === "vuln"){
+    h.append(document.createTextNode(product(it)));
+    const k = flawKind(it); if (k) h.append(el("span","kind", " \u00B7 " + k));
+    t.append(h, el("p","what", impact(it)));
+  } else {
+    h.append(document.createTextNode(it.title));
+    t.append(h, el("p","what", (it.sources || []).join(", ") + " · " + timeAgo(it.date)));
+  }
+  const [label, cls] = urgency(it);
+  s.append(ico, t, el("span","pill " + cls, label));
+  d.append(s, details(it)); li.append(d); return li;
+}
+function details(it){
+  const more = el("div","more");
+  // 1. what is going on
+  const story = el("p","story");
+  if (it.ai && it.ai.summary){ story.append(el("span","ai","AI"), document.createTextNode(it.ai.summary)); }
+  else story.textContent = it.type === "vuln" ? (it.summary || it.title) : it.title;
+  more.append(story);
+  // 2. the key facts, in words first and numbers second
+  const facts = el("div","facts");
+  const fact = (label, value, cls, note) => { const f = el("div","fact"); f.append(el("small",null,label), el("b",cls,value)); if (note) f.append(el("em",null,note)); facts.append(f); };
+  if (it.type === "vuln"){
+    fact("Exploited?", "Yes, confirmed", "r", "CISA, " + timeAgo(it.date));
+    if (it.cvss) fact("How bad", it.cvss.severity.charAt(0) + it.cvss.severity.slice(1).toLowerCase(), it.cvss.score >= 9 ? "r" : it.cvss.score >= 7 ? "o" : "", "CVSS " + it.cvss.score.toFixed(1) + " / 10");
+    if (it.epss != null) fact("Attack chance, 30 days", Math.round(it.epss * 100) + "%", it.epss >= .5 ? "r" : it.epss >= .1 ? "o" : "", "EPSS forecast");
+    fact("Ransomware", it.ransomware ? "Yes, used" : "Not known", it.ransomware ? "r" : "");
+    if (it.due){ const n = daysLeft(it.due); fact("CISA deadline", fmtDate(it.due), n >= 0 && n <= 7 ? "r" : "", n < 0 ? "passed" : n === 0 ? "today" : "in " + n + " days"); }
+  } else {
+    fact("Reported by", (it.sources || []).join(", "), "", timeAgo(it.date));
+    if ((it.signals || []).length) fact("Signals", it.signals.join(", "), it.level === "red" ? "r" : "o");
+    if ((it.cves || []).length) fact("CVEs", it.cves.slice(0, 3).join(", "), "");
+    if (it.ai && it.ai.sector) fact("Sector", it.ai.sector, "");
+    if (it.ai && (it.ai.actors || []).length) fact("Threat actor", it.ai.actors.join(", "), "o");
+  }
+  if (facts.children.length) more.append(facts);
+  // 3. what to do
+  if (it.type === "vuln"){
+    const todo = el("div","todo"); todo.append(el("b",null,"What to do"), document.createTextNode("If you run " + product(it) + ": " + plainAction(it).charAt(0).toLowerCase() + plainAction(it).slice(1)));
+    more.append(todo);
+  }
+  // 4. links
+  const acts = el("div","acts");
+  it.links.forEach(l => { const a = el("a",null, (it.type === "news" ? "Read on " : "") + l.label + " ↗"); a.href = safeUrl(l.url); a.target = "_blank"; a.rel = "noopener noreferrer"; acts.append(a); });
+  more.append(acts);
+  // 5. technical details, closed by default
+  const tech = el("details","tech"); tech.append(el("summary",null,"Technical details and score (" + it.score + "/100)"));
+  const m = el("div","meta");
+  if (it.type === "vuln"){ m.append(el("span","cve", it.cve), el("span",null, it.title)); if ((it.cwes || []).length) m.append(el("span",null, it.cwes.join(", "))); }
+  if (m.children.length) tech.append(m);
+  if (it.cvss) tech.append(el("p",null,"CVSS " + it.cvss.version + " vector, scored by " + (it.cvss.by === "CNA" ? "the vendor" : "CISA") + ": " + it.cvss.vector));
+  if (it.action) tech.append(el("p",null,"CISA's required action: " + it.action));
+  const why = el("ul","why");
+  it.reasons.forEach(r => { const x = el("li"); x.append(el("span",null,r.label), el("b",null,"+"+r.points)); why.append(x); });
+  tech.append(why);
+  more.append(tech);
+  return more;
+}
+
+// Draws the level tabs and the list. One level is shown at a time; a search
+// or a picked number shows matches from every level instead.
+function render(){
+  const list = byId("list"); list.textContent = "";
+  const shown = DATA.items.filter(matches);
+  const count = k => shown.filter(i => i.level === k).length;
+  if (!briefLevel) briefLevel = LEVELS.find(([k]) => count(k))?.[0] || "red";
+  const across = !!(query || briefPick);
+  // level tabs + the thin colour mix above them
+  const tabs = byId("lvtabs"), mix = byId("mix"); tabs.textContent = ""; mix.textContent = "";
+  LEVELS.forEach(([key, , tag]) => {
+    const b = el("button","lvtab " + key); b.type = "button"; b.setAttribute("aria-pressed", String(!across && key === briefLevel));
+    b.append(el("i"), document.createTextNode(tag), el("b",null,String(count(key))));
+    b.addEventListener("click", () => { briefLevel = key; query = ""; byId("q").value = ""; setPick(null); render(); });
+    tabs.append(b);
+    const m = el("i", key); m.style.flexGrow = String(Math.max(count(key), .001)); mix.append(m);
+  });
+  if (!shown.length){
+    list.append(el("div","empty", DATA.items.length ? "Nothing matches. Clear the search or the filter." : "No items yet. Run fetch.py to collect today's data."));
+    return;
+  }
+  LEVELS.forEach(([key, , tag, desc]) => {
+    if (!across && key !== briefLevel) return;
+    const items = shown.filter(i => i.level === key);
+    if (!items.length) return;
+    const lim = briefLimit[key] || (across ? 6 : 12);
+    const sec = el("section","level " + key); sec.id = key;
+    const head = el("div","lvhead"), h = el("h2",null,tag);
+    head.append(h, el("span",null, items.length + (items.length === 1 ? " item" : " items") + " · " + desc));
+    const ul = el("ul","rows"); items.slice(0, lim).forEach(i => ul.append(row(i)));
+    sec.append(head, ul);
+    if (items.length > lim){
+      const more = el("button","morebtn","Show " + (items.length - lim) + " more"); more.type = "button";
+      more.addEventListener("click", () => { briefLimit[key] = items.length; render(); });
+      sec.append(more);
+    }
+    list.append(sec);
+  });
+}
+
+// The picked number (ransomware, deadlines, new) works like a filter with an "x".
+function setPick(p){
+  briefPick = p; briefLimit = {};
+  const labels = {ransomware: "Used by ransomware", due: "Patch deadline within 7 days", new: "New since your last visit"};
+  byId("briefPicked").hidden = !p; byId("briefPickedTxt").textContent = p ? labels[p] : "";
+  document.querySelectorAll("#kpis .kpi").forEach(k => k.setAttribute("aria-pressed", String(k.dataset.k === p || (k.dataset.k === "red" && p === "red-tab"))));
+}
+byId("briefPickedX").addEventListener("click", () => { setPick(null); render(); });
+
+// The top of the Brief page: date, the tappable numbers and the AI picks.
+function summary(){
+  const d = new Date(DATA.generated), c = DATA.counts;
+  const h1 = byId("headline");
+  h1.firstChild.textContent = d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"long", timeZone:"UTC"});
+  byId("note").textContent = "Exploited flaws (" + DATA.kev_window_days + " days) and news (" + DATA.news_window_days + " days), ranked by fixed rules. Tap a row for the details.";
+  const up = byId("updated"); up.textContent = "Data from " +
+    d.toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"UTC"}) + " UTC";
+  const live = el("span","live"); live.title = "Re-checks for new data every 10 minutes"; up.prepend(live);
+
+  // numbers you can tap
+  const vulns = DATA.items.filter(i => i.type === "vuln");
+  const nRansom = DATA.items.filter(i => i.ransomware).length;
+  const nDue = vulns.filter(v => v.due && daysLeft(v.due) >= 0 && daysLeft(v.due) <= 7).length;
+  const nNew = DATA.items.filter(i => isNew(i.id)).length;
+  const k = byId("kpis"); k.textContent = "";
+  const kpi = (key, n, label, cls, go) => {
+    const b = el("button","kpi " + cls + (n ? "" : " zero")); b.type = "button"; b.dataset.k = key; b.setAttribute("aria-pressed","false");
+    b.append(el("b",null,String(n)), el("span",null,label));
+    if (n) b.addEventListener("click", go); else b.disabled = true;
+    k.append(b);
+  };
+  kpi("red", c.red || 0, "act now", "red", () => { setPick(null); query = ""; byId("q").value = ""; briefLevel = "red"; render(); byId("list").scrollIntoView({behavior:"smooth"}); });
+  kpi("ransomware", nRansom, "used by ransomware", "orange", () => { setPick(briefPick === "ransomware" ? null : "ransomware"); render(); byId("list").scrollIntoView({behavior:"smooth"}); });
+  kpi("due", nDue, "patch due this week", "orange", () => { setPick(briefPick === "due" ? null : "due"); render(); byId("list").scrollIntoView({behavior:"smooth"}); });
+  if (SEEN !== null) kpi("new", nNew, "new since last visit", "newk", () => { setPick(briefPick === "new" ? null : "new"); render(); byId("list").scrollIntoView({behavior:"smooth"}); });
+
+  // the three AI picks
+  const today = byId("today"), br = DATA.brief || {}, tl = byId("todayList"); tl.textContent = "";
+  const pts = br.points || [];
+  today.hidden = !pts.length;
+  pts.forEach((p, n) => {
+    const li = el("li"), b = el("button","pick " + p.level); b.type = "button"; b.title = "Find this in the list";
+    const ph = el("span","ph"); ph.append(el("span","no", String(n + 1)), el("span","pt", p.title));
+    b.append(ph, el("span","why", p.why)); if (p.ref) b.append(el("span","cve", p.ref));
+    b.addEventListener("click", () => { setPick(null); byId("q").value = p.find; query = p.find.toLowerCase(); render(); byId("list").scrollIntoView({behavior:"smooth"}); });
+    li.append(b); tl.append(li);
+  });
+  const src = byId("src"); src.textContent = "";
+  DATA.sources.forEach(s => src.append(el("span", s.ok ? "" : "down", s.name + (s.ok ? "" : " (unreachable)"))));
+}
+
+byId("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  filter = b.dataset.f; briefLimit = {};
+  document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c === b)));
+  render();
+});
+byId("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); briefLimit = {}; render(); });
+
+/* ---------- CTI view ---------- */
+// A horizontal bar list. If a row has 'stories', it becomes a button that
+// opens the stories behind the number.
+function bars(id, rows, emptyText){
+  const ul = byId(id); ul.textContent = "";
+  if (!rows.length){ ul.append(el("li","none",emptyText)); return; }
+  const max = Math.max(1, ...rows.map(r => r.n));
+  rows.forEach((r, k) => {
+    const li = el("li"), open = r.stories && r.stories.length;
+    const row = el(open ? "button" : "div", "bar"); row.style.setProperty("--i", k);
+    if (!open) row.dataset.tip = r.tip || (r.label + ": " + r.n);
+    const lab = el("span","lab", r.label); if (r.small) lab.append(el("small",null,r.small));
+    const track = el("span"), fill = el("span","fill"); fill.style.width = (r.n / max * 100) + "%"; if (!r.n) fill.style.display = "none"; track.append(fill);
+    row.append(lab, track, el("span","val", String(r.n)));
+    li.append(row);
+    if (open){
+      row.type = "button"; row.setAttribute("aria-expanded","false"); row.append(el("span","car","›"));
+      const box = el("ul","stories"); box.hidden = true;
+      r.stories.forEach(st => {
+        const x = el("li"), t = el("span","st-title"), src = el("span","st-src");
+        t.append(el("span","dot " + st.level), document.createTextNode(st.title));
+        src.append(el("span",null,fmtDate(st.date)));
+        st.links.forEach(l => { const a = el("a",null,l.label); a.href = safeUrl(l.url); a.target = "_blank"; a.rel = "noopener noreferrer"; src.append(a); });
+        x.append(t);
+        if (st.sub) x.append(el("span","st-sum",st.sub));
+        else if (st.ai && st.ai.summary) x.append(el("span","st-sum",st.ai.summary));
+        x.append(src); box.append(x);
+      });
+      row.addEventListener("click", () => { box.hidden = !box.hidden; row.setAttribute("aria-expanded", String(!box.hidden)); });
+      li.append(box);
+    }
+    ul.append(li);
+  });
+}
+// Fills a <table> from a list of rows. A cell is either text or a ready node.
+function table(id, head, rows, emptyText){
+  const t = byId(id); t.textContent = "";
+  if (!rows.length){ const tr = el("tr"), td = el("td","none",emptyText); tr.append(td); t.append(tr); return; }
+  const hr = el("tr"); head.forEach(h => hr.append(el("th",null,h))); t.append(hr);
+  rows.forEach(cells => { const tr = el("tr"); cells.forEach(c => {
+    const td = el("td", c.cls || null); if (c.node) td.append(c.node); else td.textContent = c.text; tr.append(td); }); t.append(tr); });
+}
+function daysLeft(due){
+  const n = new Date(), today = Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate());
+  return Math.round((Date.parse(due + "T00:00:00Z") - today) / 864e5);
+}
+// Draws every panel of the CTI tab from DATA.analytics.
+function renderCti(){
+  const a = DATA.analytics; if (!a) return;
+  const t = a.totals, win = DATA.kev_window_days, nwin = DATA.news_window_days;
+  const stats = byId("cStats"); stats.textContent = "";
+  [[t.kev_window, "exploited vulnerabilities added in " + win + " days"],
+   [t.ransomware, "of them used in ransomware campaigns"],
+   [t.epss_known ? t.epss_high : "n/a", t.epss_known ? "with EPSS of 50% or more" : "EPSS scores were not available in this run"],
+   [t.news, "news stories in the last " + nwin + " days"]]
+    .forEach(([n, label], k) => { const d = el("div","stat " + (k === 3 ? "k-news" : "k-vuln")), b = el("b",null,String(n));
+      if (typeof n === "number") b.dataset.count = n;
+      d.append(b, el("span",null,label)); stats.append(d); });
+  countUp();
+
+  const tl = a.timeline, peak = tl.reduce((m, d) => d.n > m.n ? d : m, tl[0]);
+  const cols = byId("cTime"); cols.textContent = "";
+  tl.forEach((d, k) => { const c = el("i"), u = el("u"); c.style.setProperty("--i", k); u.style.height = peak.n ? (d.n / peak.n * 100) + "%" : "0";
+    c.dataset.tip = fmtDate(d.date) + ": " + d.n + (d.n === 1 ? " entry" : " entries"); c.append(u); cols.append(c); });
+  byId("cTimeSub").textContent = peak.n
+    ? "Entries added to CISA's exploited list each day. Busiest day: " + fmtDate(peak.date) + " with " + peak.n + "."
+    : "No entries were added in this window.";
+  const ax = byId("cTimeAxis"); ax.textContent = "";
+  ax.append(el("span",null,fmtDate(tl[0].date)), el("span",null,fmtDate(tl[Math.floor(tl.length/2)].date)), el("span",null,fmtDate(tl[tl.length-1].date)));
+
+  // Each vulnerability panel row opens the vulnerabilities behind its number,
+  // highest risk first, with CVSS, EPSS and the patch deadline under each one.
+  const vulns = DATA.items.filter(i => i.type === "vuln");
+  const asStory = v => ({title: v.cve + "  " + v.title, level: v.level, date: v.date, links: v.links,
+    sub: [v.cvss ? "CVSS " + v.cvss.score.toFixed(1) : "No CVSS yet", v.epss != null ? "EPSS " + Math.round(v.epss * 100) + "%" : "No EPSS yet",
+          v.due ? "patch by " + fmtDate(v.due) : "", v.ransomware ? "used by ransomware" : ""].filter(Boolean).join(" \u00B7 ")});
+  const pick = test => vulns.filter(test).map(asStory);
+  const SEV = {"Critical (9+)": "CRITICAL", "High (7 to 8.9)": "HIGH", "Medium (4 to 6.9)": "MEDIUM", "Low (under 4)": "LOW", "Not scored yet": "NONE"};
+  const EPSS = {"90% or more": [.9, 1.01], "50 to 89%": [.5, .9], "10 to 49%": [.1, .5], "Under 10%": [0, .1]};
+  bars("cSeverity", (a.severity || []).map(x => ({label: x.name, n: x.n,
+    stories: pick(v => (v.cvss ? v.cvss.severity : "NONE") === SEV[x.name])})), "No severity data in this run.");
+  bars("cEpss", (a.epss_bands || []).map(x => ({label: x.name, n: x.n,
+    stories: pick(v => EPSS[x.name] ? v.epss != null && v.epss >= EPSS[x.name][0] && v.epss < EPSS[x.name][1] : v.epss == null)})), "No EPSS data in this run.");
+  bars("cVendors", a.vendors.map(x => ({label: x.name, n: x.n, stories: pick(v => v.vendor === x.name)})), "No vulnerabilities in this run.");
+  bars("cCwes", a.cwes.map(c => ({label: c.name || c.id, small: c.name ? c.id : "", n: c.n, stories: pick(v => (v.cwes || []).includes(c.id))})),
+       "CISA listed no weakness types for these entries.");
+
+  table("cDue", ["Due", "Time left", "CVE", "Vulnerability"], a.deadlines.map(d => {
+    const n = daysLeft(d.due), left = el("span");
+    const dot = el("span","dot " + (n <= 3 ? "red" : n <= 7 ? "orange" : ""));
+    left.append(dot, document.createTextNode(n <= 0 ? "Due today" : n === 1 ? "1 day" : n + " days"));
+    return [{text: fmtDate(d.due), cls: "num"}, {node: left, cls: "num"}, {text: d.cve, cls: "cve"}, {text: d.title}];
+  }), "No open deadlines for entries in this window.");
+
+  const noNews = "No news was collected in this run.";
+  byId("cSigSub").textContent = "Stories from the last " + nwin + " days, by what the headline signals. Tap a row to see the stories and their sources.";
+  const news = DATA.items.filter(i => i.type === "news");
+  bars("cSignals", a.signals.map(x => ({label: x.name, n: x.n, stories: news.filter(n => (n.signals || []).includes(x.name))})),
+       t.news ? "No headline signals matched." : noNews);
+  bars("cActors", a.actors.map(x => ({label: x.name, n: x.n, stories: news.filter(n => (n.actors || []).includes(x.name))})),
+       t.news ? "No watchlist names appeared in the news." : noNews);
+  const tally = pick => { const c = {}; news.forEach(n => { const v = n.ai && pick(n.ai); if (v) c[v] = (c[v] || 0) + 1; });
+    return Object.keys(c).map(k => ({label: k, n: c[k]})).sort((x, y) => y.n - x.n || x.label.localeCompare(y.label)).slice(0, 10); };
+  const hasAi = news.some(n => n.ai);
+  byId("cAiRow").hidden = !hasAi;
+  if (hasAi){
+    bars("cSectors", tally(a => a.sector).map(r => ({...r, stories: news.filter(n => n.ai && n.ai.sector === r.label)})), "No sector could be read from the stories.");
+    bars("cTactics", tally(a => a.tactic).map(r => ({...r, stories: news.filter(n => n.ai && n.ai.tactic === r.label)})), "No tactic could be read from the stories.");
+  }
+  bars("cSources", (a.by_source || []).map(x => ({label: x.name, n: x.n, stories: news.filter(n => n.sources.includes(x.name))})), noNews);
+  table("cNewsCves", ["CVE", "Stories", "CISA exploited list"], a.news_cves.map(c => {
+    const link = el("a",null,c.cve); link.href = "https://nvd.nist.gov/vuln/detail/" + encodeURIComponent(c.cve);
+    link.target = "_blank"; link.rel = "noopener noreferrer";
+    return [{node: link, cls: "cve"}, {text: String(c.n), cls: "num"}, {text: c.kev ? "Listed" : "Not listed"}];
+  }), t.news ? "No CVE IDs were mentioned in the news." : noNews);
+}
+
+function copyText(text, what){
+  const msg = byId("copyMsg");
+  const ok = () => { msg.textContent = "Copied " + what + "."; };
+  const fail = () => { msg.textContent = "Your browser blocked copying. Use the raw data link instead."; };
+  try { navigator.clipboard.writeText(text).then(ok, fail); } catch (e) { fail(); }
+}
+byId("copyCves").addEventListener("click", () => {
+  const v = DATA.items.filter(i => i.type === "vuln").map(i => i.cve);
+  copyText(v.join("\n"), v.length + " CVE IDs");
+});
+byId("copyCsv").addEventListener("click", () => {
+  const q = x => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
+  const v = DATA.items.filter(i => i.type === "vuln");
+  const rows = [["cve","vendor","product","level","score","cvss","epss","ransomware","date_added","due","cwes","title"].join(",")]
+    .concat(v.map(i => [i.cve, i.vendor, i.product, i.level, i.score, i.cvss ? i.cvss.score : "", i.epss == null ? "" : i.epss, i.ransomware ? "yes" : "no",
+      i.date, i.due, (i.cwes || []).join(" "), i.title].map(q).join(",")));
+  copyText(rows.join("\n"), v.length + " rows of CSV");
+});
+
+/* numbers count up when the CTI view opens */
+function countUp(){
+  if (document.body.dataset.view !== "cti" || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll("#cStats b[data-count]").forEach(b => {
+    const end = +b.dataset.count, t0 = performance.now(), dur = 700;
+    const step = t => { const p = Math.min(1, (t - t0) / dur);
+      b.textContent = String(Math.round(end * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  });
+}
+
+/* ---------- PDF summary ----------
+   No server and no AI call is needed here. We build a plain black-on-white
+   report from the data already on the page and hand it to the browser's
+   print dialog, where "Save as PDF" turns it into a file. */
+function buildReport(){
+  const R = byId("report"); R.textContent = "";
+  const add = (tag, text, cls) => { const n = el(tag, cls || null, text); R.append(n); return n; };
+  const tbl = (head, rows) => { const t = el("table"), hr = el("tr"); head.forEach(h => hr.append(el("th",null,h))); t.append(hr);
+    rows.forEach(r => { const tr = el("tr"); r.forEach(c => tr.append(el("td",null, c == null ? "" : String(c)))); t.append(tr); }); return t; };
+  const a = DATA.analytics || {}, c = DATA.counts, when = new Date(DATA.generated);
+  const vulns = DATA.items.filter(i => i.type === "vuln"), news = DATA.items.filter(i => i.type === "news");
+  add("h1", "Vulforce threat summary");
+  add("p", "Data from " + when.toLocaleString("en-GB", {day:"numeric", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"UTC"}) +
+    " UTC. " + c.red + " red, " + c.orange + " orange and " + c.green + " green items.", "when");
+  const br = DATA.brief;
+  if (br && (br.points || []).length){
+    add("h2", "What matters today (written by AI)");
+    R.append(tbl(["#", "Item", "Why"], (br.points || []).map((p, k) => [k + 1, p.title + (p.ref ? " (" + p.ref + ")" : ""), p.why])));
+  }
+  add("h2", "Exploited vulnerabilities, highest risk first");
+  R.append(tbl(["Level", "Score", "CVE", "Vulnerability", "CVSS", "EPSS", "Patch by"], vulns.slice(0, 25).map(i => [
+    i.level.toUpperCase(), i.score, i.cve, i.title, i.cvss ? i.cvss.score.toFixed(1) : "", i.epss == null ? "" : Math.round(i.epss * 100) + "%", i.due ? fmtDate(i.due) : ""])));
+  if (vulns.length > 25) add("p", "Showing 25 of " + vulns.length + ". The full list is on the site.", "small");
+  const two = add("div", null, "cols2");
+  const side = (title, head, rows) => { const d = el("div"); d.append(el("h2",null,title), tbl(head, rows)); two.append(d); };
+  side("Severity (CVSS)", ["Band", "Count"], (a.severity || []).map(x => [x.name, x.n]));
+  side("Exploitation likelihood (EPSS)", ["Band", "Count"], (a.epss_bands || []).map(x => [x.name, x.n]));
+  side("Most affected vendors", ["Vendor", "Count"], (a.vendors || []).map(x => [x.name, x.n]));
+  side("Weakness types", ["Weakness", "Count"], (a.cwes || []).map(x => [(x.name ? x.name + " " : "") + "(" + x.id + ")", x.n]));
+  if (news.length){
+    add("h2", "News, highest ranked first");
+    R.append(tbl(["Level", "Headline", "Sources"], news.slice(0, 12).map(n => [n.level.toUpperCase(), n.title + (n.ai && n.ai.summary ? ". AI summary: " + n.ai.summary : ""), n.sources.join(", ")])));
+  }
+  const g = DATA.geo;
+  if (g && (g.countries || []).length){
+    add("h2", "Ransomware claims, last " + g.window_days + " days (" + g.total + " in total)");
+    const two2 = add("div", null, "cols2"), l = el("div"), r = el("div");
+    l.append(tbl(["Country", "Victims claimed"], g.countries.slice(0, 10).map(x => [regionName(x.cc), x.n])));
+    r.append(tbl(["Group", "Victims claimed"], (g.groups || []).slice(0, 10).map(x => [x.name, x.n])));
+    two2.append(l, r);
+    add("p", "Source: Ransomware.live. These are the groups' own claims and are not verified.", "small");
+  }
+  add("h2", "How to read this");
+  add("p", "Scores come from fixed rules: confirmed exploitation (CISA KEV), EPSS, CVSS, ransomware use and recency. Red means act now, orange check this week, green good to know. This is general risk and knows nothing about your systems, so check each item against your own assets and confirm with the original source before acting.", "small");
+  add("p", "Sources: CISA KEV, FIRST EPSS, CVE Program, Ransomware.live, BleepingComputer, The Record, The Hacker News, CISA advisories. Generated by Vulforce, vulforce.com.", "small");
+}
+byId("pdfBtn").addEventListener("click", () => {
+  if (!DATA) return;
+  buildReport();
+  const msg = byId("copyMsg");
+  msg.textContent = "In the print window, choose “Save as PDF” as the printer.";
+  try { window.print(); } catch (e) { msg.textContent = "This browser blocked printing. Use the browser menu: Print, then Save as PDF."; }
+});
+
+/* hover tooltip for chart marks */
+const tip = byId("tip");
+document.addEventListener("mousemove", e => {
+  const m = e.target.closest ? e.target.closest("[data-tip]") : null;
+  if (!m){ tip.style.display = "none"; return; }
+  tip.textContent = m.dataset.tip; tip.style.display = "block";
+  const w = tip.offsetWidth, x = Math.min(e.clientX + 12, window.innerWidth - w - 8);
+  tip.style.left = Math.max(8, x) + "px"; tip.style.top = (e.clientY + 16) + "px";
+});
+
+/* ---------- Map view ---------- */
+let mapLayer = "ransom", mapSel = null, globe = null, geoFeatures = null, globeState = "idle";
+const regionName = (() => { let d = null; try { d = new Intl.DisplayNames(["en"], {type:"region"}); } catch (e) {}
+  return cc => { try { return (d && d.of(cc)) || cc; } catch (e) { return cc; } }; })();
+const esc = t => String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+// Countries and their numbers for the layer that is switched on.
+function mapRows(){
+  if (!DATA) return [];
+  if (mapLayer === "ransom") return ((DATA.geo || {}).countries || []).map(c => ({cc: c.cc, n: c.n, rec: c}));
+  const c = {};
+  DATA.items.filter(i => i.type === "news" && i.ai).forEach(n => (n.ai.countries || []).forEach(cc => { (c[cc] = c[cc] || []).push(n); }));
+  return Object.keys(c).map(cc => ({cc, n: c[cc].length, stories: c[cc]})).sort((a, b) => b.n - a.n || a.cc.localeCompare(b.cc));
+}
+function mapColor(n, max){
+  if (!n) return "#141a1f";
+  const t = Math.sqrt(n / max), lo = [16,52,64], hi = [53,224,255];
+  return "rgb(" + lo.map((v, k) => Math.round(v + (hi[k] - v) * t)).join(",") + ")";
+}
+// Draws the Map tab: ranking, country detail and the colours on the globe.
+function renderMap(){
+  if (!DATA) return;
+  const rows = mapRows(), max = rows.length ? rows[0].n : 1, ransom = mapLayer === "ransom", g = DATA.geo;
+  const unit = n => ransom ? (n === 1 ? "victim claimed" : "victims claimed") : (n === 1 ? "story" : "stories");
+  document.querySelectorAll("#mapChips .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.l === mapLayer)));
+  if (!rows.some(r => r.cc === mapSel)) mapSel = rows.length ? rows[0].cc : null;
+  const stat = byId("mapStat"); stat.textContent = "";
+  if (rows.length){
+    const total = ransom ? g.total : rows.reduce((a, r) => a + r.n, 0);
+    stat.append(el("b",null,String(total)), document.createTextNode(ransom
+      ? " victims claimed in " + g.window_days + " days, in " : " country mentions in " + DATA.news_window_days + " days, across "),
+      el("b",null,String(rows.length)), document.createTextNode(" countries"));
+  }
+  byId("legendMax").textContent = String(max);
+  byId("rankTitle").textContent = ransom ? "Most affected countries" : "Countries named most";
+  const ol = byId("mapRank"); ol.textContent = "";
+  if (!rows.length) ol.append(el("li","none", ransom ? "Ransomware data was not available in the last run."
+    : "No countries were named in the collected stories, or AI summaries are switched off."));
+  rows.slice(0, 15).forEach((r, k) => {
+    const li = el("li"), b = el("button"); b.type = "button"; b.setAttribute("aria-pressed", String(r.cc === mapSel)); b.style.setProperty("--i", k);
+    const track = el("span"), fill = el("span","fill"); fill.style.width = (r.n / max * 100) + "%"; track.append(fill);
+    b.append(el("span","pos", String(k + 1)), el("span","nm", regionName(r.cc)), track, el("span","val", String(r.n)));
+    b.addEventListener("click", () => selectCountry(r.cc, true));
+    li.append(b); ol.append(li);
+  });
+  const d = byId("mapDetail"), sel = rows.find(r => r.cc === mapSel); d.textContent = "";
+  if (!sel){ d.append(el("p","none","Pick a layer with data to see a country.")); }
+  else {
+    const big = el("div","big", String(sel.n)); big.append(el("small",null, unit(sel.n) + (ransom ? " in " + g.window_days + " days" : "")));
+    d.append(el("h3",null, regionName(sel.cc)), big);
+    if (ransom){
+      const tags = (title, list) => { if (!list.length) return; d.append(el("h4",null,title)); const t = el("div","tags");
+        list.forEach(x => { const s = el("span",null, x.name); s.append(el("b",null,String(x.n))); t.append(s); }); d.append(t); };
+      d.append(el("h4",null,"Most active groups (tap for details)"));
+      const gt = el("div","tags");
+      sel.rec.groups.forEach(x => { const b = el("button",null,x.name); b.type = "button"; b.append(el("b",null,String(x.n)));
+        b.addEventListener("click", () => openGroup(x.name, {cc: sel.cc, n: x.n})); gt.append(b); });
+      d.append(gt);
+      tags("Most hit sectors", sel.rec.sectors);
+    } else {
+      d.append(el("h4",null,"Stories"));
+      const box = el("ul","stories");
+      sel.stories.forEach(st => { const x = el("li"), t = el("span","st-title"), src = el("span","st-src");
+        t.append(el("span","dot " + st.level), document.createTextNode(st.title));
+        st.links.forEach(l => { const a = el("a",null,l.label); a.href = safeUrl(l.url); a.target = "_blank"; a.rel = "noopener noreferrer"; src.append(a); });
+        x.append(t); if (st.ai.summary) x.append(el("span","st-sum", st.ai.summary)); x.append(src); box.append(x); });
+      d.append(box);
+    }
+  }
+  renderRansomExtra(ransom ? g : null);
+  renderTicker(ransom ? g : null);
+  const note = byId("mapNote"); note.textContent = "";
+  if (ransom){ const a = el("a",null,"Ransomware.live"); a.href = "https://www.ransomware.live"; a.target = "_blank"; a.rel = "noopener";
+    note.append(document.createTextNode("Ransomware data from "), a, document.createTextNode(
+      ". These are claims posted by ransomware groups on their leak sites, not verified against the victims. Only counts are shown, never victim names. Small countries may be missing from the globe but appear in the ranking.")); }
+  else note.textContent = "Countries are read from each story by Claude and can be wrong or missing. Open the story to check.";
+  if (globe && geoFeatures){
+    const m = {}; rows.forEach(r => { m[r.cc] = r.n; });
+    globe.polygonCapColor(f => mapColor(m[f.properties.cc] || 0, max))
+      .polygonAltitude(f => f.properties.cc && f.properties.cc === mapSel ? .07 : .006 + (m[f.properties.cc] ? .025 * Math.sqrt(m[f.properties.cc] / max) : 0))
+      .polygonLabel(f => '<div class="gl-tip"><b>' + esc(f.properties.name) + "</b><br>" + (m[f.properties.cc] || 0) + " " + unit(m[f.properties.cc] || 0) + "</div>");
+  }
+}
+// Fills a box with everything we know about one ransomware group. Used by the
+// side panel and by the pop-up bubble, so both always show the same thing.
+// 'local' is set when the bubble was opened from a country (count in that country).
+function groupInfo(box, name, g, local){
+  const rec = (g.groups || []).find(x => x.name === name);
+  const head = el("div","head"), av = el("div","avatar"), tx = el("div");
+  av.setAttribute("aria-hidden","true");
+  av.innerHTML = '<svg viewBox="0 0 120 120"><polygon points="60,8 105,34 105,86 60,112 15,86 15,34"/></svg>';
+  av.append(el("span", null, name.replace(/[^a-z0-9]/gi, "").slice(0, 2) || "?"));
+  const h = el("h3", null, name); h.id = box.id === "bubble" ? "bubbleName" : "";
+  tx.append(h, el("div","kind","Ransomware group" + (rec && rec.origin ? " · linked to " + rec.origin : "")));
+  head.append(av, tx); box.append(head);
+  if (rec){ const big = el("div","big", String(rec.n)); big.append(el("small",null,"victims claimed in " + g.window_days + " days")); box.append(big); }
+  if (local){ const p = el("p","about", local.n + (local.n === 1 ? " of them in " : " of them in ") + regionName(local.cc) + "."); box.append(p); }
+  if (rec && rec.about){ const p = el("p","about"); p.append(el("span","ai","AI"), document.createTextNode(rec.about)); box.append(p); }
+  else if (!rec) box.append(el("p","about","This group is outside the 25 most active in the window, so only its page on Ransomware.live has more."));
+  const tags = (title, list, label) => { if (!list || !list.length) return; box.append(el("h4",null,title)); const t = el("div","tags");
+    list.forEach(x => { const sp = el("span",null, label(x)); sp.append(el("b",null,String(x.n))); t.append(sp); }); box.append(t); };
+  if (rec){
+    tags("Countries hit most", rec.countries, x => regionName(x.cc));
+    tags("Sectors hit most", rec.sectors, x => x.name);
+    if (rec.last){ box.append(el("h4",null,"Latest claim")); box.append(el("p","about", fmtDate(rec.last))); }
+  }
+  const out = el("p","out"), a = el("a",null,"Read more about " + name + " on Ransomware.live");
+  a.href = "https://www.ransomware.live/group/" + encodeURIComponent(name); a.target = "_blank"; a.rel = "noopener noreferrer";
+  out.append(a); box.append(out);
+}
+// Opens the bubble for a group. Closes with the X, a click outside, or Escape.
+let bubbleFrom = null;
+function openGroup(name, local){
+  const g = DATA.geo; if (!g) return;
+  const veil = byId("veil"), box = byId("bubble"); box.textContent = ""; box.className = "bubble detail";
+  const x = el("button","x","×"); x.type = "button"; x.setAttribute("aria-label","Close"); x.addEventListener("click", closeGroup);
+  box.append(x); groupInfo(box, name, g, local);
+  bubbleFrom = document.activeElement; veil.hidden = false; x.focus();
+}
+function closeGroup(){ byId("veil").hidden = true; if (bubbleFrom && bubbleFrom.focus) bubbleFrom.focus(); }
+byId("veil").addEventListener("click", e => { if (e.target.id === "veil") closeGroup(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !byId("veil").hidden) closeGroup(); });
+
+// The panels under the globe: groups, victims per day and the latest hits.
+// They only make sense for the ransomware layer, so they hide for the news layer.
+let grpSel = null;
+function renderRansomExtra(g){
+  const extra = byId("ransomExtra");
+  extra.hidden = !(g && (g.groups || []).length);
+  if (extra.hidden) return;
+  const groups = g.groups, gmax = groups[0].n;
+  if (!groups.some(x => x.name === grpSel)) grpSel = groups[0].name;
+  const ol = byId("grpRank"); ol.textContent = "";
+  groups.slice(0, 10).forEach((x, k) => {
+    const li = el("li"), b = el("button"); b.type = "button"; b.setAttribute("aria-pressed", String(x.name === grpSel)); b.style.setProperty("--i", k);
+    const track = el("span"), fill = el("span","fill"); fill.style.width = (x.n / gmax * 100) + "%"; track.append(fill);
+    b.append(el("span","pos", String(k + 1)), el("span","nm", x.name), track, el("span","val", String(x.n)));
+    b.addEventListener("click", () => { grpSel = x.name; renderRansomExtra(g); });
+    li.append(b); ol.append(li);
+  });
+  const d = byId("grpDetail"); d.textContent = "";
+  groupInfo(d, grpSel, g, null);
+
+  const days = g.days || [], cols = byId("dayCols"), ax = byId("dayAxis"); cols.textContent = ""; ax.textContent = "";
+  if (days.length){
+    const peak = days.reduce((m, x) => x.n > m.n ? x : m, days[0]);
+    days.forEach((x, k) => { const c = el("i"), u = el("u"); c.style.setProperty("--i", k); u.style.height = peak.n ? (x.n / peak.n * 100) + "%" : "0";
+      c.dataset.tip = fmtDate(x.date) + ": " + x.n + (x.n === 1 ? " victim" : " victims"); c.append(u); cols.append(c); });
+    byId("dayNote").textContent = "Claims posted on leak sites each day. Busiest day: " + fmtDate(peak.date) + " with " + peak.n + ".";
+    ax.append(el("span",null,fmtDate(days[0].date)), el("span",null,fmtDate(days[Math.floor(days.length / 2)].date)), el("span",null,fmtDate(days[days.length - 1].date)));
+  }
+}
+
+// The moving "latest claims" row above the globe. It shows the newest claims
+// worldwide; tapping a group name opens its bubble. It pauses on hover, when a
+// button inside it has focus, or with the pause button.
+function renderTicker(g){
+  const box = byId("ticker"), track = byId("tkTrack"), hits = (g && g.recent) || [];
+  box.hidden = !hits.length; track.textContent = "";
+  if (!hits.length) return;
+  const newest = hits[0].d;
+  const item = (h, copy) => {
+    const it = el("span","tk-item");
+    if (h.d === newest) it.append(el("i","new"));
+    it.append(el("b",null,fmtDate(h.d)));
+    if (h.cc) it.append(el("span","cc",h.cc));
+    it.append(document.createTextNode((h.cc ? regionName(h.cc) : "Unknown country") + " · " + (h.s || "Sector unknown") + " · "));
+    const gb = el("button","linkbtn",h.g); gb.type = "button"; gb.addEventListener("click", () => openGroup(h.g, null));
+    if (copy) gb.tabIndex = -1;   // the second copy is only there for the loop
+    it.append(gb); return it;
+  };
+  const one = el("span"), two = el("span"); one.style.display = two.style.display = "flex";
+  hits.forEach(h => { one.append(item(h, false)); two.append(item(h, true)); });
+  two.setAttribute("aria-hidden","true");
+  track.append(one, two);
+  // Same reading speed on every screen: about 45 pixels per second.
+  requestAnimationFrame(() => { track.style.setProperty("--dur", Math.max(20, one.scrollWidth / 45) + "s"); });
+}
+byId("tkPause").addEventListener("click", () => {
+  const box = byId("ticker"), p = box.classList.toggle("paused"), b = byId("tkPause");
+  b.innerHTML = p ? "&#9654;" : "&#10074;&#10074;"; b.setAttribute("aria-label", p ? "Play the ticker" : "Pause the ticker"); b.title = p ? "Play" : "Pause";
+});
+
+function selectCountry(cc, fly){
+  if (!cc) return;
+  mapSel = cc; renderMap();
+  const f = geoFeatures && geoFeatures.find(x => x.properties.cc === cc);
+  if (globe && f && fly){ globe.controls().autoRotate = false; globe.pointOfView({lat: f.properties.lat, lng: f.properties.lng, altitude: 1.7}, 900); }
+}
+function loadScript(src){ return new Promise((ok, fail) => { const t = document.createElement("script"); t.src = src; t.onload = ok; t.onerror = fail; document.head.append(t); }); }
+function sizeGlobe(){ const box = byId("globe"); if (globe && box.clientWidth) globe.width(box.clientWidth).height(box.clientHeight); }
+// The globe library is almost 2 MB, so it is only downloaded the first time
+// somebody opens the Map tab.
+function openMap(){
+  renderMap();
+  if (globeState === "ready"){ sizeGlobe(); globe.resumeAnimation(); return; }
+  if (globeState !== "idle") return;
+  globeState = "loading";
+  Promise.all([loadScript("globe.gl.min.js"), fetch("countries.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })])
+    .then(([, geo]) => {
+      const box = byId("globe"), still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      geoFeatures = geo.features;
+      globe = new window.Globe(box);
+      globe.backgroundColor("rgba(0,0,0,0)").showAtmosphere(true).atmosphereColor("#35e0ff").atmosphereAltitude(.13)
+        .polygonsData(geoFeatures).polygonSideColor(() => "rgba(0,0,0,.45)").polygonStrokeColor(() => "#2b3742")
+        .polygonsTransitionDuration(still ? 0 : 500)
+        .onPolygonClick(f => { if (f.properties.cc) selectCountry(f.properties.cc, false); })
+        .onPolygonHover(f => { box.style.cursor = f ? "pointer" : "grab"; });
+      globe.globeMaterial().color.set("#05090c");
+      globe.pointOfView({lat: 38, lng: 12, altitude: 2.2}, 0);
+      const c = globe.controls(); c.autoRotate = !still; c.autoRotateSpeed = .45; c.minDistance = 160; c.maxDistance = 520;
+      box.addEventListener("pointerdown", () => { c.autoRotate = false; });
+      sizeGlobe(); globeState = "ready"; byId("globeBox").classList.add("ready"); renderMap();
+      if (document.body.dataset.view !== "map") globe.pauseAnimation();
+    })
+    .catch(() => { globeState = "failed"; byId("globeMsg").textContent = "The 3D globe could not start on this device. The country ranking beside it still works."; });
+}
+byId("mapChips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (!b) return; mapLayer = b.dataset.l; mapSel = null; renderMap(); });
+window.addEventListener("resize", sizeGlobe);
+
+/* ---------- Feed tab ---------- */
+const XLOGO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>';
+const FEED_CATS = ["All", "News", "CTI", "Vulnerabilities", "Official", "Researchers"];
+let feedCat = "All", feedQ = "", feedShown = 25, feedPick = null;
+// "3 h ago" for recent posts, the date for older ones.
+function ago(iso){
+  const m = Math.round((Date.now() - Date.parse(iso)) / 60000);
+  if (m < 60) return Math.max(1, m) + " min ago";
+  if (m < 24 * 60) return Math.round(m / 60) + " h ago";
+  return new Date(iso).toLocaleDateString("en-GB", {day: "numeric", month: "short"});
+}
+const hoursAgo = iso => (Date.now() - Date.parse(iso)) / 3.6e6;
+// Builds the post text with working links, without changing a single character:
+// t.co links show their display address, @names go to the profile and
+// #hashtags to an X search, as X's display rules require.
+function postText(p, cls){
+  const box = el("p", cls), urls = {}, men = new Set((p.mentions || []).map(x => x.toLowerCase())), tags = new Set((p.tags || []).map(x => x.toLowerCase()));
+  (p.urls || []).forEach(u => { urls[u.u] = u.d; });
+  const re = /https:\/\/t\.co\/\w+|@\w{1,15}|#\w+/g; let last = 0, m;
+  const link = (text, href) => { const a = el("a", null, text); a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; return a; };
+  while ((m = re.exec(p.text))){
+    const t = m[0]; let node = null;
+    if (t.startsWith("https://t.co/")) node = link(urls[t] || t, t);
+    else if (t[0] === "@" && men.has(t.slice(1).toLowerCase())) node = link(t, "https://x.com/" + t.slice(1));
+    else if (t[0] === "#" && tags.has(t.slice(1).toLowerCase())) node = link(t, "https://x.com/search?q=" + encodeURIComponent(t));
+    if (!node) continue;
+    box.append(document.createTextNode(p.text.slice(last, m.index)), node); last = m.index + t.length;
+  }
+  box.append(document.createTextNode(p.text.slice(last)));
+  return box;
+}
+const ext = (a, href) => { a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; return a; };
+function avatar(u, cls){
+  const pic = ext(el("a", cls), "https://x.com/" + (u.username || "")); pic.setAttribute("aria-label", (u.name || u.username || "") + " on X");
+  const initials = () => el("span", null, (u.username || "?").slice(0, 2));
+  if (u.img){ const img = el("img"); img.src = u.img; img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+    img.addEventListener("error", () => pic.replaceChildren(initials())); pic.append(img); }
+  else pic.append(initials());
+  return pic;
+}
+function tagsRow(p, cls){
+  if (!(p.cves || []).length && !(p.signals || []).length) return null;
+  const tg = el("div", cls);
+  (p.cves || []).forEach(c => { const x = (p.kev || []).includes(c);
+    tg.append(ext(el("a", "cvex" + (x ? " exp" : ""), c + (x ? " · exploited" : "")), "https://nvd.nist.gov/vuln/detail/" + encodeURIComponent(c))); });
+  (p.signals || []).forEach(sg => tg.append(el("span", null, sg)));
+  return tg;
+}
+
+// Which posts must not be missed. Fixed rules, so the choice is explainable:
+// an exploited CVE, words like "zero-day" or "actively exploited", an official
+// agency talking about a CVE, or several accounts posting about the same CVE.
+function rankPosts(posts){
+  const acc = {};
+  posts.forEach(p => (p.cves || []).forEach(c => { (acc[c] = acc[c] || new Set()).add(p.uid); }));
+  posts.forEach(p => {
+    let s = 0; const why = [];
+    if ((p.kev || []).length){ s += 3; why.push("Exploited CVE"); }
+    const sig = p.signals || [];
+    if (sig.includes("Zero-day")){ s += 2; why.push("Zero-day"); }
+    if (sig.includes("Exploited in the wild")){ s += 2; why.push("Exploited in the wild"); }
+    if (!why.length && sig.length){ s += 1; why.push(sig[0]); }
+    if ((p.cves || []).length && !(p.kev || []).length) s += 1;
+    if (p.cat === "Official" && ((p.cves || []).length || sig.length)){ s += 1; why.push("Official source"); }
+    const shared = Math.max(0, ...(p.cves || []).map(c => acc[c].size));
+    if (shared >= 2){ s += 2; why.push(shared + " accounts on this CVE"); }
+    p._s = s; p._why = why;
+    p._lv = (p.kev || []).length || sig.includes("Zero-day") || sig.includes("Exploited in the wild") ? "red" : s >= 2 ? "orange" : "";
+  });
+  return acc;
+}
+
+// A compact post. Same parts as X's own layout, shorter: long text is cut to
+// three lines with a "Show more" that reveals all of it.
+function compactPost(p, users, opts = {}){
+  const u = users[p.uid] || {}, profile = "https://x.com/" + (u.username || ""), permalink = profile + "/status/" + p.id;
+  const li = el("li","cp" + (p._lv ? " " + p._lv : "") + (opts.mini ? " mini" : ""));
+  li.append(avatar(u, "pic"));
+  const h = el("div","cph");
+  h.append(ext(el("a","nm", u.name || u.username || ""), profile), ext(el("a","hd","@" + (u.username || "")), profile),
+    ext(el("a","tm", "· " + ago(p.at)), permalink));
+  h.lastChild.title = new Date(p.at).toLocaleString("en-GB", {dateStyle: "medium", timeStyle: "short"});
+  if (isNew(p.id)) h.append(el("span","newb","NEW"));
+  const xl = ext(el("a","xlogo"), permalink); xl.setAttribute("aria-label","View on X"); xl.innerHTML = XLOGO;
+  li.append(h, xl);
+  if (opts.why && (p._why || []).length){ const w = el("div","why2"); p._why.slice(0, 2).forEach(t => w.append(el("span",null,t))); li.append(w); }
+  const long = p.text.length > (opts.mini ? 140 : 230) || (p.text.match(/\n/g) || []).length > 3;
+  const tx = postText(p, "ctx" + (long ? " clamp" : "")); li.append(tx);
+  if (long){ const b = el("button","clampbtn","Show more"); b.type = "button";
+    b.addEventListener("click", () => { const c = tx.classList.toggle("clamp"); b.textContent = c ? "Show more" : "Show less"; }); li.append(b); }
+  const tg = tagsRow(p, "ptags"); if (tg && !opts.mini) li.append(tg);
+  const f = el("div","cpf"); f.append(el("span","cat", p.cat)); if (p.edited) f.append(el("span",null,"edited"));
+  f.append(ext(el("a",null,"View on X"), permalink)); li.append(f);
+  return li;
+}
+// The full-size post, used in the theme window.
+function postCard(p, users){
+  const u = users[p.uid] || {}, profile = "https://x.com/" + (u.username || ""), permalink = profile + "/status/" + p.id;
+  const li = el("li","post");
+  const who = el("div","who");
+  who.append(ext(el("a","nm", u.name || u.username), profile), ext(el("a","hd", "@" + (u.username || "")), profile), el("span","cat", p.cat));
+  const xl = ext(el("a","xlogo"), permalink); xl.setAttribute("aria-label","View on X"); xl.innerHTML = XLOGO;
+  li.append(avatar(u, "pic"), who, xl, postText(p, "txt"));
+  const tg = tagsRow(p, "ptags"); if (tg) li.append(tg);
+  const ft = el("div","pfoot");
+  const when = ext(el("a", null, ago(p.at) + (p.edited ? " · edited" : "")), permalink);
+  when.title = new Date(p.at).toLocaleString("en-GB", {dateStyle: "medium", timeStyle: "short"});
+  ft.append(when, ext(el("a", null, "View on X"), permalink)); li.append(ft);
+  return li;
+}
+
+function feedFilter(p, users){
+  if (feedCat !== "All" && p.cat !== feedCat) return false;
+  if (feedPick){
+    if (feedPick.kind === "cve" && !(p.cves || []).includes(feedPick.value)) return false;
+    if (feedPick.kind === "signal" && !(p.signals || []).includes(feedPick.value)) return false;
+    if (feedPick.kind === "tag" && !(p.tags || []).some(t => t.toLowerCase() === feedPick.value)) return false;
+    if (feedPick.kind === "new" && !isNew(p.id)) return false;
+    if (feedPick.kind === "pri" && !(p._s >= 3)) return false;
+  }
+  if (!feedQ) return true;
+  const u = users[p.uid] || {};
+  return (p.text + " " + (u.username || "") + " " + (u.name || "") + " " + (p.cves || []).join(" ")).toLowerCase().includes(feedQ.toLowerCase());
+}
+function setFeedPick(pick){
+  feedPick = pick; feedShown = 25;
+  byId("fPicked").hidden = !pick; byId("fPickedTxt").textContent = pick ? pick.label : "";
+  renderFeed();
+  if (pick) byId("fList").scrollIntoView({behavior: "smooth", block: "start"});
+}
+byId("fPickedX").addEventListener("click", () => setFeedPick(null));
+
+function renderFeed(){
+  if (!DATA) return;
+  const x = DATA.x, list = byId("fList"); list.textContent = "";
+  const posts = (x && x.posts) || [];
+  ["fNow","fPri","fTrend"].forEach(id => { byId(id).hidden = true; });
+  byId("fPulse").textContent = ""; byId("fKpis").textContent = "";
+  if (!posts.length){
+    list.append(el("li","empty", x ? "No posts in the last " + (x.keep_hours || 72) + " hours yet." : "The X feed is not connected yet."));
+    byId("fCount").textContent = ""; byId("fMore").hidden = true; byId("fChips").textContent = ""; return;
+  }
+  const users = {}; Object.values(x.users || {}).forEach(u => { users[u.id] = u; });
+  const acc = rankPosts(posts);
+  const day = posts.filter(p => hoursAgo(p.at) <= 24);
+  const recent = day.length ? day : posts;
+
+  // activity strip: posts per hour over the last 24 hours (red = a must-read post that hour)
+  const bins = Array.from({length: 24}, () => ({n: 0, hot: false}));
+  day.forEach(p => { const b = 23 - Math.min(23, Math.floor(hoursAgo(p.at))); bins[b].n++; if (p._s >= 3) bins[b].hot = true; });
+  const peak = Math.max(1, ...bins.map(b => b.n));
+  const pulse = byId("fPulse"), bars = el("div","pbars");
+  bins.forEach((b, k) => { const i = el("i", b.hot ? "hot" : ""), u = el("u"); i.style.setProperty("--i", k); u.style.height = (b.n / peak * 100) + "%";
+    i.dataset.tip = (k === 23 ? "Last hour" : (23 - k) + " h ago") + ": " + b.n + (b.n === 1 ? " post" : " posts") + (b.hot ? ", includes a must-read" : ""); i.append(u); bars.append(i); });
+  const cap = el("div","cap"); cap.append(el("span",null,"24 h ago"), el("span",null,"Posts per hour"), el("span",null,"now"));
+  pulse.append(bars, cap);
+
+  // numbers you can tap
+  const nNew = posts.filter(p => isNew(p.id)).length, pri = posts.filter(p => p._s >= 3);
+  const k = byId("fKpis");
+  const kpi = (n, label, cls, go, pressed) => { const b = el("button","kpi " + cls + (n ? "" : " zero")); b.type = "button";
+    b.setAttribute("aria-pressed", String(!!pressed)); b.append(el("b",null,String(n)), el("span",null,label));
+    if (n && go) b.addEventListener("click", go); else b.disabled = !go || !n; k.append(b); };
+  kpi(day.length, "posts in the last 24 h", "blue", () => setFeedPick(null), false);
+  kpi(pri.length, "must-read posts", "red", () => setFeedPick(feedPick && feedPick.kind === "pri" ? null : {kind: "pri", label: "Must-read posts"}), feedPick && feedPick.kind === "pri");
+  if (SEEN !== null) kpi(nNew, "new since your last visit", "newk", () => setFeedPick(feedPick && feedPick.kind === "new" ? null : {kind: "new", label: "New since your last visit"}), feedPick && feedPick.kind === "new");
+  const cves = Object.keys(acc).filter(c => recent.some(p => (p.cves || []).includes(c)));
+  kpi(cves.length, cves.length === 1 ? "CVE being discussed" : "CVEs being discussed", "orange", null, false);
+
+  renderThemes(x, users);
+
+  // Don't miss: the strongest posts of the last 24 hours, at most two per account
+  const per = {}, top = recent.filter(p => p._s >= 3).sort((a, b) => b._s - a._s || (a.at < b.at ? 1 : -1))
+    .filter(p => (per[p.uid] = (per[p.uid] || 0) + 1) <= 2).slice(0, 5);
+  if (top.length){ byId("fPri").hidden = false; const pl = byId("fPriList"); pl.textContent = "";
+    top.forEach(p => pl.append(compactPost(p, users, {mini: true, why: true}))); }
+
+  // Trending: CVEs several accounts mention, and the most common signals and hashtags
+  const tr = byId("fTrendList"); tr.textContent = "";
+  const exploited = new Set(recent.flatMap(p => p.kev || []));
+  const cveRank = cves.map(c => [c, new Set(recent.filter(p => (p.cves || []).includes(c)).map(p => p.uid)).size])
+    .sort((a, b) => b[1] - a[1] || (exploited.has(b[0]) - exploited.has(a[0]))).slice(0, 6);
+  const count = arr => { const m = {}; arr.forEach(v => { m[v] = (m[v] || 0) + 1; }); return Object.entries(m).sort((a, b) => b[1] - a[1]); };
+  const chip = (label, n, cls, pick) => { const b = el("button","tchip " + cls); b.type = "button"; b.append(document.createTextNode(label), el("b",null,String(n)));
+    b.addEventListener("click", () => setFeedPick(pick)); tr.append(b); };
+  cveRank.forEach(([c, n]) => chip(c, n, "cvechip" + (exploited.has(c) ? " exp" : ""), {kind: "cve", value: c, label: c}));
+  count(recent.flatMap(p => p.signals || [])).slice(0, 5).forEach(([sg, n]) => chip(sg, n, "", {kind: "signal", value: sg, label: sg}));
+  count(recent.flatMap(p => (p.tags || []).map(t => t.toLowerCase()))).filter(([, n]) => n >= 2).slice(0, 5)
+    .forEach(([t, n]) => chip("#" + t, n, "", {kind: "tag", value: t, label: "#" + t}));
+  byId("fTrend").hidden = !tr.children.length;
+
+  // category chips with counts
+  const chips = byId("fChips"); chips.textContent = "";
+  FEED_CATS.forEach(c => { const n = c === "All" ? posts.length : posts.filter(p => p.cat === c).length;
+    const b = el("button","chip",c); b.append(el("b",null,String(n))); b.type = "button"; b.setAttribute("aria-pressed", String(c === feedCat));
+    b.addEventListener("click", () => { feedCat = c; feedShown = 25; renderFeed(); }); chips.append(b); });
+
+  // the stream, grouped by time
+  const shown = posts.filter(p => feedFilter(p, users));
+  byId("fCount").textContent = shown.length + (shown.length === 1 ? " post" : " posts") + (feedPick || feedCat !== "All" || feedQ ? " match" : " from the last " + Math.round((x.keep_hours || 72) / 24) + " days");
+  if (!shown.length) list.append(el("li","empty","No posts match. Clear the filter or choose All."));
+  const bucket = p => { const h = hoursAgo(p.at); return h < 1 ? "Last hour" : h < 6 ? "Last 6 hours" : h < 24 ? "Earlier today" : h < 48 ? "Yesterday" : "2 to 3 days ago"; };
+  let last = null;
+  shown.slice(0, feedShown).forEach((p, n) => {
+    const b = bucket(p);
+    if (b !== last){ const g = el("li","tgroup"); g.append(el("b",null,b), document.createTextNode(String(shown.filter(q => bucket(q) === b).length))); list.append(g); last = b; }
+    const c = compactPost(p, users); c.style.animationDelay = Math.min(n, 10) * 25 + "ms"; list.append(c);
+  });
+  const mb = byId("fMore"); mb.hidden = shown.length <= feedShown; mb.textContent = "Show " + Math.min(25, shown.length - feedShown) + " more posts";
+  const accl = byId("fAccounts"); accl.textContent = "";
+  (x.accounts || []).forEach(a => { const li = el("li"); li.append(ext(el("a", null, "@" + a.username), "https://x.com/" + a.username)); accl.append(li); });
+}
+
+// The AI themes as cards. A card shows the gist; tapping it opens a window
+// with the whole summary and the source posts in full.
+function renderThemes(x, users){
+  const dg = x && x.digest, box = byId("fNow"), list = byId("fThemes");
+  list.textContent = ""; box.hidden = !(dg && (dg.themes || []).length);
+  if (box.hidden) return;
+  byId("fNowOv").textContent = dg.overview || "";
+  byId("fNowWhen").textContent = "from " + dg.based_on + " posts, " + ago(dg.at);
+  const byPid = {}; (x.posts || []).forEach(p => { byPid[p.id] = p; });
+  dg.themes.forEach((t, k) => {
+    const posts = t.posts.map(id => byPid[id]).filter(Boolean);
+    const exp = new Set(posts.flatMap(p => p.kev || []));
+    const li = el("li"), b = el("button","tcard " + t.level); b.type = "button"; b.style.animationDelay = k * 50 + "ms";
+    const th = el("div","th"); th.append(el("span","no",String(k + 1)), el("span","tt",t.title));
+    const tf = el("div","tf"), faces = el("span","faces"), seenU = new Set();
+    posts.forEach(p => { if (seenU.has(p.uid)) return; seenU.add(p.uid); const u = users[p.uid] || {};
+      if (u.img){ const im = el("img"); im.src = u.img; im.alt = ""; im.referrerPolicy = "no-referrer"; im.addEventListener("error", () => im.replaceWith(el("span",null,(u.username||"?").slice(0,2)))); faces.append(im); }
+      else faces.append(el("span",null,(u.username||"?").slice(0,2))); });
+    tf.append(faces, document.createTextNode(posts.length + (posts.length === 1 ? " source" : " sources")));
+    (t.cves || []).slice(0, 2).forEach(c => tf.append(el("span","cv" + (exp.has(c) ? " exp" : ""), c)));
+    b.append(th, el("span","ts",t.summary), tf);
+    b.addEventListener("click", () => openSheet(box => {
+      box.append(el("span","lvpill " + t.level, t.level === "red" ? "Act on this" : t.level === "orange" ? "Worth checking" : "Background"));
+      const h = el("h3",null,t.title); h.id = "bubbleName"; box.append(h);
+      const p = el("p","about"); p.append(el("span","ai","AI"), document.createTextNode(t.summary)); box.append(p);
+      if ((t.cves || []).length){ const r = el("div","tags");
+        t.cves.forEach(c => r.append(ext(el("a","flag" + (exp.has(c) ? " hot" : ""), c + (exp.has(c) ? " · exploited" : "")), "https://nvd.nist.gov/vuln/detail/" + encodeURIComponent(c))));
+        box.append(r); }
+      box.append(el("h4",null,"Source posts"));
+      const ol = el("ol","posts"); posts.forEach(pp => ol.append(postCard(pp, users))); box.append(ol);
+    }));
+    li.append(b); list.append(li);
+  });
+}
+// A pop-up window for a theme (re-uses the group bubble, wider).
+function openSheet(fill){
+  const veil = byId("veil"), box = byId("bubble"); box.textContent = ""; box.className = "bubble detail wide";
+  const xb = el("button","x","×"); xb.type = "button"; xb.setAttribute("aria-label","Close"); xb.addEventListener("click", closeGroup);
+  box.append(xb); fill(box);
+  bubbleFrom = document.activeElement; veil.hidden = false; box.scrollTop = 0; xb.focus();
+}
+byId("fq").addEventListener("input", e => { feedQ = e.target.value.trim(); feedShown = 25; renderFeed(); });
+byId("fMore").addEventListener("click", () => { feedShown += 25; renderFeed(); });
+
+/* views: #brief and #cti */
+// The four tabs are one page. The part after # in the address decides which
+// one is visible, so the back button and shared links both work.
+function route(){
+  const h = location.hash, v = h === "#cti" ? "cti" : h === "#about" ? "about" : h === "#map" ? "map" : h === "#feed" ? "feed" : "brief";
+  document.body.dataset.view = v;
+  [["brief","navBrief"],["cti","navCti"],["map","navMap"],["feed","navFeed"],["about","navAbout"]].forEach(([name, id]) => {
+    if (name === v) byId(id).setAttribute("aria-current","page"); else byId(id).removeAttribute("aria-current"); });
+  if (v === "cti" && DATA) countUp();
+  if (v === "map") openMap(); else if (globe) globe.pauseAnimation();
+  window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route); route();
+
+// The photo on the About page is optional: if markus.jpg is missing, hide the frame.
+const mePhoto = byId("mePhoto");
+const noPhoto = () => { if (mePhoto.getAttribute("src") === "markus.jpeg") mePhoto.src = "markus.jpg"; else mePhoto.hidden = true; };
+mePhoto.addEventListener("error", noPhoto);
+if (mePhoto.complete && !mePhoto.naturalWidth) noPhoto();
+
+// The email address is put together here and only shown after a click. Most
+// spam robots read the page source without running scripts, so they miss it.
+byId("mailBtn").addEventListener("click", () => {
+  const addr = ["markus.kankare", "@", "proton", ".me"].join("");
+  const a = el("a", null, addr); a.href = "mailto:" + addr;
+  byId("mailOut").replaceChildren(a); byId("mailBtn").hidden = true;
+});
+byId("year").textContent = String(new Date().getFullYear());
+
+/* load now, then look for new data every 10 minutes */
+// Downloads data.json. Called once at start and then every 10 minutes; the
+// page only redraws if the file really changed.
+function load(first){
+  fetch("data.json", {cache:"no-store"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { if (DATA && DATA.generated === d.generated) return; DATA = d; summary(); render(); renderCti(); renderMap(); renderFeed(); })
+    .catch(() => {
+      if (!first) return;
+      byId("updated").textContent = "No data";
+      byId("list").append(el("div","empty",
+        "Could not load data.json. Run “python fetch.py” in this folder, then open the site through a web server (for example “python -m http.server”), not as a local file."));
+    });
+}
+load(true);
+setInterval(() => load(false), 10 * 60 * 1000);
+</script>
+</body>
+</html>
