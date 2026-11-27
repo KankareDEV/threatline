@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-26T21:24:39Z",
+ "generated": "2026-11-27T04:08:51Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1805,
  "counts": {
   "red": 21,
-  "orange": 33,
+  "orange": 31,
   "green": 42
  },
  "sources": [
@@ -52,17 +52,13 @@
  ],
  "analytics": {
   "totals": {
-   "kev_window": 47,
+   "kev_window": 45,
    "ransomware": 1,
    "epss_high": 1,
-   "epss_known": 47,
+   "epss_known": 45,
    "news": 49
   },
   "timeline": [
-   {
-    "date": "2026-10-27",
-    "n": 2
-   },
    {
     "date": "2026-10-28",
     "n": 2
@@ -182,12 +178,16 @@
    {
     "date": "2026-11-26",
     "n": 0
+   },
+   {
+    "date": "2026-11-27",
+    "n": 0
    }
   ],
   "severity": [
    {
     "name": "Critical (9+)",
-    "n": 22
+    "n": 20
    },
    {
     "name": "High (7 to 8.9)",
@@ -217,11 +217,11 @@
    },
    {
     "name": "10 to 49%",
-    "n": 13
+    "n": 12
    },
    {
     "name": "Under 10%",
-    "n": 33
+    "n": 32
    },
    {
     "name": "No score yet",
@@ -250,16 +250,16 @@
     "n": 2
    },
    {
-    "name": "Google",
-    "n": 2
-   },
-   {
     "name": "Barracuda Networks",
     "n": 2
    },
    {
     "name": "Ivanti",
     "n": 2
+   },
+   {
+    "name": "Vates",
+    "n": 1
    }
   ],
   "cwes": [
@@ -294,27 +294,17 @@
     "n": 2
    },
    {
-    "id": "CWE-434",
-    "name": "Unrestricted file upload",
-    "n": 2
-   },
-   {
     "id": "CWE-862",
     "name": "Missing authorization",
     "n": 2
+   },
+   {
+    "id": "CWE-1287",
+    "name": "",
+    "n": 1
    }
   ],
   "deadlines": [
-   {
-    "cve": "CVE-2026-133968",
-    "title": "Project MONAI MONAI Label Path Traversal Vulnerability",
-    "due": "2026-11-26"
-   },
-   {
-    "cve": "CVE-2026-134624",
-    "title": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
-    "due": "2026-11-26"
-   },
    {
     "cve": "CVE-2026-131914",
     "title": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
@@ -364,6 +354,16 @@
     "cve": "CVE-2026-133324",
     "title": "Mitel MiCollab Not Failing Securely Vulnerability",
     "due": "2026-11-28"
+   },
+   {
+    "cve": "CVE-2026-133275",
+    "title": "Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "due": "2026-11-28"
+   },
+   {
+    "cve": "CVE-2026-115731",
+    "title": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+    "due": "2026-12-01"
    }
   ],
   "signals": [
@@ -1814,57 +1814,6 @@
    }
   },
   {
-   "id": "CVE-2026-111497",
-   "type": "vuln",
-   "title": "Google Brotli Unchecked Return Value Vulnerability",
-   "cve": "CVE-2026-111497",
-   "vendor": "Google",
-   "product": "Brotli",
-   "date": "2026-10-27",
-   "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-10",
-   "epss": 0.32976,
-   "cvss": {
-    "score": 9.2,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
-    }
-   ],
-   "cwes": [
-    "CWE-252",
-    "CWE-787"
-   ],
-   "score": 68,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 33% chance of exploitation in 30 days",
-     "points": 8
-    },
-    {
-     "label": "CVSS 9.2 critical severity",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "what": "Data compression library for web content",
-    "summary": "A remote attacker sending a crafted compressed data stream can corrupt memory, leak sensitive data, crash software or possibly run code. Developers and users of affected applications should patch."
-   }
-  },
-  {
    "id": "CVE-2026-90436",
    "type": "vuln",
    "title": "Apache Axis Unsafe Reflection Vulnerability",
@@ -2304,56 +2253,6 @@
    "ai": {
     "what": "Software for managing AI model servers",
     "summary": "Attackers without a login can gain full administrator control, create lasting admin keys, steal stored secrets and run code on the server. Anyone running this tool should act urgently."
-   }
-  },
-  {
-   "id": "CVE-2026-48356",
-   "type": "vuln",
-   "title": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
-   "cve": "CVE-2026-48356",
-   "vendor": "Adobe",
-   "product": "Commerce and Magento",
-   "date": "2026-10-27",
-   "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-10",
-   "epss": 0.07854,
-   "cvss": {
-    "score": 9.3,
-    "version": "3.1",
-    "severity": "CRITICAL",
-    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
-    }
-   ],
-   "cwes": [
-    "CWE-434"
-   ],
-   "score": 62,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 8% chance of exploitation in 30 days",
-     "points": 2
-    },
-    {
-     "label": "CVSS 9.3 critical severity",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "what": "Online store e-commerce platform",
-    "summary": "An attacker can upload a dangerous file type to the site and run code with the current user's rights, potentially taking over accounts or sessions. Online store owners and administrators should act now."
    }
   },
   {
@@ -5044,12 +4943,12 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1179,
-  "located": 992,
+  "total": 1172,
+  "located": 987,
   "countries": [
    {
     "cc": "US",
-    "n": 458,
+    "n": 460,
     "groups": [
      {
       "name": "n0n",
@@ -5057,7 +4956,7 @@
      },
      {
       "name": "incransom",
-      "n": 30
+      "n": 29
      },
      {
       "name": "thegentlemen",
@@ -5071,7 +4970,7 @@
      },
      {
       "name": "Professional Services",
-      "n": 71
+      "n": 70
      },
      {
       "name": "Manufacturing",
@@ -5093,7 +4992,7 @@
      },
      {
       "name": "play",
-      "n": 3
+      "n": 2
      }
     ],
     "sectors": [
@@ -5102,18 +5001,18 @@
       "n": 13
      },
      {
-      "name": "Healthcare",
+      "name": "Professional Services",
       "n": 7
      },
      {
-      "name": "Professional Services",
-      "n": 6
+      "name": "Healthcare",
+      "n": 7
      }
     ]
    },
    {
     "cc": "DE",
-    "n": 55,
+    "n": 53,
     "groups": [
      {
       "name": "thegentlemen",
@@ -5131,7 +5030,7 @@
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 17
+      "n": 16
      },
      {
       "name": "Professional Services",
@@ -5145,7 +5044,7 @@
    },
    {
     "cc": "GB",
-    "n": 44,
+    "n": 41,
     "groups": [
      {
       "name": "n0n",
@@ -5157,7 +5056,7 @@
      },
      {
       "name": "qilin",
-      "n": 6
+      "n": 5
      }
     ],
     "sectors": [
@@ -5240,38 +5139,6 @@
     ]
    },
    {
-    "cc": "IT",
-    "n": 20,
-    "groups": [
-     {
-      "name": "n0n",
-      "n": 3
-     },
-     {
-      "name": "aurora",
-      "n": 3
-     },
-     {
-      "name": "thegentlemen",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Other",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 3
-     }
-    ]
-   },
-   {
     "cc": "FR",
     "n": 19,
     "groups": [
@@ -5299,6 +5166,38 @@
      },
      {
       "name": "Healthcare",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "IT",
+    "n": 19,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 3
+     },
+     {
+      "name": "aurora",
+      "n": 3
+     },
+     {
+      "name": "thegentlemen",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Other",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Professional Services",
       "n": 2
      }
     ]
@@ -5337,7 +5236,7 @@
    },
    {
     "cc": "ES",
-    "n": 15,
+    "n": 14,
     "groups": [
      {
       "name": "safepay",
@@ -7162,7 +7061,7 @@
    },
    {
     "name": "qilin",
-    "n": 79,
+    "n": 77,
     "last": "2026-11-26",
     "sectors": [
      {
@@ -7175,7 +7074,7 @@
      },
      {
       "name": "Education",
-      "n": 8
+      "n": 7
      }
     ],
     "countries": [
@@ -7193,7 +7092,7 @@
      },
      {
       "cc": "GB",
-      "n": 6
+      "n": 5
      },
      {
       "cc": "AU",
@@ -7204,13 +7103,54 @@
     "origin": ""
    },
    {
-    "name": "incransom",
+    "name": "pixelleaks",
     "n": 51,
+    "last": "2026-11-26",
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 12
+     },
+     {
+      "name": "Financial Services",
+      "n": 9
+     },
+     {
+      "name": "Manufacturing",
+      "n": 6
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 9
+     },
+     {
+      "cc": "IN",
+      "n": 7
+     },
+     {
+      "cc": "MX",
+      "n": 3
+     },
+     {
+      "cc": "PS",
+      "n": 2
+     },
+     {
+      "cc": "VN",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "name": "incransom",
+    "n": 50,
     "last": "2026-11-24",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 11
+      "n": 10
      },
      {
       "name": "Technology",
@@ -7224,7 +7164,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 30
+      "n": 29
      },
      {
       "cc": "IN",
@@ -7245,47 +7185,6 @@
     ],
     "about": "INC Ransom is a prolific ransomware-as-a-service operation active since July 2023. It targets healthcare, government, education, and manufacturing in North America and Europe, with no sector excluded. It posted over 200 victims in 2025 alone.",
     "origin": ""
-   },
-   {
-    "name": "pixelleaks",
-    "n": 46,
-    "last": "2026-11-25",
-    "sectors": [
-     {
-      "name": "Technology",
-      "n": 11
-     },
-     {
-      "name": "Manufacturing",
-      "n": 6
-     },
-     {
-      "name": "Financial Services",
-      "n": 6
-     }
-    ],
-    "countries": [
-     {
-      "cc": "IN",
-      "n": 7
-     },
-     {
-      "cc": "US",
-      "n": 7
-     },
-     {
-      "cc": "MX",
-      "n": 3
-     },
-     {
-      "cc": "PS",
-      "n": 2
-     },
-     {
-      "cc": "VN",
-      "n": 2
-     }
-    ]
    },
    {
     "name": "silentransomgroup",
@@ -7359,7 +7258,7 @@
    },
    {
     "name": "akira",
-    "n": 35,
+    "n": 32,
     "last": "2026-11-20",
     "sectors": [
      {
@@ -7367,11 +7266,11 @@
       "n": 11
      },
      {
-      "name": "Professional Services",
-      "n": 4
+      "name": "Technology",
+      "n": 3
      },
      {
-      "name": "Financial Services",
+      "name": "Professional Services",
       "n": 3
      }
     ],
@@ -7445,12 +7344,12 @@
    },
    {
     "name": "medusalocker",
-    "n": 29,
-    "last": "2026-11-25",
+    "n": 30,
+    "last": "2026-11-26",
     "sectors": [
      {
       "name": "Technology",
-      "n": 5
+      "n": 6
      },
      {
       "name": "Manufacturing",
@@ -7565,49 +7464,6 @@
     ]
    },
    {
-    "name": "aurora",
-    "n": 22,
-    "last": "2026-11-26",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 10
-     },
-     {
-      "name": "Other",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 2
-     }
-    ],
-    "countries": [
-     {
-      "cc": "GB",
-      "n": 4
-     },
-     {
-      "cc": "DE",
-      "n": 4
-     },
-     {
-      "cc": "IT",
-      "n": 3
-     },
-     {
-      "cc": "US",
-      "n": 2
-     },
-     {
-      "cc": "AT",
-      "n": 1
-     }
-    ],
-    "about": "Aurora is ransomware associated with a multi-purpose Go-based malware in use since mid-2022. Multiple criminal teams distribute it, and it is also sold on underground forums as an infostealer and botnet under the same name.",
-    "origin": ""
-   },
-   {
     "name": "booba project",
     "n": 22,
     "last": "2026-11-17",
@@ -7647,6 +7503,49 @@
       "n": 1
      }
     ]
+   },
+   {
+    "name": "aurora",
+    "n": 20,
+    "last": "2026-11-26",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 9
+     },
+     {
+      "name": "Other",
+      "n": 3
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "GB",
+      "n": 3
+     },
+     {
+      "cc": "DE",
+      "n": 3
+     },
+     {
+      "cc": "IT",
+      "n": 3
+     },
+     {
+      "cc": "US",
+      "n": 2
+     },
+     {
+      "cc": "AT",
+      "n": 1
+     }
+    ],
+    "about": "Aurora is ransomware associated with a multi-purpose Go-based malware in use since mid-2022. Multiple criminal teams distribute it, and it is also sold on underground forums as an infostealer and botnet under the same name.",
+    "origin": ""
    },
    {
     "name": "aoqin",
@@ -7817,90 +7716,6 @@
     "origin": ""
    },
    {
-    "name": "play",
-    "n": 16,
-    "last": "2026-11-24",
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Technology",
-      "n": 3
-     },
-     {
-      "name": "Retail & E-Commerce",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 8
-     },
-     {
-      "cc": "CA",
-      "n": 3
-     },
-     {
-      "cc": "CH",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "AU",
-      "n": 1
-     }
-    ],
-    "about": "Play ransomware (also called PlayCrypt) was first observed in June 2022 and uses double extortion against many organizations in Latin America. It gains access via phishing, exposed services, and valid accounts. In 2023 Symantec reported two tools that enumerate and exfiltrate internal network data.",
-    "origin": ""
-   },
-   {
-    "name": "whitearmor",
-    "n": 16,
-    "last": "2026-11-22",
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 5
-     },
-     {
-      "name": "Transportation",
-      "n": 3
-     },
-     {
-      "name": "Other",
-      "n": 3
-     }
-    ],
-    "countries": [
-     {
-      "cc": "CO",
-      "n": 4
-     },
-     {
-      "cc": "US",
-      "n": 3
-     },
-     {
-      "cc": "DK",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     },
-     {
-      "cc": "PH",
-      "n": 1
-     }
-    ]
-   },
-   {
     "name": "metaencryptor",
     "n": 15,
     "last": "2026-11-26",
@@ -8037,6 +7852,47 @@
     ]
    },
    {
+    "name": "whitearmor",
+    "n": 14,
+    "last": "2026-11-26",
+    "sectors": [
+     {
+      "name": "Healthcare",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Transportation",
+      "n": 2
+     }
+    ],
+    "countries": [
+     {
+      "cc": "CO",
+      "n": 4
+     },
+     {
+      "cc": "US",
+      "n": 3
+     },
+     {
+      "cc": "DK",
+      "n": 1
+     },
+     {
+      "cc": "GB",
+      "n": 1
+     },
+     {
+      "cc": "PH",
+      "n": 1
+     }
+    ]
+   },
+   {
     "name": "everstake",
     "n": 13,
     "last": "2026-11-23",
@@ -8066,9 +7922,106 @@
     ],
     "about": "The notes say this group is not affiliated with Everstake, Inc., a legitimate blockchain infrastructure company. They suggest the group may be misusing that company's name. The notes give no details on when it appeared, how it operates, or who it targets.",
     "origin": ""
+   },
+   {
+    "name": "play",
+    "n": 13,
+    "last": "2026-11-24",
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 3
+     },
+     {
+      "name": "Technology",
+      "n": 1
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 8
+     },
+     {
+      "cc": "CA",
+      "n": 2
+     },
+     {
+      "cc": "CH",
+      "n": 1
+     },
+     {
+      "cc": "AU",
+      "n": 1
+     },
+     {
+      "cc": "AR",
+      "n": 1
+     }
+    ],
+    "about": "Play ransomware (also called PlayCrypt) was first observed in June 2022 and uses double extortion against many organizations in Latin America. It gains access via phishing, exposed services, and valid accounts. In 2023 Symantec reported two tools that enumerate and exfiltrate internal network data.",
+    "origin": ""
    }
   ],
   "recent": [
+   {
+    "d": "2026-11-26",
+    "cc": "US",
+    "g": "pixelleaks",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "",
+    "g": "pixelleaks",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "CA",
+    "g": "pixelleaks",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "US",
+    "g": "pixelleaks",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "",
+    "g": "pixelleaks",
+    "s": "Financial Services"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "",
+    "g": "medusalocker",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "US",
+    "g": "whitearmor",
+    "s": "Energy & Utilities"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "US",
+    "g": "anubis",
+    "s": "Retail & E-Commerce"
+   },
+   {
+    "d": "2026-11-26",
+    "cc": "US",
+    "g": "inception",
+    "s": "Technology"
+   },
    {
     "d": "2026-11-26",
     "cc": "US",
@@ -8254,70 +8207,12 @@
     "cc": "US",
     "g": "silentransomgroup",
     "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "",
-    "g": "rhysida",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "anubis",
-    "s": "Healthcare"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "silentransomgroup",
-    "s": "Professional Services"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "DE",
-    "g": "n0n",
-    "s": ""
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "DE",
-    "g": "n0n",
-    "s": ""
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "DE",
-    "g": "n0n",
-    "s": ""
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "JP",
-    "g": "dark project",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "n0n",
-    "s": ""
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "IT",
-    "g": "n0n",
-    "s": ""
    }
   ],
   "days": [
    {
-    "date": "2026-10-27",
-    "n": 1
-   },
-   {
     "date": "2026-10-28",
-    "n": 35
+    "n": 21
    },
    {
     "date": "2026-10-29",
@@ -8325,7 +8220,7 @@
    },
    {
     "date": "2026-10-30",
-    "n": 45
+    "n": 46
    },
    {
     "date": "2026-10-31",
@@ -8369,11 +8264,11 @@
    },
    {
     "date": "2026-11-10",
-    "n": 42
+    "n": 41
    },
    {
     "date": "2026-11-11",
-    "n": 45
+    "n": 44
    },
    {
     "date": "2026-11-12",
@@ -8433,7 +8328,11 @@
    },
    {
     "date": "2026-11-26",
-    "n": 22
+    "n": 31
+   },
+   {
+    "date": "2026-11-27",
+    "n": 0
    }
   ]
  },
@@ -8585,45 +8484,45 @@
    "209811713": "2126038690619334831",
    "50026664": "2126060073168294332",
    "1290332482374598658": "2125645496593039562",
-   "41258937": "2126039537621377497",
+   "41258937": "2126165618068250651",
    "4487645412": "2125745874139492764",
    "54316357": "2124929241330364647",
    "935278274845974528": "2125658276868341846",
    "217462908": "2125655976581681574",
-   "1158139840866791424": "2126044876466786529",
+   "1158139840866791424": "2126147205601939958",
    "702994808181170176": "2125899205852188766",
    "1324374317484793856": "2126054623618166967",
    "6821102": "2125571896678732227",
    "964227358218649600": "2125693521491296576",
    "24683268": "2125614985388933453",
-   "1540951016": "2126061499701694766",
+   "1540951016": "2126067693766001019",
    "86973588": "2124975291571613803"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-26T21:24:39.645360+00:00",
-   "bleepincomputer": "2026-11-26T21:24:39.645360+00:00",
-   "therecord_media": "2026-11-26T21:24:39.645360+00:00",
-   "securityweek": "2026-11-26T21:24:39.645360+00:00",
-   "unit42_intel": "2026-11-26T21:24:39.645360+00:00",
-   "esetresearch": "2026-11-26T21:24:39.645360+00:00",
-   "ciscotalos": "2026-11-26T21:24:39.645360+00:00",
-   "googlecloudsec": "2026-11-26T21:24:39.645360+00:00",
-   "msftsecintel": "2026-11-26T21:24:39.645360+00:00",
-   "vxunderground": "2026-11-26T21:24:39.645360+00:00",
-   "projectzerobugs": "2026-11-26T21:24:39.645360+00:00",
-   "thezdi": "2026-11-26T21:24:39.645360+00:00",
-   "watchtowrcyber": "2026-11-26T21:24:39.645360+00:00",
-   "sans_isc": "2026-11-26T21:24:39.645360+00:00",
-   "cisagov": "2026-11-26T21:24:39.645360+00:00",
-   "enisa_eu": "2026-11-26T21:24:39.645360+00:00",
-   "cert_eu": "2026-11-26T21:24:39.645360+00:00",
-   "shadowserver": "2026-11-26T21:24:39.645360+00:00",
-   "gossithedog": "2026-11-26T21:24:39.645360+00:00",
-   "malwaretechblog": "2026-11-26T21:24:39.645360+00:00"
+   "thehackersnews": "2026-11-27T04:08:51.173312+00:00",
+   "bleepincomputer": "2026-11-27T04:08:51.173312+00:00",
+   "therecord_media": "2026-11-27T04:08:51.173312+00:00",
+   "securityweek": "2026-11-27T04:08:51.173312+00:00",
+   "unit42_intel": "2026-11-27T04:08:51.173312+00:00",
+   "esetresearch": "2026-11-27T04:08:51.173312+00:00",
+   "ciscotalos": "2026-11-27T04:08:51.173312+00:00",
+   "googlecloudsec": "2026-11-27T04:08:51.173312+00:00",
+   "msftsecintel": "2026-11-27T04:08:51.173312+00:00",
+   "vxunderground": "2026-11-27T04:08:51.173312+00:00",
+   "projectzerobugs": "2026-11-27T04:08:51.173312+00:00",
+   "thezdi": "2026-11-27T04:08:51.173312+00:00",
+   "watchtowrcyber": "2026-11-27T04:08:51.173312+00:00",
+   "sans_isc": "2026-11-27T04:08:51.173312+00:00",
+   "cisagov": "2026-11-27T04:08:51.173312+00:00",
+   "enisa_eu": "2026-11-27T04:08:51.173312+00:00",
+   "cert_eu": "2026-11-27T04:08:51.173312+00:00",
+   "shadowserver": "2026-11-27T04:08:51.173312+00:00",
+   "gossithedog": "2026-11-27T04:08:51.173312+00:00",
+   "malwaretechblog": "2026-11-27T04:08:51.173312+00:00"
   },
   "budget": {
-   "day": "2026-11-26",
-   "used": 60
+   "day": "2026-11-27",
+   "used": 5
   },
   "accounts": [
    {
@@ -8709,6 +8608,93 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2126165618068250651",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-27T04:06:00.000Z",
+    "text": "Critical Juniper Session Smart Conductor Flaw Exploited in Attacks https://t.co/as0hZDA5ar",
+    "urls": [
+     {
+      "u": "https://t.co/as0hZDA5ar",
+      "d": "securityweek.com/critical-junip…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Exploited in the wild"
+    ]
+   },
+   {
+    "id": "2126147205601939958",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-27T02:52:50.000Z",
+    "text": "\"smelly youre a malware and cybersecurity account you cant just spam weird cat memes because its a american holiday\"\n\noh yeah? well explain this https://t.co/MOshWEYO1P",
+    "urls": [
+     {
+      "u": "https://t.co/MOshWEYO1P",
+      "d": "pic.x.com/MOshWEYO1P"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126146409498108102",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-27T02:49:40.000Z",
+    "text": "schizo cat posting on main for ameriburger thanksgiving, fuck it we ball out",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126146288768942497",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-27T02:49:11.000Z",
+    "text": "https://t.co/2pefcXWIbk",
+    "urls": [
+     {
+      "u": "https://t.co/2pefcXWIbk",
+      "d": "pic.x.com/2pefcXWIbk"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126067693766001019",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-26T21:36:53.000Z",
+    "text": "Imagine for a second, if I had personally stopped what would have been the largest cyberattack in history. One that would have erased millions upon millions of computer systems, and the damage that it did do made ARTEX look like a children's toy. \n\nIn that hypothetical reality, I might have some informed opinions on how likely is it that *insert boogeyman of the year* is going to drastically change the cybersecurity landscape, or whether people will just go back to not caring about security in a couple of months time when it's old news.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
    {
     "id": "2126061499701694766",
     "uid": "1540951016",
@@ -11404,328 +11390,98 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2125069397979283851",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-24T03:30:01.000Z",
-    "text": "N-able Patches Critical Flaw Disclosed After Mail Assure Cyberattack  https://t.co/MtjANPD8sQ",
-    "urls": [
-     {
-      "u": "https://t.co/MtjANPD8sQ",
-      "d": "securityweek.com/n-able-patches…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Critical flaw"
-    ]
-   },
-   {
-    "id": "2125059035363745995",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-24T02:48:50.000Z",
-    "text": "Normally when you think of a compromise, you think someone is slow and methodical, taking their time, covering their steps, being quiet and sneaky.\n\nKurtaj would literally kick in the front door and start blasting.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125058082787242238",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-24T02:45:03.000Z",
-    "text": "Kurtaj wasn't necessarily \"skilled\" in the traditional sense when you think of \"hackers\".\n\nKurtaj was unique in that he called people, pretended to be an employee, used that to get access, and then moved lightning fast with absolutely zero regards to personal safety or OPSEC.\n\nIt was like a \"hacking\" blitzkrieg. He was so reckless and fast it was effective, at the expense of his privacy and operational security.\n\nThat is why Kurtaj was arrested 4 times back to back to back to back.",
-    "urls": [
-     {
-      "u": "https://t.co/n3iW3sgzhI",
-      "d": "x.com/zayn4pf/status…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": true,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125055901912781288",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-24T02:36:23.000Z",
-    "text": "Scanning from Subnet 109.160.32.0/24 https://t.co/CUrfuLCrOE https://t.co/Qnb1wX61YP",
-    "urls": [
-     {
-      "u": "https://t.co/CUrfuLCrOE",
-      "d": "isc.sans.edu/diary/33550"
-     },
-     {
-      "u": "https://t.co/Qnb1wX61YP",
-      "d": "pic.x.com/Qnb1wX61YP"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125050520683565303",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-24T02:15:00.000Z",
-    "text": "phpAfterShell Vulnerability Revives PHP2Shell’s Attack Path https://t.co/i5cidIth5M",
-    "urls": [
-     {
-      "u": "https://t.co/i5cidIth5M",
-      "d": "securityweek.com/phpaftershell-…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125047036135502205",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-24T02:01:09.000Z",
-    "text": "Azure API Management Classic Secrets Leak; iTerm2 Kitty Protocol RCE; binary-parser Code Injection (CVE-2026-134814) (Nov 24th 2026)\n https://t.co/hlboc7Yubg https://t.co/mJkPSbXleJ",
-    "urls": [
-     {
-      "u": "https://t.co/hlboc7Yubg",
-      "d": "isc.sans.edu/podcastdetail/…"
-     },
-     {
-      "u": "https://t.co/mJkPSbXleJ",
-      "d": "pic.x.com/mJkPSbXleJ"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-134814"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125042159413846144",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-24T01:41:46.000Z",
-    "text": "The greatest success is that one-quarter of the top 100 players were https://t.co/9p6TI5eF8N Sentinels. This speaks to how deep the talent pool reaches among our students. Congratulations!! https://t.co/98WgYSXRgD",
-    "urls": [
-     {
-      "u": "https://t.co/9p6TI5eF8N",
-      "d": "Sans.edu"
-     },
-     {
-      "u": "https://t.co/98WgYSXRgD",
-      "d": "x.com/SANS_EDU/statu…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125015599437037859",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-23T23:56:14.000Z",
-    "text": "wtf i was listening to some death metal and some random asian sounding lady said \"battery low\" in my ear\n\nwho tf was that and why are they in my computer https://t.co/9jclZsAqdu",
-    "urls": [
-     {
-      "u": "https://t.co/9jclZsAqdu",
-      "d": "pic.x.com/9jclZsAqdu"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125009001465217073",
-    "uid": "935278274845974528",
-    "cat": "CTI",
-    "at": "2026-11-23T23:30:01.000Z",
-    "text": "Google is a Leader in the 2026 Gartner® Magic Quadrant™ for Security Information and Event Management, positioned furthest in vision.\n\n⚡ With Gemini, Google SecOps turns hours of investigation into minutes.\n\nAccess the report: https://t.co/UGPrLlPW4a https://t.co/U8wI9M1Svy",
-    "urls": [
-     {
-      "u": "https://t.co/UGPrLlPW4a",
-      "d": "goo.gle/4ASRUhC"
-     },
-     {
-      "u": "https://t.co/U8wI9M1Svy",
-      "d": "pic.x.com/U8wI9M1Svy"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124987602898170163",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-23T22:04:59.000Z",
-    "text": "I don't have time at the moment. I'll check if goop later tonight, probably in like, 7 hours, I don't know.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2124984598622773606",
-    "uid": "4487645412",
-    "cat": "CTI",
-    "at": "2026-11-23T21:53:03.000Z",
-    "text": "We continue to track network infrastructure likely associated with Com-affiliated threat actors. An active campaign uses legal-themed domains to target organizations; some attempts affiliated with the newly identified extortion brand \"Inception.\" More at https://t.co/rXQEv88V1Y https://t.co/OetDo7mpzX",
-    "urls": [
-     {
-      "u": "https://t.co/rXQEv88V1Y",
-      "d": "bit.ly/4fbaGZh"
-     },
-     {
-      "u": "https://t.co/OetDo7mpzX",
-      "d": "pic.x.com/OetDo7mpzX"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
   ],
   "digest": {
-   "key": "v1|2125704532759814459,2125712490285658330,2125738912811454567,2125745874139492764,2125758775860859032,2125759219744096555,2125767949944574003,2125775086343094531,2125794171856572768,2125797945224393071,2125813044622319747,2125816930322043066,2125828343010390326,2125829118495486243,2125831318701527339,2125843640056791275,2125848056444887230,2125857485752029470,2125872551888891955,2125880581636689988,2125899205852188766,2125916671118549273,2125939268556410891,2125971810642743361,2125973917193863413,2125979723549610469,2125999987477893310,2126002600436793825,2126009389643358354,2126012844713922691,2126028018028257748,2126030530814656781,2126038690619334831,2126039537621377497,2126044741272043539,2126044876466786529,2126054246499897848,2126054622443737594,2126054623618166967,2126060073168294332,2126061499701694766",
-   "overview": "Actively exploited enterprise, web application and developer-tooling flaws dominate today's picture, alongside credential-theft phishing and several new breaches.",
+   "key": "v1|2125813044622319747,2125816930322043066,2125828343010390326,2125829118495486243,2125831318701527339,2125843640056791275,2125848056444887230,2125857485752029470,2125872551888891955,2125880581636689988,2125899205852188766,2125916671118549273,2125939268556410891,2125971810642743361,2125973917193863413,2125979723549610469,2125999987477893310,2126002600436793825,2126009389643358354,2126012844713922691,2126028018028257748,2126030530814656781,2126038690619334831,2126039537621377497,2126044741272043539,2126044876466786529,2126054246499897848,2126054622443737594,2126054623618166967,2126060073168294332,2126061499701694766,2126067693766001019,2126146288768942497,2126146409498108102,2126147205601939958,2126165618068250651",
+   "overview": "Actively exploited enterprise and web flaws dominate: Mitel, Juniper and Drupal are under attack, with CISA KEV additions, alongside a North Korea-linked GitHub campaign and several breaches.",
    "themes": [
     {
-     "title": "Exploited enterprise appliance and VoIP flaws",
-     "summary": "Hackers are exploiting 10 flaws in Mitel, Juniper, Vates and Danfoss products; CISA added all to KEV with a Nov. 28 federal patch deadline for 8. SecurityWeek reports Mitel MiCollab zero-days and a critical Juniper flaw exploited, and Palo Alto warns a Fragnesia flaw is under attack against PAN-OS.",
+     "title": "Mitel, Juniper and others added to CISA KEV",
+     "summary": "Attackers are exploiting 10 vulnerabilities across Mitel, Juniper, Vates and Danfoss products, including a 10/10 command injection flaw in MiCollab. CISA added all 10 to its KEV catalog, with a November 28 federal patch deadline for 8. SecurityWeek reports the Mitel zero-days were used in suspected AI-assisted attacks, and both SecurityWeek and The Hacker News report the Juniper Session Smart Conductor flaw is exploi",
      "posts": [
       "2125843640056791275",
       "2125916671118549273",
-      "2125939268556410891",
-      "2125712490285658330"
+      "2125939268556410891"
+     ],
+     "cves": [],
+     "level": "red",
+     "sources": 2
+    },
+    {
+     "title": "Drupal installer flaw exploited for site takeover",
+     "summary": "The Hacker News reports a highly critical Drupal site takeover flaw, CVE-2026-136716, is under active exploitation. Sites patched for the earlier Fail2Install issue may still be vulnerable if the installer remains exposed. SecurityWeek says attackers are already exploiting a gap left by that patch.",
+     "posts": [
+      "2125848056444887230",
+      "2125880581636689988"
+     ],
+     "cves": [
+      "CVE-2026-136716"
+     ],
+     "level": "red",
+     "sources": 2
+    },
+    {
+     "title": "Cacti zero-day chain and GeoServer attacks",
+     "summary": "watchTowr reports a zero-day chain in Cacti, named 4HTTP2ROOT, that leads to remote code execution. Guest access is required, which is a common configuration. SecurityWeek reports two newly disclosed GeoServer vulnerabilities are under attack. The Hacker News reports Jenkins disclosed 21 flaws across 11 plugins, including sandbox bypasses that allow code execution on CI/CD controllers.",
+     "posts": [
+      "2126054622443737594",
+      "2125813044622319747",
+      "2125857485752029470"
      ],
      "cves": [],
      "level": "red",
      "sources": 3
     },
     {
-     "title": "Drupal, GeoServer and Cacti under active attack",
-     "summary": "Drupal warns of a highly critical site takeover flaw, CVE-2026-136716, already exploited; sites patched for Fail2Install may stay exposed if the installer is reachable. SecurityWeek reports two new GeoServer flaws under attack, and watchTowr is rapidly responding to a Cacti zero-day RCE chain requiring guest access.",
+     "title": "Breaches at Todoist, 1Password, FIFA and Turnitin",
+     "summary": "Several organizations disclosed breaches. Todoist says a stolen developer credential exposed password hashes, API tokens and connected Outlook data for 6% of users. SecurityWeek reports 1Password exposed customer data and internal source code. FIFA and Turnitin say they were hit by cyberattacks, with FIFA reporting personal and business information was accessed.",
      "posts": [
-      "2125848056444887230",
-      "2125880581636689988",
-      "2125813044622319747",
-      "2126054622443737594"
-     ],
-     "cves": [
-      "CVE-2026-136716"
-     ],
-     "level": "red",
-     "sources": 3
-    },
-    {
-     "title": "Developer and CI/CD supply chain compromises",
-     "summary": "North Korea-linked hackers poisoned 7,600+ GitHub repositories with PolinRider malware that can trigger on opening a project in VS Code. Jenkins disclosed 21 flaws across 11 plugins enabling code execution on CI/CD controllers. 1Password says customer data was stolen after an employee's GitHub account breach; Todoist's breach came from a stolen developer credential.",
-     "posts": [
-      "2125971810642743361",
-      "2125857485752029470",
-      "2125704532759814459",
-      "2125829118495486243"
+      "2125829118495486243",
+      "2125872551888891955",
+      "2125999987477893310",
+      "2126039537621377497"
      ],
      "cves": [],
      "level": "orange",
      "sources": 2
     },
     {
-     "title": "Credential-theft phishing and malicious extensions",
-     "summary": "The DOMDIFFER phishing kit mirrors Google's login page, evades scanners and targets corporate Google and Microsoft accounts. Remus malware steals Gmail messages via a fake Google Sheets extension, and fake paid expert interviews impersonate brands to steal Google logins. Unit 42 reports 56 fake crypto 'vote to list' pages sharing one backend that drain wallets.",
+     "title": "North Korea-linked GitHub poisoning campaign",
+     "summary": "The Hacker News reports North Korea-linked hackers poisoned more than 7,600 GitHub repositories in the PolinRider campaign. The campaign hijacks legitimate commits, uses Ethereum to hide C2 infrastructure, and can trigger malware when a project is opened in VS Code.",
      "posts": [
-      "2125979723549610469",
-      "2125973917193863413",
-      "2126002600436793825",
-      "2125745874139492764"
-     ],
-     "cves": [],
-     "level": "green",
-     "sources": 3
-    },
-    {
-     "title": "Organizations hit by new intrusions and breaches",
-     "summary": "Several organizations disclosed or are investigating intrusions: US Treasury's FinCEN disconnected systems after a cyber incident, FIFA says attackers accessed personal and business information, and Turnitin is investigating an attack. SecurityWeek also reports that ShinyHunters claims a comeback, though a new group denies ties.",
-     "posts": [
-      "2125794171856572768",
-      "2125999987477893310",
-      "2126039537621377497",
-      "2125797945224393071"
+      "2125971810642743361"
      ],
      "cves": [],
      "level": "green",
      "sources": 1
     }
    ],
-   "based_on": 41,
-   "at": "2026-11-26T21:24:39Z",
+   "based_on": 36,
+   "at": "2026-11-27T04:08:51Z",
    "model": "claude-haiku-5-5"
   }
  },
  "brief": {
-  "key": "v3|2026-11-26|CVE-2026-133469,CVE-2024-10441,CVE-2026-97229,CVE-2026-133968,CVE-2023-25915,CVE-2026-133323",
+  "key": "v3|2026-11-27|CVE-2026-133469,CVE-2024-10441,CVE-2026-97229,CVE-2026-133968,CVE-2023-25915,CVE-2026-133323",
   "points": [
    {
-    "title": "Synology DSM improper output escaping flaw",
-    "why": "Confirmed exploited and used in ransomware campaigns; added in the last 14 days.",
+    "title": "Synology DSM output encoding flaw",
+    "why": "Confirmed exploited and used in ransomware campaigns; added within the last two weeks.",
     "ref": "CVE-2024-10441",
     "find": "CVE-2024-10441",
     "level": "red"
    },
    {
-    "title": "GitLab integer overflow vulnerability",
-    "why": "Confirmed exploited and rated highly likely to be exploited within 30 days; critical severity.",
+    "title": "GitLab integer overflow flaw",
+    "why": "Confirmed exploited, with high predicted likelihood of further exploitation; critical severity.",
     "ref": "CVE-2026-97229",
     "find": "CVE-2026-97229",
     "level": "red"
    },
    {
-    "title": "Xen Orchestra improper input validation flaw",
-    "why": "Confirmed exploited, added within the last week, and in the news this week; critical severity.",
+    "title": "Xen Orchestra input validation flaw",
+    "why": "Confirmed exploited, added this week, in the news, with notable predicted exploitation likelihood.",
     "ref": "CVE-2026-133469",
     "find": "CVE-2026-133469",
     "level": "red"
