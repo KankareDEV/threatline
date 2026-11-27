@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-27T04:08:51Z",
+ "generated": "2026-11-27T16:31:56Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1805,
  "counts": {
   "red": 21,
   "orange": 31,
-  "green": 42
+  "green": 35
  },
  "sources": [
   {
@@ -54,9 +54,9 @@
   "totals": {
    "kev_window": 45,
    "ransomware": 1,
-   "epss_high": 1,
+   "epss_high": 2,
    "epss_known": 45,
-   "news": 49
+   "news": 42
   },
   "timeline": [
    {
@@ -191,7 +191,7 @@
    },
    {
     "name": "High (7 to 8.9)",
-    "n": 15
+    "n": 16
    },
    {
     "name": "Medium (4 to 6.9)",
@@ -203,7 +203,7 @@
    },
    {
     "name": "Not scored yet",
-    "n": 1
+    "n": 0
    }
   ],
   "epss_bands": [
@@ -213,15 +213,15 @@
    },
    {
     "name": "50 to 89%",
-    "n": 1
+    "n": 2
    },
    {
     "name": "10 to 49%",
-    "n": 12
+    "n": 10
    },
    {
     "name": "Under 10%",
-    "n": 32
+    "n": 33
    },
    {
     "name": "No score yet",
@@ -279,6 +279,11 @@
     "n": 3
    },
    {
+    "id": "CWE-636",
+    "name": "",
+    "n": 2
+   },
+   {
     "id": "CWE-288",
     "name": "Authentication bypass by alternate path",
     "n": 2
@@ -286,11 +291,6 @@
    {
     "id": "CWE-94",
     "name": "Code injection",
-    "n": 2
-   },
-   {
-    "id": "CWE-636",
-    "name": "",
     "n": 2
    },
    {
@@ -306,6 +306,11 @@
   ],
   "deadlines": [
    {
+    "cve": "CVE-2026-132165",
+    "title": "Drupal Core Remote Code Execution Vulnerability",
+    "due": "2026-11-27"
+   },
+   {
     "cve": "CVE-2026-131914",
     "title": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
     "due": "2026-11-27"
@@ -313,11 +318,6 @@
    {
     "cve": "CVE-2026-132224",
     "title": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
-    "due": "2026-11-27"
-   },
-   {
-    "cve": "CVE-2026-132165",
-    "title": "Drupal Core Remote Code Execution Vulnerability",
     "due": "2026-11-27"
    },
    {
@@ -369,23 +369,15 @@
   "signals": [
    {
     "name": "Zero-day",
-    "n": 2
+    "n": 1
    },
    {
     "name": "Exploited in the wild",
-    "n": 2
-   },
-   {
-    "name": "Ransomware",
-    "n": 1
-   },
-   {
-    "name": "Supply chain",
-    "n": 1
+    "n": 3
    },
    {
     "name": "Data breach",
-    "n": 3
+    "n": 5
    },
    {
     "name": "Critical flaw",
@@ -394,12 +386,22 @@
   ],
   "actors": [
    {
-    "name": "Artex",
+    "name": "4HTTP2ROOT",
     "n": 1,
     "links": [
      {
-      "label": "Microsoft: China’s Salt Typhoon hackers are using Artex",
-      "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+      "label": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
+     }
+    ]
+   },
+   {
+    "name": "4HTTP2SHELL",
+    "n": 1,
+    "links": [
+     {
+      "label": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
      }
     ]
    },
@@ -444,16 +446,6 @@
     ]
    },
    {
-    "name": "O-UNC-053",
-    "n": 1,
-    "links": [
-     {
-      "label": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
-      "url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html"
-     }
-    ]
-   },
-   {
     "name": "PolinRider",
     "n": 1,
     "links": [
@@ -484,32 +476,22 @@
     ]
    },
    {
-    "name": "Salt Typhoon",
+    "name": "Vinci RAT",
     "n": 1,
     "links": [
      {
-      "label": "Microsoft: China’s Salt Typhoon hackers are using Artex",
-      "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+      "label": "Microsoft Store App Found Delivering Vinci RAT Capable of Remote System Control",
+      "url": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html"
      }
     ]
    },
    {
-    "name": "ShinyHunters",
+    "name": "Volant Manticore",
     "n": 1,
     "links": [
      {
-      "label": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
-      "url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html"
-     }
-    ]
-   },
-   {
-    "name": "Shirudo",
-    "n": 1,
-    "links": [
-     {
-      "label": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
-      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html"
+      "label": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+      "url": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html"
      }
     ]
    }
@@ -517,23 +499,18 @@
   "news_cves": [
    {
     "cve": "CVE-2026-132165",
-    "n": 3,
+    "n": 2,
+    "kev": true
+   },
+   {
+    "cve": "CVE-2026-133275",
+    "n": 2,
     "kev": true
    },
    {
     "cve": "CVE-2026-136716",
     "n": 1,
     "kev": false
-   },
-   {
-    "cve": "CVE-2026-134624",
-    "n": 1,
-    "kev": true
-   },
-   {
-    "cve": "CVE-2026-133275",
-    "n": 1,
-    "kev": true
    },
    {
     "cve": "CVE-2023-25914",
@@ -556,12 +533,12 @@
     "kev": true
    },
    {
-    "cve": "CVE-2026-131914",
+    "cve": "CVE-2026-133303",
     "n": 1,
     "kev": true
    },
    {
-    "cve": "CVE-2026-123903",
+    "cve": "CVE-2026-99362",
     "n": 1,
     "kev": false
    },
@@ -579,7 +556,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 26
+    "n": 22
    },
    {
     "name": "BleepingComputer",
@@ -591,7 +568,7 @@
    },
    {
     "name": "CISA advisories",
-    "n": 4
+    "n": 1
    }
   ]
  },
@@ -822,6 +799,56 @@
    }
   },
   {
+   "id": "CVE-2026-123158",
+   "type": "vuln",
+   "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+   "cve": "CVE-2026-123158",
+   "vendor": "OpenBSD",
+   "product": "OpenSSH",
+   "date": "2026-11-09",
+   "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-12",
+   "epss": 0.89631,
+   "cvss": {
+    "score": 8.1,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
+    }
+   ],
+   "cwes": [
+    "CWE-394"
+   ],
+   "score": 77,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 90% chance of exploitation in 30 days",
+     "points": 22
+    },
+    {
+     "label": "CVSS 8.1 high severity",
+     "points": 5
+    }
+   ],
+   "ai": {
+    "what": "Secure remote login software",
+    "summary": "A flaw in how the software handles status results can let someone bypass login checks on Linux systems. Administrators of Linux servers using this remote access tool should patch."
+   }
+  },
+  {
    "id": "CVE-2023-25915",
    "type": "vuln",
    "title": "Danfoss AK-SM 800A Series Improper Input Validation Vulnerability",
@@ -943,68 +970,6 @@
    "ai": {
     "what": "Business phone and collaboration server software",
     "summary": "An outsider with no login can send crafted input to the conferencing part and run any system command, giving them full control of the server. IT staff running these systems should patch urgently."
-   }
-  },
-  {
-   "id": "CVE-2026-131914",
-   "type": "vuln",
-   "title": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
-   "cve": "CVE-2026-131914",
-   "vendor": "Idunno",
-   "product": "AntiCsrf",
-   "date": "2026-11-24",
-   "summary": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-27",
-   "epss": 0.04292,
-   "cvss": {
-    "score": 9.3,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
-    }
-   ],
-   "cwes": [
-    "CWE-502"
-   ],
-   "score": 76,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 4% chance of exploitation in 30 days",
-     "points": 1
-    },
-    {
-     "label": "CVSS 9.3 critical severity",
-     "points": 10
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
-    }
-   ],
-   "ai": {
-    "what": "Web form protection library",
-    "summary": "Unauthenticated attackers can run any code on the server by sending crafted data. The product may be out of support, so owners should stop using it or move to a supported version."
    }
   },
   {
@@ -1186,39 +1151,39 @@
    }
   },
   {
-   "id": "CVE-2026-134624",
+   "id": "CVE-2026-132165",
    "type": "vuln",
-   "title": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
-   "cve": "CVE-2026-134624",
-   "vendor": "N-able",
-   "product": "MailAssure",
-   "date": "2026-11-23",
-   "summary": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+   "title": "Drupal Core Remote Code Execution Vulnerability",
+   "cve": "CVE-2026-132165",
+   "vendor": "Drupal",
+   "product": "Core",
+   "date": "2026-11-24",
+   "summary": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-26",
-   "epss": 0.01793,
+   "due": "2026-11-27",
+   "epss": 0.08381,
    "cvss": {
-    "score": 9.3,
-    "version": "4.0",
-    "severity": "CRITICAL",
-    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
-    "by": "CNA"
+    "score": 8.1,
+    "version": "3.1",
+    "severity": "HIGH",
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "by": "CISA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
     },
     {
      "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
+     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html"
     }
    ],
    "cwes": [
-    "CWE-918"
+    "CWE-636"
    ],
-   "score": 75,
+   "score": 72,
    "level": "red",
    "reasons": [
     {
@@ -1226,12 +1191,12 @@
      "points": 50
     },
     {
-     "label": "EPSS 2% chance of exploitation in 30 days",
-     "points": 0
+     "label": "EPSS 8% chance of exploitation in 30 days",
+     "points": 2
     },
     {
-     "label": "CVSS 9.3 critical severity",
-     "points": 10
+     "label": "CVSS 8.1 high severity",
+     "points": 5
     },
     {
      "label": "Added in the last 7 days",
@@ -1243,8 +1208,8 @@
     }
    ],
    "ai": {
-    "what": "Email spam filtering service",
-    "summary": "A logged-in API user can make the server connect to internal systems, finding which are reachable and sending them crafted data. Email administrators should restrict API access and apply the update."
+    "what": "Content management system for websites",
+    "summary": "Attackers can take over an existing site or run code via the installer page, sometimes by reinstalling the software. Site owners should block public access to the installer and update."
    }
   },
   {
@@ -1307,6 +1272,60 @@
    "ai": {
     "what": "Supermarket refrigeration controller system",
     "summary": "Weak login checks let an attacker generate a web report revealing internal network addresses, usernames and store names. Retail IT and facilities staff running these controllers should care."
+   }
+  },
+  {
+   "id": "CVE-2026-131914",
+   "type": "vuln",
+   "title": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+   "cve": "CVE-2026-131914",
+   "vendor": "Idunno",
+   "product": "AntiCsrf",
+   "date": "2026-11-24",
+   "summary": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-27",
+   "epss": 0.04238,
+   "cvss": {
+    "score": 9.3,
+    "version": "4.0",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
+    }
+   ],
+   "cwes": [
+    "CWE-502"
+   ],
+   "score": 71,
+   "level": "red",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 4% chance of exploitation in 30 days",
+     "points": 1
+    },
+    {
+     "label": "CVSS 9.3 critical severity",
+     "points": 10
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "what": "Web form protection library",
+    "summary": "Unauthenticated attackers can run any code on the server by sending crafted data. The product may be out of support, so owners should stop using it or move to a supported version."
    }
   },
   {
@@ -1532,37 +1551,33 @@
    }
   },
   {
-   "id": "CVE-2026-132224",
+   "id": "CVE-2026-134624",
    "type": "vuln",
-   "title": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
-   "cve": "CVE-2026-132224",
-   "vendor": "Optimizely",
-   "product": "Web Experimentation",
-   "date": "2026-11-24",
-   "summary": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+   "title": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+   "cve": "CVE-2026-134624",
+   "vendor": "N-able",
+   "product": "MailAssure",
+   "date": "2026-11-23",
+   "summary": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-27",
-   "epss": 0.01055,
+   "due": "2026-11-26",
+   "epss": 0.01793,
    "cvss": {
-    "score": 7.1,
+    "score": 9.3,
     "version": "4.0",
-    "severity": "HIGH",
-    "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+    "severity": "CRITICAL",
+    "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
     "by": "CNA"
    },
    "ransomware": false,
    "links": [
     {
      "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
     }
    ],
    "cwes": [
-    "CWE-642"
+    "CWE-918"
    ],
    "score": 70,
    "level": "red",
@@ -1572,25 +1587,21 @@
      "points": 50
     },
     {
-     "label": "EPSS 1% chance of exploitation in 30 days",
+     "label": "EPSS 2% chance of exploitation in 30 days",
      "points": 0
     },
     {
-     "label": "CVSS 7.1 high severity",
-     "points": 5
+     "label": "CVSS 9.3 critical severity",
+     "points": 10
     },
     {
      "label": "Added in the last 7 days",
      "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
     }
    ],
    "ai": {
-    "what": "Website testing and optimisation tool",
-    "summary": "Attackers can impersonate existing customer users and alter site scripts, spreading malicious code to visitors of affected websites. Website owners using it should check and apply fixes."
+    "what": "Email spam filtering service",
+    "summary": "A logged-in API user can make the server connect to internal systems, finding which are reachable and sending them crafted data. Email administrators should restrict API access and apply the update."
    }
   },
   {
@@ -1700,62 +1711,6 @@
    "ai": {
     "what": "Research survey and data collection platform",
     "summary": "Someone with no login can run commands on the server by abusing a public survey link and data import. Research teams and administrators running REDCap should apply the fix quickly."
-   }
-  },
-  {
-   "id": "CVE-2026-132165",
-   "type": "vuln",
-   "title": "Drupal Core Remote Code Execution Vulnerability",
-   "cve": "CVE-2026-132165",
-   "vendor": "Drupal",
-   "product": "Core",
-   "date": "2026-11-24",
-   "summary": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-27",
-   "epss": 0.11053,
-   "cvss": null,
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
-    },
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
-    },
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html"
-    }
-   ],
-   "cwes": [
-    "CWE-636"
-   ],
-   "score": 68,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 11% chance of exploitation in 30 days",
-     "points": 3
-    },
-    {
-     "label": "Added in the last 7 days",
-     "points": 10
-    },
-    {
-     "label": "In the news this week",
-     "points": 5
-    }
-   ],
-   "ai": {
-    "what": "Content management system for websites",
-    "summary": "Attackers can take over an existing site or run code via the installer page, sometimes by reinstalling the software. Site owners should block public access to the installer and update."
    }
   },
   {
@@ -2046,6 +2001,60 @@
    }
   },
   {
+   "id": "CVE-2026-132224",
+   "type": "vuln",
+   "title": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+   "cve": "CVE-2026-132224",
+   "vendor": "Optimizely",
+   "product": "Web Experimentation",
+   "date": "2026-11-24",
+   "summary": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+   "due": "2026-11-27",
+   "epss": 0.01055,
+   "cvss": {
+    "score": 7.1,
+    "version": "4.0",
+    "severity": "HIGH",
+    "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+    "by": "CNA"
+   },
+   "ransomware": false,
+   "links": [
+    {
+     "label": "NVD entry",
+     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+    }
+   ],
+   "cwes": [
+    "CWE-642"
+   ],
+   "score": 65,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Confirmed exploited (CISA KEV)",
+     "points": 50
+    },
+    {
+     "label": "EPSS 1% chance of exploitation in 30 days",
+     "points": 0
+    },
+    {
+     "label": "CVSS 7.1 high severity",
+     "points": 5
+    },
+    {
+     "label": "Added in the last 7 days",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "what": "Website testing and optimisation tool",
+    "summary": "Attackers can impersonate existing customer users and alter site scripts, spreading malicious code to visitors of affected websites. Website owners using it should check and apply fixes."
+   }
+  },
+  {
    "id": "CVE-2026-40217",
    "type": "vuln",
    "title": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
@@ -2056,7 +2065,7 @@
    "summary": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
    "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
    "due": "2026-12-02",
-   "epss": 0.20215,
+   "epss": 0.2063,
    "cvss": {
     "score": 8.8,
     "version": "3.1",
@@ -2082,7 +2091,7 @@
      "points": 50
     },
     {
-     "label": "EPSS 20% chance of exploitation in 30 days",
+     "label": "EPSS 21% chance of exploitation in 30 days",
      "points": 5
     },
     {
@@ -2304,53 +2313,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-   "type": "news",
-   "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-134624"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
-    }
-   ],
-   "signals": [
-    "Zero-day"
-   ],
-   "actors": [],
-   "score": 60,
-   "level": "red",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Zero-day in the headline",
-     "points": 20
-    },
-    {
-     "label": "Mentions exploited CVE-2026-134624",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA added critical flaws in N-able MailAssure and MONAI Label to its KEV catalog after evidence of active exploitation. The MailAssure flaw is an SSRF in its LDAP functionality.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "CVE-2025-42884",
    "type": "vuln",
    "title": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
@@ -2503,56 +2465,6 @@
    "ai": {
     "what": "Large file exchange platform",
     "summary": "A logged-in user can craft a special message that bypasses access checks and gains higher privileges. Organisations using it for file transfers should apply the fix."
-   }
-  },
-  {
-   "id": "CVE-2026-123158",
-   "type": "vuln",
-   "title": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
-   "cve": "CVE-2026-123158",
-   "vendor": "OpenBSD",
-   "product": "OpenSSH",
-   "date": "2026-11-09",
-   "summary": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
-   "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-   "due": "2026-11-12",
-   "epss": 0.14205,
-   "cvss": {
-    "score": 8.1,
-    "version": "3.1",
-    "severity": "HIGH",
-    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "by": "CNA"
-   },
-   "ransomware": false,
-   "links": [
-    {
-     "label": "NVD entry",
-     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158"
-    }
-   ],
-   "cwes": [
-    "CWE-394"
-   ],
-   "score": 59,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Confirmed exploited (CISA KEV)",
-     "points": 50
-    },
-    {
-     "label": "EPSS 14% chance of exploitation in 30 days",
-     "points": 4
-    },
-    {
-     "label": "CVSS 8.1 high severity",
-     "points": 5
-    }
-   ],
-   "ai": {
-    "what": "Secure remote login software",
-    "summary": "A flaw in how the software handles status results can let someone bypass login checks on Linux systems. Administrators of Linux servers using this remote access tool should patch."
    }
   },
   {
@@ -3188,6 +3100,94 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
+   "type": "news",
+   "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+   "date": "2026-11-27",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
+    }
+   ],
+   "signals": [
+    "Zero-day"
+   ],
+   "actors": [
+    "4HTTP2ROOT",
+    "4HTTP2SHELL"
+   ],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Zero-day in the headline",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An unpatched zero-day in Cacti, an open-source network monitoring tool, allows remote code execution through guest access. No CVE has been assigned yet.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [
+     "4HTTP2SHELL",
+     "4HTTP2ROOT"
+    ],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/",
+   "type": "news",
+   "title": "Drupal warns of new site takeover flaw exploited in attacks",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/"
+    }
+   ],
+   "signals": [
+    "Exploited in the wild"
+   ],
+   "actors": [],
+   "score": 40,
+   "level": "orange",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Exploited in the wild in the headline",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers are exploiting a second critical Drupal vulnerability to breach and take over unpatched websites.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
    "type": "news",
    "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
@@ -3291,8 +3291,8 @@
     "CVE-2023-25915",
     "CVE-2025-41450",
     "CVE-2026-103406",
-    "CVE-2026-131914",
-    "CVE-2026-132165"
+    "CVE-2026-133275",
+    "CVE-2026-133303"
    ],
    "ransomware": false,
    "links": [
@@ -3325,146 +3325,19 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+   "id": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
    "type": "news",
-   "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
-   "date": "2026-11-24",
+   "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
+   "date": "2026-11-27",
    "sources": [
     "The Hacker News"
    ],
-   "cves": [
-    "CVE-2026-123903"
-   ],
+   "cves": [],
    "ransomware": false,
    "links": [
     {
      "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html"
-    }
-   ],
-   "signals": [
-    "Zero-day"
-   ],
-   "actors": [],
-   "score": 40,
-   "level": "orange",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Zero-day in the headline",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Broadcom patched 23 VMware flaws, including critical CVE-2026-123903, a 9.8-rated authentication bypass in vCenter's directory service that follows zero-day exploitation.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/",
-   "type": "news",
-   "title": "InfraTrust warns of exploited supply chain flaws in network appliances",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/"
-    }
-   ],
-   "signals": [
-    "Supply chain"
-   ],
-   "actors": [],
-   "score": 35,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Supply chain in the headline",
-     "points": 15
-    }
-   ],
-   "ai": {
-    "summary": "Eclypsium's November report finds most infrastructure advisories about exploited flaws stem from third-party software bundled into vendor products, not vendor-written code.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/ransomware-doj-indictment-recovery",
-   "type": "news",
-   "title": "Florida ransomware recovery CEO indicted for allegedly paying hacker ransoms",
-   "date": "2026-11-25",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": true,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/ransomware-doj-indictment-recovery"
-    }
-   ],
-   "signals": [
-    "Ransomware"
-   ],
-   "actors": [],
-   "score": 35,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Ransomware in the headline",
-     "points": 15
-    }
-   ],
-   "ai": {
-    "summary": "A federal grand jury indicted the CEO of a Florida ransomware recovery firm for allegedly lying about its services and paying ransoms to cybercriminals.",
-    "sector": "Cybersecurity",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": [
-     "US"
-    ]
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
-   "type": "news",
-   "title": "Hackers reportedly breached CIA intelligence analysis system",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+     "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html"
     }
    ],
    "signals": [
@@ -3484,7 +3357,136 @@
     }
    ],
    "ai": {
-    "summary": "Unknown attackers reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency. Details beyond the breach report are not included in the text.",
+    "summary": "Swiss authorities confirmed AI-agent-driven attacks breached organisations in four of five cases, including two critical infrastructure operators. No major disruption was reported and victims are unnamed.",
+    "sector": "Critical infrastructure",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": [
+     "CH"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/sap-germany-cyberattack-github",
+   "type": "news",
+   "title": "Software giant SAP confirms cyber incident amid reports of source code breach",
+   "date": "2026-11-27",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/sap-germany-cyberattack-github"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "German software company SAP confirmed a cybersecurity incident after reports that hackers infiltrated its software development infrastructure and may have accessed its source code.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Collection",
+    "countries": [
+     "DE"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/japan-education-ministry-cyberattack",
+   "type": "news",
+   "title": "Japan’s education ministry discloses breach of government procurement system",
+   "date": "2026-11-27",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/japan-education-ministry-cyberattack"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "Japan's education ministry disclosed that hackers breached its government procurement system. Business information and email addresses may have been exposed.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Collection",
+    "countries": [
+     "JP"
+    ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
+   "type": "news",
+   "title": "US Air Force cloud platform reportedly hacked in latest federal breach",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/"
+    }
+   ],
+   "signals": [
+    "Data breach"
+   ],
+   "actors": [],
+   "score": 30,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    },
+    {
+     "label": "Data breach in the headline",
+     "points": 10
+    }
+   ],
+   "ai": {
+    "summary": "Hackers reportedly breached the US Air Force's Cloud One computing platform. The incident is part of a wave of recent cyberattacks on US government agencies, including the FBI, CIA and Treasury.",
     "sector": "Government",
     "actors": [],
     "malware": [],
@@ -3492,53 +3494,6 @@
     "countries": [
      "US"
     ]
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
-   "type": "news",
-   "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html"
-    }
-   ],
-   "signals": [
-    "Data breach"
-   ],
-   "actors": [
-    "O-UNC-053",
-    "ShinyHunters"
-   ],
-   "score": 30,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    },
-    {
-     "label": "Data breach in the headline",
-     "points": 10
-    }
-   ],
-   "ai": {
-    "summary": "Okta says a vishing cluster linked to ShinyHunters may have rebranded as INCEPTION and launched a new data leak site, using phone-based social engineering to steal credentials and approvals.",
-    "sector": "",
-    "actors": [
-     "ShinyHunters",
-     "O-UNC-053"
-    ],
-    "malware": [],
-    "tactic": "Credential Access",
-    "countries": []
    }
   },
   {
@@ -3570,6 +3525,401 @@
    "ai": {
     "summary": "A weekly roundup covering NGINX services at risk, over 250 malicious browser extensions, AI server hijacking, and other security stories.",
     "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://therecord.media/france-afp-hit-by-cyberattack",
+   "type": "news",
+   "title": "Cyberattack disrupts global news distribution platform at France’s AFP",
+   "date": "2026-11-27",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/france-afp-hit-by-cyberattack"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A cyberattack forced French news agency AFP to take offline one of its main platforms for distributing news content to media outlets worldwide.",
+    "sector": "Media",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "FR"
+    ]
+   }
+  },
+  {
+   "id": "https://therecord.media/uk-department-work-pensions-cyber-incident",
+   "type": "news",
+   "title": "British government takes services offline following ‘cyber incident’",
+   "date": "2026-11-27",
+   "sources": [
+    "The Record"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Record",
+     "url": "https://therecord.media/uk-department-work-pensions-cyber-incident"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "The UK Department for Work and Pensions reported a cyber incident and took several services offline as a precaution.",
+    "sector": "Government",
+    "actors": [],
+    "malware": [],
+    "tactic": "Impact",
+    "countries": [
+     "GB"
+    ]
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/",
+   "type": "news",
+   "title": "New NFS2ROOT Linux flaw can let attackers gain root privileges",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [
+    "CVE-2026-99362"
+   ],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "A 12-year-old critical flaw in the Linux kernel's NFS server, CVE-2026-99362, lets remote attackers gain root privileges.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Privilege Escalation",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/microsoft/new-out-of-band-oob-emergency-hotpatch-fixes-windows-server-2025-crashes/",
+   "type": "news",
+   "title": "Microsoft pushes emergency hotpatch to fix Windows Server crashes",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/new-out-of-band-oob-emergency-hotpatch-fixes-windows-server-2025-crashes/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Microsoft released an emergency hotpatch fixing Windows Server 2025 crashes that followed installing a recent security hotpatch, KB5131077.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
+   "type": "news",
+   "title": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads to Deliver Remote Access Malware",
+   "date": "2026-11-27",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Official download files for Q-Dir and DesktopOK were tampered with in a supply chain attack, delivering remote access malware to users who downloaded or updated them.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
+   "type": "news",
+   "title": "SAP confirms security incident after suspicious GitHub activity",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "SAP confirmed it took urgent steps to protect customers after detecting suspicious activity in its IT environment, linked to suspicious GitHub activity.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html",
+   "type": "news",
+   "title": "How to Keep Your Security Picture Current When Attackers Move at AI Speed",
+   "date": "2026-11-27",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An opinion piece arguing that security metrics are often built to look reassuring rather than to inform, and urging teams to keep security status current as attackers move faster.",
+    "sector": "",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-wsus-server-role-in-windows-server-2028/",
+   "type": "news",
+   "title": "Microsoft removes WSUS server role in Windows Server 2028",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-wsus-server-role-in-windows-server-2028/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Microsoft plans to remove the WSUS server role from Windows Server 2028, its next major server operating system release. Administners who rely on WSUS for update management would be affected.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html",
+   "type": "news",
+   "title": "Microsoft Store App Found Delivering Vinci RAT Capable of Remote System Control",
+   "date": "2026-11-27",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html"
+    }
+   ],
+   "signals": [],
+   "actors": [
+    "Vinci RAT"
+   ],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Attackers used a Microsoft Store app to deliver Vinci RAT, a remote access trojan. Victims were redirected from a fake snipping tool site to a Microsoft-signed installer that led to the infection.",
+    "sector": "",
+    "actors": [],
+    "malware": [
+     "Vinci RAT"
+    ],
+    "tactic": "Initial Access",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/malwarebytes-antivirus-get-50-percent-off-during-black-friday-2026/",
+   "type": "news",
+   "title": "Malwarebytes Antivirus: Get 50% off during Black Friday 2026",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/malwarebytes-antivirus-get-50-percent-off-during-black-friday-2026/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Malwarebytes is offering 50% discounts on its security subscriptions, including antivirus, VPN and identity protection, during its 2026 Black Friday and Cyber Monday sale. This is a promotional item, not a security incident.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "",
+    "countries": []
+   }
+  },
+  {
+   "id": "https://www.bleepingcomputer.com/news/security/your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms/",
+   "type": "news",
+   "title": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs",
+   "date": "2026-11-27",
+   "sources": [
+    "BleepingComputer"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms/"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "An article explains that forgotten virtual machines, unpatched servers and excess access permissions create security blind spots. It suggests centralized management, access controls and lifecycle automation as mitigations.",
+    "sector": "Technology",
     "actors": [],
     "malware": [],
     "tactic": "",
@@ -4023,41 +4373,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
-   "type": "news",
-   "title": "Microsoft confirms authentication issues after November updates",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Microsoft confirmed some customers may face authentication problems after installing November security updates, which fixed a high-severity remote code execution vulnerability.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
    "type": "news",
    "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
@@ -4085,41 +4400,6 @@
    ],
    "ai": {
     "summary": "An attacker ran operating system commands on six production servers of Hex.pm, the Elixir and Erlang package registry, by exploiting a CVSS 10.0 flaw present since 2016. Servers were patched quickly after the first request.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
-   "type": "news",
-   "title": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A critical Drupal remote code execution vulnerability is being actively exploited to hijack unpatched websites. Exploitation has occurred since at least Thursday, according to the Drupal security team.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
@@ -4162,41 +4442,6 @@
     "countries": [
      "US"
     ]
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-blank-dialog-that-made-microsoft-365-office-apps-unusable/",
-   "type": "news",
-   "title": "Microsoft fixes Microsoft 365 bug blocking access to Office apps",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-blank-dialog-that-made-microsoft-365-office-apps-unusable/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Microsoft resolved a known issue that had blocked some Microsoft 365 customers from accessing Office applications. The fix was released earlier in the week.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
    }
   },
   {
@@ -4310,227 +4555,6 @@
    }
   },
   {
-   "id": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/",
-   "type": "news",
-   "title": "More Pentests Without More Pentesters: Where AI Safely Helps",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "PentestPad describes how AI can cut penetration testers' documentation and reporting workload while keeping sensitive client data within their own infrastructure. No attack is reported.",
-    "sector": "Cybersecurity",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
-   "type": "news",
-   "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "CISA warns of a critical unpatched flaw in Danfoss AK-SM 8xxA controllers, which food retailers use to manage refrigeration, HVAC, and lighting.",
-    "sector": "Retail",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/australia-passes-online-safety-legislation-preempt-harms",
-   "type": "news",
-   "title": "Australia passes tough legislation requiring big tech to preempt foreseeable harms",
-   "date": "2026-11-25",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/australia-passes-online-safety-legislation-preempt-harms"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Australia's Parliament passed the Digital Duty of Care Act, requiring online providers to set protocols protecting users from violence, rape threats, and other significant harms.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": [
-     "AU"
-    ]
-   }
-  },
-  {
-   "id": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
-   "type": "news",
-   "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
-   "date": "2026-11-25",
-   "sources": [
-    "BleepingComputer"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Swiss and Italian cybersecurity agencies warn that AI-agent-driven automated cyberattacks are targeting critical infrastructure organisations.",
-    "sector": "Critical Infrastructure",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://therecord.media/fifa-data-breach-limited",
-   "type": "news",
-   "title": "FIFA says hackers accessed ‘limited set of personal and business information’",
-   "date": "2026-11-25",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/fifa-data-breach-limited"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "FIFA, the Switzerland-based soccer governing body, says hackers accessed a limited set of personal and business information in a recent breach it is investigating with authorities.",
-    "sector": "Sports",
-    "actors": [],
-    "malware": [],
-    "tactic": "Collection",
-    "countries": [
-     "CH"
-    ]
-   }
-  },
-  {
-   "id": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool",
-   "type": "news",
-   "title": "Microsoft: China’s Salt Typhoon hackers are using Artex",
-   "date": "2026-11-25",
-   "sources": [
-    "The Record"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Record",
-     "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "Artex",
-    "Salt Typhoon"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Microsoft reports that an AI tool tied to several high-profile breaches is quickly being added to the hacking toolkits of Chinese and North Korean groups. Salt Typhoon is named as using Artex.",
-    "sector": "",
-    "actors": [
-     "Salt Typhoon"
-    ],
-    "malware": [
-     "Artex"
-    ],
-    "tactic": "Resource Development",
-    "countries": []
-   }
-  },
-  {
    "id": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
    "type": "news",
    "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
@@ -4558,335 +4582,6 @@
    ],
    "ai": {
     "summary": "Threat actors are chaining exploits for the PHP2Shell and Fragnesia flaws to attack Palo Alto Networks devices whose management interfaces are exposed to the internet.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
-   "type": "news",
-   "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "Shirudo"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "OpenAI and Cisco released Shirudo, an open-source Linux runtime that lets AI agents create eBPF controls to block exploits, giving defenders time to patch without downtime.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [
-     "Shirudo"
-    ],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
-   "type": "news",
-   "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A SQL injection flaw in WHMCS billing software, used by many web hosts, lets unauthenticated attackers retrieve customer records and admin password hashes. The vendor has released a fix.",
-    "sector": "Web Hosting",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
-   "type": "news",
-   "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Norway's NSM reported an Azure API Management flaw affecting several Norwegian businesses, including energy firms Equinor and Skagerak Energi. An unknown actor was seeking access tokens and secrets.",
-    "sector": "Energy",
-    "actors": [],
-    "malware": [],
-    "tactic": "Credential Access",
-    "countries": [
-     "NO"
-    ]
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
-   "type": "news",
-   "title": "AutomationDirect C-More EA9 Programming Software",
-   "date": "2026-11-24",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-127280"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "AutomationDirect disclosed a heap-based buffer overflow in its C-More EA9 programming software. Opening a malicious file could crash it or allow code execution in critical manufacturing, energy and water sectors.",
-    "sector": "Critical Manufacturing",
-    "actors": [],
-    "malware": [],
-    "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
-   "type": "news",
-   "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
-   "date": "2026-11-24",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-119055"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Schneider Electric disclosed memory corruption and buffer overflow flaws in its EcoStruxure Power Build Rapsody software, which local attackers could exploit to run arbitrary code. Remediations are provided.",
-    "sector": "Energy",
-    "actors": [],
-    "malware": [],
-    "tactic": "Execution",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03",
-   "type": "news",
-   "title": "Danfoss AK-SM 8xxA Series",
-   "date": "2026-11-24",
-   "sources": [
-    "CISA advisories"
-   ],
-   "cves": [
-    "CVE-2026-129713"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "CISA advisories",
-     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Danfoss disclosed a critical stack-based buffer overflow in its AK-SM 8xxA controllers, allowing unauthenticated remote attackers to run code with webserver privileges. The product is deployed worldwide.",
-    "sector": "Commercial Facilities",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/2027-soc-budget-reset-5-priorities-to.html",
-   "type": "news",
-   "title": "2027 SOC Budget Reset: 5 Priorities to Cut Costs and Reduce Cyber Risk",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/2027-soc-budget-reset-5-priorities-to.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "A vendor article argues SOC teams could recover about 450 analyst hours per 1,000 alerts by speeding up threat analysis and IOC research, reducing costs from manual investigations and escalations.",
-    "sector": "Cybersecurity",
-    "actors": [],
-    "malware": [],
-    "tactic": "",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
-   "type": "news",
-   "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [
-    "CVE-2026-87268"
-   ],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Google Project Zero researcher James Forshaw showed a .NET Framework file-loading quirk that let local attackers run untrusted code past Windows code integrity protections and bypass Oracle VirtualBox hardening, tracked as CVE-2026-87268.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Defense Evasion",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
-   "type": "news",
-   "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
-   "date": "2026-11-24",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Attackers who hijacked the open-source scanner Trivy planted malicious code disguised as GitHub's official checkout tool, bypassing SHA pinning defenses used against supply chain attacks.",
     "sector": "Technology",
     "actors": [],
     "malware": [],
@@ -4943,12 +4638,12 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1172,
-  "located": 987,
+  "total": 1169,
+  "located": 986,
   "countries": [
    {
     "cc": "US",
-    "n": 460,
+    "n": 458,
     "groups": [
      {
       "name": "n0n",
@@ -4956,17 +4651,17 @@
      },
      {
       "name": "incransom",
-      "n": 29
+      "n": 28
      },
      {
-      "name": "thegentlemen",
-      "n": 25
+      "name": "qilin",
+      "n": 23
      }
     ],
     "sectors": [
      {
       "name": "Healthcare",
-      "n": 83
+      "n": 81
      },
      {
       "name": "Professional Services",
@@ -4974,7 +4669,7 @@
      },
      {
       "name": "Manufacturing",
-      "n": 54
+      "n": 55
      }
     ]
    },
@@ -5023,21 +4718,21 @@
       "n": 7
      },
      {
-      "name": "payload",
-      "n": 7
+      "name": "safepay",
+      "n": 6
      }
     ],
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 16
+      "n": 15
      },
      {
       "name": "Professional Services",
       "n": 7
      },
      {
-      "name": "Retail & E-Commerce",
+      "name": "Healthcare",
       "n": 5
      }
     ]
@@ -5076,7 +4771,7 @@
    },
    {
     "cc": "IN",
-    "n": 23,
+    "n": 24,
     "groups": [
      {
       "name": "pixelleaks",
@@ -5108,7 +4803,7 @@
    },
    {
     "cc": "MX",
-    "n": 23,
+    "n": 22,
     "groups": [
      {
       "name": "qilin",
@@ -5116,7 +4811,7 @@
      },
      {
       "name": "thegentlemen",
-      "n": 4
+      "n": 3
      },
      {
       "name": "pixelleaks",
@@ -5130,42 +4825,10 @@
      },
      {
       "name": "Manufacturing",
-      "n": 3
+      "n": 2
      },
      {
       "name": "Transportation",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "FR",
-    "n": 19,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 5
-     },
-     {
-      "name": "n0n",
-      "n": 3
-     },
-     {
-      "name": "qilin",
-      "n": 2
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 4
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Healthcare",
       "n": 2
      }
     ]
@@ -5198,6 +4861,38 @@
      },
      {
       "name": "Professional Services",
+      "n": 2
+     }
+    ]
+   },
+   {
+    "cc": "FR",
+    "n": 18,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 5
+     },
+     {
+      "name": "n0n",
+      "n": 3
+     },
+     {
+      "name": "qilin",
+      "n": 2
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 4
+     },
+     {
+      "name": "Manufacturing",
+      "n": 3
+     },
+     {
+      "name": "Healthcare",
       "n": 2
      }
     ]
@@ -5236,7 +4931,7 @@
    },
    {
     "cc": "ES",
-    "n": 14,
+    "n": 15,
     "groups": [
      {
       "name": "safepay",
@@ -5261,40 +4956,8 @@
       "n": 3
      },
      {
-      "name": "Financial Services",
-      "n": 2
-     }
-    ]
-   },
-   {
-    "cc": "KR",
-    "n": 12,
-    "groups": [
-     {
-      "name": "metaencryptor",
-      "n": 5
-     },
-     {
-      "name": "obsoft",
-      "n": 2
-     },
-     {
-      "name": "everest",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
       "name": "Technology",
-      "n": 5
-     },
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Other",
-      "n": 1
+      "n": 2
      }
     ]
    },
@@ -5331,6 +4994,38 @@
     ]
    },
    {
+    "cc": "CH",
+    "n": 11,
+    "groups": [
+     {
+      "name": "thegentlemen",
+      "n": 2
+     },
+     {
+      "name": "bravox",
+      "n": 1
+     },
+     {
+      "name": "play",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Energy & Utilities",
+      "n": 1
+     },
+     {
+      "name": "Professional Services",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "JP",
     "n": 11,
     "groups": [
@@ -5363,6 +5058,38 @@
     ]
    },
    {
+    "cc": "KR",
+    "n": 11,
+    "groups": [
+     {
+      "name": "metaencryptor",
+      "n": 5
+     },
+     {
+      "name": "everest",
+      "n": 1
+     },
+     {
+      "name": "hyflock",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Technology",
+      "n": 5
+     },
+     {
+      "name": "Manufacturing",
+      "n": 4
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "MY",
     "n": 11,
     "groups": [
@@ -5371,11 +5098,11 @@
       "n": 2
      },
      {
-      "name": "medusalocker",
+      "name": "braincipher",
       "n": 1
      },
      {
-      "name": "incransom",
+      "name": "medusalocker",
       "n": 1
      }
     ],
@@ -5389,7 +5116,7 @@
       "n": 2
      },
      {
-      "name": "Healthcare",
+      "name": "Other",
       "n": 1
      }
     ]
@@ -5454,38 +5181,6 @@
      },
      {
       "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "CH",
-    "n": 10,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 2
-     },
-     {
-      "name": "play",
-      "n": 1
-     },
-     {
-      "name": "qilin",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Manufacturing",
-      "n": 4
-     },
-     {
-      "name": "Professional Services",
-      "n": 1
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ]
@@ -5907,6 +5602,38 @@
     ]
    },
    {
+    "cc": "NL",
+    "n": 5,
+    "groups": [
+     {
+      "name": "auditteam",
+      "n": 2
+     },
+     {
+      "name": "direwolf",
+      "n": 1
+     },
+     {
+      "name": "rhysida",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 1
+     },
+     {
+      "name": "Manufacturing",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
+      "n": 1
+     }
+    ]
+   },
+   {
     "cc": "TR",
     "n": 5,
     "groups": [
@@ -5939,33 +5666,33 @@
     ]
    },
    {
-    "cc": "NL",
+    "cc": "BE",
     "n": 4,
     "groups": [
      {
-      "name": "auditteam",
-      "n": 2
-     },
-     {
-      "name": "rhysida",
+      "name": "qilin",
       "n": 1
      },
      {
-      "name": "n0n",
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "incransom",
       "n": 1
      }
     ],
     "sectors": [
      {
-      "name": "Manufacturing",
+      "name": "Professional Services",
+      "n": 2
+     },
+     {
+      "name": "Education",
       "n": 1
      },
      {
-      "name": "Healthcare",
-      "n": 1
-     },
-     {
-      "name": "Technology",
+      "name": "Other",
       "n": 1
      }
     ]
@@ -6094,34 +5821,6 @@
      },
      {
       "name": "Transportation",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "BE",
-    "n": 3,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     },
-     {
-      "name": "safepay",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ]
@@ -6915,22 +6614,6 @@
     ]
    },
    {
-    "cc": "SL",
-    "n": 1,
-    "groups": [
-     {
-      "name": "thegentlemen",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Healthcare",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "TZ",
     "n": 1,
     "groups": [
@@ -6977,7 +6660,7 @@
   "groups": [
    {
     "name": "n0n",
-    "n": 186,
+    "n": 185,
     "last": "2026-11-25",
     "sectors": [
      {
@@ -7018,12 +6701,12 @@
    },
    {
     "name": "thegentlemen",
-    "n": 92,
+    "n": 87,
     "last": "2026-11-23",
     "sectors": [
      {
       "name": "Manufacturing",
-      "n": 16
+      "n": 15
      },
      {
       "name": "Technology",
@@ -7031,13 +6714,13 @@
      },
      {
       "name": "Healthcare",
-      "n": 13
+      "n": 11
      }
     ],
     "countries": [
      {
       "cc": "US",
-      "n": 25
+      "n": 22
      },
      {
       "cc": "DE",
@@ -7062,7 +6745,7 @@
    {
     "name": "qilin",
     "n": 77,
-    "last": "2026-11-26",
+    "last": "2026-11-27",
     "sectors": [
      {
       "name": "Manufacturing",
@@ -7074,7 +6757,7 @@
      },
      {
       "name": "Education",
-      "n": 7
+      "n": 8
      }
     ],
     "countries": [
@@ -7145,7 +6828,7 @@
    },
    {
     "name": "incransom",
-    "n": 50,
+    "n": 49,
     "last": "2026-11-24",
     "sectors": [
      {
@@ -7164,7 +6847,7 @@
     "countries": [
      {
       "cc": "US",
-      "n": 29
+      "n": 28
      },
      {
       "cc": "IN",
@@ -7257,6 +6940,49 @@
     "origin": ""
    },
    {
+    "name": "rhysida",
+    "n": 33,
+    "last": "2026-11-27",
+    "sectors": [
+     {
+      "name": "Professional Services",
+      "n": 13
+     },
+     {
+      "name": "Manufacturing",
+      "n": 5
+     },
+     {
+      "name": "Financial Services",
+      "n": 4
+     }
+    ],
+    "countries": [
+     {
+      "cc": "US",
+      "n": 9
+     },
+     {
+      "cc": "IN",
+      "n": 1
+     },
+     {
+      "cc": "GP",
+      "n": 1
+     },
+     {
+      "cc": "GA",
+      "n": 1
+     },
+     {
+      "cc": "NL",
+      "n": 1
+     }
+    ],
+    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
+    "origin": ""
+   },
+   {
     "name": "akira",
     "n": 32,
     "last": "2026-11-20",
@@ -7297,49 +7023,6 @@
      }
     ],
     "about": "Akira reportedly emerged in March 2023 and has been speculated to have ties to the former Conti group. Its affiliates reportedly also work with Snatch and BlackByte. The first version was written in C++ and later versions in Rust. Initial access has involved brute-force attacks on Cisco VPNs and exploitation of two CVEs.",
-    "origin": ""
-   },
-   {
-    "name": "rhysida",
-    "n": 32,
-    "last": "2026-11-26",
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 12
-     },
-     {
-      "name": "Manufacturing",
-      "n": 5
-     },
-     {
-      "name": "Financial Services",
-      "n": 4
-     }
-    ],
-    "countries": [
-     {
-      "cc": "US",
-      "n": 9
-     },
-     {
-      "cc": "GP",
-      "n": 1
-     },
-     {
-      "cc": "GA",
-      "n": 1
-     },
-     {
-      "cc": "NL",
-      "n": 1
-     },
-     {
-      "cc": "GB",
-      "n": 1
-     }
-    ],
-    "about": "Rhysida is a ransomware-as-a-service group that emerged in May 2023. It uses phishing and Cobalt Strike to breach networks and deploy its payload. It threatens to publish stolen data, leaves PDF notes, and accepts Bitcoin. The notes say the ransomware is still in early development.",
     "origin": ""
    },
    {
@@ -7661,11 +7344,11 @@
       "n": 2
      },
      {
-      "cc": "AE",
+      "cc": "MY",
       "n": 1
      },
      {
-      "cc": "AU",
+      "cc": "AE",
       "n": 1
      }
     ],
@@ -7969,6 +7652,42 @@
   ],
   "recent": [
    {
+    "d": "2026-11-27",
+    "cc": "IN",
+    "g": "rhysida",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "US",
+    "g": "iah6477",
+    "s": "Manufacturing"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "DE",
+    "g": "spacebears",
+    "s": "Healthcare"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "CH",
+    "g": "bravox",
+    "s": "Energy & Utilities"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "NL",
+    "g": "direwolf",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "BE",
+    "g": "qilin",
+    "s": "Education"
+   },
+   {
     "d": "2026-11-26",
     "cc": "US",
     "g": "pixelleaks",
@@ -8156,6 +7875,12 @@
    },
    {
     "d": "2026-11-25",
+    "cc": "ES",
+    "g": "puppeteer",
+    "s": "Technology"
+   },
+   {
+    "d": "2026-11-25",
     "cc": "IT",
     "g": "medusalocker",
     "s": ""
@@ -8165,54 +7890,12 @@
     "cc": "PS",
     "g": "pixelleaks",
     "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "n0n",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "CA",
-    "g": "n0n",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "CA",
-    "g": "n0n",
-    "s": "Financial Services"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "",
-    "g": "braincipher",
-    "s": "Other"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "dark project",
-    "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "interlock",
-    "s": "Education"
-   },
-   {
-    "d": "2026-11-25",
-    "cc": "US",
-    "g": "silentransomgroup",
-    "s": "Professional Services"
    }
   ],
   "days": [
    {
     "date": "2026-10-28",
-    "n": 21
+    "n": 11
    },
    {
     "date": "2026-10-29",
@@ -8228,7 +7911,7 @@
    },
    {
     "date": "2026-11-01",
-    "n": 18
+    "n": 17
    },
    {
     "date": "2026-11-02",
@@ -8324,7 +8007,7 @@
    },
    {
     "date": "2026-11-25",
-    "n": 49
+    "n": 51
    },
    {
     "date": "2026-11-26",
@@ -8332,7 +8015,7 @@
    },
    {
     "date": "2026-11-27",
-    "n": 0
+    "n": 6
    }
   ]
  },
@@ -8481,48 +8164,48 @@
   },
   "profiles_at": "2026-11-25T14:11:00.532536+00:00",
   "since": {
-   "209811713": "2126038690619334831",
-   "50026664": "2126060073168294332",
-   "1290332482374598658": "2125645496593039562",
-   "41258937": "2126165618068250651",
+   "209811713": "2126292454026736026",
+   "50026664": "2126332719189893408",
+   "1290332482374598658": "2126328629499953513",
+   "41258937": "2126352854524809425",
    "4487645412": "2125745874139492764",
    "54316357": "2124929241330364647",
    "935278274845974528": "2125658276868341846",
    "217462908": "2125655976581681574",
-   "1158139840866791424": "2126147205601939958",
+   "1158139840866791424": "2126345874989330456",
    "702994808181170176": "2125899205852188766",
    "1324374317484793856": "2126054623618166967",
    "6821102": "2125571896678732227",
-   "964227358218649600": "2125693521491296576",
+   "964227358218649600": "2126321404660400360",
    "24683268": "2125614985388933453",
-   "1540951016": "2126067693766001019",
+   "1540951016": "2126295122132533681",
    "86973588": "2124975291571613803"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-27T04:08:51.173312+00:00",
-   "bleepincomputer": "2026-11-27T04:08:51.173312+00:00",
-   "therecord_media": "2026-11-27T04:08:51.173312+00:00",
-   "securityweek": "2026-11-27T04:08:51.173312+00:00",
-   "unit42_intel": "2026-11-27T04:08:51.173312+00:00",
-   "esetresearch": "2026-11-27T04:08:51.173312+00:00",
-   "ciscotalos": "2026-11-27T04:08:51.173312+00:00",
-   "googlecloudsec": "2026-11-27T04:08:51.173312+00:00",
-   "msftsecintel": "2026-11-27T04:08:51.173312+00:00",
-   "vxunderground": "2026-11-27T04:08:51.173312+00:00",
-   "projectzerobugs": "2026-11-27T04:08:51.173312+00:00",
-   "thezdi": "2026-11-27T04:08:51.173312+00:00",
-   "watchtowrcyber": "2026-11-27T04:08:51.173312+00:00",
-   "sans_isc": "2026-11-27T04:08:51.173312+00:00",
-   "cisagov": "2026-11-27T04:08:51.173312+00:00",
-   "enisa_eu": "2026-11-27T04:08:51.173312+00:00",
-   "cert_eu": "2026-11-27T04:08:51.173312+00:00",
-   "shadowserver": "2026-11-27T04:08:51.173312+00:00",
-   "gossithedog": "2026-11-27T04:08:51.173312+00:00",
-   "malwaretechblog": "2026-11-27T04:08:51.173312+00:00"
+   "thehackersnews": "2026-11-27T16:31:56.095477+00:00",
+   "bleepincomputer": "2026-11-27T16:31:56.095477+00:00",
+   "therecord_media": "2026-11-27T16:31:56.095477+00:00",
+   "securityweek": "2026-11-27T16:31:56.095477+00:00",
+   "unit42_intel": "2026-11-27T16:31:56.095477+00:00",
+   "esetresearch": "2026-11-27T16:31:56.095477+00:00",
+   "ciscotalos": "2026-11-27T16:31:56.095477+00:00",
+   "googlecloudsec": "2026-11-27T16:31:56.095477+00:00",
+   "msftsecintel": "2026-11-27T16:31:56.095477+00:00",
+   "vxunderground": "2026-11-27T16:31:56.095477+00:00",
+   "projectzerobugs": "2026-11-27T16:31:56.095477+00:00",
+   "thezdi": "2026-11-27T16:31:56.095477+00:00",
+   "watchtowrcyber": "2026-11-27T16:31:56.095477+00:00",
+   "sans_isc": "2026-11-27T16:31:56.095477+00:00",
+   "cisagov": "2026-11-27T16:31:56.095477+00:00",
+   "enisa_eu": "2026-11-27T16:31:56.095477+00:00",
+   "cert_eu": "2026-11-27T16:31:56.095477+00:00",
+   "shadowserver": "2026-11-27T16:31:56.095477+00:00",
+   "gossithedog": "2026-11-27T16:31:56.095477+00:00",
+   "malwaretechblog": "2026-11-27T16:31:56.095477+00:00"
   },
   "budget": {
    "day": "2026-11-27",
-   "used": 5
+   "used": 29
   },
   "accounts": [
    {
@@ -8608,6 +8291,502 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2126352854524809425",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-27T16:30:00.000Z",
+    "text": "FIFA Says It Has Been Victim of a Cyberattack Accessing ‘Personal and Business Information’ https://t.co/UW4T0C3vLF",
+    "urls": [
+     {
+      "u": "https://t.co/UW4T0C3vLF",
+      "d": "securityweek.com/fifa-says-it-h…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126345874989330456",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-27T16:02:16.000Z",
+    "text": "CloudOne was WHAT https://t.co/I96XqXzzZl https://t.co/xEbBW63Nsl",
+    "urls": [
+     {
+      "u": "https://t.co/I96XqXzzZl",
+      "d": "pic.x.com/I96XqXzzZl"
+     },
+     {
+      "u": "https://t.co/xEbBW63Nsl",
+      "d": "x.com/IntCyberDigest…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126332719189893408",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-27T15:10:00.000Z",
+    "text": "⚠️ Forgotten VMs, unpatched servers, and excessive permissions create security blind spots, especially when migrating from VMware.\n\n🔍 @ISPsystem  explains how centralized infrastructure management can reduce these risks.\n\n➡️ https://t.co/3RRsjDeyzd\n#cybersecurity #sponsored https://t.co/h2nwLzEMnY",
+    "urls": [
+     {
+      "u": "https://t.co/3RRsjDeyzd",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/h2nwLzEMnY",
+      "d": "pic.x.com/h2nwLzEMnY"
+     }
+    ],
+    "mentions": [
+     "ISPsystem"
+    ],
+    "tags": [
+     "cybersecurity",
+     "sponsored"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126332698624917931",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-27T15:09:55.000Z",
+    "text": "US Air Force cloud platform reportedly hacked in latest federal breach\nhttps://t.co/4je5q3dQxC\n\nhttps://t.co/4je5q3dQxC",
+    "urls": [
+     {
+      "u": "https://t.co/4je5q3dQxC",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/4je5q3dQxC",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2126328629499953513",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-27T14:53:45.000Z",
+    "text": "French international news agency Agence France-Presse (AFP) was hit by a cyberattack Thursday, forcing it to take offline one of its main platforms for distributing news content to media organizations worldwide https://t.co/IvWwh1W9na",
+    "urls": [
+     {
+      "u": "https://t.co/IvWwh1W9na",
+      "d": "therecord.media/france-afp-hit…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126328259516268580",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-27T14:52:16.000Z",
+    "text": "Japan’s education ministry disclosed earlier this week that hackers had breached its government procurement system, potentially exposing records containing business information and email addresses https://t.co/dat7evObv9",
+    "urls": [
+     {
+      "u": "https://t.co/dat7evObv9",
+      "d": "therecord.media/japan-educatio…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2126328175206564194",
+    "uid": "1290332482374598658",
+    "cat": "News",
+    "at": "2026-11-27T14:51:56.000Z",
+    "text": "German software giant SAP confirmed a cybersecurity incident following reports that hackers infiltrated its software development infrastructure, potentially gaining access to the company’s source code https://t.co/ruvn7vQkbZ",
+    "urls": [
+     {
+      "u": "https://t.co/ruvn7vQkbZ",
+      "d": "therecord.media/sap-germany-cy…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126321404660400360",
+    "uid": "964227358218649600",
+    "cat": "Official",
+    "at": "2026-11-27T14:25:02.000Z",
+    "text": "CISA is hiring! We are looking for the best of the best to help protect our nation’s most critical systems and functions. New positions are regularly being posted. Don’t wait, apply now: https://t.co/RqocVyUHmA https://t.co/bQFPlLATk1",
+    "urls": [
+     {
+      "u": "https://t.co/RqocVyUHmA",
+      "d": "usajobs.gov/Search/Results…"
+     },
+     {
+      "u": "https://t.co/bQFPlLATk1",
+      "d": "pic.x.com/bQFPlLATk1"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126320734066631035",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-27T14:22:22.000Z",
+    "text": "Malwarebytes Antivirus: Get 50% off during Black Friday 2026\nhttps://t.co/guul00MXrc\n\nhttps://t.co/guul00MXrc",
+    "urls": [
+     {
+      "u": "https://t.co/guul00MXrc",
+      "d": "bleepingcomputer.com/news/security/…"
+     },
+     {
+      "u": "https://t.co/guul00MXrc",
+      "d": "bleepingcomputer.com/news/security/…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126295122132533681",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-27T12:40:36.000Z",
+    "text": "I've never seen someone accidentally own themselves with Grok before. Dude tried using Grok output to back up his argument (at that point you've already lost), but by tagging Grok in his reply, he accidentally summoned it to refute his point even further 😭 https://t.co/tdcPmF3IMb",
+    "urls": [
+     {
+      "u": "https://t.co/tdcPmF3IMb",
+      "d": "pic.x.com/tdcPmF3IMb"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126292454026736026",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-27T12:30:00.000Z",
+    "text": "🚨 A Microsoft Store app has been caught delivering malware.\n\nHackers used “Setup Assistant” to deploy Vinci RAT, enabling remote control of Windows PCs and execution of malicious payloads.\n\nMicrosoft initially dismissed the abuse report.\n\nRead: https://t.co/p01hcYV5aL",
+    "urls": [
+     {
+      "u": "https://t.co/p01hcYV5aL",
+      "d": "thehackernews.com/2026/11/micros…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126287232981991535",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-27T12:09:15.000Z",
+    "text": "Learn piano with five years of flowkey Classic for $55\nhttps://t.co/DdhrzYYJqx\n\nhttps://t.co/DdhrzYYJqx",
+    "urls": [
+     {
+      "u": "https://t.co/DdhrzYYJqx",
+      "d": "bleepingcomputer.com/offer/deals/le…"
+     },
+     {
+      "u": "https://t.co/DdhrzYYJqx",
+      "d": "bleepingcomputer.com/offer/deals/le…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126284911242002677",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-27T12:00:01.000Z",
+    "text": "In Other News: Tanker Cyberattacks, EU Quantum Act, New VirusTotal Capabilities https://t.co/kWTAtLdFyZ",
+    "urls": [
+     {
+      "u": "https://t.co/kWTAtLdFyZ",
+      "d": "securityweek.com/in-other-news-…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126281987803804023",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-27T11:48:24.000Z",
+    "text": "🦃 Scrolling LinkedIn on your day off? Respect. Let's make it worth it.\n\nQuick holiday thought experiment: ask three relatives how many people came to dinner. You'll get three different answers. Now picture your EDR, CMDB, and vuln scanner doing the same thing with your assets… and an AI agent acting on whichever number it grabbed first. 😬\n\nThat's the problem a new report from Software Analyst Cyber Research (SACR) digs into, featuring @AxoniusInc as its case study: why CAASM is evolving into Asset Intelligence, and why trusted asset data comes before trusted AI.\n\nInside:\n → Why more connectors ≠ more truth\n → A five-level maturity model (find out if you're still at Level 0: \"spreadsheet and vibes\")\n → A five-step path to get your data AI-ready\n\nTurkey's done. Time to feed your brain. 🧠\n\n👉 Read the report: https://t.co/6TyiizDz1R\n\n#Cybersecurity #AssetIntelligence #AISecurity #CAASM",
+    "urls": [
+     {
+      "u": "https://t.co/6TyiizDz1R",
+      "d": "thn.news/cyber-asset-re…"
+     }
+    ],
+    "mentions": [
+     "AxoniusInc"
+    ],
+    "tags": [
+     "AISecurity",
+     "AssetIntelligence",
+     "CAASM",
+     "Cybersecurity"
+    ],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126275142137323872",
+    "uid": "50026664",
+    "cat": "News",
+    "at": "2026-11-27T11:21:12.000Z",
+    "text": "Microsoft removes WSUS server role in Windows Server 2028\nhttps://t.co/I7xsamX5mr\n\nhttps://t.co/I7xsamX5mr",
+    "urls": [
+     {
+      "u": "https://t.co/I7xsamX5mr",
+      "d": "bleepingcomputer.com/news/microsoft…"
+     },
+     {
+      "u": "https://t.co/I7xsamX5mr",
+      "d": "bleepingcomputer.com/news/microsoft…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126270337004540048",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-27T11:02:07.000Z",
+    "text": "I found this really cool malware that I'm writing about, but I think I discovered it fairly early in development because they're adding new features faster than I can analyze and write about them lol",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126263869622595608",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-27T10:36:25.000Z",
+    "text": "⚠️ AI-powered hackers can now do in minutes what once took days. Yet many security teams still rely on quarterly risk assessments.\n\nBy the time a security report is ready, it may already be outdated.\n\nHere's how to close that visibility gap: https://t.co/BlRnADvwar",
+    "urls": [
+     {
+      "u": "https://t.co/BlRnADvwar",
+      "d": "thehackernews.com/2026/11/how-to…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126257446142296088",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-27T10:10:53.000Z",
+    "text": "The agent probed the infrastructure, went away for 11 hours, then came back with an exploit.\n\nTiming how long the exploit code took to run is absolutely ridiculous.\n\nTo make an analogy: it's like someone writing an essay, timing how long it took them to physically hand it in to the professor, then saying \"completing the essay took 1.3 seconds\".\n\nWhile technically correct (the essay was not completed until it was handed in). Any reasonable person is going to thinking \"completing an essay\" means from start to finish.\n\nAI can do some tasks very fast. But these types of metrics are intentionally misleading. They're designed to spread FUD and delude people about how fast AI attacks actually are.\n\nARTEX did not hack the admin account in 1.3 seconds. ARTEX spend 11 hours developing attack tools and one of the tools took 1.3 seconds to run (that's actually fairly slow for code, but not unreasonable).\n\nThe point of focus should be that the AI was able to weaponize a vulnerability in 11 hours (it would likely take a human much longer), not that the exploit took 1.3 second to run (it would take a human the exact same amount of time).",
+    "urls": [
+     {
+      "u": "https://t.co/0PhoJaS6cF",
+      "d": "x.com/KimZetter/stat…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": true,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126247608855167355",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-27T09:31:48.000Z",
+    "text": "100,000 Potentially Impacted by Colorado Data Breach https://t.co/xJN7rIBAo2",
+    "urls": [
+     {
+      "u": "https://t.co/xJN7rIBAo2",
+      "d": "securityweek.com/100000-potenti…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2126247405414944983",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-27T09:30:59.000Z",
+    "text": "🚨 Hackers have poisoned official Q-Dir and DesktopOK downloads and updates to secretly install remote access malware.\n\nThe Windows tools run normally while attackers gain the ability to execute commands, access files, and capture screenshots.\n\nRead ↓ https://t.co/nGH9IA1SSE",
+    "urls": [
+     {
+      "u": "https://t.co/nGH9IA1SSE",
+      "d": "thehackernews.com/2026/11/hacker…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126244468768788814",
+    "uid": "1540951016",
+    "cat": "Researchers",
+    "at": "2026-11-27T09:19:19.000Z",
+    "text": "I have this investigation where an employee downloaded malware, then the website was deleted from their browsing history.\n\nThe way browsing history works is similar to hard drives. When you delete something, it doesn't get erased, the space is just marked as unused. The actual data stay put until the space is needed for something else, at which point it gets overwritten.\n\nIt's very annoying because I can still see exactly which website was responsible for the malware infection, because that data is still there, but because the database record was unlinked, all the metadata is gone.\n\nSo I can't offer a  nice neat \"X led to Y which led to Z\" type explanation. I just have to be like \"well these two things happened, and that implies that maybe this other thing happened, but correlation does not equal causation\"😭",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126220976258204143",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-27T07:45:58.000Z",
+    "text": "Hex Package Manager Warns of Potential Data Breach https://t.co/GD2Z8q6CKG",
+    "urls": [
+     {
+      "u": "https://t.co/GD2Z8q6CKG",
+      "d": "securityweek.com/hex-package-ma…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
+   {
+    "id": "2126219160577319099",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-27T07:38:45.000Z",
+    "text": "SAP Confirms Cyberattack, Source Code Reportedly Compromised   https://t.co/frhJvDiTn0",
+    "urls": [
+     {
+      "u": "https://t.co/frhJvDiTn0",
+      "d": "securityweek.com/sap-confirms-c…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126195719325499560",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-27T06:05:36.000Z",
+    "text": "🛑 Switzerland confirms AI agents have helped hackers breach two critical infrastructure operators.\n\n4 of 5 confirmed AI-assisted attacks succeeded.\n\nThe agents can exploit flaws, launch parallel attacks and adapt to defenses autonomously.\n\nFull story → https://t.co/muTqBKZbGw",
+    "urls": [
+     {
+      "u": "https://t.co/muTqBKZbGw",
+      "d": "thehackernews.com/2026/11/switze…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
    {
     "id": "2126165618068250651",
     "uid": "41258937",
@@ -11087,403 +11266,97 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2125264237987574237",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-24T16:24:14.000Z",
-    "text": "European Commission confirms data theft in EU Academy breach\nhttps://t.co/PqNsUqtCys\n\nhttps://t.co/PqNsUqtCys",
-    "urls": [
-     {
-      "u": "https://t.co/PqNsUqtCys",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/PqNsUqtCys",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2125262084480913900",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-24T16:15:41.000Z",
-    "text": "Hackers compromise Check Point Servers in 22 organizations\nhttps://t.co/bYiysY3ETj\n\nhttps://t.co/bYiysY3ETj",
-    "urls": [
-     {
-      "u": "https://t.co/bYiysY3ETj",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/bYiysY3ETj",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125250897953612224",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-24T15:31:13.000Z",
-    "text": "⚠️ 55% of CISOs faced flat or declining budgets in 2026.\n\nYet SOCs could recover 450 analyst hours per 1,000 investigated alerts, ANYRUN estimates.\n\nBefore approving your 2027 SOC budget, explore 5 ways to cut costs and reduce cyber risk.\n\nhttps://t.co/5sLeNewnOG",
-    "urls": [
-     {
-      "u": "https://t.co/5sLeNewnOG",
-      "d": "thehackernews.com/2026/11/2027-s…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125248827318055082",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-24T15:23:00.000Z",
-    "text": "Elecbrakes Bluetooth Vulnerabilities Expose Trailers to Forced Braking https://t.co/bXE164z4L5",
-    "urls": [
-     {
-      "u": "https://t.co/bXE164z4L5",
-      "d": "securityweek.com/elecbrakes-blu…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125246541845979510",
-    "uid": "1290332482374598658",
-    "cat": "News",
-    "at": "2026-11-24T15:13:55.000Z",
-    "text": "Spain’s professional soccer league LaLiga said hackers stole personal information belonging to fans in a cyberattack affecting its digital services and those of several Spanish clubs https://t.co/7CJtGj09mM",
-    "urls": [
-     {
-      "u": "https://t.co/7CJtGj09mM",
-      "d": "therecord.media/laliga-hacked-…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125246122595680620",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-24T15:12:15.000Z",
-    "text": "Law enforcement authorities from 11 countries have disrupted 57 illegal streaming services that operated hundreds of websites and drew over 7.3 million visits each year.\nhttps://t.co/ARRxvylbsD",
-    "urls": [
-     {
-      "u": "https://t.co/ARRxvylbsD",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125245951011131825",
-    "uid": "1290332482374598658",
-    "cat": "News",
-    "at": "2026-11-24T15:11:34.000Z",
-    "text": "A British cybercriminal who hacked Rockstar Games and leaked footage of Grand Theft Auto VI was sentenced Monday to seven years in prison and then released because of time served https://t.co/ueYsdadzx4",
-    "urls": [
-     {
-      "u": "https://t.co/ueYsdadzx4",
-      "d": "therecord.media/gta-vi-hacker-…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125245733682954286",
-    "uid": "1290332482374598658",
-    "cat": "News",
-    "at": "2026-11-24T15:10:42.000Z",
-    "text": "Britain’s National Cyber Security Centre has observed “a marked rise” since September in cyberattacks assisted by artificial intelligence and warned the technology was increasing attackers’ speed, scale and persistence https://t.co/eUhBCPTYis",
-    "urls": [
-     {
-      "u": "https://t.co/eUhBCPTYis",
-      "d": "therecord.media/cyberattacks-u…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125240789135679537",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-24T14:51:03.000Z",
-    "text": "European Commission Uncovers Data Breach in Cyberattack Investigation https://t.co/e3iX3Bzlfz",
-    "urls": [
-     {
-      "u": "https://t.co/e3iX3Bzlfz",
-      "d": "securityweek.com/european-commi…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2125233709037318170",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-24T14:22:55.000Z",
-    "text": "Check Point Security Management Servers Hacked in AI-Assisted Campaign https://t.co/kjAkwLmm0V",
-    "urls": [
-     {
-      "u": "https://t.co/kjAkwLmm0V",
-      "d": "securityweek.com/check-point-se…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125225717545963721",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-24T13:51:10.000Z",
-    "text": "⚠️ ShinyHunters-linked hackers may be operating under a new name — INCEPTION.\n\nOkta has linked an active voice phishing group to a new data leak site as attacks involving account takeovers, data theft and extortion continue.\n\nFull story ↓\nhttps://t.co/iiKwYrywJf",
-    "urls": [
-     {
-      "u": "https://t.co/iiKwYrywJf",
-      "d": "thehackernews.com/2026/11/okta-l…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2125222119332340021",
-    "uid": "209811713",
-    "cat": "News",
-    "at": "2026-11-24T13:36:52.000Z",
-    "text": "‼️ BREAKING - VMware vCenter hit by ANOTHER critical auth bypass flaw (CVSS 9.8), just days after a similar zero-day was exploited in attacks.\n\nThe new bug (CVE-2026-123903) lets attackers with network access bypass authentication.\n\nDetails: https://t.co/t6MOoCVe1x",
-    "urls": [
-     {
-      "u": "https://t.co/t6MOoCVe1x",
-      "d": "thehackernews.com/2026/11/vmware…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-123903"
-    ],
-    "kev": [],
-    "signals": [
-     "Zero-day",
-     "Exploited in the wild"
-    ]
-   },
-   {
-    "id": "2125195622500479307",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-24T11:51:35.000Z",
-    "text": "1.5 Million Impacted by Data Breach at South Korean Electric Company KEPCO https://t.co/iOayznzXCw",
-    "urls": [
-     {
-      "u": "https://t.co/iOayznzXCw",
-      "d": "securityweek.com/1-5-million-im…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2125162616259490002",
-    "uid": "1324374317484793856",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-24T09:40:25.000Z",
-    "text": "🚨watchTowr Intel has observed in-the-wild exploitation of CVE-2026-131914, a Remote Code Execution vulnerability in Idunno.AntiCsrf, a legacy https://t.co/MqgG3rhHky anti-CSRF library.\n\nAttacker probes were observed validating exploitation by triggering a web redirect on vulnerable apps.",
-    "urls": [
-     {
-      "u": "https://t.co/MqgG3rhHky",
-      "d": "ASP.NET"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": true,
-    "cves": [
-     "CVE-2026-131914"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125121428270067755",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-24T06:56:46.000Z",
-    "text": "There's genuinely so much runtime exploit mitigation potential with eBPF, but the last thing you want is AI Agents writing rules that impact your kernel. Also, the capabilities are limited to Linux because Mac/Windows haven't implement the components needed to be effective.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
   ],
   "digest": {
-   "key": "v1|2125813044622319747,2125816930322043066,2125828343010390326,2125829118495486243,2125831318701527339,2125843640056791275,2125848056444887230,2125857485752029470,2125872551888891955,2125880581636689988,2125899205852188766,2125916671118549273,2125939268556410891,2125971810642743361,2125973917193863413,2125979723549610469,2125999987477893310,2126002600436793825,2126009389643358354,2126012844713922691,2126028018028257748,2126030530814656781,2126038690619334831,2126039537621377497,2126044741272043539,2126044876466786529,2126054246499897848,2126054622443737594,2126054623618166967,2126060073168294332,2126061499701694766,2126067693766001019,2126146288768942497,2126146409498108102,2126147205601939958,2126165618068250651",
-   "overview": "Actively exploited enterprise and web flaws dominate: Mitel, Juniper and Drupal are under attack, with CISA KEV additions, alongside a North Korea-linked GitHub campaign and several breaches.",
+   "key": "v1|2125999987477893310,2126002600436793825,2126009389643358354,2126012844713922691,2126028018028257748,2126030530814656781,2126038690619334831,2126039537621377497,2126044741272043539,2126044876466786529,2126054246499897848,2126054622443737594,2126054623618166967,2126060073168294332,2126061499701694766,2126067693766001019,2126146288768942497,2126146409498108102,2126147205601939958,2126165618068250651,2126195719325499560,2126219160577319099,2126220976258204143,2126244468768788814,2126247405414944983,2126247608855167355,2126257446142296088,2126263869622595608,2126270337004540048,2126275142137323872,2126281987803804023,2126284911242002677,2126287232981991535,2126292454026736026,2126295122132533681,2126320734066631035,2126321404660400360,2126328175206564194,2126328259516268580,2126328629499953513,2126332698624917931,2126332719189893408,2126345874989330456,2126352854524809425",
+   "overview": "Active exploitation of network-management flaws (Juniper, Cacti zero-days) is the most urgent item, alongside malware in trusted downloads and a wave of organizational breaches.",
    "themes": [
     {
-     "title": "Mitel, Juniper and others added to CISA KEV",
-     "summary": "Attackers are exploiting 10 vulnerabilities across Mitel, Juniper, Vates and Danfoss products, including a 10/10 command injection flaw in MiCollab. CISA added all 10 to its KEV catalog, with a November 28 federal patch deadline for 8. SecurityWeek reports the Mitel zero-days were used in suspected AI-assisted attacks, and both SecurityWeek and The Hacker News report the Juniper Session Smart Conductor flaw is exploi",
+     "title": "Juniper and Cacti flaws under active attack",
+     "summary": "SecurityWeek reports a critical Juniper Session Smart Conductor flaw is being exploited in attacks. watchTowr is rapidly responding to '4HTTP2ROOT', a chain of Cacti zero-days enabling remote code execution. It requires guest access, a common configuration, and watchTowr says its clients have been notified. No CVE IDs appear in the posts.",
      "posts": [
-      "2125843640056791275",
-      "2125916671118549273",
-      "2125939268556410891"
+      "2126165618068250651",
+      "2126054622443737594"
      ],
      "cves": [],
      "level": "red",
      "sources": 2
     },
     {
-     "title": "Drupal installer flaw exploited for site takeover",
-     "summary": "The Hacker News reports a highly critical Drupal site takeover flaw, CVE-2026-136716, is under active exploitation. Sites patched for the earlier Fail2Install issue may still be vulnerable if the installer remains exposed. SecurityWeek says attackers are already exploiting a gap left by that patch.",
+     "title": "Government and organizational data breaches",
+     "summary": "Several breaches are reported. BleepingComputer says a US Air Force cloud platform was reportedly hacked. The Record reports Japan's education ministry had its procurement system breached, possibly exposing business information and email addresses. SecurityWeek reports a Colorado breach affecting 100,000 people and a Hex package manager data breach warning. FIFA and AFP also report cyberattacks.",
      "posts": [
-      "2125848056444887230",
-      "2125880581636689988"
-     ],
-     "cves": [
-      "CVE-2026-136716"
-     ],
-     "level": "red",
-     "sources": 2
-    },
-    {
-     "title": "Cacti zero-day chain and GeoServer attacks",
-     "summary": "watchTowr reports a zero-day chain in Cacti, named 4HTTP2ROOT, that leads to remote code execution. Guest access is required, which is a common configuration. SecurityWeek reports two newly disclosed GeoServer vulnerabilities are under attack. The Hacker News reports Jenkins disclosed 21 flaws across 11 plugins, including sandbox bypasses that allow code execution on CI/CD controllers.",
-     "posts": [
-      "2126054622443737594",
-      "2125813044622319747",
-      "2125857485752029470"
+      "2126332698624917931",
+      "2126328259516268580",
+      "2126247608855167355",
+      "2126352854524809425"
      ],
      "cves": [],
-     "level": "red",
+     "level": "orange",
      "sources": 3
     },
     {
-     "title": "Breaches at Todoist, 1Password, FIFA and Turnitin",
-     "summary": "Several organizations disclosed breaches. Todoist says a stolen developer credential exposed password hashes, API tokens and connected Outlook data for 6% of users. SecurityWeek reports 1Password exposed customer data and internal source code. FIFA and Turnitin say they were hit by cyberattacks, with FIFA reporting personal and business information was accessed.",
+     "title": "AI agents assisting real intrusions",
+     "summary": "The Hacker News reports Switzerland confirmed AI agents helped hackers breach two critical infrastructure operators, with 4 of 5 confirmed AI-assisted attacks succeeding. MalwareTech describes an agent that probed infrastructure and returned with a working exploit, though the post is an anecdote about timing rather than a confirmed incident.",
      "posts": [
-      "2125829118495486243",
-      "2125872551888891955",
-      "2125999987477893310",
-      "2126039537621377497"
+      "2126195719325499560",
+      "2126257446142296088"
      ],
      "cves": [],
      "level": "orange",
      "sources": 2
     },
     {
-     "title": "North Korea-linked GitHub poisoning campaign",
-     "summary": "The Hacker News reports North Korea-linked hackers poisoned more than 7,600 GitHub repositories in the PolinRider campaign. The campaign hijacks legitimate commits, uses Ethereum to hide C2 infrastructure, and can trigger malware when a project is opened in VS Code.",
+     "title": "Trusted downloads and app store carry malware",
+     "summary": "The Hacker News reports attackers poisoned official Q-Dir and DesktopOK downloads and updates to install remote access malware that gives command execution, file access and screenshot capture while the tools still run normally. Separately, The Hacker News reports a Microsoft Store app delivered Vinci RAT, and that Microsoft initially dismissed the abuse report.",
      "posts": [
-      "2125971810642743361"
+      "2126247405414944983",
+      "2126292454026736026"
      ],
      "cves": [],
      "level": "green",
      "sources": 1
+    },
+    {
+     "title": "SAP confirms incident; source code possibly accessed",
+     "summary": "The Record and SecurityWeek both report that SAP confirmed a cybersecurity incident. Hackers reportedly infiltrated its software development infrastructure and may have reached source code. The posts describe the compromise as reported, not confirmed in scope.",
+     "posts": [
+      "2126328175206564194",
+      "2126219160577319099"
+     ],
+     "cves": [],
+     "level": "green",
+     "sources": 2
     }
    ],
-   "based_on": 36,
-   "at": "2026-11-27T04:08:51Z",
+   "based_on": 44,
+   "at": "2026-11-27T16:31:56Z",
    "model": "claude-haiku-5-5"
   }
  },
  "brief": {
-  "key": "v3|2026-11-27|CVE-2026-133469,CVE-2024-10441,CVE-2026-97229,CVE-2026-133968,CVE-2023-25915,CVE-2026-133323",
+  "key": "v3|2026-11-27|CVE-2026-133469,CVE-2024-10441,CVE-2026-97229,CVE-2026-133968,CVE-2026-123158,CVE-2023-25915",
   "points": [
    {
     "title": "Synology DSM output encoding flaw",
-    "why": "Confirmed exploited and used in ransomware campaigns; added within the last two weeks.",
+    "why": "Confirmed exploited and already used in ransomware campaigns; added within the last two weeks.",
     "ref": "CVE-2024-10441",
     "find": "CVE-2024-10441",
     "level": "red"
    },
    {
     "title": "GitLab integer overflow flaw",
-    "why": "Confirmed exploited, with high predicted likelihood of further exploitation; critical severity.",
+    "why": "Confirmed exploited and rated maximum severity, with a high predicted chance of exploitation.",
     "ref": "CVE-2026-97229",
     "find": "CVE-2026-97229",
     "level": "red"
    },
    {
-    "title": "Xen Orchestra input validation flaw",
-    "why": "Confirmed exploited, added this week, in the news, with notable predicted exploitation likelihood.",
-    "ref": "CVE-2026-133469",
-    "find": "CVE-2026-133469",
+    "title": "OpenBSD OpenSSH unexpected return value flaw",
+    "why": "Confirmed exploited in the wild with a very high predicted likelihood of exploitation.",
+    "ref": "CVE-2026-123158",
+    "find": "CVE-2026-123158",
     "level": "red"
    }
   ],
