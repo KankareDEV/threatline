@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-28T01:24:20Z",
+ "generated": "2026-11-28T10:14:06Z",
  "kev_window_days": 30,
  "news_window_days": 3,
  "kev_total": 1808,
  "counts": {
   "red": 20,
   "orange": 34,
-  "green": 35
+  "green": 32
  },
  "sources": [
   {
@@ -23,7 +23,7 @@
   },
   {
    "name": "CVE Program (CVSS)",
-   "ok": true
+   "ok": false
   },
   {
    "name": "BleepingComputer",
@@ -56,7 +56,7 @@
    "ransomware": 1,
    "epss_high": 2,
    "epss_known": 44,
-   "news": 43
+   "news": 40
   },
   "timeline": [
    {
@@ -406,26 +406,6 @@
     ]
    },
    {
-    "name": "Com-affiliated threat actors",
-    "n": 1,
-    "links": [
-     {
-      "label": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-      "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html"
-     }
-    ]
-   },
-   {
-    "name": "GreyNoise Threat 13 (GT13)",
-    "n": 1,
-    "links": [
-     {
-      "label": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
-      "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
-     }
-    ]
-   },
-   {
     "name": "PolinRider",
     "n": 1,
     "links": [
@@ -521,7 +501,7 @@
   "by_source": [
    {
     "name": "The Hacker News",
-    "n": 22
+    "n": 19
    },
    {
     "name": "BleepingComputer",
@@ -3645,6 +3625,43 @@
    }
   },
   {
+   "id": "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html",
+   "type": "news",
+   "title": "pCloud Password Manager Hit by Cyber Attack Involving Email Address Exposure and Login Attempts",
+   "date": "2026-11-28",
+   "sources": [
+    "The Hacker News"
+   ],
+   "cves": [],
+   "ransomware": false,
+   "links": [
+    {
+     "label": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html"
+    }
+   ],
+   "signals": [],
+   "actors": [],
+   "score": 20,
+   "level": "green",
+   "reasons": [
+    {
+     "label": "Reported by a tracked source",
+     "points": 20
+    }
+   ],
+   "ai": {
+    "summary": "Swiss password manager pCloud Pass says it was hit by a cyber attack after users saw unknown devices connected to their accounts. The company says the attack was contained, but some users' email addresses were exposed.",
+    "sector": "Technology",
+    "actors": [],
+    "malware": [],
+    "tactic": "Credential Access",
+    "countries": [
+     "CH"
+    ]
+   }
+  },
+  {
    "id": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
    "type": "news",
    "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
@@ -4441,158 +4458,6 @@
    }
   },
   {
-   "id": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
-   "type": "news",
-   "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
-   "date": "2026-11-25",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "WordPress removed six plugins from developer WP Connect after they were backdoored, enabling arbitrary code execution on sites. A suspected developer account compromise caused it, and the releases were blocked before going live.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
-   "type": "news",
-   "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-   "date": "2026-11-25",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "Com-affiliated threat actors"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "Unit 42 reports Com-affiliated actors running vishing waves since August 2026 to hijack cloud accounts, steal data, and attempt extortion. Financial, healthcare, and legal firms in the US, UK, and Australia were targeted.",
-    "sector": "Financial services",
-    "actors": [
-     "Com-affiliated threat actors"
-    ],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": [
-     "AU",
-     "GB",
-     "US"
-    ]
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
-   "type": "news",
-   "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
-   "date": "2026-11-25",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
-    }
-   ],
-   "signals": [],
-   "actors": [
-    "GreyNoise Threat 13 (GT13)"
-   ],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "An unknown actor used AI-driven offensive tooling to compromise Check Point Security Management servers, affecting 22 organizations worldwide. Targets reportedly included financial services, energy, and government, tracked by GreyNoise as GT13.",
-    "sector": "Multiple sectors",
-    "actors": [
-     "GreyNoise Threat 13 (GT13)"
-    ],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
-   "id": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
-   "type": "news",
-   "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
-   "date": "2026-11-25",
-   "sources": [
-    "The Hacker News"
-   ],
-   "cves": [],
-   "ransomware": false,
-   "links": [
-    {
-     "label": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html"
-    }
-   ],
-   "signals": [],
-   "actors": [],
-   "score": 20,
-   "level": "green",
-   "reasons": [
-    {
-     "label": "Reported by a tracked source",
-     "points": 20
-    }
-   ],
-   "ai": {
-    "summary": "An attacker ran operating system commands on six production servers of Hex.pm, the Elixir and Erlang package registry, by exploiting a CVSS 10.0 flaw present since 2016. Servers were patched quickly after the first request.",
-    "sector": "Technology",
-    "actors": [],
-    "malware": [],
-    "tactic": "Initial Access",
-    "countries": []
-   }
-  },
-  {
    "id": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html",
    "type": "news",
    "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
@@ -4704,8 +4569,8 @@
  ],
  "geo": {
   "window_days": 30,
-  "total": 1162,
-  "located": 980,
+  "total": 1157,
+  "located": 978,
   "countries": [
    {
     "cc": "US",
@@ -4731,7 +4596,7 @@
      },
      {
       "name": "Professional Services",
-      "n": 68
+      "n": 69
      },
      {
       "name": "Manufacturing",
@@ -4741,7 +4606,7 @@
    },
    {
     "cc": "CA",
-    "n": 58,
+    "n": 57,
     "groups": [
      {
       "name": "n0n",
@@ -4767,7 +4632,7 @@
      },
      {
       "name": "Healthcare",
-      "n": 7
+      "n": 6
      }
     ]
    },
@@ -4837,7 +4702,7 @@
    },
    {
     "cc": "IN",
-    "n": 24,
+    "n": 23,
     "groups": [
      {
       "name": "pixelleaks",
@@ -4845,7 +4710,7 @@
      },
      {
       "name": "incransom",
-      "n": 5
+      "n": 4
      },
      {
       "name": "orova",
@@ -4901,7 +4766,7 @@
    },
    {
     "cc": "IT",
-    "n": 19,
+    "n": 20,
     "groups": [
      {
       "name": "n0n",
@@ -4912,7 +4777,7 @@
       "n": 3
      },
      {
-      "name": "thegentlemen",
+      "name": "incransom",
       "n": 2
      }
     ],
@@ -5316,38 +5181,6 @@
     ]
    },
    {
-    "cc": "HK",
-    "n": 9,
-    "groups": [
-     {
-      "name": "pixelleaks",
-      "n": 2
-     },
-     {
-      "name": "krybit",
-      "n": 2
-     },
-     {
-      "name": "orova",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Retail & E-Commerce",
-      "n": 2
-     },
-     {
-      "name": "Financial Services",
-      "n": 2
-     },
-     {
-      "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
     "cc": "ID",
     "n": 9,
     "groups": [
@@ -5380,33 +5213,33 @@
     ]
    },
    {
-    "cc": "AE",
-    "n": 7,
+    "cc": "HK",
+    "n": 8,
     "groups": [
      {
-      "name": "n0n",
+      "name": "pixelleaks",
       "n": 2
      },
      {
       "name": "krybit",
-      "n": 1
+      "n": 2
      },
      {
-      "name": "braincipher",
+      "name": "orova",
       "n": 1
      }
     ],
     "sectors": [
      {
       "name": "Retail & E-Commerce",
-      "n": 3
-     },
-     {
-      "name": "Manufacturing",
       "n": 2
      },
      {
-      "name": "Professional Services",
+      "name": "Technology",
+      "n": 1
+     },
+     {
+      "name": "Healthcare",
       "n": 1
      }
     ]
@@ -5439,6 +5272,38 @@
      },
      {
       "name": "Retail & E-Commerce",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "AE",
+    "n": 6,
+    "groups": [
+     {
+      "name": "n0n",
+      "n": 2
+     },
+     {
+      "name": "krybit",
+      "n": 1
+     },
+     {
+      "name": "braincipher",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Manufacturing",
+      "n": 2
+     },
+     {
+      "name": "Retail & E-Commerce",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
       "n": 1
      }
     ]
@@ -5532,6 +5397,38 @@
      {
       "name": "Professional Services",
       "n": 1
+     },
+     {
+      "name": "Other",
+      "n": 1
+     }
+    ]
+   },
+   {
+    "cc": "BE",
+    "n": 5,
+    "groups": [
+     {
+      "name": "qilin",
+      "n": 2
+     },
+     {
+      "name": "thegentlemen",
+      "n": 1
+     },
+     {
+      "name": "incransom",
+      "n": 1
+     }
+    ],
+    "sectors": [
+     {
+      "name": "Education",
+      "n": 2
+     },
+     {
+      "name": "Professional Services",
+      "n": 2
      },
      {
       "name": "Other",
@@ -5723,38 +5620,6 @@
      },
      {
       "name": "Technology",
-      "n": 1
-     }
-    ]
-   },
-   {
-    "cc": "BE",
-    "n": 4,
-    "groups": [
-     {
-      "name": "qilin",
-      "n": 1
-     },
-     {
-      "name": "thegentlemen",
-      "n": 1
-     },
-     {
-      "name": "incransom",
-      "n": 1
-     }
-    ],
-    "sectors": [
-     {
-      "name": "Professional Services",
-      "n": 2
-     },
-     {
-      "name": "Education",
-      "n": 1
-     },
-     {
-      "name": "Other",
       "n": 1
      }
     ]
@@ -6806,7 +6671,7 @@
    },
    {
     "name": "qilin",
-    "n": 76,
+    "n": 77,
     "last": "2026-11-27",
     "sectors": [
      {
@@ -6819,7 +6684,7 @@
      },
      {
       "name": "Education",
-      "n": 8
+      "n": 9
      }
     ],
     "countries": [
@@ -6890,20 +6755,20 @@
    },
    {
     "name": "incransom",
-    "n": 50,
+    "n": 48,
     "last": "2026-11-27",
     "sectors": [
      {
       "name": "Professional Services",
-      "n": 10
+      "n": 11
      },
      {
       "name": "Technology",
-      "n": 8
+      "n": 7
      },
      {
       "name": "Financial Services",
-      "n": 7
+      "n": 6
      }
     ],
     "countries": [
@@ -6913,7 +6778,11 @@
      },
      {
       "cc": "IN",
-      "n": 5
+      "n": 4
+     },
+     {
+      "cc": "IT",
+      "n": 2
      },
      {
       "cc": "GB",
@@ -6922,10 +6791,6 @@
      {
       "cc": "CA",
       "n": 2
-     },
-     {
-      "cc": "IT",
-      "n": 1
      }
     ],
     "about": "INC Ransom is a prolific ransomware-as-a-service operation active since July 2023. It targets healthcare, government, education, and manufacturing in North America and Europe, with no sector excluded. It posted over 200 victims in 2025 alone.",
@@ -7046,7 +6911,7 @@
    },
    {
     "name": "rhysida",
-    "n": 32,
+    "n": 31,
     "last": "2026-11-27",
     "sectors": [
      {
@@ -7058,8 +6923,8 @@
       "n": 5
      },
      {
-      "name": "Financial Services",
-      "n": 4
+      "name": "Education",
+      "n": 3
      }
     ],
     "countries": [
@@ -7715,6 +7580,18 @@
   "recent": [
    {
     "d": "2026-11-27",
+    "cc": "US",
+    "g": "incransom",
+    "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "IT",
+    "g": "incransom",
+    "s": "Hospitality"
+   },
+   {
+    "d": "2026-11-27",
     "cc": "GB",
     "g": "incransom",
     "s": "Financial Services"
@@ -7796,6 +7673,12 @@
     "cc": "NL",
     "g": "direwolf",
     "s": "Professional Services"
+   },
+   {
+    "d": "2026-11-27",
+    "cc": "BE",
+    "g": "qilin",
+    "s": "Education"
    },
    {
     "d": "2026-11-27",
@@ -7934,30 +7817,12 @@
     "cc": "KR",
     "g": "everest",
     "s": "Manufacturing"
-   },
-   {
-    "d": "2026-11-26",
-    "cc": "US",
-    "g": "qilin",
-    "s": "Retail & E-Commerce"
-   },
-   {
-    "d": "2026-11-26",
-    "cc": "AT",
-    "g": "aurora",
-    "s": "Hospitality"
-   },
-   {
-    "d": "2026-11-26",
-    "cc": "",
-    "g": "aurora",
-    "s": "Professional Services"
    }
   ],
   "days": [
    {
     "date": "2026-10-29",
-    "n": 30
+    "n": 22
    },
    {
     "date": "2026-10-30",
@@ -8073,7 +7938,7 @@
    },
    {
     "date": "2026-11-27",
-    "n": 15
+    "n": 18
    },
    {
     "date": "2026-11-28",
@@ -8226,15 +8091,15 @@
   },
   "profiles_at": "2026-11-25T14:11:00.532536+00:00",
   "since": {
-   "209811713": "2126354603549888690",
+   "209811713": "2126589140015985117",
    "50026664": "2126397388151554320",
    "1290332482374598658": "2126328629499953513",
-   "41258937": "2126352854524809425",
+   "41258937": "2126526501592146356",
    "4487645412": "2126443457895965162",
    "54316357": "2124929241330364647",
    "935278274845974528": "2125658276868341846",
    "217462908": "2125655976581681574",
-   "1158139840866791424": "2126461557882200071",
+   "1158139840866791424": "2126544494036439434",
    "702994808181170176": "2125899205852188766",
    "1324374317484793856": "2126054623618166967",
    "6821102": "2125571896678732227",
@@ -8244,30 +8109,30 @@
    "86973588": "2124975291571613803"
   },
   "fetched_at": {
-   "thehackersnews": "2026-11-28T01:24:20.037486+00:00",
-   "bleepincomputer": "2026-11-28T01:24:20.037486+00:00",
-   "therecord_media": "2026-11-28T01:24:20.037486+00:00",
-   "securityweek": "2026-11-28T01:24:20.037486+00:00",
-   "unit42_intel": "2026-11-28T01:24:20.037486+00:00",
-   "esetresearch": "2026-11-28T01:24:20.037486+00:00",
-   "ciscotalos": "2026-11-28T01:24:20.037486+00:00",
-   "googlecloudsec": "2026-11-28T01:24:20.037486+00:00",
-   "msftsecintel": "2026-11-28T01:24:20.037486+00:00",
-   "vxunderground": "2026-11-28T01:24:20.037486+00:00",
-   "projectzerobugs": "2026-11-28T01:24:20.037486+00:00",
-   "thezdi": "2026-11-28T01:24:20.037486+00:00",
-   "watchtowrcyber": "2026-11-28T01:24:20.037486+00:00",
-   "sans_isc": "2026-11-28T01:24:20.037486+00:00",
-   "cisagov": "2026-11-28T01:24:20.037486+00:00",
-   "enisa_eu": "2026-11-28T01:24:20.037486+00:00",
-   "cert_eu": "2026-11-28T01:24:20.037486+00:00",
-   "shadowserver": "2026-11-28T01:24:20.037486+00:00",
-   "gossithedog": "2026-11-28T01:24:20.037486+00:00",
-   "malwaretechblog": "2026-11-28T01:24:20.037486+00:00"
+   "thehackersnews": "2026-11-28T10:14:06.302232+00:00",
+   "bleepincomputer": "2026-11-28T10:14:06.302232+00:00",
+   "therecord_media": "2026-11-28T10:14:06.302232+00:00",
+   "securityweek": "2026-11-28T10:14:06.302232+00:00",
+   "unit42_intel": "2026-11-28T10:14:06.302232+00:00",
+   "esetresearch": "2026-11-28T10:14:06.302232+00:00",
+   "ciscotalos": "2026-11-28T10:14:06.302232+00:00",
+   "googlecloudsec": "2026-11-28T10:14:06.302232+00:00",
+   "msftsecintel": "2026-11-28T10:14:06.302232+00:00",
+   "vxunderground": "2026-11-28T10:14:06.302232+00:00",
+   "projectzerobugs": "2026-11-28T10:14:06.302232+00:00",
+   "thezdi": "2026-11-28T10:14:06.302232+00:00",
+   "watchtowrcyber": "2026-11-28T10:14:06.302232+00:00",
+   "sans_isc": "2026-11-28T10:14:06.302232+00:00",
+   "cisagov": "2026-11-28T10:14:06.302232+00:00",
+   "enisa_eu": "2026-11-28T10:14:06.302232+00:00",
+   "cert_eu": "2026-11-28T10:14:06.302232+00:00",
+   "shadowserver": "2026-11-28T10:14:06.302232+00:00",
+   "gossithedog": "2026-11-28T10:14:06.302232+00:00",
+   "malwaretechblog": "2026-11-28T10:14:06.302232+00:00"
   },
   "budget": {
    "day": "2026-11-28",
-   "used": 11
+   "used": 16
   },
   "accounts": [
    {
@@ -8353,6 +8218,93 @@
   ],
   "keep_hours": 72,
   "posts": [
+   {
+    "id": "2126589140015985117",
+    "uid": "209811713",
+    "cat": "News",
+    "at": "2026-11-28T08:08:55.000Z",
+    "text": "🚨 pCloud Pass becomes the third password manager hit by a cyberattack this month.\n\nUser emails were exposed, and users reported suspicious sign-in alerts despite having 2FA enabled.\n\npCloud denies vault data was compromised.\n\nFull story: https://t.co/6Q9AcpMkG9",
+    "urls": [
+     {
+      "u": "https://t.co/6Q9AcpMkG9",
+      "d": "thehackernews.com/2026/11/pcloud…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126544494036439434",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-28T05:11:31.000Z",
+    "text": "OooH wE CaN pLaY as mANdy\n\nThey're motivated by Turtles. They've ascended.",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126544082050949238",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-28T05:09:53.000Z",
+    "text": "Video game nerds are arguably the most dangerous of all nerds. They'll be zoinked on Adderall, awake for 72 hours straight, and make magic.\n\nThen they'll disappear into the void so they can play as a Turtle in GTA VI while asking for absolutely nothing in return. https://t.co/QrhdPE7y3m",
+    "urls": [
+     {
+      "u": "https://t.co/QrhdPE7y3m",
+      "d": "x.com/jamesreborn_yt…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126537873604174110",
+    "uid": "1158139840866791424",
+    "cat": "CTI",
+    "at": "2026-11-28T04:45:12.000Z",
+    "text": "Awhile back I made a post saying how much I hate making videos because I suck at reading, blah blah blah. I'm dyslexic, I make tons of mistakes, it's really hard for me.\n\nThis random dude who follows me sends me a demo reel of him reading things I've written. He said he's always wanted to be a narrator and he thinks he's pretty good.\n\nBro, I sent this dude my in-depth schizo analysis script on this malware I'm working on and his narration blew my mind. I don't even want to make the video, I could just publish this shit as an audio book. This dude is so good at narrating.\n\nHoly cannoli this dude is cooking",
+    "urls": [],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": []
+   },
+   {
+    "id": "2126526501592146356",
+    "uid": "41258937",
+    "cat": "News",
+    "at": "2026-11-28T04:00:01.000Z",
+    "text": "Hex Package Manager Warns of Potential Data Breach https://t.co/GD2Z8q6CKG",
+    "urls": [
+     {
+      "u": "https://t.co/GD2Z8q6CKG",
+      "d": "securityweek.com/hex-package-ma…"
+     }
+    ],
+    "mentions": [],
+    "tags": [],
+    "edited": false,
+    "cves": [],
+    "kev": [],
+    "signals": [
+     "Data breach"
+    ]
+   },
    {
     "id": "2126461557882200071",
     "uid": "1158139840866791424",
@@ -10856,249 +10808,40 @@
     "cves": [],
     "kev": [],
     "signals": []
-   },
-   {
-    "id": "2125533016776696224",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-25T10:12:16.000Z",
-    "text": "Hackers now exploit critical Drupal RCE flaw to hijack sites\nhttps://t.co/Johqnk6NVs\n\nhttps://t.co/Johqnk6NVs",
-    "urls": [
-     {
-      "u": "https://t.co/Johqnk6NVs",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/Johqnk6NVs",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125516403289833865",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-25T09:06:15.000Z",
-    "text": "Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library https://t.co/Sl2yHVTt1U",
-    "urls": [
-     {
-      "u": "https://t.co/Sl2yHVTt1U",
-      "d": "securityweek.com/hackers-exploi…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125515628047908993",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-25T09:03:10.000Z",
-    "text": "Microsoft confirms authentication issues after November updates\nhttps://t.co/DAcQ4WI1eJ\n\nhttps://t.co/DAcQ4WI1eJ",
-    "urls": [
-     {
-      "u": "https://t.co/DAcQ4WI1eJ",
-      "d": "bleepingcomputer.com/news/microsoft…"
-     },
-     {
-      "u": "https://t.co/DAcQ4WI1eJ",
-      "d": "bleepingcomputer.com/news/microsoft…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125503576663593359",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-25T08:15:17.000Z",
-    "text": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls https://t.co/oDlwuwwIf0",
-    "urls": [
-     {
-      "u": "https://t.co/oDlwuwwIf0",
-      "d": "securityweek.com/palo-alto-netw…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125496032544927916",
-    "uid": "50026664",
-    "cat": "News",
-    "at": "2026-11-25T07:45:18.000Z",
-    "text": "Hackers reportedly breached CIA intelligence analysis system\nhttps://t.co/KSNsMaJW0f\n\nhttps://t.co/KSNsMaJW0f",
-    "urls": [
-     {
-      "u": "https://t.co/KSNsMaJW0f",
-      "d": "bleepingcomputer.com/news/security/…"
-     },
-     {
-      "u": "https://t.co/KSNsMaJW0f",
-      "d": "bleepingcomputer.com/news/security/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": [
-     "Data breach"
-    ]
-   },
-   {
-    "id": "2125467507825815998",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-25T05:51:57.000Z",
-    "text": "Related post \n\nhttps://t.co/7BEsr31BJJ",
-    "urls": [
-     {
-      "u": "https://t.co/7BEsr31BJJ",
-      "d": "x.com/vxunderground/…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125465422572953759",
-    "uid": "1158139840866791424",
-    "cat": "CTI",
-    "at": "2026-11-25T05:43:40.000Z",
-    "text": "The United States Treasury was WHAT https://t.co/oEIwJVOuge https://t.co/LZtNKzjs6L",
-    "urls": [
-     {
-      "u": "https://t.co/oEIwJVOuge",
-      "d": "pic.x.com/oEIwJVOuge"
-     },
-     {
-      "u": "https://t.co/LZtNKzjs6L",
-      "d": "x.com/disclosetv/sta…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125410940179067246",
-    "uid": "1540951016",
-    "cat": "Researchers",
-    "at": "2026-11-25T02:07:11.000Z",
-    "text": "It feels like vendors keep repeating that defensive AI agents will stop offensive AI agents until everyone accepts it without evidence.\n\nSolo hackers were ransoming fortune 500 organizations which had entire dedicated SOC teams. How does giving both sides AI somehow lead to defenders winning?\n\nIt reminds me of when NextGen Firewalls hit the market. Organizations were falling over themselves to buy the fancy magic box with blinky lights that solves all their security problems.\n\nThen, ironically, not only did the magic boxes not solve all their security problems, hackers figured out that the firewalls run outdated Linux kernels with exploit mitigations disabled, so they just hacked those too.",
-    "urls": [],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125409387414180063",
-    "uid": "6821102",
-    "cat": "Vulnerabilities",
-    "at": "2026-11-25T02:01:00.000Z",
-    "text": "Aggressive SSH Scanning from 109.160.32.0/24; VMware VMSA-2026-0011 vCenter Auth Bypass (CVE-2026-123903) (Nov 25th 2026)\n https://t.co/k7vzXOU3sZ https://t.co/JLmL3lPjbu",
-    "urls": [
-     {
-      "u": "https://t.co/k7vzXOU3sZ",
-      "d": "isc.sans.edu/podcastdetail/…"
-     },
-     {
-      "u": "https://t.co/JLmL3lPjbu",
-      "d": "pic.x.com/JLmL3lPjbu"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [
-     "CVE-2026-123903"
-    ],
-    "kev": [],
-    "signals": []
-   },
-   {
-    "id": "2125402590250758204",
-    "uid": "41258937",
-    "cat": "News",
-    "at": "2026-11-25T01:34:00.000Z",
-    "text": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities https://t.co/G6vbOmIU1P",
-    "urls": [
-     {
-      "u": "https://t.co/G6vbOmIU1P",
-      "d": "securityweek.com/vmware-updates…"
-     }
-    ],
-    "mentions": [],
-    "tags": [],
-    "edited": false,
-    "cves": [],
-    "kev": [],
-    "signals": []
    }
   ],
   "digest": {
-   "key": "v1|2126146288768942497,2126146409498108102,2126147205601939958,2126165618068250651,2126195719325499560,2126219160577319099,2126220976258204143,2126244468768788814,2126247405414944983,2126247608855167355,2126257446142296088,2126263869622595608,2126270337004540048,2126275142137323872,2126281987803804023,2126284911242002677,2126287232981991535,2126292454026736026,2126295122132533681,2126320734066631035,2126321404660400360,2126328175206564194,2126328259516268580,2126328629499953513,2126332698624917931,2126332719189893408,2126345874989330456,2126352854524809425,2126354603549888690,2126362036506378425,2126373531068039271,2126390187253002613,2126393697453396368,2126394885594829223,2126397388151554320,2126405819855929438,2126443457895965162,2126461016930460060,2126461557882200071",
-   "overview": "Active exploitation of network flaws, trojanized Windows software, AI-agent-driven intrusions, and a string of breaches at major firms and agencies dominate the feed.",
+   "key": "v1|2126263869622595608,2126270337004540048,2126275142137323872,2126281987803804023,2126284911242002677,2126287232981991535,2126292454026736026,2126295122132533681,2126320734066631035,2126321404660400360,2126328175206564194,2126328259516268580,2126328629499953513,2126332698624917931,2126332719189893408,2126345874989330456,2126352854524809425,2126354603549888690,2126362036506378425,2126373531068039271,2126390187253002613,2126393697453396368,2126394885594829223,2126397388151554320,2126405819855929438,2126443457895965162,2126461016930460060,2126461557882200071,2126526501592146356,2126537873604174110,2126544082050949238,2126544494036439434,2126589140015985117",
+   "overview": "No confirmed exploited CVEs in these posts. The most actionable risk is an unpatched Cacti zero-day with public exploit code, alongside a run of organizational breaches and a password manager intrusion.",
    "themes": [
     {
-     "title": "Exploited and unpatched network device flaws",
-     "summary": "Juniper Session Smart Conductor flaw is reported as exploited in attacks. A separate Cacti zero-day has a public proof-of-concept giving remote code execution and no patch. The posts do not name CVE IDs, so verify affected versions and mitigations before acting.",
+     "title": "Unpatched Cacti zero-day enables remote code execution",
+     "summary": "BleepinComputer reports an unpatched Cacti zero-day with a public proof-of-concept that gives remote code execution. The post gives no CVE ID and no mitigation details, so defenders should check for Cacti exposure and watch for vendor patches.",
      "posts": [
-      "2126165618068250651",
       "2126362036506378425"
      ],
      "cves": [],
      "level": "red",
-     "sources": 2
+     "sources": 1
     },
     {
-     "title": "Breaches at SAP, US Air Force cloud, FIFA",
-     "summary": "SAP confirmed a cybersecurity incident, and two outlets report that source code may have been compromised. A US Air Force cloud platform was reportedly hacked in a latest federal breach. FIFA says it was hit by a cyberattack that accessed personal and business information.",
+     "title": "Multiple organizations disclose breaches and incidents",
+     "summary": "Several organizations disclosed breaches or incidents in the same window. SAP confirmed a cybersecurity incident involving possible access to its source code, and Japan's education ministry reported that its government procurement system was breached. FIFA, the US Air Force cloud platform, and Boston Scientific (exposing personal and medical data) were also reported. Sources from The Record, BleepinComputer, and Secu",
      "posts": [
-      "2126219160577319099",
+      "2126328175206564194",
+      "2126328259516268580",
       "2126332698624917931",
       "2126352854524809425"
      ],
      "cves": [],
      "level": "orange",
-     "sources": 2
+     "sources": 3
     },
     {
-     "title": "AI agents used in real intrusions",
-     "summary": "Unit 42 reports more than ten campaigns in which attackers deployed autonomous AI agents through web shells, compressing timelines from days to hours with standard tools. Switzerland confirmed AI agents helped hackers breach two critical infrastructure operators, with four of five AI-assisted attacks succeeding.",
+     "title": "Espionage and AI-driven intrusion campaigns surface",
+     "summary": "The Hacker News reports a suspected Vietnam-linked South China Sea espionage campaign that breached five targets in Thailand and the Philippines and extracted about 350,000 government records. Unit42 reports more than ten campaigns in which attackers used autonomous AI agents through web shells to compress intrusion timelines from days to hours, using standard tools and leaving artifacts such as reasoning comments in",
      "posts": [
-      "2126195719325499560",
+      "2126354603549888690",
       "2126443457895965162"
      ],
      "cves": [],
@@ -11106,23 +10849,20 @@
      "sources": 2
     },
     {
-     "title": "Consumer and health data breaches",
-     "summary": "pCloud confirmed a password manager hack after suspicious login alerts. Boston Scientific disclosed a breach exposing personal and medical information. A Colorado breach affected about 100,000 people, and Hex Package Manager warned of a potential data breach.",
+     "title": "pCloud Pass hit by suspicious sign-in alerts",
+     "summary": "The Hacker News and BleepinComputer both report that pCloud Pass, described as the third password manager attacked this month, sent suspicious sign-in alerts and exposed user emails, even for users with 2FA enabled. pCloud denies that vault data was compromised. Users should review account activity and enable any available protections.",
      "posts": [
-      "2126390187253002613",
-      "2126397388151554320",
-      "2126247608855167355",
-      "2126220976258204143"
+      "2126589140015985117",
+      "2126397388151554320"
      ],
      "cves": [],
-     "level": "orange",
+     "level": "green",
      "sources": 2
     },
     {
-     "title": "Trojanized Windows downloads and store apps",
-     "summary": "Hackers poisoned official Q-Dir and DesktopOK downloads and updates to install remote access malware, while the tools still run normally. Separately, a Microsoft Store app named Setup Assistant was used to deliver Vinci RAT, and Microsoft reportedly dismissed the initial abuse report.",
+     "title": "Microsoft Store app delivers Vinci RAT malware",
+     "summary": "The Hacker News reports that a Microsoft Store app named 'Setup Assistant' was used to deliver Vinci RAT, which enables remote control of Windows PCs and execution of malicious payloads. The post says Microsoft initially dismissed the abuse report. Defenders should review Store app installations and watch for this RAT.",
      "posts": [
-      "2126247405414944983",
       "2126292454026736026"
      ],
      "cves": [],
@@ -11130,8 +10870,8 @@
      "sources": 1
     }
    ],
-   "based_on": 39,
-   "at": "2026-11-28T01:24:20Z",
+   "based_on": 33,
+   "at": "2026-11-28T10:14:06Z",
    "model": "claude-haiku-5-5"
   }
  },
